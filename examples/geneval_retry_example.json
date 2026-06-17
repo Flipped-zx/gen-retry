@@ -1,0 +1,208 @@
+{
+  "schema_version": "0.1",
+  "trajectory_id": "geneval-counting-color-0001",
+  "source_prompt": "three red apples on a blue plate",
+  "diagnostic_input": {
+    "prompt": "three red apples on a blue plate",
+    "category": "counting_color",
+    "expected": {
+      "objects": [
+        "apple",
+        "plate"
+      ],
+      "count": {
+        "apple": 3
+      },
+      "color": {
+        "apple": "red",
+        "plate": "blue"
+      }
+    },
+    "detected": [
+      {
+        "label": "apple",
+        "bbox": [
+          123,
+          162,
+          205,
+          245
+        ],
+        "score": 0.91,
+        "color": "red"
+      },
+      {
+        "label": "apple",
+        "bbox": [
+          221,
+          158,
+          304,
+          242
+        ],
+        "score": 0.88,
+        "color": "red"
+      },
+      {
+        "label": "plate",
+        "bbox": [
+          95,
+          210,
+          340,
+          295
+        ],
+        "score": 0.76,
+        "color": "blue"
+      }
+    ],
+    "checks": {
+      "object_presence": true,
+      "counting": false,
+      "color_binding": true
+    },
+    "failure_reason": "expected 3 apples, detected 2"
+  },
+  "normalized_diagnostic": {
+    "passed_constraints": [
+      {
+        "type": "object_presence",
+        "target": "apple",
+        "status": "passed"
+      },
+      {
+        "type": "object_presence",
+        "target": "plate",
+        "status": "passed"
+      },
+      {
+        "type": "color_binding",
+        "target": "apple",
+        "expected": "red",
+        "status": "passed"
+      },
+      {
+        "type": "color_binding",
+        "target": "plate",
+        "expected": "blue",
+        "status": "passed"
+      }
+    ],
+    "failed_constraints": [
+      {
+        "type": "counting",
+        "target": "apple",
+        "expected": 3,
+        "detected": 2,
+        "status": "failed"
+      }
+    ],
+    "failure_types": [
+      "count_mismatch"
+    ],
+    "preserve_candidates": [
+      {
+        "target": "apple",
+        "property": "color",
+        "value": "red"
+      },
+      {
+        "target": "plate",
+        "property": "color",
+        "value": "blue"
+      },
+      {
+        "target": "plate",
+        "property": "presence",
+        "value": true
+      }
+    ],
+    "repair_targets": [
+      {
+        "skill": "quantity_counting",
+        "target": "apple",
+        "instruction": "Render exactly three separate red apples."
+      }
+    ]
+  },
+  "steps": [
+    {
+      "type": "user_prompt",
+      "role": "user",
+      "content": "Create an image of three red apples on a blue plate."
+    },
+    {
+      "type": "parse_constraints",
+      "role": "assistant",
+      "content": "Required objects are apples and a plate. The apples must be red, the plate must be blue, and the apple count must be exactly three."
+    },
+    {
+      "type": "image_generation",
+      "role": "assistant",
+      "content": "First candidate generated from the original prompt.",
+      "candidate_image": "candidate_0001.png"
+    },
+    {
+      "type": "judge_diagnostic",
+      "role": "tool",
+      "content": "Geneval diagnostic reports object presence and colors passed, but counting failed.",
+      "diagnostic_ref": "diagnostic_input"
+    },
+    {
+      "type": "tool_call",
+      "role": "assistant",
+      "content": "Call query_skill for count repair guidance.",
+      "tool_name": "query_skill",
+      "skill_name": "quantity_counting",
+      "arguments": {
+        "failure_type": "count_mismatch",
+        "target": "apple",
+        "expected": 3,
+        "detected": 2
+      }
+    },
+    {
+      "type": "tool_observation",
+      "role": "tool",
+      "content": "Use explicit count wording, make each apple separately visible, and avoid overlaps that merge instances.",
+      "observation": {
+        "skill": "quantity_counting"
+      }
+    },
+    {
+      "type": "preserve_plan",
+      "role": "assistant",
+      "content": "Preserve the red apple color, the blue plate, and the simple plate scene. Do not alter already-correct color bindings."
+    },
+    {
+      "type": "repair_prompt",
+      "role": "assistant",
+      "content": "Repaired prompt: exactly three separate red apples, all visible and non-overlapping, resting on one blue plate. Keep the plate blue and keep every apple red.",
+      "repaired_prompt": "Exactly three separate red apples, all visible and non-overlapping, resting on one blue plate. Keep the plate blue and keep every apple red."
+    },
+    {
+      "type": "retry_generation",
+      "role": "assistant",
+      "content": "Retry candidate generated from the repaired prompt.",
+      "candidate_image": "candidate_0002.png"
+    },
+    {
+      "type": "judge_diagnostic",
+      "role": "tool",
+      "content": "Second Geneval diagnostic passes object presence, counting, and color binding.",
+      "checks": {
+        "object_presence": true,
+        "counting": true,
+        "color_binding": true
+      }
+    },
+    {
+      "type": "submit",
+      "role": "assistant",
+      "content": "Submit the retry candidate because all tracked constraints passed.",
+      "submitted_image": "candidate_0002.png"
+    }
+  ],
+  "outcome": {
+    "submitted": true,
+    "final_status": "passed_after_retry",
+    "notes": "Minimal SFT example only; no real image generation is implemented in Stage 2."
+  }
+}

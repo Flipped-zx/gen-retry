@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gen-retry.local/schemas/sft_trajectory.schema.json",
+  "title": "Gen-Retry SFT Trajectory",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "trajectory_id",
+    "source_prompt",
+    "diagnostic_input",
+    "normalized_diagnostic",
+    "steps",
+    "outcome"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "trajectory_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_prompt": {
+      "type": "string",
+      "minLength": 1
+    },
+    "diagnostic_input": {
+      "type": "object"
+    },
+    "normalized_diagnostic": {
+      "type": "object",
+      "required": [
+        "passed_constraints",
+        "failed_constraints",
+        "failure_types",
+        "preserve_candidates",
+        "repair_targets"
+      ],
+      "properties": {
+        "passed_constraints": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "failed_constraints": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "failure_types": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "preserve_candidates": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "repair_targets": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "steps": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "type",
+          "role",
+          "content"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "user_prompt",
+              "parse_constraints",
+              "image_generation",
+              "judge_diagnostic",
+              "tool_call",
+              "tool_observation",
+              "preserve_plan",
+              "repair_prompt",
+              "retry_generation",
+              "submit"
+            ]
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "user",
+              "assistant",
+              "tool",
+              "system"
+            ]
+          },
+          "content": {
+            "type": "string"
+          },
+          "tool_name": {
+            "type": "string"
+          },
+          "skill_name": {
+            "type": "string"
+          },
+          "arguments": {
+            "type": "object"
+          },
+          "observation": {
+            "type": "object"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "outcome": {
+      "type": "object",
+      "required": [
+        "submitted",
+        "final_status"
+      ],
+      "properties": {
+        "submitted": {
+          "type": "boolean"
+        },
+        "final_status": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

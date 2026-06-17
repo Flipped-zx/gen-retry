@@ -1,0 +1,84 @@
+version: 1
+description: Geneval retry skill routing for diagnostic-conditioned image repair.
+skills:
+  - name: quantity_counting
+    purpose: Repair exact object counts while preserving already-correct object identity, color, and layout constraints.
+    triggers:
+      - count_mismatch
+      - missing_instance
+      - extra_instance
+    preserve:
+      - objects_with_correct_presence
+      - correct_colors
+      - correct_background_or_support_objects
+    repair_actions:
+      - specify exact count in words and numerals
+      - require individually visible instances
+      - avoid occlusion and merging
+  - name: attribute_binding
+    purpose: Repair color, material, or attribute binding mistakes between objects.
+    triggers:
+      - color_mismatch
+      - attribute_mismatch
+      - attribute_leakage
+    preserve:
+      - correct_object_presence
+      - correct_counts
+      - correct_spatial_relations
+    repair_actions:
+      - restate object-to-attribute pairs separately
+      - add negative wording against attribute swapping
+  - name: spatial_layout
+    purpose: Repair relative position failures.
+    triggers:
+      - spatial_mismatch
+      - relation_mismatch
+    preserve:
+      - correct_object_presence
+      - correct_counts
+      - correct_attributes
+    repair_actions:
+      - anchor each object in the frame
+      - restate left/right/above/below/front/behind relations
+  - name: object_presence
+    purpose: Repair missing required objects or unwanted excluded objects.
+    triggers:
+      - missing_object
+      - forbidden_object_present
+    preserve:
+      - correct_attributes
+      - correct_counts_for_other_objects
+    repair_actions:
+      - emphasize the missing object as visible and unobscured
+      - remove forbidden objects from the prompt
+  - name: object_separation
+    purpose: Prevent instances from merging or being counted as a single object.
+    triggers:
+      - merged_instances
+      - ambiguous_instances
+    preserve:
+      - correct_object_types
+      - correct_attributes
+    repair_actions:
+      - request separated instances with visible gaps
+      - avoid heavy overlap or occlusion
+  - name: visibility_and_anti_occlusion
+    purpose: Make required constraints verifiable by the judge.
+    triggers:
+      - occluded_object
+      - low_visibility
+      - unverifiable_constraint
+    preserve:
+      - correct_scene_intent
+      - correct_attributes
+    repair_actions:
+      - make target objects fully visible
+      - use clear foreground placement and adequate scale
+  - name: preserve_correct_constraints
+    purpose: Carry forward constraints that already passed so a retry does not regress them.
+    triggers:
+      - any_retry
+    preserve:
+      - all_passed_constraints
+    repair_actions:
+      - explicitly list preserve constraints before repair targets
