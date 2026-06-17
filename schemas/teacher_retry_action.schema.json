@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gen-retry.local/schemas/teacher_retry_action.schema.json",
+  "title": "Gen-Retry Teacher Retry Action",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "decision",
+    "failure_types",
+    "skills_to_call",
+    "preserve_constraints",
+    "repair_constraints",
+    "repair_strategy",
+    "retry_prompt",
+    "expected_improvement",
+    "regression_risks"
+  ],
+  "properties": {
+    "decision": {
+      "type": "string",
+      "enum": [
+        "retry",
+        "submit",
+        "discard"
+      ]
+    },
+    "failure_types": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "skills_to_call": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "preserve_constraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "repair_constraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "repair_strategy": {
+      "type": "string"
+    },
+    "retry_prompt": {
+      "type": "string"
+    },
+    "expected_improvement": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "regression_risks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

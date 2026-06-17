@@ -2,7 +2,7 @@
 
 ## Scope Completed
 
-Stage 1 and Stage 2 only.
+Stage 1, Stage 2, and the requested teacher API / SFT builder slice.
 
 Implemented:
 
@@ -17,10 +17,16 @@ Implemented:
 - JSON schema
 - minimal diagnostic and retry examples
 - README safe commands
+- OpenAI-compatible teacher client interface
+- strict teacher retry-action schema
+- deterministic dry-run teacher mode
+- teacher prompt template
+- JSONL teacher action builder
+- JSONL SFT trajectory builder
+- SFT data building documentation
 
 Not implemented by instruction:
 
-- teacher API client
 - full retry loop
 - image generation
 - RL
@@ -37,7 +43,9 @@ Not implemented by instruction:
 
 ## Dependency Notes
 
-No external dependency is required for the Stage 2 package skeleton or the requested safe checks.
+No external dependency is required for the current package skeleton, mock teacher mode, or the requested safe checks.
+
+The request document mentioned Pydantic validation. Because local rules prohibit dependency installation, the implemented validator is a strict stdlib schema validator in `src/gen_retry/teacher/schemas.py`. It enforces required keys, rejects extra keys, checks types, validates decisions and known skill names, and records a JSON Schema in `schemas/teacher_retry_action.schema.json`.
 
 Full future functionality will likely require prepared environments for:
 
@@ -48,6 +56,13 @@ Full future functionality will likely require prepared environments for:
 These were not installed or invoked locally.
 
 ## Validation Results
+
+- `python3 scripts/safe_check.py` - passed.
+- `python3 -m compileall src scripts tests` - passed.
+- `python3 -m json.tool examples/geneval_diagnostic_example.json` - passed.
+- `python3 -m json.tool examples/geneval_retry_example.json` - passed.
+
+Latest teacher/SFT builder validation run:
 
 - `python3 scripts/safe_check.py` - passed.
 - `python3 -m compileall src scripts tests` - passed.

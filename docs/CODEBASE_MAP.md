@@ -22,22 +22,32 @@ examples/
 schemas/
   sft_trajectory.schema.json
 scripts/
+  build_sft_trajectories.py
+  build_teacher_retry_actions.py
   safe_check.py
 src/gen_retry/
   __init__.py
   data/
     __init__.py
+    io.py
     trajectory.py
     validate_trajectory.py
   eval/
     __init__.py
     diagnostic_normalizer.py
+  teacher/
+    __init__.py
+    build_retry_action.py
+    client.py
+    prompts.py
+    schemas.py
   tools/
     __init__.py
     registry.py
     skills.py
 tests/
   test_diagnostic_normalizer.py
+  test_teacher_schema.py
   test_trajectory_schema.py
 ```
 
@@ -99,12 +109,14 @@ Implemented now:
 - tool and skill registries as placeholders.
 - stdlib trajectory validation.
 - persistent repo digests.
+- OpenAI-compatible teacher client interface.
+- strict teacher retry-action schema with stdlib validation.
+- deterministic dry-run teacher action builder.
+- JSONL scripts for teacher retry actions and SFT trajectories.
 
 Not implemented now:
 
-- OpenAI-compatible teacher API client.
 - full retry-loop executor.
 - image generation.
 - Geneval raw result adapter.
-- SFT dataset builder.
 - RL or reward computation.

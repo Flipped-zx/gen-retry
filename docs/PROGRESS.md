@@ -68,3 +68,55 @@ Blockers:
 Next recommended step:
 
 - Stage 3 should add a raw GenEval result adapter and a teacher trajectory builder, but only after the user explicitly requests it.
+
+## Teacher API And SFT Builder
+
+Status: completed.
+
+Completed work:
+
+- Added a stdlib OpenAI-compatible teacher client interface with environment-based configuration.
+- Added Responses API first path with Chat Completions fallback.
+- Added deterministic `--dry-run` mock teacher mode that does not require an API key.
+- Added strict teacher retry-action schema and validator.
+- Added teacher prompt template for Geneval diagnostics, normalized diagnostics, and skill library context.
+- Added JSON/JSONL helper utilities.
+- Added `scripts/build_teacher_retry_actions.py`.
+- Added `scripts/build_sft_trajectories.py`.
+- Added SFT data building docs.
+- Added empty `data/raw`, `data/processed`, and `data/failed` placeholders.
+
+Changed files:
+
+- `src/gen_retry/data/io.py`
+- `src/gen_retry/teacher/__init__.py`
+- `src/gen_retry/teacher/client.py`
+- `src/gen_retry/teacher/prompts.py`
+- `src/gen_retry/teacher/schemas.py`
+- `src/gen_retry/teacher/build_retry_action.py`
+- `scripts/build_teacher_retry_actions.py`
+- `scripts/build_sft_trajectories.py`
+- `schemas/teacher_retry_action.schema.json`
+- `tests/test_teacher_schema.py`
+- `docs/SFT_DATA_BUILDING.md`
+- `docs/CODEBASE_MAP.md`
+- `docs/PROGRESS.md`
+- `docs/CODEX_HANDOFF.md`
+- `data/raw/.gitkeep`
+- `data/processed/.gitkeep`
+- `data/failed/.gitkeep`
+
+Validation commands run:
+
+- `python3 scripts/safe_check.py` - passed.
+- `python3 -m compileall src scripts tests` - passed.
+- `python3 -m json.tool examples/geneval_diagnostic_example.json` - passed.
+- `python3 -m json.tool examples/geneval_retry_example.json` - passed.
+
+Blockers:
+
+- None.
+
+Next recommended step:
+
+- Run the mock teacher/SFT generation commands documented in `docs/SFT_DATA_BUILDING.md` when output files are desired.
