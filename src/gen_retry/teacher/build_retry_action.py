@@ -173,6 +173,16 @@ def _format_repair(failed: dict[str, Any]) -> str:
         return f"Bind {target} to expected color or attribute {expected}."
     if kind == "object_presence":
         return f"Make required {target} clearly visible."
+    if kind == "spatial_relation":
+        subject = str(failed.get("subject", "")).strip()
+        relation = str(failed.get("relation", "")).strip().replace("_", " ")
+        obj = str(failed.get("object", "")).strip()
+        if subject and relation and obj:
+            return f"Place {subject} {relation} {obj}."
+        reason = str(failed.get("failure_reason", "")).strip()
+        if reason:
+            return f"Repair the spatial relation described by the diagnostic: {reason}."
+        return "Repair the expected spatial relation."
     return f"Repair {kind} for {target}."
 
 

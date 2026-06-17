@@ -78,6 +78,10 @@ python3 scripts/build_sft_trajectories.py \
 
 The dry-run action is deterministic. For the included apple example, it routes the count failure to `quantity_counting`, preserves red apples and the blue plate, and produces a targeted retry prompt.
 
+`scripts/build_sft_trajectories.py` emits full mocked retry episodes by default. Use `--trajectory-format compact` or `--compact` only when the older diagnostic-to-action message shape is desired.
+
+Full episodes use compact normalized diagnostics in SFT-facing contexts by default. Raw Geneval detector output is kept only under `raw_detector_outputs`, which is marked non-trainable by `masking_metadata`. Use `--diagnostic-detail raw` only for debugging raw contexts.
+
 ## Batch Dry Run
 
 Place Geneval-style records in `data/raw/geneval_diagnostics.jsonl`, one JSON object per line. Each object can be either the diagnostic itself or a wrapper with one of these keys:
@@ -125,18 +129,51 @@ The client first tries an OpenAI-compatible Responses API path at `/responses`. 
 `scripts/build_sft_trajectories.py` emits JSONL rows with:
 
 - `id`
+- `trajectory_format`
+- `masking_metadata`
+- `assistant_trainable_messages`
+- `tool_observations`
+- `raw_detector_outputs`
+- `non_trainable_context`
 - `messages`
+- `episode_steps`
 - `images`
 - `diagnostic`
 - `normalized_diagnostic`
 - `teacher_retry_action`
+- `mock_retry_diagnostic`
+- `outcome`
 
-The `messages` field is ShareGPT-style and includes:
+In the default full episode format, the `messages` field is ShareGPT-style and teaches this mocked chain:
 
 - a system instruction for the Gen-Retry student
-- a user message containing the diagnostic and normalized diagnostic
-- an optional `query_skill` tool call if the teacher action calls a skill
-- a tool response with skill guidance
-- a final assistant `<answer>{...}</answer>` containing the strict retry action
+- parse constraints
+- mock `generate_image` for the first attempt
+- mock `judge_image` for the first attempt
+- receive and normalize the Geneval diagnostic
+- `query_skill`
+- repair prompt / retry action
+- mock `generate_image` for the retry attempt
+- mock `judge_image` for the retry attempt
+- submit if the mocked retry judge reports no regression
 
-Image generation, actual retry execution, and re-evaluation are intentionally out of scope for this stage.
+Masking policy:
+
+- Train only `assistant_trainable_messages`.
+- Train assistant diagnostic summaries, tool calls, repair prompts, retry decisions, and submit/discard decisions.
+- Do not train on `tool_observations`.
+- Do not train on `raw_detector_outputs`.
+- Do not train on generated image metadata in `non_trainable_context`.
+- Use compact diagnostics in SFT contexts unless raw diagnostic detail is explicitly requested.
+
+The compact format keeps the earlier diagnostic-to-action shape:
+
+```bash
+python3 scripts/build_sft_trajectories.py \
+  --trajectory-format compact \
+  --diagnostics data/raw/geneval_diagnostics.jsonl \
+  --teacher-actions data/processed/teacher_retry_actions.jsonl \
+  --output data/processed/geneval_retry_sft_compact.jsonl
+```
+
+Real image generation, actual retry execution, and real re-evaluation are intentionally out of scope for this stage.

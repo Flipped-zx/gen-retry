@@ -54,6 +54,7 @@ def normalize_geneval_diagnostic(raw: dict[str, Any]) -> dict[str, Any]:
     objects = list(expected.get("objects") or [])
     expected_counts = expected.get("count") or {}
     expected_colors = expected.get("color") or {}
+    expected_spatial = expected.get("spatial") or []
     counts = _detected_counts(detected if isinstance(detected, list) else [])
     colors = _detected_colors(detected if isinstance(detected, list) else [])
 
@@ -127,6 +128,11 @@ def normalize_geneval_diagnostic(raw: dict[str, Any]) -> dict[str, Any]:
                     )
                 )
 
+    if checks.get("spatial_relation") is False:
+        failure_types.append("spatial_mismatch")
+        spatial_constraints = _spatial_failed_constraints(expected_spatial, raw.get("failure_reason", ""))
+        failed_constraints.extend(spatial_constraints)
+
     for check_name, passed in checks.items():
         if passed is False:
             failure_type = CHECK_TO_FAILURE_TYPE.get(check_name, f"{check_name}_failed")
@@ -145,7 +151,7 @@ def normalize_geneval_diagnostic(raw: dict[str, Any]) -> dict[str, Any]:
         repair_targets.append(
             {
                 "skill": skill,
-                "target": failed.get("target", ""),
+                "target": _repair_target(failed),
                 "failure_type": failure_type,
                 "instruction": instruction,
             }
@@ -174,8 +180,61 @@ def _repair_instruction(skill: str, failed: dict[str, Any]) -> str:
     if skill == "object_presence":
         return f"Make the required {target} clearly visible."
     if skill == "spatial_layout":
-        return f"Repair the spatial relation involving {target}."
+        subject = str(failed.get("subject", "")).strip()
+        relation = str(failed.get("relation", "")).strip()
+        obj = str(failed.get("object", "")).strip()
+        if subject and relation and obj:
+            return f"Place {subject} {_human_relation(relation)} {obj}."
+        reason = str(failed.get("failure_reason", "")).strip()
+        if reason:
+            return f"Repair the spatial relation described by the diagnostic: {reason}."
+        return "Repair the expected spatial relation."
     return f"Repair the failed constraint for {target}."
+
+
+def _spatial_failed_constraints(spatial: Any, failure_reason: str) -> list[dict[str, Any]]:
+    constraints: list[dict[str, Any]] = []
+    if isinstance(spatial, list):
+        for item in spatial:
+            if not isinstance(item, dict):
+                continue
+            subject = str(item.get("subject", "")).strip()
+            relation = str(item.get("relation", "")).strip()
+            obj = str(item.get("object", "")).strip()
+            if subject and relation and obj:
+                constraints.append(
+                    {
+                        "type": "spatial_relation",
+                        "status": "failed",
+                        "subject": subject,
+                        "relation": relation,
+                        "object": obj,
+                    }
+                )
+    if constraints:
+        return constraints
+    out = {
+        "type": "spatial_relation",
+        "status": "failed",
+        "target": "spatial_relation",
+    }
+    if failure_reason:
+        out["failure_reason"] = failure_reason
+    return [out]
+
+
+def _repair_target(failed: dict[str, Any]) -> str:
+    if failed.get("type") == "spatial_relation":
+        subject = str(failed.get("subject", "")).strip()
+        obj = str(failed.get("object", "")).strip()
+        if subject and obj:
+            return f"{subject}->{obj}"
+        return str(failed.get("target", "spatial_relation"))
+    return str(failed.get("target", ""))
+
+
+def _human_relation(relation: str) -> str:
+    return relation.replace("_", " ")
 
 
 def _dedupe_dicts(items: list[dict[str, Any]]) -> list[dict[str, Any]]:

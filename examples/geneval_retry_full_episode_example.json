@@ -1,0 +1,220 @@
+{
+  "schema_version": "0.2",
+  "trajectory_id": "geneval-spatial-full-episode-0001",
+  "trajectory_format": "full_episode",
+  "source_prompt": "a green cube to the left of a yellow sphere",
+  "diagnostic_input": {
+    "prompt": "a green cube to the left of a yellow sphere",
+    "category": "spatial_color",
+    "expected": {
+      "objects": [
+        "cube",
+        "sphere"
+      ],
+      "count": {
+        "cube": 1,
+        "sphere": 1
+      },
+      "color": {
+        "cube": "green",
+        "sphere": "yellow"
+      },
+      "spatial": [
+        {
+          "subject": "cube",
+          "relation": "left_of",
+          "object": "sphere"
+        }
+      ]
+    },
+    "detected": [
+      {
+        "label": "cube",
+        "bbox": [
+          260,
+          160,
+          350,
+          250
+        ],
+        "score": 0.89,
+        "color": "green"
+      },
+      {
+        "label": "sphere",
+        "bbox": [
+          100,
+          165,
+          190,
+          255
+        ],
+        "score": 0.86,
+        "color": "yellow"
+      }
+    ],
+    "checks": {
+      "object_presence": true,
+      "counting": true,
+      "color_binding": true,
+      "spatial_relation": false
+    },
+    "failure_reason": "expected cube left of sphere, but detected cube right of sphere"
+  },
+  "normalized_diagnostic": {
+    "prompt": "a green cube to the left of a yellow sphere",
+    "category": "spatial_color",
+    "passed_constraints": [
+      {
+        "type": "object_presence",
+        "target": "cube",
+        "status": "passed"
+      },
+      {
+        "type": "object_presence",
+        "target": "sphere",
+        "status": "passed"
+      },
+      {
+        "type": "color_binding",
+        "target": "cube",
+        "status": "passed",
+        "expected": "green"
+      },
+      {
+        "type": "color_binding",
+        "target": "sphere",
+        "status": "passed",
+        "expected": "yellow"
+      }
+    ],
+    "failed_constraints": [
+      {
+        "type": "spatial_relation",
+        "status": "failed",
+        "subject": "cube",
+        "relation": "left_of",
+        "object": "sphere"
+      }
+    ],
+    "failure_types": [
+      "spatial_mismatch"
+    ],
+    "preserve_candidates": [
+      {
+        "target": "cube",
+        "property": "color",
+        "value": "green"
+      },
+      {
+        "target": "sphere",
+        "property": "color",
+        "value": "yellow"
+      }
+    ],
+    "repair_targets": [
+      {
+        "failure_type": "spatial_mismatch",
+        "skill": "spatial_layout",
+        "target": "cube->sphere",
+        "instruction": "Place cube left of sphere."
+      }
+    ],
+    "failure_reason": "expected cube left of sphere, but detected cube right of sphere"
+  },
+  "teacher_retry_action": {
+    "decision": "retry",
+    "failure_types": [
+      "spatial_mismatch"
+    ],
+    "skills_to_call": [
+      "spatial_layout"
+    ],
+    "preserve_constraints": [
+      "Keep exactly one cube and exactly one sphere.",
+      "Keep the cube green.",
+      "Keep the sphere yellow."
+    ],
+    "repair_constraints": [
+      "Place the green cube to the left of the yellow sphere."
+    ],
+    "repair_strategy": "Preserve object presence, counts, and colors while correcting only the left-right spatial relation.",
+    "retry_prompt": "Exactly one green cube to the left of exactly one yellow sphere.",
+    "expected_improvement": [
+      "The retry should satisfy the spatial relation check."
+    ],
+    "regression_risks": [
+      "The retry might change already-correct colors or counts."
+    ]
+  },
+  "episode_steps": [
+    {
+      "type": "parse_constraints",
+      "role": "assistant",
+      "content": "Parse objects, counts, colors, and the cube-left-of-sphere spatial relation."
+    },
+    {
+      "type": "generate_image",
+      "role": "assistant",
+      "tool_name": "generate_image",
+      "attempt": "first",
+      "content": "Mock-generate the first candidate image."
+    },
+    {
+      "type": "judge_image",
+      "role": "assistant",
+      "tool_name": "judge_image",
+      "attempt": "first",
+      "content": "Mock-judge the first candidate with Geneval."
+    },
+    {
+      "type": "receive_geneval_diagnostic",
+      "role": "assistant",
+      "content": "Read the failed spatial relation while preserving passed object, count, and color checks."
+    },
+    {
+      "type": "query_skill",
+      "role": "assistant",
+      "tool_name": "query_skill",
+      "skill_name": "spatial_layout",
+      "content": "Ask for spatial layout repair guidance."
+    },
+    {
+      "type": "repair_prompt",
+      "role": "assistant",
+      "content": "Build the retry action and repaired prompt."
+    },
+    {
+      "type": "generate_image",
+      "role": "assistant",
+      "tool_name": "generate_image",
+      "attempt": "retry",
+      "content": "Mock-generate the retry candidate image."
+    },
+    {
+      "type": "judge_image",
+      "role": "assistant",
+      "tool_name": "judge_image",
+      "attempt": "retry",
+      "content": "Mock-judge the retry candidate as passing all tracked checks."
+    },
+    {
+      "type": "submit",
+      "role": "assistant",
+      "content": "Submit the retry candidate because no regression is mocked."
+    }
+  ],
+  "mock_retry_diagnostic": {
+    "checks": {
+      "object_presence": true,
+      "counting": true,
+      "color_binding": true,
+      "spatial_relation": true
+    },
+    "failure_reason": "",
+    "mock_improved": true
+  },
+  "outcome": {
+    "submitted": true,
+    "final_status": "passed_after_mock_retry",
+    "notes": "Image generation and retry judging are mocked for SFT construction."
+  }
+}
