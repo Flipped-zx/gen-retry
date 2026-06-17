@@ -15,24 +15,31 @@ def read_json_or_jsonl(path: str | Path) -> list[dict[str, Any]]:
     if not raw:
         return []
 
-    if raw.startswith("{"):
-        obj = json.loads(raw)
-        if not isinstance(obj, dict):
-            raise ValueError(f"{source} JSON root must be an object or array")
-        return [obj]
+    if source.suffix.lower() == ".jsonl":
+        return _read_jsonl(source, raw)
 
-    if raw.startswith("["):
+    try:
         data = json.loads(raw)
-        if not isinstance(data, list):
-            raise ValueError(f"{source} JSON root must be an object or array")
-        out: list[dict[str, Any]] = []
-        for index, item in enumerate(data):
-            if not isinstance(item, dict):
-                raise ValueError(f"{source} item {index} is not an object")
-            out.append(item)
-        return out
+    except json.JSONDecodeError:
+        return _read_jsonl(source, raw)
+    return _coerce_records(source, data)
 
-    out = []
+
+def _coerce_records(source: Path, data: Any) -> list[dict[str, Any]]:
+    if isinstance(data, dict):
+        return [data]
+    if not isinstance(data, list):
+        raise ValueError(f"{source} JSON root must be an object or array")
+    out: list[dict[str, Any]] = []
+    for index, item in enumerate(data):
+        if not isinstance(item, dict):
+            raise ValueError(f"{source} item {index} is not an object")
+        out.append(item)
+    return out
+
+
+def _read_jsonl(source: Path, raw: str) -> list[dict[str, Any]]:
+    out: list[dict[str, Any]] = []
     for lineno, line in enumerate(raw.splitlines(), 1):
         line = line.strip()
         if not line:

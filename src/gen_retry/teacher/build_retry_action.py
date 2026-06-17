@@ -51,6 +51,8 @@ def build_mock_retry_action(
 
     preserve_constraints = [_format_preserve(candidate) for candidate in preserve_candidates]
     repair_constraints = [_format_repair(item) for item in failed]
+    if not repair_constraints:
+        repair_constraints = _fallback_repair_constraints(failure_types, diagnostic)
 
     if not failed and not failure_types:
         payload = {
@@ -172,6 +174,36 @@ def _format_repair(failed: dict[str, Any]) -> str:
     if kind == "object_presence":
         return f"Make required {target} clearly visible."
     return f"Repair {kind} for {target}."
+
+
+def _fallback_repair_constraints(
+    failure_types: list[Any],
+    diagnostic: dict[str, Any],
+) -> list[str]:
+    constraints: list[str] = []
+    expected = diagnostic.get("expected") if isinstance(diagnostic.get("expected"), dict) else {}
+    spatial = expected.get("spatial") if isinstance(expected, dict) else None
+    for failure_type in failure_types:
+        if failure_type == "spatial_mismatch":
+            if isinstance(spatial, list):
+                for item in spatial:
+                    if not isinstance(item, dict):
+                        continue
+                    subject = item.get("subject", "subject")
+                    relation = str(item.get("relation", "near")).replace("_", " ")
+                    obj = item.get("object", "object")
+                    constraints.append(f"Arrange {subject} {relation} {obj}.")
+            if not constraints:
+                constraints.append("Repair the expected spatial relation.")
+        elif failure_type == "color_mismatch":
+            constraints.append("Repair the expected object color bindings.")
+        elif failure_type == "missing_object":
+            constraints.append("Make all required objects clearly visible.")
+        elif failure_type == "count_mismatch":
+            constraints.append("Render the expected object counts exactly.")
+        else:
+            constraints.append(f"Repair {failure_type} reported by the diagnostic.")
+    return constraints
 
 
 def _build_repair_strategy(skills: list[str], preserve: list[str], repair: list[str]) -> str:
