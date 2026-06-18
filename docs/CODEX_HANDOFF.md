@@ -29,6 +29,13 @@ Implemented:
 - five-trajectory manual quality review
 - stdlib SFT quality checker
 - SFT data hygiene fields and masking metadata
+- assistant-only SFT exporters for Qwen chat, ShareGPT/LLaMA-Factory, and TRL conversational formats
+- stdlib export quality checker
+- five-sample exported examples
+- SFT export format documentation
+- SFT strategy document
+- RL design-only roadmap
+- tomorrow request files for manual 50 run, 500 scaling, SFT training planning, and RL design
 
 Not implemented by instruction:
 
@@ -46,6 +53,7 @@ Not implemented by instruction:
 - No writes were made outside the current `gen-retry` repository.
 - `../GenEvolve`, `../Gen-Searcher`, and `../GenEval` were treated as read-only.
 - No GitHub push or PR command was run.
+- No network API, teacher API, image generator, training, or RL command was run in the latest safe unattended pass.
 
 ## Dependency Notes
 
@@ -100,8 +108,39 @@ Latest data hygiene update:
 - `scripts/check_sft_quality.py` now passes with 0 critical issues and 0 warnings on the five full smoke trajectories.
 - Current recommendation: ready to scale to 50 trajectories.
 
+Latest five-sample exporter update:
+
+- `src/gen_retry/data/exporters.py` exports only `assistant_trainable_messages`.
+- `scripts/export_sft.py` supports `--format qwen`, `--format sharegpt`, and `--format trl`.
+- `scripts/check_export_quality.py` validates JSONL exports and checks assistant train targets for raw detector metadata, tool observations, API-key-like strings, missing tool calls, missing `query_skill`, missing repair prompt, missing retry decision content, and missing submit/discard decisions.
+- Generated exports:
+  - `data/processed/export_qwen_5.jsonl`
+  - `data/processed/export_sharegpt_5.jsonl`
+  - `data/processed/export_trl_5.jsonl`
+- Documentation added:
+  - `docs/SFT_EXPORT_FORMATS.md`
+  - `docs/SFT_STRATEGY.md`
+  - `docs/RL_ROADMAP.md`
+  - `docs/requests/04_run_50_teacher_batch_manual.md`
+  - `docs/requests/05_scale_to_500.md`
+  - `docs/requests/06_sft_training_plan.md`
+  - `docs/requests/07_rl_design_only.md`
+
+Latest validation run:
+
+- `python3 scripts/safe_check.py` - passed.
+- `python3 -m compileall src scripts tests` - passed.
+- `python3 scripts/check_sft_quality.py --sft data/processed/geneval_retry_sft_5_full.jsonl --diagnostics data/smoke/geneval_diagnostics_5.jsonl --actions data/processed/teacher_retry_actions_5.jsonl` - passed with 0 critical issues and 0 warnings.
+- `python3 scripts/check_export_quality.py data/processed/export_qwen_5.jsonl data/processed/export_sharegpt_5.jsonl data/processed/export_trl_5.jsonl` - passed with 0 critical issues and 0 warnings.
+- `python3 -m unittest tests.test_diagnostic_normalizer tests.test_exporters tests.test_teacher_schema tests.test_trajectory_schema` - passed.
+
+Tomorrow manual teacher batch:
+
+- Real teacher API calls should be run from a normal terminal, not Codex, because sandboxed Python network access was not reliable during the earlier interrupted 50-sample attempt.
+- Use `docs/requests/04_run_50_teacher_batch_manual.md` for exact commands to set `GEN_RETRY_TEACHER_*`, run the first 10 rows, resume rows 11-50, build full SFT trajectories, and run quality/export checks.
+
 `python -m pytest tests` was not run because the user restricted validation to the safe stdlib-only command list for this unattended pass.
 
 ## Blockers
 
-None.
+- Real teacher API batch execution from inside Codex is blocked/unreliable due sandbox network restrictions. Manual normal-terminal execution is documented in `docs/requests/04_run_50_teacher_batch_manual.md`.

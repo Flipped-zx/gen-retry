@@ -232,3 +232,66 @@ Blockers:
 Next recommended step:
 
 - Scale the smoke pipeline to 50 trajectories using the compact diagnostic default, then run `scripts/check_sft_quality.py` on the expanded file.
+
+## Five-Sample SFT Exporters And Strategy Docs
+
+Status: completed.
+
+Completed work:
+
+- Re-read `AGENTS.md` and stayed in safe unattended mode.
+- Used only the existing five-sample smoke inputs:
+  - `data/smoke/geneval_diagnostics_5.jsonl`
+  - `data/processed/teacher_retry_actions_5.jsonl`
+  - `data/processed/geneval_retry_sft_5_full.jsonl`
+- Verified current five-sample SFT quality with 0 critical issues and 0 warnings.
+- Added assistant-only SFT exporters for Qwen chat, ShareGPT/LLaMA-Factory, and TRL conversational formats.
+- Added a stdlib-only export quality checker.
+- Generated five-sample export examples:
+  - `data/processed/export_qwen_5.jsonl`
+  - `data/processed/export_sharegpt_5.jsonl`
+  - `data/processed/export_trl_5.jsonl`
+- Added exporter tests and a visibility/occlusion normalizer test.
+- Added SFT export format documentation.
+- Added SFT strategy and RL roadmap documentation.
+- Added tomorrow request files for manual 50 API run, 500 scaling, SFT training planning, and RL design-only work.
+- Kept RL as design-only; no RL code or config was created.
+- Did not call network APIs, image generators, training, RL, or dependency installers.
+
+Changed files:
+
+- `src/gen_retry/data/exporters.py`
+- `scripts/export_sft.py`
+- `scripts/check_export_quality.py`
+- `scripts/check_sft_quality.py`
+- `src/gen_retry/eval/diagnostic_normalizer.py`
+- `tests/test_exporters.py`
+- `tests/test_diagnostic_normalizer.py`
+- `data/processed/export_qwen_5.jsonl`
+- `data/processed/export_sharegpt_5.jsonl`
+- `data/processed/export_trl_5.jsonl`
+- `docs/SFT_EXPORT_FORMATS.md`
+- `docs/SFT_STRATEGY.md`
+- `docs/RL_ROADMAP.md`
+- `docs/requests/04_run_50_teacher_batch_manual.md`
+- `docs/requests/05_scale_to_500.md`
+- `docs/requests/06_sft_training_plan.md`
+- `docs/requests/07_rl_design_only.md`
+- `docs/PROGRESS.md`
+- `docs/CODEX_HANDOFF.md`
+
+Validation commands run:
+
+- `python3 scripts/safe_check.py` - passed.
+- `python3 -m compileall src scripts tests` - passed.
+- `python3 scripts/check_sft_quality.py --sft data/processed/geneval_retry_sft_5_full.jsonl --diagnostics data/smoke/geneval_diagnostics_5.jsonl --actions data/processed/teacher_retry_actions_5.jsonl` - passed with 0 critical issues and 0 warnings.
+- `python3 scripts/check_export_quality.py data/processed/export_qwen_5.jsonl data/processed/export_sharegpt_5.jsonl data/processed/export_trl_5.jsonl` - passed with 0 critical issues and 0 warnings.
+- `python3 -m unittest tests.test_diagnostic_normalizer tests.test_exporters tests.test_teacher_schema tests.test_trajectory_schema` - passed.
+
+Blockers:
+
+- Real teacher API calls should be run manually from a normal terminal. Codex sandboxed Python network access was not reliable during the earlier interrupted 50-sample attempt.
+
+Next recommended step:
+
+- From a normal terminal, run the manual 50-row teacher batch described in `docs/requests/04_run_50_teacher_batch_manual.md`, then build and check the 50-row full SFT and exports.

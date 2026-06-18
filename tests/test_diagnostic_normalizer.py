@@ -29,6 +29,40 @@ class DiagnosticNormalizerTest(unittest.TestCase):
             normalized["preserve_candidates"],
         )
 
+    def test_visibility_failure_routes_to_anti_occlusion_skill(self) -> None:
+        normalized = normalize_geneval_diagnostic(
+            {
+                "prompt": "a red backpack visible behind a chair",
+                "category": "visibility_occlusion",
+                "expected": {
+                    "objects": ["backpack", "chair"],
+                    "count": {"backpack": 1, "chair": 1},
+                    "color": {"backpack": "red"},
+                },
+                "detected": [
+                    {"label": "backpack", "score": 0.41, "color": "red"},
+                    {"label": "chair", "score": 0.89},
+                ],
+                "checks": {
+                    "object_presence": True,
+                    "counting": True,
+                    "color_binding": True,
+                    "low_visibility": False,
+                },
+                "failure_reason": "backpack is present but too occluded for reliable judging",
+            }
+        )
+        self.assertIn("low_visibility", normalized["failure_types"])
+        self.assertIn(
+            {
+                "failure_type": "low_visibility",
+                "instruction": "Make the required objects visible enough for judging: backpack is present but too occluded for reliable judging.",
+                "skill": "visibility_and_anti_occlusion",
+                "target": "required visible constraints",
+            },
+            normalized["repair_targets"],
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

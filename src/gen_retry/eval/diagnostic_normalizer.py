@@ -13,6 +13,10 @@ CHECK_TO_FAILURE_TYPE = {
     "colors": "color_mismatch",
     "position": "spatial_mismatch",
     "spatial_relation": "spatial_mismatch",
+    "visibility_issue": "low_visibility",
+    "low_visibility": "low_visibility",
+    "occlusion": "occluded_object",
+    "occluded_object": "occluded_object",
 }
 
 FAILURE_TO_SKILL = {
@@ -20,6 +24,8 @@ FAILURE_TO_SKILL = {
     "count_mismatch": "quantity_counting",
     "color_mismatch": "attribute_binding",
     "spatial_mismatch": "spatial_layout",
+    "occluded_object": "visibility_and_anti_occlusion",
+    "low_visibility": "visibility_and_anti_occlusion",
     "unverifiable_constraint": "visibility_and_anti_occlusion",
 }
 
@@ -133,6 +139,20 @@ def normalize_geneval_diagnostic(raw: dict[str, Any]) -> dict[str, Any]:
         spatial_constraints = _spatial_failed_constraints(expected_spatial, raw.get("failure_reason", ""))
         failed_constraints.extend(spatial_constraints)
 
+    for check_name in ("visibility_issue", "low_visibility", "occlusion", "occluded_object"):
+        if checks.get(check_name) is False:
+            failure_type = CHECK_TO_FAILURE_TYPE[check_name]
+            if failure_type not in failure_types:
+                failure_types.append(failure_type)
+            failed_constraints.append(
+                _constraint(
+                    failure_type,
+                    "required visible constraints",
+                    "failed",
+                    failure_reason=raw.get("failure_reason", ""),
+                )
+            )
+
     for check_name, passed in checks.items():
         if passed is False:
             failure_type = CHECK_TO_FAILURE_TYPE.get(check_name, f"{check_name}_failed")
@@ -189,6 +209,11 @@ def _repair_instruction(skill: str, failed: dict[str, Any]) -> str:
         if reason:
             return f"Repair the spatial relation described by the diagnostic: {reason}."
         return "Repair the expected spatial relation."
+    if skill == "visibility_and_anti_occlusion":
+        reason = str(failed.get("failure_reason", "")).strip()
+        if reason:
+            return f"Make the required objects visible enough for judging: {reason}."
+        return "Make the required objects clearly visible and not occluded."
     return f"Repair the failed constraint for {target}."
 
 
