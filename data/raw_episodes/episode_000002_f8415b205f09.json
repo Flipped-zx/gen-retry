@@ -1,0 +1,175 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "geneval_report": {
+        "failed_constraints": [
+          {
+            "details": {},
+            "detected": "cube right of sphere",
+            "expected": "cube left of sphere",
+            "status": "failed",
+            "target": "cube left_of sphere",
+            "type": "spatial_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {},
+            "detected": "green",
+            "expected": "green",
+            "status": "passed",
+            "target": "cube",
+            "type": "color_binding"
+          },
+          {
+            "details": {},
+            "detected": "yellow",
+            "expected": "yellow",
+            "status": "passed",
+            "target": "sphere",
+            "type": "color_binding"
+          }
+        ],
+        "raw_report": {
+          "failed_constraints": [
+            {
+              "detected": "cube right of sphere",
+              "expected": "cube left of sphere",
+              "target": "cube left_of sphere",
+              "type": "spatial_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "detected": "green",
+              "expected": "green",
+              "target": "cube",
+              "type": "color_binding"
+            },
+            {
+              "detected": "yellow",
+              "expected": "yellow",
+              "target": "sphere",
+              "type": "color_binding"
+            }
+          ],
+          "score": 0.55,
+          "uncertain_constraints": []
+        },
+        "score": 0.55,
+        "uncertain_constraints": []
+      },
+      "image_path": "data/images/episode_000002_f8415b205f09_attempt_0.png",
+      "metadata": {
+        "new_critical_failures": false,
+        "retry_budget_left": 2,
+        "transition_outcome": "passed_after_retry"
+      },
+      "prompt": "a green cube to the left of a yellow sphere",
+      "round": 0,
+      "teacher_action": {
+        "action_type": "image_edit",
+        "decision": "retry",
+        "diagnosis": "Geneval reports spatial_mismatch for cube left_of sphere: expected cube left of sphere, detected cube right of sphere.",
+        "edit_instruction": "Move cube left_of sphere to satisfy the expected spatial relation: cube left of sphere.",
+        "expected_improvement": [
+          "The retry should reduce failed Geneval constraints without introducing new critical failures."
+        ],
+        "failure_types": [
+          "spatial_mismatch"
+        ],
+        "preserve_constraints": [
+          "Keep cube color_binding as passed.",
+          "Keep sphere color_binding as passed."
+        ],
+        "regression_risks": [
+          "The retry could regress constraints that already passed.",
+          "The edit could introduce new objects or change object attributes."
+        ],
+        "repair_constraints": [
+          "Move cube left_of sphere to satisfy the expected spatial relation: cube left of sphere."
+        ],
+        "retry_prompt": "a green cube to the left of a yellow sphere Repair: Move cube left_of sphere to satisfy the expected spatial relation: cube left of sphere. Preserve: Keep cube color_binding as passed. Keep sphere color_binding as passed.",
+        "skill": "spatial_layout"
+      }
+    },
+    {
+      "attempt_type": "retry_edit",
+      "geneval_report": {
+        "failed_constraints": [],
+        "passed_constraints": [
+          {
+            "details": {},
+            "detected": "cube left of sphere",
+            "expected": "cube left of sphere",
+            "status": "passed",
+            "target": "cube left_of sphere",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {},
+            "detected": "green",
+            "expected": "green",
+            "status": "passed",
+            "target": "cube",
+            "type": "color_binding"
+          },
+          {
+            "details": {},
+            "detected": "yellow",
+            "expected": "yellow",
+            "status": "passed",
+            "target": "sphere",
+            "type": "color_binding"
+          }
+        ],
+        "raw_report": {
+          "failed_constraints": [],
+          "passed_constraints": [
+            {
+              "detected": "cube left of sphere",
+              "expected": "cube left of sphere",
+              "target": "cube left_of sphere",
+              "type": "spatial_mismatch"
+            },
+            {
+              "detected": "green",
+              "expected": "green",
+              "target": "cube",
+              "type": "color_binding"
+            },
+            {
+              "detected": "yellow",
+              "expected": "yellow",
+              "target": "sphere",
+              "type": "color_binding"
+            }
+          ],
+          "score": 0.97,
+          "uncertain_constraints": []
+        },
+        "score": 0.97,
+        "uncertain_constraints": []
+      },
+      "image_path": "data/images/episode_000002_f8415b205f09_attempt_1.png",
+      "metadata": {
+        "retry_budget_left": 1
+      },
+      "prompt": "a green cube to the left of a yellow sphere Repair: Move cube left_of sphere to satisfy the expected spatial relation: cube left of sphere. Preserve: Keep cube color_binding as passed. Keep sphere color_binding as passed.",
+      "round": 1,
+      "teacher_action": null
+    }
+  ],
+  "final_outcome": "passed_after_retry",
+  "id": "episode_000002_f8415b205f09",
+  "metadata": {
+    "max_retry": 2,
+    "pass_threshold": 0.95,
+    "prompt_metadata": {
+      "category": "spatial_relation",
+      "prompt": "a green cube to the left of a yellow sphere"
+    }
+  },
+  "original_prompt": "a green cube to the left of a yellow sphere"
+}

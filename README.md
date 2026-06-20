@@ -2,10 +2,11 @@
 
 Diagnostic-conditioned retry scaffolding for agentic image generation.
 
-This repository is currently limited to Stage 1 and Stage 2:
+This repository is currently limited to safe local scaffolding:
 
 - Stage 1: persistent source digests for `../GenEvolve`, `../Gen-Searcher`, and `../GenEval`.
 - Stage 2: a stdlib-only Python skeleton for Geneval-style diagnostics, skills, schemas, examples, and safe validation.
+- Visual retry collector scaffold: mock generation, mock Geneval-style evaluation, mock teacher actions, raw episode saving, validation, and policy-only SFT export.
 
 The target student model is `Qwen3-VL-4B-Instruct`. The intended training behavior is:
 
@@ -22,7 +23,7 @@ original prompt
 -> submit improved result
 ```
 
-This is not a generic prompt rewriting project. The first version focuses on the Geneval retry surface, not web search, teacher trajectory generation, RL, or image generation.
+This is not a generic prompt rewriting project. The mock collector focuses on the Geneval retry surface and keeps real image generation, real Geneval evaluation, training, and RL behind explicit future integration points.
 
 ## Repository Map
 
@@ -43,8 +44,15 @@ schemas/
 scripts/
   safe_check.py
 src/gen_retry/
+  collectors/
   data/
   eval/
+  evaluators/
+  export/
+  filters/
+  generators/
+  schemas/
+  teachers/
   tools/
 tests/
 ```
@@ -67,6 +75,83 @@ PYTHONPATH=src python3 -m gen_retry.data.validate_trajectory examples/geneval_re
 ```
 
 Full pytest-based testing is intentionally not required for this stage.
+
+## Mock Visual Retry Collector
+
+Mock mode requires no API key and calls no external service.
+
+Collect five mock episodes:
+
+```bash
+python3 scripts/collect_mock_episodes.py --num 5
+```
+
+Validate saved episodes:
+
+```bash
+python3 scripts/validate_episodes.py data/raw_episodes
+```
+
+Export policy-only SFT rows:
+
+```bash
+python3 scripts/export_policy_sft.py
+```
+
+Default paths:
+
+```text
+data/prompts/sample_prompts.jsonl
+data/raw_episodes/
+data/images/
+data/sft/retry_policy_sft_sharegpt.jsonl
+```
+
+The collector loop is:
+
+```text
+original prompt
+-> mock initial generation
+-> mock Geneval-style evaluation
+-> mock teacher chooses retry action
+-> mock retry executor writes an edited placeholder image
+-> mock evaluator evaluates again
+-> repeat until pass threshold or retry budget is exhausted
+-> save full episode JSON
+-> export policy-only SFT as state_t -> action_t
+```
+
+The evaluator, not the teacher, decides whether the retry succeeded.
+
+## Real Environment Integration Points
+
+The real adapters are scaffolded but not used in tests:
+
+- `src/gen_retry/teachers/gpt55_teacher_adapter.py`
+- `src/gen_retry/generators/qwen_image_edit_adapter.py`
+
+Teacher environment variables:
+
+```bash
+GEN_RETRY_TEACHER_BASE_URL=https://your-proxy.example.com/v1
+GEN_RETRY_TEACHER_API_KEY=your_api_key_here
+GEN_RETRY_TEACHER_MODEL=gpt-5.5
+```
+
+Qwen-Image-Edit environment variables:
+
+```bash
+GEN_RETRY_QWEN_IMAGE_EDIT_ENDPOINT=https://your-image-edit-endpoint.example.com
+GEN_RETRY_QWEN_IMAGE_EDIT_API_KEY=your_api_key_here
+```
+
+Do not hard-code API keys. The GPT-5.5 teacher should only choose the next action. It must not decide whether a retry succeeded; success must come from the evaluator.
+
+To replace mocks later:
+
+- replace `MockGenevalEvaluator` with a real Geneval evaluator adapter that returns `NormalizedGenevalReport`;
+- replace `MockRetryExecutor` with `QwenImageEditAdapter` or another image edit executor;
+- replace `MockTeacher` with `GPT55TeacherAdapter` after wiring the real API call in a controlled environment.
 
 ## Minimal Diagnostic Flow
 
@@ -104,7 +189,7 @@ prompt
 
 ## Teacher API Placeholder
 
-Teacher generation is not implemented in Stage 1 or Stage 2. The placeholder configuration is present for a future OpenAI-compatible relay:
+Mock teacher action generation is implemented for local collection. The real GPT-5.5 API call is scaffolded but intentionally not implemented for local tests. The placeholder configuration is present for a future OpenAI-compatible relay:
 
 ```bash
 GEN_RETRY_TEACHER_BASE_URL=https://your-proxy.example.com/v1

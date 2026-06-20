@@ -36,6 +36,9 @@ Implemented:
 - SFT strategy document
 - RL design-only roadmap
 - tomorrow request files for manual 50 run, 500 scaling, SFT training planning, and RL design
+- visual retry trajectory collector scaffold with mock adapters
+- raw episode validation and policy-only ShareGPT SFT export
+- GPT-5.5 teacher and Qwen-Image-Edit adapter skeletons
 
 Not implemented by instruction:
 
@@ -44,8 +47,10 @@ Not implemented by instruction:
 - RL
 - training
 - web search integration
-- raw GenEval evaluator adapter
+- real GenEval evaluator adapter
 - real image generation or real retry judging
+- real GPT-5.5 teacher API call
+- real Qwen-Image-Edit API call
 
 ## Safety Notes
 
@@ -138,6 +143,40 @@ Tomorrow manual teacher batch:
 
 - Real teacher API calls should be run from a normal terminal, not Codex, because sandboxed Python network access was not reliable during the earlier interrupted 50-sample attempt.
 - Use `docs/requests/04_run_50_teacher_batch_manual.md` for exact commands to set `GEN_RETRY_TEACHER_*`, run the first 10 rows, resume rows 11-50, build full SFT trajectories, and run quality/export checks.
+
+Latest visual retry collector update:
+
+- Added a stdlib-only collector scaffold for prompt -> generation -> evaluation -> teacher action -> retry -> re-evaluation episodes.
+- Mock mode is runnable without API keys or external dependencies.
+- New CLI commands:
+  - `python3 scripts/collect_mock_episodes.py --num 5`
+  - `python3 scripts/validate_episodes.py data/raw_episodes`
+  - `python3 scripts/export_policy_sft.py`
+- Mock collection writes:
+  - `data/raw_episodes/*.json`
+  - `data/images/*.png` placeholder files
+  - `data/sft/retry_policy_sft_sharegpt.jsonl`
+- Core modules:
+  - `src/gen_retry/schemas/episode_schema.py`
+  - `src/gen_retry/collectors/retry_episode_collector.py`
+  - `src/gen_retry/generators/`
+  - `src/gen_retry/evaluators/`
+  - `src/gen_retry/teachers/`
+  - `src/gen_retry/filters/`
+  - `src/gen_retry/export/`
+- Real adapter skeletons are present but intentionally do not run in tests:
+  - `src/gen_retry/teachers/gpt55_teacher_adapter.py`
+  - `src/gen_retry/generators/qwen_image_edit_adapter.py`
+- Success is decided only by the evaluator. The teacher only chooses next actions.
+
+Latest collector validation:
+
+- `python3 scripts/collect_mock_episodes.py --num 5` - passed and saved 5 episodes.
+- `python3 scripts/validate_episodes.py data/raw_episodes` - passed with 5 episodes and 0 errors.
+- `python3 scripts/export_policy_sft.py` - passed and wrote 5 policy SFT rows.
+- `python3 -m unittest discover tests` - passed with 19 tests.
+- `python3 scripts/safe_check.py` - passed.
+- `python3 -m compileall src scripts tests` - passed.
 
 `python -m pytest tests` was not run because the user restricted validation to the safe stdlib-only command list for this unattended pass.
 

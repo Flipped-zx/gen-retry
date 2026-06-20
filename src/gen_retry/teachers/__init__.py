@@ -1,0 +1,2 @@
+"""Teacher interfaces and adapters."""
+

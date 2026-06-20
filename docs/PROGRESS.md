@@ -295,3 +295,86 @@ Blockers:
 Next recommended step:
 
 - From a normal terminal, run the manual 50-row teacher batch described in `docs/requests/04_run_50_teacher_batch_manual.md`, then build and check the 50-row full SFT and exports.
+
+## Visual Retry Trajectory Collector Scaffold
+
+Status: completed.
+
+Completed work:
+
+- Read the pasted collector specification from `/Users/z1x/.codex/attachments/883269ce-f7f4-4113-b76e-a6c47c680c43/pasted-text-1.txt`.
+- Re-read `AGENTS.md` and kept all work inside the current `gen-retry` repository.
+- Added stdlib dataclass schemas for constraints, normalized Geneval reports, teacher actions, attempts, and episodes.
+- Added generator and retry executor interfaces.
+- Added mock initial generator and mock retry executor that write placeholder local files only.
+- Added Qwen-Image-Edit adapter skeleton with environment-variable wiring and no real API call.
+- Added evaluator interface, Geneval report normalizer, and deterministic mock Geneval evaluator.
+- Added teacher interface, mock teacher, teacher prompt builder, and GPT-5.5 teacher adapter skeleton.
+- Added skill routing for count, color, spatial, missing object, extra object, and visibility failures.
+- Added pass condition and transition classifier.
+- Added episode validator.
+- Added retry episode collector that runs prompt -> generation -> evaluation -> teacher action -> retry edit/regeneration -> re-evaluation until pass or budget.
+- Added policy-only ShareGPT SFT exporter for state_t -> action_t rows.
+- Added full episode JSONL exporter helper.
+- Added mock collection, validation, and policy export CLI scripts.
+- Added five sample prompt records under `data/prompts/sample_prompts.jsonl`.
+- Ran mock collection and saved five valid raw episode JSON files under `data/raw_episodes/`.
+- Saved mock placeholder image files under `data/images/`.
+- Exported `data/sft/retry_policy_sft_sharegpt.jsonl` with five policy SFT rows.
+- Updated README with mock commands and real adapter integration points.
+- Added stdlib unit tests for schema, pass condition, mock teacher, mock collector, and policy SFT export.
+
+Changed files:
+
+- `README.md`
+- `src/gen_retry/schemas/episode_schema.py`
+- `src/gen_retry/generators/base.py`
+- `src/gen_retry/generators/mock_initial_generator.py`
+- `src/gen_retry/generators/qwen_image_edit_adapter.py`
+- `src/gen_retry/evaluators/base.py`
+- `src/gen_retry/evaluators/geneval_normalizer.py`
+- `src/gen_retry/evaluators/mock_geneval_evaluator.py`
+- `src/gen_retry/teachers/base.py`
+- `src/gen_retry/teachers/mock_teacher.py`
+- `src/gen_retry/teachers/gpt55_teacher_adapter.py`
+- `src/gen_retry/teachers/teacher_prompt.py`
+- `src/gen_retry/skills/skill_library.py`
+- `src/gen_retry/collectors/retry_episode_collector.py`
+- `src/gen_retry/export/export_policy_sft.py`
+- `src/gen_retry/export/export_full_episode_sft.py`
+- `src/gen_retry/filters/filter_episodes.py`
+- `src/gen_retry/filters/validate_episode.py`
+- `src/gen_retry/utils/io.py`
+- `src/gen_retry/utils/ids.py`
+- `src/gen_retry/utils/logging.py`
+- `scripts/collect_mock_episodes.py`
+- `scripts/export_policy_sft.py`
+- `scripts/validate_episodes.py`
+- `data/prompts/sample_prompts.jsonl`
+- `data/raw_episodes/*.json`
+- `data/images/*.png`
+- `data/sft/retry_policy_sft_sharegpt.jsonl`
+- `tests/test_retry_episode_schema.py`
+- `tests/test_pass_condition.py`
+- `tests/test_mock_teacher.py`
+- `tests/test_mock_collector.py`
+- `tests/test_export_policy_sft.py`
+- `docs/PROGRESS.md`
+- `docs/CODEX_HANDOFF.md`
+
+Validation commands run:
+
+- `python3 scripts/collect_mock_episodes.py --num 5` - passed; saved 5 episodes.
+- `python3 scripts/validate_episodes.py data/raw_episodes` - passed with 5 episodes and 0 errors.
+- `python3 scripts/export_policy_sft.py` - passed; wrote 5 rows to `data/sft/retry_policy_sft_sharegpt.jsonl`.
+- `python3 -m unittest discover tests` - passed with 19 tests.
+- `python3 scripts/safe_check.py` - passed.
+- `python3 -m compileall src scripts tests` - passed.
+
+Blockers:
+
+- None for mock collection. Real GPT-5.5 teacher and Qwen-Image-Edit adapters are scaffolded only and intentionally do not run in tests.
+
+Next recommended step:
+
+- Replace one mock adapter at a time in a controlled environment: first real Geneval evaluator, then real retry executor, then real GPT-5.5 teacher action generation.

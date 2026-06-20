@@ -1,0 +1,146 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "geneval_report": {
+        "failed_constraints": [
+          {
+            "details": {},
+            "detected": "not detected",
+            "expected": "visible dog",
+            "status": "failed",
+            "target": "dog",
+            "type": "missing_object"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {},
+            "detected": "present",
+            "expected": "present",
+            "status": "passed",
+            "target": "table",
+            "type": "object_presence"
+          }
+        ],
+        "raw_report": {
+          "failed_constraints": [
+            {
+              "detected": "not detected",
+              "expected": "visible dog",
+              "target": "dog",
+              "type": "missing_object"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "detected": "present",
+              "expected": "present",
+              "target": "table",
+              "type": "object_presence"
+            }
+          ],
+          "score": 0.5,
+          "uncertain_constraints": []
+        },
+        "score": 0.5,
+        "uncertain_constraints": []
+      },
+      "image_path": "data/images/episode_000003_2bc75b3c0d03_attempt_0.png",
+      "metadata": {
+        "new_critical_failures": false,
+        "retry_budget_left": 2,
+        "transition_outcome": "passed_after_retry"
+      },
+      "prompt": "a small dog under a wooden table",
+      "round": 0,
+      "teacher_action": {
+        "action_type": "image_edit",
+        "decision": "retry",
+        "diagnosis": "Geneval reports missing_object for dog: expected visible dog, detected not detected.",
+        "edit_instruction": "Add the missing required object: dog.",
+        "expected_improvement": [
+          "The retry should reduce failed Geneval constraints without introducing new critical failures."
+        ],
+        "failure_types": [
+          "missing_object"
+        ],
+        "preserve_constraints": [
+          "Keep table object_presence as passed."
+        ],
+        "regression_risks": [
+          "The retry could regress constraints that already passed.",
+          "The edit could introduce new objects or change object attributes."
+        ],
+        "repair_constraints": [
+          "Add the missing required object: dog."
+        ],
+        "retry_prompt": "a small dog under a wooden table Repair: Add the missing required object: dog. Preserve: Keep table object_presence as passed.",
+        "skill": "object_presence"
+      }
+    },
+    {
+      "attempt_type": "retry_edit",
+      "geneval_report": {
+        "failed_constraints": [],
+        "passed_constraints": [
+          {
+            "details": {},
+            "detected": "visible dog",
+            "expected": "visible dog",
+            "status": "passed",
+            "target": "dog",
+            "type": "object_presence"
+          },
+          {
+            "details": {},
+            "detected": "present",
+            "expected": "present",
+            "status": "passed",
+            "target": "table",
+            "type": "object_presence"
+          }
+        ],
+        "raw_report": {
+          "failed_constraints": [],
+          "passed_constraints": [
+            {
+              "detected": "visible dog",
+              "expected": "visible dog",
+              "target": "dog",
+              "type": "object_presence"
+            },
+            {
+              "detected": "present",
+              "expected": "present",
+              "target": "table",
+              "type": "object_presence"
+            }
+          ],
+          "score": 0.96,
+          "uncertain_constraints": []
+        },
+        "score": 0.96,
+        "uncertain_constraints": []
+      },
+      "image_path": "data/images/episode_000003_2bc75b3c0d03_attempt_1.png",
+      "metadata": {
+        "retry_budget_left": 1
+      },
+      "prompt": "a small dog under a wooden table Repair: Add the missing required object: dog. Preserve: Keep table object_presence as passed.",
+      "round": 1,
+      "teacher_action": null
+    }
+  ],
+  "final_outcome": "passed_after_retry",
+  "id": "episode_000003_2bc75b3c0d03",
+  "metadata": {
+    "max_retry": 2,
+    "pass_threshold": 0.95,
+    "prompt_metadata": {
+      "category": "missing_object",
+      "prompt": "a small dog under a wooden table"
+    }
+  },
+  "original_prompt": "a small dog under a wooden table"
+}

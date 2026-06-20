@@ -1,0 +1,175 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "geneval_report": {
+        "failed_constraints": [
+          {
+            "details": {},
+            "detected": "present",
+            "expected": "absent",
+            "status": "failed",
+            "target": "second duck",
+            "type": "extra_object"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {},
+            "detected": "present",
+            "expected": "present",
+            "status": "passed",
+            "target": "duck",
+            "type": "object_presence"
+          },
+          {
+            "details": {},
+            "detected": "yellow",
+            "expected": "yellow",
+            "status": "passed",
+            "target": "duck",
+            "type": "color_binding"
+          }
+        ],
+        "raw_report": {
+          "failed_constraints": [
+            {
+              "detected": "present",
+              "expected": "absent",
+              "target": "second duck",
+              "type": "extra_object"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "detected": "present",
+              "expected": "present",
+              "target": "duck",
+              "type": "object_presence"
+            },
+            {
+              "detected": "yellow",
+              "expected": "yellow",
+              "target": "duck",
+              "type": "color_binding"
+            }
+          ],
+          "score": 0.57,
+          "uncertain_constraints": []
+        },
+        "score": 0.57,
+        "uncertain_constraints": []
+      },
+      "image_path": "data/images/episode_000004_17656a443327_attempt_0.png",
+      "metadata": {
+        "new_critical_failures": false,
+        "retry_budget_left": 2,
+        "transition_outcome": "passed_after_retry"
+      },
+      "prompt": "one yellow duck with no extra objects",
+      "round": 0,
+      "teacher_action": {
+        "action_type": "image_edit",
+        "decision": "retry",
+        "diagnosis": "Geneval reports extra_object for second duck: expected absent, detected present.",
+        "edit_instruction": "Remove the extra forbidden object: second duck.",
+        "expected_improvement": [
+          "The retry should reduce failed Geneval constraints without introducing new critical failures."
+        ],
+        "failure_types": [
+          "extra_object"
+        ],
+        "preserve_constraints": [
+          "Keep duck object_presence as passed.",
+          "Keep duck color_binding as passed."
+        ],
+        "regression_risks": [
+          "The retry could regress constraints that already passed.",
+          "The edit could introduce new objects or change object attributes."
+        ],
+        "repair_constraints": [
+          "Remove the extra forbidden object: second duck."
+        ],
+        "retry_prompt": "one yellow duck with no extra objects Repair: Remove the extra forbidden object: second duck. Preserve: Keep duck object_presence as passed. Keep duck color_binding as passed.",
+        "skill": "object_presence"
+      }
+    },
+    {
+      "attempt_type": "retry_edit",
+      "geneval_report": {
+        "failed_constraints": [],
+        "passed_constraints": [
+          {
+            "details": {},
+            "detected": "present",
+            "expected": "present",
+            "status": "passed",
+            "target": "duck",
+            "type": "object_presence"
+          },
+          {
+            "details": {},
+            "detected": "yellow",
+            "expected": "yellow",
+            "status": "passed",
+            "target": "duck",
+            "type": "color_binding"
+          },
+          {
+            "details": {},
+            "detected": "absent",
+            "expected": "absent",
+            "status": "passed",
+            "target": "second duck",
+            "type": "extra_object"
+          }
+        ],
+        "raw_report": {
+          "failed_constraints": [],
+          "passed_constraints": [
+            {
+              "detected": "present",
+              "expected": "present",
+              "target": "duck",
+              "type": "object_presence"
+            },
+            {
+              "detected": "yellow",
+              "expected": "yellow",
+              "target": "duck",
+              "type": "color_binding"
+            },
+            {
+              "detected": "absent",
+              "expected": "absent",
+              "target": "second duck",
+              "type": "extra_object"
+            }
+          ],
+          "score": 0.99,
+          "uncertain_constraints": []
+        },
+        "score": 0.99,
+        "uncertain_constraints": []
+      },
+      "image_path": "data/images/episode_000004_17656a443327_attempt_1.png",
+      "metadata": {
+        "retry_budget_left": 1
+      },
+      "prompt": "one yellow duck with no extra objects Repair: Remove the extra forbidden object: second duck. Preserve: Keep duck object_presence as passed. Keep duck color_binding as passed.",
+      "round": 1,
+      "teacher_action": null
+    }
+  ],
+  "final_outcome": "passed_after_retry",
+  "id": "episode_000004_17656a443327",
+  "metadata": {
+    "max_retry": 2,
+    "pass_threshold": 0.95,
+    "prompt_metadata": {
+      "category": "extra_object",
+      "prompt": "one yellow duck with no extra objects"
+    }
+  },
+  "original_prompt": "one yellow duck with no extra objects"
+}

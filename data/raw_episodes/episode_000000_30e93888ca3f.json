@@ -1,0 +1,175 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "geneval_report": {
+        "failed_constraints": [
+          {
+            "details": {},
+            "detected": 2,
+            "expected": 3,
+            "status": "failed",
+            "target": "apple",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {},
+            "detected": "red",
+            "expected": "red",
+            "status": "passed",
+            "target": "apple",
+            "type": "color_binding"
+          },
+          {
+            "details": {},
+            "detected": "present",
+            "expected": "present",
+            "status": "passed",
+            "target": "plate",
+            "type": "object_presence"
+          }
+        ],
+        "raw_report": {
+          "failed_constraints": [
+            {
+              "detected": 2,
+              "expected": 3,
+              "target": "apple",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "detected": "red",
+              "expected": "red",
+              "target": "apple",
+              "type": "color_binding"
+            },
+            {
+              "detected": "present",
+              "expected": "present",
+              "target": "plate",
+              "type": "object_presence"
+            }
+          ],
+          "score": 0.62,
+          "uncertain_constraints": []
+        },
+        "score": 0.62,
+        "uncertain_constraints": []
+      },
+      "image_path": "data/images/episode_000000_30e93888ca3f_attempt_0.png",
+      "metadata": {
+        "new_critical_failures": false,
+        "retry_budget_left": 2,
+        "transition_outcome": "passed_after_retry"
+      },
+      "prompt": "three red apples on a blue plate",
+      "round": 0,
+      "teacher_action": {
+        "action_type": "image_edit",
+        "decision": "retry",
+        "diagnosis": "Geneval reports count_mismatch for apple: expected 3, detected 2.",
+        "edit_instruction": "Adjust apple to match the expected count: 3.",
+        "expected_improvement": [
+          "The retry should reduce failed Geneval constraints without introducing new critical failures."
+        ],
+        "failure_types": [
+          "count_mismatch"
+        ],
+        "preserve_constraints": [
+          "Keep apple color_binding as passed.",
+          "Keep plate object_presence as passed."
+        ],
+        "regression_risks": [
+          "The retry could regress constraints that already passed.",
+          "The edit could introduce new objects or change object attributes."
+        ],
+        "repair_constraints": [
+          "Adjust apple to match the expected count: 3."
+        ],
+        "retry_prompt": "three red apples on a blue plate Repair: Adjust apple to match the expected count: 3. Preserve: Keep apple color_binding as passed. Keep plate object_presence as passed.",
+        "skill": "quantity_counting"
+      }
+    },
+    {
+      "attempt_type": "retry_edit",
+      "geneval_report": {
+        "failed_constraints": [],
+        "passed_constraints": [
+          {
+            "details": {},
+            "detected": 3,
+            "expected": 3,
+            "status": "passed",
+            "target": "apple",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {},
+            "detected": "red",
+            "expected": "red",
+            "status": "passed",
+            "target": "apple",
+            "type": "color_binding"
+          },
+          {
+            "details": {},
+            "detected": "present",
+            "expected": "present",
+            "status": "passed",
+            "target": "plate",
+            "type": "object_presence"
+          }
+        ],
+        "raw_report": {
+          "failed_constraints": [],
+          "passed_constraints": [
+            {
+              "detected": 3,
+              "expected": 3,
+              "target": "apple",
+              "type": "count_mismatch"
+            },
+            {
+              "detected": "red",
+              "expected": "red",
+              "target": "apple",
+              "type": "color_binding"
+            },
+            {
+              "detected": "present",
+              "expected": "present",
+              "target": "plate",
+              "type": "object_presence"
+            }
+          ],
+          "score": 1.0,
+          "uncertain_constraints": []
+        },
+        "score": 1.0,
+        "uncertain_constraints": []
+      },
+      "image_path": "data/images/episode_000000_30e93888ca3f_attempt_1.png",
+      "metadata": {
+        "retry_budget_left": 1
+      },
+      "prompt": "three red apples on a blue plate Repair: Adjust apple to match the expected count: 3. Preserve: Keep apple color_binding as passed. Keep plate object_presence as passed.",
+      "round": 1,
+      "teacher_action": null
+    }
+  ],
+  "final_outcome": "passed_after_retry",
+  "id": "episode_000000_30e93888ca3f",
+  "metadata": {
+    "max_retry": 2,
+    "pass_threshold": 0.95,
+    "prompt_metadata": {
+      "category": "counting",
+      "prompt": "three red apples on a blue plate"
+    }
+  },
+  "original_prompt": "three red apples on a blue plate"
+}

@@ -1,0 +1,175 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "geneval_report": {
+        "failed_constraints": [
+          {
+            "details": {},
+            "detected": "one green bird",
+            "expected": "blue",
+            "status": "failed",
+            "target": "bird",
+            "type": "color_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {},
+            "detected": 2,
+            "expected": 2,
+            "status": "passed",
+            "target": "bird",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {},
+            "detected": "present",
+            "expected": "present",
+            "status": "passed",
+            "target": "car",
+            "type": "object_presence"
+          }
+        ],
+        "raw_report": {
+          "failed_constraints": [
+            {
+              "detected": "one green bird",
+              "expected": "blue",
+              "target": "bird",
+              "type": "color_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "detected": 2,
+              "expected": 2,
+              "target": "bird",
+              "type": "count_mismatch"
+            },
+            {
+              "detected": "present",
+              "expected": "present",
+              "target": "car",
+              "type": "object_presence"
+            }
+          ],
+          "score": 0.58,
+          "uncertain_constraints": []
+        },
+        "score": 0.58,
+        "uncertain_constraints": []
+      },
+      "image_path": "data/images/episode_000001_027ce5f1fddd_attempt_0.png",
+      "metadata": {
+        "new_critical_failures": false,
+        "retry_budget_left": 2,
+        "transition_outcome": "passed_after_retry"
+      },
+      "prompt": "two blue birds and one red car",
+      "round": 0,
+      "teacher_action": {
+        "action_type": "image_edit",
+        "decision": "retry",
+        "diagnosis": "Geneval reports color_mismatch for bird: expected blue, detected one green bird.",
+        "edit_instruction": "Correct bird to the expected color or attribute: blue.",
+        "expected_improvement": [
+          "The retry should reduce failed Geneval constraints without introducing new critical failures."
+        ],
+        "failure_types": [
+          "color_mismatch"
+        ],
+        "preserve_constraints": [
+          "Keep bird count_mismatch as passed.",
+          "Keep car object_presence as passed."
+        ],
+        "regression_risks": [
+          "The retry could regress constraints that already passed.",
+          "The edit could introduce new objects or change object attributes."
+        ],
+        "repair_constraints": [
+          "Correct bird to the expected color or attribute: blue."
+        ],
+        "retry_prompt": "two blue birds and one red car Repair: Correct bird to the expected color or attribute: blue. Preserve: Keep bird count_mismatch as passed. Keep car object_presence as passed.",
+        "skill": "attribute_binding"
+      }
+    },
+    {
+      "attempt_type": "retry_edit",
+      "geneval_report": {
+        "failed_constraints": [],
+        "passed_constraints": [
+          {
+            "details": {},
+            "detected": 2,
+            "expected": 2,
+            "status": "passed",
+            "target": "bird",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {},
+            "detected": "blue",
+            "expected": "blue",
+            "status": "passed",
+            "target": "bird",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {},
+            "detected": "present",
+            "expected": "present",
+            "status": "passed",
+            "target": "car",
+            "type": "object_presence"
+          }
+        ],
+        "raw_report": {
+          "failed_constraints": [],
+          "passed_constraints": [
+            {
+              "detected": 2,
+              "expected": 2,
+              "target": "bird",
+              "type": "count_mismatch"
+            },
+            {
+              "detected": "blue",
+              "expected": "blue",
+              "target": "bird",
+              "type": "color_mismatch"
+            },
+            {
+              "detected": "present",
+              "expected": "present",
+              "target": "car",
+              "type": "object_presence"
+            }
+          ],
+          "score": 0.98,
+          "uncertain_constraints": []
+        },
+        "score": 0.98,
+        "uncertain_constraints": []
+      },
+      "image_path": "data/images/episode_000001_027ce5f1fddd_attempt_1.png",
+      "metadata": {
+        "retry_budget_left": 1
+      },
+      "prompt": "two blue birds and one red car Repair: Correct bird to the expected color or attribute: blue. Preserve: Keep bird count_mismatch as passed. Keep car object_presence as passed.",
+      "round": 1,
+      "teacher_action": null
+    }
+  ],
+  "final_outcome": "passed_after_retry",
+  "id": "episode_000001_027ce5f1fddd",
+  "metadata": {
+    "max_retry": 2,
+    "pass_threshold": 0.95,
+    "prompt_metadata": {
+      "category": "color_binding",
+      "prompt": "two blue birds and one red car"
+    }
+  },
+  "original_prompt": "two blue birds and one red car"
+}
