@@ -12,6 +12,86 @@ prompt
 
 The local repository does not run Qwen-Image or Geneval by itself. The batch script calls command templates that you provide in a prepared A100 environment.
 
+There are now two supported paths:
+
+- Official GenEval path: `generate_qwen_geneval_images.py` writes the exact official GenEval image layout, then `run_geneval_select_teacher_diagnostics.py` runs `geneval/evaluation/evaluate_images.py`, computes prompt-level scores over 4 candidates, and writes selected teacher diagnostics.
+- Command-template path: `collect_qwen_geneval_diagnostics.py` calls your own generation and Geneval wrappers and expects each wrapper to write one structured JSON output per candidate.
+
+Use the official path when your goal is to mine first-batch retry data from the standard GenEval benchmark.
+
+## Official GenEval Path
+
+Generate 4 Qwen-Image candidates per prompt:
+
+```bash
+python3 scripts/generate_qwen_geneval_images.py \
+  --metadata ../geneval/prompts/evaluation_metadata.jsonl \
+  --output-dir data/runs/qwen_geneval_official_10/images_geneval \
+  --model-path /home/develop/biocloudplantform/xxr/models/Qwen-Image-2512 \
+  --n-samples 4 \
+  --limit 10 \
+  --gpus 0,1,2,3 \
+  --resume
+```
+
+This writes:
+
+```text
+data/runs/qwen_geneval_official_10/images_geneval/
+  generation_manifest.jsonl
+  00000/
+    metadata.jsonl
+    grid.png
+    samples/
+      00000.png
+      00001.png
+      00002.png
+      00003.png
+```
+
+Run official GenEval and select prompt groups:
+
+```bash
+python3 scripts/run_geneval_select_teacher_diagnostics.py \
+  --image-dir data/runs/qwen_geneval_official_10/images_geneval \
+  --geneval-dir ../geneval \
+  --object-detector-path /path/to/geneval/object_detector \
+  --output-dir data/runs/qwen_geneval_official_10/selected \
+  --min-prompt-score 0.25 \
+  --max-prompt-score 0.75 \
+  --candidate-policy failed
+```
+
+Outputs:
+
+```text
+data/runs/qwen_geneval_official_10/selected/
+  geneval_results.jsonl
+  candidate_diagnostics.jsonl
+  prompt_selection.jsonl
+  selected_candidate_diagnostics.jsonl
+  teacher_diagnostics.selected.jsonl
+```
+
+`prompt_selection.jsonl` contains one row per prompt. `prompt_score` is the fraction of the 4 generated images that passed official GenEval, so the possible values are `0.0`, `0.25`, `0.5`, `0.75`, and `1.0`. A useful first retry-data range is usually `0.25 <= prompt_score <= 0.75`: the prompt is neither trivially solved nor completely broken.
+
+`--candidate-policy failed` sends only failed candidates from selected prompt groups to the GPT teacher. Other options are:
+
+- `all`: send every candidate from selected prompt groups.
+- `best_failed`: send the highest-scoring failed candidate per selected prompt.
+- `worst_failed`: send the lowest-scoring failed candidate per selected prompt.
+
+Then call the GPT teacher:
+
+```bash
+python3 scripts/build_teacher_retry_actions.py \
+  --input data/runs/qwen_geneval_official_10/selected/teacher_diagnostics.selected.jsonl \
+  --output data/processed/teacher_retry_actions_geneval_official_10.jsonl \
+  --failed-output data/failed/teacher_retry_actions_geneval_official_10_failed.jsonl
+```
+
+For local validation without API calls, add `--dry-run` to the teacher command.
+
 ## Output Layout
 
 For `--output-dir data/runs/qwen_geneval_pilot_10`, the script writes:

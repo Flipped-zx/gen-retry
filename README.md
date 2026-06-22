@@ -127,6 +127,45 @@ The evaluator, not the teacher, decides whether the retry succeeded.
 
 For the first real data pass, generate multiple Qwen-Image candidates per prompt, run Geneval externally, and save teacher-ready diagnostics.
 
+If you want the official GenEval loop directly inside `gen-retry`, use the two-step path below. It generates 4 Qwen-Image candidates per prompt in the official GenEval image layout, runs `geneval/evaluation/evaluate_images.py`, computes prompt-level scores over the 4 candidates, and writes GPT-teacher-ready rows for selected failed candidates.
+
+Generate 10 prompts x 4 candidates:
+
+```bash
+python3 scripts/generate_qwen_geneval_images.py \
+  --metadata ../geneval/prompts/evaluation_metadata.jsonl \
+  --output-dir data/runs/qwen_geneval_official_10/images_geneval \
+  --model-path /home/develop/biocloudplantform/xxr/models/Qwen-Image-2512 \
+  --n-samples 4 \
+  --limit 10 \
+  --gpus 0,1,2,3 \
+  --resume
+```
+
+Run official GenEval and select prompts whose 4-image pass rate is in a target range, for example `[0.25, 0.75]`:
+
+```bash
+python3 scripts/run_geneval_select_teacher_diagnostics.py \
+  --image-dir data/runs/qwen_geneval_official_10/images_geneval \
+  --geneval-dir ../geneval \
+  --object-detector-path /path/to/geneval/object_detector \
+  --output-dir data/runs/qwen_geneval_official_10/selected \
+  --min-prompt-score 0.25 \
+  --max-prompt-score 0.75 \
+  --candidate-policy failed
+```
+
+Then call the GPT teacher on the selected diagnostics:
+
+```bash
+python3 scripts/build_teacher_retry_actions.py \
+  --input data/runs/qwen_geneval_official_10/selected/teacher_diagnostics.selected.jsonl \
+  --output data/processed/teacher_retry_actions_geneval_official_10.jsonl \
+  --failed-output data/failed/teacher_retry_actions_geneval_official_10_failed.jsonl
+```
+
+The prompt-level score is the fraction of the 4 candidates that passed official GenEval. With 4 candidates, possible values are `0.0`, `0.25`, `0.5`, `0.75`, and `1.0`. For retry data, `--candidate-policy failed` keeps only failed candidates from selected prompts, because passing candidates do not need a retry action.
+
 Plan 10 prompts x 4 candidates without running any real model:
 
 ```bash
