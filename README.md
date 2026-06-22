@@ -123,6 +123,45 @@ original prompt
 
 The evaluator, not the teacher, decides whether the retry succeeded.
 
+## Qwen-Image + Geneval Batch Diagnostics
+
+For the first real data pass, generate multiple Qwen-Image candidates per prompt, run Geneval externally, and save teacher-ready diagnostics.
+
+Plan 10 prompts x 4 candidates without running any real model:
+
+```bash
+python3 scripts/collect_qwen_geneval_diagnostics.py \
+  --prompts data/prompts/geneval_pilot_10.jsonl \
+  --output-dir data/runs/qwen_geneval_pilot_10 \
+  --images-per-prompt 4 \
+  --gpus 0,1,2,3 \
+  --qwen-model-path /home/develop/biocloudplantform/xxr/models/Qwen-Image-2512 \
+  --plan-only
+```
+
+In a prepared A100 environment, pass command templates for your actual Qwen-Image and Geneval scripts:
+
+```bash
+python3 scripts/collect_qwen_geneval_diagnostics.py \
+  --prompts data/prompts/geneval_pilot_10.jsonl \
+  --output-dir data/runs/qwen_geneval_pilot_10 \
+  --images-per-prompt 4 \
+  --gpus 0,1,2,3 \
+  --qwen-model-path /home/develop/biocloudplantform/xxr/models/Qwen-Image-2512 \
+  --generation-command-template 'python /path/to/qwen_generate.py --model {qwen_model_path} --prompt {prompt} --seed {seed} --out {image_path}' \
+  --geneval-command-template 'python /path/to/run_geneval.py --prompt {prompt} --image {image_path} --out {geneval_output_path}'
+```
+
+The script saves:
+
+```text
+generation_manifest.jsonl
+candidate_diagnostics.jsonl
+teacher_diagnostics.jsonl
+```
+
+Use `teacher_diagnostics.jsonl` later for GPT teacher action GT construction. See `docs/QWEN_GENEVAL_BATCH.md`.
+
 ## Real Environment Integration Points
 
 The real adapters are scaffolded but not used in tests:

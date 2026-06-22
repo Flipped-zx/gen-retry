@@ -378,3 +378,55 @@ Blockers:
 Next recommended step:
 
 - Replace one mock adapter at a time in a controlled environment: first real Geneval evaluator, then real retry executor, then real GPT-5.5 teacher action generation.
+
+## Qwen-Image And Geneval Batch Diagnostic Scaffold
+
+Status: completed.
+
+Completed work:
+
+- Added a batch collector scaffold for Qwen-Image candidate generation plus Geneval evaluation.
+- Designed the batch around the intended next data stage:
+  - prompt;
+  - 4 generated images per prompt;
+  - raw Geneval JSON per image;
+  - structured candidate diagnostics;
+  - teacher-ready diagnostics for later GPT action GT construction.
+- Added `scripts/collect_qwen_geneval_diagnostics.py`.
+- Added `src/gen_retry/collectors/qwen_geneval_batch.py`.
+- Added `src/gen_retry/evaluators/geneval_result_normalizer.py`.
+- Added 10 pilot prompts at `data/prompts/geneval_pilot_10.jsonl`.
+- Added `docs/QWEN_GENEVAL_BATCH.md` with A100 command-template examples.
+- Added tests for Geneval result normalization and Qwen/Geneval batch planning.
+- Ran plan-only mode for 10 prompts x 4 images, producing a 40-row generation manifest at `data/runs/qwen_geneval_pilot_10/generation_manifest.jsonl`.
+- Did not run real Qwen-Image, Geneval, GPT teacher API, training, RL, or dependency installation.
+
+Changed files:
+
+- `README.md`
+- `scripts/collect_qwen_geneval_diagnostics.py`
+- `src/gen_retry/collectors/qwen_geneval_batch.py`
+- `src/gen_retry/evaluators/geneval_result_normalizer.py`
+- `data/prompts/geneval_pilot_10.jsonl`
+- `data/runs/qwen_geneval_pilot_10/generation_manifest.jsonl`
+- `docs/QWEN_GENEVAL_BATCH.md`
+- `tests/test_geneval_result_normalizer.py`
+- `tests/test_qwen_geneval_batch.py`
+- `docs/PROGRESS.md`
+- `docs/CODEX_HANDOFF.md`
+
+Validation commands run:
+
+- `python3 scripts/collect_qwen_geneval_diagnostics.py --prompts data/prompts/geneval_pilot_10.jsonl --output-dir data/runs/qwen_geneval_pilot_10 --images-per-prompt 4 --gpus 0,1,2,3 --plan-only` - passed; planned 40 candidates.
+- `python3 -m unittest tests.test_geneval_result_normalizer tests.test_qwen_geneval_batch` - passed with 4 tests.
+- `python3 -m unittest discover tests` - passed with 23 tests.
+- `python3 scripts/safe_check.py` - passed.
+- `python3 -m compileall src scripts tests` - passed.
+
+Blockers:
+
+- None for scaffold/plan-only mode. Real generation/evaluation must be run in a prepared A100/Geneval environment by supplying command templates.
+
+Next recommended step:
+
+- On the A100 server, run `scripts/collect_qwen_geneval_diagnostics.py` with real Qwen-Image and Geneval command templates, inspect `candidate_diagnostics.jsonl`, then feed `teacher_diagnostics.jsonl` into `scripts/build_teacher_retry_actions.py`.

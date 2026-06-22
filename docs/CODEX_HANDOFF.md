@@ -178,6 +178,27 @@ Latest collector validation:
 - `python3 scripts/safe_check.py` - passed.
 - `python3 -m compileall src scripts tests` - passed.
 
+Latest Qwen-Image + Geneval batch diagnostic update:
+
+- Added `scripts/collect_qwen_geneval_diagnostics.py` to plan or run Qwen-Image candidate generation and Geneval evaluation.
+- Added `src/gen_retry/collectors/qwen_geneval_batch.py` for 4-GPU command-template orchestration.
+- Added `src/gen_retry/evaluators/geneval_result_normalizer.py` to convert raw Geneval JSON into structured `NormalizedGenevalReport` and teacher-ready diagnostics.
+- Added `data/prompts/geneval_pilot_10.jsonl` with 10 prompt records covering counting, color, spatial, object presence, mixed, and visibility cases.
+- Added `docs/QWEN_GENEVAL_BATCH.md` with prepared-server commands.
+- Plan-only validation generated `data/runs/qwen_geneval_pilot_10/generation_manifest.jsonl` with 40 candidates: 10 prompts x 4 images.
+- Expected real-run outputs:
+  - `candidate_diagnostics.jsonl` for full per-image diagnostics.
+  - `teacher_diagnostics.jsonl` for later GPT teacher action GT construction.
+- No real Qwen-Image generation, Geneval evaluation, GPT API, training, RL, or dependency installation was run locally.
+
+Latest Qwen/Geneval validation:
+
+- `python3 scripts/collect_qwen_geneval_diagnostics.py --prompts data/prompts/geneval_pilot_10.jsonl --output-dir data/runs/qwen_geneval_pilot_10 --images-per-prompt 4 --gpus 0,1,2,3 --plan-only` - passed and planned 40 candidates.
+- `python3 -m unittest tests.test_geneval_result_normalizer tests.test_qwen_geneval_batch` - passed with 4 tests.
+- `python3 -m unittest discover tests` - passed with 23 tests.
+- `python3 scripts/safe_check.py` - passed.
+- `python3 -m compileall src scripts tests` - passed.
+
 `python -m pytest tests` was not run because the user restricted validation to the safe stdlib-only command list for this unattended pass.
 
 ## Blockers
