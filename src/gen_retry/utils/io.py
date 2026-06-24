@@ -41,3 +41,12 @@ def write_jsonl(path: str | Path, rows: list[dict[str, Any]]) -> int:
             handle.write("\n")
     return len(rows)
 
+
+def append_jsonl(path: str | Path, rows: list[dict[str, Any]]) -> int:
+    target = Path(path)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    with target.open("a", encoding="utf-8") as handle:
+        for row in rows:
+            handle.write(json.dumps(row, ensure_ascii=False, sort_keys=True))
+            handle.write("\n")
+    return len(rows)

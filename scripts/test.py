@@ -7,7 +7,7 @@ client = OpenAI(
 )
 
 resp = client.chat.completions.create(
-        model="gpt-5.5",  # 这里换成后台显示的精确模型名
+        model="gemini-3.1-pro-preview",  # 这里换成后台显示的精确模型名
         messages=[
             {"role": "user", "content": "Say only: OK"}
         ],

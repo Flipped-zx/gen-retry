@@ -1,8 +1,17 @@
-"""Generator and retry executor interfaces."""
+"""Generator interfaces."""
 
 from __future__ import annotations
 
 from abc import ABC, abstractmethod
+from typing import Any
+
+
+class BaseGenerator(ABC):
+    name = "base_generator"
+
+    @abstractmethod
+    def generate(self, prompt: str, output_path: str, metadata: dict[str, Any] | None = None) -> str:
+        """Generate an image from a prompt and return the saved image path."""
 
 
 class BaseInitialGenerator(ABC):
@@ -19,4 +28,3 @@ class BaseRetryExecutor(ABC):
     def regenerate(self, prompt: str, episode_id: str, round_id: int) -> str:
         """Optionally regenerate from a prompt."""
         raise NotImplementedError("This retry executor does not support regeneration")
-

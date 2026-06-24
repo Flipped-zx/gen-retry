@@ -1,32 +1,23 @@
-import os
-from openai import OpenAI
+from __future__ import annotations
 
-# 从环境变量中获取您的API KEY，配置方法见：https://www.volcengine.com/docs/82379/1399008
-api_key = "ark-65af9c75-4bb6-4375-878c-ec7918922682-c7283"
+import unittest
+import sys
+from pathlib import Path
 
-client = OpenAI(
-    base_url="https://ark.cn-beijing.volces.com/api/v3",
-    api_key=api_key,
-)
 
-response = client.responses.create(
-    model="doubao-seed-2-0-pro-260215",
-    input=[
-        {
-            "role": "user",
-            "content": [
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
 
-                {
-                    "type": "input_image",
-                    "image_url": "https://ark-project.tos-cn-beijing.volces.com/doc_image/ark_demo_img_1.png"
-                },
-                {
-                    "type": "input_text",
-                    "text": "你看见了什么？"
-                },
-            ],
-        }
-    ]
-)
+from gen_retry.teachers.seed_teacher_adapter import SeedTeacherAdapter
 
-print(response)
+
+class SeedTeacherAdapterTest(unittest.TestCase):
+    def test_seed_adapter_uses_same_interface_without_hardcoded_key(self) -> None:
+        adapter = SeedTeacherAdapter(base_url="https://example.invalid/v1", api_key="test-key")
+        self.assertEqual(adapter.name, "seed_teacher_adapter")
+        self.assertTrue(hasattr(adapter, "initial_plan"))
+        self.assertTrue(hasattr(adapter, "retry_replan"))
+
+
+if __name__ == "__main__":
+    unittest.main()

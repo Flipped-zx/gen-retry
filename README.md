@@ -1,29 +1,49 @@
 # Gen-Retry
 
-Diagnostic-conditioned retry scaffolding for agentic image generation.
+Gen-Retry is a Geneval/Geneval2-guided re-planning agent for image generation.
+The generator is a frozen prompt-to-image executor. The evaluator is a frozen
+Geneval/Geneval2 verifier. The trainable target is the planner/controller that
+learns macro actions for initial planning and verifier-guided retry planning.
 
-This repository is currently limited to safe local scaffolding:
+This version does not use direct image edit. A retry means re-planning a better
+prompt and regenerating a fresh image.
 
-- Stage 1: persistent source digests for `../GenEvolve`, `../Gen-Searcher`, and `../GenEval`.
-- Stage 2: a stdlib-only Python skeleton for Geneval-style diagnostics, skills, schemas, examples, and safe validation.
-- Visual retry collector scaffold: mock generation, mock Geneval-style evaluation, mock teacher actions, raw episode saving, validation, and policy-only SFT export.
+The supervised macro actions are:
 
-The target student model is `Qwen3-VL-4B-Instruct`. The intended training behavior is:
+- `initial_plan`: parse constraints, select fixed skills, build the first generation strategy, and produce `initial_prompt`.
+- `retry_replan`: read normalized verifier feedback, diagnose failures, revise skills, and produce a new `retry_prompt` for regeneration.
+
+Stop decisions are rule-based by default and are saved for analysis, but they
+are not exported as SFT targets by default. Future RL can optimize the same
+planner with Geneval/Geneval2 before-after reward.
+
+The default loop is:
 
 ```text
-original prompt
--> first generation
--> Geneval-style diagnostic feedback
--> identify failed constraints
--> call an appropriate skill
--> preserve already-correct constraints
--> repair only failed targets
--> retry generation
--> re-evaluate
--> submit improved result
+prompt
+-> teacher.initial_plan
+-> generator.generate(initial_prompt)
+-> evaluator.evaluate(image)
+-> if not passed: teacher.retry_replan
+-> generator.generate(retry_prompt)
+-> evaluator.evaluate(image)
+-> repeat until rule-based stop
+-> save full episode
+-> export SFT data
 ```
 
-This is not a generic prompt rewriting project. The mock collector focuses on the Geneval retry surface and keeps real image generation, real Geneval evaluation, training, and RL behind explicit future integration points.
+The fixed skill library is:
+
+```text
+object_presence
+quantity_counting
+attribute_binding
+spatial_layout
+anti_occlusion
+multi_object_composition
+clarity_visibility
+negative_constraints
+```
 
 ## Repository Map
 
@@ -51,6 +71,7 @@ src/gen_retry/
   export/
   filters/
   generators/
+  prompts/
   schemas/
   teachers/
   tools/
@@ -76,7 +97,7 @@ PYTHONPATH=src python3 -m gen_retry.data.validate_trajectory examples/geneval_re
 
 Full pytest-based testing is intentionally not required for this stage.
 
-## Mock Visual Retry Collector
+## Mock Episode Collector
 
 Mock mode requires no API key and calls no external service.
 
@@ -95,7 +116,7 @@ python3 scripts/validate_episodes.py data/raw_episodes
 Export policy-only SFT rows:
 
 ```bash
-python3 scripts/export_policy_sft.py
+python3 scripts/export_sft.py --input data/raw_episodes --output data/sft/retry_sft.jsonl
 ```
 
 Default paths:
@@ -104,24 +125,36 @@ Default paths:
 data/prompts/sample_prompts.jsonl
 data/raw_episodes/
 data/images/
-data/sft/retry_policy_sft_sharegpt.jsonl
+data/sft/retry_sft.jsonl
+data/rejected/retry_replan_rejected.jsonl
 ```
 
 The collector loop is:
 
 ```text
 original prompt
--> mock initial generation
--> mock Geneval-style evaluation
--> mock teacher chooses retry action
--> mock retry executor writes an edited placeholder image
+-> mock teacher creates initial_plan
+-> mock generator writes a generated placeholder image
+-> mock Geneval-style evaluator returns a normalized report
+-> mock teacher creates retry_replan when constraints fail
+-> mock generator regenerates from retry_prompt
 -> mock evaluator evaluates again
 -> repeat until pass threshold or retry budget is exhausted
 -> save full episode JSON
--> export policy-only SFT as state_t -> action_t
+-> export ShareGPT SFT for initial_plan and retry_replan
 ```
 
 The evaluator, not the teacher, decides whether the retry succeeded.
+
+Default stop rules:
+
+- stop if `failed_constraints` is empty;
+- stop if `score >= 0.95` and no critical failure exists;
+- stop if `retry_round >= max_retry`;
+- otherwise continue.
+
+Default SFT export does not train on image paths, raw Geneval outputs, detector
+boxes, tool observations, generator metadata, API logs, or stop decisions.
 
 ## Qwen-Image + Geneval Batch Diagnostics
 
@@ -206,7 +239,10 @@ Use `teacher_diagnostics.jsonl` later for GPT teacher action GT construction. Se
 The real adapters are scaffolded but not used in tests:
 
 - `src/gen_retry/teachers/gpt55_teacher_adapter.py`
-- `src/gen_retry/generators/qwen_image_edit_adapter.py`
+- `src/gen_retry/teachers/seed_teacher_adapter.py`
+- `src/gen_retry/generators/real_generator_adapter.py`
+- `src/gen_retry/evaluators/geneval_adapter.py`
+- `src/gen_retry/evaluators/geneval2_adapter.py`
 
 Teacher environment variables:
 
@@ -216,20 +252,15 @@ GEN_RETRY_TEACHER_API_KEY=your_api_key_here
 GEN_RETRY_TEACHER_MODEL=gpt-5.5
 ```
 
-Qwen-Image-Edit environment variables:
-
-```bash
-GEN_RETRY_QWEN_IMAGE_EDIT_ENDPOINT=https://your-image-edit-endpoint.example.com
-GEN_RETRY_QWEN_IMAGE_EDIT_API_KEY=your_api_key_here
-```
-
-Do not hard-code API keys. The GPT-5.5 teacher should only choose the next action. It must not decide whether a retry succeeded; success must come from the evaluator.
+Do not hard-code API keys. The GPT-5.5/Seed teacher should only choose planner
+actions. It must not decide whether a retry succeeded; success must come from
+the evaluator.
 
 To replace mocks later:
 
-- replace `MockGenevalEvaluator` with a real Geneval evaluator adapter that returns `NormalizedGenevalReport`;
-- replace `MockRetryExecutor` with `QwenImageEditAdapter` or another image edit executor;
-- replace `MockTeacher` with `GPT55TeacherAdapter` after wiring the real API call in a controlled environment.
+- replace `MockGenevalEvaluator` with `GenevalAdapter` or `Geneval2Adapter`;
+- replace `MockGenerator` with `RealGeneratorAdapter`;
+- replace `MockTeacher` with `GPT55TeacherAdapter` or `SeedTeacherAdapter`.
 
 ## Minimal Diagnostic Flow
 
