@@ -271,7 +271,8 @@ re-planning trajectory collector as verifier feedback.
 
 ## Real Environment Integration Points
 
-The real adapters are scaffolded but not used in tests:
+The production collector can use real teacher, generator, and evaluator
+adapters:
 
 - `src/gen_retry/teachers/gpt55_teacher_adapter.py`
 - `src/gen_retry/teachers/seed_teacher_adapter.py`
@@ -279,23 +280,64 @@ The real adapters are scaffolded but not used in tests:
 - `src/gen_retry/evaluators/geneval_adapter.py`
 - `src/gen_retry/evaluators/geneval2_adapter.py`
 
-Teacher environment variables:
+Teacher calls use an OpenAI-compatible `/chat/completions` endpoint:
 
 ```bash
-GEN_RETRY_TEACHER_BASE_URL=https://your-proxy.example.com/v1
-GEN_RETRY_TEACHER_API_KEY=your_api_key_here
-GEN_RETRY_TEACHER_MODEL=gpt-5.5
+export GEN_RETRY_TEACHER_BASE_URL="https://your-proxy.example.com/v1"
+export GEN_RETRY_TEACHER_API_KEY="your_api_key_here"
+export GEN_RETRY_TEACHER_MODEL="gpt-5.5"
+export GEN_RETRY_TEACHER_TIMEOUT="120"
+export GEN_RETRY_TEACHER_MAX_RETRIES="1"
+```
+
+Image generation calls use an OpenAI-compatible `/images/generations` endpoint:
+
+```bash
+export GEN_RETRY_IMAGE_BASE_URL="https://your-proxy.example.com/v1"
+export GEN_RETRY_IMAGE_API_KEY="your_api_key_here"
+export GEN_RETRY_IMAGE_MODEL="gpt-image-2"
+export GEN_RETRY_IMAGE_SIZE="1024x1024"
+# Optional relay/model-specific fields, merged into the image payload:
+export GEN_RETRY_IMAGE_EXTRA_JSON='{"quality":"high"}'
 ```
 
 Do not hard-code API keys. The GPT-5.5/Seed teacher should only choose planner
 actions. It must not decide whether a retry succeeded; success must come from
 the evaluator.
 
-To replace mocks later:
+To build a small GenEval2 trajectory batch:
 
-- replace `MockGenevalEvaluator` with `GenevalAdapter` or `Geneval2Adapter`;
-- replace `MockGenerator` with `RealGeneratorAdapter`;
-- replace `MockTeacher` with `GPT55TeacherAdapter` or `SeedTeacherAdapter`.
+```bash
+python3 scripts/prepare_geneval2_prompts.py \
+  --input ../GenEval2/geneval2_data.jsonl \
+  --output data/prompts/geneval2_subset_20.jsonl \
+  --limit 20
+
+python3 scripts/collect_real_episodes.py \
+  --prompts data/prompts/geneval2_subset_20.jsonl \
+  --num 20 \
+  --teacher gpt55 \
+  --generator gpt_image \
+  --evaluator geneval2 \
+  --geneval2-command-template 'python3 scripts/run_geneval2_single_image.py --geneval2-root ../GenEval2 --benchmark-data ../GenEval2/geneval2_data.jsonl --prompt {prompt} --image-path {image_path} --output-path {output_path} --method soft_tifa_gm' \
+  --max-retry 1 \
+  --pass-threshold 0.95 \
+  --output-dir data/raw_episodes/geneval2_gpt_image2_20 \
+  --image-dir data/images/geneval2_gpt_image2_20 \
+  --resume
+
+python3 scripts/validate_episodes.py data/raw_episodes/geneval2_gpt_image2_20 --strict-images
+
+python3 scripts/export_sft.py \
+  --input data/raw_episodes/geneval2_gpt_image2_20 \
+  --output data/sft/geneval2_gpt_image2_retry_sft.jsonl \
+  --rejected-output data/rejected/geneval2_gpt_image2_retry_rejected.jsonl
+```
+
+`run_geneval2_single_image.py` is a convenience wrapper around official
+GenEval2 `evaluation.py`. It is suitable for small smoke runs, but large runs
+should use a persistent evaluator service or batch evaluation to avoid loading
+the VQA model once per image.
 
 ## Minimal Diagnostic Flow
 

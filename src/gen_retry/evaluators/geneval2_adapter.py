@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import shlex
 import subprocess
 from pathlib import Path
 
@@ -41,9 +42,12 @@ class Geneval2Adapter(BaseImageEvaluator):
             )
         output_path = Path(image_path).with_suffix(".geneval2.json")
         command = self.command_template.format(
-            prompt=original_prompt,
-            image_path=image_path,
-            output_path=str(output_path),
+            prompt=shlex.quote(original_prompt),
+            image_path=shlex.quote(image_path),
+            output_path=shlex.quote(str(output_path)),
+            prompt_raw=original_prompt,
+            image_path_raw=image_path,
+            output_path_raw=str(output_path),
         )
         subprocess.run(command, shell=True, check=True)
         raw = json.loads(output_path.read_text(encoding="utf-8"))

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import shlex
 import subprocess
 from pathlib import Path
 
@@ -22,9 +23,14 @@ class GenevalAdapter(BaseImageEvaluator):
             raise NotImplementedError("GenevalAdapter requires a command_template or project-specific implementation")
         output_path = Path(image_path).with_suffix(".geneval.json")
         command = self.command_template.format(
-            prompt=original_prompt,
-            image_path=image_path,
-            output_path=str(output_path),
+            prompt=shlex.quote(original_prompt),
+            image_path=shlex.quote(image_path),
+            output_path=shlex.quote(str(output_path)),
+            geneval_output_path=shlex.quote(str(output_path)),
+            prompt_raw=original_prompt,
+            image_path_raw=image_path,
+            output_path_raw=str(output_path),
+            geneval_output_path_raw=str(output_path),
         )
         subprocess.run(command, shell=True, check=True)
         raw = json.loads(output_path.read_text(encoding="utf-8"))

@@ -25,6 +25,8 @@ ENV_TEACHER_BASE_URL = "GEN_RETRY_TEACHER_BASE_URL"
 ENV_TEACHER_API_KEY = "GEN_RETRY_TEACHER_API_KEY"
 ENV_TEACHER_MODEL = "GEN_RETRY_TEACHER_MODEL"
 ENV_TEACHER_LOG_DIR = "GEN_RETRY_TEACHER_LOG_DIR"
+ENV_TEACHER_TIMEOUT = "GEN_RETRY_TEACHER_TIMEOUT"
+ENV_TEACHER_MAX_RETRIES = "GEN_RETRY_TEACHER_MAX_RETRIES"
 
 
 class GPT55TeacherAdapter(BaseTeacher):
@@ -43,8 +45,8 @@ class GPT55TeacherAdapter(BaseTeacher):
         self.base_url = (base_url or os.environ.get(ENV_TEACHER_BASE_URL) or "").rstrip("/")
         self.api_key = api_key or os.environ.get(ENV_TEACHER_API_KEY) or ""
         self.model = model or os.environ.get(ENV_TEACHER_MODEL) or "gpt-5.5"
-        self.timeout = timeout
-        self.max_parse_retries = max_parse_retries
+        self.timeout = _env_float(ENV_TEACHER_TIMEOUT, timeout)
+        self.max_parse_retries = _env_int(ENV_TEACHER_MAX_RETRIES, max_parse_retries)
         self.log_dir = Path(log_dir or os.environ.get(ENV_TEACHER_LOG_DIR) or "data/api_logs/teacher")
 
     def initial_plan(
@@ -185,3 +187,17 @@ def _add_repair_instruction(messages: list[dict[str, str]], previous_text: str) 
         }
     )
     return repaired
+
+
+def _env_float(name: str, default: float) -> float:
+    value = os.environ.get(name)
+    if not value:
+        return default
+    return float(value)
+
+
+def _env_int(name: str, default: int) -> int:
+    value = os.environ.get(name)
+    if not value:
+        return default
+    return int(value)
