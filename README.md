@@ -234,6 +234,41 @@ teacher_diagnostics.jsonl
 
 Use `teacher_diagnostics.jsonl` later for GPT teacher action GT construction. See `docs/QWEN_GENEVAL_BATCH.md`.
 
+## Normalizing GenEval2 Official Outputs
+
+GenEval2's official `evaluation.py` writes atom-level score lists. Gen-Retry
+normalizes those VQA atom scores into `NormalizedEvalReport` rows so the same
+`retry_replan` teacher prompt can consume Geneval2 feedback.
+
+If you have the official score list plus GenEval2 benchmark metadata:
+
+```bash
+python3 scripts/normalize_geneval2_results.py \
+  --input ../GenEval2/outputs/score_lists.json \
+  --benchmark-data ../GenEval2/geneval2_data.jsonl \
+  --output data/normalized/geneval2_normalized_reports.jsonl \
+  --aggregate-by prompt_id
+```
+
+The output is JSONL with one row per prompt/image group:
+
+```text
+group_id
+prompt
+image_id
+image_path
+raw_rows_count
+normalized_report
+```
+
+`normalized_report` contains `score`, `passed_constraints`,
+`failed_constraints`, `uncertain_constraints`, and `critical_failure_types`.
+GenEval2 skills are mapped into retry failure types, for example `count` to
+`count_mismatch`, color attributes to `color_mismatch`, non-color attributes to
+`attribute_mismatch`, `position` to `spatial_mismatch`, and `verb` to
+`relation_mismatch`. These normalized reports can be passed into the
+re-planning trajectory collector as verifier feedback.
+
 ## Real Environment Integration Points
 
 The real adapters are scaffolded but not used in tests:
