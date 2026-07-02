@@ -1,0 +1,140 @@
+{
+  "created_at_unix": 1782998379.0631924,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly six koalas, exactly two flamingos, and exactly one toy.",
+      "Bind material attributes correctly: all six koalas are metal; both flamingos are glass; the single toy is purple.",
+      "Place the six metal koalas as a separated group on the left side of the image, clearly to the left of the two glass flamingos.",
+      "Place the two glass flamingos in front of the single purple toy, with the toy visible behind them.",
+      "Keep all objects clearly visible and avoid occlusion that would make counting difficult."
+    ],
+    "generation_strategy": "Use a clear, simple composition with three countable object groups: six metal koalas on the left, two glass flamingos on the right/front, and one purple toy behind the flamingos. Arrange objects with spacing so each koala and each flamingo can be individually counted, while preserving the spatial relations.",
+    "initial_prompt": "Create a clear scene with exactly six metal koalas grouped on the left side of the image. To the right of the koalas, place exactly two glass flamingos. The two glass flamingos must be in front of exactly one purple toy, with the purple toy visible behind them. Make all six koalas individually visible and metallic, both flamingos individually visible and glass, and the single toy clearly purple. Avoid extra koalas, extra flamingos, extra toys, or occlusion that would make the counts or left/front spatial relationships unclear.",
+    "parsed_constraints": {
+      "attributes": {
+        "flamingos": [
+          "glass"
+        ],
+        "koalas": [
+          "metal"
+        ],
+        "toy": [
+          "purple"
+        ]
+      },
+      "counts": {
+        "flamingos": 2,
+        "koalas": 6,
+        "toy": 1
+      },
+      "objects": [
+        "koalas",
+        "flamingos",
+        "toy"
+      ],
+      "relations": [
+        "six metal koalas are to the left of two glass flamingos",
+        "two glass flamingos are in front of one purple toy"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "six metal koalas to the left of two glass flamingos in front of a purple toy",
+  "prompt_id": "geneval2_00716_fd02b627",
+  "prompt_metadata": {
+    "atom_count": 10,
+    "prompt": "six metal koalas to the left of two glass flamingos in front of a purple toy",
+    "prompt_id": "geneval2_00716_fd02b627",
+    "sampling_bucket": "object",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 3,
+      "count": 3,
+      "object": 3,
+      "position": 2
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 716,
+    "static_priority": 26.2,
+    "vqa_list": [
+      [
+        "How many koalas are in the image?",
+        "six"
+      ],
+      [
+        "Are the koalas metal?",
+        "Yes"
+      ],
+      [
+        "Are there any koalas in the image?",
+        "Yes"
+      ],
+      [
+        "Are the koalas to the left of the flamingos?",
+        "Yes"
+      ],
+      [
+        "How many flamingos are in the image?",
+        "two"
+      ],
+      [
+        "Are the flamingos glass?",
+        "Yes"
+      ],
+      [
+        "Are there any flamingos in the image?",
+        "Yes"
+      ],
+      [
+        "Are the flamingos in front of the toy?",
+        "Yes"
+      ],
+      [
+        "How many toys are in the image?",
+        "one"
+      ],
+      [
+        "Is the toy purple?",
+        "Yes"
+      ],
+      [
+        "Are there any toys in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "source_index": 716,
+  "teacher_name": "gpt55"
+}

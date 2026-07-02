@@ -1,0 +1,144 @@
+{
+  "created_at_unix": 1782998287.1522655,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly six lions, exactly three cats, and exactly one donut.",
+      "Bind the glass material only to the six lions.",
+      "Bind the red color only to the three cats.",
+      "Bind the brown color only to the single donut.",
+      "Place the three red cats behind the brown donut while keeping all cats visible.",
+      "Depict the six glass lions chasing the three red cats.",
+      "Avoid extra lions, cats, or donuts."
+    ],
+    "generation_strategy": "Use a clear multi-object composition with count separation: one brown donut in the foreground, three red cats positioned behind the donut, and six glass lions arranged as a chasing group directed toward the cats. Keep every lion, cat, and the donut distinct and visible, with minimal overlap so counts and attributes can be verified.",
+    "initial_prompt": "A clear scene with exactly one brown donut in the foreground. Behind the brown donut are exactly three red cats, all fully visible and separated enough to count. Exactly six glass lions are chasing the three red cats, with the lions clearly made of glass and arranged as a group moving toward the cats. Keep all six glass lions, all three red cats, and the single brown donut visible, distinct, and not heavily occluded. No additional lions, cats, or donuts.",
+    "parsed_constraints": {
+      "attributes": {
+        "cats": [
+          "red"
+        ],
+        "donut": [
+          "brown"
+        ],
+        "lions": [
+          "glass"
+        ]
+      },
+      "counts": {
+        "cats": 3,
+        "donut": 1,
+        "lions": 6
+      },
+      "objects": [
+        "lions",
+        "cats",
+        "donut"
+      ],
+      "relations": [
+        "six glass lions chasing three red cats",
+        "three red cats behind a brown donut"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "multi_object_composition",
+      "spatial_layout",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "six glass lions chasing three red cats behind a brown donut",
+  "prompt_id": "geneval2_00723_700e1cc7",
+  "prompt_metadata": {
+    "atom_count": 10,
+    "prompt": "six glass lions chasing three red cats behind a brown donut",
+    "prompt_id": "geneval2_00723_700e1cc7",
+    "sampling_bucket": "count",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "relation_action",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 3,
+      "count": 3,
+      "object": 3,
+      "position": 1,
+      "verb": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "verb",
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 723,
+    "static_priority": 27.9,
+    "vqa_list": [
+      [
+        "How many lions are in the image?",
+        "six"
+      ],
+      [
+        "Are the lions glass?",
+        "Yes"
+      ],
+      [
+        "Are there any lions in the image?",
+        "Yes"
+      ],
+      [
+        "Are the lions chasing the cats?",
+        "Yes"
+      ],
+      [
+        "How many cats are in the image?",
+        "three"
+      ],
+      [
+        "Are the cats red?",
+        "Yes"
+      ],
+      [
+        "Are there any cats in the image?",
+        "Yes"
+      ],
+      [
+        "Are the cats behind the donut?",
+        "Yes"
+      ],
+      [
+        "How many donuts are in the image?",
+        "one"
+      ],
+      [
+        "Is the donut brown?",
+        "Yes"
+      ],
+      [
+        "Are there any donuts in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "source_index": 723,
+  "teacher_name": "gpt55"
+}

@@ -1,0 +1,133 @@
+{
+  "created_at_unix": 1782998574.625646,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly four cats, exactly three monkeys, and exactly three pigs.",
+      "Bind purple color only to the four cats and the three pigs; monkeys have no specified color.",
+      "Keep the four purple cats in the foreground in front of the monkeys.",
+      "Place the three monkeys on top of the three purple pigs, with one monkey on each pig if possible.",
+      "Ensure all animals are clearly visible and separated enough to count; avoid hiding monkeys or pigs behind the cats.",
+      "Do not add extra cats, monkeys, pigs, or other animals."
+    ],
+    "generation_strategy": "Create a clear layered composition with three purple pigs in a back lower row, three monkeys positioned directly on top of the pigs, and four purple cats in a front foreground row. Use spacing and vertical stacking so the cats are visibly in front of the monkeys while the monkeys and pigs remain countable.",
+    "initial_prompt": "A clear image with exactly three purple pigs arranged in a back row at the bottom. Exactly three monkeys are on top of the three purple pigs, one monkey on each pig, clearly visible. Exactly four purple cats are arranged in a separate foreground row in front of the monkeys. The cats are purple. The pigs are purple. Keep all ten animals visible, separated, and easy to count, with no extra animals and no heavy occlusion.",
+    "parsed_constraints": {
+      "attributes": {
+        "cats": [
+          "purple"
+        ],
+        "pigs": [
+          "purple"
+        ]
+      },
+      "counts": {
+        "cats": 4,
+        "monkeys": 3,
+        "pigs": 3
+      },
+      "objects": [
+        "cats",
+        "monkeys",
+        "pigs"
+      ],
+      "relations": [
+        "four purple cats are in front of three monkeys",
+        "three monkeys are on top of three purple pigs"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "four purple cats in front of three monkeys on top of three purple pigs",
+  "prompt_id": "geneval2_00750_2a1c351a",
+  "prompt_metadata": {
+    "atom_count": 10,
+    "prompt": "four purple cats in front of three monkeys on top of three purple pigs",
+    "prompt_id": "geneval2_00750_2a1c351a",
+    "sampling_bucket": "position_spatial",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 2,
+      "count": 3,
+      "object": 3,
+      "position": 2
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 750,
+    "static_priority": 25.7,
+    "vqa_list": [
+      [
+        "How many cats are in the image?",
+        "four"
+      ],
+      [
+        "Are the cats purple?",
+        "Yes"
+      ],
+      [
+        "Are there any cats in the image?",
+        "Yes"
+      ],
+      [
+        "Are the cats in front of the monkeys?",
+        "Yes"
+      ],
+      [
+        "How many monkeys are in the image?",
+        "three"
+      ],
+      [
+        "Are there any monkeys in the image?",
+        "Yes"
+      ],
+      [
+        "Are the monkeys on top of the pigs?",
+        "Yes"
+      ],
+      [
+        "How many pigs are in the image?",
+        "three"
+      ],
+      [
+        "Are the pigs purple?",
+        "Yes"
+      ],
+      [
+        "Are there any pigs in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "source_index": 750,
+  "teacher_name": "gpt55"
+}

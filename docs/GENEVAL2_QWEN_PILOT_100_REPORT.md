@@ -109,7 +109,6 @@ python3 scripts/generate_qwen_geneval_images.py \
   --steps 50 \
   --true-cfg-scale 4.0 \
   --negative-prompt ' ' \
-  --positive-suffix ', Ultra HD, 4K, cinematic composition.' \
   --resume \
   --skip-grid \
   --progress-interval 60

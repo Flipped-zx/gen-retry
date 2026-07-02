@@ -63,8 +63,8 @@ def main() -> int:
     parser.add_argument("--negative-prompt", default=" ")
     parser.add_argument(
         "--positive-suffix",
-        default=", Ultra HD, 4K, cinematic composition.",
-        help="Suffix appended to each prompt before generation.",
+        default="",
+        help="Optional suffix appended to each prompt before generation. Defaults to empty.",
     )
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--skip-grid", action="store_true")

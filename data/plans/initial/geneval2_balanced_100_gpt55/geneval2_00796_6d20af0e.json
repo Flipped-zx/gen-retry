@@ -1,0 +1,133 @@
+{
+  "created_at_unix": 1782998521.4276283,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly six turtles, exactly three guitars, and exactly one giraffe.",
+      "Bind attributes correctly: all six turtles are stone, all three guitars are wooden, the single giraffe is purple.",
+      "Place the six stone turtles under the three wooden guitars.",
+      "Place the three wooden guitars behind the purple giraffe while keeping them visible.",
+      "Keep all objects clearly visible and separated enough to count; avoid occluding any turtle, guitar, or the giraffe."
+    ],
+    "generation_strategy": "Use a clear layered composition with the purple giraffe in the foreground, three wooden guitars visible behind it, and six stone turtles arranged below the guitars. Emphasize count accuracy, material/color attribute binding, and visibility despite the behind/under spatial relations.",
+    "initial_prompt": "A clear scene with exactly one purple giraffe in the foreground. Behind the purple giraffe are exactly three wooden guitars, all visible and separate from each other. Under the three wooden guitars are exactly six stone turtles, all visible and separate from each other. The six turtles are made of stone, the three guitars are wooden, and the single giraffe is purple. Arrange the objects so the turtles are below the guitars, the guitars are behind the giraffe, and every object can be counted clearly with minimal occlusion.",
+    "parsed_constraints": {
+      "attributes": {
+        "giraffe": "purple",
+        "guitars": "wooden",
+        "turtles": "stone"
+      },
+      "counts": {
+        "giraffe": 1,
+        "guitars": 3,
+        "turtles": 6
+      },
+      "objects": [
+        "turtles",
+        "guitars",
+        "giraffe"
+      ],
+      "relations": [
+        "six stone turtles are under three wooden guitars",
+        "three wooden guitars are behind one purple giraffe"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion"
+    ]
+  },
+  "original_prompt": "six stone turtles under three wooden guitars behind a purple giraffe",
+  "prompt_id": "geneval2_00796_6d20af0e",
+  "prompt_metadata": {
+    "atom_count": 10,
+    "prompt": "six stone turtles under three wooden guitars behind a purple giraffe",
+    "prompt_id": "geneval2_00796_6d20af0e",
+    "sampling_bucket": "color_binding",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 3,
+      "count": 3,
+      "object": 3,
+      "position": 2
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 796,
+    "static_priority": 26.2,
+    "vqa_list": [
+      [
+        "How many turtles are in the image?",
+        "six"
+      ],
+      [
+        "Are the turtles stone?",
+        "Yes"
+      ],
+      [
+        "Are there any turtles in the image?",
+        "Yes"
+      ],
+      [
+        "Are the turtles under the guitars?",
+        "Yes"
+      ],
+      [
+        "How many guitars are in the image?",
+        "three"
+      ],
+      [
+        "Are the guitars wooden?",
+        "Yes"
+      ],
+      [
+        "Are there any guitars in the image?",
+        "Yes"
+      ],
+      [
+        "Are the guitars behind the giraffe?",
+        "Yes"
+      ],
+      [
+        "How many giraffes are in the image?",
+        "one"
+      ],
+      [
+        "Is the giraffe purple?",
+        "Yes"
+      ],
+      [
+        "Are there any giraffes in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "source_index": 796,
+  "teacher_name": "gpt55"
+}

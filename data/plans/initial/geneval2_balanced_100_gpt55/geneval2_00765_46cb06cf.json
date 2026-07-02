@@ -1,0 +1,140 @@
+{
+  "created_at_unix": 1782998481.5211134,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly five mushrooms, exactly four croissants, and exactly one trumpet.",
+      "Bind attributes correctly: mushrooms are sparkling, croissants are pink, trumpet is wooden.",
+      "Keep the five mushrooms visually under the four pink croissants.",
+      "Keep the four pink croissants visually in front of the wooden trumpet.",
+      "Avoid occlusion that hides counts or attributes; all objects should be clearly visible and countable."
+    ],
+    "generation_strategy": "Create a simple, clearly arranged composition with three depth layers: a single wooden trumpet in the back, four pink croissants in the middle foreground in front of the trumpet, and five sparkling mushrooms below the croissants. Use spacing and slight separation so each mushroom and each croissant can be counted distinctly, while maintaining the required under/in-front spatial relationships.",
+    "initial_prompt": "A clear composition showing exactly five sparkling mushrooms arranged in a row near the bottom, directly under exactly four pink croissants arranged above them. The four pink croissants are in front of exactly one wooden trumpet in the background. The wooden trumpet is visible behind the croissants, with the croissants clearly overlapping its front area but not hiding their own count. All five sparkling mushrooms are fully visible and countable, all four pink croissants are fully visible and countable, and the single wooden trumpet is recognizable as wooden. No extra mushrooms, no extra croissants, no extra trumpets.",
+    "parsed_constraints": {
+      "attributes": {
+        "croissants": [
+          "pink"
+        ],
+        "mushrooms": [
+          "sparkling"
+        ],
+        "trumpet": [
+          "wooden"
+        ]
+      },
+      "counts": {
+        "croissants": 4,
+        "mushrooms": 5,
+        "trumpet": 1
+      },
+      "objects": [
+        "mushrooms",
+        "croissants",
+        "trumpet"
+      ],
+      "relations": [
+        "five sparkling mushrooms are under four pink croissants",
+        "four pink croissants are in front of one wooden trumpet"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "five sparkling mushrooms under four pink croissants in front of a wooden trumpet",
+  "prompt_id": "geneval2_00765_46cb06cf",
+  "prompt_metadata": {
+    "atom_count": 10,
+    "prompt": "five sparkling mushrooms under four pink croissants in front of a wooden trumpet",
+    "prompt_id": "geneval2_00765_46cb06cf",
+    "sampling_bucket": "color_binding",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 3,
+      "count": 3,
+      "object": 3,
+      "position": 2
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 765,
+    "static_priority": 26.2,
+    "vqa_list": [
+      [
+        "How many mushrooms are in the image?",
+        "five"
+      ],
+      [
+        "Are the mushrooms sparkling?",
+        "Yes"
+      ],
+      [
+        "Are there any mushrooms in the image?",
+        "Yes"
+      ],
+      [
+        "Are the mushrooms under the croissants?",
+        "Yes"
+      ],
+      [
+        "How many croissants are in the image?",
+        "four"
+      ],
+      [
+        "Are the croissants pink?",
+        "Yes"
+      ],
+      [
+        "Are there any croissants in the image?",
+        "Yes"
+      ],
+      [
+        "Are the croissants in front of the trumpet?",
+        "Yes"
+      ],
+      [
+        "How many trumpets are in the image?",
+        "one"
+      ],
+      [
+        "Is the trumpet wooden?",
+        "Yes"
+      ],
+      [
+        "Are there any trumpets in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "source_index": 765,
+  "teacher_name": "gpt55"
+}

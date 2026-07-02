@@ -1077,3 +1077,107 @@ Blockers:
 Next recommended step:
 
 - Let the 500-image generation finish, then validate every manifest image path exists and start GenEval2 evaluation over the completed image layout.
+
+## Geneval2 Balanced 100 GPT Teacher Initial Plans
+
+Status: completed.
+
+Completed work:
+
+- Loaded local `.env` for `GEN_RETRY_TEACHER_*` without printing API keys.
+- Verified the OpenAI-compatible relay `/models` endpoint was reachable and that `gpt-5.5` was available.
+- Ran a 1-row real teacher initial-plan smoke successfully.
+- Ran real GPT teacher initial-plan precompute for all 100 rows in `data/prompts/geneval2_balanced_100.jsonl`.
+- Used `--resume`, so the smoke row was skipped and the remaining 99 rows completed with 0 errors.
+- Wrote 100 valid initial-plan cache files under `data/plans/initial/geneval2_balanced_100_gpt55/`.
+- Left `data/plans/initial/geneval2_balanced_100_gpt55/_errors/` in place as historical failed-attempt logs; the successful current outputs are the 100 JSON files in the parent plan directory.
+
+Changed files:
+
+- `data/plans/initial/geneval2_balanced_100_gpt55/*.json`
+- `docs/PROGRESS.md`
+- `docs/CODEX_HANDOFF.md`
+
+Validation commands run:
+
+- Relay `/models` smoke via stdlib `urllib` - passed; target model `gpt-5.5` present.
+- `python3 scripts/precompute_initial_plans.py --prompts data/prompts/geneval2_balanced_100.jsonl --output-dir data/plans/initial/geneval2_balanced_100_gpt55 --teacher gpt55 --evaluator-type geneval2 --num-workers 1 --limit 1 --progress-interval 0` - passed with 1/1 valid plan.
+- `python3 scripts/precompute_initial_plans.py --prompts data/prompts/geneval2_balanced_100.jsonl --output-dir data/plans/initial/geneval2_balanced_100_gpt55 --teacher gpt55 --evaluator-type geneval2 --num-workers 4 --resume --progress-interval 30` - passed with 99/99 successful API calls and 0 errors.
+- `find data/plans/initial/geneval2_balanced_100_gpt55 -maxdepth 1 -type f -name '*.json' | wc -l` - returned 100.
+- Custom stdlib schema check over all 100 prompt IDs and `InitialPlanAction` payloads - passed with 100 valid, 0 missing, 0 invalid.
+- `python3 -m compileall src scripts tests` - passed.
+
+Blockers:
+
+- None for teacher initial-plan precompute.
+
+Next recommended step:
+
+- Use `data/plans/initial/geneval2_balanced_100_gpt55/` as the real initial-plan cache for the 100-prompt pilot; after the 500 initial images finish, run GenEval2 evaluation and then decide which failed candidates need teacher retry replanning.
+
+## GenEval2 Retry SFT Goal Outline
+
+Status: completed.
+
+Completed work:
+
+- Read Gen-Searcher Qwen image references as read-only.
+- Confirmed Gen-Searcher contains a Qwen image edit service based on `QwenImageEditPlusPipeline`, not the exact current Qwen-Image-2512 text-to-image batch path.
+- Extracted relevant Gen-Searcher generation defaults: `num_inference_steps=40`, `true_cfg_scale=4.0`, `guidance_scale=1.0`, `negative_prompt=" "`, one image per request, one loaded pipeline per GPU with serialized per-GPU scheduling.
+- Wrote a concise persistent project goal and workflow outline for the GenEval2 retry SFT pilot.
+- Recorded that current `generate_qwen_geneval_images.py` reads `metadata.prompt`; plan-conditioned generation needs either an `--initial-plan-dir` extension or derived metadata using `initial_plan.initial_prompt` while preserving original metadata for GenEval2.
+
+Changed files:
+
+- `docs/GENEVAL2_RETRY_SFT_GOAL.md`
+- `docs/PROGRESS.md`
+- `docs/CODEX_HANDOFF.md`
+
+Validation commands run:
+
+- Read-only `rg`/`sed` inspection of Gen-Searcher Qwen image API and workflow files.
+
+Blockers:
+
+- None for the outline.
+
+Next recommended step:
+
+- Before launching the 4-GPU generation pass, decide whether to patch `scripts/generate_qwen_geneval_images.py` with `--initial-plan-dir` so initial images are generated from cached teacher `initial_prompt` instead of raw `metadata.prompt`.
+
+## Qwen Generation Prompt Suffix And Image Git Ignore
+
+Status: completed.
+
+Completed work:
+
+- Changed `scripts/generate_qwen_geneval_images.py --positive-suffix` default from `, Ultra HD, 4K, cinematic composition.` to an empty string.
+- Updated pilot docs so recommended generation commands no longer append a style suffix by default.
+- Added `.gitignore` rules for generated image file types under `data/`.
+- Removed already tracked `data/**/*.png` files from the Git index with `git rm --cached`, while keeping the local image files on disk.
+
+Changed files:
+
+- `.gitignore`
+- `scripts/generate_qwen_geneval_images.py`
+- `docs/GENEVAL2_RETRY_SFT_GOAL.md`
+- `docs/GENEVAL2_QWEN_PILOT_100_REPORT.md`
+- `docs/CODEX_HANDOFF.md`
+- `docs/PROGRESS.md`
+- Git index now records removal of previously tracked `data/**/*.png` files.
+
+Validation commands run:
+
+- `python3 -m compileall scripts/generate_qwen_geneval_images.py` - passed.
+- `python3 scripts/generate_qwen_geneval_images.py --help` - passed and reports `--positive-suffix` defaults to empty.
+- `git check-ignore -v --no-index data/qwen_geneval2_balanced_100_x5_images/00000/samples/00000.png data/images/episode_000000_30e93888ca3f_attempt_0.png` - matched `.gitignore` image rules.
+- `git ls-files 'data/**/*.png' 'data/**/*.jpg' 'data/**/*.jpeg' 'data/**/*.webp' 'data/**/*.gif' | wc -l` - returned 0.
+- Local image existence spot-check passed after `git rm --cached`.
+
+Blockers:
+
+- None.
+
+Next recommended step:
+
+- Patch plan-conditioned initial generation before the 4-GPU run, so the generator uses cached `initial_plan.initial_prompt` without any extra style suffix.

@@ -1,0 +1,125 @@
+{
+  "created_at_unix": 1782998464.0236177,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Depict exactly seven backpacks, exactly three kangaroos, and exactly four rabbits.",
+      "Bind the green color only to the three kangaroos; do not make the backpacks or rabbits green unless unavoidable.",
+      "Place all seven backpacks as a separate group on the left side of the image, clearly to the left of the kangaroos.",
+      "Show the three green kangaroos jumping over the four rabbits, with kangaroos visibly above the rabbits and the rabbits below them.",
+      "Keep all objects fully visible and separated enough to count; avoid occlusion, cropping, or merging objects."
+    ],
+    "generation_strategy": "Use a simple wide composition with three distinct zones: seven individual backpacks arranged on the left, three green kangaroos in mid-jump toward the center/right, and four rabbits below the jumping kangaroos. Emphasize clear countability, spatial separation, and the over-under action relation.",
+    "initial_prompt": "A clear wide scene showing exactly seven separate backpacks on the left side of the image. To the right of the backpacks are exactly three green kangaroos, all visibly jumping in the air over exactly four rabbits below them. The backpacks are all clearly to the left of the kangaroos. The three kangaroos are green and fully visible, separated from each other, with their bodies above the rabbits to show they are jumping over them. The four rabbits are fully visible below the kangaroos and separated enough to count. Keep every backpack, kangaroo, and rabbit unobstructed, uncropped, and easy to count.",
+    "parsed_constraints": {
+      "attributes": {
+        "kangaroos": [
+          "green"
+        ]
+      },
+      "counts": {
+        "backpacks": 7,
+        "kangaroos": 3,
+        "rabbits": 4
+      },
+      "objects": [
+        "backpacks",
+        "kangaroos",
+        "rabbits"
+      ],
+      "relations": [
+        "seven backpacks to the left of three green kangaroos",
+        "three green kangaroos jumping over four rabbits"
+      ]
+    },
+    "selected_skills": [
+      "quantity_counting",
+      "object_presence",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility"
+    ]
+  },
+  "original_prompt": "seven backpacks to the left of three green kangaroos jumping over four rabbits",
+  "prompt_id": "geneval2_00640_de2d0828",
+  "prompt_metadata": {
+    "atom_count": 9,
+    "prompt": "seven backpacks to the left of three green kangaroos jumping over four rabbits",
+    "prompt_id": "geneval2_00640_de2d0828",
+    "sampling_bucket": "color_binding",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "relation_action",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 1,
+      "count": 3,
+      "object": 3,
+      "position": 1,
+      "verb": 1
+    },
+    "skills": [
+      "count",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object",
+      "verb",
+      "count",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 640,
+    "static_priority": 25.9,
+    "vqa_list": [
+      [
+        "How many backpacks are in the image?",
+        "seven"
+      ],
+      [
+        "Are there any backpacks in the image?",
+        "Yes"
+      ],
+      [
+        "Are the backpacks to the left of the kangaroos?",
+        "Yes"
+      ],
+      [
+        "How many kangaroos are in the image?",
+        "three"
+      ],
+      [
+        "Are the kangaroos green?",
+        "Yes"
+      ],
+      [
+        "Are there any kangaroos in the image?",
+        "Yes"
+      ],
+      [
+        "Are the kangaroos jumping over the rabbits?",
+        "Yes"
+      ],
+      [
+        "How many rabbits are in the image?",
+        "four"
+      ],
+      [
+        "Are there any rabbits in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "source_index": 640,
+  "teacher_name": "gpt55"
+}

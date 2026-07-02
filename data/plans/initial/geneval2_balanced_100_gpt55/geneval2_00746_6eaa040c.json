@@ -1,0 +1,133 @@
+{
+  "created_at_unix": 1782998562.80784,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Depict exactly five sheep, exactly two rabbits, and exactly seven bicycles.",
+      "Bind the color white only to the five sheep.",
+      "Bind the striped pattern only to the seven bicycles.",
+      "Place all five sheep as a separate group to the left of the two rabbits.",
+      "Place the two rabbits in front of the seven bicycles, with the bicycles behind them but still clearly visible.",
+      "Keep all objects separated enough to count; avoid heavy overlap or occlusion."
+    ],
+    "generation_strategy": "Use a clear wide composition with three countable groups: five white sheep on the left, two rabbits to their right in the foreground, and seven striped bicycles arranged behind the rabbits. Maintain object separation, attribute binding, and visibility for accurate counting and spatial relation evaluation.",
+    "initial_prompt": "A clear wide scene showing exactly five white sheep grouped on the left side of the image, all five fully visible and separate enough to count. To the right of the sheep are exactly two rabbits, fully visible and separate enough to count. Behind the two rabbits are exactly seven striped bicycles, with the rabbits positioned in front of the bicycles; all seven bicycles should remain visible and countable despite being behind the rabbits. The five white sheep are to the left of the two rabbits. The two rabbits are in front of the seven striped bicycles. Avoid extra sheep, extra rabbits, extra bicycles, hidden objects, merged objects, or confusing overlap.",
+    "parsed_constraints": {
+      "attributes": {
+        "bicycles": [
+          "striped"
+        ],
+        "sheep": [
+          "white"
+        ]
+      },
+      "counts": {
+        "bicycles": 7,
+        "rabbits": 2,
+        "sheep": 5
+      },
+      "objects": [
+        "sheep",
+        "rabbits",
+        "bicycles"
+      ],
+      "relations": [
+        "five white sheep to the left of two rabbits",
+        "two rabbits in front of seven striped bicycles"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "five white sheeps to the left of two rabbits in front of seven striped bicycles",
+  "prompt_id": "geneval2_00746_6eaa040c",
+  "prompt_metadata": {
+    "atom_count": 10,
+    "prompt": "five white sheeps to the left of two rabbits in front of seven striped bicycles",
+    "prompt_id": "geneval2_00746_6eaa040c",
+    "sampling_bucket": "position_spatial",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 2,
+      "count": 3,
+      "object": 3,
+      "position": 2
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 746,
+    "static_priority": 25.7,
+    "vqa_list": [
+      [
+        "How many sheeps are in the image?",
+        "five"
+      ],
+      [
+        "Are the sheeps white?",
+        "Yes"
+      ],
+      [
+        "Are there any sheeps in the image?",
+        "Yes"
+      ],
+      [
+        "Are the sheeps to the left of the rabbits?",
+        "Yes"
+      ],
+      [
+        "How many rabbits are in the image?",
+        "two"
+      ],
+      [
+        "Are there any rabbits in the image?",
+        "Yes"
+      ],
+      [
+        "Are the rabbits in front of the bicycles?",
+        "Yes"
+      ],
+      [
+        "How many bicycles are in the image?",
+        "seven"
+      ],
+      [
+        "Are the bicycles striped?",
+        "Yes"
+      ],
+      [
+        "Are there any bicycles in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "source_index": 746,
+  "teacher_name": "gpt55"
+}
