@@ -69,6 +69,19 @@ class RealGeneratorAdapterTest(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "GEN_RETRY_IMAGE_BASE_URL"):
                 RealGeneratorAdapter("gpt_image").generate("prompt", "out.png")
 
+    def test_none_string_image_options_are_treated_as_unset(self) -> None:
+        env = {
+            "GEN_RETRY_IMAGE_BASE_URL": "https://skyapi.duckdns.org/v1",
+            "GEN_RETRY_IMAGE_API_KEY": "test-key",
+            "GEN_RETRY_IMAGE_MODEL": "gpt-image-2",
+            "GEN_RETRY_IMAGE_SIZE": "None",
+            "GEN_RETRY_IMAGE_QUALITY": "None",
+        }
+        with patch.dict("os.environ", env, clear=False):
+            adapter = RealGeneratorAdapter("gpt_image")
+            self.assertEqual(adapter.size, "1024x1024")
+            self.assertEqual(adapter.quality, "")
+
 
 if __name__ == "__main__":
     unittest.main()

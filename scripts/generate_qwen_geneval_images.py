@@ -8,6 +8,7 @@ import json
 import os
 import subprocess
 import sys
+import time
 from pathlib import Path
 from typing import Any
 
@@ -16,6 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from gen_retry.data.io import write_jsonl  # noqa: E402
+from gen_retry.utils.progress import ProgressMeter  # noqa: E402
 
 
 def main() -> int:
@@ -66,6 +68,12 @@ def main() -> int:
     )
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--skip-grid", action="store_true")
+    parser.add_argument(
+        "--progress-interval",
+        type=float,
+        default=30.0,
+        help="Seconds between total progress/ETA updates. Use 0 to print every image.",
+    )
     args = parser.parse_args()
 
     if args.n_samples <= 0:
@@ -90,6 +98,12 @@ def main() -> int:
     out_dir = Path(args.output_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     manifest: list[dict[str, Any]] = []
+    progress = ProgressMeter(
+        len(indexed_metadatas) * args.n_samples,
+        label=f"qwen-geneval shard {args.shard_index}/{args.num_shards}",
+        update_interval=args.progress_interval,
+    )
+    progress.update(completed=0, force=True)
 
     for local_index, (prompt_index, metadata) in enumerate(indexed_metadatas):
         prompt = str(metadata.get("prompt", "")).strip()
@@ -102,6 +116,7 @@ def main() -> int:
             json.dumps(metadata, ensure_ascii=False) + "\n",
             encoding="utf-8",
         )
+        sample_id = str(metadata.get("prompt_id") or f"{prompt_index:05d}")
         generated_paths: list[Path] = []
         for candidate_index in range(args.n_samples):
             image_path = images_dir / f"{candidate_index:05d}.png"
@@ -112,10 +127,14 @@ def main() -> int:
                 image = generate_one(pipe, torch, args, prompt, candidate_seed)
                 image.save(image_path)
                 generated_paths.append(image_path)
+            progress.update(
+                force=args.progress_interval == 0,
+                extra=f"prompt={prompt_index} candidate={candidate_index}",
+            )
             manifest.append(
                 {
-                    "sample_id": f"{prompt_index:05d}",
-                    "candidate_id": f"{prompt_index:05d}_cand_{candidate_index:02d}",
+                    "sample_id": sample_id,
+                    "candidate_id": f"{sample_id}_cand_{candidate_index:02d}",
                     "prompt_index": prompt_index,
                     "candidate_index": candidate_index,
                     "seed": candidate_seed,
@@ -178,11 +197,12 @@ def launch_gpu_workers(args: argparse.Namespace) -> int:
             )
         )
 
-    failed: list[tuple[str, int]] = []
-    for gpu, process in processes:
-        returncode = process.wait()
-        if returncode != 0:
-            failed.append((gpu, returncode))
+    monitor_generation_progress(args, processes)
+    failed: list[tuple[str, int]] = [
+        (gpu, int(process.returncode or 0))
+        for gpu, process in processes
+        if process.returncode not in (0, None)
+    ]
     if failed:
         for gpu, returncode in failed:
             print(f"[qwen-geneval] worker on GPU {gpu} failed with return code {returncode}")
@@ -258,6 +278,8 @@ def worker_command(
         args.negative_prompt,
         "--positive-suffix",
         args.positive_suffix,
+        "--progress-interval",
+        str(args.progress_interval),
     ]
     if args.limit is not None:
         cmd.extend(["--limit", str(args.limit)])
@@ -268,6 +290,45 @@ def worker_command(
     if args.skip_grid:
         cmd.append("--skip-grid")
     return cmd
+
+
+def monitor_generation_progress(
+    args: argparse.Namespace,
+    processes: list[tuple[str, subprocess.Popen[str]]],
+) -> None:
+    expected = expected_image_count(args)
+    out_dir = Path(args.output_dir)
+    progress = ProgressMeter(
+        expected,
+        label="qwen-geneval total",
+        update_interval=args.progress_interval,
+    )
+    progress.update(completed=count_generated_images(out_dir), force=True)
+    sleep_seconds = max(1.0, args.progress_interval or 1.0)
+    while True:
+        alive = any(process.poll() is None for _, process in processes)
+        completed = count_generated_images(out_dir)
+        progress.update(
+            completed=completed,
+            force=not alive or args.progress_interval == 0,
+            extra=f"workers_alive={sum(1 for _, process in processes if process.poll() is None)}",
+        )
+        if not alive:
+            break
+        time.sleep(sleep_seconds)
+
+
+def expected_image_count(args: argparse.Namespace) -> int:
+    metadatas = read_jsonl(Path(args.metadata))
+    if args.limit is not None:
+        metadatas = metadatas[: args.limit]
+    return len(metadatas) * args.n_samples
+
+
+def count_generated_images(out_dir: Path) -> int:
+    if not out_dir.exists():
+        return 0
+    return sum(1 for _ in out_dir.glob("*/samples/*.png"))
 
 
 def merge_shard_manifests(out_dir: Path, num_shards: int) -> None:

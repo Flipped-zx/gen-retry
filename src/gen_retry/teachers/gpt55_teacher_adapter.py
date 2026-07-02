@@ -30,7 +30,7 @@ ENV_TEACHER_MAX_RETRIES = "GEN_RETRY_TEACHER_MAX_RETRIES"
 
 
 class GPT55TeacherAdapter(BaseTeacher):
-    name = "gpt55_teacher_adapter"
+    name = "gpt55"
 
     def __init__(
         self,
@@ -47,6 +47,7 @@ class GPT55TeacherAdapter(BaseTeacher):
         self.model = model or os.environ.get(ENV_TEACHER_MODEL) or "gpt-5.5"
         self.timeout = _env_float(ENV_TEACHER_TIMEOUT, timeout)
         self.max_parse_retries = _env_int(ENV_TEACHER_MAX_RETRIES, max_parse_retries)
+        self.max_http_retries = _env_int(ENV_TEACHER_MAX_RETRIES, 3)
         self.log_dir = Path(log_dir or os.environ.get(ENV_TEACHER_LOG_DIR) or "data/api_logs/teacher")
 
     def initial_plan(
@@ -65,9 +66,11 @@ class GPT55TeacherAdapter(BaseTeacher):
         return parse_initial_plan_json(text)
 
     def retry_replan(self, state: dict[str, Any]) -> RetryReplanAction:
+        memory = state.get("memory") if isinstance(state.get("memory"), dict) else {}
         messages = build_retry_replan_messages(
             original_prompt=str(state.get("original_prompt", "")),
             previous_initial_plan=dict(state.get("previous_initial_plan") or {}),
+            previous_action=dict(state.get("previous_action") or {}),
             previous_prompt=str(state.get("previous_prompt", "")),
             previous_selected_skills=[
                 str(item) for item in state.get("previous_selected_skills", []) if str(item).strip()
@@ -77,6 +80,30 @@ class GPT55TeacherAdapter(BaseTeacher):
                 item for item in state.get("retry_history", []) if isinstance(item, dict)
             ],
             retry_budget_left=int(state.get("retry_budget_left", 0)),
+            current_round=int(state.get("current_round", state.get("retry_round", 0))),
+            best_so_far=dict(state.get("best_so_far") or memory.get("best_so_far") or {}),
+            fixed_constraints=list(
+                state.get("fixed_constraints") or memory.get("fixed_constraints") or []
+            ),
+            persistent_failures=list(
+                state.get("persistent_failures") or memory.get("persistent_failures") or []
+            ),
+            new_failures=list(state.get("new_failures") or memory.get("new_failures") or []),
+            regressed_constraints=list(
+                state.get("regressed_constraints") or memory.get("regressed_constraints") or []
+            ),
+            score_delta_from_previous=float(
+                state.get(
+                    "score_delta_from_previous",
+                    memory.get("score_delta_from_previous", 0.0),
+                )
+            ),
+            score_delta_from_best=float(
+                state.get("score_delta_from_best", memory.get("score_delta_from_best", 0.0))
+            ),
+            branch_source=str(state.get("branch_source", "latest")),
+            branch_source_round=int(state.get("branch_source_round", 0)),
+            available_skills=state.get("available_skills"),
         )
         text = self._call_json(messages, call_type="retry_replan")
         return parse_retry_replan_json(text)
@@ -115,22 +142,34 @@ class GPT55TeacherAdapter(BaseTeacher):
             "temperature": 0,
         }
         body = json.dumps(payload).encode("utf-8")
-        request = urllib.request.Request(
-            f"{self.base_url}/chat/completions",
-            data=body,
-            headers={
-                "Authorization": f"Bearer {self.api_key}",
-                "Content-Type": "application/json",
-                "Accept": "application/json",
-            },
-            method="POST",
-        )
-        try:
-            with urllib.request.urlopen(request, timeout=self.timeout) as response:
-                raw = response.read().decode("utf-8")
-        except urllib.error.HTTPError as exc:
-            body = exc.read().decode("utf-8", errors="replace")
-            raise RuntimeError(f"teacher API HTTP {exc.code}: {body[:2000]}") from exc
+        url = f"{self.base_url}/chat/completions"
+        last_error: BaseException | None = None
+        for attempt in range(1, self.max_http_retries + 1):
+            request = urllib.request.Request(
+                url,
+                data=body,
+                headers={
+                    "Authorization": f"Bearer {self.api_key}",
+                    "Content-Type": "application/json",
+                    "Accept": "application/json",
+                },
+                method="POST",
+            )
+            try:
+                with urllib.request.urlopen(request, timeout=self.timeout) as response:
+                    raw = response.read().decode("utf-8")
+                    break
+            except urllib.error.HTTPError as exc:
+                error_body = exc.read().decode("utf-8", errors="replace")
+                last_error = RuntimeError(f"teacher API HTTP {exc.code}: {error_body[:2000]}")
+                if exc.code < 500 and exc.code != 429:
+                    raise last_error from exc
+            except Exception as exc:  # noqa: BLE001
+                last_error = exc
+            if attempt < self.max_http_retries:
+                time.sleep(min(8.0, 0.5 * (2 ** (attempt - 1))))
+        else:
+            raise RuntimeError(f"POST {url} failed after {self.max_http_retries} attempt(s): {last_error}") from last_error
         data = json.loads(raw)
         if not isinstance(data, dict):
             raise RuntimeError("teacher API response must be a JSON object")

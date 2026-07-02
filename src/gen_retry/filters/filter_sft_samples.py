@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from gen_retry.schemas.actions import ALLOWED_SKILLS
+from gen_retry.schemas.actions import ALLOWED_SKILLS, DIRECT_EDIT_KEYS
 from gen_retry.schemas.episode import Episode
 
 
@@ -76,10 +76,9 @@ def _failure_type_consistent(payload: dict[str, Any]) -> bool:
 
 
 def _has_direct_edit(value: Any) -> bool:
-    blocked = {"image_edit", "edit_instruction", "mask", "bbox", "inpaint", "source_image"}
     if isinstance(value, dict):
         for key, item in value.items():
-            if str(key) in blocked:
+            if str(key) in DIRECT_EDIT_KEYS:
                 return True
             if _has_direct_edit(item):
                 return True

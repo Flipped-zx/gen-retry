@@ -19,6 +19,7 @@ ENV_IMAGE_MODEL = "GEN_RETRY_IMAGE_MODEL"
 ENV_IMAGE_SIZE = "GEN_RETRY_IMAGE_SIZE"
 ENV_IMAGE_QUALITY = "GEN_RETRY_IMAGE_QUALITY"
 ENV_IMAGE_TIMEOUT = "GEN_RETRY_IMAGE_TIMEOUT"
+ENV_IMAGE_MAX_RETRIES = "GEN_RETRY_IMAGE_MAX_RETRIES"
 ENV_IMAGE_EXTRA_JSON = "GEN_RETRY_IMAGE_EXTRA_JSON"
 
 
@@ -31,13 +32,14 @@ class RealGeneratorAdapter(BaseGenerator):
 
     def __init__(self, backend: str | None = None) -> None:
         self.backend = (backend or os.environ.get("GEN_RETRY_GENERATOR_BACKEND") or "gpt_image").strip()
-        self.name = f"real_generator:{self.backend}"
         self.base_url = (os.environ.get(ENV_IMAGE_BASE_URL) or "").rstrip("/")
         self.api_key = os.environ.get(ENV_IMAGE_API_KEY) or ""
         self.model = os.environ.get(ENV_IMAGE_MODEL) or "gpt-image-2"
-        self.size = os.environ.get(ENV_IMAGE_SIZE) or "1024x1024"
-        self.quality = os.environ.get(ENV_IMAGE_QUALITY) or ""
+        self.name = "gpt_image2" if self.backend == "gpt_image" and self.model == "gpt-image-2" else f"real_generator:{self.backend}"
+        self.size = _env_optional_string(ENV_IMAGE_SIZE) or "1024x1024"
+        self.quality = _env_optional_string(ENV_IMAGE_QUALITY) or ""
         self.timeout = _env_float(ENV_IMAGE_TIMEOUT, 180.0)
+        self.max_retries = _env_int(ENV_IMAGE_MAX_RETRIES, 3)
         self.extra_payload = _env_json_object(ENV_IMAGE_EXTRA_JSON)
 
     def generate(self, prompt: str, output_path: str, metadata: dict[str, Any] | None = None) -> str:
@@ -90,22 +92,36 @@ class RealGeneratorAdapter(BaseGenerator):
 
     def _post_images_generation(self, payload: dict[str, Any]) -> dict[str, Any]:
         body = json.dumps(payload).encode("utf-8")
-        request = urllib.request.Request(
-            f"{self.base_url}/images/generations",
-            data=body,
-            headers={
-                "Authorization": f"Bearer {self.api_key}",
-                "Content-Type": "application/json",
-                "Accept": "application/json",
-            },
-            method="POST",
-        )
-        try:
-            with urllib.request.urlopen(request, timeout=self.timeout) as response:
-                raw = response.read().decode("utf-8")
-        except urllib.error.HTTPError as exc:
-            body = exc.read().decode("utf-8", errors="replace")
-            raise RuntimeError(f"image API HTTP {exc.code}: {body[:2000]}") from exc
+        url = f"{self.base_url}/images/generations"
+        last_error: BaseException | None = None
+        for attempt in range(1, self.max_retries + 1):
+            request = urllib.request.Request(
+                url,
+                data=body,
+                headers={
+                    "Authorization": f"Bearer {self.api_key}",
+                    "Content-Type": "application/json",
+                    "Accept": "application/json",
+                },
+                method="POST",
+            )
+            try:
+                with urllib.request.urlopen(request, timeout=self.timeout) as response:
+                    raw = response.read().decode("utf-8")
+                    break
+            except urllib.error.HTTPError as exc:
+                error_body = exc.read().decode("utf-8", errors="replace")
+                last_error = RuntimeError(f"image API HTTP {exc.code}: {error_body[:2000]}")
+                if exc.code < 500 and exc.code != 429:
+                    raise last_error from exc
+            except Exception as exc:  # noqa: BLE001
+                last_error = exc
+            if attempt < self.max_retries:
+                import time
+
+                time.sleep(min(8.0, 0.5 * (2 ** (attempt - 1))))
+        else:
+            raise RuntimeError(f"POST {url} failed after {self.max_retries} attempt(s): {last_error}") from last_error
         data = json.loads(raw)
         if not isinstance(data, dict):
             raise RuntimeError("image API response must be a JSON object")
@@ -165,6 +181,20 @@ def _env_float(name: str, default: float) -> float:
     if not value:
         return default
     return float(value)
+
+
+def _env_int(name: str, default: int) -> int:
+    value = os.environ.get(name)
+    if not value:
+        return default
+    return max(1, int(value))
+
+
+def _env_optional_string(name: str) -> str:
+    value = os.environ.get(name, "").strip()
+    if value.lower() in {"", "none", "null"}:
+        return ""
+    return value
 
 
 def _env_json_object(name: str) -> dict[str, Any]:

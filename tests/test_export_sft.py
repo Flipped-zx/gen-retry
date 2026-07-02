@@ -12,7 +12,7 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from gen_retry.collectors.collect_episodes import EpisodeCollector
 from gen_retry.evaluators.mock_geneval import MockGenevalEvaluator
-from gen_retry.export.export_sft import export_episode_sft
+from gen_retry.export.export_sft import export_episode_sft, validate_tool_trajectory_row
 from gen_retry.generators.mock_generator import MockGenerator
 from gen_retry.teachers.mock_teacher import MockTeacher
 
@@ -93,6 +93,44 @@ class ExportSftTest(unittest.TestCase):
             self.assertEqual(count, 1)
             rejected_rows = [json.loads(line) for line in rejected.read_text(encoding="utf-8").splitlines()]
             self.assertEqual(rejected_rows[0]["reason"], "no_improvement")
+
+    def test_tool_export_creates_full_trajectory(self) -> None:
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            records = [
+                {
+                    "prompt": "two blue birds",
+                    "mock_reports": [
+                        {
+                            "score": 0.4,
+                            "failed_constraints": [
+                                {"type": "color_mismatch", "target": "bird", "expected": "blue", "detected": "green"}
+                            ],
+                        },
+                        {"score": 1.0, "failed_constraints": []},
+                    ],
+                }
+            ]
+            collector = EpisodeCollector(
+                teacher=MockTeacher(),
+                generator=MockGenerator(),
+                evaluator=MockGenevalEvaluator(records, evaluator_type="geneval2"),
+                output_dir=root / "episodes",
+                image_dir=root / "images",
+            )
+            collector.run_episode("two blue birds", evaluator_type="geneval2", episode_id="episode_tool")
+            output = root / "tool.jsonl"
+            count = export_episode_sft(root / "episodes", output, export_format="tool")
+            self.assertEqual(count, 1)
+            row = json.loads(output.read_text(encoding="utf-8").splitlines()[0])
+            self.assertEqual(validate_tool_trajectory_row(row), [])
+            text = "\n".join(message["content"] for message in row["messages"])
+            self.assertIn('"name": "query_skill"', text)
+            self.assertIn('"name": "generate_image"', text)
+            self.assertIn('"name": "judge_image"', text)
+            self.assertIn("<retry_replan>", text)
+            self.assertFalse(row["metadata"]["tool_responses_trainable"])
+            self.assertTrue(row["metadata"]["trainable_message_indices"])
 
 
 if __name__ == "__main__":

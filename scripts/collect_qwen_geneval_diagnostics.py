@@ -38,6 +38,12 @@ def main() -> int:
     parser.add_argument("--allow-missing-images", action="store_true")
     parser.add_argument("--generator-name", default="qwen-image")
     parser.add_argument(
+        "--progress-interval",
+        type=float,
+        default=30.0,
+        help="Seconds between total progress/ETA updates. Use 0 to print every job.",
+    )
+    parser.add_argument(
         "--generation-command-template",
         help=(
             "Shell command template. Variables include {prompt}, {image_path}, "
@@ -82,6 +88,7 @@ def main() -> int:
             jobs,
             command_template=args.generation_command_template,
             allow_missing_images=args.allow_missing_images,
+            progress_interval=args.progress_interval,
         )
         print(f"generation failures: {len(failures)}")
         if failures:
@@ -90,7 +97,11 @@ def main() -> int:
     if not args.skip_geneval:
         if not args.geneval_command_template:
             raise ValueError("--geneval-command-template is required unless --skip-geneval is set")
-        failures = collector.run_geneval(jobs, command_template=args.geneval_command_template)
+        failures = collector.run_geneval(
+            jobs,
+            command_template=args.geneval_command_template,
+            progress_interval=args.progress_interval,
+        )
         print(f"Geneval failures: {len(failures)}")
         if failures:
             return 1

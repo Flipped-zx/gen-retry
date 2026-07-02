@@ -17,7 +17,44 @@ ALLOWED_SKILLS = {
     "negative_constraints",
 }
 
-DIRECT_EDIT_KEYS = {"edit_instruction", "image_edit", "mask", "bbox", "inpaint", "source_image"}
+DIRECT_EDIT_KEYS = {
+    "edit_instruction",
+    "image_edit",
+    "mask",
+    "bbox",
+    "box",
+    "boxes",
+    "bounding_box",
+    "bounding_boxes",
+    "inpaint",
+    "inpainting",
+    "source_image",
+}
+INITIAL_PLAN_KEYS = {
+    "action_type",
+    "parsed_constraints",
+    "selected_skills",
+    "generation_strategy",
+    "initial_prompt",
+    "generation_guards",
+}
+RETRY_REPLAN_KEYS = {
+    "action_type",
+    "decision",
+    "failure_types",
+    "diagnosis",
+    "previous_plan_error",
+    "skill_revision",
+    "preserve_constraints",
+    "repair_constraints",
+    "regeneration_strategy",
+    "retry_prompt",
+    "expected_improvement",
+    "regression_risks",
+    "branch_source_round",
+    "branch_source",
+}
+BRANCH_SOURCES = {"latest", "best_so_far"}
 
 
 class ActionValidationError(ValueError):
@@ -62,6 +99,7 @@ class InitialPlanAction:
 
     @classmethod
     def from_dict(cls, data: dict[str, Any]) -> "InitialPlanAction":
+        _reject_extra_keys(data, INITIAL_PLAN_KEYS, "initial_plan")
         action = cls(
             action_type=str(data.get("action_type", "initial_plan")),
             parsed_constraints=_constraints_dict(data.get("parsed_constraints")),
@@ -90,6 +128,8 @@ class RetryReplanAction:
     retry_prompt: str = ""
     expected_improvement: list[str] = field(default_factory=list)
     regression_risks: list[str] = field(default_factory=list)
+    branch_source_round: int = 0
+    branch_source: str = "latest"
 
     def validate(self) -> None:
         errors: list[str] = []
@@ -99,6 +139,10 @@ class RetryReplanAction:
             errors.append("decision must be regenerate")
         if not self.retry_prompt.strip():
             errors.append("retry_prompt is required")
+        if self.branch_source not in BRANCH_SOURCES:
+            errors.append(f"branch_source must be one of {sorted(BRANCH_SOURCES)}")
+        if self.branch_source_round < 0:
+            errors.append("branch_source_round must be non-negative")
         previous = _strings(self.skill_revision.get("previous_skills"))
         new = _strings(self.skill_revision.get("new_skills"))
         invalid = sorted((set(previous) | set(new)) - ALLOWED_SKILLS)
@@ -131,10 +175,13 @@ class RetryReplanAction:
             "retry_prompt": self.retry_prompt,
             "expected_improvement": list(self.expected_improvement),
             "regression_risks": list(self.regression_risks),
+            "branch_source_round": int(self.branch_source_round),
+            "branch_source": self.branch_source,
         }
 
     @classmethod
     def from_dict(cls, data: dict[str, Any]) -> "RetryReplanAction":
+        _reject_extra_keys(data, RETRY_REPLAN_KEYS, "retry_replan")
         direct_edit = sorted(DIRECT_EDIT_KEYS & _deep_keys(data))
         if direct_edit:
             raise ActionValidationError(f"direct image edit fields are not allowed: {direct_edit}")
@@ -151,6 +198,8 @@ class RetryReplanAction:
             retry_prompt=str(data.get("retry_prompt", "")),
             expected_improvement=_strings(data.get("expected_improvement")),
             regression_risks=_strings(data.get("regression_risks")),
+            branch_source_round=int(data.get("branch_source_round", 0)),
+            branch_source=str(data.get("branch_source", "latest")),
         )
         action.validate()
         return action
@@ -224,3 +273,9 @@ def _deep_keys(value: Any) -> set[str]:
         for item in value:
             keys.update(_deep_keys(item))
     return keys
+
+
+def _reject_extra_keys(data: dict[str, Any], allowed: set[str], schema_name: str) -> None:
+    extra = sorted(set(data) - allowed)
+    if extra:
+        raise ActionValidationError(f"{schema_name} has extra keys: {extra}")

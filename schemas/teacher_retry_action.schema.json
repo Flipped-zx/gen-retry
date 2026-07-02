@@ -1,28 +1,33 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://gen-retry.local/schemas/teacher_retry_action.schema.json",
-  "title": "Gen-Retry Teacher Retry Action",
+  "title": "Gen-Retry Teacher Retry Replan Action",
   "type": "object",
   "additionalProperties": false,
   "required": [
+    "action_type",
     "decision",
     "failure_types",
-    "skills_to_call",
+    "diagnosis",
+    "previous_plan_error",
+    "skill_revision",
     "preserve_constraints",
     "repair_constraints",
-    "repair_strategy",
+    "regeneration_strategy",
     "retry_prompt",
     "expected_improvement",
-    "regression_risks"
+    "regression_risks",
+    "branch_source_round",
+    "branch_source"
   ],
   "properties": {
+    "action_type": {
+      "type": "string",
+      "const": "retry_replan"
+    },
     "decision": {
       "type": "string",
-      "enum": [
-        "retry",
-        "submit",
-        "discard"
-      ]
+      "const": "regenerate"
     },
     "failure_types": {
       "type": "array",
@@ -30,10 +35,49 @@
         "type": "string"
       }
     },
-    "skills_to_call": {
-      "type": "array",
-      "items": {
-        "type": "string"
+    "diagnosis": {
+      "type": "string"
+    },
+    "previous_plan_error": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "error_source",
+        "details"
+      ],
+      "properties": {
+        "error_source": {
+          "type": "string"
+        },
+        "details": {
+          "type": "string"
+        }
+      }
+    },
+    "skill_revision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "previous_skills",
+        "new_skills",
+        "reason"
+      ],
+      "properties": {
+        "previous_skills": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "new_skills": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "reason": {
+          "type": "string"
+        }
       }
     },
     "preserve_constraints": {
@@ -48,11 +92,12 @@
         "type": "string"
       }
     },
-    "repair_strategy": {
+    "regeneration_strategy": {
       "type": "string"
     },
     "retry_prompt": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1
     },
     "expected_improvement": {
       "type": "array",
@@ -65,6 +110,17 @@
       "items": {
         "type": "string"
       }
+    },
+    "branch_source_round": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "branch_source": {
+      "type": "string",
+      "enum": [
+        "latest",
+        "best_so_far"
+      ]
     }
   }
 }

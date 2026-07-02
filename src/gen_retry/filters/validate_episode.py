@@ -5,7 +5,7 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
-from gen_retry.schemas.actions import ALLOWED_SKILLS, ActionValidationError, RetryReplanAction
+from gen_retry.schemas.actions import ALLOWED_SKILLS, DIRECT_EDIT_KEYS, ActionValidationError, RetryReplanAction
 from gen_retry.schemas.episode import EVALUATOR_TYPES, FINAL_OUTCOMES, Episode
 from gen_retry.schemas.episode_schema import (
     ACTION_TYPES,
@@ -136,11 +136,10 @@ def validate_legacy_episode(episode: LegacyEpisode, *, mock_mode: bool = True) -
 
 
 def _direct_image_edit_keys(value: Any) -> list[str]:
-    blocked = {"image_edit", "edit_instruction", "mask", "bbox", "inpaint", "source_image"}
     found: set[str] = set()
     if isinstance(value, dict):
         for key, item in value.items():
-            if str(key) in blocked:
+            if str(key) in DIRECT_EDIT_KEYS:
                 found.add(str(key))
             found.update(_direct_image_edit_keys(item))
     elif isinstance(value, list):

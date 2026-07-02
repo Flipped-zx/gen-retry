@@ -18,6 +18,7 @@ from gen_retry.evaluators.geneval_result_normalizer import (
 )
 from gen_retry.utils.ids import make_episode_id
 from gen_retry.utils.io import read_jsonl, write_jsonl
+from gen_retry.utils.progress import ProgressMeter
 
 
 @dataclass(frozen=True)
@@ -85,7 +86,12 @@ class QwenGenevalBatchCollector:
             prompt = str(row.get("prompt", "")).strip()
             if not prompt:
                 raise ValueError(f"{self.prompts_path} row {prompt_index} has empty prompt")
-            sample_id = str(row.get("id") or row.get("sample_id") or make_episode_id(prompt, prompt_index))
+            sample_id = str(
+                row.get("prompt_id")
+                or row.get("id")
+                or row.get("sample_id")
+                or make_episode_id(prompt, prompt_index)
+            )
             category = str(row.get("category", ""))
             expected = dict(row.get("expected") or {})
             for candidate_index in range(self.images_per_prompt):
@@ -121,12 +127,14 @@ class QwenGenevalBatchCollector:
         *,
         command_template: str,
         allow_missing_images: bool = False,
+        progress_interval: float = 30.0,
     ) -> list[dict[str, Any]]:
         return self._run_jobs(
             jobs,
             command_template=command_template,
             phase="generation",
             validate_image=not allow_missing_images,
+            progress_interval=progress_interval,
         )
 
     def run_geneval(
@@ -134,12 +142,14 @@ class QwenGenevalBatchCollector:
         jobs: list[CandidateJob],
         *,
         command_template: str,
+        progress_interval: float = 30.0,
     ) -> list[dict[str, Any]]:
         return self._run_jobs(
             jobs,
             command_template=command_template,
             phase="geneval",
             validate_image=False,
+            progress_interval=progress_interval,
         )
 
     def normalize_outputs(
@@ -202,11 +212,18 @@ class QwenGenevalBatchCollector:
         command_template: str,
         phase: str,
         validate_image: bool,
+        progress_interval: float = 30.0,
     ) -> list[dict[str, Any]]:
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.images_dir.mkdir(parents=True, exist_ok=True)
         self.raw_geneval_dir.mkdir(parents=True, exist_ok=True)
         failures: list[dict[str, Any]] = []
+        progress = ProgressMeter(
+            len(jobs),
+            label=f"qwen-geneval {phase}",
+            update_interval=progress_interval,
+        )
+        progress.update(completed=0, force=True)
         with ThreadPoolExecutor(max_workers=len(self.gpus)) as pool:
             futures = {
                 pool.submit(
@@ -218,10 +235,17 @@ class QwenGenevalBatchCollector:
                 ): job
                 for job in jobs
             }
+            completed_count = 0
             for future in as_completed(futures):
                 result = future.result()
+                completed_count += 1
                 if result.get("status") != "ok":
                     failures.append(result)
+                progress.update(
+                    completed=completed_count,
+                    force=progress_interval == 0,
+                    extra=f"failures={len(failures)}",
+                )
         if failures:
             write_jsonl(self.output_dir / f"{phase}_failed.jsonl", failures)
         return failures

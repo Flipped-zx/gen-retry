@@ -1,0 +1,264 @@
+{
+  "attempts": [
+    {
+      "eval_report": {
+        "critical_failure_types": [
+          "count_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {},
+            "detected": "wrong count",
+            "expected": "exact requested count",
+            "status": "failed",
+            "target": "object count",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed_constraints": [],
+        "raw_report": {
+          "failed_constraints": [
+            {
+              "detected": "wrong count",
+              "expected": "exact requested count",
+              "status": "failed",
+              "target": "object count",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [],
+          "score": 0.55,
+          "uncertain_constraints": []
+        },
+        "score": 0.55,
+        "uncertain_constraints": []
+      },
+      "image_path": "data/images/geneval2_gpt55_smoke/episode_000002_948e80ea1b67_attempt_0.png",
+      "metadata": {
+        "retry_budget_left": 1,
+        "transition_outcome": "initial"
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Generate exactly two toys and no additional toys.",
+          "Both toys must be made of metal.",
+          "Keep both toys fully visible and separate from each other.",
+          "Avoid occlusion so neither toy hides the other.",
+          "Do not include extra prominent objects that could be mistaken for toys."
+        ],
+        "generation_strategy": "Create a simple scene with two distinct metal toys placed apart so each is clearly countable and fully visible. Bind the metal material to both toys, and use a clean composition that avoids overlap or hiding.",
+        "initial_prompt": "Two metal toys, exactly two, both clearly visible and separate, made of metal, with no overlap or occlusion.",
+        "parsed_constraints": {
+          "attributes": {
+            "toy_1": [
+              "metal"
+            ],
+            "toy_2": [
+              "metal"
+            ]
+          },
+          "counts": {
+            "toys": 2
+          },
+          "objects": [
+            "toy",
+            "toy"
+          ],
+          "relations": [
+            "the two toys are separate",
+            "the two toys do not occlude each other"
+          ]
+        },
+        "selected_skills": [
+          "quantity_counting",
+          "attribute_binding",
+          "object_presence",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints",
+          "spatial_layout"
+        ]
+      },
+      "prompt_used": "Two metal toys, exactly two, both clearly visible and separate, made of metal, with no overlap or occlusion.",
+      "round": 0
+    },
+    {
+      "eval_report": {
+        "critical_failure_types": [],
+        "failed_constraints": [],
+        "passed_constraints": [],
+        "raw_report": {
+          "failed_constraints": [],
+          "passed_constraints": [],
+          "score": 1.0
+        },
+        "score": 1.0,
+        "uncertain_constraints": []
+      },
+      "image_path": "data/images/geneval2_gpt55_smoke/episode_000002_948e80ea1b67_attempt_1.png",
+      "metadata": {
+        "failed_constraints_delta": -1,
+        "new_critical_failures": [],
+        "previous_score": 0.55,
+        "retry_budget_left": 0,
+        "score_delta": 0.44999999999999996,
+        "transition_outcome": "passed_after_retry"
+      },
+      "planner_action": {
+        "action_type": "retry_replan",
+        "decision": "regenerate",
+        "diagnosis": "The generation failed on the core count constraint: the image did not contain exactly two toys. The previous prompt mentioned the count, but it did not sufficiently prioritize strict object counting over generic toy composition, so the model likely produced an extra or missing toy-like object.",
+        "expected_improvement": [
+          "Render exactly two toy objects and no additional toys.",
+          "Make both toys clearly distinct so they are easy to count.",
+          "Keep both toys metallic and fully visible.",
+          "Reduce the chance of extra toy-like objects appearing in the scene."
+        ],
+        "failure_types": [
+          "count_mismatch"
+        ],
+        "preserve_constraints": [
+          "There must be exactly two toys.",
+          "Both toys must be made of metal.",
+          "Both toys must be clearly visible and separate.",
+          "No overlap or occlusion between the toys.",
+          "No extra prominent objects that could be mistaken for toys."
+        ],
+        "previous_plan_error": {
+          "details": "The prior plan stated the count requirement, but it was not strong enough to prevent the generator from drifting into an incorrect number of toys.",
+          "error_source": "Insufficient emphasis on strict quantity control and object presence in the prompt/plan."
+        },
+        "regeneration_strategy": "Use a more forceful, count-first prompt that explicitly demands exactly two toy objects, reinforces negative constraints against any extra toy-like items, and keeps the composition simple so the model focuses on two separate metallic toys only.",
+        "regression_risks": [
+          "The model may still add a third toy-like object in the background.",
+          "The toys may be visually merged or partially occluded, making the count ambiguous.",
+          "One toy may be rendered with a non-metal material if attribute binding weakens."
+        ],
+        "repair_constraints": [
+          "Exactly two toy objects only.",
+          "Both objects must be metallic.",
+          "Place the two toys apart from each other.",
+          "Keep both toys fully visible.",
+          "Avoid any additional toy-like or count-confusing objects.",
+          "Use a simple, uncluttered background."
+        ],
+        "retry_prompt": "A simple scene showing exactly two metal toys only: two separate toy objects made of metal, both fully visible, clearly distinct, and placed apart from each other. No extra toys, no extra toy-like objects, no overlap, and no occlusion. Keep the composition clean and uncluttered so the two toys are easy to count.",
+        "skill_revision": {
+          "new_skills": [
+            "quantity_counting",
+            "object_presence",
+            "negative_constraints",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "spatial_layout",
+            "attribute_binding"
+          ],
+          "previous_skills": [
+            "quantity_counting",
+            "attribute_binding",
+            "object_presence",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints",
+            "spatial_layout"
+          ],
+          "reason": "The same skill set remains relevant, but quantity_counting and object_presence should be treated as primary controls, with stronger negative_constraints to prevent extra toy instances."
+        }
+      },
+      "prompt_used": "A simple scene showing exactly two metal toys only: two separate toy objects made of metal, both fully visible, clearly distinct, and placed apart from each other. No extra toys, no extra toy-like objects, no overlap, and no occlusion. Keep the composition clean and uncluttered so the two toys are easy to count.",
+      "round": 1
+    }
+  ],
+  "episode_id": "episode_000002_948e80ea1b67",
+  "evaluator_type": "geneval2",
+  "final_outcome": "passed_after_retry",
+  "generator_name": "mock_generator",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Generate exactly two toys and no additional toys.",
+      "Both toys must be made of metal.",
+      "Keep both toys fully visible and separate from each other.",
+      "Avoid occlusion so neither toy hides the other.",
+      "Do not include extra prominent objects that could be mistaken for toys."
+    ],
+    "generation_strategy": "Create a simple scene with two distinct metal toys placed apart so each is clearly countable and fully visible. Bind the metal material to both toys, and use a clean composition that avoids overlap or hiding.",
+    "initial_prompt": "Two metal toys, exactly two, both clearly visible and separate, made of metal, with no overlap or occlusion.",
+    "parsed_constraints": {
+      "attributes": {
+        "toy_1": [
+          "metal"
+        ],
+        "toy_2": [
+          "metal"
+        ]
+      },
+      "counts": {
+        "toys": 2
+      },
+      "objects": [
+        "toy",
+        "toy"
+      ],
+      "relations": [
+        "the two toys are separate",
+        "the two toys do not occlude each other"
+      ]
+    },
+    "selected_skills": [
+      "quantity_counting",
+      "attribute_binding",
+      "object_presence",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints",
+      "spatial_layout"
+    ]
+  },
+  "metadata": {
+    "max_retry": 1,
+    "pass_threshold": 0.95,
+    "prompt_metadata": {
+      "atom_count": 3,
+      "prompt": "two metal toys",
+      "skills": [
+        "count",
+        "attribute",
+        "object"
+      ],
+      "source": "geneval2",
+      "source_index": 2,
+      "vqa_list": [
+        [
+          "How many toys are in the image?",
+          "two"
+        ],
+        [
+          "Are the toys metal?",
+          "Yes"
+        ],
+        [
+          "Are there any toys in the image?",
+          "Yes"
+        ]
+      ]
+    }
+  },
+  "original_prompt": "two metal toys",
+  "stop_rule_result": {
+    "critical_failure_types": [],
+    "max_retry": 1,
+    "pass_threshold": 0.95,
+    "passed": true,
+    "reason": "no_failed_constraints",
+    "retry_round": 1,
+    "score": 1.0,
+    "should_stop": true
+  },
+  "teacher_name": "gpt55_teacher_adapter"
+}

@@ -9,11 +9,13 @@ from typing import Any
 CRITICAL_FAILURE_TYPES = {
     "missing_object",
     "extra_object",
+    "forbidden_object_present",
     "count_mismatch",
     "color_mismatch",
     "attribute_mismatch",
     "spatial_mismatch",
     "relation_mismatch",
+    "action_mismatch",
 }
 
 

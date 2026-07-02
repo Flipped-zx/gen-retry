@@ -26,11 +26,13 @@ class Geneval2Adapter(BaseImageEvaluator):
         score_list_path: str | Path | None = None,
         benchmark_data_path: str | Path | None = None,
         aggregate_by: str = "prompt_id",
+        atom_threshold: float = 0.5,
     ) -> None:
         self.command_template = command_template
         self.score_list_path = Path(score_list_path) if score_list_path else None
         self.benchmark_data_path = Path(benchmark_data_path) if benchmark_data_path else None
         self.aggregate_by = aggregate_by
+        self.atom_threshold = atom_threshold
         self._reports: dict[str, NormalizedEvalReport] | None = None
 
     def evaluate(self, original_prompt: str, image_path: str) -> NormalizedEvalReport:
@@ -55,6 +57,7 @@ class Geneval2Adapter(BaseImageEvaluator):
             reports = normalize_geneval2_score_list(
                 load_geneval2_score_rows(output_path, benchmark_data=self.benchmark_data_path),
                 aggregate_by=self.aggregate_by,
+                atom_threshold=self.atom_threshold,
             )
             return _select_report(reports, original_prompt=original_prompt, image_path=image_path)
         if not isinstance(raw, dict):
@@ -67,7 +70,11 @@ class Geneval2Adapter(BaseImageEvaluator):
                 self.score_list_path,
                 benchmark_data=self.benchmark_data_path,
             )
-            self._reports = normalize_geneval2_score_list(rows, aggregate_by=self.aggregate_by)
+            self._reports = normalize_geneval2_score_list(
+                rows,
+                aggregate_by=self.aggregate_by,
+                atom_threshold=self.atom_threshold,
+            )
         return _select_report(self._reports, original_prompt=original_prompt, image_path=image_path)
 
 

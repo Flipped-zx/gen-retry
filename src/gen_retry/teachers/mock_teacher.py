@@ -94,6 +94,8 @@ class MockTeacher(BaseTeacher):
                 "Previously correct objects or attributes could change during regeneration.",
                 "Tighter repair wording could introduce extra objects if negative constraints are weak.",
             ],
+            branch_source_round=int(state.get("branch_source_round", state.get("current_round", 0))),
+            branch_source=str(state.get("branch_source", "latest")),
         )
         action.validate()
         return action

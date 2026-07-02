@@ -24,10 +24,23 @@ def main() -> int:
     parser.add_argument("--output", required=True)
     parser.add_argument("--benchmark-data", help="Optional GenEval2 geneval2_data.jsonl to join VQA questions/skills.")
     parser.add_argument("--aggregate-by", default="prompt_id")
+    parser.add_argument(
+        "--atom-threshold",
+        type=float,
+        default=0.5,
+        help=(
+            "Training-time atom threshold for diagnostic normalization only; "
+            "official GenEval2 benchmark scoring remains unchanged."
+        ),
+    )
     args = parser.parse_args()
 
     rows = load_geneval2_score_rows(args.input, benchmark_data=args.benchmark_data)
-    reports = normalize_geneval2_score_list(rows, aggregate_by=args.aggregate_by)
+    reports = normalize_geneval2_score_list(
+        rows,
+        aggregate_by=args.aggregate_by,
+        atom_threshold=args.atom_threshold,
+    )
     output_rows = []
     for group_id, report in sorted(reports.items()):
         raw_rows = report.raw_report.get("rows", []) if isinstance(report.raw_report, dict) else []

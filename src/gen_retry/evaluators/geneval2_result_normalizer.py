@@ -45,9 +45,11 @@ GENEVAL2_CRITICAL_FAILURE_TYPES = {
 def normalize_geneval2_score_list(
     score_list: list[dict[str, Any]],
     aggregate_by: str = "prompt_id",
+    atom_threshold: float = 0.5,
 ) -> dict[str, NormalizedEvalReport]:
     """Group atom-level GenEval2 rows and return one report per group."""
 
+    atom_threshold = _clamp_threshold(atom_threshold)
     grouped: dict[str, list[dict[str, Any]]] = {}
     for index, row in enumerate(score_list):
         if not isinstance(row, dict):
@@ -64,7 +66,7 @@ def normalize_geneval2_score_list(
         for row_index, row in enumerate(rows):
             row = dict(row)
             row.setdefault("atom_index", row_index)
-            constraint = normalize_geneval2_row(row)
+            constraint = normalize_geneval2_row(row, atom_threshold=atom_threshold)
             score = _extract_score(row)
             if score is not None:
                 scores.append(score)
@@ -80,19 +82,28 @@ def normalize_geneval2_score_list(
             failed_constraints=failed,
             uncertain_constraints=uncertain,
             critical_failure_types=_critical_failure_types(failed),
-            raw_report={"group_id": group_id, "rows": rows},
+            raw_report={
+                "group_id": group_id,
+                "rows": rows,
+                "diagnostic_atom_threshold": atom_threshold,
+                "threshold_note": (
+                    "This atom threshold is for training-time diagnostic normalization only. "
+                    "It is not a replacement for official GenEval2 benchmark scoring."
+                ),
+            },
         )
     return reports
 
 
-def normalize_geneval2_row(row: dict[str, Any]) -> NormalizedConstraint:
+def normalize_geneval2_row(row: dict[str, Any], *, atom_threshold: float = 0.5) -> NormalizedConstraint:
     """Normalize one GenEval2 atom/VQA row into a constraint."""
 
+    atom_threshold = _clamp_threshold(atom_threshold)
     question = _first_present(row, "question", "vqa_question", "query")
     expected = _first_present(row, "answer", "gt_answer", "expected_answer", "expected")
     detected = _first_present(row, "prediction", "pred", "model_answer", "detected")
     skill = _skill(row)
-    status = _status(row)
+    status = _status(row, atom_threshold=atom_threshold)
     failure_type = _failure_type(skill=skill, question=question, status=status)
     return NormalizedConstraint(
         type=failure_type,
@@ -107,6 +118,7 @@ def normalize_geneval2_row(row: dict[str, Any]) -> NormalizedConstraint:
             "prompt_id": _first_present(row, "prompt_id", "sample_id", "id"),
             "image_id": _first_present(row, "image_id", "image_path"),
             "atom_index": row.get("atom_index"),
+            "diagnostic_atom_threshold": atom_threshold,
             "raw": dict(row),
         },
     )
@@ -221,7 +233,10 @@ def _skill(row: dict[str, Any]) -> str:
     return str(value).strip().lower()
 
 
-def _status(row: dict[str, Any]) -> str:
+def _status(row: dict[str, Any], *, atom_threshold: float) -> str:
+    score = _extract_score(row)
+    if score is not None:
+        return "passed" if score >= atom_threshold else "failed"
     correct = _first_present(row, "correct", "is_correct", "passed")
     if isinstance(correct, bool):
         return "passed" if correct else "failed"
@@ -232,10 +247,11 @@ def _status(row: dict[str, Any]) -> str:
         return "passed"
     if status in {"fail", "failed", "incorrect", "false"}:
         return "failed"
-    score = _extract_score(row)
-    if score is None:
-        return "uncertain"
-    return "passed" if score >= 0.5 else "failed"
+    return "uncertain"
+
+
+def _clamp_threshold(value: float) -> float:
+    return max(0.0, min(1.0, float(value)))
 
 
 def _extract_score(row: dict[str, Any]) -> float | None:

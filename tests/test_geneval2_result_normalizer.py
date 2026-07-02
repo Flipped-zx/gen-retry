@@ -114,6 +114,35 @@ class GenEval2ResultNormalizerTest(unittest.TestCase):
         self.assertEqual(len(report.failed_constraints), 1)
         self.assertEqual(report.critical_failure_types, ["color_mismatch"])
 
+    def test_atom_threshold_is_configurable(self) -> None:
+        report = normalize_geneval2_score_list(
+            [
+                {
+                    "prompt_id": "p1",
+                    "question": "Is the cube to the left of the sphere?",
+                    "answer": "Yes",
+                    "score": 0.8,
+                    "skill": "position",
+                }
+            ],
+            atom_threshold=0.9,
+        )["p1"]
+        self.assertEqual(len(report.passed_constraints), 0)
+        self.assertEqual(report.failed_constraints[0].type, "spatial_mismatch")
+        self.assertEqual(report.raw_report["diagnostic_atom_threshold"], 0.9)
+
+    def test_unparseable_score_is_uncertain(self) -> None:
+        constraint = normalize_geneval2_row(
+            {
+                "question": "Are there any apples?",
+                "answer": "Yes",
+                "score": "not-a-number",
+                "skill": "object",
+            },
+            atom_threshold=0.9,
+        )
+        self.assertEqual(constraint.status, "uncertain")
+
     def test_load_official_score_lists_with_benchmark_data(self) -> None:
         with TemporaryDirectory() as tmp:
             root = Path(tmp)

@@ -245,17 +245,31 @@ class EpisodeCollector:
         retry_round: int,
         retry_budget_left: int,
     ) -> dict[str, Any]:
+        memory = _state_memory(episode)
         return {
             "episode_id": episode.episode_id,
             "original_prompt": episode.original_prompt,
             "previous_initial_plan": episode.initial_plan.to_dict(),
+            "previous_action": previous_attempt.planner_action.to_dict() if previous_attempt.planner_action else {},
             "previous_prompt": previous_attempt.prompt_used,
             "previous_selected_skills": _previous_skills(previous_attempt, episode.initial_plan),
+            "current_round": previous_attempt.round,
+            "current_eval_report": previous_attempt.eval_report.to_dict(),
             "normalized_eval_report": previous_attempt.eval_report.to_dict(),
             "retry_history": _retry_history(episode),
             "retry_round": retry_round,
             "retry_budget_left": retry_budget_left,
             "evaluator_type": episode.evaluator_type,
+            "memory": memory,
+            "best_so_far": memory["best_so_far"],
+            "fixed_constraints": memory["fixed_constraints"],
+            "persistent_failures": memory["persistent_failures"],
+            "new_failures": memory["new_failures"],
+            "regressed_constraints": memory["regressed_constraints"],
+            "score_delta_from_previous": memory["score_delta_from_previous"],
+            "score_delta_from_best": memory["score_delta_from_best"],
+            "branch_source": memory["branch_source"],
+            "branch_source_round": memory["branch_source_round"],
         }
 
     def _image_path(self, episode_id: str, round_id: int) -> Path:
@@ -324,10 +338,120 @@ def _retry_history(episode: Episode) -> list[dict[str, Any]]:
                     item.to_dict() for item in attempt.eval_report.failed_constraints
                 ],
                 "planner_action_type": action.action_type if action else "",
+                "planner_action": action.to_dict() if action else {},
                 "transition_outcome": attempt.metadata.get("transition_outcome"),
             }
         )
     return rows
+
+
+def _state_memory(episode: Episode) -> dict[str, Any]:
+    attempts = episode.attempts
+    current = attempts[-1]
+    previous = attempts[-2] if len(attempts) > 1 else None
+    best = _best_attempt(attempts)
+    transition = _transition_sets(previous, current)
+    score_delta_from_previous = (
+        current.eval_report.score - previous.eval_report.score if previous else 0.0
+    )
+    score_delta_from_best = current.eval_report.score - best.eval_report.score if best else 0.0
+    branch_source = "latest" if best and best.round == current.round else "best_so_far"
+    return {
+        "best_so_far": {
+            "round": best.round if best else current.round,
+            "score": best.eval_report.score if best else current.eval_report.score,
+            "image_path": best.image_path if best else current.image_path,
+            "prompt": best.prompt_used if best else current.prompt_used,
+            "failed_constraints": (
+                [_constraint_public(item.to_dict()) for item in best.eval_report.failed_constraints]
+                if best
+                else []
+            ),
+        },
+        "fixed_constraints": transition["fixed_constraints"],
+        "persistent_failures": transition["persistent_failures"],
+        "new_failures": transition["new_failures"],
+        "regressed_constraints": transition["regressed_constraints"],
+        "score_delta_from_previous": score_delta_from_previous,
+        "score_delta_from_best": score_delta_from_best,
+        "branch_source": branch_source,
+        "branch_source_round": best.round if branch_source == "best_so_far" and best else current.round,
+    }
+
+
+def _best_attempt(attempts: list[Attempt]) -> Attempt | None:
+    best: Attempt | None = None
+    for attempt in attempts:
+        if best is None:
+            best = attempt
+            continue
+        if attempt.eval_report.score > best.eval_report.score:
+            best = attempt
+        elif attempt.eval_report.score == best.eval_report.score and (
+            len(attempt.eval_report.failed_constraints) < len(best.eval_report.failed_constraints)
+        ):
+            best = attempt
+    return best
+
+
+def _transition_sets(previous: Attempt | None, current: Attempt) -> dict[str, list[dict[str, Any]]]:
+    if previous is None:
+        return {
+            "fixed_constraints": [],
+            "persistent_failures": [],
+            "new_failures": [_constraint_public(item.to_dict()) for item in current.eval_report.failed_constraints],
+            "regressed_constraints": [],
+        }
+    previous_failed = {_constraint_key(item.to_dict()): item for item in previous.eval_report.failed_constraints}
+    previous_passed = {_constraint_key(item.to_dict()): item for item in previous.eval_report.passed_constraints}
+    current_failed = {_constraint_key(item.to_dict()): item for item in current.eval_report.failed_constraints}
+    current_passed = {_constraint_key(item.to_dict()): item for item in current.eval_report.passed_constraints}
+    fixed: list[dict[str, Any]] = []
+    for key in sorted(set(previous_failed) - set(current_failed)):
+        source = current_passed.get(key, previous_failed[key])
+        item = _constraint_public(source.to_dict())
+        if key not in current_passed:
+            item["status"] = "fixed"
+        fixed.append(item)
+    return {
+        "fixed_constraints": fixed,
+        "persistent_failures": [
+            _constraint_public(current_failed[key].to_dict())
+            for key in sorted(set(previous_failed) & set(current_failed))
+        ],
+        "new_failures": [
+            _constraint_public(current_failed[key].to_dict())
+            for key in sorted(set(current_failed) - set(previous_failed))
+        ],
+        "regressed_constraints": [
+            _constraint_public(current_failed[key].to_dict())
+            for key in sorted(set(previous_passed) & set(current_failed))
+        ],
+    }
+
+
+def _constraint_key(constraint: dict[str, Any]) -> str:
+    import json
+
+    return "|".join(
+        [
+            str(constraint.get("type", "")),
+            str(constraint.get("target", "")),
+            json.dumps(constraint.get("expected"), ensure_ascii=False, sort_keys=True),
+        ]
+    )
+
+
+def _constraint_public(constraint: dict[str, Any]) -> dict[str, Any]:
+    data = dict(constraint)
+    details = data.get("details")
+    if isinstance(details, dict):
+        data["details"] = {
+            key: value
+            for key, value in details.items()
+            if key not in {"raw", "image_path", "image_id", "prompt_id", "sample_id", "id"}
+        }
+    return data
 
 
 def _previous_skills(previous_attempt: Attempt, initial_plan: InitialPlanAction) -> list[str]:

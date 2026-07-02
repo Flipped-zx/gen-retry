@@ -36,6 +36,7 @@ def main() -> int:
     benchmark_row, source_index = _find_benchmark_row(args.benchmark_data, args.prompt)
     output_path = Path(args.output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
+    image_path = str(Path(args.image_path).resolve())
 
     with TemporaryDirectory(prefix="geneval2_single_") as tmp:
         tmpdir = Path(tmp)
@@ -53,7 +54,7 @@ def main() -> int:
             encoding="utf-8",
         )
         image_map.write_text(
-            json.dumps({benchmark_row["prompt"]: args.image_path}, ensure_ascii=False, indent=2),
+            json.dumps({benchmark_row["prompt"]: image_path}, ensure_ascii=False, indent=2),
             encoding="utf-8",
         )
 
@@ -80,7 +81,7 @@ def main() -> int:
     rows = _atom_rows(
         benchmark_row,
         source_index=source_index,
-        image_path=args.image_path,
+        image_path=image_path,
         scores=score_lists[0],
     )
     output_path.write_text(json.dumps(rows, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
