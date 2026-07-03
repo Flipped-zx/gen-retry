@@ -1,0 +1,103 @@
+{
+  "created_at_unix": 1783045921.1226978,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly five chairs, all clearly separated and fully visible.",
+      "Show exactly one candle, and make the candle visibly metal.",
+      "Place all five chairs to the right of the metal candle.",
+      "Avoid extra chairs or extra candles.",
+      "Avoid occlusion between the candle and the chairs."
+    ],
+    "generation_strategy": "Create a simple composition with one metal candle on the left and five distinct chairs arranged to its right, with clear spacing so the object counts and spatial relationship are unambiguous.",
+    "initial_prompt": "A clear scene with exactly one metal candle on the left and exactly five chairs to the right of the candle. The five chairs are distinct, separated, fully visible, and all positioned on the right side of the single metal candle. No additional chairs and no additional candles. Avoid occlusion; make the metal candle and all five chairs easy to see and count.",
+    "parsed_constraints": {
+      "attributes": {
+        "candle": [
+          "metal"
+        ]
+      },
+      "counts": {
+        "candle": 1,
+        "chair": 5
+      },
+      "objects": [
+        "chair",
+        "candle"
+      ],
+      "relations": [
+        "five chairs to the right of one metal candle"
+      ]
+    },
+    "selected_skills": [
+      "quantity_counting",
+      "object_presence",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "five chairs to the right of a metal candle",
+  "prompt_id": "prompt_00021_5cc72b9069",
+  "prompt_metadata": {
+    "atom_count": 5,
+    "difficulty_bucket": "hard",
+    "difficulty_reasons": [
+      "multiple_count_atoms=2",
+      "spatial_position_atoms=1",
+      "large_count=5",
+      "hard_attribute=metal",
+      "relation_words=right"
+    ],
+    "prompt": "five chairs to the right of a metal candle",
+    "skill_counts": {
+      "attribute": 1,
+      "count": 2,
+      "object": 2,
+      "position": 1
+    },
+    "skills": [
+      "count",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 280,
+    "static_difficulty_score": 10.4,
+    "vqa_list": [
+      [
+        "How many chairs are in the image?",
+        "five"
+      ],
+      [
+        "Are there any chairs in the image?",
+        "Yes"
+      ],
+      [
+        "Are the chairs to the right of the candle?",
+        "Yes"
+      ],
+      [
+        "How many candles are in the image?",
+        "one"
+      ],
+      [
+        "Is the candle metal?",
+        "Yes"
+      ],
+      [
+        "Are there any candles in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "source_index": 280,
+  "teacher_name": "gpt55"
+}

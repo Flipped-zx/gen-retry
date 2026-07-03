@@ -1,4 +1,42 @@
 # Progress
+## Remaining GenEval2 Initial Plans
+
+Status: completed.
+
+Completed work:
+
+- Clarified the remaining prompt scope as unique GenEval2 prompts not already present in `data/prompts/geneval2_balanced_100.jsonl`.
+- Counted 148 rows across the other `geneval2_*.jsonl` files, with 45 rows overlapping balanced 100 and 40 duplicate rows among the remaining files.
+- Built canonical remaining prompt set: `data/prompts/geneval2_remaining_after_balanced100.jsonl` with 63 unique non-overlapping prompts.
+- Built canonical plan cache: `data/plans/initial/geneval2_remaining_after_balanced100_gpt55/` with 63 valid GPT teacher `initial_plan` files.
+- Stopped the earlier broad per-file precompute after realizing some prompt files overlap balanced 100. The completed non-overlapping API batches already covered all 63 canonical remaining prompts. The partial `geneval2_static_position_20_gpt55` cache is not part of the canonical remaining set.
+- Fixed `scripts/generate_qwen_geneval_images.py` fallback prompt-id logic so files without `prompt_id` match `scripts/precompute_initial_plans.py`.
+
+Changed files:
+
+- `scripts/generate_qwen_geneval_images.py`
+- `data/prompts/geneval2_remaining_after_balanced100.jsonl`
+- `data/plans/initial/geneval2_remaining_after_balanced100_gpt55/*.json`
+- `docs/PROGRESS.md`
+- `docs/CODEX_HANDOFF.md`
+- `docs/QWEN_GENEVAL_BATCH.md`
+
+Validation commands run:
+
+- `python3 -m compileall scripts/generate_qwen_geneval_images.py scripts/generate_qwen_geneval_images_dcu.py scripts/precompute_initial_plans.py` - passed.
+- `python3 scripts/precompute_initial_plans.py --prompts data/prompts/geneval2_remaining_after_balanced100.jsonl --output-dir data/plans/initial/geneval2_remaining_after_balanced100_gpt55 --teacher gpt55 --evaluator-type geneval2 --num-workers 4 --resume --progress-interval 30` - passed with `loaded=63 skipped_valid=63 pending=0`.
+- Custom stdlib cache audit - passed with 63 rows, 63 plan files, 0 missing, 0 invalid, 0 overlap with balanced 100.
+- Custom generation attach check - passed with 63 attached plan-conditioned prompts and 0 empty generation prompts.
+
+Blockers:
+
+- None for initial-plan cache coverage.
+- Real Qwen-Image generation was not run locally.
+
+Next recommended step:
+
+- Use fresh A100 output directories and pass `--initial-plan-dir` for both the balanced 100 set and the canonical remaining 63 set.
+
 ## Plan-Conditioned Initial Generation Ready
 
 Status: completed.

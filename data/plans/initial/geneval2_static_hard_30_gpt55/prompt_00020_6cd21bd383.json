@@ -1,0 +1,108 @@
+{
+  "created_at_unix": 1783045920.174613,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly four cats, all blue, with no extra cats.",
+      "Show exactly one giraffe, with no extra giraffes.",
+      "Show exactly one cookie, and make the cookie visibly spotted, with no extra cookies.",
+      "Keep all six requested subjects fully visible and separated so none are hidden or occluded."
+    ],
+    "generation_strategy": "Use a clear multi-object composition with the four blue cats grouped but individually separated, plus one giraffe and one spotted cookie placed separately. Emphasize exact counts, attribute binding, and unobstructed visibility for each requested object.",
+    "initial_prompt": "Create an image containing exactly four blue cats, exactly one giraffe, and exactly one spotted cookie. The four cats must all be blue and individually visible as four separate cats. The giraffe must be a single giraffe, clearly visible and separate from the cats. The cookie must be a single cookie with visible spots, clearly separate from the other objects. Arrange all six subjects with no occlusion, no hidden parts, and no additional cats, giraffes, or cookies.",
+    "parsed_constraints": {
+      "attributes": {
+        "cats": "blue",
+        "cookie": "spotted"
+      },
+      "counts": {
+        "cats": 4,
+        "cookie": 1,
+        "giraffe": 1
+      },
+      "objects": [
+        "cats",
+        "giraffe",
+        "cookie"
+      ],
+      "relations": []
+    },
+    "selected_skills": [
+      "quantity_counting",
+      "attribute_binding",
+      "object_presence",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "four blue cats and a giraffe and a spotted cookie",
+  "prompt_id": "prompt_00020_6cd21bd383",
+  "prompt_metadata": {
+    "atom_count": 6,
+    "difficulty_bucket": "hard",
+    "difficulty_reasons": [
+      "multiple_count_atoms=3",
+      "many_object_atoms=3",
+      "attribute_binding_atoms=2",
+      "multi_clause_prompt"
+    ],
+    "prompt": "four blue cats and a giraffe and a spotted cookie",
+    "skill_counts": {
+      "attribute": 2,
+      "count": 3,
+      "object": 3
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "count",
+      "object",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 385,
+    "static_difficulty_score": 10.4,
+    "vqa_list": [
+      [
+        "How many cats are in the image?",
+        "four"
+      ],
+      [
+        "Are the cats blue?",
+        "Yes"
+      ],
+      [
+        "Are there any cats in the image?",
+        "Yes"
+      ],
+      [
+        "How many giraffes are in the image?",
+        "one"
+      ],
+      [
+        "Are there any giraffes in the image?",
+        "Yes"
+      ],
+      [
+        "How many cookies are in the image?",
+        "one"
+      ],
+      [
+        "Is the cookie spotted?",
+        "Yes"
+      ],
+      [
+        "Are there any cookies in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "source_index": 385,
+  "teacher_name": "gpt55"
+}

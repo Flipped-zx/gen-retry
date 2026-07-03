@@ -1,4 +1,14 @@
 # Codex Handoff
+## Latest Remaining-Prompt Initial Plan Update
+
+- The correct "remaining prompts" scope is now canonicalized as unique GenEval2 prompts not already in `data/prompts/geneval2_balanced_100.jsonl`.
+- Other `geneval2_*.jsonl` files are not mutually exclusive: 148 rows outside the balanced file contain 45 rows overlapping balanced 100 and 40 duplicate rows among themselves.
+- Canonical remaining prompt file: `data/prompts/geneval2_remaining_after_balanced100.jsonl` with 63 rows and 0 overlap with balanced 100.
+- Canonical remaining plan cache: `data/plans/initial/geneval2_remaining_after_balanced100_gpt55/` with 63 valid GPT teacher `initial_plan` files.
+- `scripts/precompute_initial_plans.py --resume` on the canonical remaining set reports `loaded=63 skipped_valid=63 pending=0`.
+- Do not use `geneval2_static_position_20_gpt55` as the canonical remaining cache; that partial cache came from an interrupted per-file run and overlaps balanced 100.
+- `scripts/generate_qwen_geneval_images.py` fallback prompt-id logic now matches `scripts/precompute_initial_plans.py` for prompt files without explicit `prompt_id`.
+
 ## Latest Plan-Conditioned Generation Update
 
 - `data/plans/initial/geneval2_balanced_100_gpt55/` currently has 100 valid GPT teacher `initial_plan` cache files for the 100-row `data/prompts/geneval2_balanced_100.jsonl` set.

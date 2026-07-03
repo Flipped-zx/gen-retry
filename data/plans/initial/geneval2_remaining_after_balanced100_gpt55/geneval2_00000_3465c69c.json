@@ -1,0 +1,91 @@
+{
+  "created_at_unix": 1783045822.3545809,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly one backpack and exactly one pig.",
+      "The backpack must be green.",
+      "Keep the backpack and pig visually distinct and fully visible, with no occlusion between them.",
+      "Do not add extra backpacks or extra pigs."
+    ],
+    "generation_strategy": "Use a simple two-object composition with the green backpack and the pig separated side by side so both objects are clearly visible and countable. Emphasize the backpack's green color and avoid additional similar objects.",
+    "initial_prompt": "Create an image with exactly one green backpack and exactly one pig. Place them side by side with clear separation so both are fully visible and not occluding each other. The backpack should be plainly green. Do not include any additional backpacks or pigs.",
+    "parsed_constraints": {
+      "attributes": {
+        "backpack": [
+          "green"
+        ]
+      },
+      "counts": {
+        "backpack": 1,
+        "pig": 1
+      },
+      "objects": [
+        "backpack",
+        "pig"
+      ],
+      "relations": []
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "a green backpack and a pig",
+  "prompt_id": "geneval2_00000_3465c69c",
+  "prompt_metadata": {
+    "atom_count": 3,
+    "prompt": "a green backpack and a pig",
+    "prompt_id": "geneval2_00000_3465c69c",
+    "remaining_after": "geneval2_balanced_100",
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "count",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_file_rows": [
+      {
+        "file": "geneval2_smoke_3.jsonl",
+        "row_index": 0
+      }
+    ],
+    "source_files": [
+      "geneval2_smoke_3.jsonl"
+    ],
+    "source_index": 0,
+    "vqa_list": [
+      [
+        "How many backpacks are in the image?",
+        "one"
+      ],
+      [
+        "Is the backpack green?",
+        "Yes"
+      ],
+      [
+        "Are there any backpacks in the image?",
+        "Yes"
+      ],
+      [
+        "How many pigs are in the image?",
+        "one"
+      ],
+      [
+        "Are there any pigs in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "reused_from_plan_path": "data/plans/initial/geneval2_smoke_3_gpt55/prompt_00000_3465c69c3a.json",
+  "source_index": 0,
+  "teacher_name": "gpt55"
+}

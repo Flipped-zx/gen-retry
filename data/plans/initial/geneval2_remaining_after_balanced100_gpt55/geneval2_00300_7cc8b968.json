@@ -1,0 +1,119 @@
+{
+  "created_at_unix": 1783045847.0254395,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly five mushrooms, not fewer or more.",
+      "Show exactly two bagels, not fewer or more.",
+      "All mushrooms must be red.",
+      "Place all five mushrooms below the two bagels.",
+      "Keep all objects clearly visible and countable; avoid occlusion."
+    ],
+    "generation_strategy": "Use a simple, clear composition with two separate bagels in the upper area and five separate red mushrooms in the lower area, maintaining the under/above spatial relationship and ensuring every object is fully visible for counting.",
+    "initial_prompt": "An image with exactly two bagels positioned above exactly five red mushrooms. The five red mushrooms are separate, fully visible, clearly countable, and all located under the two bagels. The two bagels are separate, fully visible, and clearly countable. Avoid occlusion and do not include any additional mushrooms or bagels.",
+    "parsed_constraints": {
+      "attributes": {
+        "mushrooms": [
+          "red"
+        ]
+      },
+      "counts": {
+        "bagels": 2,
+        "mushrooms": 5
+      },
+      "objects": [
+        "mushrooms",
+        "bagels"
+      ],
+      "relations": [
+        "five red mushrooms under two bagels"
+      ]
+    },
+    "selected_skills": [
+      "quantity_counting",
+      "attribute_binding",
+      "object_presence",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "five red mushrooms under two bagels",
+  "prompt_id": "geneval2_00300_7cc8b968",
+  "prompt_metadata": {
+    "atom_count": 6,
+    "difficulty_bucket": "hard",
+    "difficulty_reasons": [
+      "multiple_count_atoms=2",
+      "spatial_position_atoms=1",
+      "large_count=5",
+      "relation_words=under"
+    ],
+    "prompt": "five red mushrooms under two bagels",
+    "prompt_id": "geneval2_00300_7cc8b968",
+    "remaining_after": "geneval2_balanced_100",
+    "skill_counts": {
+      "attribute": 1,
+      "count": 2,
+      "object": 2,
+      "position": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_file_rows": [
+      {
+        "file": "geneval2_static_hard_30.jsonl",
+        "row_index": 0
+      },
+      {
+        "file": "geneval2_static_retry_candidates_25.jsonl",
+        "row_index": 10
+      }
+    ],
+    "source_files": [
+      "geneval2_static_hard_30.jsonl",
+      "geneval2_static_retry_candidates_25.jsonl"
+    ],
+    "source_index": 300,
+    "static_difficulty_score": 10.8,
+    "vqa_list": [
+      [
+        "How many mushrooms are in the image?",
+        "five"
+      ],
+      [
+        "Are the mushrooms red?",
+        "Yes"
+      ],
+      [
+        "Are there any mushrooms in the image?",
+        "Yes"
+      ],
+      [
+        "Are the mushrooms under the bagels?",
+        "Yes"
+      ],
+      [
+        "How many bagels are in the image?",
+        "two"
+      ],
+      [
+        "Are there any bagels in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "reused_from_plan_path": "data/plans/initial/geneval2_static_hard_30_gpt55/prompt_00000_7cc8b968b1.json",
+  "source_index": 300,
+  "teacher_name": "gpt55"
+}

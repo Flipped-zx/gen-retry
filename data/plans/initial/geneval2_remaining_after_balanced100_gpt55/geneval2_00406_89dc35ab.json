@@ -1,0 +1,120 @@
+{
+  "created_at_unix": 1783045913.9246185,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Depict exactly 4 trumpets, exactly 2 trucks, and exactly 4 toys.",
+      "Bind the brown color only to the 2 trucks; do not make the trumpets or toys brown unless unavoidable.",
+      "Keep all 10 objects fully visible, separated, and not overlapping or occluding each other.",
+      "Avoid adding extra trumpets, trucks, toys, or other countable objects that could be confused with them."
+    ],
+    "generation_strategy": "Use a clean, simple composition with three clearly separated groups so the counts are easy to verify: four trumpets together, two brown trucks together, and four toys together. Space each object apart with full visibility and no occlusion.",
+    "initial_prompt": "A clear image showing exactly four trumpets, exactly two brown trucks, and exactly four toys. Arrange the objects in three separated groups on a plain background: four distinct trumpets in one group, two distinct brown trucks in another group, and four distinct toys in another group. All objects are fully visible, separated from each other, and not overlapping. Do not include any extra trumpets, trucks, or toys.",
+    "parsed_constraints": {
+      "attributes": {
+        "trucks": "brown"
+      },
+      "counts": {
+        "toys": 4,
+        "trucks": 2,
+        "trumpets": 4
+      },
+      "objects": [
+        "trumpets",
+        "trucks",
+        "toys"
+      ],
+      "relations": []
+    },
+    "selected_skills": [
+      "quantity_counting",
+      "object_presence",
+      "attribute_binding",
+      "multi_object_composition",
+      "spatial_layout",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "four trumpets and two brown trucks and four toys",
+  "prompt_id": "geneval2_00406_89dc35ab",
+  "prompt_metadata": {
+    "atom_count": 7,
+    "difficulty_bucket": "hard",
+    "difficulty_reasons": [
+      "high_atomicity=7",
+      "multiple_count_atoms=3",
+      "many_object_atoms=3",
+      "multi_clause_prompt"
+    ],
+    "prompt": "four trumpets and two brown trucks and four toys",
+    "prompt_id": "geneval2_00406_89dc35ab",
+    "remaining_after": "geneval2_balanced_100",
+    "skill_counts": {
+      "attribute": 1,
+      "count": 3,
+      "object": 3
+    },
+    "skills": [
+      "count",
+      "object",
+      "count",
+      "attribute",
+      "object",
+      "count",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_file_rows": [
+      {
+        "file": "geneval2_static_hard_30.jsonl",
+        "row_index": 18
+      },
+      {
+        "file": "geneval2_static_hard_next20.jsonl",
+        "row_index": 13
+      }
+    ],
+    "source_files": [
+      "geneval2_static_hard_30.jsonl",
+      "geneval2_static_hard_next20.jsonl"
+    ],
+    "source_index": 406,
+    "static_difficulty_score": 10.4,
+    "vqa_list": [
+      [
+        "How many trumpets are in the image?",
+        "four"
+      ],
+      [
+        "Are there any trumpets in the image?",
+        "Yes"
+      ],
+      [
+        "How many trucks are in the image?",
+        "two"
+      ],
+      [
+        "Are the trucks brown?",
+        "Yes"
+      ],
+      [
+        "Are there any trucks in the image?",
+        "Yes"
+      ],
+      [
+        "How many toys are in the image?",
+        "four"
+      ],
+      [
+        "Are there any toys in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "reused_from_plan_path": "data/plans/initial/geneval2_static_hard_30_gpt55/prompt_00018_89dc35ab9e.json",
+  "source_index": 406,
+  "teacher_name": "gpt55"
+}

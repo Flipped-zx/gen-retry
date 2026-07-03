@@ -1,0 +1,102 @@
+{
+  "created_at_unix": 1783045878.1936274,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Depict exactly five mushrooms and exactly seven trucks.",
+      "Bind the plastic material only to the five mushrooms.",
+      "Bind the spotted pattern only to the seven trucks.",
+      "Keep all twelve objects fully visible, separated, and not occluding one another.",
+      "Do not add extra mushrooms or extra trucks."
+    ],
+    "generation_strategy": "Use a clear multi-object composition with separated groups so the counts and attribute bindings are easy to verify. Place the five plastic mushrooms together as one visible group and the seven spotted trucks together as another visible group, with no overlap or occlusion.",
+    "initial_prompt": "A clear image showing exactly five plastic mushrooms and exactly seven spotted trucks. The five mushrooms are visibly made of plastic and grouped separately from the trucks. The seven trucks each have a spotted pattern. Arrange all twelve objects separated and fully visible with no occlusion, so each mushroom and each truck can be counted clearly. Do not include any additional mushrooms or trucks.",
+    "parsed_constraints": {
+      "attributes": {
+        "mushrooms": [
+          "plastic"
+        ],
+        "trucks": [
+          "spotted"
+        ]
+      },
+      "counts": {
+        "mushrooms": 5,
+        "trucks": 7
+      },
+      "objects": [
+        "mushrooms",
+        "trucks"
+      ],
+      "relations": []
+    },
+    "selected_skills": [
+      "quantity_counting",
+      "attribute_binding",
+      "multi_object_composition",
+      "object_presence",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "five plastic mushrooms and seven spotted trucks",
+  "prompt_id": "prompt_00010_534282b88e",
+  "prompt_metadata": {
+    "atom_count": 6,
+    "difficulty_bucket": "hard",
+    "difficulty_reasons": [
+      "multiple_count_atoms=2",
+      "attribute_binding_atoms=2",
+      "large_count=7",
+      "hard_attribute=plastic",
+      "multi_clause_prompt"
+    ],
+    "prompt": "five plastic mushrooms and seven spotted trucks",
+    "skill_counts": {
+      "attribute": 2,
+      "count": 2,
+      "object": 2
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 370,
+    "static_difficulty_score": 10.7,
+    "vqa_list": [
+      [
+        "How many mushrooms are in the image?",
+        "five"
+      ],
+      [
+        "Are the mushrooms plastic?",
+        "Yes"
+      ],
+      [
+        "Are there any mushrooms in the image?",
+        "Yes"
+      ],
+      [
+        "How many trucks are in the image?",
+        "seven"
+      ],
+      [
+        "Are the trucks spotted?",
+        "Yes"
+      ],
+      [
+        "Are there any trucks in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "source_index": 370,
+  "teacher_name": "gpt55"
+}

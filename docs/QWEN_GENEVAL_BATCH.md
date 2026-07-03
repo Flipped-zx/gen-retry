@@ -73,6 +73,58 @@ HIP_VISIBLE_DEVICES=0,1,2,3 python3 scripts/generate_qwen_geneval_images_dcu.py 
 
 If the machine exposes the four target cards as physical IDs 1-4, use `HIP_VISIBLE_DEVICES=1,2,3,4` and keep `--gpus 0,1,2,3`; the `--gpus` values are then logical indexes within the parent HIP mask.
 
+## Six-Card A100 Plan-Conditioned Generation
+
+Use the regular CUDA entrypoint on A100 machines. Keep these runs in fresh output directories because older `data/qwen_geneval2_balanced_100_x5_images` outputs were produced from raw prompts.
+
+Balanced 100 prompts:
+
+```bash
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5 python3 scripts/generate_qwen_geneval_images.py \
+  --metadata data/prompts/geneval2_balanced_100.jsonl \
+  --initial-plan-dir data/plans/initial/geneval2_balanced_100_gpt55 \
+  --output-dir data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100 \
+  --model-path /root/private_data/models/Qwen-Image-2512 \
+  --n-samples 5 \
+  --limit 100 \
+  --seed 1000 \
+  --gpus 0,1,2,3,4,5 \
+  --workers-per-gpu 1 \
+  --dtype bfloat16 \
+  --width 1664 \
+  --height 928 \
+  --steps 50 \
+  --true-cfg-scale 4.0 \
+  --negative-prompt ' ' \
+  --skip-grid \
+  --resume \
+  --progress-interval 60
+```
+
+Remaining 63 prompts not present in balanced 100:
+
+```bash
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5 python3 scripts/generate_qwen_geneval_images.py \
+  --metadata data/prompts/geneval2_remaining_after_balanced100.jsonl \
+  --initial-plan-dir data/plans/initial/geneval2_remaining_after_balanced100_gpt55 \
+  --output-dir data/qwen_geneval2_remaining_after_balanced100_x5_initial_gpt55_a100 \
+  --model-path /root/private_data/models/Qwen-Image-2512 \
+  --n-samples 5 \
+  --limit 63 \
+  --seed 1000 \
+  --gpus 0,1,2,3,4,5 \
+  --workers-per-gpu 1 \
+  --dtype bfloat16 \
+  --width 1664 \
+  --height 928 \
+  --steps 50 \
+  --true-cfg-scale 4.0 \
+  --negative-prompt ' ' \
+  --skip-grid \
+  --resume \
+  --progress-interval 60
+```
+
 Run official GenEval and select prompt groups:
 
 ```bash

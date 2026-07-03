@@ -1,0 +1,79 @@
+{
+  "created_at_unix": 1783045825.0979471,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Depict exactly two toys total.",
+      "Both toys must be clearly made of metal.",
+      "Do not include any additional toys.",
+      "Keep both toys fully visible and separated so the count is unambiguous."
+    ],
+    "generation_strategy": "Use a simple composition focused on count and material: place exactly two metal toys side by side with clear separation, full visibility, and no other toy objects present.",
+    "initial_prompt": "Create an image showing exactly two toys total. Both toys are made of metal and should have a clearly metallic appearance. Place the two metal toys side by side with space between them, fully visible and not overlapping, so the count of two is unambiguous. Do not include any additional toys.",
+    "parsed_constraints": {
+      "attributes": {
+        "toys": [
+          "metal"
+        ]
+      },
+      "counts": {
+        "toys": 2
+      },
+      "objects": [
+        "toys"
+      ],
+      "relations": []
+    },
+    "selected_skills": [
+      "quantity_counting",
+      "attribute_binding",
+      "object_presence",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "two metal toys",
+  "prompt_id": "geneval2_00002_e5efbdc4",
+  "prompt_metadata": {
+    "atom_count": 3,
+    "prompt": "two metal toys",
+    "prompt_id": "geneval2_00002_e5efbdc4",
+    "remaining_after": "geneval2_balanced_100",
+    "skills": [
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_file_rows": [
+      {
+        "file": "geneval2_smoke_3.jsonl",
+        "row_index": 2
+      }
+    ],
+    "source_files": [
+      "geneval2_smoke_3.jsonl"
+    ],
+    "source_index": 2,
+    "vqa_list": [
+      [
+        "How many toys are in the image?",
+        "two"
+      ],
+      [
+        "Are the toys metal?",
+        "Yes"
+      ],
+      [
+        "Are there any toys in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "reused_from_plan_path": "data/plans/initial/geneval2_smoke_3_gpt55/prompt_00002_e5efbdc4a5.json",
+  "source_index": 2,
+  "teacher_name": "gpt55"
+}

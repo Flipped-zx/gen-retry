@@ -1,0 +1,101 @@
+{
+  "created_at_unix": 1783046155.321282,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Create exactly one toy and exactly one croissant.",
+      "Bind the glass material only to the toy.",
+      "Bind the spotted appearance only to the croissant.",
+      "Keep both objects fully visible, separate, and not overlapping.",
+      "Do not add extra toys or extra croissants."
+    ],
+    "generation_strategy": "Use a simple two-object composition with clear separation so the single glass toy and the single spotted croissant are easy to count and their attributes are unambiguous.",
+    "initial_prompt": "A simple image showing exactly one glass toy and exactly one spotted croissant. The toy is made of glass, and the croissant has visible spots. Place the two objects side by side with clear space between them, both fully visible, not touching or overlapping. Do not include any additional toys or croissants.",
+    "parsed_constraints": {
+      "attributes": {
+        "croissant": [
+          "spotted"
+        ],
+        "toy": [
+          "glass"
+        ]
+      },
+      "counts": {
+        "croissant": 1,
+        "toy": 1
+      },
+      "objects": [
+        "toy",
+        "croissant"
+      ],
+      "relations": []
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "a glass toy and a spotted croissant",
+  "prompt_id": "prompt_00029_b911afad83",
+  "prompt_metadata": {
+    "atom_count": 4,
+    "difficulty_bucket": "medium",
+    "difficulty_reasons": [
+      "multiple_count_atoms=2",
+      "attribute_binding_atoms=2",
+      "hard_attribute=glass",
+      "multi_clause_prompt"
+    ],
+    "prompt": "a glass toy and a spotted croissant",
+    "skill_counts": {
+      "attribute": 2,
+      "count": 2,
+      "object": 2
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 196,
+    "static_difficulty_score": 6.3,
+    "vqa_list": [
+      [
+        "How many toys are in the image?",
+        "one"
+      ],
+      [
+        "Is the toy glass?",
+        "Yes"
+      ],
+      [
+        "Are there any toys in the image?",
+        "Yes"
+      ],
+      [
+        "How many croissants are in the image?",
+        "one"
+      ],
+      [
+        "Is the croissant spotted?",
+        "Yes"
+      ],
+      [
+        "Are there any croissants in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "source_index": 196,
+  "teacher_name": "gpt55"
+}

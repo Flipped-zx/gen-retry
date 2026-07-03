@@ -1,0 +1,113 @@
+{
+  "created_at_unix": 1783046138.4820473,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Depict exactly one bicycle and exactly one dog.",
+      "Bind material attributes correctly: the bicycle is glass, the dog is metal.",
+      "Keep the two objects visually separate and fully visible, with no occlusion.",
+      "Do not add extra bicycles, extra dogs, or other prominent objects."
+    ],
+    "generation_strategy": "Use a simple two-object composition with clear separation to support counting and attribute verification. Place the single glass bicycle on one side and the single metal dog on the other side, both fully visible in the frame. Emphasize transparent glass material on the bicycle and reflective metallic material on the dog while avoiding any swapped attributes.",
+    "initial_prompt": "A clear image showing exactly one bicycle made of transparent glass and exactly one dog made of reflective metal. The glass bicycle and the metal dog are side by side with clear space between them, both fully visible and unobstructed. No additional bicycles or dogs.",
+    "parsed_constraints": {
+      "attributes": {
+        "bicycle": [
+          "glass"
+        ],
+        "dog": [
+          "metal"
+        ]
+      },
+      "counts": {
+        "bicycle": 1,
+        "dog": 1
+      },
+      "objects": [
+        "bicycle",
+        "dog"
+      ],
+      "relations": []
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "multi_object_composition",
+      "spatial_layout",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "a glass bicycle and a metal dog",
+  "prompt_id": "geneval2_00172_28c277f4",
+  "prompt_metadata": {
+    "atom_count": 4,
+    "difficulty_bucket": "medium",
+    "difficulty_reasons": [
+      "multiple_count_atoms=2",
+      "attribute_binding_atoms=2",
+      "hard_attribute=glass,metal",
+      "multi_clause_prompt"
+    ],
+    "prompt": "a glass bicycle and a metal dog",
+    "prompt_id": "geneval2_00172_28c277f4",
+    "remaining_after": "geneval2_balanced_100",
+    "skill_counts": {
+      "attribute": 2,
+      "count": 2,
+      "object": 2
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_file_rows": [
+      {
+        "file": "geneval2_static_medium_30.jsonl",
+        "row_index": 25
+      }
+    ],
+    "source_files": [
+      "geneval2_static_medium_30.jsonl"
+    ],
+    "source_index": 172,
+    "static_difficulty_score": 6.3,
+    "vqa_list": [
+      [
+        "How many bicycles are in the image?",
+        "one"
+      ],
+      [
+        "Is the bicycle glass?",
+        "Yes"
+      ],
+      [
+        "Are there any bicycles in the image?",
+        "Yes"
+      ],
+      [
+        "How many dogs are in the image?",
+        "one"
+      ],
+      [
+        "Is the dog metal?",
+        "Yes"
+      ],
+      [
+        "Are there any dogs in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "reused_from_plan_path": "data/plans/initial/geneval2_static_medium_30_gpt55/prompt_00025_28c277f495.json",
+  "source_index": 172,
+  "teacher_name": "gpt55"
+}

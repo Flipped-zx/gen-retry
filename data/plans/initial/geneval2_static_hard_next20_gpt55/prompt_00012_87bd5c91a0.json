@@ -1,0 +1,106 @@
+{
+  "created_at_unix": 1783046017.5467165,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly three monkeys and exactly one clock.",
+      "Bind yellow color to all three monkeys only.",
+      "Bind green color to the single clock.",
+      "Place all three monkeys on top of the clock, visibly supported by the clock.",
+      "Keep the three monkeys separated and fully visible, with minimal overlap or occlusion.",
+      "Do not include additional monkeys or additional clocks."
+    ],
+    "generation_strategy": "Use a simple, centered composition with one large green clock at the bottom and three distinct yellow monkeys positioned on top of it. Emphasize clear object separation, correct counts, and visible spatial relation.",
+    "initial_prompt": "A clear image of exactly one green clock, with exactly three yellow monkeys on top of the clock. The three yellow monkeys are separate, fully visible, and not occluding each other. The single green clock is clearly visible underneath them. No other monkeys and no other clocks.",
+    "parsed_constraints": {
+      "attributes": {
+        "clock": "green",
+        "monkeys": "yellow"
+      },
+      "counts": {
+        "clock": 1,
+        "monkeys": 3
+      },
+      "objects": [
+        "monkeys",
+        "clock"
+      ],
+      "relations": [
+        "three yellow monkeys on top of one green clock"
+      ]
+    },
+    "selected_skills": [
+      "quantity_counting",
+      "attribute_binding",
+      "object_presence",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "three yellow monkeys on top of a green clock",
+  "prompt_id": "prompt_00012_87bd5c91a0",
+  "prompt_metadata": {
+    "atom_count": 6,
+    "difficulty_bucket": "hard",
+    "difficulty_reasons": [
+      "multiple_count_atoms=2",
+      "attribute_binding_atoms=2",
+      "spatial_position_atoms=1"
+    ],
+    "prompt": "three yellow monkeys on top of a green clock",
+    "skill_counts": {
+      "attribute": 2,
+      "count": 2,
+      "object": 2,
+      "position": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 359,
+    "static_difficulty_score": 10.5,
+    "vqa_list": [
+      [
+        "How many monkeys are in the image?",
+        "three"
+      ],
+      [
+        "Are the monkeys yellow?",
+        "Yes"
+      ],
+      [
+        "Are there any monkeys in the image?",
+        "Yes"
+      ],
+      [
+        "Are the monkeys on top of the clock?",
+        "Yes"
+      ],
+      [
+        "How many clocks are in the image?",
+        "one"
+      ],
+      [
+        "Is the clock green?",
+        "Yes"
+      ],
+      [
+        "Are there any clocks in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "source_index": 359,
+  "teacher_name": "gpt55"
+}

@@ -1,0 +1,92 @@
+{
+  "created_at_unix": 1783046040.751726,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly seven penguins and exactly three kangaroos.",
+      "Keep the penguins visually separate and countable, all airborne in a jumping pose.",
+      "Keep the kangaroos visually separate and countable, positioned below the penguins.",
+      "Ensure the relation is clear: the seven penguins are jumping over the three kangaroos.",
+      "Avoid extra penguins, extra kangaroos, or other animals.",
+      "Avoid occlusion that hides bodies or prevents counting."
+    ],
+    "generation_strategy": "Use a clear multi-object composition with two separated groups: seven countable penguins in the upper area, airborne and jumping, and three countable kangaroos in the lower area beneath them. Emphasize the vertical over/under relation and maintain visibility of every animal for reliable counting.",
+    "initial_prompt": "An image showing exactly seven penguins jumping over exactly three kangaroos. All seven penguins are airborne above the kangaroos in clear jumping poses, visually separate from one another and fully visible. The three kangaroos are below the penguins, visually separate from one another and fully visible. Make the over-under relationship clear: the penguins are jumping over the kangaroos. No extra penguins, no extra kangaroos, and no other animals. Avoid occlusion so every penguin and every kangaroo can be counted.",
+    "parsed_constraints": {
+      "attributes": {},
+      "counts": {
+        "kangaroos": 3,
+        "penguins": 7
+      },
+      "objects": [
+        "penguins",
+        "kangaroos"
+      ],
+      "relations": [
+        "seven penguins jumping over three kangaroos"
+      ]
+    },
+    "selected_skills": [
+      "quantity_counting",
+      "object_presence",
+      "multi_object_composition",
+      "spatial_layout",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "seven penguins jumping over three kangaroos",
+  "prompt_id": "prompt_00019_e3858cd482",
+  "prompt_metadata": {
+    "atom_count": 5,
+    "difficulty_bucket": "hard",
+    "difficulty_reasons": [
+      "multiple_count_atoms=2",
+      "verb_relation_atoms=1",
+      "large_count=7",
+      "relation_words=over"
+    ],
+    "prompt": "seven penguins jumping over three kangaroos",
+    "skill_counts": {
+      "count": 2,
+      "object": 2,
+      "verb": 1
+    },
+    "skills": [
+      "count",
+      "object",
+      "verb",
+      "count",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 265,
+    "static_difficulty_score": 10.3,
+    "vqa_list": [
+      [
+        "How many penguins are in the image?",
+        "seven"
+      ],
+      [
+        "Are there any penguins in the image?",
+        "Yes"
+      ],
+      [
+        "Are the penguins jumping over the kangaroos?",
+        "Yes"
+      ],
+      [
+        "How many kangaroos are in the image?",
+        "three"
+      ],
+      [
+        "Are there any kangaroos in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "source_index": 265,
+  "teacher_name": "gpt55"
+}

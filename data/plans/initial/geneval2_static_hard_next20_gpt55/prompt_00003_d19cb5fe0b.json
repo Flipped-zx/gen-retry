@@ -1,0 +1,102 @@
+{
+  "created_at_unix": 1783045974.1802893,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly five motorcycles and exactly seven raccoons.",
+      "Bind pink color only to all five motorcycles.",
+      "Bind wooden material/wood texture only to all seven raccoons.",
+      "Keep all twelve objects fully visible, separated, and not occluding each other.",
+      "Do not add extra motorcycles, extra raccoons, people, animals, vehicles, or distracting objects."
+    ],
+    "generation_strategy": "Use a clear multi-object composition with two visually separated groups so counts and attributes are easy to verify: five pink motorcycles in one row/group and seven wooden raccoons in a separate row/group. Emphasize full visibility, consistent attribute binding, and no overlap.",
+    "initial_prompt": "A clear scene showing exactly five pink motorcycles and exactly seven wooden raccoons. Arrange the five pink motorcycles together in one separated group, all fully visible and clearly countable, each motorcycle entirely pink. Arrange the seven wooden raccoons together in a separate group, all fully visible and clearly countable, each raccoon made of wood with visible wooden texture. Keep every object separated with no overlap or occlusion. No additional motorcycles, no additional raccoons, no people, no other animals, no extra vehicles, no clutter.",
+    "parsed_constraints": {
+      "attributes": {
+        "motorcycles": [
+          "pink"
+        ],
+        "raccoons": [
+          "wooden"
+        ]
+      },
+      "counts": {
+        "motorcycles": 5,
+        "raccoons": 7
+      },
+      "objects": [
+        "motorcycles",
+        "raccoons"
+      ],
+      "relations": []
+    },
+    "selected_skills": [
+      "quantity_counting",
+      "attribute_binding",
+      "multi_object_composition",
+      "object_presence",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "five pink motorcycles and seven wooden raccoons",
+  "prompt_id": "prompt_00003_d19cb5fe0b",
+  "prompt_metadata": {
+    "atom_count": 6,
+    "difficulty_bucket": "hard",
+    "difficulty_reasons": [
+      "multiple_count_atoms=2",
+      "attribute_binding_atoms=2",
+      "large_count=7",
+      "hard_attribute=wooden",
+      "multi_clause_prompt"
+    ],
+    "prompt": "five pink motorcycles and seven wooden raccoons",
+    "skill_counts": {
+      "attribute": 2,
+      "count": 2,
+      "object": 2
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 310,
+    "static_difficulty_score": 10.7,
+    "vqa_list": [
+      [
+        "How many motorcycles are in the image?",
+        "five"
+      ],
+      [
+        "Are the motorcycles pink?",
+        "Yes"
+      ],
+      [
+        "Are there any motorcycles in the image?",
+        "Yes"
+      ],
+      [
+        "How many raccoons are in the image?",
+        "seven"
+      ],
+      [
+        "Are the raccoons wooden?",
+        "Yes"
+      ],
+      [
+        "Are there any raccoons in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "source_index": 310,
+  "teacher_name": "gpt55"
+}

@@ -1,0 +1,111 @@
+{
+  "created_at_unix": 1783046102.2565744,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Include exactly one motorcycle, and make it white.",
+      "Include exactly two flowers, and make both flowers striped.",
+      "Keep the motorcycle and the two flowers clearly visible and separated so they can be counted.",
+      "Do not add extra motorcycles or extra flowers."
+    ],
+    "generation_strategy": "Use a simple composition with one white motorcycle and two distinct striped flowers, separated in space and fully visible. Emphasize exact counts and attribute binding: the single motorcycle is white, and both flowers are striped.",
+    "initial_prompt": "Create an image with exactly one white motorcycle and exactly two striped flowers. The motorcycle should be clearly visible as a single complete white motorcycle. Place two separate flowers near it, and make both flowers visibly striped. Keep all three objects unobstructed, distinct, and easy to count. Do not include any additional motorcycles or flowers.",
+    "parsed_constraints": {
+      "attributes": {
+        "flowers": [
+          "striped"
+        ],
+        "motorcycle": [
+          "white"
+        ]
+      },
+      "counts": {
+        "flowers": 2,
+        "motorcycle": 1
+      },
+      "objects": [
+        "motorcycle",
+        "flowers"
+      ],
+      "relations": []
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "a white motorcycle and two striped flowers",
+  "prompt_id": "geneval2_00253_7240c1d2",
+  "prompt_metadata": {
+    "atom_count": 5,
+    "difficulty_bucket": "medium",
+    "difficulty_reasons": [
+      "multiple_count_atoms=2",
+      "attribute_binding_atoms=2",
+      "multi_clause_prompt"
+    ],
+    "prompt": "a white motorcycle and two striped flowers",
+    "prompt_id": "geneval2_00253_7240c1d2",
+    "remaining_after": "geneval2_balanced_100",
+    "skill_counts": {
+      "attribute": 2,
+      "count": 2,
+      "object": 2
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_file_rows": [
+      {
+        "file": "geneval2_static_medium_30.jsonl",
+        "row_index": 15
+      }
+    ],
+    "source_files": [
+      "geneval2_static_medium_30.jsonl"
+    ],
+    "source_index": 253,
+    "static_difficulty_score": 6.7,
+    "vqa_list": [
+      [
+        "How many motorcycles are in the image?",
+        "one"
+      ],
+      [
+        "Is the motorcycle white?",
+        "Yes"
+      ],
+      [
+        "Are there any motorcycles in the image?",
+        "Yes"
+      ],
+      [
+        "How many flowers are in the image?",
+        "two"
+      ],
+      [
+        "Are the flowers striped?",
+        "Yes"
+      ],
+      [
+        "Are there any flowers in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "reused_from_plan_path": "data/plans/initial/geneval2_static_medium_30_gpt55/prompt_00015_7240c1d2fc.json",
+  "source_index": 253,
+  "teacher_name": "gpt55"
+}

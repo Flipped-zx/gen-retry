@@ -1,0 +1,142 @@
+{
+  "created_at_unix": 1783046177.8413107,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly 2 elephants, exactly 6 cows, and exactly 1 raccoon.",
+      "Bind attributes correctly: the 2 elephants are spotted, the 6 cows are plastic, and the 1 raccoon is glass.",
+      "Keep the elephants behind the cows, and make the cows visibly chasing the raccoon.",
+      "Keep all animals fully visible and separated enough to count; avoid overlaps or occlusion that hides any animal.",
+      "Do not add extra elephants, cows, raccoons, or other animals."
+    ],
+    "generation_strategy": "Use a clear side-view composition with three separated depth groups: two spotted elephants in the back, six plastic cows in the middle, and one glass raccoon in front of the cows. Arrange the six cows as a countable group moving toward the single raccoon, with the elephants visibly behind the cows. Emphasize attribute binding and count clarity with unobstructed full-body visibility.",
+    "initial_prompt": "A clear scene with exactly two spotted elephants behind exactly six plastic cows, and the six plastic cows chasing exactly one glass raccoon. Arrange the two spotted elephants in the back row, the six plastic cows in a separate middle row, and the single glass raccoon in front of the cows. Make every animal fully visible, separated, and easy to count, with no occlusion. The elephants must be spotted, the cows must look plastic, and the raccoon must look transparent glass. Do not include any extra animals or duplicate subjects.",
+    "parsed_constraints": {
+      "attributes": {
+        "cows": [
+          "plastic"
+        ],
+        "elephants": [
+          "spotted"
+        ],
+        "raccoon": [
+          "glass"
+        ]
+      },
+      "counts": {
+        "cows": 6,
+        "elephants": 2,
+        "raccoon": 1
+      },
+      "objects": [
+        "elephants",
+        "cows",
+        "raccoon"
+      ],
+      "relations": [
+        "two spotted elephants behind six plastic cows",
+        "six plastic cows chasing one glass raccoon"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "two spotted elephants behind six plastic cows chasing a glass raccoon",
+  "prompt_id": "prompt_00003_7d4355eebc",
+  "prompt_metadata": {
+    "atom_count": 10,
+    "difficulty_bucket": "very_hard",
+    "difficulty_reasons": [
+      "high_atomicity=10",
+      "multiple_count_atoms=3",
+      "many_object_atoms=3",
+      "attribute_binding_atoms=3",
+      "spatial_position_atoms=1",
+      "verb_relation_atoms=1",
+      "large_count=6",
+      "hard_attribute=glass,plastic",
+      "relation_words=behind,chasing"
+    ],
+    "prompt": "two spotted elephants behind six plastic cows chasing a glass raccoon",
+    "skill_counts": {
+      "attribute": 3,
+      "count": 3,
+      "object": 3,
+      "position": 1,
+      "verb": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object",
+      "verb",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 712,
+    "static_difficulty_score": 23.2,
+    "vqa_list": [
+      [
+        "How many elephants are in the image?",
+        "two"
+      ],
+      [
+        "Are the elephants spotted?",
+        "Yes"
+      ],
+      [
+        "Are there any elephants in the image?",
+        "Yes"
+      ],
+      [
+        "Are the elephants behind the cows?",
+        "Yes"
+      ],
+      [
+        "How many cows are in the image?",
+        "six"
+      ],
+      [
+        "Are the cows plastic?",
+        "Yes"
+      ],
+      [
+        "Are there any cows in the image?",
+        "Yes"
+      ],
+      [
+        "Are the cows chasing the raccoon?",
+        "Yes"
+      ],
+      [
+        "How many raccoons are in the image?",
+        "one"
+      ],
+      [
+        "Is the raccoon glass?",
+        "Yes"
+      ],
+      [
+        "Are there any raccoons in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "source_index": 712,
+  "teacher_name": "gpt55"
+}

@@ -1,0 +1,105 @@
+{
+  "created_at_unix": 1783045976.1288111,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly four flamingos, exactly one sheep, and exactly one truck.",
+      "Place all four flamingos under the single sheep; keep the flamingos visually separated enough to count.",
+      "Keep the single truck visible and separate from the sheep-flamingo grouping.",
+      "Avoid occlusion so every flamingo, the sheep, and the truck are clearly visible.",
+      "Do not add extra flamingos, sheep, or trucks."
+    ],
+    "generation_strategy": "Use a clear multi-object composition with the sheep positioned above the group of four flamingos and a single truck placed separately. Emphasize exact counts, spatial relation, separation between counted objects, and full visibility.",
+    "initial_prompt": "A clear scene with exactly one sheep positioned above exactly four flamingos, so all four flamingos are under the sheep. The four flamingos are separate and fully visible for easy counting. Include exactly one truck placed separately nearby, fully visible. No extra flamingos, no extra sheep, and no extra trucks. Avoid occlusion among the animals and the truck.",
+    "parsed_constraints": {
+      "attributes": {},
+      "counts": {
+        "flamingos": 4,
+        "sheep": 1,
+        "truck": 1
+      },
+      "objects": [
+        "flamingos",
+        "sheep",
+        "truck"
+      ],
+      "relations": [
+        "four flamingos under one sheep",
+        "one truck present"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "four flamingos under a sheep, and a truck",
+  "prompt_id": "prompt_00000_937aaed5d2",
+  "prompt_metadata": {
+    "atom_count": 5,
+    "difficulty_bucket": "hard",
+    "difficulty_reasons": [
+      "multiple_count_atoms=3",
+      "many_object_atoms=3",
+      "spatial_position_atoms=1",
+      "relation_words=under",
+      "multi_clause_prompt"
+    ],
+    "prompt": "four flamingos under a sheep, and a truck",
+    "skill_counts": {
+      "count": 3,
+      "object": 3,
+      "position": 1
+    },
+    "skills": [
+      "count",
+      "object",
+      "position",
+      "count",
+      "object",
+      "count",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 236,
+    "static_difficulty_score": 10.8,
+    "vqa_list": [
+      [
+        "How many flamingos are in the image?",
+        "four"
+      ],
+      [
+        "Are there any flamingos in the image?",
+        "Yes"
+      ],
+      [
+        "Are the flamingos under the sheep?",
+        "Yes"
+      ],
+      [
+        "How many sheeps are in the image?",
+        "one"
+      ],
+      [
+        "Are there any sheeps in the image?",
+        "Yes"
+      ],
+      [
+        "How many trucks are in the image?",
+        "one"
+      ],
+      [
+        "Are there any trucks in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "source_index": 236,
+  "teacher_name": "gpt55"
+}

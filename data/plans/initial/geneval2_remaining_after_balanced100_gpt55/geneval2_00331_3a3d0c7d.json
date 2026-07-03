@@ -1,0 +1,119 @@
+{
+  "created_at_unix": 1783045840.6117435,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly five pigs and exactly three monkeys.",
+      "Bind the color pink only to the pigs.",
+      "Place all five pigs below all three monkeys so the pigs are clearly under the monkeys.",
+      "Keep every animal fully visible and separated enough to count; avoid overlaps or occlusion.",
+      "Do not include any additional pigs, monkeys, or other animals."
+    ],
+    "generation_strategy": "Use a simple, clear composition with two separated horizontal rows: three monkeys in the upper row and five pink pigs in the lower row. Make all animals fully visible, non-overlapping, and easy to count, with the vertical under relationship unambiguous.",
+    "initial_prompt": "A clear image showing exactly three monkeys in the upper part of the scene, arranged side by side, and exactly five pink pigs in the lower part of the scene directly under the monkeys. All five pigs are pink. All eight animals are fully visible, separated, and easy to count, with no overlapping or occlusion. Do not show any additional pigs, monkeys, or other animals.",
+    "parsed_constraints": {
+      "attributes": {
+        "pigs": [
+          "pink"
+        ]
+      },
+      "counts": {
+        "monkeys": 3,
+        "pigs": 5
+      },
+      "objects": [
+        "pigs",
+        "monkeys"
+      ],
+      "relations": [
+        "five pink pigs are under three monkeys"
+      ]
+    },
+    "selected_skills": [
+      "quantity_counting",
+      "attribute_binding",
+      "object_presence",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "five pink pigs under three monkeys",
+  "prompt_id": "geneval2_00331_3a3d0c7d",
+  "prompt_metadata": {
+    "atom_count": 6,
+    "difficulty_bucket": "hard",
+    "difficulty_reasons": [
+      "multiple_count_atoms=2",
+      "spatial_position_atoms=1",
+      "large_count=5",
+      "relation_words=under"
+    ],
+    "prompt": "five pink pigs under three monkeys",
+    "prompt_id": "geneval2_00331_3a3d0c7d",
+    "remaining_after": "geneval2_balanced_100",
+    "skill_counts": {
+      "attribute": 1,
+      "count": 2,
+      "object": 2,
+      "position": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_file_rows": [
+      {
+        "file": "geneval2_static_hard_30.jsonl",
+        "row_index": 2
+      },
+      {
+        "file": "geneval2_static_retry_candidates_25.jsonl",
+        "row_index": 12
+      }
+    ],
+    "source_files": [
+      "geneval2_static_hard_30.jsonl",
+      "geneval2_static_retry_candidates_25.jsonl"
+    ],
+    "source_index": 331,
+    "static_difficulty_score": 10.8,
+    "vqa_list": [
+      [
+        "How many pigs are in the image?",
+        "five"
+      ],
+      [
+        "Are the pigs pink?",
+        "Yes"
+      ],
+      [
+        "Are there any pigs in the image?",
+        "Yes"
+      ],
+      [
+        "Are the pigs under the monkeys?",
+        "Yes"
+      ],
+      [
+        "How many monkeys are in the image?",
+        "three"
+      ],
+      [
+        "Are there any monkeys in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "reused_from_plan_path": "data/plans/initial/geneval2_static_hard_30_gpt55/prompt_00002_3a3d0c7dde.json",
+  "source_index": 331,
+  "teacher_name": "gpt55"
+}

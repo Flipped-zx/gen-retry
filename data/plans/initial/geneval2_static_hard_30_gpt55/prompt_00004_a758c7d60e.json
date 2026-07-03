@@ -1,0 +1,104 @@
+{
+  "created_at_unix": 1783045855.3800662,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly four horses, exactly one cookie, and exactly one car.",
+      "Place all four horses clearly to the right of the cookie.",
+      "Keep the cookie visible and separate from the horses.",
+      "Keep the car visible and distinct from the cookie and horses.",
+      "Avoid occlusion, cropping, duplicates, extra horses, extra cookies, or extra cars."
+    ],
+    "generation_strategy": "Use a simple wide composition with the single cookie on the left, four separate horses arranged side by side to its right, and one car placed separately with clear visibility. Emphasize exact counts and unobstructed objects.",
+    "initial_prompt": "A clear wide scene containing exactly one cookie, exactly four horses, and exactly one car. Place the single cookie on the left side of the image. Place all four horses to the right of the cookie, each horse fully visible and separated from the others, not overlapping the cookie. Include one car clearly visible and separate from the horses and cookie. No extra horses, no extra cookies, no extra cars. Avoid occlusion and cropping; make every object easy to count.",
+    "parsed_constraints": {
+      "attributes": {},
+      "counts": {
+        "car": 1,
+        "cookie": 1,
+        "horse": 4
+      },
+      "objects": [
+        "horse",
+        "cookie",
+        "car"
+      ],
+      "relations": [
+        "four horses to the right of a cookie"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "four horses to the right of a cookie, and a car",
+  "prompt_id": "prompt_00004_a758c7d60e",
+  "prompt_metadata": {
+    "atom_count": 5,
+    "difficulty_bucket": "hard",
+    "difficulty_reasons": [
+      "multiple_count_atoms=3",
+      "many_object_atoms=3",
+      "spatial_position_atoms=1",
+      "relation_words=right",
+      "multi_clause_prompt"
+    ],
+    "prompt": "four horses to the right of a cookie, and a car",
+    "skill_counts": {
+      "count": 3,
+      "object": 3,
+      "position": 1
+    },
+    "skills": [
+      "count",
+      "object",
+      "position",
+      "count",
+      "object",
+      "count",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 218,
+    "static_difficulty_score": 10.8,
+    "vqa_list": [
+      [
+        "How many horses are in the image?",
+        "four"
+      ],
+      [
+        "Are there any horses in the image?",
+        "Yes"
+      ],
+      [
+        "Are the horses to the right of the cookie?",
+        "Yes"
+      ],
+      [
+        "How many cookies are in the image?",
+        "one"
+      ],
+      [
+        "Are there any cookies in the image?",
+        "Yes"
+      ],
+      [
+        "How many cars are in the image?",
+        "one"
+      ],
+      [
+        "Are there any cars in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "source_index": 218,
+  "teacher_name": "gpt55"
+}

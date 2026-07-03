@@ -1,0 +1,117 @@
+{
+  "created_at_unix": 1783046055.1933446,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Depict exactly one umbrella and exactly one elephant.",
+      "The elephant must be pink.",
+      "Place the umbrella in front of the pink elephant, with the umbrella visibly closer to the viewer than the elephant.",
+      "Keep both the umbrella and the elephant clearly visible; avoid having the umbrella completely hide the elephant.",
+      "Do not add extra umbrellas or extra elephants."
+    ],
+    "generation_strategy": "Use a simple two-object composition with clear depth ordering: one pink elephant in the background and one umbrella in the foreground directly in front of it. Emphasize count clarity and visibility so the single umbrella and single pink elephant are easy to identify.",
+    "initial_prompt": "Create an image with exactly one umbrella in front of exactly one pink elephant. The single pink elephant is behind the umbrella, and the single umbrella is closer to the viewer, clearly positioned in front of the elephant. Both objects should be visible and recognizable, with no additional umbrellas and no additional elephants.",
+    "parsed_constraints": {
+      "attributes": {
+        "elephant": [
+          "pink"
+        ]
+      },
+      "counts": {
+        "elephant": 1,
+        "umbrella": 1
+      },
+      "objects": [
+        "umbrella",
+        "elephant"
+      ],
+      "relations": [
+        "umbrella in front of elephant"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "a umbrella in front of a pink elephant",
+  "prompt_id": "geneval2_00107_94c2f63a",
+  "prompt_metadata": {
+    "atom_count": 4,
+    "difficulty_bucket": "medium",
+    "difficulty_reasons": [
+      "multiple_count_atoms=2",
+      "spatial_position_atoms=1",
+      "relation_words=front"
+    ],
+    "prompt": "a umbrella in front of a pink elephant",
+    "prompt_id": "geneval2_00107_94c2f63a",
+    "remaining_after": "geneval2_balanced_100",
+    "skill_counts": {
+      "attribute": 1,
+      "count": 2,
+      "object": 2,
+      "position": 1
+    },
+    "skills": [
+      "count",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_file_rows": [
+      {
+        "file": "geneval2_static_medium_30.jsonl",
+        "row_index": 0
+      },
+      {
+        "file": "geneval2_static_retry_candidates_25.jsonl",
+        "row_index": 0
+      }
+    ],
+    "source_files": [
+      "geneval2_static_medium_30.jsonl",
+      "geneval2_static_retry_candidates_25.jsonl"
+    ],
+    "source_index": 107,
+    "static_difficulty_score": 6.9,
+    "vqa_list": [
+      [
+        "How many umbrellas are in the image?",
+        "one"
+      ],
+      [
+        "Are there any umbrellas in the image?",
+        "Yes"
+      ],
+      [
+        "Is the umbrella in front of the elephant?",
+        "Yes"
+      ],
+      [
+        "How many elephants are in the image?",
+        "one"
+      ],
+      [
+        "Is the elephant pink?",
+        "Yes"
+      ],
+      [
+        "Are there any elephants in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "reused_from_plan_path": "data/plans/initial/geneval2_static_medium_30_gpt55/prompt_00000_94c2f63aae.json",
+  "source_index": 107,
+  "teacher_name": "gpt55"
+}

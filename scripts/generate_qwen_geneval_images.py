@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import subprocess
@@ -462,7 +463,8 @@ def prompt_id_from_metadata(metadata: dict[str, Any], index: int) -> str:
     value = metadata.get("prompt_id") or metadata.get("id") or metadata.get("sample_id")
     if value:
         return str(value)
-    return f"{index:05d}"
+    digest = hashlib.sha1(str(metadata.get("prompt", "")).encode("utf-8")).hexdigest()[:10]
+    return f"prompt_{index:05d}_{digest}"
 
 
 def safe_id(value: str) -> str:

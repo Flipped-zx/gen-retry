@@ -1,0 +1,135 @@
+{
+  "created_at_unix": 1783046223.7354474,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Depict exactly three sheep, exactly two dogs, and exactly seven raccoons.",
+      "Bind the color white only to the three sheep.",
+      "Bind striped appearance only to the seven raccoons.",
+      "Show the three white sheep chasing the two dogs.",
+      "Place the two dogs to the left of the seven striped raccoons.",
+      "Keep all animals fully visible, separated, and not occluding each other.",
+      "Do not add extra animals or change the requested counts."
+    ],
+    "generation_strategy": "Use a clear horizontal composition to support counting and relations: three white sheep grouped together in a chasing pose behind two dogs, with the two dogs positioned left of a separate group of seven striped raccoons. Keep each animal distinct and fully visible for reliable counting and attribute binding.",
+    "initial_prompt": "A clear scene with exactly three white sheep chasing exactly two dogs. The two dogs are positioned to the left of exactly seven striped raccoons. Arrange the animals in a readable horizontal layout, keeping all three white sheep, both dogs, and all seven striped raccoons fully visible, separated from one another, and not occluded. No extra animals.",
+    "parsed_constraints": {
+      "attributes": {
+        "raccoons": [
+          "striped"
+        ],
+        "sheep": [
+          "white"
+        ]
+      },
+      "counts": {
+        "dogs": 2,
+        "raccoons": 7,
+        "sheep": 3
+      },
+      "objects": [
+        "sheep",
+        "dogs",
+        "raccoons"
+      ],
+      "relations": [
+        "three white sheep are chasing two dogs",
+        "two dogs are to the left of seven striped raccoons"
+      ]
+    },
+    "selected_skills": [
+      "quantity_counting",
+      "attribute_binding",
+      "object_presence",
+      "multi_object_composition",
+      "spatial_layout",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "three white sheeps chasing two dogs to the left of seven striped raccoons",
+  "prompt_id": "prompt_00009_3d5d60204e",
+  "prompt_metadata": {
+    "atom_count": 10,
+    "difficulty_bucket": "very_hard",
+    "difficulty_reasons": [
+      "high_atomicity=10",
+      "multiple_count_atoms=3",
+      "many_object_atoms=3",
+      "attribute_binding_atoms=2",
+      "spatial_position_atoms=1",
+      "verb_relation_atoms=1",
+      "large_count=7",
+      "relation_words=chasing,left"
+    ],
+    "prompt": "three white sheeps chasing two dogs to the left of seven striped raccoons",
+    "skill_counts": {
+      "attribute": 2,
+      "count": 3,
+      "object": 3,
+      "position": 1,
+      "verb": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "verb",
+      "count",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 706,
+    "static_difficulty_score": 22.4,
+    "vqa_list": [
+      [
+        "How many sheeps are in the image?",
+        "three"
+      ],
+      [
+        "Are the sheeps white?",
+        "Yes"
+      ],
+      [
+        "Are there any sheeps in the image?",
+        "Yes"
+      ],
+      [
+        "Are the sheeps chasing the dogs?",
+        "Yes"
+      ],
+      [
+        "How many dogs are in the image?",
+        "two"
+      ],
+      [
+        "Are there any dogs in the image?",
+        "Yes"
+      ],
+      [
+        "Are the dogs to the left of the raccoons?",
+        "Yes"
+      ],
+      [
+        "How many raccoons are in the image?",
+        "seven"
+      ],
+      [
+        "Are the raccoons striped?",
+        "Yes"
+      ],
+      [
+        "Are there any raccoons in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "source_index": 706,
+  "teacher_name": "gpt55"
+}

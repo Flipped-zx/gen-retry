@@ -1,0 +1,125 @@
+{
+  "created_at_unix": 1783045864.7490768,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Depict exactly five candles and exactly seven rabbits.",
+      "Bind the plastic material only to the candles.",
+      "Bind the spotted pattern only to the rabbits.",
+      "Keep all twelve objects fully visible and separated enough to count.",
+      "Do not add extra candles, extra rabbits, or other main objects."
+    ],
+    "generation_strategy": "Use a clear multi-object composition with two separated groups so the counts and attributes are easy to verify: five plastic candles in one group and seven spotted rabbits in another group. Arrange objects without overlap or occlusion, with all objects fully visible.",
+    "initial_prompt": "A clear scene showing exactly five plastic candles and exactly seven spotted rabbits. Keep the five plastic candles together as one distinct group, with each candle fully visible and separate from the others. Keep the seven spotted rabbits together as a separate distinct group, with each rabbit fully visible and separate from the others. The rabbits must have visible spots. Avoid overlap or occlusion between any candles or rabbits. Do not include any additional candles, rabbits, or other main objects.",
+    "parsed_constraints": {
+      "attributes": {
+        "candles": [
+          "plastic"
+        ],
+        "rabbits": [
+          "spotted"
+        ]
+      },
+      "counts": {
+        "candles": 5,
+        "rabbits": 7
+      },
+      "objects": [
+        "candles",
+        "rabbits"
+      ],
+      "relations": []
+    },
+    "selected_skills": [
+      "quantity_counting",
+      "attribute_binding",
+      "multi_object_composition",
+      "object_presence",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints",
+      "spatial_layout"
+    ]
+  },
+  "original_prompt": "five plastic candles and seven spotted rabbits",
+  "prompt_id": "geneval2_00306_47910eb0",
+  "prompt_metadata": {
+    "atom_count": 6,
+    "difficulty_bucket": "hard",
+    "difficulty_reasons": [
+      "multiple_count_atoms=2",
+      "attribute_binding_atoms=2",
+      "large_count=7",
+      "hard_attribute=plastic",
+      "multi_clause_prompt"
+    ],
+    "prompt": "five plastic candles and seven spotted rabbits",
+    "prompt_id": "geneval2_00306_47910eb0",
+    "remaining_after": "geneval2_balanced_100",
+    "skill_counts": {
+      "attribute": 2,
+      "count": 2,
+      "object": 2
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_file_rows": [
+      {
+        "file": "geneval2_static_hard_30.jsonl",
+        "row_index": 7
+      },
+      {
+        "file": "geneval2_static_hard_next20.jsonl",
+        "row_index": 2
+      },
+      {
+        "file": "geneval2_static_retry_candidates_25.jsonl",
+        "row_index": 17
+      }
+    ],
+    "source_files": [
+      "geneval2_static_hard_30.jsonl",
+      "geneval2_static_hard_next20.jsonl",
+      "geneval2_static_retry_candidates_25.jsonl"
+    ],
+    "source_index": 306,
+    "static_difficulty_score": 10.7,
+    "vqa_list": [
+      [
+        "How many candles are in the image?",
+        "five"
+      ],
+      [
+        "Are the candles plastic?",
+        "Yes"
+      ],
+      [
+        "Are there any candles in the image?",
+        "Yes"
+      ],
+      [
+        "How many rabbits are in the image?",
+        "seven"
+      ],
+      [
+        "Are the rabbits spotted?",
+        "Yes"
+      ],
+      [
+        "Are there any rabbits in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "reused_from_plan_path": "data/plans/initial/geneval2_static_hard_30_gpt55/prompt_00007_47910eb071.json",
+  "source_index": 306,
+  "teacher_name": "gpt55"
+}

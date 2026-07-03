@@ -1,0 +1,99 @@
+{
+  "created_at_unix": 1783046112.2764454,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly one flower and exactly one chair.",
+      "The single flower must be white.",
+      "The white flower must be visibly on top of the chair.",
+      "Avoid adding any extra flowers or chairs.",
+      "Keep both objects clearly visible and avoid occlusion that hides the flower-chair relationship."
+    ],
+    "generation_strategy": "Compose a simple scene with one chair as the support object and one white flower placed clearly on top of it. Emphasize count separation, attribute binding of white to the flower, and an unobstructed spatial relationship showing the flower resting on the chair.",
+    "initial_prompt": "A clear image of exactly one white flower resting on top of exactly one chair. The single white flower is visibly placed on the upper surface of the chair, with both the flower and the chair fully visible and not occluded. No additional flowers and no additional chairs.",
+    "parsed_constraints": {
+      "attributes": {
+        "flower": [
+          "white"
+        ]
+      },
+      "counts": {
+        "chair": 1,
+        "flower": 1
+      },
+      "objects": [
+        "flower",
+        "chair"
+      ],
+      "relations": [
+        "the white flower is on top of the chair"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "a white flower on top of a chair",
+  "prompt_id": "prompt_00018_77b416b1d3",
+  "prompt_metadata": {
+    "atom_count": 4,
+    "difficulty_bucket": "medium",
+    "difficulty_reasons": [
+      "multiple_count_atoms=2",
+      "spatial_position_atoms=1"
+    ],
+    "prompt": "a white flower on top of a chair",
+    "skill_counts": {
+      "attribute": 1,
+      "count": 2,
+      "object": 2,
+      "position": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 155,
+    "static_difficulty_score": 6.4,
+    "vqa_list": [
+      [
+        "How many flowers are in the image?",
+        "one"
+      ],
+      [
+        "Is the flower white?",
+        "Yes"
+      ],
+      [
+        "Are there any flowers in the image?",
+        "Yes"
+      ],
+      [
+        "Is the flower on top of the chair?",
+        "Yes"
+      ],
+      [
+        "How many chairs are in the image?",
+        "one"
+      ],
+      [
+        "Are there any chairs in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "source_index": 155,
+  "teacher_name": "gpt55"
+}

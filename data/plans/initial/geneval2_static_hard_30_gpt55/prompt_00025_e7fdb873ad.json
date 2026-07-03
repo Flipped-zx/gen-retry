@@ -1,0 +1,105 @@
+{
+  "created_at_unix": 1783045941.8249314,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Render exactly five donuts total, all white.",
+      "Render exactly two cookies total, both clearly plastic.",
+      "Keep donuts and cookies visually separated into two groups so counts are unambiguous.",
+      "Keep every item fully visible, non-overlapping, and unobstructed.",
+      "Do not add any extra donuts, cookies, or other objects."
+    ],
+    "generation_strategy": "Use a simple, clear multi-object composition with two separated groups: five white donuts in one group and two plastic cookies in another group. Emphasize exact counting, attribute binding, and unobstructed visibility.",
+    "initial_prompt": "Create an image with exactly five white donuts and exactly two plastic cookies. Arrange the five white donuts together in one clearly separated group, and arrange the two plastic cookies together in a separate group. All seven items must be fully visible, non-overlapping, unobstructed, and easy to count. The donuts must be white, and the cookies must clearly look plastic. Do not include any additional donuts, additional cookies, or other objects.",
+    "parsed_constraints": {
+      "attributes": {
+        "cookies": [
+          "plastic"
+        ],
+        "donuts": [
+          "white"
+        ]
+      },
+      "counts": {
+        "cookies": 2,
+        "donuts": 5
+      },
+      "objects": [
+        "donuts",
+        "cookies"
+      ],
+      "relations": [
+        "five white donuts and two plastic cookies should be present as separate countable object groups"
+      ]
+    },
+    "selected_skills": [
+      "quantity_counting",
+      "attribute_binding",
+      "object_presence",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints",
+      "spatial_layout"
+    ]
+  },
+  "original_prompt": "five white donuts and two plastic cookies",
+  "prompt_id": "prompt_00025_e7fdb873ad",
+  "prompt_metadata": {
+    "atom_count": 6,
+    "difficulty_bucket": "hard",
+    "difficulty_reasons": [
+      "multiple_count_atoms=2",
+      "attribute_binding_atoms=2",
+      "large_count=5",
+      "hard_attribute=plastic",
+      "multi_clause_prompt"
+    ],
+    "prompt": "five white donuts and two plastic cookies",
+    "skill_counts": {
+      "attribute": 2,
+      "count": 2,
+      "object": 2
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 318,
+    "static_difficulty_score": 10.2,
+    "vqa_list": [
+      [
+        "How many donuts are in the image?",
+        "five"
+      ],
+      [
+        "Are the donuts white?",
+        "Yes"
+      ],
+      [
+        "Are there any donuts in the image?",
+        "Yes"
+      ],
+      [
+        "How many cookies are in the image?",
+        "two"
+      ],
+      [
+        "Are the cookies plastic?",
+        "Yes"
+      ],
+      [
+        "Are there any cookies in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "source_index": 318,
+  "teacher_name": "gpt55"
+}

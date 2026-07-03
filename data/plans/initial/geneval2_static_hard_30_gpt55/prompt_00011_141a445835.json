@@ -1,0 +1,103 @@
+{
+  "created_at_unix": 1783045879.7825134,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly one raccoon and exactly six cars.",
+      "All six cars must be wooden cars.",
+      "Place the single raccoon behind the row of six wooden cars, with the cars in front and the raccoon still visible.",
+      "Keep all six cars separated enough to count clearly; avoid overlap that hides any car.",
+      "Do not add extra raccoons, extra cars, or non-wooden cars."
+    ],
+    "generation_strategy": "Use a clear front-to-back composition: arrange six wooden cars in a visible foreground row, evenly spaced and fully countable, with one raccoon positioned behind them. Ensure the raccoon is partially or fully visible above or between the cars while still clearly behind them. Emphasize count clarity, wooden material binding to every car, and no extra objects of the same categories.",
+    "initial_prompt": "A clear image of exactly one raccoon behind exactly six wooden cars. The six cars are in the foreground in a single row, evenly spaced and fully visible so each car can be counted separately. Every car is made of wood and visibly wooden. The single raccoon is positioned behind the row of cars, visible above or between them, clearly farther back than the cars. No additional raccoons, no additional cars, and no non-wooden cars.",
+    "parsed_constraints": {
+      "attributes": {
+        "cars": [
+          "wooden"
+        ]
+      },
+      "counts": {
+        "raccoon": 1,
+        "wooden cars": 6
+      },
+      "objects": [
+        "raccoon",
+        "cars"
+      ],
+      "relations": [
+        "the raccoon is behind the six wooden cars"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "a raccoon behind six wooden cars",
+  "prompt_id": "prompt_00011_141a445835",
+  "prompt_metadata": {
+    "atom_count": 5,
+    "difficulty_bucket": "hard",
+    "difficulty_reasons": [
+      "multiple_count_atoms=2",
+      "spatial_position_atoms=1",
+      "large_count=6",
+      "hard_attribute=wooden",
+      "relation_words=behind"
+    ],
+    "prompt": "a raccoon behind six wooden cars",
+    "skill_counts": {
+      "attribute": 1,
+      "count": 2,
+      "object": 2,
+      "position": 1
+    },
+    "skills": [
+      "count",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 247,
+    "static_difficulty_score": 10.65,
+    "vqa_list": [
+      [
+        "How many raccoons are in the image?",
+        "one"
+      ],
+      [
+        "Are there any raccoons in the image?",
+        "Yes"
+      ],
+      [
+        "Is the raccoon behind the cars?",
+        "Yes"
+      ],
+      [
+        "How many cars are in the image?",
+        "six"
+      ],
+      [
+        "Are the cars wooden?",
+        "Yes"
+      ],
+      [
+        "Are there any cars in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "source_index": 247,
+  "teacher_name": "gpt55"
+}

@@ -1,0 +1,114 @@
+{
+  "created_at_unix": 1783045950.2658105,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly seven candles, each separately visible and countable.",
+      "Show exactly one raccoon, and make the raccoon brown.",
+      "Place all seven candles to the right of the brown raccoon.",
+      "Keep the raccoon and all candles fully visible, separated, and not occluding each other.",
+      "Do not add extra candles or extra raccoons."
+    ],
+    "generation_strategy": "Use a simple side-by-side composition with one brown raccoon on the left and seven distinct candles arranged in a clear row or small cluster on the right. Emphasize separation and visibility so the count of seven candles is unambiguous and the spatial relation is clear.",
+    "initial_prompt": "A clear image with exactly one brown raccoon on the left and exactly seven candles to the right of the raccoon. The seven candles are separate, fully visible, and countable, all positioned to the right side of the brown raccoon. The raccoon is fully visible and brown. No additional raccoons and no additional candles. Avoid occlusion between the raccoon and the candles.",
+    "parsed_constraints": {
+      "attributes": {
+        "raccoon": [
+          "brown"
+        ]
+      },
+      "counts": {
+        "candles": 7,
+        "raccoon": 1
+      },
+      "objects": [
+        "candles",
+        "raccoon"
+      ],
+      "relations": [
+        "seven candles to the right of a brown raccoon"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "seven candles to the right of a brown raccoon",
+  "prompt_id": "geneval2_00228_388e2926",
+  "prompt_metadata": {
+    "atom_count": 5,
+    "difficulty_bucket": "hard",
+    "difficulty_reasons": [
+      "multiple_count_atoms=2",
+      "spatial_position_atoms=1",
+      "large_count=7",
+      "relation_words=right"
+    ],
+    "prompt": "seven candles to the right of a brown raccoon",
+    "prompt_id": "geneval2_00228_388e2926",
+    "remaining_after": "geneval2_balanced_100",
+    "skill_counts": {
+      "attribute": 1,
+      "count": 2,
+      "object": 2,
+      "position": 1
+    },
+    "skills": [
+      "count",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_file_rows": [
+      {
+        "file": "geneval2_static_hard_30.jsonl",
+        "row_index": 28
+      }
+    ],
+    "source_files": [
+      "geneval2_static_hard_30.jsonl"
+    ],
+    "source_index": 228,
+    "static_difficulty_score": 10.1,
+    "vqa_list": [
+      [
+        "How many candles are in the image?",
+        "seven"
+      ],
+      [
+        "Are there any candles in the image?",
+        "Yes"
+      ],
+      [
+        "Are the candles to the right of the raccoon?",
+        "Yes"
+      ],
+      [
+        "How many raccoons are in the image?",
+        "one"
+      ],
+      [
+        "Is the raccoon brown?",
+        "Yes"
+      ],
+      [
+        "Are there any raccoons in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "reused_from_plan_path": "data/plans/initial/geneval2_static_hard_30_gpt55/prompt_00028_388e2926c1.json",
+  "source_index": 228,
+  "teacher_name": "gpt55"
+}

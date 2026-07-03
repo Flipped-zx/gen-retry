@@ -1,0 +1,117 @@
+{
+  "created_at_unix": 1783046055.3045921,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Depict exactly one mushroom and exactly one zebra.",
+      "Bind the sparkling attribute only to the mushroom.",
+      "Place the mushroom clearly to the right of the zebra, with both objects fully visible and separated.",
+      "Avoid additional mushrooms, zebras, or confusing duplicate forms."
+    ],
+    "generation_strategy": "Use a simple two-object composition with the zebra on the left and the single sparkling mushroom on the right. Keep both subjects unobstructed and clearly visible so the count, attribute, and right-of relation are unambiguous.",
+    "initial_prompt": "Create an image with exactly one zebra on the left and exactly one mushroom on the right. The mushroom is sparkling, with visible sparkles on or around the mushroom. The mushroom must be clearly to the right of the zebra. Show both the single zebra and the single sparkling mushroom fully visible, separated, and unobstructed. Do not include any additional zebras or mushrooms.",
+    "parsed_constraints": {
+      "attributes": {
+        "mushroom": [
+          "sparkling"
+        ]
+      },
+      "counts": {
+        "mushroom": 1,
+        "zebra": 1
+      },
+      "objects": [
+        "mushroom",
+        "zebra"
+      ],
+      "relations": [
+        "the sparkling mushroom is to the right of the zebra"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "a sparkling mushroom to the right of a zebra",
+  "prompt_id": "geneval2_00138_126ee610",
+  "prompt_metadata": {
+    "atom_count": 4,
+    "difficulty_bucket": "medium",
+    "difficulty_reasons": [
+      "multiple_count_atoms=2",
+      "spatial_position_atoms=1",
+      "relation_words=right"
+    ],
+    "prompt": "a sparkling mushroom to the right of a zebra",
+    "prompt_id": "geneval2_00138_126ee610",
+    "remaining_after": "geneval2_balanced_100",
+    "skill_counts": {
+      "attribute": 1,
+      "count": 2,
+      "object": 2,
+      "position": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_file_rows": [
+      {
+        "file": "geneval2_static_medium_30.jsonl",
+        "row_index": 3
+      },
+      {
+        "file": "geneval2_static_retry_candidates_25.jsonl",
+        "row_index": 3
+      }
+    ],
+    "source_files": [
+      "geneval2_static_medium_30.jsonl",
+      "geneval2_static_retry_candidates_25.jsonl"
+    ],
+    "source_index": 138,
+    "static_difficulty_score": 6.9,
+    "vqa_list": [
+      [
+        "How many mushrooms are in the image?",
+        "one"
+      ],
+      [
+        "Is the mushroom sparkling?",
+        "Yes"
+      ],
+      [
+        "Are there any mushrooms in the image?",
+        "Yes"
+      ],
+      [
+        "Is the mushroom to the right of the zebra?",
+        "Yes"
+      ],
+      [
+        "How many zebras are in the image?",
+        "one"
+      ],
+      [
+        "Are there any zebras in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "reused_from_plan_path": "data/plans/initial/geneval2_static_medium_30_gpt55/prompt_00003_126ee6107c.json",
+  "source_index": 138,
+  "teacher_name": "gpt55"
+}

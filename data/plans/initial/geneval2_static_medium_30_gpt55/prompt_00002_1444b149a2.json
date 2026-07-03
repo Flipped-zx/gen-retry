@@ -1,0 +1,99 @@
+{
+  "created_at_unix": 1783046056.4600048,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly one trumpet and exactly one chair; do not include additional trumpets or chairs.",
+      "Place the trumpet clearly in front of the chair while keeping both objects recognizable.",
+      "Bind the sparkling attribute only to the chair."
+    ],
+    "generation_strategy": "Use a simple composition with two main objects: one sparkling chair in the background and one trumpet positioned in front of it. Maintain clear separation and visibility so the front/back spatial relation is unambiguous and the counts remain easy to verify.",
+    "initial_prompt": "A clear image of exactly one trumpet positioned in front of exactly one sparkling chair. The trumpet is the foreground object, visibly overlapping or standing before the chair, while the sparkling chair remains recognizable behind it. Only one trumpet and only one chair are present, with the chair clearly sparkling.",
+    "parsed_constraints": {
+      "attributes": {
+        "chair": [
+          "sparkling"
+        ]
+      },
+      "counts": {
+        "chair": 1,
+        "trumpet": 1
+      },
+      "objects": [
+        "trumpet",
+        "chair"
+      ],
+      "relations": [
+        "trumpet in front of chair"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "a trumpet in front of a sparkling chair",
+  "prompt_id": "prompt_00002_1444b149a2",
+  "prompt_metadata": {
+    "atom_count": 4,
+    "difficulty_bucket": "medium",
+    "difficulty_reasons": [
+      "multiple_count_atoms=2",
+      "spatial_position_atoms=1",
+      "relation_words=front"
+    ],
+    "prompt": "a trumpet in front of a sparkling chair",
+    "skill_counts": {
+      "attribute": 1,
+      "count": 2,
+      "object": 2,
+      "position": 1
+    },
+    "skills": [
+      "count",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 119,
+    "static_difficulty_score": 6.9,
+    "vqa_list": [
+      [
+        "How many trumpets are in the image?",
+        "one"
+      ],
+      [
+        "Are there any trumpets in the image?",
+        "Yes"
+      ],
+      [
+        "Is the trumpet in front of the chair?",
+        "Yes"
+      ],
+      [
+        "How many chairs are in the image?",
+        "one"
+      ],
+      [
+        "Is the chair sparkling?",
+        "Yes"
+      ],
+      [
+        "Are there any chairs in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "source_index": 119,
+  "teacher_name": "gpt55"
+}

@@ -1,0 +1,106 @@
+{
+  "created_at_unix": 1783045903.5334594,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Depict exactly two suitcases and exactly one giraffe.",
+      "Both suitcases must be green; the single giraffe must be blue.",
+      "Place the two green suitcases clearly to the left of the blue giraffe, with separation so the left-of relation is unambiguous.",
+      "Keep all objects fully visible and avoid overlap or occlusion between the suitcases and giraffe.",
+      "Do not add extra suitcases or extra giraffes."
+    ],
+    "generation_strategy": "Use a simple composition with three distinct objects on a plain background: exactly two green suitcases grouped on the left side, and exactly one blue giraffe on the right side. Make the objects separated and fully visible so the count, colors, and left-of spatial relation are clear.",
+    "initial_prompt": "A clear simple image showing exactly two green suitcases on the left side of the scene and exactly one blue giraffe on the right side. The two suitcases are both green, separate from each other, fully visible, and positioned entirely to the left of the giraffe. The giraffe is blue, fully visible, and not overlapping the suitcases. No additional suitcases, no additional giraffes.",
+    "parsed_constraints": {
+      "attributes": {
+        "giraffe": "blue",
+        "suitcases": "green"
+      },
+      "counts": {
+        "giraffe": 1,
+        "suitcases": 2
+      },
+      "objects": [
+        "suitcases",
+        "giraffe"
+      ],
+      "relations": [
+        "two green suitcases to the left of one blue giraffe"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "two green suitcases to the left of a blue giraffe",
+  "prompt_id": "prompt_00016_d993199017",
+  "prompt_metadata": {
+    "atom_count": 6,
+    "difficulty_bucket": "hard",
+    "difficulty_reasons": [
+      "multiple_count_atoms=2",
+      "attribute_binding_atoms=2",
+      "spatial_position_atoms=1",
+      "relation_words=left"
+    ],
+    "prompt": "two green suitcases to the left of a blue giraffe",
+    "skill_counts": {
+      "attribute": 2,
+      "count": 2,
+      "object": 2,
+      "position": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 304,
+    "static_difficulty_score": 10.5,
+    "vqa_list": [
+      [
+        "How many suitcases are in the image?",
+        "two"
+      ],
+      [
+        "Are the suitcases green?",
+        "Yes"
+      ],
+      [
+        "Are there any suitcases in the image?",
+        "Yes"
+      ],
+      [
+        "Are the suitcases to the left of the giraffe?",
+        "Yes"
+      ],
+      [
+        "How many giraffes are in the image?",
+        "one"
+      ],
+      [
+        "Is the giraffe blue?",
+        "Yes"
+      ],
+      [
+        "Are there any giraffes in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "source_index": 304,
+  "teacher_name": "gpt55"
+}

@@ -1,0 +1,123 @@
+{
+  "created_at_unix": 1783045871.7948759,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly five motorcycles, all pink.",
+      "Show exactly seven raccoons, all wooden in appearance.",
+      "Keep motorcycles and raccoons visually separate and fully visible for counting.",
+      "Do not add extra motorcycles or extra raccoons."
+    ],
+    "generation_strategy": "Use a clear multi-object composition with two separated groups: five pink motorcycles in one row or cluster and seven wooden raccoons in another row or cluster. Emphasize attribute binding so every motorcycle is pink and every raccoon has a wooden material appearance. Use spacing and an unobstructed view to make all twelve objects individually countable.",
+    "initial_prompt": "A clear scene with exactly five pink motorcycles and exactly seven wooden raccoons. Arrange the five pink motorcycles together in a visible row on one side, each motorcycle fully visible and colored pink. Arrange the seven wooden raccoons together in a separate visible row on the other side, each raccoon fully visible and clearly made of wood. Keep all objects separated with no overlap or occlusion, so the five motorcycles and seven raccoons can be counted easily. No additional motorcycles and no additional raccoons.",
+    "parsed_constraints": {
+      "attributes": {
+        "motorcycles": [
+          "pink"
+        ],
+        "raccoons": [
+          "wooden"
+        ]
+      },
+      "counts": {
+        "motorcycles": 5,
+        "raccoons": 7
+      },
+      "objects": [
+        "motorcycles",
+        "raccoons"
+      ],
+      "relations": []
+    },
+    "selected_skills": [
+      "quantity_counting",
+      "attribute_binding",
+      "multi_object_composition",
+      "object_presence",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "five pink motorcycles and seven wooden raccoons",
+  "prompt_id": "geneval2_00310_d19cb5fe",
+  "prompt_metadata": {
+    "atom_count": 6,
+    "difficulty_bucket": "hard",
+    "difficulty_reasons": [
+      "multiple_count_atoms=2",
+      "attribute_binding_atoms=2",
+      "large_count=7",
+      "hard_attribute=wooden",
+      "multi_clause_prompt"
+    ],
+    "prompt": "five pink motorcycles and seven wooden raccoons",
+    "prompt_id": "geneval2_00310_d19cb5fe",
+    "remaining_after": "geneval2_balanced_100",
+    "skill_counts": {
+      "attribute": 2,
+      "count": 2,
+      "object": 2
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_file_rows": [
+      {
+        "file": "geneval2_static_hard_30.jsonl",
+        "row_index": 8
+      },
+      {
+        "file": "geneval2_static_hard_next20.jsonl",
+        "row_index": 3
+      },
+      {
+        "file": "geneval2_static_retry_candidates_25.jsonl",
+        "row_index": 18
+      }
+    ],
+    "source_files": [
+      "geneval2_static_hard_30.jsonl",
+      "geneval2_static_hard_next20.jsonl",
+      "geneval2_static_retry_candidates_25.jsonl"
+    ],
+    "source_index": 310,
+    "static_difficulty_score": 10.7,
+    "vqa_list": [
+      [
+        "How many motorcycles are in the image?",
+        "five"
+      ],
+      [
+        "Are the motorcycles pink?",
+        "Yes"
+      ],
+      [
+        "Are there any motorcycles in the image?",
+        "Yes"
+      ],
+      [
+        "How many raccoons are in the image?",
+        "seven"
+      ],
+      [
+        "Are the raccoons wooden?",
+        "Yes"
+      ],
+      [
+        "Are there any raccoons in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "reused_from_plan_path": "data/plans/initial/geneval2_static_hard_30_gpt55/prompt_00008_d19cb5fe0b.json",
+  "source_index": 310,
+  "teacher_name": "gpt55"
+}

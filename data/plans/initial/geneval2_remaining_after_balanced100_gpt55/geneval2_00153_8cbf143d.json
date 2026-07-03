@@ -1,0 +1,101 @@
+{
+  "created_at_unix": 1783046109.9087274,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly one giraffe and exactly two bicycles.",
+      "Place both bicycles together on the left side of the image, with the giraffe clearly to the right of both bicycles.",
+      "Keep all three main objects fully visible and separated, with no occlusion between the giraffe and the bicycles.",
+      "Do not add extra giraffes, extra bicycles, or other prominent objects that could affect the counts."
+    ],
+    "generation_strategy": "Use a simple, clear composition emphasizing count accuracy and the left-to-right spatial relation: two distinct bicycles on the left, one distinct giraffe on the right. Keep the objects separated and unobstructed so the evaluator can count them and verify that the giraffe is to the right of the bicycles.",
+    "initial_prompt": "A clear image with exactly two bicycles on the left side and exactly one giraffe on the right side of both bicycles. The two bicycles are distinct and fully visible, positioned close to each other but not overlapping. The single giraffe is fully visible, clearly separated from the bicycles, and unambiguously to their right. No additional giraffes, no additional bicycles, and no occluding objects.",
+    "parsed_constraints": {
+      "attributes": {},
+      "counts": {
+        "bicycle": 2,
+        "giraffe": 1
+      },
+      "objects": [
+        "giraffe",
+        "bicycle"
+      ],
+      "relations": [
+        "the giraffe is to the right of the two bicycles"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "a giraffe to the right of two bicycles",
+  "prompt_id": "geneval2_00153_8cbf143d",
+  "prompt_metadata": {
+    "atom_count": 4,
+    "difficulty_bucket": "medium",
+    "difficulty_reasons": [
+      "multiple_count_atoms=2",
+      "spatial_position_atoms=1",
+      "relation_words=right"
+    ],
+    "prompt": "a giraffe to the right of two bicycles",
+    "prompt_id": "geneval2_00153_8cbf143d",
+    "remaining_after": "geneval2_balanced_100",
+    "skill_counts": {
+      "count": 2,
+      "object": 2,
+      "position": 1
+    },
+    "skills": [
+      "count",
+      "object",
+      "position",
+      "count",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_file_rows": [
+      {
+        "file": "geneval2_static_medium_30.jsonl",
+        "row_index": 16
+      }
+    ],
+    "source_files": [
+      "geneval2_static_medium_30.jsonl"
+    ],
+    "source_index": 153,
+    "static_difficulty_score": 6.6,
+    "vqa_list": [
+      [
+        "How many giraffes are in the image?",
+        "one"
+      ],
+      [
+        "Are there any giraffes in the image?",
+        "Yes"
+      ],
+      [
+        "Is the giraffe to the right of the bicycles?",
+        "Yes"
+      ],
+      [
+        "How many bicycles are in the image?",
+        "two"
+      ],
+      [
+        "Are there any bicycles in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "reused_from_plan_path": "data/plans/initial/geneval2_static_medium_30_gpt55/prompt_00016_8cbf143d5e.json",
+  "source_index": 153,
+  "teacher_name": "gpt55"
+}

@@ -1,0 +1,112 @@
+{
+  "created_at_unix": 1783046128.4704168,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Depict exactly one chair and exactly one bicycle.",
+      "Bind the glass material to both the chair and the bicycle.",
+      "Keep the chair and bicycle clearly separated, fully visible, and not occluding each other.",
+      "Do not add extra chairs or extra bicycles."
+    ],
+    "generation_strategy": "Generate a simple composition with two distinct objects, emphasizing correct count and material binding: one glass chair and one glass bicycle, both clearly visible and separated so each object can be identified independently.",
+    "initial_prompt": "A clear image showing exactly one glass chair and exactly one glass bicycle. The chair is made of glass, and the bicycle is made of glass. Show both objects fully visible, clearly separated from each other, with no overlap or occlusion. Do not include any additional chairs or bicycles.",
+    "parsed_constraints": {
+      "attributes": {
+        "bicycle": [
+          "glass"
+        ],
+        "chair": [
+          "glass"
+        ]
+      },
+      "counts": {
+        "bicycle": 1,
+        "chair": 1
+      },
+      "objects": [
+        "chair",
+        "bicycle"
+      ],
+      "relations": []
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "a glass chair and a glass bicycle",
+  "prompt_id": "geneval2_00102_0cc75483",
+  "prompt_metadata": {
+    "atom_count": 4,
+    "difficulty_bucket": "medium",
+    "difficulty_reasons": [
+      "multiple_count_atoms=2",
+      "attribute_binding_atoms=2",
+      "hard_attribute=glass",
+      "multi_clause_prompt"
+    ],
+    "prompt": "a glass chair and a glass bicycle",
+    "prompt_id": "geneval2_00102_0cc75483",
+    "remaining_after": "geneval2_balanced_100",
+    "skill_counts": {
+      "attribute": 2,
+      "count": 2,
+      "object": 2
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_file_rows": [
+      {
+        "file": "geneval2_static_medium_30.jsonl",
+        "row_index": 21
+      }
+    ],
+    "source_files": [
+      "geneval2_static_medium_30.jsonl"
+    ],
+    "source_index": 102,
+    "static_difficulty_score": 6.3,
+    "vqa_list": [
+      [
+        "How many chairs are in the image?",
+        "one"
+      ],
+      [
+        "Is the chair glass?",
+        "Yes"
+      ],
+      [
+        "Are there any chairs in the image?",
+        "Yes"
+      ],
+      [
+        "How many bicycles are in the image?",
+        "one"
+      ],
+      [
+        "Is the bicycle glass?",
+        "Yes"
+      ],
+      [
+        "Are there any bicycles in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "reused_from_plan_path": "data/plans/initial/geneval2_static_medium_30_gpt55/prompt_00021_0cc754833c.json",
+  "source_index": 102,
+  "teacher_name": "gpt55"
+}

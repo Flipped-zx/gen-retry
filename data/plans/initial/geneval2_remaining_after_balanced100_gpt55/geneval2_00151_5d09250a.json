@@ -1,0 +1,112 @@
+{
+  "created_at_unix": 1783046111.5525103,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly one turtle and exactly one horse.",
+      "The turtle must be brown.",
+      "Place the brown turtle on top of the horse, clearly supported by the horse's back.",
+      "Keep both animals fully visible and separated enough to count; avoid occlusion that hides either animal.",
+      "Do not add any extra turtles or horses."
+    ],
+    "generation_strategy": "Use a simple, clear composition with one horse in side view and one brown turtle positioned visibly on the horse's back. Emphasize count accuracy, attribute binding, and the on-top spatial relation.",
+    "initial_prompt": "Create a clear image with exactly one horse and exactly one turtle. The turtle is brown and is positioned on top of the horse, resting visibly on the horse's back. Both the single brown turtle and the single horse are fully visible and easy to count, with no other turtles and no other horses present.",
+    "parsed_constraints": {
+      "attributes": {
+        "turtle": [
+          "brown"
+        ]
+      },
+      "counts": {
+        "horse": 1,
+        "turtle": 1
+      },
+      "objects": [
+        "turtle",
+        "horse"
+      ],
+      "relations": [
+        "the brown turtle is on top of the horse"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "a brown turtle on top of a horse",
+  "prompt_id": "geneval2_00151_5d09250a",
+  "prompt_metadata": {
+    "atom_count": 4,
+    "difficulty_bucket": "medium",
+    "difficulty_reasons": [
+      "multiple_count_atoms=2",
+      "spatial_position_atoms=1"
+    ],
+    "prompt": "a brown turtle on top of a horse",
+    "prompt_id": "geneval2_00151_5d09250a",
+    "remaining_after": "geneval2_balanced_100",
+    "skill_counts": {
+      "attribute": 1,
+      "count": 2,
+      "object": 2,
+      "position": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_file_rows": [
+      {
+        "file": "geneval2_static_medium_30.jsonl",
+        "row_index": 17
+      }
+    ],
+    "source_files": [
+      "geneval2_static_medium_30.jsonl"
+    ],
+    "source_index": 151,
+    "static_difficulty_score": 6.4,
+    "vqa_list": [
+      [
+        "How many turtles are in the image?",
+        "one"
+      ],
+      [
+        "Is the turtle brown?",
+        "Yes"
+      ],
+      [
+        "Are there any turtles in the image?",
+        "Yes"
+      ],
+      [
+        "Is the turtle on top of the horse?",
+        "Yes"
+      ],
+      [
+        "How many horses are in the image?",
+        "one"
+      ],
+      [
+        "Are there any horses in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "reused_from_plan_path": "data/plans/initial/geneval2_static_medium_30_gpt55/prompt_00017_5d09250a32.json",
+  "source_index": 151,
+  "teacher_name": "gpt55"
+}

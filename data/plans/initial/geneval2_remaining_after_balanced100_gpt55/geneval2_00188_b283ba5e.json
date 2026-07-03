@@ -1,0 +1,120 @@
+{
+  "created_at_unix": 1783046090.7460659,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly one donut and exactly one cow.",
+      "The cow must be pink.",
+      "Place the donut clearly in front of the cow, with the spatial relationship visible.",
+      "Keep both the donut and the cow visible; avoid the donut fully hiding the cow."
+    ],
+    "generation_strategy": "Use a simple composition with one pink cow in the background and one donut positioned in the foreground directly in front of the cow. Make the objects clearly separated by depth and ensure both are recognizable.",
+    "initial_prompt": "A clear image of exactly one donut in the foreground, positioned directly in front of exactly one pink cow. The pink cow is behind the donut and remains visible around it. Both objects are clearly recognizable, with no additional donuts or cows.",
+    "parsed_constraints": {
+      "attributes": {
+        "cow": [
+          "pink"
+        ]
+      },
+      "counts": {
+        "cow": 1,
+        "donut": 1
+      },
+      "objects": [
+        "donut",
+        "cow"
+      ],
+      "relations": [
+        {
+          "object": "cow",
+          "relation": "in front of",
+          "subject": "donut"
+        }
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "a donut in front of a pink cow",
+  "prompt_id": "geneval2_00188_b283ba5e",
+  "prompt_metadata": {
+    "atom_count": 4,
+    "difficulty_bucket": "medium",
+    "difficulty_reasons": [
+      "multiple_count_atoms=2",
+      "spatial_position_atoms=1",
+      "relation_words=front"
+    ],
+    "prompt": "a donut in front of a pink cow",
+    "prompt_id": "geneval2_00188_b283ba5e",
+    "remaining_after": "geneval2_balanced_100",
+    "skill_counts": {
+      "attribute": 1,
+      "count": 2,
+      "object": 2,
+      "position": 1
+    },
+    "skills": [
+      "count",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_file_rows": [
+      {
+        "file": "geneval2_static_medium_30.jsonl",
+        "row_index": 8
+      },
+      {
+        "file": "geneval2_static_retry_candidates_25.jsonl",
+        "row_index": 8
+      }
+    ],
+    "source_files": [
+      "geneval2_static_medium_30.jsonl",
+      "geneval2_static_retry_candidates_25.jsonl"
+    ],
+    "source_index": 188,
+    "static_difficulty_score": 6.9,
+    "vqa_list": [
+      [
+        "How many donuts are in the image?",
+        "one"
+      ],
+      [
+        "Are there any donuts in the image?",
+        "Yes"
+      ],
+      [
+        "Is the donut in front of the cow?",
+        "Yes"
+      ],
+      [
+        "How many cows are in the image?",
+        "one"
+      ],
+      [
+        "Is the cow pink?",
+        "Yes"
+      ],
+      [
+        "Are there any cows in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "reused_from_plan_path": "data/plans/initial/geneval2_static_medium_30_gpt55/prompt_00008_b283ba5ee4.json",
+  "source_index": 188,
+  "teacher_name": "gpt55"
+}

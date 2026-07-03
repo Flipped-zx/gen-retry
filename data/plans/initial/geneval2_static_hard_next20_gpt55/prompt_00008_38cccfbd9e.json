@@ -1,0 +1,113 @@
+{
+  "created_at_unix": 1783046006.6343052,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Include exactly one candle, exactly one blue truck, and exactly one cookie.",
+      "Bind the blue color only to the truck.",
+      "Place the blue truck in front of the cookie, with the cookie still clearly visible behind it.",
+      "Keep the candle separate and visible, not blocking the truck-cookie relationship.",
+      "Avoid adding extra candles, trucks, cookies, or other prominent objects."
+    ],
+    "generation_strategy": "Use a simple composition with three clearly separated objects. Position one cookie in the background, one blue truck in the foreground directly in front of the cookie, and one candle off to the side. Ensure all objects are fully recognizable and not excessively occluded, while preserving the truck-in-front-of-cookie spatial relation.",
+    "initial_prompt": "A clear image with exactly one candle, exactly one blue truck, and exactly one cookie. The single blue truck is positioned in front of the single cookie, partially overlapping it only enough to show the truck is in front while keeping the cookie clearly visible behind the truck. The single candle is separate from them and fully visible. No extra candles, no extra trucks, no extra cookies, and no other prominent objects.",
+    "parsed_constraints": {
+      "attributes": {
+        "truck": "blue"
+      },
+      "counts": {
+        "candle": 1,
+        "cookie": 1,
+        "truck": 1
+      },
+      "objects": [
+        "candle",
+        "truck",
+        "cookie"
+      ],
+      "relations": [
+        "the blue truck is in front of the cookie"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "a candle, and a blue truck in front of a cookie",
+  "prompt_id": "prompt_00008_38cccfbd9e",
+  "prompt_metadata": {
+    "atom_count": 5,
+    "difficulty_bucket": "hard",
+    "difficulty_reasons": [
+      "multiple_count_atoms=3",
+      "many_object_atoms=3",
+      "spatial_position_atoms=1",
+      "relation_words=front",
+      "multi_clause_prompt"
+    ],
+    "prompt": "a candle, and a blue truck in front of a cookie",
+    "skill_counts": {
+      "attribute": 1,
+      "count": 3,
+      "object": 3,
+      "position": 1
+    },
+    "skills": [
+      "count",
+      "object",
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 212,
+    "static_difficulty_score": 10.6,
+    "vqa_list": [
+      [
+        "How many candles are in the image?",
+        "one"
+      ],
+      [
+        "Are there any candles in the image?",
+        "Yes"
+      ],
+      [
+        "How many trucks are in the image?",
+        "one"
+      ],
+      [
+        "Is the truck blue?",
+        "Yes"
+      ],
+      [
+        "Are there any trucks in the image?",
+        "Yes"
+      ],
+      [
+        "Is the truck in front of the cookie?",
+        "Yes"
+      ],
+      [
+        "How many cookies are in the image?",
+        "one"
+      ],
+      [
+        "Are there any cookies in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "source_index": 212,
+  "teacher_name": "gpt55"
+}

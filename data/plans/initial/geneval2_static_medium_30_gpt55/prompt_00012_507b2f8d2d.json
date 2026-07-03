@@ -1,0 +1,92 @@
+{
+  "created_at_unix": 1783046094.021409,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly one car and exactly six donuts.",
+      "The single car must be visibly plastic.",
+      "Keep the car and all six donuts fully visible, separate, and not occluding each other.",
+      "Do not add extra cars or extra donuts."
+    ],
+    "generation_strategy": "Use a clear multi-object composition with count separation: one plastic toy-like car placed apart from a group of six distinct donuts. Arrange all seven objects so each can be individually counted and the plastic material of the car is visible.",
+    "initial_prompt": "A clear image showing exactly one plastic car and exactly six donuts. The plastic car is a single separate object, visibly made of plastic, placed apart from the donuts. The six donuts are six distinct individual donuts, all fully visible and separated enough to count. No extra cars, no extra donuts, no occlusion between objects.",
+    "parsed_constraints": {
+      "attributes": {
+        "car": [
+          "plastic"
+        ]
+      },
+      "counts": {
+        "car": 1,
+        "donuts": 6
+      },
+      "objects": [
+        "car",
+        "donuts"
+      ],
+      "relations": []
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "a plastic car and six donuts",
+  "prompt_id": "prompt_00012_507b2f8d2d",
+  "prompt_metadata": {
+    "atom_count": 4,
+    "difficulty_bucket": "medium",
+    "difficulty_reasons": [
+      "multiple_count_atoms=2",
+      "large_count=6",
+      "hard_attribute=plastic",
+      "multi_clause_prompt"
+    ],
+    "prompt": "a plastic car and six donuts",
+    "skill_counts": {
+      "attribute": 1,
+      "count": 2,
+      "object": 2
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "count",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 189,
+    "static_difficulty_score": 6.85,
+    "vqa_list": [
+      [
+        "How many cars are in the image?",
+        "one"
+      ],
+      [
+        "Is the car plastic?",
+        "Yes"
+      ],
+      [
+        "Are there any cars in the image?",
+        "Yes"
+      ],
+      [
+        "How many donuts are in the image?",
+        "six"
+      ],
+      [
+        "Are there any donuts in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "source_index": 189,
+  "teacher_name": "gpt55"
+}

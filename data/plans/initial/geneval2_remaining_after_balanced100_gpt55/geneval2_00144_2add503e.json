@@ -1,0 +1,103 @@
+{
+  "created_at_unix": 1783046141.2905316,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly seven umbrellas total, no more and no fewer.",
+      "Show exactly one koala total, and the koala must be brown.",
+      "Keep all seven umbrellas and the one brown koala clearly visible, separated, and not occluding each other.",
+      "Do not add extra umbrellas, extra koalas, or other prominent objects that could confuse the count."
+    ],
+    "generation_strategy": "Use a simple, clear multi-object composition with countable separation. Bind the brown attribute only to the single koala. Arrange exactly seven umbrellas so each umbrella is individually visible and countable, with the single brown koala also fully visible in the same scene.",
+    "initial_prompt": "A clear image showing exactly seven umbrellas and exactly one brown koala. The seven umbrellas are separate from each other and fully visible so they can be counted individually. The single koala is brown, fully visible, and separate from the umbrellas. No extra umbrellas and no extra koalas.",
+    "parsed_constraints": {
+      "attributes": {
+        "koala": [
+          "brown"
+        ]
+      },
+      "counts": {
+        "koala": 1,
+        "umbrellas": 7
+      },
+      "objects": [
+        "umbrellas",
+        "koala"
+      ],
+      "relations": []
+    },
+    "selected_skills": [
+      "quantity_counting",
+      "object_presence",
+      "attribute_binding",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "seven umbrellas and a brown koala",
+  "prompt_id": "geneval2_00144_2add503e",
+  "prompt_metadata": {
+    "atom_count": 4,
+    "difficulty_bucket": "medium",
+    "difficulty_reasons": [
+      "multiple_count_atoms=2",
+      "large_count=7",
+      "multi_clause_prompt"
+    ],
+    "prompt": "seven umbrellas and a brown koala",
+    "prompt_id": "geneval2_00144_2add503e",
+    "remaining_after": "geneval2_balanced_100",
+    "skill_counts": {
+      "attribute": 1,
+      "count": 2,
+      "object": 2
+    },
+    "skills": [
+      "count",
+      "object",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_file_rows": [
+      {
+        "file": "geneval2_static_medium_30.jsonl",
+        "row_index": 24
+      }
+    ],
+    "source_files": [
+      "geneval2_static_medium_30.jsonl"
+    ],
+    "source_index": 144,
+    "static_difficulty_score": 6.3,
+    "vqa_list": [
+      [
+        "How many umbrellas are in the image?",
+        "seven"
+      ],
+      [
+        "Are there any umbrellas in the image?",
+        "Yes"
+      ],
+      [
+        "How many koalas are in the image?",
+        "one"
+      ],
+      [
+        "Is the koala brown?",
+        "Yes"
+      ],
+      [
+        "Are there any koalas in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "reused_from_plan_path": "data/plans/initial/geneval2_static_medium_30_gpt55/prompt_00024_2add503e3f.json",
+  "source_index": 144,
+  "teacher_name": "gpt55"
+}

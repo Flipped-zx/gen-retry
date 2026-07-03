@@ -1,0 +1,110 @@
+{
+  "created_at_unix": 1783045948.5415852,
+  "evaluator_type": "geneval2",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Generate exactly one rabbit and exactly one suitcase.",
+      "Bind the stone material only to the rabbit.",
+      "Bind the checkered pattern only to the suitcase.",
+      "Place the stone rabbit behind the checkered suitcase, with the suitcase in front.",
+      "Keep both objects visible enough to identify; avoid fully hiding the rabbit behind the suitcase."
+    ],
+    "generation_strategy": "Compose a simple scene with two objects: one checkered suitcase in the foreground and one stone rabbit positioned behind it. Use clear spatial depth cues so the suitcase is in front and the rabbit is behind, while leaving the rabbit partially visible above or to the side of the suitcase for recognition. Emphasize the rabbit's stone material and the suitcase's checkered pattern.",
+    "initial_prompt": "A simple scene with exactly one checkered suitcase in the foreground and exactly one stone rabbit behind it. The suitcase is clearly checkered and positioned in front of the rabbit. The rabbit is made of stone and is partially visible behind the suitcase, not fully occluded, with enough of its body and ears visible to identify it as a rabbit. No other rabbits or suitcases.",
+    "parsed_constraints": {
+      "attributes": {
+        "rabbit": [
+          "stone"
+        ],
+        "suitcase": [
+          "checkered"
+        ]
+      },
+      "counts": {
+        "rabbit": 1,
+        "suitcase": 1
+      },
+      "objects": [
+        "rabbit",
+        "suitcase"
+      ],
+      "relations": [
+        "the stone rabbit is behind the checkered suitcase"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ]
+  },
+  "original_prompt": "a stone rabbit behind a checkered suitcase",
+  "prompt_id": "prompt_00027_94710abdc3",
+  "prompt_metadata": {
+    "atom_count": 5,
+    "difficulty_bucket": "hard",
+    "difficulty_reasons": [
+      "multiple_count_atoms=2",
+      "attribute_binding_atoms=2",
+      "spatial_position_atoms=1",
+      "hard_attribute=stone",
+      "relation_words=behind"
+    ],
+    "prompt": "a stone rabbit behind a checkered suitcase",
+    "skill_counts": {
+      "attribute": 2,
+      "count": 2,
+      "object": 2,
+      "position": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 215,
+    "static_difficulty_score": 10.1,
+    "vqa_list": [
+      [
+        "How many rabbits are in the image?",
+        "one"
+      ],
+      [
+        "Is the rabbit stone?",
+        "Yes"
+      ],
+      [
+        "Are there any rabbits in the image?",
+        "Yes"
+      ],
+      [
+        "Is the rabbit behind the suitcase?",
+        "Yes"
+      ],
+      [
+        "How many suitcases are in the image?",
+        "one"
+      ],
+      [
+        "Is the suitcase checkered?",
+        "Yes"
+      ],
+      [
+        "Are there any suitcases in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "source_index": 215,
+  "teacher_name": "gpt55"
+}
