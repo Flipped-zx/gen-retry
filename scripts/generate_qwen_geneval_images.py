@@ -291,8 +291,9 @@ def worker_command(
     shard_index: int,
     num_shards: int,
 ) -> list[str]:
+    # Use qianwen conda environment python explicitly
     cmd = [
-        sys.executable,
+        "/home/develop/data-center/miniconda3/envs/qianwen/bin/python3",
         str(script),
         "--metadata",
         args.metadata,
