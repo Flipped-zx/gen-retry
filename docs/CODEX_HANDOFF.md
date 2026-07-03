@@ -1,4 +1,24 @@
 # Codex Handoff
+## Latest Plan-Conditioned Generation Update
+
+- `data/plans/initial/geneval2_balanced_100_gpt55/` currently has 100 valid GPT teacher `initial_plan` cache files for the 100-row `data/prompts/geneval2_balanced_100.jsonl` set.
+- `scripts/precompute_initial_plans.py --resume` reported `loaded=100 skipped_valid=100 pending=0`; no new API calls were needed in the latest pass.
+- `scripts/generate_qwen_geneval_images.py` now supports `--initial-plan-dir`. When set, it generates from `initial_plan.initial_prompt` and preserves the original Geneval2 metadata prompt.
+- The generation manifest now records `original_prompt`, `generation_prompt`, and `generation_prompt_source`.
+- Resume safety: if an existing output directory has metadata for a different generation prompt, the script raises an error instead of silently mixing raw-prompt and plan-prompt images.
+- Use a fresh output directory for the clean 100-prompt plan-conditioned image pass, for example `data/qwen_geneval2_balanced_100_x5_initial_gpt55_images`.
+- Validation passed: `python3 -m compileall scripts/generate_qwen_geneval_images.py scripts/generate_qwen_geneval_images_dcu.py`; both help commands show `--initial-plan-dir`; custom stdlib checks loaded 100 valid plans and 100 plan-conditioned generation prompts; resume guard rejected the old raw-prompt output dir before model loading.
+- No real Qwen-Image generation was run locally, and no new teacher API calls were made in this latest pass.
+
+## Latest DCU Qwen Generation Update
+
+- `scripts/generate_qwen_geneval_images.py` now supports configurable worker visibility masking through `--visible-devices-env` and optional cleanup through `--clear-visible-envs`.
+- `scripts/generate_qwen_geneval_images_dcu.py` is the DCU/ROCm entrypoint. It defaults to `HIP_VISIBLE_DEVICES` for worker masking and clears `CUDA_VISIBLE_DEVICES,ROCR_VISIBLE_DEVICES` before setting the worker mask.
+- Worker processes still use `--device cuda:0`; on ROCm PyTorch this is expected because HIP devices are exposed through the CUDA API surface after `HIP_VISIBLE_DEVICES` masks the process.
+- Four-card DCU command is documented in `docs/QWEN_GENEVAL_BATCH.md`. If physical cards are `1,2,3,4`, use parent `HIP_VISIBLE_DEVICES=1,2,3,4` and keep script `--gpus 0,1,2,3`.
+- Validation passed: `python3 -m compileall scripts/generate_qwen_geneval_images.py scripts/generate_qwen_geneval_images_dcu.py`; `python3 scripts/generate_qwen_geneval_images_dcu.py --help`; `python3 scripts/generate_qwen_geneval_images.py --help`; HIP mask mapping check resolved logical `0,1,2,3` to physical `1,2,3,4`.
+- No real Qwen-Image generation was run locally.
+
 
 ## Scope Completed
 
@@ -716,7 +736,7 @@ Current gen-retry pilot recommendation:
   - `height=928`
   - `negative_prompt=" "`
   - `positive_suffix=""`
-- Important gap before the 4-GPU run: the current script reads `metadata.prompt`. To generate from the cached teacher plan, patch it with `--initial-plan-dir data/plans/initial/geneval2_balanced_100_gpt55` or create derived metadata where generation prompt is `initial_plan.initial_prompt` while original GenEval2 metadata is preserved for evaluation.
+- Plan-conditioned initial generation is now implemented. Use `--initial-plan-dir data/plans/initial/geneval2_balanced_100_gpt55` and a fresh output directory so generation uses cached `initial_plan.initial_prompt` while original GenEval2 metadata is preserved for evaluation.
 
 ## Latest Qwen Generation Suffix And Image Ignore Update
 

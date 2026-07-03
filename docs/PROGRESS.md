@@ -1,4 +1,77 @@
 # Progress
+## Plan-Conditioned Initial Generation Ready
+
+Status: completed.
+
+Completed work:
+
+- Verified `data/prompts/geneval2_balanced_100.jsonl` has 100 prompt rows and `data/plans/initial/geneval2_balanced_100_gpt55/` has 100 valid cached GPT teacher `initial_plan` files with non-empty `initial_prompt`.
+- Ran the initial-plan precompute entry point with `--resume`; it reported `loaded=100 skipped_valid=100 pending=0`, so no new API calls were needed.
+- Added `--initial-plan-dir` to `scripts/generate_qwen_geneval_images.py`; generation now uses `initial_plan.initial_prompt` while preserving original Geneval2 prompt metadata.
+- Added manifest fields for `original_prompt`, `generation_prompt`, and `generation_prompt_source`.
+- Added a resume guard so an existing raw-prompt output directory is not silently reused as plan-conditioned output.
+- Updated the DCU command to use a fresh plan-conditioned output directory.
+
+Changed files:
+
+- `scripts/generate_qwen_geneval_images.py`
+- `docs/QWEN_GENEVAL_BATCH.md`
+- `docs/PROGRESS.md`
+- `docs/CODEX_HANDOFF.md`
+
+Validation commands run:
+
+- `python3 scripts/precompute_initial_plans.py --prompts data/prompts/geneval2_balanced_100.jsonl --output-dir data/plans/initial/geneval2_balanced_100_gpt55 --teacher gpt55 --evaluator-type geneval2 --num-workers 4 --resume --progress-interval 30` - passed with `pending=0`.
+- Custom stdlib cache check - passed with 100 prompt rows and 100 valid initial plans with non-empty `initial_prompt`.
+- `python3 -m compileall scripts/generate_qwen_geneval_images.py scripts/generate_qwen_geneval_images_dcu.py` - passed.
+- `python3 scripts/generate_qwen_geneval_images.py --help` - passed and shows `--initial-plan-dir`.
+- `python3 scripts/generate_qwen_geneval_images_dcu.py --help` - passed and shows `--initial-plan-dir`.
+- Custom stdlib attach check - passed with 100 plan-conditioned rows and 0 empty generation prompts.
+- Resume guard smoke against the old raw-prompt output dir - failed as expected before model loading with a different generation prompt error.
+- Fresh-output metadata preflight check - passed.
+
+Blockers:
+
+- No real Qwen-Image generation was run locally.
+- No new teacher API calls were made in this turn because all 100 cached plans were already valid and local `GEN_RETRY_TEACHER_*` variables were not set.
+
+Next recommended step:
+
+- Run `scripts/generate_qwen_geneval_images_dcu.py` on the generation server with `--initial-plan-dir data/plans/initial/geneval2_balanced_100_gpt55` and a fresh output dir such as `data/qwen_geneval2_balanced_100_x5_initial_gpt55_images`.
+
+## DCU Qwen Generation Entry Point
+
+Status: completed.
+
+Completed work:
+
+- Added configurable worker visibility environment support to `scripts/generate_qwen_geneval_images.py`.
+- Added `scripts/generate_qwen_geneval_images_dcu.py`, a DCU/ROCm wrapper that defaults worker masking to `HIP_VISIBLE_DEVICES` and clears `CUDA_VISIBLE_DEVICES,ROCR_VISIBLE_DEVICES` in worker environments.
+- Documented the four-card DCU command in `docs/QWEN_GENEVAL_BATCH.md`.
+
+Changed files:
+
+- `scripts/generate_qwen_geneval_images.py`
+- `scripts/generate_qwen_geneval_images_dcu.py`
+- `docs/QWEN_GENEVAL_BATCH.md`
+- `docs/PROGRESS.md`
+- `docs/CODEX_HANDOFF.md`
+
+Validation commands run:
+
+- `python3 -m compileall scripts/generate_qwen_geneval_images.py scripts/generate_qwen_geneval_images_dcu.py` - passed.
+- `python3 scripts/generate_qwen_geneval_images_dcu.py --help` - passed.
+- `python3 scripts/generate_qwen_geneval_images.py --help` - passed.
+- `HIP_VISIBLE_DEVICES=1,2,3,4 python3 -c ...resolve_gpu_ids...` - passed and resolved logical `0,1,2,3` to physical `1,2,3,4`.
+
+Blockers:
+
+- Real Qwen-Image generation was not run on this local machine.
+
+Next recommended step:
+
+- Run the documented DCU command on the prepared generation server with the correct local `--model-path` and `HIP_VISIBLE_DEVICES` mask.
+
 
 ## Stage 1: Repository Digests
 
@@ -1143,7 +1216,7 @@ Blockers:
 
 Next recommended step:
 
-- Before launching the 4-GPU generation pass, decide whether to patch `scripts/generate_qwen_geneval_images.py` with `--initial-plan-dir` so initial images are generated from cached teacher `initial_prompt` instead of raw `metadata.prompt`.
+- Superseded by the current plan-conditioned generation update: `scripts/generate_qwen_geneval_images.py` now supports `--initial-plan-dir`.
 
 ## Qwen Generation Prompt Suffix And Image Git Ignore
 

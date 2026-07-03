@@ -49,6 +49,30 @@ data/runs/qwen_geneval_official_10/images_geneval/
       00003.png
 ```
 
+## DCU/ROCm Plan-Conditioned Generation
+
+Use `scripts/generate_qwen_geneval_images_dcu.py` on DCU machines where worker visibility should be controlled by `HIP_VISIBLE_DEVICES`. The script still passes `--device cuda:0` to PyTorch because ROCm PyTorch exposes HIP devices through the CUDA API surface.
+
+For the GenEval2 100-prompt pilot, pass `--initial-plan-dir data/plans/initial/geneval2_balanced_100_gpt55` so the first image generation uses the cached teacher `initial_plan.initial_prompt`, while metadata still preserves the original GenEval2 prompt and VQA fields. Use a fresh output directory for this clean plan-conditioned pass; the older `data/qwen_geneval2_balanced_100_x5_images` directory contains a small partial raw-prompt run.
+
+For four physical DCU cards numbered 0-3:
+
+```bash
+HIP_VISIBLE_DEVICES=0,1,2,3 python3 scripts/generate_qwen_geneval_images_dcu.py \
+  --metadata data/prompts/geneval2_balanced_100.jsonl \
+  --initial-plan-dir data/plans/initial/geneval2_balanced_100_gpt55 \
+  --output-dir data/qwen_geneval2_balanced_100_x5_initial_gpt55_images \
+  --model-path /root/private_data/models/Qwen-Image-2512 \
+  --n-samples 5 \
+  --limit 100 \
+  --gpus 0,1,2,3 \
+  --workers-per-gpu 1 \
+  --skip-grid \
+  --resume
+```
+
+If the machine exposes the four target cards as physical IDs 1-4, use `HIP_VISIBLE_DEVICES=1,2,3,4` and keep `--gpus 0,1,2,3`; the `--gpus` values are then logical indexes within the parent HIP mask.
+
 Run official GenEval and select prompt groups:
 
 ```bash

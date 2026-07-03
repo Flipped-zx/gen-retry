@@ -17,6 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from gen_retry.data.io import write_jsonl  # noqa: E402
+from gen_retry.schemas.actions import InitialPlanAction  # noqa: E402
 from gen_retry.utils.progress import ProgressMeter  # noqa: E402
 
 
@@ -31,6 +32,14 @@ def main() -> int:
     )
     parser.add_argument("--output-dir", required=True, help="Directory in GenEval image layout.")
     parser.add_argument("--model-path", default="Qwen/Qwen-Image")
+    parser.add_argument(
+        "--initial-plan-dir",
+        default="",
+        help=(
+            "Optional cached initial_plan directory. When set, generation uses "
+            "initial_plan.initial_prompt while preserving the original metadata prompt."
+        ),
+    )
     parser.add_argument("--n-samples", type=int, default=4)
     parser.add_argument("--limit", type=int)
     parser.add_argument("--seed", type=int, default=1000)
@@ -39,8 +48,8 @@ def main() -> int:
         "--gpus",
         help=(
             "Comma-separated GPU ids for multi-process generation, e.g. 0,1,2,3. "
-            "Each worker sees one GPU through CUDA_VISIBLE_DEVICES and uses cuda:0. "
-            "If parent CUDA_VISIBLE_DEVICES is set, numeric ids are logical ids within it."
+            "Each worker sees one accelerator through --visible-devices-env and uses cuda:0. "
+            "If the parent visibility env is set, numeric ids are logical ids within it."
         ),
     )
     parser.add_argument(
@@ -50,6 +59,22 @@ def main() -> int:
         help=(
             "Number of independent generation worker processes to launch on each GPU. "
             "Each worker loads its own Qwen-Image copy, so memory use scales roughly linearly."
+        ),
+    )
+    parser.add_argument(
+        "--visible-devices-env",
+        default="CUDA_VISIBLE_DEVICES",
+        help=(
+            "Environment variable used to mask each worker to one accelerator. "
+            "Use HIP_VISIBLE_DEVICES on DCU/ROCm machines."
+        ),
+    )
+    parser.add_argument(
+        "--clear-visible-envs",
+        default="",
+        help=(
+            "Comma-separated accelerator visibility environment variables to remove "
+            "from worker environments before setting --visible-devices-env."
         ),
     )
     parser.add_argument("--num-shards", type=int, default=1, help=argparse.SUPPRESS)
@@ -88,14 +113,22 @@ def main() -> int:
     metadatas = read_jsonl(Path(args.metadata))
     if args.limit is not None:
         metadatas = metadatas[: args.limit]
+    if args.initial_plan_dir:
+        metadatas = attach_initial_plans(metadatas, Path(args.initial_plan_dir))
     indexed_metadatas = [
         (prompt_index, metadata)
         for prompt_index, metadata in enumerate(metadatas)
         if prompt_index % args.num_shards == args.shard_index
     ]
 
-    pipe, torch = load_qwen_pipe(args)
     out_dir = Path(args.output_dir)
+    validate_indexed_metadatas(
+        indexed_metadatas,
+        out_dir,
+        metadata_path=args.metadata,
+        resume=args.resume,
+    )
+    pipe, torch = load_qwen_pipe(args)
     out_dir.mkdir(parents=True, exist_ok=True)
     manifest: list[dict[str, Any]] = []
     progress = ProgressMeter(
@@ -106,9 +139,12 @@ def main() -> int:
     progress.update(completed=0, force=True)
 
     for local_index, (prompt_index, metadata) in enumerate(indexed_metadatas):
-        prompt = str(metadata.get("prompt", "")).strip()
+        original_prompt = str(metadata.get("prompt", "")).strip()
+        prompt = generation_prompt_from_metadata(metadata)
         if not prompt:
             raise ValueError(f"{args.metadata} row {prompt_index} has empty prompt")
+        if not original_prompt:
+            raise ValueError(f"{args.metadata} row {prompt_index} has empty original prompt")
         sample_dir = out_dir / f"{prompt_index:05d}"
         images_dir = sample_dir / "samples"
         images_dir.mkdir(parents=True, exist_ok=True)
@@ -139,6 +175,9 @@ def main() -> int:
                     "candidate_index": candidate_index,
                     "seed": candidate_seed,
                     "prompt": prompt,
+                    "original_prompt": original_prompt,
+                    "generation_prompt": prompt,
+                    "generation_prompt_source": metadata.get("generation_prompt_source", "metadata.prompt"),
                     "image_path": str(image_path),
                     "metadata": metadata,
                     "model_path": args.model_path,
@@ -164,7 +203,7 @@ def launch_gpu_workers(args: argparse.Namespace) -> int:
     """Launch one subprocess per GPU and merge shard manifests."""
 
     requested_gpus = [item.strip() for item in str(args.gpus).split(",") if item.strip()]
-    gpus = resolve_gpu_ids(requested_gpus)
+    gpus = resolve_gpu_ids(requested_gpus, args.visible_devices_env)
     if not gpus:
         raise ValueError("--gpus must contain at least one GPU id")
     if args.workers_per_gpu <= 0:
@@ -180,11 +219,13 @@ def launch_gpu_workers(args: argparse.Namespace) -> int:
     ]
     for shard_index, gpu in enumerate(worker_gpus):
         env = dict(os.environ)
-        env["CUDA_VISIBLE_DEVICES"] = gpu
+        for env_name in parse_env_names(args.clear_visible_envs):
+            env.pop(env_name, None)
+        env[args.visible_devices_env] = gpu
         cmd = worker_command(args, script, shard_index=shard_index, num_shards=len(worker_gpus))
         print(
             f"[qwen-geneval] launch shard {shard_index}/{len(worker_gpus)} "
-            f"on GPU {gpu}: {' '.join(cmd)}"
+            f"with {args.visible_devices_env}={gpu}: {' '.join(cmd)}"
         )
         processes.append(
             (
@@ -211,12 +252,16 @@ def launch_gpu_workers(args: argparse.Namespace) -> int:
     return 0
 
 
-def resolve_gpu_ids(requested_gpus: list[str]) -> list[str]:
-    """Resolve worker GPU ids, respecting a parent CUDA_VISIBLE_DEVICES mask."""
+def parse_env_names(raw_value: str) -> list[str]:
+    return [item.strip() for item in raw_value.split(",") if item.strip()]
+
+
+def resolve_gpu_ids(requested_gpus: list[str], visible_devices_env: str) -> list[str]:
+    """Resolve worker GPU ids, respecting a parent visibility mask."""
 
     parent_visible = [
         item.strip()
-        for item in os.environ.get("CUDA_VISIBLE_DEVICES", "").split(",")
+        for item in os.environ.get(visible_devices_env, "").split(",")
         if item.strip()
     ]
     if not parent_visible:
@@ -232,7 +277,7 @@ def resolve_gpu_ids(requested_gpus: list[str]) -> list[str]:
     if resolved != requested_gpus:
         print(
             "[qwen-geneval] resolved logical --gpus "
-            f"{','.join(requested_gpus)} within CUDA_VISIBLE_DEVICES="
+            f"{','.join(requested_gpus)} within {visible_devices_env}="
             f"{','.join(parent_visible)} -> {','.join(resolved)}"
         )
     return resolved
@@ -281,6 +326,8 @@ def worker_command(
         "--progress-interval",
         str(args.progress_interval),
     ]
+    if args.initial_plan_dir:
+        cmd.extend(["--initial-plan-dir", args.initial_plan_dir])
     if args.limit is not None:
         cmd.extend(["--limit", str(args.limit)])
     if args.guidance_scale is not None:
@@ -341,6 +388,86 @@ def merge_shard_manifests(out_dir: Path, num_shards: int) -> None:
     merged.sort(key=lambda item: (int(item["prompt_index"]), int(item["candidate_index"])))
     write_jsonl(out_dir / "generation_manifest.jsonl", merged)
     print(f"[qwen-geneval] merged {len(merged)} rows -> {out_dir / 'generation_manifest.jsonl'}")
+
+
+def attach_initial_plans(metadatas: list[dict[str, Any]], plan_dir: Path) -> list[dict[str, Any]]:
+    if not plan_dir.exists():
+        raise FileNotFoundError(f"initial plan directory does not exist: {plan_dir}")
+
+    planned: list[dict[str, Any]] = []
+    for index, metadata in enumerate(metadatas):
+        row = dict(metadata)
+        prompt_id = prompt_id_from_metadata(row, index)
+        plan_path = plan_dir / f"{safe_id(prompt_id)}.json"
+        if not plan_path.exists():
+            raise FileNotFoundError(f"missing initial plan for {prompt_id}: {plan_path}")
+        data = json.loads(plan_path.read_text(encoding="utf-8"))
+        if not isinstance(data, dict):
+            raise ValueError(f"{plan_path} must contain a JSON object")
+        action = InitialPlanAction.from_dict(dict(data.get("initial_plan") or {}))
+        initial_prompt = action.initial_prompt.strip()
+        if not initial_prompt:
+            raise ValueError(f"{plan_path} has empty initial_plan.initial_prompt")
+        row.setdefault("original_prompt", row.get("prompt", ""))
+        row["generation_prompt"] = initial_prompt
+        row["generation_prompt_source"] = "initial_plan"
+        row["initial_plan_path"] = str(plan_path)
+        row["initial_plan_teacher_name"] = data.get("teacher_name")
+        row["initial_plan_created_at_unix"] = data.get("created_at_unix")
+        row["initial_plan_selected_skills"] = list(action.selected_skills)
+        planned.append(row)
+    return planned
+
+
+def generation_prompt_from_metadata(metadata: dict[str, Any]) -> str:
+    return str(metadata.get("generation_prompt") or metadata.get("prompt", "")).strip()
+
+
+def validate_indexed_metadatas(
+    indexed_metadatas: list[tuple[int, dict[str, Any]]],
+    out_dir: Path,
+    *,
+    metadata_path: str,
+    resume: bool,
+) -> None:
+    for prompt_index, metadata in indexed_metadatas:
+        original_prompt = str(metadata.get("prompt", "")).strip()
+        prompt = generation_prompt_from_metadata(metadata)
+        if not prompt:
+            raise ValueError(f"{metadata_path} row {prompt_index} has empty prompt")
+        if not original_prompt:
+            raise ValueError(f"{metadata_path} row {prompt_index} has empty original prompt")
+        if not resume:
+            continue
+        sample_dir = out_dir / f"{prompt_index:05d}"
+        existing_prompt = existing_generation_prompt(sample_dir / "metadata.jsonl")
+        if existing_prompt and existing_prompt != prompt:
+            raise ValueError(
+                f"{sample_dir} already has metadata for a different generation prompt. "
+                "Use a fresh --output-dir for plan-conditioned generation, or rerun without --resume "
+                "after moving old outputs aside."
+            )
+
+
+def existing_generation_prompt(path: Path) -> str:
+    if not path.exists():
+        return ""
+    rows = read_jsonl(path)
+    if not rows:
+        return ""
+    return generation_prompt_from_metadata(rows[0])
+
+
+def prompt_id_from_metadata(metadata: dict[str, Any], index: int) -> str:
+    value = metadata.get("prompt_id") or metadata.get("id") or metadata.get("sample_id")
+    if value:
+        return str(value)
+    return f"{index:05d}"
+
+
+def safe_id(value: str) -> str:
+    safe = "".join(ch if ch.isalnum() or ch in {"-", "_"} else "_" for ch in value.strip())
+    return safe or "prompt"
 
 
 def read_jsonl(path: Path) -> list[dict[str, Any]]:

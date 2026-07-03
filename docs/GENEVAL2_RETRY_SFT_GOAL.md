@@ -94,7 +94,8 @@ Recommended 4-GPU initial generation shape:
 ```bash
 python3 scripts/generate_qwen_geneval_images.py \
   --metadata data/prompts/geneval2_balanced_100.jsonl \
-  --output-dir data/qwen_geneval2_balanced_100_x5_images \
+  --initial-plan-dir data/plans/initial/geneval2_balanced_100_gpt55 \
+  --output-dir data/qwen_geneval2_balanced_100_x5_initial_gpt55_images \
   --model-path ../models/Qwen-Image-2512 \
   --n-samples 5 \
   --limit 100 \
@@ -114,8 +115,8 @@ python3 scripts/generate_qwen_geneval_images.py \
 
 Important implementation note:
 
-- The current script reads `metadata.prompt`.
-- For plan-conditioned initial generation, add `--initial-plan-dir data/plans/initial/geneval2_balanced_100_gpt55` or prepare a derived metadata file whose generation prompt is `initial_plan.initial_prompt` while retaining the original prompt metadata for GenEval2.
+- `scripts/generate_qwen_geneval_images.py` now supports `--initial-plan-dir data/plans/initial/geneval2_balanced_100_gpt55`.
+- With `--initial-plan-dir`, generation uses `initial_plan.initial_prompt` while retaining the original prompt metadata for GenEval2. Use a fresh output directory for a clean plan-conditioned pass.
 
 ## Gen-Searcher Reference Finding
 
