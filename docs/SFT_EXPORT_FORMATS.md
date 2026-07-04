@@ -13,6 +13,19 @@ The exporters in `src/gen_retry/data/exporters.py` use only `assistant_trainable
 
 ## Export Commands
 
+Offline candidate-level retry trajectories:
+
+```bash
+python3 scripts/export_offline_retry_sft.py \
+  --trajectories-dir data/raw_trajectories/geneval2_balanced_100_round0_gpt55 \
+  --output data/sft/geneval2_balanced_100_round0_retry_replan_sft.jsonl \
+  --rejected-output data/rejected/geneval2_balanced_100_round0_retry_replan_rejected.jsonl
+```
+
+This exporter writes one `retry_replan` row per `retry_ready` trajectory. The user message is the persisted teacher request with raw evaluator payloads and local image artifact paths removed by default; the assistant target is the strict `retry_ready_action` JSON.
+
+Legacy full-episode processed rows:
+
 ```bash
 python3 scripts/export_sft.py \
   --input data/processed/geneval_retry_sft_5_full.jsonl \

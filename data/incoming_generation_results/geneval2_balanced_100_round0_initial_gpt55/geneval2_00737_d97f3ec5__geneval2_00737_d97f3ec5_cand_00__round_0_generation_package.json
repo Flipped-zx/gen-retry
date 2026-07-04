@@ -1,0 +1,162 @@
+{
+  "candidate_id": "geneval2_00737_d97f3ec5_cand_00",
+  "generation": {
+    "generation_metadata": {
+      "candidate_index": 0,
+      "generation_prompt_source": "initial_plan",
+      "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00737_d97f3ec5.json",
+      "manifest_prompt_index": 32,
+      "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+      "sample_id": "geneval2_00737_d97f3ec5"
+    },
+    "generator_name": "qwen-image-2512",
+    "image_id": "geneval2_00737_d97f3ec5_cand_00",
+    "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00032/samples/00000.png",
+    "prompt_used": "A clear, countable composition showing exactly seven pink mushrooms arranged along the bottom as the base. Exactly six black croissants are placed on top of the seven pink mushrooms, all six croissants visible and individually countable. Exactly one sparkling bagel is positioned in the foreground in front of the six black croissants, with the bagel clearly sparkling and not hiding the count of the croissants or mushrooms. Ensure no extra bagels, no extra croissants, and no extra mushrooms; all objects are separated enough to be visible and countable.",
+    "seed": 1160
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "eval_lookup_key": "",
+    "image_path_is_artifact_reference": true,
+    "teacher_uses_image_bytes": false
+  },
+  "previous_action": null,
+  "previous_initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Depict exactly one bagel, exactly six croissants, and exactly seven mushrooms.",
+      "Bind attributes correctly: the single bagel is sparkling, all six croissants are black, and all seven mushrooms are pink.",
+      "Preserve spatial relations: the sparkling bagel is in front of the six black croissants; the six black croissants are on top of the seven pink mushrooms.",
+      "Keep all objects clearly visible and countable; arrange objects with enough separation to avoid occlusion that would hide counts."
+    ],
+    "generation_strategy": "Create a clear multi-object composition with three visible layers: seven pink mushrooms forming the bottom support row, six black croissants resting on top of the mushrooms, and one sparkling bagel placed in the foreground in front of the croissants. Use spacing and slight separation so each individual mushroom and croissant can be counted while maintaining the stated on-top and in-front relations.",
+    "initial_prompt": "A clear, countable composition showing exactly seven pink mushrooms arranged along the bottom as the base. Exactly six black croissants are placed on top of the seven pink mushrooms, all six croissants visible and individually countable. Exactly one sparkling bagel is positioned in the foreground in front of the six black croissants, with the bagel clearly sparkling and not hiding the count of the croissants or mushrooms. Ensure no extra bagels, no extra croissants, and no extra mushrooms; all objects are separated enough to be visible and countable.",
+    "parsed_constraints": {
+      "attributes": {
+        "bagel": [
+          "sparkling"
+        ],
+        "croissants": [
+          "black"
+        ],
+        "mushrooms": [
+          "pink"
+        ]
+      },
+      "counts": {
+        "bagel": 1,
+        "croissants": 6,
+        "mushrooms": 7
+      },
+      "objects": [
+        "bagel",
+        "croissants",
+        "mushrooms"
+      ],
+      "relations": [
+        "bagel in front of croissants",
+        "croissants on top of mushrooms"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ]
+  },
+  "prompt_id": "geneval2_00737_d97f3ec5",
+  "retry_history": [],
+  "round": 0,
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "a sparkling bagel in front of six black croissants on top of seven pink mushrooms",
+    "prompt": "a sparkling bagel in front of six black croissants on top of seven pink mushrooms",
+    "prompt_id": "geneval2_00737_d97f3ec5",
+    "sampling_bucket": "attribute",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 3,
+      "count": 3,
+      "object": 3,
+      "position": 2
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 737,
+    "vqa_list": [
+      [
+        "How many bagels are in the image?",
+        "one"
+      ],
+      [
+        "Is the bagel sparkling?",
+        "Yes"
+      ],
+      [
+        "Are there any bagels in the image?",
+        "Yes"
+      ],
+      [
+        "Is the bagel in front of the croissants?",
+        "Yes"
+      ],
+      [
+        "How many croissants are in the image?",
+        "six"
+      ],
+      [
+        "Are the croissants black?",
+        "Yes"
+      ],
+      [
+        "Are there any croissants in the image?",
+        "Yes"
+      ],
+      [
+        "Are the croissants on top of the mushrooms?",
+        "Yes"
+      ],
+      [
+        "How many mushrooms are in the image?",
+        "seven"
+      ],
+      [
+        "Are the mushrooms pink?",
+        "Yes"
+      ],
+      [
+        "Are there any mushrooms in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "trajectory_id": "geneval2_00737_d97f3ec5"
+}

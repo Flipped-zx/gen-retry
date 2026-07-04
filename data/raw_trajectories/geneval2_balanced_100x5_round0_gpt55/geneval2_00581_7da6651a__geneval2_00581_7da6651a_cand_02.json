@@ -1,0 +1,2974 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "count_mismatch",
+          "relation_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the lion checkered?",
+              "score": 0.0011740575861125535,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.00117406",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the lion checkered?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the lion chasing the raccoons?",
+              "score": 0.0024300455457151315,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.00243005",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the lion chasing the raccoons?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many raccoons are in the image?",
+              "score": 1.3554419861115316e-06,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.35544e-06",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many raccoons are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the croissant stone?",
+              "score": 9.680698689895628e-08,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=9.6807e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the croissant stone?",
+            "type": "attribute_mismatch"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many lions are in the image?",
+              "score": 0.9999033225461302,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.999903",
+            "expected": "one",
+            "status": "passed",
+            "target": "How many lions are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any lions in the image?",
+              "score": 0.9997025302436668,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999703",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any lions in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any raccoons in the image?",
+              "score": 0.9999869789662625,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999987",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any raccoons in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the raccoons to the left of the croissant?",
+              "score": 1.0,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the raccoons to the left of the croissant?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many croissants are in the image?",
+              "score": 1.0,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "one",
+            "status": "passed",
+            "target": "How many croissants are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any croissants in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any croissants in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00581_7da6651a_cand_02",
+          "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+          "rows": [
+            {
+              "answer": "one",
+              "atom_count": 8,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00581_7da6651a_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00067/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00067/samples/00002.png",
+              "prompt": "a checkered lion chasing seven raccoons to the left of a stone croissant",
+              "prompt_id": "geneval2_00581_7da6651a",
+              "question": "How many lions are in the image?",
+              "score": 0.9999033225461302,
+              "skill": "count",
+              "source_index": 581
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 8,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00581_7da6651a_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00067/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00067/samples/00002.png",
+              "prompt": "a checkered lion chasing seven raccoons to the left of a stone croissant",
+              "prompt_id": "geneval2_00581_7da6651a",
+              "question": "Is the lion checkered?",
+              "score": 0.0011740575861125535,
+              "skill": "attribute",
+              "source_index": 581
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 8,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00581_7da6651a_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00067/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00067/samples/00002.png",
+              "prompt": "a checkered lion chasing seven raccoons to the left of a stone croissant",
+              "prompt_id": "geneval2_00581_7da6651a",
+              "question": "Are there any lions in the image?",
+              "score": 0.9997025302436668,
+              "skill": "object",
+              "source_index": 581
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 8,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00581_7da6651a_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00067/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00067/samples/00002.png",
+              "prompt": "a checkered lion chasing seven raccoons to the left of a stone croissant",
+              "prompt_id": "geneval2_00581_7da6651a",
+              "question": "Is the lion chasing the raccoons?",
+              "score": 0.0024300455457151315,
+              "skill": "verb",
+              "source_index": 581
+            },
+            {
+              "answer": "seven",
+              "atom_count": 8,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00581_7da6651a_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00067/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00067/samples/00002.png",
+              "prompt": "a checkered lion chasing seven raccoons to the left of a stone croissant",
+              "prompt_id": "geneval2_00581_7da6651a",
+              "question": "How many raccoons are in the image?",
+              "score": 1.3554419861115316e-06,
+              "skill": "count",
+              "source_index": 581
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 8,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00581_7da6651a_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00067/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00067/samples/00002.png",
+              "prompt": "a checkered lion chasing seven raccoons to the left of a stone croissant",
+              "prompt_id": "geneval2_00581_7da6651a",
+              "question": "Are there any raccoons in the image?",
+              "score": 0.9999869789662625,
+              "skill": "object",
+              "source_index": 581
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 8,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00581_7da6651a_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00067/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00067/samples/00002.png",
+              "prompt": "a checkered lion chasing seven raccoons to the left of a stone croissant",
+              "prompt_id": "geneval2_00581_7da6651a",
+              "question": "Are the raccoons to the left of the croissant?",
+              "score": 1.000000044652154,
+              "skill": "position",
+              "source_index": 581
+            },
+            {
+              "answer": "one",
+              "atom_count": 8,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00581_7da6651a_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00067/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00067/samples/00002.png",
+              "prompt": "a checkered lion chasing seven raccoons to the left of a stone croissant",
+              "prompt_id": "geneval2_00581_7da6651a",
+              "question": "How many croissants are in the image?",
+              "score": 1.0000000583759776,
+              "skill": "count",
+              "source_index": 581
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 8,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00581_7da6651a_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00067/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00067/samples/00002.png",
+              "prompt": "a checkered lion chasing seven raccoons to the left of a stone croissant",
+              "prompt_id": "geneval2_00581_7da6651a",
+              "question": "Is the croissant stone?",
+              "score": 9.680698689895628e-08,
+              "skill": "attribute",
+              "source_index": 581
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 8,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00581_7da6651a_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00067/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00067/samples/00002.png",
+              "prompt": "a checkered lion chasing seven raccoons to the left of a stone croissant",
+              "prompt_id": "geneval2_00581_7da6651a",
+              "question": "Are there any croissants in the image?",
+              "score": 1.0000000367799657,
+              "skill": "object",
+              "source_index": 581
+            }
+          ],
+          "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.600319838713686,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 2,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00581_7da6651a.json",
+          "manifest_prompt_index": 67,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00581_7da6651a"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00581_7da6651a_cand_02",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00067/samples/00002.png",
+        "prompt_used": "A clear scene with exactly one checkered lion chasing exactly seven raccoons. The seven raccoons are all positioned to the left of exactly one stone croissant. The croissant is on the right side of the image and visibly made of stone. The lion is visibly checkered and oriented toward the raccoons in an active chasing pose. Keep all seven raccoons separate, fully visible, and easy to count, with no occlusion hiding any animal. Do not include any additional lions, raccoons, or croissants.",
+        "seed": 1337
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly one lion, exactly seven raccoons, and exactly one croissant.",
+          "Bind the checkered pattern only to the lion.",
+          "Bind the stone material only to the croissant.",
+          "Place all seven raccoons clearly to the left of the single stone croissant.",
+          "Depict the lion actively chasing the seven raccoons, with the lion oriented toward the raccoons.",
+          "Keep every raccoon individually visible and countable, with minimal overlap or occlusion.",
+          "Do not add extra lions, raccoons, or croissants."
+        ],
+        "generation_strategy": "Create a clear multi-object scene with separated, countable subjects. Put the single stone croissant on the right side of the composition. Arrange seven distinct raccoons to the left of the croissant in a visible group. Place one checkered lion behind or near the raccoons, oriented toward them in a chasing pose. Use spacing and clear silhouettes so the counts and attributes are unambiguous.",
+        "initial_prompt": "A clear scene with exactly one checkered lion chasing exactly seven raccoons. The seven raccoons are all positioned to the left of exactly one stone croissant. The croissant is on the right side of the image and visibly made of stone. The lion is visibly checkered and oriented toward the raccoons in an active chasing pose. Keep all seven raccoons separate, fully visible, and easy to count, with no occlusion hiding any animal. Do not include any additional lions, raccoons, or croissants.",
+        "parsed_constraints": {
+          "attributes": {
+            "croissant": [
+              "stone"
+            ],
+            "lion": [
+              "checkered"
+            ]
+          },
+          "counts": {
+            "croissant": 1,
+            "lion": 1,
+            "raccoon": 7
+          },
+          "objects": [
+            "lion",
+            "raccoon",
+            "croissant"
+          ],
+          "relations": [
+            "the lion is chasing the seven raccoons",
+            "the seven raccoons are to the left of the stone croissant"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility",
+          "negative_constraints"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly one lion, exactly seven raccoons, and exactly one croissant.",
+          "Bind the checkered pattern only to the lion.",
+          "Bind the stone material only to the croissant.",
+          "Place all seven raccoons clearly to the left of the single stone croissant.",
+          "Depict the lion actively chasing the seven raccoons, with the lion oriented toward the raccoons.",
+          "Keep every raccoon individually visible and countable, with minimal overlap or occlusion.",
+          "Do not add extra lions, raccoons, or croissants."
+        ],
+        "generation_strategy": "Create a clear multi-object scene with separated, countable subjects. Put the single stone croissant on the right side of the composition. Arrange seven distinct raccoons to the left of the croissant in a visible group. Place one checkered lion behind or near the raccoons, oriented toward them in a chasing pose. Use spacing and clear silhouettes so the counts and attributes are unambiguous.",
+        "initial_prompt": "A clear scene with exactly one checkered lion chasing exactly seven raccoons. The seven raccoons are all positioned to the left of exactly one stone croissant. The croissant is on the right side of the image and visibly made of stone. The lion is visibly checkered and oriented toward the raccoons in an active chasing pose. Keep all seven raccoons separate, fully visible, and easy to count, with no occlusion hiding any animal. Do not include any additional lions, raccoons, or croissants.",
+        "parsed_constraints": {
+          "attributes": {
+            "croissant": [
+              "stone"
+            ],
+            "lion": [
+              "checkered"
+            ]
+          },
+          "counts": {
+            "croissant": 1,
+            "lion": 1,
+            "raccoon": 7
+          },
+          "objects": [
+            "lion",
+            "raccoon",
+            "croissant"
+          ],
+          "relations": [
+            "the lion is chasing the seven raccoons",
+            "the seven raccoons are to the left of the stone croissant"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility",
+          "negative_constraints"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the lion checkered?",
+                "score": 0.0011740575861125535,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.00117406",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the lion checkered?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the lion chasing the raccoons?",
+                "score": 0.0024300455457151315,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.00243005",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the lion chasing the raccoons?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many raccoons are in the image?",
+                "score": 1.3554419861115316e-06,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.35544e-06",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many raccoons are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the croissant stone?",
+                "score": 9.680698689895628e-08,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=9.6807e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the croissant stone?",
+              "type": "attribute_mismatch"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00067/samples/00002.png",
+          "prompt": "A clear scene with exactly one checkered lion chasing exactly seven raccoons. The seven raccoons are all positioned to the left of exactly one stone croissant. The croissant is on the right side of the image and visibly made of stone. The lion is visibly checkered and oriented toward the raccoons in an active chasing pose. Keep all seven raccoons separate, fully visible, and easy to count, with no occlusion hiding any animal. Do not include any additional lions, raccoons, or croissants.",
+          "round": 0,
+          "score": 0.600319838713686
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00581_7da6651a_cand_02",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "attribute_mismatch",
+            "count_mismatch",
+            "relation_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the lion checkered?",
+                "score": 0.0011740575861125535,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.00117406",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the lion checkered?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the lion chasing the raccoons?",
+                "score": 0.0024300455457151315,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.00243005",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the lion chasing the raccoons?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many raccoons are in the image?",
+                "score": 1.3554419861115316e-06,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.35544e-06",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many raccoons are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the croissant stone?",
+                "score": 9.680698689895628e-08,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=9.6807e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the croissant stone?",
+              "type": "attribute_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many lions are in the image?",
+                "score": 0.9999033225461302,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.999903",
+              "expected": "one",
+              "status": "passed",
+              "target": "How many lions are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any lions in the image?",
+                "score": 0.9997025302436668,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999703",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any lions in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any raccoons in the image?",
+                "score": 0.9999869789662625,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999987",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any raccoons in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the raccoons to the left of the croissant?",
+                "score": 1.0,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the raccoons to the left of the croissant?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many croissants are in the image?",
+                "score": 1.0,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "one",
+              "status": "passed",
+              "target": "How many croissants are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any croissants in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any croissants in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.600319838713686,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Is the lion checkered?",
+                  "score": 0.0011740575861125535,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.00117406",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Is the lion checkered?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Is the lion chasing the raccoons?",
+                  "score": 0.0024300455457151315,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=0.00243005",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Is the lion chasing the raccoons?",
+                "type": "relation_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many raccoons are in the image?",
+                  "score": 1.3554419861115316e-06,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1.35544e-06",
+                "expected": "seven",
+                "status": "failed",
+                "target": "How many raccoons are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Is the croissant stone?",
+                  "score": 9.680698689895628e-08,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=9.6807e-08",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Is the croissant stone?",
+                "type": "attribute_mismatch"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00067/samples/00002.png",
+            "prompt": "A clear scene with exactly one checkered lion chasing exactly seven raccoons. The seven raccoons are all positioned to the left of exactly one stone croissant. The croissant is on the right side of the image and visibly made of stone. The lion is visibly checkered and oriented toward the raccoons in an active chasing pose. Keep all seven raccoons separate, fully visible, and easy to count, with no occlusion hiding any animal. Do not include any additional lions, raccoons, or croissants.",
+            "round": 0,
+            "score": 0.600319838713686
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the lion checkered?",
+                "score": 0.0011740575861125535,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.00117406",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the lion checkered?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the lion chasing the raccoons?",
+                "score": 0.0024300455457151315,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.00243005",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the lion chasing the raccoons?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many raccoons are in the image?",
+                "score": 1.3554419861115316e-06,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.35544e-06",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many raccoons are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the croissant stone?",
+                "score": 9.680698689895628e-08,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=9.6807e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the croissant stone?",
+              "type": "attribute_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "attribute_mismatch",
+            "count_mismatch",
+            "relation_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the lion checkered?",
+                "score": 0.0011740575861125535,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.00117406",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the lion checkered?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the lion chasing the raccoons?",
+                "score": 0.0024300455457151315,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.00243005",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the lion chasing the raccoons?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many raccoons are in the image?",
+                "score": 1.3554419861115316e-06,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.35544e-06",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many raccoons are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the croissant stone?",
+                "score": 9.680698689895628e-08,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=9.6807e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the croissant stone?",
+              "type": "attribute_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many lions are in the image?",
+                "score": 0.9999033225461302,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.999903",
+              "expected": "one",
+              "status": "passed",
+              "target": "How many lions are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any lions in the image?",
+                "score": 0.9997025302436668,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999703",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any lions in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any raccoons in the image?",
+                "score": 0.9999869789662625,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999987",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any raccoons in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the raccoons to the left of the croissant?",
+                "score": 1.0,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the raccoons to the left of the croissant?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many croissants are in the image?",
+                "score": 1.0,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "one",
+              "status": "passed",
+              "target": "How many croissants are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any croissants in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any croissants in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.600319838713686,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "a checkered lion chasing seven raccoons to the left of a stone croissant",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the lion checkered?",
+              "score": 0.0011740575861125535,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.00117406",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the lion checkered?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the lion chasing the raccoons?",
+              "score": 0.0024300455457151315,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.00243005",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the lion chasing the raccoons?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many raccoons are in the image?",
+              "score": 1.3554419861115316e-06,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.35544e-06",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many raccoons are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the croissant stone?",
+              "score": 9.680698689895628e-08,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=9.6807e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the croissant stone?",
+            "type": "attribute_mismatch"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly one lion, exactly seven raccoons, and exactly one croissant.",
+            "Bind the checkered pattern only to the lion.",
+            "Bind the stone material only to the croissant.",
+            "Place all seven raccoons clearly to the left of the single stone croissant.",
+            "Depict the lion actively chasing the seven raccoons, with the lion oriented toward the raccoons.",
+            "Keep every raccoon individually visible and countable, with minimal overlap or occlusion.",
+            "Do not add extra lions, raccoons, or croissants."
+          ],
+          "generation_strategy": "Create a clear multi-object scene with separated, countable subjects. Put the single stone croissant on the right side of the composition. Arrange seven distinct raccoons to the left of the croissant in a visible group. Place one checkered lion behind or near the raccoons, oriented toward them in a chasing pose. Use spacing and clear silhouettes so the counts and attributes are unambiguous.",
+          "initial_prompt": "A clear scene with exactly one checkered lion chasing exactly seven raccoons. The seven raccoons are all positioned to the left of exactly one stone croissant. The croissant is on the right side of the image and visibly made of stone. The lion is visibly checkered and oriented toward the raccoons in an active chasing pose. Keep all seven raccoons separate, fully visible, and easy to count, with no occlusion hiding any animal. Do not include any additional lions, raccoons, or croissants.",
+          "parsed_constraints": {
+            "attributes": {
+              "croissant": [
+                "stone"
+              ],
+              "lion": [
+                "checkered"
+              ]
+            },
+            "counts": {
+              "croissant": 1,
+              "lion": 1,
+              "raccoon": 7
+            },
+            "objects": [
+              "lion",
+              "raccoon",
+              "croissant"
+            ],
+            "relations": [
+              "the lion is chasing the seven raccoons",
+              "the seven raccoons are to the left of the stone croissant"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly one lion, exactly seven raccoons, and exactly one croissant.",
+            "Bind the checkered pattern only to the lion.",
+            "Bind the stone material only to the croissant.",
+            "Place all seven raccoons clearly to the left of the single stone croissant.",
+            "Depict the lion actively chasing the seven raccoons, with the lion oriented toward the raccoons.",
+            "Keep every raccoon individually visible and countable, with minimal overlap or occlusion.",
+            "Do not add extra lions, raccoons, or croissants."
+          ],
+          "generation_strategy": "Create a clear multi-object scene with separated, countable subjects. Put the single stone croissant on the right side of the composition. Arrange seven distinct raccoons to the left of the croissant in a visible group. Place one checkered lion behind or near the raccoons, oriented toward them in a chasing pose. Use spacing and clear silhouettes so the counts and attributes are unambiguous.",
+          "initial_prompt": "A clear scene with exactly one checkered lion chasing exactly seven raccoons. The seven raccoons are all positioned to the left of exactly one stone croissant. The croissant is on the right side of the image and visibly made of stone. The lion is visibly checkered and oriented toward the raccoons in an active chasing pose. Keep all seven raccoons separate, fully visible, and easy to count, with no occlusion hiding any animal. Do not include any additional lions, raccoons, or croissants.",
+          "parsed_constraints": {
+            "attributes": {
+              "croissant": [
+                "stone"
+              ],
+              "lion": [
+                "checkered"
+              ]
+            },
+            "counts": {
+              "croissant": 1,
+              "lion": 1,
+              "raccoon": 7
+            },
+            "objects": [
+              "lion",
+              "raccoon",
+              "croissant"
+            ],
+            "relations": [
+              "the lion is chasing the seven raccoons",
+              "the seven raccoons are to the left of the stone croissant"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "previous_prompt": "A clear scene with exactly one checkered lion chasing exactly seven raccoons. The seven raccoons are all positioned to the left of exactly one stone croissant. The croissant is on the right side of the image and visibly made of stone. The lion is visibly checkered and oriented toward the raccoons in an active chasing pose. Keep all seven raccoons separate, fully visible, and easy to count, with no occlusion hiding any animal. Do not include any additional lions, raccoons, or croissants.",
+        "previous_selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility",
+          "negative_constraints"
+        ],
+        "prompt_id": "geneval2_00581_7da6651a",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "attribute_mismatch",
+              "count_mismatch",
+              "relation_mismatch"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Is the lion checkered?",
+                  "score": 0.0011740575861125535,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.00117406",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Is the lion checkered?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Is the lion chasing the raccoons?",
+                  "score": 0.0024300455457151315,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=0.00243005",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Is the lion chasing the raccoons?",
+                "type": "relation_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many raccoons are in the image?",
+                  "score": 1.3554419861115316e-06,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1.35544e-06",
+                "expected": "seven",
+                "status": "failed",
+                "target": "How many raccoons are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Is the croissant stone?",
+                  "score": 9.680698689895628e-08,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=9.6807e-08",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Is the croissant stone?",
+                "type": "attribute_mismatch"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many lions are in the image?",
+                  "score": 0.9999033225461302,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.999903",
+                "expected": "one",
+                "status": "passed",
+                "target": "How many lions are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any lions in the image?",
+                  "score": 0.9997025302436668,
+                  "skill": "object"
+                },
+                "detected": "soft_score=0.999703",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any lions in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any raccoons in the image?",
+                  "score": 0.9999869789662625,
+                  "skill": "object"
+                },
+                "detected": "soft_score=0.999987",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any raccoons in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the raccoons to the left of the croissant?",
+                  "score": 1.0,
+                  "skill": "position"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the raccoons to the left of the croissant?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many croissants are in the image?",
+                  "score": 1.0,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1",
+                "expected": "one",
+                "status": "passed",
+                "target": "How many croissants are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any croissants in the image?",
+                  "score": 1.0,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any croissants in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly one lion, exactly seven raccoons, and exactly one croissant.",
+                "Bind the checkered pattern only to the lion.",
+                "Bind the stone material only to the croissant.",
+                "Place all seven raccoons clearly to the left of the single stone croissant.",
+                "Depict the lion actively chasing the seven raccoons, with the lion oriented toward the raccoons.",
+                "Keep every raccoon individually visible and countable, with minimal overlap or occlusion.",
+                "Do not add extra lions, raccoons, or croissants."
+              ],
+              "generation_strategy": "Create a clear multi-object scene with separated, countable subjects. Put the single stone croissant on the right side of the composition. Arrange seven distinct raccoons to the left of the croissant in a visible group. Place one checkered lion behind or near the raccoons, oriented toward them in a chasing pose. Use spacing and clear silhouettes so the counts and attributes are unambiguous.",
+              "initial_prompt": "A clear scene with exactly one checkered lion chasing exactly seven raccoons. The seven raccoons are all positioned to the left of exactly one stone croissant. The croissant is on the right side of the image and visibly made of stone. The lion is visibly checkered and oriented toward the raccoons in an active chasing pose. Keep all seven raccoons separate, fully visible, and easy to count, with no occlusion hiding any animal. Do not include any additional lions, raccoons, or croissants.",
+              "parsed_constraints": {
+                "attributes": {
+                  "croissant": [
+                    "stone"
+                  ],
+                  "lion": [
+                    "checkered"
+                  ]
+                },
+                "counts": {
+                  "croissant": 1,
+                  "lion": 1,
+                  "raccoon": 7
+                },
+                "objects": [
+                  "lion",
+                  "raccoon",
+                  "croissant"
+                ],
+                "relations": [
+                  "the lion is chasing the seven raccoons",
+                  "the seven raccoons are to the left of the stone croissant"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "anti_occlusion",
+                "clarity_visibility",
+                "negative_constraints"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly one lion, exactly seven raccoons, and exactly one croissant.",
+                "Bind the checkered pattern only to the lion.",
+                "Bind the stone material only to the croissant.",
+                "Place all seven raccoons clearly to the left of the single stone croissant.",
+                "Depict the lion actively chasing the seven raccoons, with the lion oriented toward the raccoons.",
+                "Keep every raccoon individually visible and countable, with minimal overlap or occlusion.",
+                "Do not add extra lions, raccoons, or croissants."
+              ],
+              "generation_strategy": "Create a clear multi-object scene with separated, countable subjects. Put the single stone croissant on the right side of the composition. Arrange seven distinct raccoons to the left of the croissant in a visible group. Place one checkered lion behind or near the raccoons, oriented toward them in a chasing pose. Use spacing and clear silhouettes so the counts and attributes are unambiguous.",
+              "initial_prompt": "A clear scene with exactly one checkered lion chasing exactly seven raccoons. The seven raccoons are all positioned to the left of exactly one stone croissant. The croissant is on the right side of the image and visibly made of stone. The lion is visibly checkered and oriented toward the raccoons in an active chasing pose. Keep all seven raccoons separate, fully visible, and easy to count, with no occlusion hiding any animal. Do not include any additional lions, raccoons, or croissants.",
+              "parsed_constraints": {
+                "attributes": {
+                  "croissant": [
+                    "stone"
+                  ],
+                  "lion": [
+                    "checkered"
+                  ]
+                },
+                "counts": {
+                  "croissant": 1,
+                  "lion": 1,
+                  "raccoon": 7
+                },
+                "objects": [
+                  "lion",
+                  "raccoon",
+                  "croissant"
+                ],
+                "relations": [
+                  "the lion is chasing the seven raccoons",
+                  "the seven raccoons are to the left of the stone croissant"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "anti_occlusion",
+                "clarity_visibility",
+                "negative_constraints"
+              ]
+            },
+            "prompt_used": "A clear scene with exactly one checkered lion chasing exactly seven raccoons. The seven raccoons are all positioned to the left of exactly one stone croissant. The croissant is on the right side of the image and visibly made of stone. The lion is visibly checkered and oriented toward the raccoons in an active chasing pose. Keep all seven raccoons separate, fully visible, and easy to count, with no occlusion hiding any animal. Do not include any additional lions, raccoons, or croissants.",
+            "round": 0,
+            "score": 0.600319838713686,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 1,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Is the lion checkered?",
+                    "score": 0.0011740575861125535,
+                    "skill": "attribute"
+                  },
+                  "detected": "soft_score=0.00117406",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Is the lion checkered?",
+                  "type": "attribute_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 3,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Is the lion chasing the raccoons?",
+                    "score": 0.0024300455457151315,
+                    "skill": "verb"
+                  },
+                  "detected": "soft_score=0.00243005",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Is the lion chasing the raccoons?",
+                  "type": "relation_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 4,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many raccoons are in the image?",
+                    "score": 1.3554419861115316e-06,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=1.35544e-06",
+                  "expected": "seven",
+                  "status": "failed",
+                  "target": "How many raccoons are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 8,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Is the croissant stone?",
+                    "score": 9.680698689895628e-08,
+                    "skill": "attribute"
+                  },
+                  "detected": "soft_score=9.6807e-08",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Is the croissant stone?",
+                  "type": "attribute_mismatch"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00581_7da6651a"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the lion checkered?",
+              "score": 0.0011740575861125535,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.00117406",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the lion checkered?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the lion chasing the raccoons?",
+              "score": 0.0024300455457151315,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.00243005",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the lion chasing the raccoons?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many raccoons are in the image?",
+              "score": 1.3554419861115316e-06,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.35544e-06",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many raccoons are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the croissant stone?",
+              "score": 9.680698689895628e-08,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=9.6807e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the croissant stone?",
+            "type": "attribute_mismatch"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00581_7da6651a_cand_02",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly one lion, exactly seven raccoons, and exactly one croissant.",
+      "Bind the checkered pattern only to the lion.",
+      "Bind the stone material only to the croissant.",
+      "Place all seven raccoons clearly to the left of the single stone croissant.",
+      "Depict the lion actively chasing the seven raccoons, with the lion oriented toward the raccoons.",
+      "Keep every raccoon individually visible and countable, with minimal overlap or occlusion.",
+      "Do not add extra lions, raccoons, or croissants."
+    ],
+    "generation_strategy": "Create a clear multi-object scene with separated, countable subjects. Put the single stone croissant on the right side of the composition. Arrange seven distinct raccoons to the left of the croissant in a visible group. Place one checkered lion behind or near the raccoons, oriented toward them in a chasing pose. Use spacing and clear silhouettes so the counts and attributes are unambiguous.",
+    "initial_prompt": "A clear scene with exactly one checkered lion chasing exactly seven raccoons. The seven raccoons are all positioned to the left of exactly one stone croissant. The croissant is on the right side of the image and visibly made of stone. The lion is visibly checkered and oriented toward the raccoons in an active chasing pose. Keep all seven raccoons separate, fully visible, and easy to count, with no occlusion hiding any animal. Do not include any additional lions, raccoons, or croissants.",
+    "parsed_constraints": {
+      "attributes": {
+        "croissant": [
+          "stone"
+        ],
+        "lion": [
+          "checkered"
+        ]
+      },
+      "counts": {
+        "croissant": 1,
+        "lion": 1,
+        "raccoon": 7
+      },
+      "objects": [
+        "lion",
+        "raccoon",
+        "croissant"
+      ],
+      "relations": [
+        "the lion is chasing the seven raccoons",
+        "the seven raccoons are to the left of the stone croissant"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image preserved the presence and count of one lion, the presence of raccoons, the placement of raccoons to the left of the croissant, and one visible croissant, but failed four key constraints: the lion was not recognized as checkered, the lion was not recognized as chasing the raccoons, the raccoon count was not recognized as exactly seven, and the croissant was not recognized as made of stone.",
+    "expected_improvement": [
+      "The lion should be recognized as checkered by using a bold high-contrast checkerboard pattern bound only to the lion's body.",
+      "The chasing relation should be clearer by placing the lion behind the raccoons in a running/lunging pose aimed directly at them while the raccoons flee away from it.",
+      "The raccoon count should improve by arranging exactly seven separate raccoons with visible gaps and no overlap.",
+      "The croissant should be recognized as stone by making the single croissant gray, carved, rough, and sculpture-like while still clearly croissant-shaped."
+    ],
+    "failure_types": [
+      "attribute_mismatch",
+      "relation_mismatch",
+      "count_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly one lion visible.",
+      "Keep at least one raccoon visible while making the total exactly seven raccoons.",
+      "Keep all raccoons positioned to the left of the croissant.",
+      "Keep exactly one croissant visible.",
+      "Do not add any extra lions, raccoons, or croissants."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt named the required attributes and relation, but it did not force a visually unmistakable checkerboard pattern on the lion, did not make the chase action strongly directional enough, did not specify a count-friendly arrangement for seven raccoons, and did not make the croissant's stone material visually distinct from an ordinary pastry.",
+      "error_source": "Prompt under-specified visual evidence for unusual attributes, exact count separability, and the chasing action."
+    },
+    "regeneration_strategy": "Use a simple side-view composition with clear left-to-right staging: one checkered lion on the far left behind the raccoons, seven distinct raccoons in the middle-left fleeing together, and one gray stone croissant on the far right. Make each required object fully visible and separated, with strong attribute binding and negative constraints against extras.",
+    "regression_risks": [
+      "Adding extra raccoons or merging raccoons together could break the exact count of seven.",
+      "The checkered pattern could leak onto raccoons or background instead of being bound only to the lion.",
+      "The croissant could look like a normal pastry rather than stone if it is brown or flaky.",
+      "The lion may appear merely standing near the raccoons unless its running direction and pose clearly show chasing.",
+      "The raccoons-to-left-of-croissant relation could regress if any raccoon appears to the right of the croissant."
+    ],
+    "repair_constraints": [
+      "Make the single lion visibly checkered: cover the lion's body with a bold black-and-white checkerboard pattern, bound only to the lion.",
+      "Show the lion chasing the raccoons: place the lion behind the raccoons, running or lunging toward them, with the raccoons fleeing away from the lion.",
+      "Show exactly seven raccoons: seven separate, fully visible raccoons with clear gaps between them, no overlap, no merged bodies, and no extra raccoons.",
+      "Make the single croissant visibly stone: a gray carved stone croissant with rough stone texture, sculpture-like surface, and no pastry-like flaky brown material."
+    ],
+    "retry_prompt": "A clear side-view scene with exactly one lion, exactly seven raccoons, and exactly one croissant. The single lion is on the far left and is visibly checkered: its body is covered in a bold black-and-white checkerboard pattern, and the checkered pattern appears only on the lion. The lion is chasing the raccoons, running and lunging toward them from behind. In front of the lion, place exactly seven separate raccoons in the middle-left of the image, all fully visible with clear gaps between each raccoon, fleeing away from the lion. All seven raccoons are to the left of the single croissant. Put the single croissant on the far right; it is clearly a gray carved stone croissant with rough stone texture, like a stone sculpture, while still shaped like a croissant. Keep every animal and the croissant unobstructed and easy to verify. No extra lions, no extra raccoons, and no extra croissants.",
+    "skill_revision": {
+      "new_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ],
+      "reason": "Use the same skill set but apply it more concretely: stronger attribute binding for the checkered lion and stone croissant, stricter quantity counting for seven visually separated raccoons, and clearer spatial layout for the lion chasing the raccoons while the raccoons remain left of the croissant."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the lion checkered?",
+            "score": 0.0011740575861125535,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.00117406",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the lion checkered?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the lion chasing the raccoons?",
+            "score": 0.0024300455457151315,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.00243005",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the lion chasing the raccoons?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many raccoons are in the image?",
+            "score": 1.3554419861115316e-06,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.35544e-06",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many raccoons are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the croissant stone?",
+            "score": 9.680698689895628e-08,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=9.6807e-08",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the croissant stone?",
+          "type": "attribute_mismatch"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00067/samples/00002.png",
+      "prompt": "A clear scene with exactly one checkered lion chasing exactly seven raccoons. The seven raccoons are all positioned to the left of exactly one stone croissant. The croissant is on the right side of the image and visibly made of stone. The lion is visibly checkered and oriented toward the raccoons in an active chasing pose. Keep all seven raccoons separate, fully visible, and easy to count, with no occlusion hiding any animal. Do not include any additional lions, raccoons, or croissants.",
+      "round": 0,
+      "score": 0.600319838713686
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00581_7da6651a_cand_02",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "count_mismatch",
+        "relation_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the lion checkered?",
+            "score": 0.0011740575861125535,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.00117406",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the lion checkered?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the lion chasing the raccoons?",
+            "score": 0.0024300455457151315,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.00243005",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the lion chasing the raccoons?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many raccoons are in the image?",
+            "score": 1.3554419861115316e-06,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.35544e-06",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many raccoons are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the croissant stone?",
+            "score": 9.680698689895628e-08,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=9.6807e-08",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the croissant stone?",
+          "type": "attribute_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many lions are in the image?",
+            "score": 0.9999033225461302,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.999903",
+          "expected": "one",
+          "status": "passed",
+          "target": "How many lions are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any lions in the image?",
+            "score": 0.9997025302436668,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999703",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any lions in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any raccoons in the image?",
+            "score": 0.9999869789662625,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999987",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any raccoons in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the raccoons to the left of the croissant?",
+            "score": 1.0,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the raccoons to the left of the croissant?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many croissants are in the image?",
+            "score": 1.0,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "one",
+          "status": "passed",
+          "target": "How many croissants are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any croissants in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any croissants in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.600319838713686,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the lion checkered?",
+              "score": 0.0011740575861125535,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.00117406",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the lion checkered?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the lion chasing the raccoons?",
+              "score": 0.0024300455457151315,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.00243005",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the lion chasing the raccoons?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many raccoons are in the image?",
+              "score": 1.3554419861115316e-06,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.35544e-06",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many raccoons are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the croissant stone?",
+              "score": 9.680698689895628e-08,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=9.6807e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the croissant stone?",
+            "type": "attribute_mismatch"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00067/samples/00002.png",
+        "prompt": "A clear scene with exactly one checkered lion chasing exactly seven raccoons. The seven raccoons are all positioned to the left of exactly one stone croissant. The croissant is on the right side of the image and visibly made of stone. The lion is visibly checkered and oriented toward the raccoons in an active chasing pose. Keep all seven raccoons separate, fully visible, and easy to count, with no occlusion hiding any animal. Do not include any additional lions, raccoons, or croissants.",
+        "round": 0,
+        "score": 0.600319838713686
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the lion checkered?",
+            "score": 0.0011740575861125535,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.00117406",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the lion checkered?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the lion chasing the raccoons?",
+            "score": 0.0024300455457151315,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.00243005",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the lion chasing the raccoons?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many raccoons are in the image?",
+            "score": 1.3554419861115316e-06,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.35544e-06",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many raccoons are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the croissant stone?",
+            "score": 9.680698689895628e-08,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=9.6807e-08",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the croissant stone?",
+          "type": "attribute_mismatch"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "count_mismatch",
+        "relation_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the lion checkered?",
+            "score": 0.0011740575861125535,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.00117406",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the lion checkered?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the lion chasing the raccoons?",
+            "score": 0.0024300455457151315,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.00243005",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the lion chasing the raccoons?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many raccoons are in the image?",
+            "score": 1.3554419861115316e-06,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.35544e-06",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many raccoons are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the croissant stone?",
+            "score": 9.680698689895628e-08,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=9.6807e-08",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the croissant stone?",
+          "type": "attribute_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many lions are in the image?",
+            "score": 0.9999033225461302,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.999903",
+          "expected": "one",
+          "status": "passed",
+          "target": "How many lions are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any lions in the image?",
+            "score": 0.9997025302436668,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999703",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any lions in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any raccoons in the image?",
+            "score": 0.9999869789662625,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999987",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any raccoons in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the raccoons to the left of the croissant?",
+            "score": 1.0,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the raccoons to the left of the croissant?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many croissants are in the image?",
+            "score": 1.0,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "one",
+          "status": "passed",
+          "target": "How many croissants are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any croissants in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any croissants in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.600319838713686,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "a checkered lion chasing seven raccoons to the left of a stone croissant",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the lion checkered?",
+          "score": 0.0011740575861125535,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.00117406",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Is the lion checkered?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the lion chasing the raccoons?",
+          "score": 0.0024300455457151315,
+          "skill": "verb"
+        },
+        "detected": "soft_score=0.00243005",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Is the lion chasing the raccoons?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many raccoons are in the image?",
+          "score": 1.3554419861115316e-06,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.35544e-06",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many raccoons are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the croissant stone?",
+          "score": 9.680698689895628e-08,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=9.6807e-08",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Is the croissant stone?",
+        "type": "attribute_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly one lion, exactly seven raccoons, and exactly one croissant.",
+        "Bind the checkered pattern only to the lion.",
+        "Bind the stone material only to the croissant.",
+        "Place all seven raccoons clearly to the left of the single stone croissant.",
+        "Depict the lion actively chasing the seven raccoons, with the lion oriented toward the raccoons.",
+        "Keep every raccoon individually visible and countable, with minimal overlap or occlusion.",
+        "Do not add extra lions, raccoons, or croissants."
+      ],
+      "generation_strategy": "Create a clear multi-object scene with separated, countable subjects. Put the single stone croissant on the right side of the composition. Arrange seven distinct raccoons to the left of the croissant in a visible group. Place one checkered lion behind or near the raccoons, oriented toward them in a chasing pose. Use spacing and clear silhouettes so the counts and attributes are unambiguous.",
+      "initial_prompt": "A clear scene with exactly one checkered lion chasing exactly seven raccoons. The seven raccoons are all positioned to the left of exactly one stone croissant. The croissant is on the right side of the image and visibly made of stone. The lion is visibly checkered and oriented toward the raccoons in an active chasing pose. Keep all seven raccoons separate, fully visible, and easy to count, with no occlusion hiding any animal. Do not include any additional lions, raccoons, or croissants.",
+      "parsed_constraints": {
+        "attributes": {
+          "croissant": [
+            "stone"
+          ],
+          "lion": [
+            "checkered"
+          ]
+        },
+        "counts": {
+          "croissant": 1,
+          "lion": 1,
+          "raccoon": 7
+        },
+        "objects": [
+          "lion",
+          "raccoon",
+          "croissant"
+        ],
+        "relations": [
+          "the lion is chasing the seven raccoons",
+          "the seven raccoons are to the left of the stone croissant"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly one lion, exactly seven raccoons, and exactly one croissant.",
+        "Bind the checkered pattern only to the lion.",
+        "Bind the stone material only to the croissant.",
+        "Place all seven raccoons clearly to the left of the single stone croissant.",
+        "Depict the lion actively chasing the seven raccoons, with the lion oriented toward the raccoons.",
+        "Keep every raccoon individually visible and countable, with minimal overlap or occlusion.",
+        "Do not add extra lions, raccoons, or croissants."
+      ],
+      "generation_strategy": "Create a clear multi-object scene with separated, countable subjects. Put the single stone croissant on the right side of the composition. Arrange seven distinct raccoons to the left of the croissant in a visible group. Place one checkered lion behind or near the raccoons, oriented toward them in a chasing pose. Use spacing and clear silhouettes so the counts and attributes are unambiguous.",
+      "initial_prompt": "A clear scene with exactly one checkered lion chasing exactly seven raccoons. The seven raccoons are all positioned to the left of exactly one stone croissant. The croissant is on the right side of the image and visibly made of stone. The lion is visibly checkered and oriented toward the raccoons in an active chasing pose. Keep all seven raccoons separate, fully visible, and easy to count, with no occlusion hiding any animal. Do not include any additional lions, raccoons, or croissants.",
+      "parsed_constraints": {
+        "attributes": {
+          "croissant": [
+            "stone"
+          ],
+          "lion": [
+            "checkered"
+          ]
+        },
+        "counts": {
+          "croissant": 1,
+          "lion": 1,
+          "raccoon": 7
+        },
+        "objects": [
+          "lion",
+          "raccoon",
+          "croissant"
+        ],
+        "relations": [
+          "the lion is chasing the seven raccoons",
+          "the seven raccoons are to the left of the stone croissant"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ]
+    },
+    "previous_prompt": "A clear scene with exactly one checkered lion chasing exactly seven raccoons. The seven raccoons are all positioned to the left of exactly one stone croissant. The croissant is on the right side of the image and visibly made of stone. The lion is visibly checkered and oriented toward the raccoons in an active chasing pose. Keep all seven raccoons separate, fully visible, and easy to count, with no occlusion hiding any animal. Do not include any additional lions, raccoons, or croissants.",
+    "previous_selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ],
+    "prompt_id": "geneval2_00581_7da6651a",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "count_mismatch",
+          "relation_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the lion checkered?",
+              "score": 0.0011740575861125535,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.00117406",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the lion checkered?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the lion chasing the raccoons?",
+              "score": 0.0024300455457151315,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.00243005",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the lion chasing the raccoons?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many raccoons are in the image?",
+              "score": 1.3554419861115316e-06,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.35544e-06",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many raccoons are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the croissant stone?",
+              "score": 9.680698689895628e-08,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=9.6807e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the croissant stone?",
+            "type": "attribute_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many lions are in the image?",
+              "score": 0.9999033225461302,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.999903",
+            "expected": "one",
+            "status": "passed",
+            "target": "How many lions are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any lions in the image?",
+              "score": 0.9997025302436668,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999703",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any lions in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any raccoons in the image?",
+              "score": 0.9999869789662625,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999987",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any raccoons in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the raccoons to the left of the croissant?",
+              "score": 1.0,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the raccoons to the left of the croissant?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many croissants are in the image?",
+              "score": 1.0,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "one",
+            "status": "passed",
+            "target": "How many croissants are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any croissants in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any croissants in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly one lion, exactly seven raccoons, and exactly one croissant.",
+            "Bind the checkered pattern only to the lion.",
+            "Bind the stone material only to the croissant.",
+            "Place all seven raccoons clearly to the left of the single stone croissant.",
+            "Depict the lion actively chasing the seven raccoons, with the lion oriented toward the raccoons.",
+            "Keep every raccoon individually visible and countable, with minimal overlap or occlusion.",
+            "Do not add extra lions, raccoons, or croissants."
+          ],
+          "generation_strategy": "Create a clear multi-object scene with separated, countable subjects. Put the single stone croissant on the right side of the composition. Arrange seven distinct raccoons to the left of the croissant in a visible group. Place one checkered lion behind or near the raccoons, oriented toward them in a chasing pose. Use spacing and clear silhouettes so the counts and attributes are unambiguous.",
+          "initial_prompt": "A clear scene with exactly one checkered lion chasing exactly seven raccoons. The seven raccoons are all positioned to the left of exactly one stone croissant. The croissant is on the right side of the image and visibly made of stone. The lion is visibly checkered and oriented toward the raccoons in an active chasing pose. Keep all seven raccoons separate, fully visible, and easy to count, with no occlusion hiding any animal. Do not include any additional lions, raccoons, or croissants.",
+          "parsed_constraints": {
+            "attributes": {
+              "croissant": [
+                "stone"
+              ],
+              "lion": [
+                "checkered"
+              ]
+            },
+            "counts": {
+              "croissant": 1,
+              "lion": 1,
+              "raccoon": 7
+            },
+            "objects": [
+              "lion",
+              "raccoon",
+              "croissant"
+            ],
+            "relations": [
+              "the lion is chasing the seven raccoons",
+              "the seven raccoons are to the left of the stone croissant"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly one lion, exactly seven raccoons, and exactly one croissant.",
+            "Bind the checkered pattern only to the lion.",
+            "Bind the stone material only to the croissant.",
+            "Place all seven raccoons clearly to the left of the single stone croissant.",
+            "Depict the lion actively chasing the seven raccoons, with the lion oriented toward the raccoons.",
+            "Keep every raccoon individually visible and countable, with minimal overlap or occlusion.",
+            "Do not add extra lions, raccoons, or croissants."
+          ],
+          "generation_strategy": "Create a clear multi-object scene with separated, countable subjects. Put the single stone croissant on the right side of the composition. Arrange seven distinct raccoons to the left of the croissant in a visible group. Place one checkered lion behind or near the raccoons, oriented toward them in a chasing pose. Use spacing and clear silhouettes so the counts and attributes are unambiguous.",
+          "initial_prompt": "A clear scene with exactly one checkered lion chasing exactly seven raccoons. The seven raccoons are all positioned to the left of exactly one stone croissant. The croissant is on the right side of the image and visibly made of stone. The lion is visibly checkered and oriented toward the raccoons in an active chasing pose. Keep all seven raccoons separate, fully visible, and easy to count, with no occlusion hiding any animal. Do not include any additional lions, raccoons, or croissants.",
+          "parsed_constraints": {
+            "attributes": {
+              "croissant": [
+                "stone"
+              ],
+              "lion": [
+                "checkered"
+              ]
+            },
+            "counts": {
+              "croissant": 1,
+              "lion": 1,
+              "raccoon": 7
+            },
+            "objects": [
+              "lion",
+              "raccoon",
+              "croissant"
+            ],
+            "relations": [
+              "the lion is chasing the seven raccoons",
+              "the seven raccoons are to the left of the stone croissant"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "prompt_used": "A clear scene with exactly one checkered lion chasing exactly seven raccoons. The seven raccoons are all positioned to the left of exactly one stone croissant. The croissant is on the right side of the image and visibly made of stone. The lion is visibly checkered and oriented toward the raccoons in an active chasing pose. Keep all seven raccoons separate, fully visible, and easy to count, with no occlusion hiding any animal. Do not include any additional lions, raccoons, or croissants.",
+        "round": 0,
+        "score": 0.600319838713686,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the lion checkered?",
+                "score": 0.0011740575861125535,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.00117406",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the lion checkered?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the lion chasing the raccoons?",
+                "score": 0.0024300455457151315,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.00243005",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the lion chasing the raccoons?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many raccoons are in the image?",
+                "score": 1.3554419861115316e-06,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.35544e-06",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many raccoons are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the croissant stone?",
+                "score": 9.680698689895628e-08,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=9.6807e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the croissant stone?",
+              "type": "attribute_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00581_7da6651a"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the lion checkered?",
+          "score": 0.0011740575861125535,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.00117406",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Is the lion checkered?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the lion chasing the raccoons?",
+          "score": 0.0024300455457151315,
+          "skill": "verb"
+        },
+        "detected": "soft_score=0.00243005",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Is the lion chasing the raccoons?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many raccoons are in the image?",
+          "score": 1.3554419861115316e-06,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.35544e-06",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many raccoons are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the croissant stone?",
+          "score": 9.680698689895628e-08,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=9.6807e-08",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Is the croissant stone?",
+        "type": "attribute_mismatch"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00067/samples/00002.png",
+    "best_so_far_prompt": "A clear scene with exactly one checkered lion chasing exactly seven raccoons. The seven raccoons are all positioned to the left of exactly one stone croissant. The croissant is on the right side of the image and visibly made of stone. The lion is visibly checkered and oriented toward the raccoons in an active chasing pose. Keep all seven raccoons separate, fully visible, and easy to count, with no occlusion hiding any animal. Do not include any additional lions, raccoons, or croissants.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.600319838713686,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the lion checkered?",
+          "score": 0.0011740575861125535,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.00117406",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Is the lion checkered?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the lion chasing the raccoons?",
+          "score": 0.0024300455457151315,
+          "skill": "verb"
+        },
+        "detected": "soft_score=0.00243005",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Is the lion chasing the raccoons?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many raccoons are in the image?",
+          "score": 1.3554419861115316e-06,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.35544e-06",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many raccoons are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the croissant stone?",
+          "score": 9.680698689895628e-08,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=9.6807e-08",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Is the croissant stone?",
+        "type": "attribute_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly one lion, exactly seven raccoons, and exactly one croissant.",
+        "Bind the checkered pattern only to the lion.",
+        "Bind the stone material only to the croissant.",
+        "Place all seven raccoons clearly to the left of the single stone croissant.",
+        "Depict the lion actively chasing the seven raccoons, with the lion oriented toward the raccoons.",
+        "Keep every raccoon individually visible and countable, with minimal overlap or occlusion.",
+        "Do not add extra lions, raccoons, or croissants."
+      ],
+      "generation_strategy": "Create a clear multi-object scene with separated, countable subjects. Put the single stone croissant on the right side of the composition. Arrange seven distinct raccoons to the left of the croissant in a visible group. Place one checkered lion behind or near the raccoons, oriented toward them in a chasing pose. Use spacing and clear silhouettes so the counts and attributes are unambiguous.",
+      "initial_prompt": "A clear scene with exactly one checkered lion chasing exactly seven raccoons. The seven raccoons are all positioned to the left of exactly one stone croissant. The croissant is on the right side of the image and visibly made of stone. The lion is visibly checkered and oriented toward the raccoons in an active chasing pose. Keep all seven raccoons separate, fully visible, and easy to count, with no occlusion hiding any animal. Do not include any additional lions, raccoons, or croissants.",
+      "parsed_constraints": {
+        "attributes": {
+          "croissant": [
+            "stone"
+          ],
+          "lion": [
+            "checkered"
+          ]
+        },
+        "counts": {
+          "croissant": 1,
+          "lion": 1,
+          "raccoon": 7
+        },
+        "objects": [
+          "lion",
+          "raccoon",
+          "croissant"
+        ],
+        "relations": [
+          "the lion is chasing the seven raccoons",
+          "the seven raccoons are to the left of the stone croissant"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.600 failed=['Is the lion checkered?', 'Is the lion chasing the raccoons?', 'How many raccoons are in the image?', 'Is the croissant stone?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_incremental/snapshot_003_worker_01/geneval2_00581_7da6651a__geneval2_00581_7da6651a_cand_02__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00581_7da6651a__geneval2_00581_7da6651a_cand_02__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00581_7da6651a",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image preserved the presence and count of one lion, the presence of raccoons, the placement of raccoons to the left of the croissant, and one visible croissant, but failed four key constraints: the lion was not recognized as checkered, the lion was not recognized as chasing the raccoons, the raccoon count was not recognized as exactly seven, and the croissant was not recognized as made of stone.",
+    "expected_improvement": [
+      "The lion should be recognized as checkered by using a bold high-contrast checkerboard pattern bound only to the lion's body.",
+      "The chasing relation should be clearer by placing the lion behind the raccoons in a running/lunging pose aimed directly at them while the raccoons flee away from it.",
+      "The raccoon count should improve by arranging exactly seven separate raccoons with visible gaps and no overlap.",
+      "The croissant should be recognized as stone by making the single croissant gray, carved, rough, and sculpture-like while still clearly croissant-shaped."
+    ],
+    "failure_types": [
+      "attribute_mismatch",
+      "relation_mismatch",
+      "count_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly one lion visible.",
+      "Keep at least one raccoon visible while making the total exactly seven raccoons.",
+      "Keep all raccoons positioned to the left of the croissant.",
+      "Keep exactly one croissant visible.",
+      "Do not add any extra lions, raccoons, or croissants."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt named the required attributes and relation, but it did not force a visually unmistakable checkerboard pattern on the lion, did not make the chase action strongly directional enough, did not specify a count-friendly arrangement for seven raccoons, and did not make the croissant's stone material visually distinct from an ordinary pastry.",
+      "error_source": "Prompt under-specified visual evidence for unusual attributes, exact count separability, and the chasing action."
+    },
+    "regeneration_strategy": "Use a simple side-view composition with clear left-to-right staging: one checkered lion on the far left behind the raccoons, seven distinct raccoons in the middle-left fleeing together, and one gray stone croissant on the far right. Make each required object fully visible and separated, with strong attribute binding and negative constraints against extras.",
+    "regression_risks": [
+      "Adding extra raccoons or merging raccoons together could break the exact count of seven.",
+      "The checkered pattern could leak onto raccoons or background instead of being bound only to the lion.",
+      "The croissant could look like a normal pastry rather than stone if it is brown or flaky.",
+      "The lion may appear merely standing near the raccoons unless its running direction and pose clearly show chasing.",
+      "The raccoons-to-left-of-croissant relation could regress if any raccoon appears to the right of the croissant."
+    ],
+    "repair_constraints": [
+      "Make the single lion visibly checkered: cover the lion's body with a bold black-and-white checkerboard pattern, bound only to the lion.",
+      "Show the lion chasing the raccoons: place the lion behind the raccoons, running or lunging toward them, with the raccoons fleeing away from the lion.",
+      "Show exactly seven raccoons: seven separate, fully visible raccoons with clear gaps between them, no overlap, no merged bodies, and no extra raccoons.",
+      "Make the single croissant visibly stone: a gray carved stone croissant with rough stone texture, sculpture-like surface, and no pastry-like flaky brown material."
+    ],
+    "retry_prompt": "A clear side-view scene with exactly one lion, exactly seven raccoons, and exactly one croissant. The single lion is on the far left and is visibly checkered: its body is covered in a bold black-and-white checkerboard pattern, and the checkered pattern appears only on the lion. The lion is chasing the raccoons, running and lunging toward them from behind. In front of the lion, place exactly seven separate raccoons in the middle-left of the image, all fully visible with clear gaps between each raccoon, fleeing away from the lion. All seven raccoons are to the left of the single croissant. Put the single croissant on the far right; it is clearly a gray carved stone croissant with rough stone texture, like a stone sculpture, while still shaped like a croissant. Keep every animal and the croissant unobstructed and easy to verify. No extra lions, no extra raccoons, and no extra croissants.",
+    "skill_revision": {
+      "new_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ],
+      "reason": "Use the same skill set but apply it more concretely: stronger attribute binding for the checkered lion and stone croissant, stricter quantity counting for seven visually separated raccoons, and clearer spatial layout for the lion chasing the raccoons while the raccoons remain left of the croissant."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 8,
+    "dataset": "geneval2",
+    "original_prompt": "a checkered lion chasing seven raccoons to the left of a stone croissant",
+    "prompt": "a checkered lion chasing seven raccoons to the left of a stone croissant",
+    "prompt_id": "geneval2_00581_7da6651a",
+    "sampling_bucket": "relation_action",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "position_spatial",
+      "relation_action",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 2,
+      "count": 3,
+      "object": 3,
+      "position": 1,
+      "verb": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "verb",
+      "count",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 581,
+    "vqa_list": [
+      [
+        "How many lions are in the image?",
+        "one"
+      ],
+      [
+        "Is the lion checkered?",
+        "Yes"
+      ],
+      [
+        "Are there any lions in the image?",
+        "Yes"
+      ],
+      [
+        "Is the lion chasing the raccoons?",
+        "Yes"
+      ],
+      [
+        "How many raccoons are in the image?",
+        "seven"
+      ],
+      [
+        "Are there any raccoons in the image?",
+        "Yes"
+      ],
+      [
+        "Are the raccoons to the left of the croissant?",
+        "Yes"
+      ],
+      [
+        "How many croissants are in the image?",
+        "one"
+      ],
+      [
+        "Is the croissant stone?",
+        "Yes"
+      ],
+      [
+        "Are there any croissants in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00581_7da6651a"
+}

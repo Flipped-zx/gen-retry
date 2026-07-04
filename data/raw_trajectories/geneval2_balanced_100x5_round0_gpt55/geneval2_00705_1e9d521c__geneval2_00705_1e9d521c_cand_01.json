@@ -1,0 +1,3312 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "count_mismatch",
+          "missing_object",
+          "relation_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many raccoons are in the image?",
+              "score": 1.2764863578798181e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.27649e-09",
+            "expected": "one",
+            "status": "failed",
+            "target": "How many raccoons are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the raccoon jumping over the koalas?",
+              "score": 1.4996492169870685e-07,
+              "skill": "verb"
+            },
+            "detected": "soft_score=1.49965e-07",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the raccoon jumping over the koalas?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many koalas are in the image?",
+              "score": 3.1221697193657195e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=3.12217e-08",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many koalas are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the koalas stone?",
+              "score": 6.516096094844048e-05,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=6.5161e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the koalas stone?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 10,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any koalas in the image?",
+              "score": 3.843367814976295e-09,
+              "skill": "object"
+            },
+            "detected": "soft_score=3.84337e-09",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any koalas in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many candles are in the image?",
+              "score": 1.0,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "four",
+            "status": "passed",
+            "target": "How many candles are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the candles yellow?",
+              "score": 0.9999999548163032,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the candles yellow?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any candles in the image?",
+              "score": 0.9999999893461791,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any candles in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the candles on top of the raccoon?",
+              "score": 0.9999723457294749,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.999972",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the candles on top of the raccoon?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the raccoon spotted?",
+              "score": 0.9999251672471061,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.999925",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Is the raccoon spotted?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any raccoons in the image?",
+              "score": 0.9999986940529197,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999999",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any raccoons in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00705_1e9d521c_cand_01",
+          "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+          "rows": [
+            {
+              "answer": "four",
+              "atom_count": 10,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00705_1e9d521c_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00000/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00000/samples/00001.png",
+              "prompt": "four yellow candles on top of a spotted raccoon jumping over four stone koalas",
+              "prompt_id": "geneval2_00705_1e9d521c",
+              "question": "How many candles are in the image?",
+              "score": 1.0000000269766776,
+              "skill": "count",
+              "source_index": 705
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00705_1e9d521c_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00000/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00000/samples/00001.png",
+              "prompt": "four yellow candles on top of a spotted raccoon jumping over four stone koalas",
+              "prompt_id": "geneval2_00705_1e9d521c",
+              "question": "Are the candles yellow?",
+              "score": 0.9999999548163032,
+              "skill": "attribute",
+              "source_index": 705
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00705_1e9d521c_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00000/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00000/samples/00001.png",
+              "prompt": "four yellow candles on top of a spotted raccoon jumping over four stone koalas",
+              "prompt_id": "geneval2_00705_1e9d521c",
+              "question": "Are there any candles in the image?",
+              "score": 0.9999999893461791,
+              "skill": "object",
+              "source_index": 705
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00705_1e9d521c_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00000/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00000/samples/00001.png",
+              "prompt": "four yellow candles on top of a spotted raccoon jumping over four stone koalas",
+              "prompt_id": "geneval2_00705_1e9d521c",
+              "question": "Are the candles on top of the raccoon?",
+              "score": 0.9999723457294749,
+              "skill": "position",
+              "source_index": 705
+            },
+            {
+              "answer": "one",
+              "atom_count": 10,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00705_1e9d521c_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00000/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00000/samples/00001.png",
+              "prompt": "four yellow candles on top of a spotted raccoon jumping over four stone koalas",
+              "prompt_id": "geneval2_00705_1e9d521c",
+              "question": "How many raccoons are in the image?",
+              "score": 1.2764863578798181e-09,
+              "skill": "count",
+              "source_index": 705
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00705_1e9d521c_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00000/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00000/samples/00001.png",
+              "prompt": "four yellow candles on top of a spotted raccoon jumping over four stone koalas",
+              "prompt_id": "geneval2_00705_1e9d521c",
+              "question": "Is the raccoon spotted?",
+              "score": 0.9999251672471061,
+              "skill": "attribute",
+              "source_index": 705
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00705_1e9d521c_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00000/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00000/samples/00001.png",
+              "prompt": "four yellow candles on top of a spotted raccoon jumping over four stone koalas",
+              "prompt_id": "geneval2_00705_1e9d521c",
+              "question": "Are there any raccoons in the image?",
+              "score": 0.9999986940529197,
+              "skill": "object",
+              "source_index": 705
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00705_1e9d521c_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00000/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00000/samples/00001.png",
+              "prompt": "four yellow candles on top of a spotted raccoon jumping over four stone koalas",
+              "prompt_id": "geneval2_00705_1e9d521c",
+              "question": "Is the raccoon jumping over the koalas?",
+              "score": 1.4996492169870685e-07,
+              "skill": "verb",
+              "source_index": 705
+            },
+            {
+              "answer": "four",
+              "atom_count": 10,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00705_1e9d521c_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00000/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00000/samples/00001.png",
+              "prompt": "four yellow candles on top of a spotted raccoon jumping over four stone koalas",
+              "prompt_id": "geneval2_00705_1e9d521c",
+              "question": "How many koalas are in the image?",
+              "score": 3.1221697193657195e-08,
+              "skill": "count",
+              "source_index": 705
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00705_1e9d521c_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00000/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00000/samples/00001.png",
+              "prompt": "four yellow candles on top of a spotted raccoon jumping over four stone koalas",
+              "prompt_id": "geneval2_00705_1e9d521c",
+              "question": "Are the koalas stone?",
+              "score": 6.516096094844048e-05,
+              "skill": "attribute",
+              "source_index": 705
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 10,
+              "candidate_id": "geneval2_00705_1e9d521c_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00000/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00000/samples/00001.png",
+              "prompt": "four yellow candles on top of a spotted raccoon jumping over four stone koalas",
+              "prompt_id": "geneval2_00705_1e9d521c",
+              "question": "Are there any koalas in the image?",
+              "score": 3.843367814976295e-09,
+              "skill": "object",
+              "source_index": 705
+            }
+          ],
+          "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.5454510453144913,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 1,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00705_1e9d521c.json",
+          "manifest_prompt_index": 0,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00705_1e9d521c"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00705_1e9d521c_cand_01",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00000/samples/00001.png",
+        "prompt_used": "A clear scene with exactly one spotted raccoon in mid-jump, jumping over exactly four stone koalas below it. Exactly four yellow candles are placed on top of the raccoon, all upright, distinct, and fully visible. The four stone koalas are separate from each other and clearly visible underneath the jumping raccoon. Keep the raccoon, all four yellow candles, and all four stone koalas unobstructed, with no extra candles, no extra raccoons, and no extra koalas.",
+        "seed": 1001
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly four yellow candles, exactly one spotted raccoon, and exactly four stone koalas.",
+          "Bind yellow color only to the four candles; bind spotted pattern to the single raccoon; bind stone material to all four koalas.",
+          "Place the four yellow candles visibly on top of the raccoon, separated enough to count individually.",
+          "Show the raccoon in a jumping pose above the four stone koalas, with clear vertical separation indicating it is jumping over them.",
+          "Arrange the four stone koalas separately and visibly below the raccoon so each koala can be counted.",
+          "Avoid occlusion between the candles, raccoon, and koalas; keep all required objects fully visible."
+        ],
+        "generation_strategy": "Create a clear multi-object composition with strict counting: four distinct yellow candles positioned on top of one spotted raccoon, and the raccoon jumping over four distinct stone koalas arranged below. Emphasize visibility, separation, and attribute binding so counts and relationships are unambiguous.",
+        "initial_prompt": "A clear scene with exactly one spotted raccoon in mid-jump, jumping over exactly four stone koalas below it. Exactly four yellow candles are placed on top of the raccoon, all upright, distinct, and fully visible. The four stone koalas are separate from each other and clearly visible underneath the jumping raccoon. Keep the raccoon, all four yellow candles, and all four stone koalas unobstructed, with no extra candles, no extra raccoons, and no extra koalas.",
+        "parsed_constraints": {
+          "attributes": {
+            "candles": [
+              "yellow"
+            ],
+            "koalas": [
+              "stone"
+            ],
+            "raccoon": [
+              "spotted"
+            ]
+          },
+          "counts": {
+            "candles": 4,
+            "koalas": 4,
+            "raccoon": 1
+          },
+          "objects": [
+            "candles",
+            "raccoon",
+            "koalas"
+          ],
+          "relations": [
+            "four yellow candles are on top of the spotted raccoon",
+            "the spotted raccoon is jumping over four stone koalas"
+          ]
+        },
+        "selected_skills": [
+          "quantity_counting",
+          "object_presence",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly four yellow candles, exactly one spotted raccoon, and exactly four stone koalas.",
+          "Bind yellow color only to the four candles; bind spotted pattern to the single raccoon; bind stone material to all four koalas.",
+          "Place the four yellow candles visibly on top of the raccoon, separated enough to count individually.",
+          "Show the raccoon in a jumping pose above the four stone koalas, with clear vertical separation indicating it is jumping over them.",
+          "Arrange the four stone koalas separately and visibly below the raccoon so each koala can be counted.",
+          "Avoid occlusion between the candles, raccoon, and koalas; keep all required objects fully visible."
+        ],
+        "generation_strategy": "Create a clear multi-object composition with strict counting: four distinct yellow candles positioned on top of one spotted raccoon, and the raccoon jumping over four distinct stone koalas arranged below. Emphasize visibility, separation, and attribute binding so counts and relationships are unambiguous.",
+        "initial_prompt": "A clear scene with exactly one spotted raccoon in mid-jump, jumping over exactly four stone koalas below it. Exactly four yellow candles are placed on top of the raccoon, all upright, distinct, and fully visible. The four stone koalas are separate from each other and clearly visible underneath the jumping raccoon. Keep the raccoon, all four yellow candles, and all four stone koalas unobstructed, with no extra candles, no extra raccoons, and no extra koalas.",
+        "parsed_constraints": {
+          "attributes": {
+            "candles": [
+              "yellow"
+            ],
+            "koalas": [
+              "stone"
+            ],
+            "raccoon": [
+              "spotted"
+            ]
+          },
+          "counts": {
+            "candles": 4,
+            "koalas": 4,
+            "raccoon": 1
+          },
+          "objects": [
+            "candles",
+            "raccoon",
+            "koalas"
+          ],
+          "relations": [
+            "four yellow candles are on top of the spotted raccoon",
+            "the spotted raccoon is jumping over four stone koalas"
+          ]
+        },
+        "selected_skills": [
+          "quantity_counting",
+          "object_presence",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many raccoons are in the image?",
+                "score": 1.2764863578798181e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.27649e-09",
+              "expected": "one",
+              "status": "failed",
+              "target": "How many raccoons are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the raccoon jumping over the koalas?",
+                "score": 1.4996492169870685e-07,
+                "skill": "verb"
+              },
+              "detected": "soft_score=1.49965e-07",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the raccoon jumping over the koalas?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many koalas are in the image?",
+                "score": 3.1221697193657195e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=3.12217e-08",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many koalas are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the koalas stone?",
+                "score": 6.516096094844048e-05,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=6.5161e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the koalas stone?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 10,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any koalas in the image?",
+                "score": 3.843367814976295e-09,
+                "skill": "object"
+              },
+              "detected": "soft_score=3.84337e-09",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any koalas in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00000/samples/00001.png",
+          "prompt": "A clear scene with exactly one spotted raccoon in mid-jump, jumping over exactly four stone koalas below it. Exactly four yellow candles are placed on top of the raccoon, all upright, distinct, and fully visible. The four stone koalas are separate from each other and clearly visible underneath the jumping raccoon. Keep the raccoon, all four yellow candles, and all four stone koalas unobstructed, with no extra candles, no extra raccoons, and no extra koalas.",
+          "round": 0,
+          "score": 0.5454510453144913
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00705_1e9d521c_cand_01",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "attribute_mismatch",
+            "count_mismatch",
+            "missing_object",
+            "relation_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many raccoons are in the image?",
+                "score": 1.2764863578798181e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.27649e-09",
+              "expected": "one",
+              "status": "failed",
+              "target": "How many raccoons are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the raccoon jumping over the koalas?",
+                "score": 1.4996492169870685e-07,
+                "skill": "verb"
+              },
+              "detected": "soft_score=1.49965e-07",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the raccoon jumping over the koalas?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many koalas are in the image?",
+                "score": 3.1221697193657195e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=3.12217e-08",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many koalas are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the koalas stone?",
+                "score": 6.516096094844048e-05,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=6.5161e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the koalas stone?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 10,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any koalas in the image?",
+                "score": 3.843367814976295e-09,
+                "skill": "object"
+              },
+              "detected": "soft_score=3.84337e-09",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any koalas in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many candles are in the image?",
+                "score": 1.0,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "four",
+              "status": "passed",
+              "target": "How many candles are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the candles yellow?",
+                "score": 0.9999999548163032,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the candles yellow?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any candles in the image?",
+                "score": 0.9999999893461791,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any candles in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the candles on top of the raccoon?",
+                "score": 0.9999723457294749,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.999972",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the candles on top of the raccoon?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the raccoon spotted?",
+                "score": 0.9999251672471061,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.999925",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Is the raccoon spotted?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any raccoons in the image?",
+                "score": 0.9999986940529197,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999999",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any raccoons in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.5454510453144913,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many raccoons are in the image?",
+                  "score": 1.2764863578798181e-09,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1.27649e-09",
+                "expected": "one",
+                "status": "failed",
+                "target": "How many raccoons are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Is the raccoon jumping over the koalas?",
+                  "score": 1.4996492169870685e-07,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=1.49965e-07",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Is the raccoon jumping over the koalas?",
+                "type": "relation_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many koalas are in the image?",
+                  "score": 3.1221697193657195e-08,
+                  "skill": "count"
+                },
+                "detected": "soft_score=3.12217e-08",
+                "expected": "four",
+                "status": "failed",
+                "target": "How many koalas are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the koalas stone?",
+                  "score": 6.516096094844048e-05,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=6.5161e-05",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the koalas stone?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 10,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any koalas in the image?",
+                  "score": 3.843367814976295e-09,
+                  "skill": "object"
+                },
+                "detected": "soft_score=3.84337e-09",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are there any koalas in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00000/samples/00001.png",
+            "prompt": "A clear scene with exactly one spotted raccoon in mid-jump, jumping over exactly four stone koalas below it. Exactly four yellow candles are placed on top of the raccoon, all upright, distinct, and fully visible. The four stone koalas are separate from each other and clearly visible underneath the jumping raccoon. Keep the raccoon, all four yellow candles, and all four stone koalas unobstructed, with no extra candles, no extra raccoons, and no extra koalas.",
+            "round": 0,
+            "score": 0.5454510453144913
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many raccoons are in the image?",
+                "score": 1.2764863578798181e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.27649e-09",
+              "expected": "one",
+              "status": "failed",
+              "target": "How many raccoons are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the raccoon jumping over the koalas?",
+                "score": 1.4996492169870685e-07,
+                "skill": "verb"
+              },
+              "detected": "soft_score=1.49965e-07",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the raccoon jumping over the koalas?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many koalas are in the image?",
+                "score": 3.1221697193657195e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=3.12217e-08",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many koalas are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the koalas stone?",
+                "score": 6.516096094844048e-05,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=6.5161e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the koalas stone?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 10,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any koalas in the image?",
+                "score": 3.843367814976295e-09,
+                "skill": "object"
+              },
+              "detected": "soft_score=3.84337e-09",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any koalas in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "attribute_mismatch",
+            "count_mismatch",
+            "missing_object",
+            "relation_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many raccoons are in the image?",
+                "score": 1.2764863578798181e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.27649e-09",
+              "expected": "one",
+              "status": "failed",
+              "target": "How many raccoons are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the raccoon jumping over the koalas?",
+                "score": 1.4996492169870685e-07,
+                "skill": "verb"
+              },
+              "detected": "soft_score=1.49965e-07",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the raccoon jumping over the koalas?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many koalas are in the image?",
+                "score": 3.1221697193657195e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=3.12217e-08",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many koalas are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the koalas stone?",
+                "score": 6.516096094844048e-05,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=6.5161e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the koalas stone?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 10,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any koalas in the image?",
+                "score": 3.843367814976295e-09,
+                "skill": "object"
+              },
+              "detected": "soft_score=3.84337e-09",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any koalas in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many candles are in the image?",
+                "score": 1.0,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "four",
+              "status": "passed",
+              "target": "How many candles are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the candles yellow?",
+                "score": 0.9999999548163032,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the candles yellow?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any candles in the image?",
+                "score": 0.9999999893461791,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any candles in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the candles on top of the raccoon?",
+                "score": 0.9999723457294749,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.999972",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the candles on top of the raccoon?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the raccoon spotted?",
+                "score": 0.9999251672471061,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.999925",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Is the raccoon spotted?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any raccoons in the image?",
+                "score": 0.9999986940529197,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999999",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any raccoons in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.5454510453144913,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "four yellow candles on top of a spotted raccoon jumping over four stone koalas",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many raccoons are in the image?",
+              "score": 1.2764863578798181e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.27649e-09",
+            "expected": "one",
+            "status": "failed",
+            "target": "How many raccoons are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the raccoon jumping over the koalas?",
+              "score": 1.4996492169870685e-07,
+              "skill": "verb"
+            },
+            "detected": "soft_score=1.49965e-07",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the raccoon jumping over the koalas?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many koalas are in the image?",
+              "score": 3.1221697193657195e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=3.12217e-08",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many koalas are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the koalas stone?",
+              "score": 6.516096094844048e-05,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=6.5161e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the koalas stone?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 10,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any koalas in the image?",
+              "score": 3.843367814976295e-09,
+              "skill": "object"
+            },
+            "detected": "soft_score=3.84337e-09",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any koalas in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly four yellow candles, exactly one spotted raccoon, and exactly four stone koalas.",
+            "Bind yellow color only to the four candles; bind spotted pattern to the single raccoon; bind stone material to all four koalas.",
+            "Place the four yellow candles visibly on top of the raccoon, separated enough to count individually.",
+            "Show the raccoon in a jumping pose above the four stone koalas, with clear vertical separation indicating it is jumping over them.",
+            "Arrange the four stone koalas separately and visibly below the raccoon so each koala can be counted.",
+            "Avoid occlusion between the candles, raccoon, and koalas; keep all required objects fully visible."
+          ],
+          "generation_strategy": "Create a clear multi-object composition with strict counting: four distinct yellow candles positioned on top of one spotted raccoon, and the raccoon jumping over four distinct stone koalas arranged below. Emphasize visibility, separation, and attribute binding so counts and relationships are unambiguous.",
+          "initial_prompt": "A clear scene with exactly one spotted raccoon in mid-jump, jumping over exactly four stone koalas below it. Exactly four yellow candles are placed on top of the raccoon, all upright, distinct, and fully visible. The four stone koalas are separate from each other and clearly visible underneath the jumping raccoon. Keep the raccoon, all four yellow candles, and all four stone koalas unobstructed, with no extra candles, no extra raccoons, and no extra koalas.",
+          "parsed_constraints": {
+            "attributes": {
+              "candles": [
+                "yellow"
+              ],
+              "koalas": [
+                "stone"
+              ],
+              "raccoon": [
+                "spotted"
+              ]
+            },
+            "counts": {
+              "candles": 4,
+              "koalas": 4,
+              "raccoon": 1
+            },
+            "objects": [
+              "candles",
+              "raccoon",
+              "koalas"
+            ],
+            "relations": [
+              "four yellow candles are on top of the spotted raccoon",
+              "the spotted raccoon is jumping over four stone koalas"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "object_presence",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly four yellow candles, exactly one spotted raccoon, and exactly four stone koalas.",
+            "Bind yellow color only to the four candles; bind spotted pattern to the single raccoon; bind stone material to all four koalas.",
+            "Place the four yellow candles visibly on top of the raccoon, separated enough to count individually.",
+            "Show the raccoon in a jumping pose above the four stone koalas, with clear vertical separation indicating it is jumping over them.",
+            "Arrange the four stone koalas separately and visibly below the raccoon so each koala can be counted.",
+            "Avoid occlusion between the candles, raccoon, and koalas; keep all required objects fully visible."
+          ],
+          "generation_strategy": "Create a clear multi-object composition with strict counting: four distinct yellow candles positioned on top of one spotted raccoon, and the raccoon jumping over four distinct stone koalas arranged below. Emphasize visibility, separation, and attribute binding so counts and relationships are unambiguous.",
+          "initial_prompt": "A clear scene with exactly one spotted raccoon in mid-jump, jumping over exactly four stone koalas below it. Exactly four yellow candles are placed on top of the raccoon, all upright, distinct, and fully visible. The four stone koalas are separate from each other and clearly visible underneath the jumping raccoon. Keep the raccoon, all four yellow candles, and all four stone koalas unobstructed, with no extra candles, no extra raccoons, and no extra koalas.",
+          "parsed_constraints": {
+            "attributes": {
+              "candles": [
+                "yellow"
+              ],
+              "koalas": [
+                "stone"
+              ],
+              "raccoon": [
+                "spotted"
+              ]
+            },
+            "counts": {
+              "candles": 4,
+              "koalas": 4,
+              "raccoon": 1
+            },
+            "objects": [
+              "candles",
+              "raccoon",
+              "koalas"
+            ],
+            "relations": [
+              "four yellow candles are on top of the spotted raccoon",
+              "the spotted raccoon is jumping over four stone koalas"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "object_presence",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_prompt": "A clear scene with exactly one spotted raccoon in mid-jump, jumping over exactly four stone koalas below it. Exactly four yellow candles are placed on top of the raccoon, all upright, distinct, and fully visible. The four stone koalas are separate from each other and clearly visible underneath the jumping raccoon. Keep the raccoon, all four yellow candles, and all four stone koalas unobstructed, with no extra candles, no extra raccoons, and no extra koalas.",
+        "previous_selected_skills": [
+          "quantity_counting",
+          "object_presence",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ],
+        "prompt_id": "geneval2_00705_1e9d521c",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "attribute_mismatch",
+              "count_mismatch",
+              "missing_object",
+              "relation_mismatch"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many raccoons are in the image?",
+                  "score": 1.2764863578798181e-09,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1.27649e-09",
+                "expected": "one",
+                "status": "failed",
+                "target": "How many raccoons are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Is the raccoon jumping over the koalas?",
+                  "score": 1.4996492169870685e-07,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=1.49965e-07",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Is the raccoon jumping over the koalas?",
+                "type": "relation_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many koalas are in the image?",
+                  "score": 3.1221697193657195e-08,
+                  "skill": "count"
+                },
+                "detected": "soft_score=3.12217e-08",
+                "expected": "four",
+                "status": "failed",
+                "target": "How many koalas are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the koalas stone?",
+                  "score": 6.516096094844048e-05,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=6.5161e-05",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the koalas stone?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 10,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any koalas in the image?",
+                  "score": 3.843367814976295e-09,
+                  "skill": "object"
+                },
+                "detected": "soft_score=3.84337e-09",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are there any koalas in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many candles are in the image?",
+                  "score": 1.0,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1",
+                "expected": "four",
+                "status": "passed",
+                "target": "How many candles are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the candles yellow?",
+                  "score": 0.9999999548163032,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the candles yellow?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any candles in the image?",
+                  "score": 0.9999999893461791,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any candles in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the candles on top of the raccoon?",
+                  "score": 0.9999723457294749,
+                  "skill": "position"
+                },
+                "detected": "soft_score=0.999972",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the candles on top of the raccoon?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Is the raccoon spotted?",
+                  "score": 0.9999251672471061,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.999925",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Is the raccoon spotted?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any raccoons in the image?",
+                  "score": 0.9999986940529197,
+                  "skill": "object"
+                },
+                "detected": "soft_score=0.999999",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any raccoons in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly four yellow candles, exactly one spotted raccoon, and exactly four stone koalas.",
+                "Bind yellow color only to the four candles; bind spotted pattern to the single raccoon; bind stone material to all four koalas.",
+                "Place the four yellow candles visibly on top of the raccoon, separated enough to count individually.",
+                "Show the raccoon in a jumping pose above the four stone koalas, with clear vertical separation indicating it is jumping over them.",
+                "Arrange the four stone koalas separately and visibly below the raccoon so each koala can be counted.",
+                "Avoid occlusion between the candles, raccoon, and koalas; keep all required objects fully visible."
+              ],
+              "generation_strategy": "Create a clear multi-object composition with strict counting: four distinct yellow candles positioned on top of one spotted raccoon, and the raccoon jumping over four distinct stone koalas arranged below. Emphasize visibility, separation, and attribute binding so counts and relationships are unambiguous.",
+              "initial_prompt": "A clear scene with exactly one spotted raccoon in mid-jump, jumping over exactly four stone koalas below it. Exactly four yellow candles are placed on top of the raccoon, all upright, distinct, and fully visible. The four stone koalas are separate from each other and clearly visible underneath the jumping raccoon. Keep the raccoon, all four yellow candles, and all four stone koalas unobstructed, with no extra candles, no extra raccoons, and no extra koalas.",
+              "parsed_constraints": {
+                "attributes": {
+                  "candles": [
+                    "yellow"
+                  ],
+                  "koalas": [
+                    "stone"
+                  ],
+                  "raccoon": [
+                    "spotted"
+                  ]
+                },
+                "counts": {
+                  "candles": 4,
+                  "koalas": 4,
+                  "raccoon": 1
+                },
+                "objects": [
+                  "candles",
+                  "raccoon",
+                  "koalas"
+                ],
+                "relations": [
+                  "four yellow candles are on top of the spotted raccoon",
+                  "the spotted raccoon is jumping over four stone koalas"
+                ]
+              },
+              "selected_skills": [
+                "quantity_counting",
+                "object_presence",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly four yellow candles, exactly one spotted raccoon, and exactly four stone koalas.",
+                "Bind yellow color only to the four candles; bind spotted pattern to the single raccoon; bind stone material to all four koalas.",
+                "Place the four yellow candles visibly on top of the raccoon, separated enough to count individually.",
+                "Show the raccoon in a jumping pose above the four stone koalas, with clear vertical separation indicating it is jumping over them.",
+                "Arrange the four stone koalas separately and visibly below the raccoon so each koala can be counted.",
+                "Avoid occlusion between the candles, raccoon, and koalas; keep all required objects fully visible."
+              ],
+              "generation_strategy": "Create a clear multi-object composition with strict counting: four distinct yellow candles positioned on top of one spotted raccoon, and the raccoon jumping over four distinct stone koalas arranged below. Emphasize visibility, separation, and attribute binding so counts and relationships are unambiguous.",
+              "initial_prompt": "A clear scene with exactly one spotted raccoon in mid-jump, jumping over exactly four stone koalas below it. Exactly four yellow candles are placed on top of the raccoon, all upright, distinct, and fully visible. The four stone koalas are separate from each other and clearly visible underneath the jumping raccoon. Keep the raccoon, all four yellow candles, and all four stone koalas unobstructed, with no extra candles, no extra raccoons, and no extra koalas.",
+              "parsed_constraints": {
+                "attributes": {
+                  "candles": [
+                    "yellow"
+                  ],
+                  "koalas": [
+                    "stone"
+                  ],
+                  "raccoon": [
+                    "spotted"
+                  ]
+                },
+                "counts": {
+                  "candles": 4,
+                  "koalas": 4,
+                  "raccoon": 1
+                },
+                "objects": [
+                  "candles",
+                  "raccoon",
+                  "koalas"
+                ],
+                "relations": [
+                  "four yellow candles are on top of the spotted raccoon",
+                  "the spotted raccoon is jumping over four stone koalas"
+                ]
+              },
+              "selected_skills": [
+                "quantity_counting",
+                "object_presence",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "prompt_used": "A clear scene with exactly one spotted raccoon in mid-jump, jumping over exactly four stone koalas below it. Exactly four yellow candles are placed on top of the raccoon, all upright, distinct, and fully visible. The four stone koalas are separate from each other and clearly visible underneath the jumping raccoon. Keep the raccoon, all four yellow candles, and all four stone koalas unobstructed, with no extra candles, no extra raccoons, and no extra koalas.",
+            "round": 0,
+            "score": 0.5454510453144913,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 4,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many raccoons are in the image?",
+                    "score": 1.2764863578798181e-09,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=1.27649e-09",
+                  "expected": "one",
+                  "status": "failed",
+                  "target": "How many raccoons are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 7,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Is the raccoon jumping over the koalas?",
+                    "score": 1.4996492169870685e-07,
+                    "skill": "verb"
+                  },
+                  "detected": "soft_score=1.49965e-07",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Is the raccoon jumping over the koalas?",
+                  "type": "relation_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 8,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many koalas are in the image?",
+                    "score": 3.1221697193657195e-08,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=3.12217e-08",
+                  "expected": "four",
+                  "status": "failed",
+                  "target": "How many koalas are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 9,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the koalas stone?",
+                    "score": 6.516096094844048e-05,
+                    "skill": "attribute"
+                  },
+                  "detected": "soft_score=6.5161e-05",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the koalas stone?",
+                  "type": "attribute_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 10,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are there any koalas in the image?",
+                    "score": 3.843367814976295e-09,
+                    "skill": "object"
+                  },
+                  "detected": "soft_score=3.84337e-09",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are there any koalas in the image?",
+                  "type": "missing_object"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00705_1e9d521c"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many raccoons are in the image?",
+              "score": 1.2764863578798181e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.27649e-09",
+            "expected": "one",
+            "status": "failed",
+            "target": "How many raccoons are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the raccoon jumping over the koalas?",
+              "score": 1.4996492169870685e-07,
+              "skill": "verb"
+            },
+            "detected": "soft_score=1.49965e-07",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the raccoon jumping over the koalas?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many koalas are in the image?",
+              "score": 3.1221697193657195e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=3.12217e-08",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many koalas are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the koalas stone?",
+              "score": 6.516096094844048e-05,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=6.5161e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the koalas stone?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 10,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any koalas in the image?",
+              "score": 3.843367814976295e-09,
+              "skill": "object"
+            },
+            "detected": "soft_score=3.84337e-09",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any koalas in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00705_1e9d521c_cand_01",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly four yellow candles, exactly one spotted raccoon, and exactly four stone koalas.",
+      "Bind yellow color only to the four candles; bind spotted pattern to the single raccoon; bind stone material to all four koalas.",
+      "Place the four yellow candles visibly on top of the raccoon, separated enough to count individually.",
+      "Show the raccoon in a jumping pose above the four stone koalas, with clear vertical separation indicating it is jumping over them.",
+      "Arrange the four stone koalas separately and visibly below the raccoon so each koala can be counted.",
+      "Avoid occlusion between the candles, raccoon, and koalas; keep all required objects fully visible."
+    ],
+    "generation_strategy": "Create a clear multi-object composition with strict counting: four distinct yellow candles positioned on top of one spotted raccoon, and the raccoon jumping over four distinct stone koalas arranged below. Emphasize visibility, separation, and attribute binding so counts and relationships are unambiguous.",
+    "initial_prompt": "A clear scene with exactly one spotted raccoon in mid-jump, jumping over exactly four stone koalas below it. Exactly four yellow candles are placed on top of the raccoon, all upright, distinct, and fully visible. The four stone koalas are separate from each other and clearly visible underneath the jumping raccoon. Keep the raccoon, all four yellow candles, and all four stone koalas unobstructed, with no extra candles, no extra raccoons, and no extra koalas.",
+    "parsed_constraints": {
+      "attributes": {
+        "candles": [
+          "yellow"
+        ],
+        "koalas": [
+          "stone"
+        ],
+        "raccoon": [
+          "spotted"
+        ]
+      },
+      "counts": {
+        "candles": 4,
+        "koalas": 4,
+        "raccoon": 1
+      },
+      "objects": [
+        "candles",
+        "raccoon",
+        "koalas"
+      ],
+      "relations": [
+        "four yellow candles are on top of the spotted raccoon",
+        "the spotted raccoon is jumping over four stone koalas"
+      ]
+    },
+    "selected_skills": [
+      "quantity_counting",
+      "object_presence",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image passed the candle count, yellow candle color, candle-on-raccoon placement, spotted raccoon attribute, and raccoon presence checks, but failed to verify exactly one raccoon, the raccoon jumping over the koalas, the presence of koalas, exactly four koalas, and the stone material of the koalas. The main repair is to make the four stone koalas large, separated, and unmistakably visible as the lower row of the composition, while keeping a single spotted raccoon clearly airborne above them with the four yellow candles still on top of that one raccoon.",
+    "expected_improvement": [
+      "Exactly one raccoon should be easier to verify by describing a single central raccoon only and forbidding any second raccoon or duplicate raccoon parts.",
+      "The jumping-over relation should be clearer by using a simple vertical layout: one airborne raccoon above, four koalas directly below, with visible empty space between them.",
+      "Koala presence and count should improve by placing four separate full-body stone koalas in a straight row underneath the raccoon, with no overlap or merging.",
+      "The stone attribute should improve by explicitly binding gray carved stone material to each of the four koalas.",
+      "Previously passed candle constraints should be preserved by retaining exactly four distinct yellow candles on top of the single spotted raccoon."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "relation_mismatch",
+      "attribute_mismatch",
+      "missing_object"
+    ],
+    "preserve_constraints": [
+      "Keep exactly four candles in the image.",
+      "Make all four candles yellow.",
+      "Keep the four yellow candles visibly on top of the raccoon, not beside it or below it.",
+      "Keep the raccoon visibly spotted.",
+      "Keep a raccoon present and fully visible."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt mentioned the four stone koalas below the raccoon, but the composition likely overemphasized the raccoon and candles and did not make the koalas visually dominant, separate, and countable enough. It also did not make the single-raccoon count robust against duplicated or ambiguous raccoon forms, and the jumping-over relation depended on a vague mid-jump description rather than a strict vertical layout.",
+      "error_source": "Insufficient object_presence, quantity_counting, attribute_binding, and spatial_layout emphasis for the koalas and the one-raccoon count."
+    },
+    "regeneration_strategy": "Use a simpler staged composition with one central airborne spotted raccoon in the upper-middle, four separate gray stone koalas in a clear row along the bottom directly underneath it, and four yellow candles balanced on top of the single raccoon. Prioritize separable silhouettes, full visibility, and explicit negative constraints against extra raccoons, koalas, or candles.",
+    "regression_risks": [
+      "The generator may drop or recolor some candles while adding clearer koalas.",
+      "The generator may place candles near the raccoon instead of on top of it.",
+      "The generator may create extra raccoons or merge the koalas together when trying to show motion.",
+      "The generator may render the koalas as living animals rather than stone statues."
+    ],
+    "repair_constraints": [
+      "Show exactly one spotted raccoon, a single complete raccoon only, with no second raccoon and no duplicate raccoon body or head.",
+      "Show the single spotted raccoon in an airborne jumping pose above the koalas.",
+      "Place exactly four koalas directly below the raccoon, arranged as four separate visible figures in a row, with space between each koala so all four can be counted.",
+      "Make each of the four koalas clearly stone: gray carved stone texture, statue-like material, and the stone attribute bound to every koala.",
+      "Make the spatial relation unambiguous: the raccoon is above and jumping over the four stone koalas below it.",
+      "Do not include any extra koalas, extra raccoons, or extra candles."
+    ],
+    "retry_prompt": "A clear simple scene with exactly one spotted raccoon, one single complete raccoon only, in an airborne jumping pose in the upper middle of the image. The raccoon is jumping over exactly four stone koalas directly below it. The four koalas are gray carved stone koala statues, arranged in a straight row along the bottom, separate from one another, fully visible, and countable as four distinct koalas. Exactly four yellow candles are on top of the single spotted raccoon, all upright, distinct, and fully visible. Keep the raccoon above the koalas with visible empty space showing it is jumping over them. No extra raccoons, no extra koalas, no extra candles, no merged animals, and no hidden or cropped required objects.",
+    "skill_revision": {
+      "new_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same skill set but shift emphasis toward object_presence and quantity_counting for the four koalas and exactly one raccoon, plus stronger spatial_layout and attribute_binding for the raccoon jumping over four gray stone koala statues."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many raccoons are in the image?",
+            "score": 1.2764863578798181e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.27649e-09",
+          "expected": "one",
+          "status": "failed",
+          "target": "How many raccoons are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the raccoon jumping over the koalas?",
+            "score": 1.4996492169870685e-07,
+            "skill": "verb"
+          },
+          "detected": "soft_score=1.49965e-07",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the raccoon jumping over the koalas?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many koalas are in the image?",
+            "score": 3.1221697193657195e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=3.12217e-08",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many koalas are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the koalas stone?",
+            "score": 6.516096094844048e-05,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=6.5161e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the koalas stone?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 10,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any koalas in the image?",
+            "score": 3.843367814976295e-09,
+            "skill": "object"
+          },
+          "detected": "soft_score=3.84337e-09",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any koalas in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00000/samples/00001.png",
+      "prompt": "A clear scene with exactly one spotted raccoon in mid-jump, jumping over exactly four stone koalas below it. Exactly four yellow candles are placed on top of the raccoon, all upright, distinct, and fully visible. The four stone koalas are separate from each other and clearly visible underneath the jumping raccoon. Keep the raccoon, all four yellow candles, and all four stone koalas unobstructed, with no extra candles, no extra raccoons, and no extra koalas.",
+      "round": 0,
+      "score": 0.5454510453144913
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00705_1e9d521c_cand_01",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "count_mismatch",
+        "missing_object",
+        "relation_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many raccoons are in the image?",
+            "score": 1.2764863578798181e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.27649e-09",
+          "expected": "one",
+          "status": "failed",
+          "target": "How many raccoons are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the raccoon jumping over the koalas?",
+            "score": 1.4996492169870685e-07,
+            "skill": "verb"
+          },
+          "detected": "soft_score=1.49965e-07",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the raccoon jumping over the koalas?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many koalas are in the image?",
+            "score": 3.1221697193657195e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=3.12217e-08",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many koalas are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the koalas stone?",
+            "score": 6.516096094844048e-05,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=6.5161e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the koalas stone?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 10,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any koalas in the image?",
+            "score": 3.843367814976295e-09,
+            "skill": "object"
+          },
+          "detected": "soft_score=3.84337e-09",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any koalas in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many candles are in the image?",
+            "score": 1.0,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "four",
+          "status": "passed",
+          "target": "How many candles are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the candles yellow?",
+            "score": 0.9999999548163032,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the candles yellow?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any candles in the image?",
+            "score": 0.9999999893461791,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any candles in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the candles on top of the raccoon?",
+            "score": 0.9999723457294749,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.999972",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the candles on top of the raccoon?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the raccoon spotted?",
+            "score": 0.9999251672471061,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.999925",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the raccoon spotted?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any raccoons in the image?",
+            "score": 0.9999986940529197,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999999",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any raccoons in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.5454510453144913,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many raccoons are in the image?",
+              "score": 1.2764863578798181e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.27649e-09",
+            "expected": "one",
+            "status": "failed",
+            "target": "How many raccoons are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the raccoon jumping over the koalas?",
+              "score": 1.4996492169870685e-07,
+              "skill": "verb"
+            },
+            "detected": "soft_score=1.49965e-07",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the raccoon jumping over the koalas?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many koalas are in the image?",
+              "score": 3.1221697193657195e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=3.12217e-08",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many koalas are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the koalas stone?",
+              "score": 6.516096094844048e-05,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=6.5161e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the koalas stone?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 10,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any koalas in the image?",
+              "score": 3.843367814976295e-09,
+              "skill": "object"
+            },
+            "detected": "soft_score=3.84337e-09",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any koalas in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00000/samples/00001.png",
+        "prompt": "A clear scene with exactly one spotted raccoon in mid-jump, jumping over exactly four stone koalas below it. Exactly four yellow candles are placed on top of the raccoon, all upright, distinct, and fully visible. The four stone koalas are separate from each other and clearly visible underneath the jumping raccoon. Keep the raccoon, all four yellow candles, and all four stone koalas unobstructed, with no extra candles, no extra raccoons, and no extra koalas.",
+        "round": 0,
+        "score": 0.5454510453144913
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many raccoons are in the image?",
+            "score": 1.2764863578798181e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.27649e-09",
+          "expected": "one",
+          "status": "failed",
+          "target": "How many raccoons are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the raccoon jumping over the koalas?",
+            "score": 1.4996492169870685e-07,
+            "skill": "verb"
+          },
+          "detected": "soft_score=1.49965e-07",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the raccoon jumping over the koalas?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many koalas are in the image?",
+            "score": 3.1221697193657195e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=3.12217e-08",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many koalas are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the koalas stone?",
+            "score": 6.516096094844048e-05,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=6.5161e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the koalas stone?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 10,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any koalas in the image?",
+            "score": 3.843367814976295e-09,
+            "skill": "object"
+          },
+          "detected": "soft_score=3.84337e-09",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any koalas in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "count_mismatch",
+        "missing_object",
+        "relation_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many raccoons are in the image?",
+            "score": 1.2764863578798181e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.27649e-09",
+          "expected": "one",
+          "status": "failed",
+          "target": "How many raccoons are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the raccoon jumping over the koalas?",
+            "score": 1.4996492169870685e-07,
+            "skill": "verb"
+          },
+          "detected": "soft_score=1.49965e-07",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the raccoon jumping over the koalas?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many koalas are in the image?",
+            "score": 3.1221697193657195e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=3.12217e-08",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many koalas are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the koalas stone?",
+            "score": 6.516096094844048e-05,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=6.5161e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the koalas stone?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 10,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any koalas in the image?",
+            "score": 3.843367814976295e-09,
+            "skill": "object"
+          },
+          "detected": "soft_score=3.84337e-09",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any koalas in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many candles are in the image?",
+            "score": 1.0,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "four",
+          "status": "passed",
+          "target": "How many candles are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the candles yellow?",
+            "score": 0.9999999548163032,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the candles yellow?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any candles in the image?",
+            "score": 0.9999999893461791,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any candles in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the candles on top of the raccoon?",
+            "score": 0.9999723457294749,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.999972",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the candles on top of the raccoon?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the raccoon spotted?",
+            "score": 0.9999251672471061,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.999925",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the raccoon spotted?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any raccoons in the image?",
+            "score": 0.9999986940529197,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999999",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any raccoons in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.5454510453144913,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "four yellow candles on top of a spotted raccoon jumping over four stone koalas",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many raccoons are in the image?",
+          "score": 1.2764863578798181e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.27649e-09",
+        "expected": "one",
+        "status": "failed",
+        "target": "How many raccoons are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the raccoon jumping over the koalas?",
+          "score": 1.4996492169870685e-07,
+          "skill": "verb"
+        },
+        "detected": "soft_score=1.49965e-07",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Is the raccoon jumping over the koalas?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many koalas are in the image?",
+          "score": 3.1221697193657195e-08,
+          "skill": "count"
+        },
+        "detected": "soft_score=3.12217e-08",
+        "expected": "four",
+        "status": "failed",
+        "target": "How many koalas are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 9,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the koalas stone?",
+          "score": 6.516096094844048e-05,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=6.5161e-05",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the koalas stone?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 10,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any koalas in the image?",
+          "score": 3.843367814976295e-09,
+          "skill": "object"
+        },
+        "detected": "soft_score=3.84337e-09",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are there any koalas in the image?",
+        "type": "missing_object"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly four yellow candles, exactly one spotted raccoon, and exactly four stone koalas.",
+        "Bind yellow color only to the four candles; bind spotted pattern to the single raccoon; bind stone material to all four koalas.",
+        "Place the four yellow candles visibly on top of the raccoon, separated enough to count individually.",
+        "Show the raccoon in a jumping pose above the four stone koalas, with clear vertical separation indicating it is jumping over them.",
+        "Arrange the four stone koalas separately and visibly below the raccoon so each koala can be counted.",
+        "Avoid occlusion between the candles, raccoon, and koalas; keep all required objects fully visible."
+      ],
+      "generation_strategy": "Create a clear multi-object composition with strict counting: four distinct yellow candles positioned on top of one spotted raccoon, and the raccoon jumping over four distinct stone koalas arranged below. Emphasize visibility, separation, and attribute binding so counts and relationships are unambiguous.",
+      "initial_prompt": "A clear scene with exactly one spotted raccoon in mid-jump, jumping over exactly four stone koalas below it. Exactly four yellow candles are placed on top of the raccoon, all upright, distinct, and fully visible. The four stone koalas are separate from each other and clearly visible underneath the jumping raccoon. Keep the raccoon, all four yellow candles, and all four stone koalas unobstructed, with no extra candles, no extra raccoons, and no extra koalas.",
+      "parsed_constraints": {
+        "attributes": {
+          "candles": [
+            "yellow"
+          ],
+          "koalas": [
+            "stone"
+          ],
+          "raccoon": [
+            "spotted"
+          ]
+        },
+        "counts": {
+          "candles": 4,
+          "koalas": 4,
+          "raccoon": 1
+        },
+        "objects": [
+          "candles",
+          "raccoon",
+          "koalas"
+        ],
+        "relations": [
+          "four yellow candles are on top of the spotted raccoon",
+          "the spotted raccoon is jumping over four stone koalas"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly four yellow candles, exactly one spotted raccoon, and exactly four stone koalas.",
+        "Bind yellow color only to the four candles; bind spotted pattern to the single raccoon; bind stone material to all four koalas.",
+        "Place the four yellow candles visibly on top of the raccoon, separated enough to count individually.",
+        "Show the raccoon in a jumping pose above the four stone koalas, with clear vertical separation indicating it is jumping over them.",
+        "Arrange the four stone koalas separately and visibly below the raccoon so each koala can be counted.",
+        "Avoid occlusion between the candles, raccoon, and koalas; keep all required objects fully visible."
+      ],
+      "generation_strategy": "Create a clear multi-object composition with strict counting: four distinct yellow candles positioned on top of one spotted raccoon, and the raccoon jumping over four distinct stone koalas arranged below. Emphasize visibility, separation, and attribute binding so counts and relationships are unambiguous.",
+      "initial_prompt": "A clear scene with exactly one spotted raccoon in mid-jump, jumping over exactly four stone koalas below it. Exactly four yellow candles are placed on top of the raccoon, all upright, distinct, and fully visible. The four stone koalas are separate from each other and clearly visible underneath the jumping raccoon. Keep the raccoon, all four yellow candles, and all four stone koalas unobstructed, with no extra candles, no extra raccoons, and no extra koalas.",
+      "parsed_constraints": {
+        "attributes": {
+          "candles": [
+            "yellow"
+          ],
+          "koalas": [
+            "stone"
+          ],
+          "raccoon": [
+            "spotted"
+          ]
+        },
+        "counts": {
+          "candles": 4,
+          "koalas": 4,
+          "raccoon": 1
+        },
+        "objects": [
+          "candles",
+          "raccoon",
+          "koalas"
+        ],
+        "relations": [
+          "four yellow candles are on top of the spotted raccoon",
+          "the spotted raccoon is jumping over four stone koalas"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_prompt": "A clear scene with exactly one spotted raccoon in mid-jump, jumping over exactly four stone koalas below it. Exactly four yellow candles are placed on top of the raccoon, all upright, distinct, and fully visible. The four stone koalas are separate from each other and clearly visible underneath the jumping raccoon. Keep the raccoon, all four yellow candles, and all four stone koalas unobstructed, with no extra candles, no extra raccoons, and no extra koalas.",
+    "previous_selected_skills": [
+      "quantity_counting",
+      "object_presence",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ],
+    "prompt_id": "geneval2_00705_1e9d521c",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "count_mismatch",
+          "missing_object",
+          "relation_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many raccoons are in the image?",
+              "score": 1.2764863578798181e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.27649e-09",
+            "expected": "one",
+            "status": "failed",
+            "target": "How many raccoons are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the raccoon jumping over the koalas?",
+              "score": 1.4996492169870685e-07,
+              "skill": "verb"
+            },
+            "detected": "soft_score=1.49965e-07",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the raccoon jumping over the koalas?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many koalas are in the image?",
+              "score": 3.1221697193657195e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=3.12217e-08",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many koalas are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the koalas stone?",
+              "score": 6.516096094844048e-05,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=6.5161e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the koalas stone?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 10,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any koalas in the image?",
+              "score": 3.843367814976295e-09,
+              "skill": "object"
+            },
+            "detected": "soft_score=3.84337e-09",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any koalas in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many candles are in the image?",
+              "score": 1.0,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "four",
+            "status": "passed",
+            "target": "How many candles are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the candles yellow?",
+              "score": 0.9999999548163032,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the candles yellow?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any candles in the image?",
+              "score": 0.9999999893461791,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any candles in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the candles on top of the raccoon?",
+              "score": 0.9999723457294749,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.999972",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the candles on top of the raccoon?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the raccoon spotted?",
+              "score": 0.9999251672471061,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.999925",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Is the raccoon spotted?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any raccoons in the image?",
+              "score": 0.9999986940529197,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999999",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any raccoons in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly four yellow candles, exactly one spotted raccoon, and exactly four stone koalas.",
+            "Bind yellow color only to the four candles; bind spotted pattern to the single raccoon; bind stone material to all four koalas.",
+            "Place the four yellow candles visibly on top of the raccoon, separated enough to count individually.",
+            "Show the raccoon in a jumping pose above the four stone koalas, with clear vertical separation indicating it is jumping over them.",
+            "Arrange the four stone koalas separately and visibly below the raccoon so each koala can be counted.",
+            "Avoid occlusion between the candles, raccoon, and koalas; keep all required objects fully visible."
+          ],
+          "generation_strategy": "Create a clear multi-object composition with strict counting: four distinct yellow candles positioned on top of one spotted raccoon, and the raccoon jumping over four distinct stone koalas arranged below. Emphasize visibility, separation, and attribute binding so counts and relationships are unambiguous.",
+          "initial_prompt": "A clear scene with exactly one spotted raccoon in mid-jump, jumping over exactly four stone koalas below it. Exactly four yellow candles are placed on top of the raccoon, all upright, distinct, and fully visible. The four stone koalas are separate from each other and clearly visible underneath the jumping raccoon. Keep the raccoon, all four yellow candles, and all four stone koalas unobstructed, with no extra candles, no extra raccoons, and no extra koalas.",
+          "parsed_constraints": {
+            "attributes": {
+              "candles": [
+                "yellow"
+              ],
+              "koalas": [
+                "stone"
+              ],
+              "raccoon": [
+                "spotted"
+              ]
+            },
+            "counts": {
+              "candles": 4,
+              "koalas": 4,
+              "raccoon": 1
+            },
+            "objects": [
+              "candles",
+              "raccoon",
+              "koalas"
+            ],
+            "relations": [
+              "four yellow candles are on top of the spotted raccoon",
+              "the spotted raccoon is jumping over four stone koalas"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "object_presence",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly four yellow candles, exactly one spotted raccoon, and exactly four stone koalas.",
+            "Bind yellow color only to the four candles; bind spotted pattern to the single raccoon; bind stone material to all four koalas.",
+            "Place the four yellow candles visibly on top of the raccoon, separated enough to count individually.",
+            "Show the raccoon in a jumping pose above the four stone koalas, with clear vertical separation indicating it is jumping over them.",
+            "Arrange the four stone koalas separately and visibly below the raccoon so each koala can be counted.",
+            "Avoid occlusion between the candles, raccoon, and koalas; keep all required objects fully visible."
+          ],
+          "generation_strategy": "Create a clear multi-object composition with strict counting: four distinct yellow candles positioned on top of one spotted raccoon, and the raccoon jumping over four distinct stone koalas arranged below. Emphasize visibility, separation, and attribute binding so counts and relationships are unambiguous.",
+          "initial_prompt": "A clear scene with exactly one spotted raccoon in mid-jump, jumping over exactly four stone koalas below it. Exactly four yellow candles are placed on top of the raccoon, all upright, distinct, and fully visible. The four stone koalas are separate from each other and clearly visible underneath the jumping raccoon. Keep the raccoon, all four yellow candles, and all four stone koalas unobstructed, with no extra candles, no extra raccoons, and no extra koalas.",
+          "parsed_constraints": {
+            "attributes": {
+              "candles": [
+                "yellow"
+              ],
+              "koalas": [
+                "stone"
+              ],
+              "raccoon": [
+                "spotted"
+              ]
+            },
+            "counts": {
+              "candles": 4,
+              "koalas": 4,
+              "raccoon": 1
+            },
+            "objects": [
+              "candles",
+              "raccoon",
+              "koalas"
+            ],
+            "relations": [
+              "four yellow candles are on top of the spotted raccoon",
+              "the spotted raccoon is jumping over four stone koalas"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "object_presence",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "prompt_used": "A clear scene with exactly one spotted raccoon in mid-jump, jumping over exactly four stone koalas below it. Exactly four yellow candles are placed on top of the raccoon, all upright, distinct, and fully visible. The four stone koalas are separate from each other and clearly visible underneath the jumping raccoon. Keep the raccoon, all four yellow candles, and all four stone koalas unobstructed, with no extra candles, no extra raccoons, and no extra koalas.",
+        "round": 0,
+        "score": 0.5454510453144913,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many raccoons are in the image?",
+                "score": 1.2764863578798181e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.27649e-09",
+              "expected": "one",
+              "status": "failed",
+              "target": "How many raccoons are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the raccoon jumping over the koalas?",
+                "score": 1.4996492169870685e-07,
+                "skill": "verb"
+              },
+              "detected": "soft_score=1.49965e-07",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the raccoon jumping over the koalas?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many koalas are in the image?",
+                "score": 3.1221697193657195e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=3.12217e-08",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many koalas are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the koalas stone?",
+                "score": 6.516096094844048e-05,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=6.5161e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the koalas stone?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 10,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any koalas in the image?",
+                "score": 3.843367814976295e-09,
+                "skill": "object"
+              },
+              "detected": "soft_score=3.84337e-09",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any koalas in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00705_1e9d521c"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many raccoons are in the image?",
+          "score": 1.2764863578798181e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.27649e-09",
+        "expected": "one",
+        "status": "failed",
+        "target": "How many raccoons are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the raccoon jumping over the koalas?",
+          "score": 1.4996492169870685e-07,
+          "skill": "verb"
+        },
+        "detected": "soft_score=1.49965e-07",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Is the raccoon jumping over the koalas?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many koalas are in the image?",
+          "score": 3.1221697193657195e-08,
+          "skill": "count"
+        },
+        "detected": "soft_score=3.12217e-08",
+        "expected": "four",
+        "status": "failed",
+        "target": "How many koalas are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 9,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the koalas stone?",
+          "score": 6.516096094844048e-05,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=6.5161e-05",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the koalas stone?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 10,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any koalas in the image?",
+          "score": 3.843367814976295e-09,
+          "skill": "object"
+        },
+        "detected": "soft_score=3.84337e-09",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are there any koalas in the image?",
+        "type": "missing_object"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00000/samples/00001.png",
+    "best_so_far_prompt": "A clear scene with exactly one spotted raccoon in mid-jump, jumping over exactly four stone koalas below it. Exactly four yellow candles are placed on top of the raccoon, all upright, distinct, and fully visible. The four stone koalas are separate from each other and clearly visible underneath the jumping raccoon. Keep the raccoon, all four yellow candles, and all four stone koalas unobstructed, with no extra candles, no extra raccoons, and no extra koalas.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.5454510453144913,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many raccoons are in the image?",
+          "score": 1.2764863578798181e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.27649e-09",
+        "expected": "one",
+        "status": "failed",
+        "target": "How many raccoons are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the raccoon jumping over the koalas?",
+          "score": 1.4996492169870685e-07,
+          "skill": "verb"
+        },
+        "detected": "soft_score=1.49965e-07",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Is the raccoon jumping over the koalas?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many koalas are in the image?",
+          "score": 3.1221697193657195e-08,
+          "skill": "count"
+        },
+        "detected": "soft_score=3.12217e-08",
+        "expected": "four",
+        "status": "failed",
+        "target": "How many koalas are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 9,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the koalas stone?",
+          "score": 6.516096094844048e-05,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=6.5161e-05",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the koalas stone?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 10,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any koalas in the image?",
+          "score": 3.843367814976295e-09,
+          "skill": "object"
+        },
+        "detected": "soft_score=3.84337e-09",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are there any koalas in the image?",
+        "type": "missing_object"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly four yellow candles, exactly one spotted raccoon, and exactly four stone koalas.",
+        "Bind yellow color only to the four candles; bind spotted pattern to the single raccoon; bind stone material to all four koalas.",
+        "Place the four yellow candles visibly on top of the raccoon, separated enough to count individually.",
+        "Show the raccoon in a jumping pose above the four stone koalas, with clear vertical separation indicating it is jumping over them.",
+        "Arrange the four stone koalas separately and visibly below the raccoon so each koala can be counted.",
+        "Avoid occlusion between the candles, raccoon, and koalas; keep all required objects fully visible."
+      ],
+      "generation_strategy": "Create a clear multi-object composition with strict counting: four distinct yellow candles positioned on top of one spotted raccoon, and the raccoon jumping over four distinct stone koalas arranged below. Emphasize visibility, separation, and attribute binding so counts and relationships are unambiguous.",
+      "initial_prompt": "A clear scene with exactly one spotted raccoon in mid-jump, jumping over exactly four stone koalas below it. Exactly four yellow candles are placed on top of the raccoon, all upright, distinct, and fully visible. The four stone koalas are separate from each other and clearly visible underneath the jumping raccoon. Keep the raccoon, all four yellow candles, and all four stone koalas unobstructed, with no extra candles, no extra raccoons, and no extra koalas.",
+      "parsed_constraints": {
+        "attributes": {
+          "candles": [
+            "yellow"
+          ],
+          "koalas": [
+            "stone"
+          ],
+          "raccoon": [
+            "spotted"
+          ]
+        },
+        "counts": {
+          "candles": 4,
+          "koalas": 4,
+          "raccoon": 1
+        },
+        "objects": [
+          "candles",
+          "raccoon",
+          "koalas"
+        ],
+        "relations": [
+          "four yellow candles are on top of the spotted raccoon",
+          "the spotted raccoon is jumping over four stone koalas"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.545 failed=['How many raccoons are in the image?', 'Is the raccoon jumping over the koalas?', 'How many koalas are in the image?', 'Are the koalas stone?', 'Are there any koalas in the image?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_incremental/snapshot_001_worker_03/geneval2_00705_1e9d521c__geneval2_00705_1e9d521c_cand_01__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00705_1e9d521c__geneval2_00705_1e9d521c_cand_01__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00705_1e9d521c",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image passed the candle count, yellow candle color, candle-on-raccoon placement, spotted raccoon attribute, and raccoon presence checks, but failed to verify exactly one raccoon, the raccoon jumping over the koalas, the presence of koalas, exactly four koalas, and the stone material of the koalas. The main repair is to make the four stone koalas large, separated, and unmistakably visible as the lower row of the composition, while keeping a single spotted raccoon clearly airborne above them with the four yellow candles still on top of that one raccoon.",
+    "expected_improvement": [
+      "Exactly one raccoon should be easier to verify by describing a single central raccoon only and forbidding any second raccoon or duplicate raccoon parts.",
+      "The jumping-over relation should be clearer by using a simple vertical layout: one airborne raccoon above, four koalas directly below, with visible empty space between them.",
+      "Koala presence and count should improve by placing four separate full-body stone koalas in a straight row underneath the raccoon, with no overlap or merging.",
+      "The stone attribute should improve by explicitly binding gray carved stone material to each of the four koalas.",
+      "Previously passed candle constraints should be preserved by retaining exactly four distinct yellow candles on top of the single spotted raccoon."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "relation_mismatch",
+      "attribute_mismatch",
+      "missing_object"
+    ],
+    "preserve_constraints": [
+      "Keep exactly four candles in the image.",
+      "Make all four candles yellow.",
+      "Keep the four yellow candles visibly on top of the raccoon, not beside it or below it.",
+      "Keep the raccoon visibly spotted.",
+      "Keep a raccoon present and fully visible."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt mentioned the four stone koalas below the raccoon, but the composition likely overemphasized the raccoon and candles and did not make the koalas visually dominant, separate, and countable enough. It also did not make the single-raccoon count robust against duplicated or ambiguous raccoon forms, and the jumping-over relation depended on a vague mid-jump description rather than a strict vertical layout.",
+      "error_source": "Insufficient object_presence, quantity_counting, attribute_binding, and spatial_layout emphasis for the koalas and the one-raccoon count."
+    },
+    "regeneration_strategy": "Use a simpler staged composition with one central airborne spotted raccoon in the upper-middle, four separate gray stone koalas in a clear row along the bottom directly underneath it, and four yellow candles balanced on top of the single raccoon. Prioritize separable silhouettes, full visibility, and explicit negative constraints against extra raccoons, koalas, or candles.",
+    "regression_risks": [
+      "The generator may drop or recolor some candles while adding clearer koalas.",
+      "The generator may place candles near the raccoon instead of on top of it.",
+      "The generator may create extra raccoons or merge the koalas together when trying to show motion.",
+      "The generator may render the koalas as living animals rather than stone statues."
+    ],
+    "repair_constraints": [
+      "Show exactly one spotted raccoon, a single complete raccoon only, with no second raccoon and no duplicate raccoon body or head.",
+      "Show the single spotted raccoon in an airborne jumping pose above the koalas.",
+      "Place exactly four koalas directly below the raccoon, arranged as four separate visible figures in a row, with space between each koala so all four can be counted.",
+      "Make each of the four koalas clearly stone: gray carved stone texture, statue-like material, and the stone attribute bound to every koala.",
+      "Make the spatial relation unambiguous: the raccoon is above and jumping over the four stone koalas below it.",
+      "Do not include any extra koalas, extra raccoons, or extra candles."
+    ],
+    "retry_prompt": "A clear simple scene with exactly one spotted raccoon, one single complete raccoon only, in an airborne jumping pose in the upper middle of the image. The raccoon is jumping over exactly four stone koalas directly below it. The four koalas are gray carved stone koala statues, arranged in a straight row along the bottom, separate from one another, fully visible, and countable as four distinct koalas. Exactly four yellow candles are on top of the single spotted raccoon, all upright, distinct, and fully visible. Keep the raccoon above the koalas with visible empty space showing it is jumping over them. No extra raccoons, no extra koalas, no extra candles, no merged animals, and no hidden or cropped required objects.",
+    "skill_revision": {
+      "new_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same skill set but shift emphasis toward object_presence and quantity_counting for the four koalas and exactly one raccoon, plus stronger spatial_layout and attribute_binding for the raccoon jumping over four gray stone koala statues."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "four yellow candles on top of a spotted raccoon jumping over four stone koalas",
+    "prompt": "four yellow candles on top of a spotted raccoon jumping over four stone koalas",
+    "prompt_id": "geneval2_00705_1e9d521c",
+    "sampling_bucket": "count",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "relation_action",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 3,
+      "count": 3,
+      "object": 3,
+      "position": 1,
+      "verb": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object",
+      "verb",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 705,
+    "vqa_list": [
+      [
+        "How many candles are in the image?",
+        "four"
+      ],
+      [
+        "Are the candles yellow?",
+        "Yes"
+      ],
+      [
+        "Are there any candles in the image?",
+        "Yes"
+      ],
+      [
+        "Are the candles on top of the raccoon?",
+        "Yes"
+      ],
+      [
+        "How many raccoons are in the image?",
+        "one"
+      ],
+      [
+        "Is the raccoon spotted?",
+        "Yes"
+      ],
+      [
+        "Are there any raccoons in the image?",
+        "Yes"
+      ],
+      [
+        "Is the raccoon jumping over the koalas?",
+        "Yes"
+      ],
+      [
+        "How many koalas are in the image?",
+        "four"
+      ],
+      [
+        "Are the koalas stone?",
+        "Yes"
+      ],
+      [
+        "Are there any koalas in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00705_1e9d521c"
+}

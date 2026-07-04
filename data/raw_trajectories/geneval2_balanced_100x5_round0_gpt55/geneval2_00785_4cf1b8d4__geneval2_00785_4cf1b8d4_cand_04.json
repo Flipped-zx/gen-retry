@@ -1,0 +1,2908 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "count_mismatch",
+          "relation_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many violins are in the image?",
+              "score": 2.0688041784602804e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=2.0688e-09",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many violins are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the zebra playing with the horses?",
+              "score": 0.00033442798323645405,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.000334428",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the zebra playing with the horses?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many horses are in the image?",
+              "score": 4.225025383361924e-06,
+              "skill": "count"
+            },
+            "detected": "soft_score=4.22503e-06",
+            "expected": "five",
+            "status": "failed",
+            "target": "How many horses are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the violins blue?",
+              "score": 0.9999999609963197,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the violins blue?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any violins in the image?",
+              "score": 0.9999999928550096,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any violins in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the violins on top of the zebra?",
+              "score": 0.9999997113231984,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the violins on top of the zebra?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many zebras are in the image?",
+              "score": 0.9999974438184656,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.999997",
+            "expected": "one",
+            "status": "passed",
+            "target": "How many zebras are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the zebra blue?",
+              "score": 0.9999999555293471,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Is the zebra blue?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any zebras in the image?",
+              "score": 0.9997379781852942,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999738",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any zebras in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the horses metal?",
+              "score": 0.9913768284604885,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.991377",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the horses metal?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 10,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any horses in the image?",
+              "score": 0.9999034168922663,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999903",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any horses in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00785_4cf1b8d4_cand_04",
+          "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+          "rows": [
+            {
+              "answer": "seven",
+              "atom_count": 10,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00785_4cf1b8d4_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00012/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00012/samples/00004.png",
+              "prompt": "seven blue violins on top of a blue zebra playing with five metal horses",
+              "prompt_id": "geneval2_00785_4cf1b8d4",
+              "question": "How many violins are in the image?",
+              "score": 2.0688041784602804e-09,
+              "skill": "count",
+              "source_index": 785
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00785_4cf1b8d4_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00012/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00012/samples/00004.png",
+              "prompt": "seven blue violins on top of a blue zebra playing with five metal horses",
+              "prompt_id": "geneval2_00785_4cf1b8d4",
+              "question": "Are the violins blue?",
+              "score": 0.9999999609963197,
+              "skill": "attribute",
+              "source_index": 785
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00785_4cf1b8d4_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00012/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00012/samples/00004.png",
+              "prompt": "seven blue violins on top of a blue zebra playing with five metal horses",
+              "prompt_id": "geneval2_00785_4cf1b8d4",
+              "question": "Are there any violins in the image?",
+              "score": 0.9999999928550096,
+              "skill": "object",
+              "source_index": 785
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00785_4cf1b8d4_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00012/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00012/samples/00004.png",
+              "prompt": "seven blue violins on top of a blue zebra playing with five metal horses",
+              "prompt_id": "geneval2_00785_4cf1b8d4",
+              "question": "Are the violins on top of the zebra?",
+              "score": 0.9999997113231984,
+              "skill": "position",
+              "source_index": 785
+            },
+            {
+              "answer": "one",
+              "atom_count": 10,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00785_4cf1b8d4_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00012/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00012/samples/00004.png",
+              "prompt": "seven blue violins on top of a blue zebra playing with five metal horses",
+              "prompt_id": "geneval2_00785_4cf1b8d4",
+              "question": "How many zebras are in the image?",
+              "score": 0.9999974438184656,
+              "skill": "count",
+              "source_index": 785
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00785_4cf1b8d4_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00012/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00012/samples/00004.png",
+              "prompt": "seven blue violins on top of a blue zebra playing with five metal horses",
+              "prompt_id": "geneval2_00785_4cf1b8d4",
+              "question": "Is the zebra blue?",
+              "score": 0.9999999555293471,
+              "skill": "attribute",
+              "source_index": 785
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00785_4cf1b8d4_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00012/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00012/samples/00004.png",
+              "prompt": "seven blue violins on top of a blue zebra playing with five metal horses",
+              "prompt_id": "geneval2_00785_4cf1b8d4",
+              "question": "Are there any zebras in the image?",
+              "score": 0.9997379781852942,
+              "skill": "object",
+              "source_index": 785
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00785_4cf1b8d4_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00012/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00012/samples/00004.png",
+              "prompt": "seven blue violins on top of a blue zebra playing with five metal horses",
+              "prompt_id": "geneval2_00785_4cf1b8d4",
+              "question": "Is the zebra playing with the horses?",
+              "score": 0.00033442798323645405,
+              "skill": "verb",
+              "source_index": 785
+            },
+            {
+              "answer": "five",
+              "atom_count": 10,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00785_4cf1b8d4_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00012/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00012/samples/00004.png",
+              "prompt": "seven blue violins on top of a blue zebra playing with five metal horses",
+              "prompt_id": "geneval2_00785_4cf1b8d4",
+              "question": "How many horses are in the image?",
+              "score": 4.225025383361924e-06,
+              "skill": "count",
+              "source_index": 785
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00785_4cf1b8d4_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00012/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00012/samples/00004.png",
+              "prompt": "seven blue violins on top of a blue zebra playing with five metal horses",
+              "prompt_id": "geneval2_00785_4cf1b8d4",
+              "question": "Are the horses metal?",
+              "score": 0.9913768284604885,
+              "skill": "attribute",
+              "source_index": 785
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 10,
+              "candidate_id": "geneval2_00785_4cf1b8d4_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00012/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00012/samples/00004.png",
+              "prompt": "seven blue violins on top of a blue zebra playing with five metal horses",
+              "prompt_id": "geneval2_00785_4cf1b8d4",
+              "question": "Are there any horses in the image?",
+              "score": 0.9999034168922663,
+              "skill": "object",
+              "source_index": 785
+            }
+          ],
+          "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.7264867221034376,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 4,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00785_4cf1b8d4.json",
+          "manifest_prompt_index": 12,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00785_4cf1b8d4"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00785_4cf1b8d4_cand_04",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00012/samples/00004.png",
+        "prompt_used": "A clear scene with exactly one blue zebra, fully visible, playing with exactly five metal horses. Exactly seven blue violins are on top of the blue zebra, all seven violins separate and clearly countable. The five metal horses are separate, clearly visible, and countable near the zebra. Ensure the zebra is blue, every violin is blue, every horse has a metal material, and no objects are hidden or merged.",
+        "seed": 1064
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly seven violins, exactly one zebra, and exactly five horses.",
+          "Bind blue color to all seven violins and to the single zebra.",
+          "Bind metal material to all five horses.",
+          "Place all seven blue violins visibly on top of the blue zebra, separated enough to count.",
+          "Show the blue zebra playing with the five metal horses in the same scene.",
+          "Avoid occlusion that hides or merges any violin, horse, or the zebra."
+        ],
+        "generation_strategy": "Use a clear multi-object composition with the single blue zebra centered and fully visible, seven separate blue violins arranged on top of the zebra, and five separate metal horses nearby interacting with the zebra. Emphasize countable separation, correct attribute binding, and unobstructed visibility of every object.",
+        "initial_prompt": "A clear scene with exactly one blue zebra, fully visible, playing with exactly five metal horses. Exactly seven blue violins are on top of the blue zebra, all seven violins separate and clearly countable. The five metal horses are separate, clearly visible, and countable near the zebra. Ensure the zebra is blue, every violin is blue, every horse has a metal material, and no objects are hidden or merged.",
+        "parsed_constraints": {
+          "attributes": {
+            "horses": [
+              "metal"
+            ],
+            "violins": [
+              "blue"
+            ],
+            "zebra": [
+              "blue"
+            ]
+          },
+          "counts": {
+            "horses": 5,
+            "violins": 7,
+            "zebras": 1
+          },
+          "objects": [
+            "violins",
+            "zebra",
+            "horses"
+          ],
+          "relations": [
+            "seven blue violins on top of the blue zebra",
+            "blue zebra playing with five metal horses"
+          ]
+        },
+        "selected_skills": [
+          "quantity_counting",
+          "attribute_binding",
+          "object_presence",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly seven violins, exactly one zebra, and exactly five horses.",
+          "Bind blue color to all seven violins and to the single zebra.",
+          "Bind metal material to all five horses.",
+          "Place all seven blue violins visibly on top of the blue zebra, separated enough to count.",
+          "Show the blue zebra playing with the five metal horses in the same scene.",
+          "Avoid occlusion that hides or merges any violin, horse, or the zebra."
+        ],
+        "generation_strategy": "Use a clear multi-object composition with the single blue zebra centered and fully visible, seven separate blue violins arranged on top of the zebra, and five separate metal horses nearby interacting with the zebra. Emphasize countable separation, correct attribute binding, and unobstructed visibility of every object.",
+        "initial_prompt": "A clear scene with exactly one blue zebra, fully visible, playing with exactly five metal horses. Exactly seven blue violins are on top of the blue zebra, all seven violins separate and clearly countable. The five metal horses are separate, clearly visible, and countable near the zebra. Ensure the zebra is blue, every violin is blue, every horse has a metal material, and no objects are hidden or merged.",
+        "parsed_constraints": {
+          "attributes": {
+            "horses": [
+              "metal"
+            ],
+            "violins": [
+              "blue"
+            ],
+            "zebra": [
+              "blue"
+            ]
+          },
+          "counts": {
+            "horses": 5,
+            "violins": 7,
+            "zebras": 1
+          },
+          "objects": [
+            "violins",
+            "zebra",
+            "horses"
+          ],
+          "relations": [
+            "seven blue violins on top of the blue zebra",
+            "blue zebra playing with five metal horses"
+          ]
+        },
+        "selected_skills": [
+          "quantity_counting",
+          "attribute_binding",
+          "object_presence",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many violins are in the image?",
+                "score": 2.0688041784602804e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=2.0688e-09",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many violins are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the zebra playing with the horses?",
+                "score": 0.00033442798323645405,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.000334428",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the zebra playing with the horses?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many horses are in the image?",
+                "score": 4.225025383361924e-06,
+                "skill": "count"
+              },
+              "detected": "soft_score=4.22503e-06",
+              "expected": "five",
+              "status": "failed",
+              "target": "How many horses are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00012/samples/00004.png",
+          "prompt": "A clear scene with exactly one blue zebra, fully visible, playing with exactly five metal horses. Exactly seven blue violins are on top of the blue zebra, all seven violins separate and clearly countable. The five metal horses are separate, clearly visible, and countable near the zebra. Ensure the zebra is blue, every violin is blue, every horse has a metal material, and no objects are hidden or merged.",
+          "round": 0,
+          "score": 0.7264867221034376
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00785_4cf1b8d4_cand_04",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "count_mismatch",
+            "relation_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many violins are in the image?",
+                "score": 2.0688041784602804e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=2.0688e-09",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many violins are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the zebra playing with the horses?",
+                "score": 0.00033442798323645405,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.000334428",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the zebra playing with the horses?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many horses are in the image?",
+                "score": 4.225025383361924e-06,
+                "skill": "count"
+              },
+              "detected": "soft_score=4.22503e-06",
+              "expected": "five",
+              "status": "failed",
+              "target": "How many horses are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the violins blue?",
+                "score": 0.9999999609963197,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the violins blue?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any violins in the image?",
+                "score": 0.9999999928550096,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any violins in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the violins on top of the zebra?",
+                "score": 0.9999997113231984,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the violins on top of the zebra?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many zebras are in the image?",
+                "score": 0.9999974438184656,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.999997",
+              "expected": "one",
+              "status": "passed",
+              "target": "How many zebras are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the zebra blue?",
+                "score": 0.9999999555293471,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Is the zebra blue?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any zebras in the image?",
+                "score": 0.9997379781852942,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999738",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any zebras in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the horses metal?",
+                "score": 0.9913768284604885,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.991377",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the horses metal?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 10,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any horses in the image?",
+                "score": 0.9999034168922663,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999903",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any horses in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.7264867221034376,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many violins are in the image?",
+                  "score": 2.0688041784602804e-09,
+                  "skill": "count"
+                },
+                "detected": "soft_score=2.0688e-09",
+                "expected": "seven",
+                "status": "failed",
+                "target": "How many violins are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Is the zebra playing with the horses?",
+                  "score": 0.00033442798323645405,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=0.000334428",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Is the zebra playing with the horses?",
+                "type": "relation_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many horses are in the image?",
+                  "score": 4.225025383361924e-06,
+                  "skill": "count"
+                },
+                "detected": "soft_score=4.22503e-06",
+                "expected": "five",
+                "status": "failed",
+                "target": "How many horses are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00012/samples/00004.png",
+            "prompt": "A clear scene with exactly one blue zebra, fully visible, playing with exactly five metal horses. Exactly seven blue violins are on top of the blue zebra, all seven violins separate and clearly countable. The five metal horses are separate, clearly visible, and countable near the zebra. Ensure the zebra is blue, every violin is blue, every horse has a metal material, and no objects are hidden or merged.",
+            "round": 0,
+            "score": 0.7264867221034376
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many violins are in the image?",
+                "score": 2.0688041784602804e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=2.0688e-09",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many violins are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the zebra playing with the horses?",
+                "score": 0.00033442798323645405,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.000334428",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the zebra playing with the horses?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many horses are in the image?",
+                "score": 4.225025383361924e-06,
+                "skill": "count"
+              },
+              "detected": "soft_score=4.22503e-06",
+              "expected": "five",
+              "status": "failed",
+              "target": "How many horses are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "count_mismatch",
+            "relation_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many violins are in the image?",
+                "score": 2.0688041784602804e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=2.0688e-09",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many violins are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the zebra playing with the horses?",
+                "score": 0.00033442798323645405,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.000334428",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the zebra playing with the horses?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many horses are in the image?",
+                "score": 4.225025383361924e-06,
+                "skill": "count"
+              },
+              "detected": "soft_score=4.22503e-06",
+              "expected": "five",
+              "status": "failed",
+              "target": "How many horses are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the violins blue?",
+                "score": 0.9999999609963197,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the violins blue?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any violins in the image?",
+                "score": 0.9999999928550096,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any violins in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the violins on top of the zebra?",
+                "score": 0.9999997113231984,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the violins on top of the zebra?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many zebras are in the image?",
+                "score": 0.9999974438184656,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.999997",
+              "expected": "one",
+              "status": "passed",
+              "target": "How many zebras are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the zebra blue?",
+                "score": 0.9999999555293471,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Is the zebra blue?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any zebras in the image?",
+                "score": 0.9997379781852942,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999738",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any zebras in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the horses metal?",
+                "score": 0.9913768284604885,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.991377",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the horses metal?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 10,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any horses in the image?",
+                "score": 0.9999034168922663,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999903",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any horses in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.7264867221034376,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "seven blue violins on top of a blue zebra playing with five metal horses",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many violins are in the image?",
+              "score": 2.0688041784602804e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=2.0688e-09",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many violins are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the zebra playing with the horses?",
+              "score": 0.00033442798323645405,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.000334428",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the zebra playing with the horses?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many horses are in the image?",
+              "score": 4.225025383361924e-06,
+              "skill": "count"
+            },
+            "detected": "soft_score=4.22503e-06",
+            "expected": "five",
+            "status": "failed",
+            "target": "How many horses are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly seven violins, exactly one zebra, and exactly five horses.",
+            "Bind blue color to all seven violins and to the single zebra.",
+            "Bind metal material to all five horses.",
+            "Place all seven blue violins visibly on top of the blue zebra, separated enough to count.",
+            "Show the blue zebra playing with the five metal horses in the same scene.",
+            "Avoid occlusion that hides or merges any violin, horse, or the zebra."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with the single blue zebra centered and fully visible, seven separate blue violins arranged on top of the zebra, and five separate metal horses nearby interacting with the zebra. Emphasize countable separation, correct attribute binding, and unobstructed visibility of every object.",
+          "initial_prompt": "A clear scene with exactly one blue zebra, fully visible, playing with exactly five metal horses. Exactly seven blue violins are on top of the blue zebra, all seven violins separate and clearly countable. The five metal horses are separate, clearly visible, and countable near the zebra. Ensure the zebra is blue, every violin is blue, every horse has a metal material, and no objects are hidden or merged.",
+          "parsed_constraints": {
+            "attributes": {
+              "horses": [
+                "metal"
+              ],
+              "violins": [
+                "blue"
+              ],
+              "zebra": [
+                "blue"
+              ]
+            },
+            "counts": {
+              "horses": 5,
+              "violins": 7,
+              "zebras": 1
+            },
+            "objects": [
+              "violins",
+              "zebra",
+              "horses"
+            ],
+            "relations": [
+              "seven blue violins on top of the blue zebra",
+              "blue zebra playing with five metal horses"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "attribute_binding",
+            "object_presence",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly seven violins, exactly one zebra, and exactly five horses.",
+            "Bind blue color to all seven violins and to the single zebra.",
+            "Bind metal material to all five horses.",
+            "Place all seven blue violins visibly on top of the blue zebra, separated enough to count.",
+            "Show the blue zebra playing with the five metal horses in the same scene.",
+            "Avoid occlusion that hides or merges any violin, horse, or the zebra."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with the single blue zebra centered and fully visible, seven separate blue violins arranged on top of the zebra, and five separate metal horses nearby interacting with the zebra. Emphasize countable separation, correct attribute binding, and unobstructed visibility of every object.",
+          "initial_prompt": "A clear scene with exactly one blue zebra, fully visible, playing with exactly five metal horses. Exactly seven blue violins are on top of the blue zebra, all seven violins separate and clearly countable. The five metal horses are separate, clearly visible, and countable near the zebra. Ensure the zebra is blue, every violin is blue, every horse has a metal material, and no objects are hidden or merged.",
+          "parsed_constraints": {
+            "attributes": {
+              "horses": [
+                "metal"
+              ],
+              "violins": [
+                "blue"
+              ],
+              "zebra": [
+                "blue"
+              ]
+            },
+            "counts": {
+              "horses": 5,
+              "violins": 7,
+              "zebras": 1
+            },
+            "objects": [
+              "violins",
+              "zebra",
+              "horses"
+            ],
+            "relations": [
+              "seven blue violins on top of the blue zebra",
+              "blue zebra playing with five metal horses"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "attribute_binding",
+            "object_presence",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion"
+          ]
+        },
+        "previous_prompt": "A clear scene with exactly one blue zebra, fully visible, playing with exactly five metal horses. Exactly seven blue violins are on top of the blue zebra, all seven violins separate and clearly countable. The five metal horses are separate, clearly visible, and countable near the zebra. Ensure the zebra is blue, every violin is blue, every horse has a metal material, and no objects are hidden or merged.",
+        "previous_selected_skills": [
+          "quantity_counting",
+          "attribute_binding",
+          "object_presence",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion"
+        ],
+        "prompt_id": "geneval2_00785_4cf1b8d4",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "count_mismatch",
+              "relation_mismatch"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many violins are in the image?",
+                  "score": 2.0688041784602804e-09,
+                  "skill": "count"
+                },
+                "detected": "soft_score=2.0688e-09",
+                "expected": "seven",
+                "status": "failed",
+                "target": "How many violins are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Is the zebra playing with the horses?",
+                  "score": 0.00033442798323645405,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=0.000334428",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Is the zebra playing with the horses?",
+                "type": "relation_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many horses are in the image?",
+                  "score": 4.225025383361924e-06,
+                  "skill": "count"
+                },
+                "detected": "soft_score=4.22503e-06",
+                "expected": "five",
+                "status": "failed",
+                "target": "How many horses are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the violins blue?",
+                  "score": 0.9999999609963197,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the violins blue?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any violins in the image?",
+                  "score": 0.9999999928550096,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any violins in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the violins on top of the zebra?",
+                  "score": 0.9999997113231984,
+                  "skill": "position"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the violins on top of the zebra?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many zebras are in the image?",
+                  "score": 0.9999974438184656,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.999997",
+                "expected": "one",
+                "status": "passed",
+                "target": "How many zebras are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Is the zebra blue?",
+                  "score": 0.9999999555293471,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Is the zebra blue?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any zebras in the image?",
+                  "score": 0.9997379781852942,
+                  "skill": "object"
+                },
+                "detected": "soft_score=0.999738",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any zebras in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the horses metal?",
+                  "score": 0.9913768284604885,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.991377",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the horses metal?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 10,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any horses in the image?",
+                  "score": 0.9999034168922663,
+                  "skill": "object"
+                },
+                "detected": "soft_score=0.999903",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any horses in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly seven violins, exactly one zebra, and exactly five horses.",
+                "Bind blue color to all seven violins and to the single zebra.",
+                "Bind metal material to all five horses.",
+                "Place all seven blue violins visibly on top of the blue zebra, separated enough to count.",
+                "Show the blue zebra playing with the five metal horses in the same scene.",
+                "Avoid occlusion that hides or merges any violin, horse, or the zebra."
+              ],
+              "generation_strategy": "Use a clear multi-object composition with the single blue zebra centered and fully visible, seven separate blue violins arranged on top of the zebra, and five separate metal horses nearby interacting with the zebra. Emphasize countable separation, correct attribute binding, and unobstructed visibility of every object.",
+              "initial_prompt": "A clear scene with exactly one blue zebra, fully visible, playing with exactly five metal horses. Exactly seven blue violins are on top of the blue zebra, all seven violins separate and clearly countable. The five metal horses are separate, clearly visible, and countable near the zebra. Ensure the zebra is blue, every violin is blue, every horse has a metal material, and no objects are hidden or merged.",
+              "parsed_constraints": {
+                "attributes": {
+                  "horses": [
+                    "metal"
+                  ],
+                  "violins": [
+                    "blue"
+                  ],
+                  "zebra": [
+                    "blue"
+                  ]
+                },
+                "counts": {
+                  "horses": 5,
+                  "violins": 7,
+                  "zebras": 1
+                },
+                "objects": [
+                  "violins",
+                  "zebra",
+                  "horses"
+                ],
+                "relations": [
+                  "seven blue violins on top of the blue zebra",
+                  "blue zebra playing with five metal horses"
+                ]
+              },
+              "selected_skills": [
+                "quantity_counting",
+                "attribute_binding",
+                "object_presence",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly seven violins, exactly one zebra, and exactly five horses.",
+                "Bind blue color to all seven violins and to the single zebra.",
+                "Bind metal material to all five horses.",
+                "Place all seven blue violins visibly on top of the blue zebra, separated enough to count.",
+                "Show the blue zebra playing with the five metal horses in the same scene.",
+                "Avoid occlusion that hides or merges any violin, horse, or the zebra."
+              ],
+              "generation_strategy": "Use a clear multi-object composition with the single blue zebra centered and fully visible, seven separate blue violins arranged on top of the zebra, and five separate metal horses nearby interacting with the zebra. Emphasize countable separation, correct attribute binding, and unobstructed visibility of every object.",
+              "initial_prompt": "A clear scene with exactly one blue zebra, fully visible, playing with exactly five metal horses. Exactly seven blue violins are on top of the blue zebra, all seven violins separate and clearly countable. The five metal horses are separate, clearly visible, and countable near the zebra. Ensure the zebra is blue, every violin is blue, every horse has a metal material, and no objects are hidden or merged.",
+              "parsed_constraints": {
+                "attributes": {
+                  "horses": [
+                    "metal"
+                  ],
+                  "violins": [
+                    "blue"
+                  ],
+                  "zebra": [
+                    "blue"
+                  ]
+                },
+                "counts": {
+                  "horses": 5,
+                  "violins": 7,
+                  "zebras": 1
+                },
+                "objects": [
+                  "violins",
+                  "zebra",
+                  "horses"
+                ],
+                "relations": [
+                  "seven blue violins on top of the blue zebra",
+                  "blue zebra playing with five metal horses"
+                ]
+              },
+              "selected_skills": [
+                "quantity_counting",
+                "attribute_binding",
+                "object_presence",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion"
+              ]
+            },
+            "prompt_used": "A clear scene with exactly one blue zebra, fully visible, playing with exactly five metal horses. Exactly seven blue violins are on top of the blue zebra, all seven violins separate and clearly countable. The five metal horses are separate, clearly visible, and countable near the zebra. Ensure the zebra is blue, every violin is blue, every horse has a metal material, and no objects are hidden or merged.",
+            "round": 0,
+            "score": 0.7264867221034376,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 0,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many violins are in the image?",
+                    "score": 2.0688041784602804e-09,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=2.0688e-09",
+                  "expected": "seven",
+                  "status": "failed",
+                  "target": "How many violins are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 7,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Is the zebra playing with the horses?",
+                    "score": 0.00033442798323645405,
+                    "skill": "verb"
+                  },
+                  "detected": "soft_score=0.000334428",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Is the zebra playing with the horses?",
+                  "type": "relation_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 8,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many horses are in the image?",
+                    "score": 4.225025383361924e-06,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=4.22503e-06",
+                  "expected": "five",
+                  "status": "failed",
+                  "target": "How many horses are in the image?",
+                  "type": "count_mismatch"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00785_4cf1b8d4"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many violins are in the image?",
+              "score": 2.0688041784602804e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=2.0688e-09",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many violins are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the zebra playing with the horses?",
+              "score": 0.00033442798323645405,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.000334428",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the zebra playing with the horses?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many horses are in the image?",
+              "score": 4.225025383361924e-06,
+              "skill": "count"
+            },
+            "detected": "soft_score=4.22503e-06",
+            "expected": "five",
+            "status": "failed",
+            "target": "How many horses are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00785_4cf1b8d4_cand_04",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly seven violins, exactly one zebra, and exactly five horses.",
+      "Bind blue color to all seven violins and to the single zebra.",
+      "Bind metal material to all five horses.",
+      "Place all seven blue violins visibly on top of the blue zebra, separated enough to count.",
+      "Show the blue zebra playing with the five metal horses in the same scene.",
+      "Avoid occlusion that hides or merges any violin, horse, or the zebra."
+    ],
+    "generation_strategy": "Use a clear multi-object composition with the single blue zebra centered and fully visible, seven separate blue violins arranged on top of the zebra, and five separate metal horses nearby interacting with the zebra. Emphasize countable separation, correct attribute binding, and unobstructed visibility of every object.",
+    "initial_prompt": "A clear scene with exactly one blue zebra, fully visible, playing with exactly five metal horses. Exactly seven blue violins are on top of the blue zebra, all seven violins separate and clearly countable. The five metal horses are separate, clearly visible, and countable near the zebra. Ensure the zebra is blue, every violin is blue, every horse has a metal material, and no objects are hidden or merged.",
+    "parsed_constraints": {
+      "attributes": {
+        "horses": [
+          "metal"
+        ],
+        "violins": [
+          "blue"
+        ],
+        "zebra": [
+          "blue"
+        ]
+      },
+      "counts": {
+        "horses": 5,
+        "violins": 7,
+        "zebras": 1
+      },
+      "objects": [
+        "violins",
+        "zebra",
+        "horses"
+      ],
+      "relations": [
+        "seven blue violins on top of the blue zebra",
+        "blue zebra playing with five metal horses"
+      ]
+    },
+    "selected_skills": [
+      "quantity_counting",
+      "attribute_binding",
+      "object_presence",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The generated image preserved object presence, blue color for the zebra and violins, metal material for horses, one zebra, and violins positioned on top of the zebra, but failed the exact counts for violins and horses and did not make the zebra clearly playing with the horses. The count failures indicate the previous prompt did not force the seven violins and five horses to be visually separable enough for counting. The relation failure indicates that saying the horses were near the zebra was too weak to show a clear playful interaction.",
+    "expected_improvement": [
+      "Exactly seven blue violins should be visible and individually countable on top of the blue zebra.",
+      "Exactly five metal horses should be visible and individually countable, with no extra horses.",
+      "The blue zebra should be visibly playing with the five metal horses rather than merely standing near them."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "relation_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly one zebra in the image.",
+      "Keep the zebra blue.",
+      "Keep all violins blue.",
+      "Keep the violins on top of the zebra.",
+      "Keep all horses metal.",
+      "Keep violins, zebra, and horses clearly present and fully visible."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt requested exact counts but did not provide a stronger countable arrangement. The seven violins could merge or be partially hidden on top of the zebra, and the five horses could merge or be omitted. The phrase 'playing with exactly five metal horses' was weakened by later wording that only placed the horses near the zebra, so the interaction was not visually explicit.",
+      "error_source": "prompt_under_specified_count_separation_and_relation"
+    },
+    "regeneration_strategy": "Use a simpler, verifier-friendly composition: one large blue zebra as the central subject, seven separate blue violins visibly resting on top of the zebra with clear gaps between them, and exactly five separate metal horses close to the zebra in a playful interaction. Add explicit negative constraints against extra violins, extra horses, extra zebras, overlapping, merging, and cropping.",
+    "regression_risks": [
+      "Adding stronger count instructions could reduce the clarity of the violins-on-top relation if violins drift away from the zebra.",
+      "Emphasizing playful interaction could distract from the exact count of five horses.",
+      "The blue color of the zebra and violins or metal material of horses could regress if not restated explicitly."
+    ],
+    "repair_constraints": [
+      "Show exactly seven blue violins, no more and no fewer, all separate, fully visible, and countable.",
+      "Place all seven blue violins on top of the single blue zebra, with visible gaps so none overlap or merge.",
+      "Show exactly five metal horses, no more and no fewer, all separate, fully visible, and countable.",
+      "Make the single blue zebra visibly playing with the five metal horses through an obvious playful interaction between the zebra and the horses.",
+      "Do not add extra violins, extra horses, or extra zebras."
+    ],
+    "retry_prompt": "A clear, simple scene with exactly one blue zebra, fully visible. Exactly seven blue violins are resting on top of the blue zebra; all seven violins are separate, fully visible, evenly spaced with gaps, and easy to count. The blue zebra is visibly playing with exactly five metal horses; all five metal horses are separate, complete, fully visible, and easy to count. Every horse has a shiny metal material. No extra violins, no extra horses, no extra zebras. Do not let any violin, horse, or the zebra overlap, merge, hide, or be cropped.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "object_presence",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "object_presence",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion"
+      ],
+      "reason": "Add negative_constraints to explicitly prevent extra or missing objects and strengthen quantity_counting, anti_occlusion, and clarity_visibility for the persistent count failures. Keep spatial_layout and multi_object_composition to preserve violins on top of the zebra and make the zebra-horses playing relation clearer."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many violins are in the image?",
+            "score": 2.0688041784602804e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=2.0688e-09",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many violins are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the zebra playing with the horses?",
+            "score": 0.00033442798323645405,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.000334428",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the zebra playing with the horses?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many horses are in the image?",
+            "score": 4.225025383361924e-06,
+            "skill": "count"
+          },
+          "detected": "soft_score=4.22503e-06",
+          "expected": "five",
+          "status": "failed",
+          "target": "How many horses are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00012/samples/00004.png",
+      "prompt": "A clear scene with exactly one blue zebra, fully visible, playing with exactly five metal horses. Exactly seven blue violins are on top of the blue zebra, all seven violins separate and clearly countable. The five metal horses are separate, clearly visible, and countable near the zebra. Ensure the zebra is blue, every violin is blue, every horse has a metal material, and no objects are hidden or merged.",
+      "round": 0,
+      "score": 0.7264867221034376
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00785_4cf1b8d4_cand_04",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "count_mismatch",
+        "relation_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many violins are in the image?",
+            "score": 2.0688041784602804e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=2.0688e-09",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many violins are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the zebra playing with the horses?",
+            "score": 0.00033442798323645405,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.000334428",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the zebra playing with the horses?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many horses are in the image?",
+            "score": 4.225025383361924e-06,
+            "skill": "count"
+          },
+          "detected": "soft_score=4.22503e-06",
+          "expected": "five",
+          "status": "failed",
+          "target": "How many horses are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the violins blue?",
+            "score": 0.9999999609963197,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the violins blue?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any violins in the image?",
+            "score": 0.9999999928550096,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any violins in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the violins on top of the zebra?",
+            "score": 0.9999997113231984,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the violins on top of the zebra?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many zebras are in the image?",
+            "score": 0.9999974438184656,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.999997",
+          "expected": "one",
+          "status": "passed",
+          "target": "How many zebras are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the zebra blue?",
+            "score": 0.9999999555293471,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the zebra blue?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any zebras in the image?",
+            "score": 0.9997379781852942,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999738",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any zebras in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the horses metal?",
+            "score": 0.9913768284604885,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.991377",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the horses metal?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 10,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any horses in the image?",
+            "score": 0.9999034168922663,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999903",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any horses in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.7264867221034376,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many violins are in the image?",
+              "score": 2.0688041784602804e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=2.0688e-09",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many violins are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the zebra playing with the horses?",
+              "score": 0.00033442798323645405,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.000334428",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the zebra playing with the horses?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many horses are in the image?",
+              "score": 4.225025383361924e-06,
+              "skill": "count"
+            },
+            "detected": "soft_score=4.22503e-06",
+            "expected": "five",
+            "status": "failed",
+            "target": "How many horses are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00012/samples/00004.png",
+        "prompt": "A clear scene with exactly one blue zebra, fully visible, playing with exactly five metal horses. Exactly seven blue violins are on top of the blue zebra, all seven violins separate and clearly countable. The five metal horses are separate, clearly visible, and countable near the zebra. Ensure the zebra is blue, every violin is blue, every horse has a metal material, and no objects are hidden or merged.",
+        "round": 0,
+        "score": 0.7264867221034376
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many violins are in the image?",
+            "score": 2.0688041784602804e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=2.0688e-09",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many violins are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the zebra playing with the horses?",
+            "score": 0.00033442798323645405,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.000334428",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the zebra playing with the horses?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many horses are in the image?",
+            "score": 4.225025383361924e-06,
+            "skill": "count"
+          },
+          "detected": "soft_score=4.22503e-06",
+          "expected": "five",
+          "status": "failed",
+          "target": "How many horses are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "count_mismatch",
+        "relation_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many violins are in the image?",
+            "score": 2.0688041784602804e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=2.0688e-09",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many violins are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the zebra playing with the horses?",
+            "score": 0.00033442798323645405,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.000334428",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the zebra playing with the horses?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many horses are in the image?",
+            "score": 4.225025383361924e-06,
+            "skill": "count"
+          },
+          "detected": "soft_score=4.22503e-06",
+          "expected": "five",
+          "status": "failed",
+          "target": "How many horses are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the violins blue?",
+            "score": 0.9999999609963197,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the violins blue?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any violins in the image?",
+            "score": 0.9999999928550096,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any violins in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the violins on top of the zebra?",
+            "score": 0.9999997113231984,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the violins on top of the zebra?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many zebras are in the image?",
+            "score": 0.9999974438184656,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.999997",
+          "expected": "one",
+          "status": "passed",
+          "target": "How many zebras are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the zebra blue?",
+            "score": 0.9999999555293471,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the zebra blue?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any zebras in the image?",
+            "score": 0.9997379781852942,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999738",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any zebras in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the horses metal?",
+            "score": 0.9913768284604885,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.991377",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the horses metal?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 10,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any horses in the image?",
+            "score": 0.9999034168922663,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999903",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any horses in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.7264867221034376,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "seven blue violins on top of a blue zebra playing with five metal horses",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many violins are in the image?",
+          "score": 2.0688041784602804e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=2.0688e-09",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many violins are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the zebra playing with the horses?",
+          "score": 0.00033442798323645405,
+          "skill": "verb"
+        },
+        "detected": "soft_score=0.000334428",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Is the zebra playing with the horses?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many horses are in the image?",
+          "score": 4.225025383361924e-06,
+          "skill": "count"
+        },
+        "detected": "soft_score=4.22503e-06",
+        "expected": "five",
+        "status": "failed",
+        "target": "How many horses are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly seven violins, exactly one zebra, and exactly five horses.",
+        "Bind blue color to all seven violins and to the single zebra.",
+        "Bind metal material to all five horses.",
+        "Place all seven blue violins visibly on top of the blue zebra, separated enough to count.",
+        "Show the blue zebra playing with the five metal horses in the same scene.",
+        "Avoid occlusion that hides or merges any violin, horse, or the zebra."
+      ],
+      "generation_strategy": "Use a clear multi-object composition with the single blue zebra centered and fully visible, seven separate blue violins arranged on top of the zebra, and five separate metal horses nearby interacting with the zebra. Emphasize countable separation, correct attribute binding, and unobstructed visibility of every object.",
+      "initial_prompt": "A clear scene with exactly one blue zebra, fully visible, playing with exactly five metal horses. Exactly seven blue violins are on top of the blue zebra, all seven violins separate and clearly countable. The five metal horses are separate, clearly visible, and countable near the zebra. Ensure the zebra is blue, every violin is blue, every horse has a metal material, and no objects are hidden or merged.",
+      "parsed_constraints": {
+        "attributes": {
+          "horses": [
+            "metal"
+          ],
+          "violins": [
+            "blue"
+          ],
+          "zebra": [
+            "blue"
+          ]
+        },
+        "counts": {
+          "horses": 5,
+          "violins": 7,
+          "zebras": 1
+        },
+        "objects": [
+          "violins",
+          "zebra",
+          "horses"
+        ],
+        "relations": [
+          "seven blue violins on top of the blue zebra",
+          "blue zebra playing with five metal horses"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "object_presence",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly seven violins, exactly one zebra, and exactly five horses.",
+        "Bind blue color to all seven violins and to the single zebra.",
+        "Bind metal material to all five horses.",
+        "Place all seven blue violins visibly on top of the blue zebra, separated enough to count.",
+        "Show the blue zebra playing with the five metal horses in the same scene.",
+        "Avoid occlusion that hides or merges any violin, horse, or the zebra."
+      ],
+      "generation_strategy": "Use a clear multi-object composition with the single blue zebra centered and fully visible, seven separate blue violins arranged on top of the zebra, and five separate metal horses nearby interacting with the zebra. Emphasize countable separation, correct attribute binding, and unobstructed visibility of every object.",
+      "initial_prompt": "A clear scene with exactly one blue zebra, fully visible, playing with exactly five metal horses. Exactly seven blue violins are on top of the blue zebra, all seven violins separate and clearly countable. The five metal horses are separate, clearly visible, and countable near the zebra. Ensure the zebra is blue, every violin is blue, every horse has a metal material, and no objects are hidden or merged.",
+      "parsed_constraints": {
+        "attributes": {
+          "horses": [
+            "metal"
+          ],
+          "violins": [
+            "blue"
+          ],
+          "zebra": [
+            "blue"
+          ]
+        },
+        "counts": {
+          "horses": 5,
+          "violins": 7,
+          "zebras": 1
+        },
+        "objects": [
+          "violins",
+          "zebra",
+          "horses"
+        ],
+        "relations": [
+          "seven blue violins on top of the blue zebra",
+          "blue zebra playing with five metal horses"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "object_presence",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion"
+      ]
+    },
+    "previous_prompt": "A clear scene with exactly one blue zebra, fully visible, playing with exactly five metal horses. Exactly seven blue violins are on top of the blue zebra, all seven violins separate and clearly countable. The five metal horses are separate, clearly visible, and countable near the zebra. Ensure the zebra is blue, every violin is blue, every horse has a metal material, and no objects are hidden or merged.",
+    "previous_selected_skills": [
+      "quantity_counting",
+      "attribute_binding",
+      "object_presence",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion"
+    ],
+    "prompt_id": "geneval2_00785_4cf1b8d4",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "count_mismatch",
+          "relation_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many violins are in the image?",
+              "score": 2.0688041784602804e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=2.0688e-09",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many violins are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the zebra playing with the horses?",
+              "score": 0.00033442798323645405,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.000334428",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the zebra playing with the horses?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many horses are in the image?",
+              "score": 4.225025383361924e-06,
+              "skill": "count"
+            },
+            "detected": "soft_score=4.22503e-06",
+            "expected": "five",
+            "status": "failed",
+            "target": "How many horses are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the violins blue?",
+              "score": 0.9999999609963197,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the violins blue?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any violins in the image?",
+              "score": 0.9999999928550096,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any violins in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the violins on top of the zebra?",
+              "score": 0.9999997113231984,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the violins on top of the zebra?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many zebras are in the image?",
+              "score": 0.9999974438184656,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.999997",
+            "expected": "one",
+            "status": "passed",
+            "target": "How many zebras are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the zebra blue?",
+              "score": 0.9999999555293471,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Is the zebra blue?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any zebras in the image?",
+              "score": 0.9997379781852942,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999738",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any zebras in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the horses metal?",
+              "score": 0.9913768284604885,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.991377",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the horses metal?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 10,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any horses in the image?",
+              "score": 0.9999034168922663,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999903",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any horses in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly seven violins, exactly one zebra, and exactly five horses.",
+            "Bind blue color to all seven violins and to the single zebra.",
+            "Bind metal material to all five horses.",
+            "Place all seven blue violins visibly on top of the blue zebra, separated enough to count.",
+            "Show the blue zebra playing with the five metal horses in the same scene.",
+            "Avoid occlusion that hides or merges any violin, horse, or the zebra."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with the single blue zebra centered and fully visible, seven separate blue violins arranged on top of the zebra, and five separate metal horses nearby interacting with the zebra. Emphasize countable separation, correct attribute binding, and unobstructed visibility of every object.",
+          "initial_prompt": "A clear scene with exactly one blue zebra, fully visible, playing with exactly five metal horses. Exactly seven blue violins are on top of the blue zebra, all seven violins separate and clearly countable. The five metal horses are separate, clearly visible, and countable near the zebra. Ensure the zebra is blue, every violin is blue, every horse has a metal material, and no objects are hidden or merged.",
+          "parsed_constraints": {
+            "attributes": {
+              "horses": [
+                "metal"
+              ],
+              "violins": [
+                "blue"
+              ],
+              "zebra": [
+                "blue"
+              ]
+            },
+            "counts": {
+              "horses": 5,
+              "violins": 7,
+              "zebras": 1
+            },
+            "objects": [
+              "violins",
+              "zebra",
+              "horses"
+            ],
+            "relations": [
+              "seven blue violins on top of the blue zebra",
+              "blue zebra playing with five metal horses"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "attribute_binding",
+            "object_presence",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly seven violins, exactly one zebra, and exactly five horses.",
+            "Bind blue color to all seven violins and to the single zebra.",
+            "Bind metal material to all five horses.",
+            "Place all seven blue violins visibly on top of the blue zebra, separated enough to count.",
+            "Show the blue zebra playing with the five metal horses in the same scene.",
+            "Avoid occlusion that hides or merges any violin, horse, or the zebra."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with the single blue zebra centered and fully visible, seven separate blue violins arranged on top of the zebra, and five separate metal horses nearby interacting with the zebra. Emphasize countable separation, correct attribute binding, and unobstructed visibility of every object.",
+          "initial_prompt": "A clear scene with exactly one blue zebra, fully visible, playing with exactly five metal horses. Exactly seven blue violins are on top of the blue zebra, all seven violins separate and clearly countable. The five metal horses are separate, clearly visible, and countable near the zebra. Ensure the zebra is blue, every violin is blue, every horse has a metal material, and no objects are hidden or merged.",
+          "parsed_constraints": {
+            "attributes": {
+              "horses": [
+                "metal"
+              ],
+              "violins": [
+                "blue"
+              ],
+              "zebra": [
+                "blue"
+              ]
+            },
+            "counts": {
+              "horses": 5,
+              "violins": 7,
+              "zebras": 1
+            },
+            "objects": [
+              "violins",
+              "zebra",
+              "horses"
+            ],
+            "relations": [
+              "seven blue violins on top of the blue zebra",
+              "blue zebra playing with five metal horses"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "attribute_binding",
+            "object_presence",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion"
+          ]
+        },
+        "prompt_used": "A clear scene with exactly one blue zebra, fully visible, playing with exactly five metal horses. Exactly seven blue violins are on top of the blue zebra, all seven violins separate and clearly countable. The five metal horses are separate, clearly visible, and countable near the zebra. Ensure the zebra is blue, every violin is blue, every horse has a metal material, and no objects are hidden or merged.",
+        "round": 0,
+        "score": 0.7264867221034376,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many violins are in the image?",
+                "score": 2.0688041784602804e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=2.0688e-09",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many violins are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the zebra playing with the horses?",
+                "score": 0.00033442798323645405,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.000334428",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the zebra playing with the horses?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many horses are in the image?",
+                "score": 4.225025383361924e-06,
+                "skill": "count"
+              },
+              "detected": "soft_score=4.22503e-06",
+              "expected": "five",
+              "status": "failed",
+              "target": "How many horses are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00785_4cf1b8d4"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many violins are in the image?",
+          "score": 2.0688041784602804e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=2.0688e-09",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many violins are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the zebra playing with the horses?",
+          "score": 0.00033442798323645405,
+          "skill": "verb"
+        },
+        "detected": "soft_score=0.000334428",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Is the zebra playing with the horses?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many horses are in the image?",
+          "score": 4.225025383361924e-06,
+          "skill": "count"
+        },
+        "detected": "soft_score=4.22503e-06",
+        "expected": "five",
+        "status": "failed",
+        "target": "How many horses are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00012/samples/00004.png",
+    "best_so_far_prompt": "A clear scene with exactly one blue zebra, fully visible, playing with exactly five metal horses. Exactly seven blue violins are on top of the blue zebra, all seven violins separate and clearly countable. The five metal horses are separate, clearly visible, and countable near the zebra. Ensure the zebra is blue, every violin is blue, every horse has a metal material, and no objects are hidden or merged.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.7264867221034376,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many violins are in the image?",
+          "score": 2.0688041784602804e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=2.0688e-09",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many violins are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the zebra playing with the horses?",
+          "score": 0.00033442798323645405,
+          "skill": "verb"
+        },
+        "detected": "soft_score=0.000334428",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Is the zebra playing with the horses?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many horses are in the image?",
+          "score": 4.225025383361924e-06,
+          "skill": "count"
+        },
+        "detected": "soft_score=4.22503e-06",
+        "expected": "five",
+        "status": "failed",
+        "target": "How many horses are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly seven violins, exactly one zebra, and exactly five horses.",
+        "Bind blue color to all seven violins and to the single zebra.",
+        "Bind metal material to all five horses.",
+        "Place all seven blue violins visibly on top of the blue zebra, separated enough to count.",
+        "Show the blue zebra playing with the five metal horses in the same scene.",
+        "Avoid occlusion that hides or merges any violin, horse, or the zebra."
+      ],
+      "generation_strategy": "Use a clear multi-object composition with the single blue zebra centered and fully visible, seven separate blue violins arranged on top of the zebra, and five separate metal horses nearby interacting with the zebra. Emphasize countable separation, correct attribute binding, and unobstructed visibility of every object.",
+      "initial_prompt": "A clear scene with exactly one blue zebra, fully visible, playing with exactly five metal horses. Exactly seven blue violins are on top of the blue zebra, all seven violins separate and clearly countable. The five metal horses are separate, clearly visible, and countable near the zebra. Ensure the zebra is blue, every violin is blue, every horse has a metal material, and no objects are hidden or merged.",
+      "parsed_constraints": {
+        "attributes": {
+          "horses": [
+            "metal"
+          ],
+          "violins": [
+            "blue"
+          ],
+          "zebra": [
+            "blue"
+          ]
+        },
+        "counts": {
+          "horses": 5,
+          "violins": 7,
+          "zebras": 1
+        },
+        "objects": [
+          "violins",
+          "zebra",
+          "horses"
+        ],
+        "relations": [
+          "seven blue violins on top of the blue zebra",
+          "blue zebra playing with five metal horses"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "object_presence",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.726 failed=['How many violins are in the image?', 'Is the zebra playing with the horses?', 'How many horses are in the image?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_incremental/snapshot_001_worker_03/geneval2_00785_4cf1b8d4__geneval2_00785_4cf1b8d4_cand_04__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00785_4cf1b8d4__geneval2_00785_4cf1b8d4_cand_04__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00785_4cf1b8d4",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The generated image preserved object presence, blue color for the zebra and violins, metal material for horses, one zebra, and violins positioned on top of the zebra, but failed the exact counts for violins and horses and did not make the zebra clearly playing with the horses. The count failures indicate the previous prompt did not force the seven violins and five horses to be visually separable enough for counting. The relation failure indicates that saying the horses were near the zebra was too weak to show a clear playful interaction.",
+    "expected_improvement": [
+      "Exactly seven blue violins should be visible and individually countable on top of the blue zebra.",
+      "Exactly five metal horses should be visible and individually countable, with no extra horses.",
+      "The blue zebra should be visibly playing with the five metal horses rather than merely standing near them."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "relation_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly one zebra in the image.",
+      "Keep the zebra blue.",
+      "Keep all violins blue.",
+      "Keep the violins on top of the zebra.",
+      "Keep all horses metal.",
+      "Keep violins, zebra, and horses clearly present and fully visible."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt requested exact counts but did not provide a stronger countable arrangement. The seven violins could merge or be partially hidden on top of the zebra, and the five horses could merge or be omitted. The phrase 'playing with exactly five metal horses' was weakened by later wording that only placed the horses near the zebra, so the interaction was not visually explicit.",
+      "error_source": "prompt_under_specified_count_separation_and_relation"
+    },
+    "regeneration_strategy": "Use a simpler, verifier-friendly composition: one large blue zebra as the central subject, seven separate blue violins visibly resting on top of the zebra with clear gaps between them, and exactly five separate metal horses close to the zebra in a playful interaction. Add explicit negative constraints against extra violins, extra horses, extra zebras, overlapping, merging, and cropping.",
+    "regression_risks": [
+      "Adding stronger count instructions could reduce the clarity of the violins-on-top relation if violins drift away from the zebra.",
+      "Emphasizing playful interaction could distract from the exact count of five horses.",
+      "The blue color of the zebra and violins or metal material of horses could regress if not restated explicitly."
+    ],
+    "repair_constraints": [
+      "Show exactly seven blue violins, no more and no fewer, all separate, fully visible, and countable.",
+      "Place all seven blue violins on top of the single blue zebra, with visible gaps so none overlap or merge.",
+      "Show exactly five metal horses, no more and no fewer, all separate, fully visible, and countable.",
+      "Make the single blue zebra visibly playing with the five metal horses through an obvious playful interaction between the zebra and the horses.",
+      "Do not add extra violins, extra horses, or extra zebras."
+    ],
+    "retry_prompt": "A clear, simple scene with exactly one blue zebra, fully visible. Exactly seven blue violins are resting on top of the blue zebra; all seven violins are separate, fully visible, evenly spaced with gaps, and easy to count. The blue zebra is visibly playing with exactly five metal horses; all five metal horses are separate, complete, fully visible, and easy to count. Every horse has a shiny metal material. No extra violins, no extra horses, no extra zebras. Do not let any violin, horse, or the zebra overlap, merge, hide, or be cropped.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "object_presence",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "object_presence",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion"
+      ],
+      "reason": "Add negative_constraints to explicitly prevent extra or missing objects and strengthen quantity_counting, anti_occlusion, and clarity_visibility for the persistent count failures. Keep spatial_layout and multi_object_composition to preserve violins on top of the zebra and make the zebra-horses playing relation clearer."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "seven blue violins on top of a blue zebra playing with five metal horses",
+    "prompt": "seven blue violins on top of a blue zebra playing with five metal horses",
+    "prompt_id": "geneval2_00785_4cf1b8d4",
+    "sampling_bucket": "count",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "relation_action",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 3,
+      "count": 3,
+      "object": 3,
+      "position": 1,
+      "verb": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object",
+      "verb",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 785,
+    "vqa_list": [
+      [
+        "How many violins are in the image?",
+        "seven"
+      ],
+      [
+        "Are the violins blue?",
+        "Yes"
+      ],
+      [
+        "Are there any violins in the image?",
+        "Yes"
+      ],
+      [
+        "Are the violins on top of the zebra?",
+        "Yes"
+      ],
+      [
+        "How many zebras are in the image?",
+        "one"
+      ],
+      [
+        "Is the zebra blue?",
+        "Yes"
+      ],
+      [
+        "Are there any zebras in the image?",
+        "Yes"
+      ],
+      [
+        "Is the zebra playing with the horses?",
+        "Yes"
+      ],
+      [
+        "How many horses are in the image?",
+        "five"
+      ],
+      [
+        "Are the horses metal?",
+        "Yes"
+      ],
+      [
+        "Are there any horses in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00785_4cf1b8d4"
+}

@@ -1,0 +1,2953 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "count_mismatch",
+          "missing_object",
+          "relation_mismatch",
+          "spatial_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cats are in the image?",
+              "score": 4.574001227279472e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=4.574e-08",
+            "expected": "three",
+            "status": "failed",
+            "target": "How many cats are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cats chasing the horses?",
+              "score": 4.6123236607797935e-06,
+              "skill": "verb"
+            },
+            "detected": "soft_score=4.61232e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cats chasing the horses?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the horses in front of the violins?",
+              "score": 0.029066628330383537,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.0290666",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the horses in front of the violins?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any violins in the image?",
+              "score": 0.5053780334856128,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.505378",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any violins in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cats striped?",
+              "score": 1.0,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the cats striped?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any cats in the image?",
+              "score": 0.9999999997744453,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any cats in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many horses are in the image?",
+              "score": 0.999999932101742,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "four",
+            "status": "passed",
+            "target": "How many horses are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any horses in the image?",
+              "score": 0.9999999719457264,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any horses in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many violins are in the image?",
+              "score": 0.9995645341973701,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.999565",
+            "expected": "four",
+            "status": "passed",
+            "target": "How many violins are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the violins wooden?",
+              "score": 0.9999999622232281,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the violins wooden?",
+            "type": "attribute_mismatch"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_002/raw_score_lists.by_candidate.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00795_b6469143_cand_00",
+          "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_002/raw_score_lists.by_candidate.json",
+          "rows": [
+            {
+              "answer": "three",
+              "atom_count": 10,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00795_b6469143_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00025/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00025/samples/00000.png",
+              "prompt": "three striped cats chasing four horses in front of four wooden violins",
+              "prompt_id": "geneval2_00795_b6469143",
+              "question": "How many cats are in the image?",
+              "score": 4.574001227279472e-08,
+              "skill": "count",
+              "source_index": 795
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00795_b6469143_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00025/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00025/samples/00000.png",
+              "prompt": "three striped cats chasing four horses in front of four wooden violins",
+              "prompt_id": "geneval2_00795_b6469143",
+              "question": "Are the cats striped?",
+              "score": 1.00000002354858,
+              "skill": "attribute",
+              "source_index": 795
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00795_b6469143_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00025/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00025/samples/00000.png",
+              "prompt": "three striped cats chasing four horses in front of four wooden violins",
+              "prompt_id": "geneval2_00795_b6469143",
+              "question": "Are there any cats in the image?",
+              "score": 0.9999999997744453,
+              "skill": "object",
+              "source_index": 795
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00795_b6469143_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00025/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00025/samples/00000.png",
+              "prompt": "three striped cats chasing four horses in front of four wooden violins",
+              "prompt_id": "geneval2_00795_b6469143",
+              "question": "Are the cats chasing the horses?",
+              "score": 4.6123236607797935e-06,
+              "skill": "verb",
+              "source_index": 795
+            },
+            {
+              "answer": "four",
+              "atom_count": 10,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00795_b6469143_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00025/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00025/samples/00000.png",
+              "prompt": "three striped cats chasing four horses in front of four wooden violins",
+              "prompt_id": "geneval2_00795_b6469143",
+              "question": "How many horses are in the image?",
+              "score": 0.999999932101742,
+              "skill": "count",
+              "source_index": 795
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00795_b6469143_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00025/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00025/samples/00000.png",
+              "prompt": "three striped cats chasing four horses in front of four wooden violins",
+              "prompt_id": "geneval2_00795_b6469143",
+              "question": "Are there any horses in the image?",
+              "score": 0.9999999719457264,
+              "skill": "object",
+              "source_index": 795
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00795_b6469143_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00025/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00025/samples/00000.png",
+              "prompt": "three striped cats chasing four horses in front of four wooden violins",
+              "prompt_id": "geneval2_00795_b6469143",
+              "question": "Are the horses in front of the violins?",
+              "score": 0.029066628330383537,
+              "skill": "position",
+              "source_index": 795
+            },
+            {
+              "answer": "four",
+              "atom_count": 10,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00795_b6469143_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00025/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00025/samples/00000.png",
+              "prompt": "three striped cats chasing four horses in front of four wooden violins",
+              "prompt_id": "geneval2_00795_b6469143",
+              "question": "How many violins are in the image?",
+              "score": 0.9995645341973701,
+              "skill": "count",
+              "source_index": 795
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00795_b6469143_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00025/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00025/samples/00000.png",
+              "prompt": "three striped cats chasing four horses in front of four wooden violins",
+              "prompt_id": "geneval2_00795_b6469143",
+              "question": "Are the violins wooden?",
+              "score": 0.9999999622232281,
+              "skill": "attribute",
+              "source_index": 795
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00795_b6469143_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00025/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00025/samples/00000.png",
+              "prompt": "three striped cats chasing four horses in front of four wooden violins",
+              "prompt_id": "geneval2_00795_b6469143",
+              "question": "Are there any violins in the image?",
+              "score": 0.5053780334856128,
+              "skill": "object",
+              "source_index": 795
+            }
+          ],
+          "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_002/raw_score_lists.by_candidate.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.6534013720122182,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 0,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00795_b6469143.json",
+          "manifest_prompt_index": 25,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00795_b6469143"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00795_b6469143_cand_00",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00025/samples/00000.png",
+        "prompt_used": "A clear side-view scene showing exactly three striped cats chasing exactly four horses. The four horses are positioned in front of exactly four wooden violins. Arrange the four wooden violins as a visible back row, the four horses as a separate middle row in front of the violins, and the three striped cats behind the horses, running toward them as if chasing them. Make all three cats visibly striped, all four horses distinct and countable, and all four violins visibly wooden and distinct. Keep every cat, horse, and violin separated, unobstructed, and fully visible for accurate counting.",
+        "seed": 1125
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly three cats, exactly four horses, and exactly four violins.",
+          "All three cats must be visibly striped.",
+          "All four violins must be visibly wooden.",
+          "The cats must appear to be chasing the horses.",
+          "The horses must be positioned in front of the violins.",
+          "Keep each object separated and fully visible enough to count; avoid occlusion between cats, horses, and violins."
+        ],
+        "generation_strategy": "Use a clear side-view composition with separated rows to satisfy counting and spatial relations: four wooden violins in the back row, four horses in front of the violins, and three striped cats behind the horses in a chasing posture. Maintain clear visibility and separation for every object.",
+        "initial_prompt": "A clear side-view scene showing exactly three striped cats chasing exactly four horses. The four horses are positioned in front of exactly four wooden violins. Arrange the four wooden violins as a visible back row, the four horses as a separate middle row in front of the violins, and the three striped cats behind the horses, running toward them as if chasing them. Make all three cats visibly striped, all four horses distinct and countable, and all four violins visibly wooden and distinct. Keep every cat, horse, and violin separated, unobstructed, and fully visible for accurate counting.",
+        "parsed_constraints": {
+          "attributes": {
+            "cats": [
+              "striped"
+            ],
+            "violins": [
+              "wooden"
+            ]
+          },
+          "counts": {
+            "cats": 3,
+            "horses": 4,
+            "violins": 4
+          },
+          "objects": [
+            "cats",
+            "horses",
+            "violins"
+          ],
+          "relations": [
+            "three striped cats chasing four horses",
+            "four horses in front of four wooden violins"
+          ]
+        },
+        "selected_skills": [
+          "quantity_counting",
+          "attribute_binding",
+          "multi_object_composition",
+          "spatial_layout",
+          "object_presence",
+          "clarity_visibility",
+          "anti_occlusion"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly three cats, exactly four horses, and exactly four violins.",
+          "All three cats must be visibly striped.",
+          "All four violins must be visibly wooden.",
+          "The cats must appear to be chasing the horses.",
+          "The horses must be positioned in front of the violins.",
+          "Keep each object separated and fully visible enough to count; avoid occlusion between cats, horses, and violins."
+        ],
+        "generation_strategy": "Use a clear side-view composition with separated rows to satisfy counting and spatial relations: four wooden violins in the back row, four horses in front of the violins, and three striped cats behind the horses in a chasing posture. Maintain clear visibility and separation for every object.",
+        "initial_prompt": "A clear side-view scene showing exactly three striped cats chasing exactly four horses. The four horses are positioned in front of exactly four wooden violins. Arrange the four wooden violins as a visible back row, the four horses as a separate middle row in front of the violins, and the three striped cats behind the horses, running toward them as if chasing them. Make all three cats visibly striped, all four horses distinct and countable, and all four violins visibly wooden and distinct. Keep every cat, horse, and violin separated, unobstructed, and fully visible for accurate counting.",
+        "parsed_constraints": {
+          "attributes": {
+            "cats": [
+              "striped"
+            ],
+            "violins": [
+              "wooden"
+            ]
+          },
+          "counts": {
+            "cats": 3,
+            "horses": 4,
+            "violins": 4
+          },
+          "objects": [
+            "cats",
+            "horses",
+            "violins"
+          ],
+          "relations": [
+            "three striped cats chasing four horses",
+            "four horses in front of four wooden violins"
+          ]
+        },
+        "selected_skills": [
+          "quantity_counting",
+          "attribute_binding",
+          "multi_object_composition",
+          "spatial_layout",
+          "object_presence",
+          "clarity_visibility",
+          "anti_occlusion"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cats are in the image?",
+                "score": 4.574001227279472e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=4.574e-08",
+              "expected": "three",
+              "status": "failed",
+              "target": "How many cats are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cats chasing the horses?",
+                "score": 4.6123236607797935e-06,
+                "skill": "verb"
+              },
+              "detected": "soft_score=4.61232e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cats chasing the horses?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the horses in front of the violins?",
+                "score": 0.029066628330383537,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.0290666",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the horses in front of the violins?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any violins in the image?",
+                "score": 0.5053780334856128,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.505378",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any violins in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00025/samples/00000.png",
+          "prompt": "A clear side-view scene showing exactly three striped cats chasing exactly four horses. The four horses are positioned in front of exactly four wooden violins. Arrange the four wooden violins as a visible back row, the four horses as a separate middle row in front of the violins, and the three striped cats behind the horses, running toward them as if chasing them. Make all three cats visibly striped, all four horses distinct and countable, and all four violins visibly wooden and distinct. Keep every cat, horse, and violin separated, unobstructed, and fully visible for accurate counting.",
+          "round": 0,
+          "score": 0.6534013720122182
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00795_b6469143_cand_00",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "count_mismatch",
+            "missing_object",
+            "relation_mismatch",
+            "spatial_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cats are in the image?",
+                "score": 4.574001227279472e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=4.574e-08",
+              "expected": "three",
+              "status": "failed",
+              "target": "How many cats are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cats chasing the horses?",
+                "score": 4.6123236607797935e-06,
+                "skill": "verb"
+              },
+              "detected": "soft_score=4.61232e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cats chasing the horses?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the horses in front of the violins?",
+                "score": 0.029066628330383537,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.0290666",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the horses in front of the violins?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any violins in the image?",
+                "score": 0.5053780334856128,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.505378",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any violins in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cats striped?",
+                "score": 1.0,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the cats striped?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any cats in the image?",
+                "score": 0.9999999997744453,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any cats in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many horses are in the image?",
+                "score": 0.999999932101742,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "four",
+              "status": "passed",
+              "target": "How many horses are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any horses in the image?",
+                "score": 0.9999999719457264,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any horses in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many violins are in the image?",
+                "score": 0.9995645341973701,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.999565",
+              "expected": "four",
+              "status": "passed",
+              "target": "How many violins are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the violins wooden?",
+                "score": 0.9999999622232281,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the violins wooden?",
+              "type": "attribute_mismatch"
+            }
+          ],
+          "score": 0.6534013720122182,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many cats are in the image?",
+                  "score": 4.574001227279472e-08,
+                  "skill": "count"
+                },
+                "detected": "soft_score=4.574e-08",
+                "expected": "three",
+                "status": "failed",
+                "target": "How many cats are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the cats chasing the horses?",
+                  "score": 4.6123236607797935e-06,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=4.61232e-06",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the cats chasing the horses?",
+                "type": "relation_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the horses in front of the violins?",
+                  "score": 0.029066628330383537,
+                  "skill": "position"
+                },
+                "detected": "soft_score=0.0290666",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the horses in front of the violins?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any violins in the image?",
+                  "score": 0.5053780334856128,
+                  "skill": "object"
+                },
+                "detected": "soft_score=0.505378",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are there any violins in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00025/samples/00000.png",
+            "prompt": "A clear side-view scene showing exactly three striped cats chasing exactly four horses. The four horses are positioned in front of exactly four wooden violins. Arrange the four wooden violins as a visible back row, the four horses as a separate middle row in front of the violins, and the three striped cats behind the horses, running toward them as if chasing them. Make all three cats visibly striped, all four horses distinct and countable, and all four violins visibly wooden and distinct. Keep every cat, horse, and violin separated, unobstructed, and fully visible for accurate counting.",
+            "round": 0,
+            "score": 0.6534013720122182
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cats are in the image?",
+                "score": 4.574001227279472e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=4.574e-08",
+              "expected": "three",
+              "status": "failed",
+              "target": "How many cats are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cats chasing the horses?",
+                "score": 4.6123236607797935e-06,
+                "skill": "verb"
+              },
+              "detected": "soft_score=4.61232e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cats chasing the horses?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the horses in front of the violins?",
+                "score": 0.029066628330383537,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.0290666",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the horses in front of the violins?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any violins in the image?",
+                "score": 0.5053780334856128,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.505378",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any violins in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "count_mismatch",
+            "missing_object",
+            "relation_mismatch",
+            "spatial_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cats are in the image?",
+                "score": 4.574001227279472e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=4.574e-08",
+              "expected": "three",
+              "status": "failed",
+              "target": "How many cats are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cats chasing the horses?",
+                "score": 4.6123236607797935e-06,
+                "skill": "verb"
+              },
+              "detected": "soft_score=4.61232e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cats chasing the horses?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the horses in front of the violins?",
+                "score": 0.029066628330383537,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.0290666",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the horses in front of the violins?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any violins in the image?",
+                "score": 0.5053780334856128,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.505378",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any violins in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cats striped?",
+                "score": 1.0,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the cats striped?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any cats in the image?",
+                "score": 0.9999999997744453,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any cats in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many horses are in the image?",
+                "score": 0.999999932101742,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "four",
+              "status": "passed",
+              "target": "How many horses are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any horses in the image?",
+                "score": 0.9999999719457264,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any horses in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many violins are in the image?",
+                "score": 0.9995645341973701,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.999565",
+              "expected": "four",
+              "status": "passed",
+              "target": "How many violins are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the violins wooden?",
+                "score": 0.9999999622232281,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the violins wooden?",
+              "type": "attribute_mismatch"
+            }
+          ],
+          "score": 0.6534013720122182,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "three striped cats chasing four horses in front of four wooden violins",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cats are in the image?",
+              "score": 4.574001227279472e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=4.574e-08",
+            "expected": "three",
+            "status": "failed",
+            "target": "How many cats are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cats chasing the horses?",
+              "score": 4.6123236607797935e-06,
+              "skill": "verb"
+            },
+            "detected": "soft_score=4.61232e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cats chasing the horses?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the horses in front of the violins?",
+              "score": 0.029066628330383537,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.0290666",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the horses in front of the violins?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any violins in the image?",
+              "score": 0.5053780334856128,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.505378",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any violins in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly three cats, exactly four horses, and exactly four violins.",
+            "All three cats must be visibly striped.",
+            "All four violins must be visibly wooden.",
+            "The cats must appear to be chasing the horses.",
+            "The horses must be positioned in front of the violins.",
+            "Keep each object separated and fully visible enough to count; avoid occlusion between cats, horses, and violins."
+          ],
+          "generation_strategy": "Use a clear side-view composition with separated rows to satisfy counting and spatial relations: four wooden violins in the back row, four horses in front of the violins, and three striped cats behind the horses in a chasing posture. Maintain clear visibility and separation for every object.",
+          "initial_prompt": "A clear side-view scene showing exactly three striped cats chasing exactly four horses. The four horses are positioned in front of exactly four wooden violins. Arrange the four wooden violins as a visible back row, the four horses as a separate middle row in front of the violins, and the three striped cats behind the horses, running toward them as if chasing them. Make all three cats visibly striped, all four horses distinct and countable, and all four violins visibly wooden and distinct. Keep every cat, horse, and violin separated, unobstructed, and fully visible for accurate counting.",
+          "parsed_constraints": {
+            "attributes": {
+              "cats": [
+                "striped"
+              ],
+              "violins": [
+                "wooden"
+              ]
+            },
+            "counts": {
+              "cats": 3,
+              "horses": 4,
+              "violins": 4
+            },
+            "objects": [
+              "cats",
+              "horses",
+              "violins"
+            ],
+            "relations": [
+              "three striped cats chasing four horses",
+              "four horses in front of four wooden violins"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "attribute_binding",
+            "multi_object_composition",
+            "spatial_layout",
+            "object_presence",
+            "clarity_visibility",
+            "anti_occlusion"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly three cats, exactly four horses, and exactly four violins.",
+            "All three cats must be visibly striped.",
+            "All four violins must be visibly wooden.",
+            "The cats must appear to be chasing the horses.",
+            "The horses must be positioned in front of the violins.",
+            "Keep each object separated and fully visible enough to count; avoid occlusion between cats, horses, and violins."
+          ],
+          "generation_strategy": "Use a clear side-view composition with separated rows to satisfy counting and spatial relations: four wooden violins in the back row, four horses in front of the violins, and three striped cats behind the horses in a chasing posture. Maintain clear visibility and separation for every object.",
+          "initial_prompt": "A clear side-view scene showing exactly three striped cats chasing exactly four horses. The four horses are positioned in front of exactly four wooden violins. Arrange the four wooden violins as a visible back row, the four horses as a separate middle row in front of the violins, and the three striped cats behind the horses, running toward them as if chasing them. Make all three cats visibly striped, all four horses distinct and countable, and all four violins visibly wooden and distinct. Keep every cat, horse, and violin separated, unobstructed, and fully visible for accurate counting.",
+          "parsed_constraints": {
+            "attributes": {
+              "cats": [
+                "striped"
+              ],
+              "violins": [
+                "wooden"
+              ]
+            },
+            "counts": {
+              "cats": 3,
+              "horses": 4,
+              "violins": 4
+            },
+            "objects": [
+              "cats",
+              "horses",
+              "violins"
+            ],
+            "relations": [
+              "three striped cats chasing four horses",
+              "four horses in front of four wooden violins"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "attribute_binding",
+            "multi_object_composition",
+            "spatial_layout",
+            "object_presence",
+            "clarity_visibility",
+            "anti_occlusion"
+          ]
+        },
+        "previous_prompt": "A clear side-view scene showing exactly three striped cats chasing exactly four horses. The four horses are positioned in front of exactly four wooden violins. Arrange the four wooden violins as a visible back row, the four horses as a separate middle row in front of the violins, and the three striped cats behind the horses, running toward them as if chasing them. Make all three cats visibly striped, all four horses distinct and countable, and all four violins visibly wooden and distinct. Keep every cat, horse, and violin separated, unobstructed, and fully visible for accurate counting.",
+        "previous_selected_skills": [
+          "quantity_counting",
+          "attribute_binding",
+          "multi_object_composition",
+          "spatial_layout",
+          "object_presence",
+          "clarity_visibility",
+          "anti_occlusion"
+        ],
+        "prompt_id": "geneval2_00795_b6469143",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "count_mismatch",
+              "missing_object",
+              "relation_mismatch",
+              "spatial_mismatch"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many cats are in the image?",
+                  "score": 4.574001227279472e-08,
+                  "skill": "count"
+                },
+                "detected": "soft_score=4.574e-08",
+                "expected": "three",
+                "status": "failed",
+                "target": "How many cats are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the cats chasing the horses?",
+                  "score": 4.6123236607797935e-06,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=4.61232e-06",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the cats chasing the horses?",
+                "type": "relation_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the horses in front of the violins?",
+                  "score": 0.029066628330383537,
+                  "skill": "position"
+                },
+                "detected": "soft_score=0.0290666",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the horses in front of the violins?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any violins in the image?",
+                  "score": 0.5053780334856128,
+                  "skill": "object"
+                },
+                "detected": "soft_score=0.505378",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are there any violins in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the cats striped?",
+                  "score": 1.0,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the cats striped?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any cats in the image?",
+                  "score": 0.9999999997744453,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any cats in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many horses are in the image?",
+                  "score": 0.999999932101742,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1",
+                "expected": "four",
+                "status": "passed",
+                "target": "How many horses are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any horses in the image?",
+                  "score": 0.9999999719457264,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any horses in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many violins are in the image?",
+                  "score": 0.9995645341973701,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.999565",
+                "expected": "four",
+                "status": "passed",
+                "target": "How many violins are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the violins wooden?",
+                  "score": 0.9999999622232281,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the violins wooden?",
+                "type": "attribute_mismatch"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly three cats, exactly four horses, and exactly four violins.",
+                "All three cats must be visibly striped.",
+                "All four violins must be visibly wooden.",
+                "The cats must appear to be chasing the horses.",
+                "The horses must be positioned in front of the violins.",
+                "Keep each object separated and fully visible enough to count; avoid occlusion between cats, horses, and violins."
+              ],
+              "generation_strategy": "Use a clear side-view composition with separated rows to satisfy counting and spatial relations: four wooden violins in the back row, four horses in front of the violins, and three striped cats behind the horses in a chasing posture. Maintain clear visibility and separation for every object.",
+              "initial_prompt": "A clear side-view scene showing exactly three striped cats chasing exactly four horses. The four horses are positioned in front of exactly four wooden violins. Arrange the four wooden violins as a visible back row, the four horses as a separate middle row in front of the violins, and the three striped cats behind the horses, running toward them as if chasing them. Make all three cats visibly striped, all four horses distinct and countable, and all four violins visibly wooden and distinct. Keep every cat, horse, and violin separated, unobstructed, and fully visible for accurate counting.",
+              "parsed_constraints": {
+                "attributes": {
+                  "cats": [
+                    "striped"
+                  ],
+                  "violins": [
+                    "wooden"
+                  ]
+                },
+                "counts": {
+                  "cats": 3,
+                  "horses": 4,
+                  "violins": 4
+                },
+                "objects": [
+                  "cats",
+                  "horses",
+                  "violins"
+                ],
+                "relations": [
+                  "three striped cats chasing four horses",
+                  "four horses in front of four wooden violins"
+                ]
+              },
+              "selected_skills": [
+                "quantity_counting",
+                "attribute_binding",
+                "multi_object_composition",
+                "spatial_layout",
+                "object_presence",
+                "clarity_visibility",
+                "anti_occlusion"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly three cats, exactly four horses, and exactly four violins.",
+                "All three cats must be visibly striped.",
+                "All four violins must be visibly wooden.",
+                "The cats must appear to be chasing the horses.",
+                "The horses must be positioned in front of the violins.",
+                "Keep each object separated and fully visible enough to count; avoid occlusion between cats, horses, and violins."
+              ],
+              "generation_strategy": "Use a clear side-view composition with separated rows to satisfy counting and spatial relations: four wooden violins in the back row, four horses in front of the violins, and three striped cats behind the horses in a chasing posture. Maintain clear visibility and separation for every object.",
+              "initial_prompt": "A clear side-view scene showing exactly three striped cats chasing exactly four horses. The four horses are positioned in front of exactly four wooden violins. Arrange the four wooden violins as a visible back row, the four horses as a separate middle row in front of the violins, and the three striped cats behind the horses, running toward them as if chasing them. Make all three cats visibly striped, all four horses distinct and countable, and all four violins visibly wooden and distinct. Keep every cat, horse, and violin separated, unobstructed, and fully visible for accurate counting.",
+              "parsed_constraints": {
+                "attributes": {
+                  "cats": [
+                    "striped"
+                  ],
+                  "violins": [
+                    "wooden"
+                  ]
+                },
+                "counts": {
+                  "cats": 3,
+                  "horses": 4,
+                  "violins": 4
+                },
+                "objects": [
+                  "cats",
+                  "horses",
+                  "violins"
+                ],
+                "relations": [
+                  "three striped cats chasing four horses",
+                  "four horses in front of four wooden violins"
+                ]
+              },
+              "selected_skills": [
+                "quantity_counting",
+                "attribute_binding",
+                "multi_object_composition",
+                "spatial_layout",
+                "object_presence",
+                "clarity_visibility",
+                "anti_occlusion"
+              ]
+            },
+            "prompt_used": "A clear side-view scene showing exactly three striped cats chasing exactly four horses. The four horses are positioned in front of exactly four wooden violins. Arrange the four wooden violins as a visible back row, the four horses as a separate middle row in front of the violins, and the three striped cats behind the horses, running toward them as if chasing them. Make all three cats visibly striped, all four horses distinct and countable, and all four violins visibly wooden and distinct. Keep every cat, horse, and violin separated, unobstructed, and fully visible for accurate counting.",
+            "round": 0,
+            "score": 0.6534013720122182,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 0,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many cats are in the image?",
+                    "score": 4.574001227279472e-08,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=4.574e-08",
+                  "expected": "three",
+                  "status": "failed",
+                  "target": "How many cats are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 3,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the cats chasing the horses?",
+                    "score": 4.6123236607797935e-06,
+                    "skill": "verb"
+                  },
+                  "detected": "soft_score=4.61232e-06",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the cats chasing the horses?",
+                  "type": "relation_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 6,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the horses in front of the violins?",
+                    "score": 0.029066628330383537,
+                    "skill": "position"
+                  },
+                  "detected": "soft_score=0.0290666",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the horses in front of the violins?",
+                  "type": "spatial_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 9,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are there any violins in the image?",
+                    "score": 0.5053780334856128,
+                    "skill": "object"
+                  },
+                  "detected": "soft_score=0.505378",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are there any violins in the image?",
+                  "type": "missing_object"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00795_b6469143"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cats are in the image?",
+              "score": 4.574001227279472e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=4.574e-08",
+            "expected": "three",
+            "status": "failed",
+            "target": "How many cats are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cats chasing the horses?",
+              "score": 4.6123236607797935e-06,
+              "skill": "verb"
+            },
+            "detected": "soft_score=4.61232e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cats chasing the horses?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the horses in front of the violins?",
+              "score": 0.029066628330383537,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.0290666",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the horses in front of the violins?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any violins in the image?",
+              "score": 0.5053780334856128,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.505378",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any violins in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00795_b6469143_cand_00",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly three cats, exactly four horses, and exactly four violins.",
+      "All three cats must be visibly striped.",
+      "All four violins must be visibly wooden.",
+      "The cats must appear to be chasing the horses.",
+      "The horses must be positioned in front of the violins.",
+      "Keep each object separated and fully visible enough to count; avoid occlusion between cats, horses, and violins."
+    ],
+    "generation_strategy": "Use a clear side-view composition with separated rows to satisfy counting and spatial relations: four wooden violins in the back row, four horses in front of the violins, and three striped cats behind the horses in a chasing posture. Maintain clear visibility and separation for every object.",
+    "initial_prompt": "A clear side-view scene showing exactly three striped cats chasing exactly four horses. The four horses are positioned in front of exactly four wooden violins. Arrange the four wooden violins as a visible back row, the four horses as a separate middle row in front of the violins, and the three striped cats behind the horses, running toward them as if chasing them. Make all three cats visibly striped, all four horses distinct and countable, and all four violins visibly wooden and distinct. Keep every cat, horse, and violin separated, unobstructed, and fully visible for accurate counting.",
+    "parsed_constraints": {
+      "attributes": {
+        "cats": [
+          "striped"
+        ],
+        "violins": [
+          "wooden"
+        ]
+      },
+      "counts": {
+        "cats": 3,
+        "horses": 4,
+        "violins": 4
+      },
+      "objects": [
+        "cats",
+        "horses",
+        "violins"
+      ],
+      "relations": [
+        "three striped cats chasing four horses",
+        "four horses in front of four wooden violins"
+      ]
+    },
+    "selected_skills": [
+      "quantity_counting",
+      "attribute_binding",
+      "multi_object_composition",
+      "spatial_layout",
+      "object_presence",
+      "clarity_visibility",
+      "anti_occlusion"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The evaluation failed the exact cat count, the cats chasing horses relation, the horses-in-front-of-violins spatial relation, and clear violin presence. Although four horses, four violins, wooden violins, cat presence, and striped cats mostly passed, the generated scene likely made the cats unclear or merged, did not visually communicate pursuit, and treated the violins as background-like or hard to recognize despite count signals.",
+    "expected_improvement": [
+      "Exactly three cats should be countable as three separate striped animals with no extra cats.",
+      "The cats should visibly chase the horses by being placed behind the horses in the direction of motion, running toward them.",
+      "The four horses should be unambiguously in front of the four wooden violins using foreground/background depth.",
+      "The four wooden violins should be large, upright, recognizable, and unobstructed enough to satisfy object presence."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "relation_mismatch",
+      "spatial_mismatch",
+      "missing_object"
+    ],
+    "preserve_constraints": [
+      "Keep all cats visibly striped.",
+      "Keep cats present and clearly visible.",
+      "Keep exactly four horses, each separate and countable.",
+      "Keep horses present and clearly visible.",
+      "Keep exactly four wooden violins, each separate and countable.",
+      "Bind the wooden material specifically to the violins."
+    ],
+    "previous_plan_error": {
+      "details": "The previous row-based prompt described violins as a back row and horses as a middle row, but it did not make the violins visually prominent enough or the depth relation unambiguous. It also asked for three cats behind the horses without a strong, simple pursuit layout, causing the chasing relation and exact cat count to fail.",
+      "error_source": "Prompt composition was too visually busy and under-specified for action clarity, object salience, and exact cat separation."
+    },
+    "regeneration_strategy": "Use a simpler stage-like side view with three distinct depth layers: four large upright wooden violins in the back, four horses clearly in the foreground directly in front of the violins, and exactly three striped cats behind the horses, running toward the horses. Emphasize separability, visibility, and negative constraints against extra cats, horses, or violins.",
+    "regression_risks": [
+      "Adding prominence to violins could obscure horses unless the horses remain in the foreground and unobstructed.",
+      "Clarifying chase motion could accidentally add extra cats or horses unless exact counts and no extras are repeated.",
+      "Large violins could be mistaken for scenery unless their violin shapes, strings, necks, and wooden bodies are clearly visible."
+    ],
+    "repair_constraints": [
+      "Show exactly three striped cats, all separate, fully visible, countable, and no additional cats.",
+      "Make the three striped cats visibly chasing the four horses: cats are behind the horses and running toward the horses in the same direction of motion.",
+      "Show four horses in the foreground directly in front of the violins, not beside or behind them.",
+      "Make the four wooden violins clearly present as recognizable violins with wooden bodies, necks, and strings, upright in the background behind the horses."
+    ],
+    "retry_prompt": "A clear side-view scene with exactly three striped cats chasing exactly four horses in front of exactly four wooden violins. Arrange the scene in three unambiguous depth layers: in the back layer, four large upright wooden violins with visible wooden bodies, necks, and strings; in the foreground directly in front of those violins, four separate horses; behind the horses, exactly three separate striped cats running toward the horses so the cats are clearly chasing them. Make every cat, horse, and violin fully visible, distinct, unobstructed, and easy to count. The cats must be striped, the violins must be wooden, and there must be no extra cats, no extra horses, and no extra violins.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "object_presence",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "object_presence",
+        "clarity_visibility",
+        "anti_occlusion"
+      ],
+      "reason": "Add negative_constraints to prevent extra or merged cats and to reinforce exact counts, while strengthening object_presence, spatial_layout, and clarity_visibility for the violins and chase relation."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cats are in the image?",
+            "score": 4.574001227279472e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=4.574e-08",
+          "expected": "three",
+          "status": "failed",
+          "target": "How many cats are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cats chasing the horses?",
+            "score": 4.6123236607797935e-06,
+            "skill": "verb"
+          },
+          "detected": "soft_score=4.61232e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the cats chasing the horses?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the horses in front of the violins?",
+            "score": 0.029066628330383537,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.0290666",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the horses in front of the violins?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any violins in the image?",
+            "score": 0.5053780334856128,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.505378",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any violins in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00025/samples/00000.png",
+      "prompt": "A clear side-view scene showing exactly three striped cats chasing exactly four horses. The four horses are positioned in front of exactly four wooden violins. Arrange the four wooden violins as a visible back row, the four horses as a separate middle row in front of the violins, and the three striped cats behind the horses, running toward them as if chasing them. Make all three cats visibly striped, all four horses distinct and countable, and all four violins visibly wooden and distinct. Keep every cat, horse, and violin separated, unobstructed, and fully visible for accurate counting.",
+      "round": 0,
+      "score": 0.6534013720122182
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00795_b6469143_cand_00",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "count_mismatch",
+        "missing_object",
+        "relation_mismatch",
+        "spatial_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cats are in the image?",
+            "score": 4.574001227279472e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=4.574e-08",
+          "expected": "three",
+          "status": "failed",
+          "target": "How many cats are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cats chasing the horses?",
+            "score": 4.6123236607797935e-06,
+            "skill": "verb"
+          },
+          "detected": "soft_score=4.61232e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the cats chasing the horses?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the horses in front of the violins?",
+            "score": 0.029066628330383537,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.0290666",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the horses in front of the violins?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any violins in the image?",
+            "score": 0.5053780334856128,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.505378",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any violins in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cats striped?",
+            "score": 1.0,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the cats striped?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any cats in the image?",
+            "score": 0.9999999997744453,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any cats in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many horses are in the image?",
+            "score": 0.999999932101742,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "four",
+          "status": "passed",
+          "target": "How many horses are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any horses in the image?",
+            "score": 0.9999999719457264,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any horses in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many violins are in the image?",
+            "score": 0.9995645341973701,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.999565",
+          "expected": "four",
+          "status": "passed",
+          "target": "How many violins are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the violins wooden?",
+            "score": 0.9999999622232281,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the violins wooden?",
+          "type": "attribute_mismatch"
+        }
+      ],
+      "score": 0.6534013720122182,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cats are in the image?",
+              "score": 4.574001227279472e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=4.574e-08",
+            "expected": "three",
+            "status": "failed",
+            "target": "How many cats are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cats chasing the horses?",
+              "score": 4.6123236607797935e-06,
+              "skill": "verb"
+            },
+            "detected": "soft_score=4.61232e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cats chasing the horses?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the horses in front of the violins?",
+              "score": 0.029066628330383537,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.0290666",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the horses in front of the violins?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any violins in the image?",
+              "score": 0.5053780334856128,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.505378",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any violins in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00025/samples/00000.png",
+        "prompt": "A clear side-view scene showing exactly three striped cats chasing exactly four horses. The four horses are positioned in front of exactly four wooden violins. Arrange the four wooden violins as a visible back row, the four horses as a separate middle row in front of the violins, and the three striped cats behind the horses, running toward them as if chasing them. Make all three cats visibly striped, all four horses distinct and countable, and all four violins visibly wooden and distinct. Keep every cat, horse, and violin separated, unobstructed, and fully visible for accurate counting.",
+        "round": 0,
+        "score": 0.6534013720122182
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cats are in the image?",
+            "score": 4.574001227279472e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=4.574e-08",
+          "expected": "three",
+          "status": "failed",
+          "target": "How many cats are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cats chasing the horses?",
+            "score": 4.6123236607797935e-06,
+            "skill": "verb"
+          },
+          "detected": "soft_score=4.61232e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the cats chasing the horses?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the horses in front of the violins?",
+            "score": 0.029066628330383537,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.0290666",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the horses in front of the violins?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any violins in the image?",
+            "score": 0.5053780334856128,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.505378",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any violins in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "count_mismatch",
+        "missing_object",
+        "relation_mismatch",
+        "spatial_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cats are in the image?",
+            "score": 4.574001227279472e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=4.574e-08",
+          "expected": "three",
+          "status": "failed",
+          "target": "How many cats are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cats chasing the horses?",
+            "score": 4.6123236607797935e-06,
+            "skill": "verb"
+          },
+          "detected": "soft_score=4.61232e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the cats chasing the horses?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the horses in front of the violins?",
+            "score": 0.029066628330383537,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.0290666",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the horses in front of the violins?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any violins in the image?",
+            "score": 0.5053780334856128,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.505378",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any violins in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cats striped?",
+            "score": 1.0,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the cats striped?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any cats in the image?",
+            "score": 0.9999999997744453,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any cats in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many horses are in the image?",
+            "score": 0.999999932101742,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "four",
+          "status": "passed",
+          "target": "How many horses are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any horses in the image?",
+            "score": 0.9999999719457264,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any horses in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many violins are in the image?",
+            "score": 0.9995645341973701,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.999565",
+          "expected": "four",
+          "status": "passed",
+          "target": "How many violins are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the violins wooden?",
+            "score": 0.9999999622232281,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the violins wooden?",
+          "type": "attribute_mismatch"
+        }
+      ],
+      "score": 0.6534013720122182,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "three striped cats chasing four horses in front of four wooden violins",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cats are in the image?",
+          "score": 4.574001227279472e-08,
+          "skill": "count"
+        },
+        "detected": "soft_score=4.574e-08",
+        "expected": "three",
+        "status": "failed",
+        "target": "How many cats are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the cats chasing the horses?",
+          "score": 4.6123236607797935e-06,
+          "skill": "verb"
+        },
+        "detected": "soft_score=4.61232e-06",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the cats chasing the horses?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 6,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the horses in front of the violins?",
+          "score": 0.029066628330383537,
+          "skill": "position"
+        },
+        "detected": "soft_score=0.0290666",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the horses in front of the violins?",
+        "type": "spatial_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 9,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any violins in the image?",
+          "score": 0.5053780334856128,
+          "skill": "object"
+        },
+        "detected": "soft_score=0.505378",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are there any violins in the image?",
+        "type": "missing_object"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly three cats, exactly four horses, and exactly four violins.",
+        "All three cats must be visibly striped.",
+        "All four violins must be visibly wooden.",
+        "The cats must appear to be chasing the horses.",
+        "The horses must be positioned in front of the violins.",
+        "Keep each object separated and fully visible enough to count; avoid occlusion between cats, horses, and violins."
+      ],
+      "generation_strategy": "Use a clear side-view composition with separated rows to satisfy counting and spatial relations: four wooden violins in the back row, four horses in front of the violins, and three striped cats behind the horses in a chasing posture. Maintain clear visibility and separation for every object.",
+      "initial_prompt": "A clear side-view scene showing exactly three striped cats chasing exactly four horses. The four horses are positioned in front of exactly four wooden violins. Arrange the four wooden violins as a visible back row, the four horses as a separate middle row in front of the violins, and the three striped cats behind the horses, running toward them as if chasing them. Make all three cats visibly striped, all four horses distinct and countable, and all four violins visibly wooden and distinct. Keep every cat, horse, and violin separated, unobstructed, and fully visible for accurate counting.",
+      "parsed_constraints": {
+        "attributes": {
+          "cats": [
+            "striped"
+          ],
+          "violins": [
+            "wooden"
+          ]
+        },
+        "counts": {
+          "cats": 3,
+          "horses": 4,
+          "violins": 4
+        },
+        "objects": [
+          "cats",
+          "horses",
+          "violins"
+        ],
+        "relations": [
+          "three striped cats chasing four horses",
+          "four horses in front of four wooden violins"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "object_presence",
+        "clarity_visibility",
+        "anti_occlusion"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly three cats, exactly four horses, and exactly four violins.",
+        "All three cats must be visibly striped.",
+        "All four violins must be visibly wooden.",
+        "The cats must appear to be chasing the horses.",
+        "The horses must be positioned in front of the violins.",
+        "Keep each object separated and fully visible enough to count; avoid occlusion between cats, horses, and violins."
+      ],
+      "generation_strategy": "Use a clear side-view composition with separated rows to satisfy counting and spatial relations: four wooden violins in the back row, four horses in front of the violins, and three striped cats behind the horses in a chasing posture. Maintain clear visibility and separation for every object.",
+      "initial_prompt": "A clear side-view scene showing exactly three striped cats chasing exactly four horses. The four horses are positioned in front of exactly four wooden violins. Arrange the four wooden violins as a visible back row, the four horses as a separate middle row in front of the violins, and the three striped cats behind the horses, running toward them as if chasing them. Make all three cats visibly striped, all four horses distinct and countable, and all four violins visibly wooden and distinct. Keep every cat, horse, and violin separated, unobstructed, and fully visible for accurate counting.",
+      "parsed_constraints": {
+        "attributes": {
+          "cats": [
+            "striped"
+          ],
+          "violins": [
+            "wooden"
+          ]
+        },
+        "counts": {
+          "cats": 3,
+          "horses": 4,
+          "violins": 4
+        },
+        "objects": [
+          "cats",
+          "horses",
+          "violins"
+        ],
+        "relations": [
+          "three striped cats chasing four horses",
+          "four horses in front of four wooden violins"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "object_presence",
+        "clarity_visibility",
+        "anti_occlusion"
+      ]
+    },
+    "previous_prompt": "A clear side-view scene showing exactly three striped cats chasing exactly four horses. The four horses are positioned in front of exactly four wooden violins. Arrange the four wooden violins as a visible back row, the four horses as a separate middle row in front of the violins, and the three striped cats behind the horses, running toward them as if chasing them. Make all three cats visibly striped, all four horses distinct and countable, and all four violins visibly wooden and distinct. Keep every cat, horse, and violin separated, unobstructed, and fully visible for accurate counting.",
+    "previous_selected_skills": [
+      "quantity_counting",
+      "attribute_binding",
+      "multi_object_composition",
+      "spatial_layout",
+      "object_presence",
+      "clarity_visibility",
+      "anti_occlusion"
+    ],
+    "prompt_id": "geneval2_00795_b6469143",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "count_mismatch",
+          "missing_object",
+          "relation_mismatch",
+          "spatial_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cats are in the image?",
+              "score": 4.574001227279472e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=4.574e-08",
+            "expected": "three",
+            "status": "failed",
+            "target": "How many cats are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cats chasing the horses?",
+              "score": 4.6123236607797935e-06,
+              "skill": "verb"
+            },
+            "detected": "soft_score=4.61232e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cats chasing the horses?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the horses in front of the violins?",
+              "score": 0.029066628330383537,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.0290666",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the horses in front of the violins?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any violins in the image?",
+              "score": 0.5053780334856128,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.505378",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any violins in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cats striped?",
+              "score": 1.0,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the cats striped?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any cats in the image?",
+              "score": 0.9999999997744453,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any cats in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many horses are in the image?",
+              "score": 0.999999932101742,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "four",
+            "status": "passed",
+            "target": "How many horses are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any horses in the image?",
+              "score": 0.9999999719457264,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any horses in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many violins are in the image?",
+              "score": 0.9995645341973701,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.999565",
+            "expected": "four",
+            "status": "passed",
+            "target": "How many violins are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the violins wooden?",
+              "score": 0.9999999622232281,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the violins wooden?",
+            "type": "attribute_mismatch"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly three cats, exactly four horses, and exactly four violins.",
+            "All three cats must be visibly striped.",
+            "All four violins must be visibly wooden.",
+            "The cats must appear to be chasing the horses.",
+            "The horses must be positioned in front of the violins.",
+            "Keep each object separated and fully visible enough to count; avoid occlusion between cats, horses, and violins."
+          ],
+          "generation_strategy": "Use a clear side-view composition with separated rows to satisfy counting and spatial relations: four wooden violins in the back row, four horses in front of the violins, and three striped cats behind the horses in a chasing posture. Maintain clear visibility and separation for every object.",
+          "initial_prompt": "A clear side-view scene showing exactly three striped cats chasing exactly four horses. The four horses are positioned in front of exactly four wooden violins. Arrange the four wooden violins as a visible back row, the four horses as a separate middle row in front of the violins, and the three striped cats behind the horses, running toward them as if chasing them. Make all three cats visibly striped, all four horses distinct and countable, and all four violins visibly wooden and distinct. Keep every cat, horse, and violin separated, unobstructed, and fully visible for accurate counting.",
+          "parsed_constraints": {
+            "attributes": {
+              "cats": [
+                "striped"
+              ],
+              "violins": [
+                "wooden"
+              ]
+            },
+            "counts": {
+              "cats": 3,
+              "horses": 4,
+              "violins": 4
+            },
+            "objects": [
+              "cats",
+              "horses",
+              "violins"
+            ],
+            "relations": [
+              "three striped cats chasing four horses",
+              "four horses in front of four wooden violins"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "attribute_binding",
+            "multi_object_composition",
+            "spatial_layout",
+            "object_presence",
+            "clarity_visibility",
+            "anti_occlusion"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly three cats, exactly four horses, and exactly four violins.",
+            "All three cats must be visibly striped.",
+            "All four violins must be visibly wooden.",
+            "The cats must appear to be chasing the horses.",
+            "The horses must be positioned in front of the violins.",
+            "Keep each object separated and fully visible enough to count; avoid occlusion between cats, horses, and violins."
+          ],
+          "generation_strategy": "Use a clear side-view composition with separated rows to satisfy counting and spatial relations: four wooden violins in the back row, four horses in front of the violins, and three striped cats behind the horses in a chasing posture. Maintain clear visibility and separation for every object.",
+          "initial_prompt": "A clear side-view scene showing exactly three striped cats chasing exactly four horses. The four horses are positioned in front of exactly four wooden violins. Arrange the four wooden violins as a visible back row, the four horses as a separate middle row in front of the violins, and the three striped cats behind the horses, running toward them as if chasing them. Make all three cats visibly striped, all four horses distinct and countable, and all four violins visibly wooden and distinct. Keep every cat, horse, and violin separated, unobstructed, and fully visible for accurate counting.",
+          "parsed_constraints": {
+            "attributes": {
+              "cats": [
+                "striped"
+              ],
+              "violins": [
+                "wooden"
+              ]
+            },
+            "counts": {
+              "cats": 3,
+              "horses": 4,
+              "violins": 4
+            },
+            "objects": [
+              "cats",
+              "horses",
+              "violins"
+            ],
+            "relations": [
+              "three striped cats chasing four horses",
+              "four horses in front of four wooden violins"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "attribute_binding",
+            "multi_object_composition",
+            "spatial_layout",
+            "object_presence",
+            "clarity_visibility",
+            "anti_occlusion"
+          ]
+        },
+        "prompt_used": "A clear side-view scene showing exactly three striped cats chasing exactly four horses. The four horses are positioned in front of exactly four wooden violins. Arrange the four wooden violins as a visible back row, the four horses as a separate middle row in front of the violins, and the three striped cats behind the horses, running toward them as if chasing them. Make all three cats visibly striped, all four horses distinct and countable, and all four violins visibly wooden and distinct. Keep every cat, horse, and violin separated, unobstructed, and fully visible for accurate counting.",
+        "round": 0,
+        "score": 0.6534013720122182,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cats are in the image?",
+                "score": 4.574001227279472e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=4.574e-08",
+              "expected": "three",
+              "status": "failed",
+              "target": "How many cats are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cats chasing the horses?",
+                "score": 4.6123236607797935e-06,
+                "skill": "verb"
+              },
+              "detected": "soft_score=4.61232e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cats chasing the horses?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the horses in front of the violins?",
+                "score": 0.029066628330383537,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.0290666",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the horses in front of the violins?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any violins in the image?",
+                "score": 0.5053780334856128,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.505378",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any violins in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00795_b6469143"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cats are in the image?",
+          "score": 4.574001227279472e-08,
+          "skill": "count"
+        },
+        "detected": "soft_score=4.574e-08",
+        "expected": "three",
+        "status": "failed",
+        "target": "How many cats are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the cats chasing the horses?",
+          "score": 4.6123236607797935e-06,
+          "skill": "verb"
+        },
+        "detected": "soft_score=4.61232e-06",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the cats chasing the horses?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 6,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the horses in front of the violins?",
+          "score": 0.029066628330383537,
+          "skill": "position"
+        },
+        "detected": "soft_score=0.0290666",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the horses in front of the violins?",
+        "type": "spatial_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 9,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any violins in the image?",
+          "score": 0.5053780334856128,
+          "skill": "object"
+        },
+        "detected": "soft_score=0.505378",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are there any violins in the image?",
+        "type": "missing_object"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00025/samples/00000.png",
+    "best_so_far_prompt": "A clear side-view scene showing exactly three striped cats chasing exactly four horses. The four horses are positioned in front of exactly four wooden violins. Arrange the four wooden violins as a visible back row, the four horses as a separate middle row in front of the violins, and the three striped cats behind the horses, running toward them as if chasing them. Make all three cats visibly striped, all four horses distinct and countable, and all four violins visibly wooden and distinct. Keep every cat, horse, and violin separated, unobstructed, and fully visible for accurate counting.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.6534013720122182,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cats are in the image?",
+          "score": 4.574001227279472e-08,
+          "skill": "count"
+        },
+        "detected": "soft_score=4.574e-08",
+        "expected": "three",
+        "status": "failed",
+        "target": "How many cats are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the cats chasing the horses?",
+          "score": 4.6123236607797935e-06,
+          "skill": "verb"
+        },
+        "detected": "soft_score=4.61232e-06",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the cats chasing the horses?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 6,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the horses in front of the violins?",
+          "score": 0.029066628330383537,
+          "skill": "position"
+        },
+        "detected": "soft_score=0.0290666",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the horses in front of the violins?",
+        "type": "spatial_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 9,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any violins in the image?",
+          "score": 0.5053780334856128,
+          "skill": "object"
+        },
+        "detected": "soft_score=0.505378",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are there any violins in the image?",
+        "type": "missing_object"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly three cats, exactly four horses, and exactly four violins.",
+        "All three cats must be visibly striped.",
+        "All four violins must be visibly wooden.",
+        "The cats must appear to be chasing the horses.",
+        "The horses must be positioned in front of the violins.",
+        "Keep each object separated and fully visible enough to count; avoid occlusion between cats, horses, and violins."
+      ],
+      "generation_strategy": "Use a clear side-view composition with separated rows to satisfy counting and spatial relations: four wooden violins in the back row, four horses in front of the violins, and three striped cats behind the horses in a chasing posture. Maintain clear visibility and separation for every object.",
+      "initial_prompt": "A clear side-view scene showing exactly three striped cats chasing exactly four horses. The four horses are positioned in front of exactly four wooden violins. Arrange the four wooden violins as a visible back row, the four horses as a separate middle row in front of the violins, and the three striped cats behind the horses, running toward them as if chasing them. Make all three cats visibly striped, all four horses distinct and countable, and all four violins visibly wooden and distinct. Keep every cat, horse, and violin separated, unobstructed, and fully visible for accurate counting.",
+      "parsed_constraints": {
+        "attributes": {
+          "cats": [
+            "striped"
+          ],
+          "violins": [
+            "wooden"
+          ]
+        },
+        "counts": {
+          "cats": 3,
+          "horses": 4,
+          "violins": 4
+        },
+        "objects": [
+          "cats",
+          "horses",
+          "violins"
+        ],
+        "relations": [
+          "three striped cats chasing four horses",
+          "four horses in front of four wooden violins"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "object_presence",
+        "clarity_visibility",
+        "anti_occlusion"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.653 failed=['How many cats are in the image?', 'Are the cats chasing the horses?', 'Are the horses in front of the violins?', 'Are there any violins in the image?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_incremental/snapshot_002_worker_01/geneval2_00795_b6469143__geneval2_00795_b6469143_cand_00__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00795_b6469143__geneval2_00795_b6469143_cand_00__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00795_b6469143",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The evaluation failed the exact cat count, the cats chasing horses relation, the horses-in-front-of-violins spatial relation, and clear violin presence. Although four horses, four violins, wooden violins, cat presence, and striped cats mostly passed, the generated scene likely made the cats unclear or merged, did not visually communicate pursuit, and treated the violins as background-like or hard to recognize despite count signals.",
+    "expected_improvement": [
+      "Exactly three cats should be countable as three separate striped animals with no extra cats.",
+      "The cats should visibly chase the horses by being placed behind the horses in the direction of motion, running toward them.",
+      "The four horses should be unambiguously in front of the four wooden violins using foreground/background depth.",
+      "The four wooden violins should be large, upright, recognizable, and unobstructed enough to satisfy object presence."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "relation_mismatch",
+      "spatial_mismatch",
+      "missing_object"
+    ],
+    "preserve_constraints": [
+      "Keep all cats visibly striped.",
+      "Keep cats present and clearly visible.",
+      "Keep exactly four horses, each separate and countable.",
+      "Keep horses present and clearly visible.",
+      "Keep exactly four wooden violins, each separate and countable.",
+      "Bind the wooden material specifically to the violins."
+    ],
+    "previous_plan_error": {
+      "details": "The previous row-based prompt described violins as a back row and horses as a middle row, but it did not make the violins visually prominent enough or the depth relation unambiguous. It also asked for three cats behind the horses without a strong, simple pursuit layout, causing the chasing relation and exact cat count to fail.",
+      "error_source": "Prompt composition was too visually busy and under-specified for action clarity, object salience, and exact cat separation."
+    },
+    "regeneration_strategy": "Use a simpler stage-like side view with three distinct depth layers: four large upright wooden violins in the back, four horses clearly in the foreground directly in front of the violins, and exactly three striped cats behind the horses, running toward the horses. Emphasize separability, visibility, and negative constraints against extra cats, horses, or violins.",
+    "regression_risks": [
+      "Adding prominence to violins could obscure horses unless the horses remain in the foreground and unobstructed.",
+      "Clarifying chase motion could accidentally add extra cats or horses unless exact counts and no extras are repeated.",
+      "Large violins could be mistaken for scenery unless their violin shapes, strings, necks, and wooden bodies are clearly visible."
+    ],
+    "repair_constraints": [
+      "Show exactly three striped cats, all separate, fully visible, countable, and no additional cats.",
+      "Make the three striped cats visibly chasing the four horses: cats are behind the horses and running toward the horses in the same direction of motion.",
+      "Show four horses in the foreground directly in front of the violins, not beside or behind them.",
+      "Make the four wooden violins clearly present as recognizable violins with wooden bodies, necks, and strings, upright in the background behind the horses."
+    ],
+    "retry_prompt": "A clear side-view scene with exactly three striped cats chasing exactly four horses in front of exactly four wooden violins. Arrange the scene in three unambiguous depth layers: in the back layer, four large upright wooden violins with visible wooden bodies, necks, and strings; in the foreground directly in front of those violins, four separate horses; behind the horses, exactly three separate striped cats running toward the horses so the cats are clearly chasing them. Make every cat, horse, and violin fully visible, distinct, unobstructed, and easy to count. The cats must be striped, the violins must be wooden, and there must be no extra cats, no extra horses, and no extra violins.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "object_presence",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "object_presence",
+        "clarity_visibility",
+        "anti_occlusion"
+      ],
+      "reason": "Add negative_constraints to prevent extra or merged cats and to reinforce exact counts, while strengthening object_presence, spatial_layout, and clarity_visibility for the violins and chase relation."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "three striped cats chasing four horses in front of four wooden violins",
+    "prompt": "three striped cats chasing four horses in front of four wooden violins",
+    "prompt_id": "geneval2_00795_b6469143",
+    "sampling_bucket": "object",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "position_spatial",
+      "relation_action",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 2,
+      "count": 3,
+      "object": 3,
+      "position": 1,
+      "verb": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "verb",
+      "count",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 795,
+    "vqa_list": [
+      [
+        "How many cats are in the image?",
+        "three"
+      ],
+      [
+        "Are the cats striped?",
+        "Yes"
+      ],
+      [
+        "Are there any cats in the image?",
+        "Yes"
+      ],
+      [
+        "Are the cats chasing the horses?",
+        "Yes"
+      ],
+      [
+        "How many horses are in the image?",
+        "four"
+      ],
+      [
+        "Are there any horses in the image?",
+        "Yes"
+      ],
+      [
+        "Are the horses in front of the violins?",
+        "Yes"
+      ],
+      [
+        "How many violins are in the image?",
+        "four"
+      ],
+      [
+        "Are the violins wooden?",
+        "Yes"
+      ],
+      [
+        "Are there any violins in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00795_b6469143"
+}

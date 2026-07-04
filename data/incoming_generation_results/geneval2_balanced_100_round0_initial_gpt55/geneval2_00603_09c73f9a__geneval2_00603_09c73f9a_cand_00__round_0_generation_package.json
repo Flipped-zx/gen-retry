@@ -1,0 +1,155 @@
+{
+  "candidate_id": "geneval2_00603_09c73f9a_cand_00",
+  "generation": {
+    "generation_metadata": {
+      "candidate_index": 0,
+      "generation_prompt_source": "initial_plan",
+      "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00603_09c73f9a.json",
+      "manifest_prompt_index": 68,
+      "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+      "sample_id": "geneval2_00603_09c73f9a"
+    },
+    "generator_name": "qwen-image-2512",
+    "image_id": "geneval2_00603_09c73f9a_cand_00",
+    "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00068/samples/00000.png",
+    "prompt_used": "Create an image with exactly six kangaroos in the foreground, clearly in front of exactly two plastic pigs. The two pigs must visibly look like plastic pigs and must be playing with exactly one checkered elephant. The elephant must have a clear checkered pattern. Keep all six kangaroos, both plastic pigs, and the single checkered elephant fully visible, separated enough to count, with minimal overlap and no occlusion hiding any required animal.",
+    "seed": 1340
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "eval_lookup_key": "",
+    "image_path_is_artifact_reference": true,
+    "teacher_uses_image_bytes": false
+  },
+  "previous_action": null,
+  "previous_initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly six kangaroos, exactly two pigs, and exactly one elephant.",
+      "Make the two pigs clearly plastic in material/texture, and make the elephant clearly checkered.",
+      "Place all six kangaroos in the foreground in front of the two pigs; keep the two pigs behind the kangaroos but still visible.",
+      "Depict the two plastic pigs playing with the single checkered elephant.",
+      "Keep all animals separated enough to count, with minimal overlap and no occlusion hiding any required object."
+    ],
+    "generation_strategy": "Use a clear multi-object composition with foreground-to-background depth: six separate kangaroos across the front, two plastic pigs behind them, and one checkered elephant near the pigs so the pigs' interaction with the elephant is visible. Prioritize exact counts, attribute binding, spatial relation, and visibility.",
+    "initial_prompt": "Create an image with exactly six kangaroos in the foreground, clearly in front of exactly two plastic pigs. The two pigs must visibly look like plastic pigs and must be playing with exactly one checkered elephant. The elephant must have a clear checkered pattern. Keep all six kangaroos, both plastic pigs, and the single checkered elephant fully visible, separated enough to count, with minimal overlap and no occlusion hiding any required animal.",
+    "parsed_constraints": {
+      "attributes": {
+        "elephant": [
+          "checkered"
+        ],
+        "pigs": [
+          "plastic"
+        ]
+      },
+      "counts": {
+        "elephant": 1,
+        "kangaroos": 6,
+        "pigs": 2
+      },
+      "objects": [
+        "kangaroos",
+        "pigs",
+        "elephant"
+      ],
+      "relations": [
+        "six kangaroos are in front of two plastic pigs",
+        "two plastic pigs are playing with one checkered elephant"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion"
+    ]
+  },
+  "prompt_id": "geneval2_00603_09c73f9a",
+  "retry_history": [],
+  "round": 0,
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 9,
+    "dataset": "geneval2",
+    "original_prompt": "six kangaroos in front of two plastic pigs playing with a checkered elephant",
+    "prompt": "six kangaroos in front of two plastic pigs playing with a checkered elephant",
+    "prompt_id": "geneval2_00603_09c73f9a",
+    "sampling_bucket": "relation_action",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "position_spatial",
+      "relation_action",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 2,
+      "count": 3,
+      "object": 3,
+      "position": 1,
+      "verb": 1
+    },
+    "skills": [
+      "count",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object",
+      "verb",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 603,
+    "vqa_list": [
+      [
+        "How many kangaroos are in the image?",
+        "six"
+      ],
+      [
+        "Are there any kangaroos in the image?",
+        "Yes"
+      ],
+      [
+        "Are the kangaroos in front of the pigs?",
+        "Yes"
+      ],
+      [
+        "How many pigs are in the image?",
+        "two"
+      ],
+      [
+        "Are the pigs plastic?",
+        "Yes"
+      ],
+      [
+        "Are there any pigs in the image?",
+        "Yes"
+      ],
+      [
+        "Are the pigs playing with the elephant?",
+        "Yes"
+      ],
+      [
+        "How many elephants are in the image?",
+        "one"
+      ],
+      [
+        "Is the elephant checkered?",
+        "Yes"
+      ],
+      [
+        "Are there any elephants in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "trajectory_id": "geneval2_00603_09c73f9a"
+}

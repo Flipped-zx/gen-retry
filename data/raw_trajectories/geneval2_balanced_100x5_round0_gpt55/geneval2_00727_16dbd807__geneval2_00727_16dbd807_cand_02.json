@@ -1,0 +1,2779 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "color_mismatch",
+          "count_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the rabbits wooden?",
+              "score": 1.2812096259473549e-06,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1.28121e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the rabbits wooden?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many croissants are in the image?",
+              "score": 0.02823234814988783,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.0282323",
+            "expected": "three",
+            "status": "failed",
+            "target": "How many croissants are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the zebras purple?",
+              "score": 0.8177379088665475,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.817738",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the zebras purple?",
+            "type": "color_mismatch"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many rabbits are in the image?",
+              "score": 0.9999936883722071,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.999994",
+            "expected": "five",
+            "status": "passed",
+            "target": "How many rabbits are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any rabbits in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any rabbits in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the rabbits in front of the croissants?",
+              "score": 0.9999785914378947,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.999979",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the rabbits in front of the croissants?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the croissants pink?",
+              "score": 0.9999999411811586,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the croissants pink?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any croissants in the image?",
+              "score": 0.9999996046171873,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any croissants in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many zebras are in the image?",
+              "score": 0.9999991394848509,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.999999",
+            "expected": "two",
+            "status": "passed",
+            "target": "How many zebras are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any zebras in the image?",
+              "score": 0.9999984899714036,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999998",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any zebras in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00727_16dbd807_cand_02",
+          "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+          "rows": [
+            {
+              "answer": "five",
+              "atom_count": 10,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00727_16dbd807_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00079/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00079/samples/00002.png",
+              "prompt": "five wooden rabbits in front of three pink croissants, and two purple zebras",
+              "prompt_id": "geneval2_00727_16dbd807",
+              "question": "How many rabbits are in the image?",
+              "score": 0.9999936883722071,
+              "skill": "count",
+              "source_index": 727
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00727_16dbd807_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00079/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00079/samples/00002.png",
+              "prompt": "five wooden rabbits in front of three pink croissants, and two purple zebras",
+              "prompt_id": "geneval2_00727_16dbd807",
+              "question": "Are the rabbits wooden?",
+              "score": 1.2812096259473549e-06,
+              "skill": "attribute",
+              "source_index": 727
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00727_16dbd807_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00079/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00079/samples/00002.png",
+              "prompt": "five wooden rabbits in front of three pink croissants, and two purple zebras",
+              "prompt_id": "geneval2_00727_16dbd807",
+              "question": "Are there any rabbits in the image?",
+              "score": 1.0000000164473022,
+              "skill": "object",
+              "source_index": 727
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00727_16dbd807_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00079/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00079/samples/00002.png",
+              "prompt": "five wooden rabbits in front of three pink croissants, and two purple zebras",
+              "prompt_id": "geneval2_00727_16dbd807",
+              "question": "Are the rabbits in front of the croissants?",
+              "score": 0.9999785914378947,
+              "skill": "position",
+              "source_index": 727
+            },
+            {
+              "answer": "three",
+              "atom_count": 10,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00727_16dbd807_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00079/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00079/samples/00002.png",
+              "prompt": "five wooden rabbits in front of three pink croissants, and two purple zebras",
+              "prompt_id": "geneval2_00727_16dbd807",
+              "question": "How many croissants are in the image?",
+              "score": 0.02823234814988783,
+              "skill": "count",
+              "source_index": 727
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00727_16dbd807_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00079/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00079/samples/00002.png",
+              "prompt": "five wooden rabbits in front of three pink croissants, and two purple zebras",
+              "prompt_id": "geneval2_00727_16dbd807",
+              "question": "Are the croissants pink?",
+              "score": 0.9999999411811586,
+              "skill": "attribute",
+              "source_index": 727
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00727_16dbd807_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00079/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00079/samples/00002.png",
+              "prompt": "five wooden rabbits in front of three pink croissants, and two purple zebras",
+              "prompt_id": "geneval2_00727_16dbd807",
+              "question": "Are there any croissants in the image?",
+              "score": 0.9999996046171873,
+              "skill": "object",
+              "source_index": 727
+            },
+            {
+              "answer": "two",
+              "atom_count": 10,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00727_16dbd807_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00079/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00079/samples/00002.png",
+              "prompt": "five wooden rabbits in front of three pink croissants, and two purple zebras",
+              "prompt_id": "geneval2_00727_16dbd807",
+              "question": "How many zebras are in the image?",
+              "score": 0.9999991394848509,
+              "skill": "count",
+              "source_index": 727
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00727_16dbd807_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00079/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00079/samples/00002.png",
+              "prompt": "five wooden rabbits in front of three pink croissants, and two purple zebras",
+              "prompt_id": "geneval2_00727_16dbd807",
+              "question": "Are the zebras purple?",
+              "score": 0.8177379088665475,
+              "skill": "attribute",
+              "source_index": 727
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00727_16dbd807_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00079/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00079/samples/00002.png",
+              "prompt": "five wooden rabbits in front of three pink croissants, and two purple zebras",
+              "prompt_id": "geneval2_00727_16dbd807",
+              "question": "Are there any zebras in the image?",
+              "score": 0.9999984899714036,
+              "skill": "object",
+              "source_index": 727
+            }
+          ],
+          "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.7845940993290763,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 2,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00727_16dbd807.json",
+          "manifest_prompt_index": 79,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00727_16dbd807"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00727_16dbd807_cand_02",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00079/samples/00002.png",
+        "prompt_used": "Create a clear image with exactly five wooden rabbits in the foreground, arranged in front of exactly three pink croissants behind them. The five rabbits must all look wooden and be individually visible and countable. The three croissants must all be pink and remain visible behind the rabbits, not fully hidden. Also include exactly two purple zebras, both clearly visible and countable, separated from the rabbits and croissants. Do not include any additional rabbits, croissants, or zebras.",
+        "seed": 1397
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly five rabbits, exactly three croissants, and exactly two zebras.",
+          "Bind material/color correctly: all five rabbits are wooden, all three croissants are pink, and both zebras are purple.",
+          "Place the five wooden rabbits in front of the three pink croissants.",
+          "Keep all objects clearly visible and countable; avoid extra rabbits, croissants, zebras, or unrequested duplicate objects."
+        ],
+        "generation_strategy": "Use a clear multi-object composition with separated count groups. Arrange three pink croissants in a rear row and five wooden rabbits in a front row, with the rabbits visibly in front of the croissants while leaving the croissants countable. Place two purple zebras separately in the scene so both are fully visible and not confused with the rabbits or croissants.",
+        "initial_prompt": "Create a clear image with exactly five wooden rabbits in the foreground, arranged in front of exactly three pink croissants behind them. The five rabbits must all look wooden and be individually visible and countable. The three croissants must all be pink and remain visible behind the rabbits, not fully hidden. Also include exactly two purple zebras, both clearly visible and countable, separated from the rabbits and croissants. Do not include any additional rabbits, croissants, or zebras.",
+        "parsed_constraints": {
+          "attributes": {
+            "croissants": [
+              "pink"
+            ],
+            "rabbits": [
+              "wooden"
+            ],
+            "zebras": [
+              "purple"
+            ]
+          },
+          "counts": {
+            "croissants": 3,
+            "rabbits": 5,
+            "zebras": 2
+          },
+          "objects": [
+            "rabbits",
+            "croissants",
+            "zebras"
+          ],
+          "relations": [
+            "five wooden rabbits are in front of three pink croissants"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly five rabbits, exactly three croissants, and exactly two zebras.",
+          "Bind material/color correctly: all five rabbits are wooden, all three croissants are pink, and both zebras are purple.",
+          "Place the five wooden rabbits in front of the three pink croissants.",
+          "Keep all objects clearly visible and countable; avoid extra rabbits, croissants, zebras, or unrequested duplicate objects."
+        ],
+        "generation_strategy": "Use a clear multi-object composition with separated count groups. Arrange three pink croissants in a rear row and five wooden rabbits in a front row, with the rabbits visibly in front of the croissants while leaving the croissants countable. Place two purple zebras separately in the scene so both are fully visible and not confused with the rabbits or croissants.",
+        "initial_prompt": "Create a clear image with exactly five wooden rabbits in the foreground, arranged in front of exactly three pink croissants behind them. The five rabbits must all look wooden and be individually visible and countable. The three croissants must all be pink and remain visible behind the rabbits, not fully hidden. Also include exactly two purple zebras, both clearly visible and countable, separated from the rabbits and croissants. Do not include any additional rabbits, croissants, or zebras.",
+        "parsed_constraints": {
+          "attributes": {
+            "croissants": [
+              "pink"
+            ],
+            "rabbits": [
+              "wooden"
+            ],
+            "zebras": [
+              "purple"
+            ]
+          },
+          "counts": {
+            "croissants": 3,
+            "rabbits": 5,
+            "zebras": 2
+          },
+          "objects": [
+            "rabbits",
+            "croissants",
+            "zebras"
+          ],
+          "relations": [
+            "five wooden rabbits are in front of three pink croissants"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the rabbits wooden?",
+                "score": 1.2812096259473549e-06,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1.28121e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the rabbits wooden?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many croissants are in the image?",
+                "score": 0.02823234814988783,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.0282323",
+              "expected": "three",
+              "status": "failed",
+              "target": "How many croissants are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the zebras purple?",
+                "score": 0.8177379088665475,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.817738",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the zebras purple?",
+              "type": "color_mismatch"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00079/samples/00002.png",
+          "prompt": "Create a clear image with exactly five wooden rabbits in the foreground, arranged in front of exactly three pink croissants behind them. The five rabbits must all look wooden and be individually visible and countable. The three croissants must all be pink and remain visible behind the rabbits, not fully hidden. Also include exactly two purple zebras, both clearly visible and countable, separated from the rabbits and croissants. Do not include any additional rabbits, croissants, or zebras.",
+          "round": 0,
+          "score": 0.7845940993290763
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00727_16dbd807_cand_02",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "attribute_mismatch",
+            "color_mismatch",
+            "count_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the rabbits wooden?",
+                "score": 1.2812096259473549e-06,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1.28121e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the rabbits wooden?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many croissants are in the image?",
+                "score": 0.02823234814988783,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.0282323",
+              "expected": "three",
+              "status": "failed",
+              "target": "How many croissants are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the zebras purple?",
+                "score": 0.8177379088665475,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.817738",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the zebras purple?",
+              "type": "color_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many rabbits are in the image?",
+                "score": 0.9999936883722071,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.999994",
+              "expected": "five",
+              "status": "passed",
+              "target": "How many rabbits are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any rabbits in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any rabbits in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the rabbits in front of the croissants?",
+                "score": 0.9999785914378947,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.999979",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the rabbits in front of the croissants?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the croissants pink?",
+                "score": 0.9999999411811586,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the croissants pink?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any croissants in the image?",
+                "score": 0.9999996046171873,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any croissants in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many zebras are in the image?",
+                "score": 0.9999991394848509,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.999999",
+              "expected": "two",
+              "status": "passed",
+              "target": "How many zebras are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any zebras in the image?",
+                "score": 0.9999984899714036,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999998",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any zebras in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.7845940993290763,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the rabbits wooden?",
+                  "score": 1.2812096259473549e-06,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1.28121e-06",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the rabbits wooden?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many croissants are in the image?",
+                  "score": 0.02823234814988783,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.0282323",
+                "expected": "three",
+                "status": "failed",
+                "target": "How many croissants are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the zebras purple?",
+                  "score": 0.8177379088665475,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.817738",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the zebras purple?",
+                "type": "color_mismatch"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00079/samples/00002.png",
+            "prompt": "Create a clear image with exactly five wooden rabbits in the foreground, arranged in front of exactly three pink croissants behind them. The five rabbits must all look wooden and be individually visible and countable. The three croissants must all be pink and remain visible behind the rabbits, not fully hidden. Also include exactly two purple zebras, both clearly visible and countable, separated from the rabbits and croissants. Do not include any additional rabbits, croissants, or zebras.",
+            "round": 0,
+            "score": 0.7845940993290763
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the rabbits wooden?",
+                "score": 1.2812096259473549e-06,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1.28121e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the rabbits wooden?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many croissants are in the image?",
+                "score": 0.02823234814988783,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.0282323",
+              "expected": "three",
+              "status": "failed",
+              "target": "How many croissants are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the zebras purple?",
+                "score": 0.8177379088665475,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.817738",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the zebras purple?",
+              "type": "color_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "attribute_mismatch",
+            "color_mismatch",
+            "count_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the rabbits wooden?",
+                "score": 1.2812096259473549e-06,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1.28121e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the rabbits wooden?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many croissants are in the image?",
+                "score": 0.02823234814988783,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.0282323",
+              "expected": "three",
+              "status": "failed",
+              "target": "How many croissants are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the zebras purple?",
+                "score": 0.8177379088665475,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.817738",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the zebras purple?",
+              "type": "color_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many rabbits are in the image?",
+                "score": 0.9999936883722071,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.999994",
+              "expected": "five",
+              "status": "passed",
+              "target": "How many rabbits are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any rabbits in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any rabbits in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the rabbits in front of the croissants?",
+                "score": 0.9999785914378947,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.999979",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the rabbits in front of the croissants?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the croissants pink?",
+                "score": 0.9999999411811586,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the croissants pink?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any croissants in the image?",
+                "score": 0.9999996046171873,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any croissants in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many zebras are in the image?",
+                "score": 0.9999991394848509,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.999999",
+              "expected": "two",
+              "status": "passed",
+              "target": "How many zebras are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any zebras in the image?",
+                "score": 0.9999984899714036,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999998",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any zebras in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.7845940993290763,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "five wooden rabbits in front of three pink croissants, and two purple zebras",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the rabbits wooden?",
+              "score": 1.2812096259473549e-06,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1.28121e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the rabbits wooden?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many croissants are in the image?",
+              "score": 0.02823234814988783,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.0282323",
+            "expected": "three",
+            "status": "failed",
+            "target": "How many croissants are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the zebras purple?",
+              "score": 0.8177379088665475,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.817738",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the zebras purple?",
+            "type": "color_mismatch"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly five rabbits, exactly three croissants, and exactly two zebras.",
+            "Bind material/color correctly: all five rabbits are wooden, all three croissants are pink, and both zebras are purple.",
+            "Place the five wooden rabbits in front of the three pink croissants.",
+            "Keep all objects clearly visible and countable; avoid extra rabbits, croissants, zebras, or unrequested duplicate objects."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with separated count groups. Arrange three pink croissants in a rear row and five wooden rabbits in a front row, with the rabbits visibly in front of the croissants while leaving the croissants countable. Place two purple zebras separately in the scene so both are fully visible and not confused with the rabbits or croissants.",
+          "initial_prompt": "Create a clear image with exactly five wooden rabbits in the foreground, arranged in front of exactly three pink croissants behind them. The five rabbits must all look wooden and be individually visible and countable. The three croissants must all be pink and remain visible behind the rabbits, not fully hidden. Also include exactly two purple zebras, both clearly visible and countable, separated from the rabbits and croissants. Do not include any additional rabbits, croissants, or zebras.",
+          "parsed_constraints": {
+            "attributes": {
+              "croissants": [
+                "pink"
+              ],
+              "rabbits": [
+                "wooden"
+              ],
+              "zebras": [
+                "purple"
+              ]
+            },
+            "counts": {
+              "croissants": 3,
+              "rabbits": 5,
+              "zebras": 2
+            },
+            "objects": [
+              "rabbits",
+              "croissants",
+              "zebras"
+            ],
+            "relations": [
+              "five wooden rabbits are in front of three pink croissants"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly five rabbits, exactly three croissants, and exactly two zebras.",
+            "Bind material/color correctly: all five rabbits are wooden, all three croissants are pink, and both zebras are purple.",
+            "Place the five wooden rabbits in front of the three pink croissants.",
+            "Keep all objects clearly visible and countable; avoid extra rabbits, croissants, zebras, or unrequested duplicate objects."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with separated count groups. Arrange three pink croissants in a rear row and five wooden rabbits in a front row, with the rabbits visibly in front of the croissants while leaving the croissants countable. Place two purple zebras separately in the scene so both are fully visible and not confused with the rabbits or croissants.",
+          "initial_prompt": "Create a clear image with exactly five wooden rabbits in the foreground, arranged in front of exactly three pink croissants behind them. The five rabbits must all look wooden and be individually visible and countable. The three croissants must all be pink and remain visible behind the rabbits, not fully hidden. Also include exactly two purple zebras, both clearly visible and countable, separated from the rabbits and croissants. Do not include any additional rabbits, croissants, or zebras.",
+          "parsed_constraints": {
+            "attributes": {
+              "croissants": [
+                "pink"
+              ],
+              "rabbits": [
+                "wooden"
+              ],
+              "zebras": [
+                "purple"
+              ]
+            },
+            "counts": {
+              "croissants": 3,
+              "rabbits": 5,
+              "zebras": 2
+            },
+            "objects": [
+              "rabbits",
+              "croissants",
+              "zebras"
+            ],
+            "relations": [
+              "five wooden rabbits are in front of three pink croissants"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_prompt": "Create a clear image with exactly five wooden rabbits in the foreground, arranged in front of exactly three pink croissants behind them. The five rabbits must all look wooden and be individually visible and countable. The three croissants must all be pink and remain visible behind the rabbits, not fully hidden. Also include exactly two purple zebras, both clearly visible and countable, separated from the rabbits and croissants. Do not include any additional rabbits, croissants, or zebras.",
+        "previous_selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ],
+        "prompt_id": "geneval2_00727_16dbd807",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "attribute_mismatch",
+              "color_mismatch",
+              "count_mismatch"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the rabbits wooden?",
+                  "score": 1.2812096259473549e-06,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1.28121e-06",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the rabbits wooden?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many croissants are in the image?",
+                  "score": 0.02823234814988783,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.0282323",
+                "expected": "three",
+                "status": "failed",
+                "target": "How many croissants are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the zebras purple?",
+                  "score": 0.8177379088665475,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.817738",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the zebras purple?",
+                "type": "color_mismatch"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many rabbits are in the image?",
+                  "score": 0.9999936883722071,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.999994",
+                "expected": "five",
+                "status": "passed",
+                "target": "How many rabbits are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any rabbits in the image?",
+                  "score": 1.0,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any rabbits in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the rabbits in front of the croissants?",
+                  "score": 0.9999785914378947,
+                  "skill": "position"
+                },
+                "detected": "soft_score=0.999979",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the rabbits in front of the croissants?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the croissants pink?",
+                  "score": 0.9999999411811586,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the croissants pink?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any croissants in the image?",
+                  "score": 0.9999996046171873,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any croissants in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many zebras are in the image?",
+                  "score": 0.9999991394848509,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.999999",
+                "expected": "two",
+                "status": "passed",
+                "target": "How many zebras are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any zebras in the image?",
+                  "score": 0.9999984899714036,
+                  "skill": "object"
+                },
+                "detected": "soft_score=0.999998",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any zebras in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly five rabbits, exactly three croissants, and exactly two zebras.",
+                "Bind material/color correctly: all five rabbits are wooden, all three croissants are pink, and both zebras are purple.",
+                "Place the five wooden rabbits in front of the three pink croissants.",
+                "Keep all objects clearly visible and countable; avoid extra rabbits, croissants, zebras, or unrequested duplicate objects."
+              ],
+              "generation_strategy": "Use a clear multi-object composition with separated count groups. Arrange three pink croissants in a rear row and five wooden rabbits in a front row, with the rabbits visibly in front of the croissants while leaving the croissants countable. Place two purple zebras separately in the scene so both are fully visible and not confused with the rabbits or croissants.",
+              "initial_prompt": "Create a clear image with exactly five wooden rabbits in the foreground, arranged in front of exactly three pink croissants behind them. The five rabbits must all look wooden and be individually visible and countable. The three croissants must all be pink and remain visible behind the rabbits, not fully hidden. Also include exactly two purple zebras, both clearly visible and countable, separated from the rabbits and croissants. Do not include any additional rabbits, croissants, or zebras.",
+              "parsed_constraints": {
+                "attributes": {
+                  "croissants": [
+                    "pink"
+                  ],
+                  "rabbits": [
+                    "wooden"
+                  ],
+                  "zebras": [
+                    "purple"
+                  ]
+                },
+                "counts": {
+                  "croissants": 3,
+                  "rabbits": 5,
+                  "zebras": 2
+                },
+                "objects": [
+                  "rabbits",
+                  "croissants",
+                  "zebras"
+                ],
+                "relations": [
+                  "five wooden rabbits are in front of three pink croissants"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly five rabbits, exactly three croissants, and exactly two zebras.",
+                "Bind material/color correctly: all five rabbits are wooden, all three croissants are pink, and both zebras are purple.",
+                "Place the five wooden rabbits in front of the three pink croissants.",
+                "Keep all objects clearly visible and countable; avoid extra rabbits, croissants, zebras, or unrequested duplicate objects."
+              ],
+              "generation_strategy": "Use a clear multi-object composition with separated count groups. Arrange three pink croissants in a rear row and five wooden rabbits in a front row, with the rabbits visibly in front of the croissants while leaving the croissants countable. Place two purple zebras separately in the scene so both are fully visible and not confused with the rabbits or croissants.",
+              "initial_prompt": "Create a clear image with exactly five wooden rabbits in the foreground, arranged in front of exactly three pink croissants behind them. The five rabbits must all look wooden and be individually visible and countable. The three croissants must all be pink and remain visible behind the rabbits, not fully hidden. Also include exactly two purple zebras, both clearly visible and countable, separated from the rabbits and croissants. Do not include any additional rabbits, croissants, or zebras.",
+              "parsed_constraints": {
+                "attributes": {
+                  "croissants": [
+                    "pink"
+                  ],
+                  "rabbits": [
+                    "wooden"
+                  ],
+                  "zebras": [
+                    "purple"
+                  ]
+                },
+                "counts": {
+                  "croissants": 3,
+                  "rabbits": 5,
+                  "zebras": 2
+                },
+                "objects": [
+                  "rabbits",
+                  "croissants",
+                  "zebras"
+                ],
+                "relations": [
+                  "five wooden rabbits are in front of three pink croissants"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "prompt_used": "Create a clear image with exactly five wooden rabbits in the foreground, arranged in front of exactly three pink croissants behind them. The five rabbits must all look wooden and be individually visible and countable. The three croissants must all be pink and remain visible behind the rabbits, not fully hidden. Also include exactly two purple zebras, both clearly visible and countable, separated from the rabbits and croissants. Do not include any additional rabbits, croissants, or zebras.",
+            "round": 0,
+            "score": 0.7845940993290763,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 1,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the rabbits wooden?",
+                    "score": 1.2812096259473549e-06,
+                    "skill": "attribute"
+                  },
+                  "detected": "soft_score=1.28121e-06",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the rabbits wooden?",
+                  "type": "attribute_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 4,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many croissants are in the image?",
+                    "score": 0.02823234814988783,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=0.0282323",
+                  "expected": "three",
+                  "status": "failed",
+                  "target": "How many croissants are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 8,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the zebras purple?",
+                    "score": 0.8177379088665475,
+                    "skill": "attribute"
+                  },
+                  "detected": "soft_score=0.817738",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the zebras purple?",
+                  "type": "color_mismatch"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00727_16dbd807"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the rabbits wooden?",
+              "score": 1.2812096259473549e-06,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1.28121e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the rabbits wooden?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many croissants are in the image?",
+              "score": 0.02823234814988783,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.0282323",
+            "expected": "three",
+            "status": "failed",
+            "target": "How many croissants are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the zebras purple?",
+              "score": 0.8177379088665475,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.817738",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the zebras purple?",
+            "type": "color_mismatch"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00727_16dbd807_cand_02",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly five rabbits, exactly three croissants, and exactly two zebras.",
+      "Bind material/color correctly: all five rabbits are wooden, all three croissants are pink, and both zebras are purple.",
+      "Place the five wooden rabbits in front of the three pink croissants.",
+      "Keep all objects clearly visible and countable; avoid extra rabbits, croissants, zebras, or unrequested duplicate objects."
+    ],
+    "generation_strategy": "Use a clear multi-object composition with separated count groups. Arrange three pink croissants in a rear row and five wooden rabbits in a front row, with the rabbits visibly in front of the croissants while leaving the croissants countable. Place two purple zebras separately in the scene so both are fully visible and not confused with the rabbits or croissants.",
+    "initial_prompt": "Create a clear image with exactly five wooden rabbits in the foreground, arranged in front of exactly three pink croissants behind them. The five rabbits must all look wooden and be individually visible and countable. The three croissants must all be pink and remain visible behind the rabbits, not fully hidden. Also include exactly two purple zebras, both clearly visible and countable, separated from the rabbits and croissants. Do not include any additional rabbits, croissants, or zebras.",
+    "parsed_constraints": {
+      "attributes": {
+        "croissants": [
+          "pink"
+        ],
+        "rabbits": [
+          "wooden"
+        ],
+        "zebras": [
+          "purple"
+        ]
+      },
+      "counts": {
+        "croissants": 3,
+        "rabbits": 5,
+        "zebras": 2
+      },
+      "objects": [
+        "rabbits",
+        "croissants",
+        "zebras"
+      ],
+      "relations": [
+        "five wooden rabbits are in front of three pink croissants"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image preserved the presence and count of five rabbits, the rabbit-in-front-of-croissants relation, pink croissants, and two zebras, but failed three requirements: the rabbits were not recognized as wooden, the croissants were not counted as exactly three, and the zebras were not reliably recognized as purple.",
+    "expected_improvement": [
+      "All five rabbits should be identifiable as wooden by using explicit carved wood figurine wording and visible wood grain on each rabbit.",
+      "Exactly three croissants should be countable by placing them in a separated rear row with clear gaps and no overlaps or duplicates.",
+      "Both zebras should be recognized as purple by binding purple to each zebra's whole body and avoiding ordinary black-and-white zebra coloring."
+    ],
+    "failure_types": [
+      "attribute_mismatch",
+      "count_mismatch",
+      "color_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly five rabbits visible and individually countable.",
+      "Keep the rabbits in front of the croissants.",
+      "Keep the croissants pink.",
+      "Keep croissants present and visible.",
+      "Keep exactly two zebras visible and individually countable.",
+      "Keep zebras present and separate enough to count."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt stated the target attributes and counts, but it did not make the wooden material visually concrete enough for the rabbits, did not strongly enforce three separated croissant instances, and did not prevent the model from rendering zebras with normal non-purple zebra coloration.",
+      "error_source": "Insufficient attribute binding and count-disambiguation wording in the generation prompt."
+    },
+    "regeneration_strategy": "Use a simple staged composition: five carved wooden rabbit figurines in a front row; exactly three separated pink croissants in a rear row behind them, visible above and between the rabbits; exactly two fully purple zebras placed apart from the rabbit-croissant group. Emphasize countable separation, complete visibility, material texture for the rabbits, and negative constraints against extra objects or wrong zebra colors.",
+    "regression_risks": [
+      "Adding stronger wood-grain wording could make rabbits look like generic wooden toys unless rabbit shapes remain clear.",
+      "Putting croissants behind rabbits could hide one croissant and break the count, so they must remain visibly separated.",
+      "The generator may default zebras to black-and-white, so purple must be bound to both zebras explicitly.",
+      "Complex multi-object composition could introduce extra rabbits, croissants, or zebras unless negatives are repeated."
+    ],
+    "repair_constraints": [
+      "Make all five rabbits clearly wooden: each rabbit is a carved wooden rabbit figurine with visible wood grain texture.",
+      "Show exactly three croissants: three separate pink croissants in the rear row, with visible gaps between them and no extra croissants.",
+      "Make both zebras purple: exactly two zebras, each zebra's body visibly purple, not ordinary black-and-white.",
+      "Maintain the spatial relation: the five wooden rabbits are in front of the three pink croissants.",
+      "Avoid extra rabbits, croissants, zebras, duplicates, merged objects, or partially hidden count-critical objects."
+    ],
+    "retry_prompt": "Create a clear, simple image with exactly five rabbits in the front row, and every rabbit is a carved wooden rabbit figurine with visible wood grain texture. The five wooden rabbits must be separate, complete, and individually countable. Directly behind the rabbits, place exactly three pink croissants in a rear row; all three croissants must be separate from one another, visible above or between the rabbits, and countable, with no fourth croissant or duplicated pastry. The five wooden rabbits are in front of the three pink croissants. Also include exactly two zebras, and both zebras must be visibly purple over their bodies, not ordinary black-and-white; the two purple zebras must be complete, separate, and countable. Do not include any additional rabbits, croissants, zebras, or duplicate animal or pastry shapes.",
+    "skill_revision": {
+      "new_skills": [
+        "attribute_binding",
+        "quantity_counting",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints",
+        "spatial_layout",
+        "multi_object_composition",
+        "object_presence"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same skill set but apply it more concretely: stronger attribute binding for wooden rabbits and purple zebras, stronger quantity-counting and anti-occlusion clauses for exactly three croissants, and repeated negative constraints to avoid extras."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the rabbits wooden?",
+            "score": 1.2812096259473549e-06,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1.28121e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the rabbits wooden?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many croissants are in the image?",
+            "score": 0.02823234814988783,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.0282323",
+          "expected": "three",
+          "status": "failed",
+          "target": "How many croissants are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the zebras purple?",
+            "score": 0.8177379088665475,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.817738",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the zebras purple?",
+          "type": "color_mismatch"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00079/samples/00002.png",
+      "prompt": "Create a clear image with exactly five wooden rabbits in the foreground, arranged in front of exactly three pink croissants behind them. The five rabbits must all look wooden and be individually visible and countable. The three croissants must all be pink and remain visible behind the rabbits, not fully hidden. Also include exactly two purple zebras, both clearly visible and countable, separated from the rabbits and croissants. Do not include any additional rabbits, croissants, or zebras.",
+      "round": 0,
+      "score": 0.7845940993290763
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00727_16dbd807_cand_02",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "color_mismatch",
+        "count_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the rabbits wooden?",
+            "score": 1.2812096259473549e-06,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1.28121e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the rabbits wooden?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many croissants are in the image?",
+            "score": 0.02823234814988783,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.0282323",
+          "expected": "three",
+          "status": "failed",
+          "target": "How many croissants are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the zebras purple?",
+            "score": 0.8177379088665475,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.817738",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the zebras purple?",
+          "type": "color_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many rabbits are in the image?",
+            "score": 0.9999936883722071,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.999994",
+          "expected": "five",
+          "status": "passed",
+          "target": "How many rabbits are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any rabbits in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any rabbits in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the rabbits in front of the croissants?",
+            "score": 0.9999785914378947,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.999979",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the rabbits in front of the croissants?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the croissants pink?",
+            "score": 0.9999999411811586,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the croissants pink?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any croissants in the image?",
+            "score": 0.9999996046171873,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any croissants in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many zebras are in the image?",
+            "score": 0.9999991394848509,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.999999",
+          "expected": "two",
+          "status": "passed",
+          "target": "How many zebras are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any zebras in the image?",
+            "score": 0.9999984899714036,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999998",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any zebras in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.7845940993290763,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the rabbits wooden?",
+              "score": 1.2812096259473549e-06,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1.28121e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the rabbits wooden?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many croissants are in the image?",
+              "score": 0.02823234814988783,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.0282323",
+            "expected": "three",
+            "status": "failed",
+            "target": "How many croissants are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the zebras purple?",
+              "score": 0.8177379088665475,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.817738",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the zebras purple?",
+            "type": "color_mismatch"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00079/samples/00002.png",
+        "prompt": "Create a clear image with exactly five wooden rabbits in the foreground, arranged in front of exactly three pink croissants behind them. The five rabbits must all look wooden and be individually visible and countable. The three croissants must all be pink and remain visible behind the rabbits, not fully hidden. Also include exactly two purple zebras, both clearly visible and countable, separated from the rabbits and croissants. Do not include any additional rabbits, croissants, or zebras.",
+        "round": 0,
+        "score": 0.7845940993290763
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the rabbits wooden?",
+            "score": 1.2812096259473549e-06,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1.28121e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the rabbits wooden?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many croissants are in the image?",
+            "score": 0.02823234814988783,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.0282323",
+          "expected": "three",
+          "status": "failed",
+          "target": "How many croissants are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the zebras purple?",
+            "score": 0.8177379088665475,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.817738",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the zebras purple?",
+          "type": "color_mismatch"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "color_mismatch",
+        "count_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the rabbits wooden?",
+            "score": 1.2812096259473549e-06,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1.28121e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the rabbits wooden?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many croissants are in the image?",
+            "score": 0.02823234814988783,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.0282323",
+          "expected": "three",
+          "status": "failed",
+          "target": "How many croissants are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the zebras purple?",
+            "score": 0.8177379088665475,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.817738",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the zebras purple?",
+          "type": "color_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many rabbits are in the image?",
+            "score": 0.9999936883722071,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.999994",
+          "expected": "five",
+          "status": "passed",
+          "target": "How many rabbits are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any rabbits in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any rabbits in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the rabbits in front of the croissants?",
+            "score": 0.9999785914378947,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.999979",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the rabbits in front of the croissants?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the croissants pink?",
+            "score": 0.9999999411811586,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the croissants pink?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any croissants in the image?",
+            "score": 0.9999996046171873,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any croissants in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many zebras are in the image?",
+            "score": 0.9999991394848509,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.999999",
+          "expected": "two",
+          "status": "passed",
+          "target": "How many zebras are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any zebras in the image?",
+            "score": 0.9999984899714036,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999998",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any zebras in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.7845940993290763,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "five wooden rabbits in front of three pink croissants, and two purple zebras",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the rabbits wooden?",
+          "score": 1.2812096259473549e-06,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=1.28121e-06",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the rabbits wooden?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many croissants are in the image?",
+          "score": 0.02823234814988783,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.0282323",
+        "expected": "three",
+        "status": "failed",
+        "target": "How many croissants are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the zebras purple?",
+          "score": 0.8177379088665475,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.817738",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the zebras purple?",
+        "type": "color_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly five rabbits, exactly three croissants, and exactly two zebras.",
+        "Bind material/color correctly: all five rabbits are wooden, all three croissants are pink, and both zebras are purple.",
+        "Place the five wooden rabbits in front of the three pink croissants.",
+        "Keep all objects clearly visible and countable; avoid extra rabbits, croissants, zebras, or unrequested duplicate objects."
+      ],
+      "generation_strategy": "Use a clear multi-object composition with separated count groups. Arrange three pink croissants in a rear row and five wooden rabbits in a front row, with the rabbits visibly in front of the croissants while leaving the croissants countable. Place two purple zebras separately in the scene so both are fully visible and not confused with the rabbits or croissants.",
+      "initial_prompt": "Create a clear image with exactly five wooden rabbits in the foreground, arranged in front of exactly three pink croissants behind them. The five rabbits must all look wooden and be individually visible and countable. The three croissants must all be pink and remain visible behind the rabbits, not fully hidden. Also include exactly two purple zebras, both clearly visible and countable, separated from the rabbits and croissants. Do not include any additional rabbits, croissants, or zebras.",
+      "parsed_constraints": {
+        "attributes": {
+          "croissants": [
+            "pink"
+          ],
+          "rabbits": [
+            "wooden"
+          ],
+          "zebras": [
+            "purple"
+          ]
+        },
+        "counts": {
+          "croissants": 3,
+          "rabbits": 5,
+          "zebras": 2
+        },
+        "objects": [
+          "rabbits",
+          "croissants",
+          "zebras"
+        ],
+        "relations": [
+          "five wooden rabbits are in front of three pink croissants"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly five rabbits, exactly three croissants, and exactly two zebras.",
+        "Bind material/color correctly: all five rabbits are wooden, all three croissants are pink, and both zebras are purple.",
+        "Place the five wooden rabbits in front of the three pink croissants.",
+        "Keep all objects clearly visible and countable; avoid extra rabbits, croissants, zebras, or unrequested duplicate objects."
+      ],
+      "generation_strategy": "Use a clear multi-object composition with separated count groups. Arrange three pink croissants in a rear row and five wooden rabbits in a front row, with the rabbits visibly in front of the croissants while leaving the croissants countable. Place two purple zebras separately in the scene so both are fully visible and not confused with the rabbits or croissants.",
+      "initial_prompt": "Create a clear image with exactly five wooden rabbits in the foreground, arranged in front of exactly three pink croissants behind them. The five rabbits must all look wooden and be individually visible and countable. The three croissants must all be pink and remain visible behind the rabbits, not fully hidden. Also include exactly two purple zebras, both clearly visible and countable, separated from the rabbits and croissants. Do not include any additional rabbits, croissants, or zebras.",
+      "parsed_constraints": {
+        "attributes": {
+          "croissants": [
+            "pink"
+          ],
+          "rabbits": [
+            "wooden"
+          ],
+          "zebras": [
+            "purple"
+          ]
+        },
+        "counts": {
+          "croissants": 3,
+          "rabbits": 5,
+          "zebras": 2
+        },
+        "objects": [
+          "rabbits",
+          "croissants",
+          "zebras"
+        ],
+        "relations": [
+          "five wooden rabbits are in front of three pink croissants"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_prompt": "Create a clear image with exactly five wooden rabbits in the foreground, arranged in front of exactly three pink croissants behind them. The five rabbits must all look wooden and be individually visible and countable. The three croissants must all be pink and remain visible behind the rabbits, not fully hidden. Also include exactly two purple zebras, both clearly visible and countable, separated from the rabbits and croissants. Do not include any additional rabbits, croissants, or zebras.",
+    "previous_selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ],
+    "prompt_id": "geneval2_00727_16dbd807",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "color_mismatch",
+          "count_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the rabbits wooden?",
+              "score": 1.2812096259473549e-06,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1.28121e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the rabbits wooden?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many croissants are in the image?",
+              "score": 0.02823234814988783,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.0282323",
+            "expected": "three",
+            "status": "failed",
+            "target": "How many croissants are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the zebras purple?",
+              "score": 0.8177379088665475,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.817738",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the zebras purple?",
+            "type": "color_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many rabbits are in the image?",
+              "score": 0.9999936883722071,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.999994",
+            "expected": "five",
+            "status": "passed",
+            "target": "How many rabbits are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any rabbits in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any rabbits in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the rabbits in front of the croissants?",
+              "score": 0.9999785914378947,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.999979",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the rabbits in front of the croissants?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the croissants pink?",
+              "score": 0.9999999411811586,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the croissants pink?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any croissants in the image?",
+              "score": 0.9999996046171873,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any croissants in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many zebras are in the image?",
+              "score": 0.9999991394848509,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.999999",
+            "expected": "two",
+            "status": "passed",
+            "target": "How many zebras are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any zebras in the image?",
+              "score": 0.9999984899714036,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999998",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any zebras in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly five rabbits, exactly three croissants, and exactly two zebras.",
+            "Bind material/color correctly: all five rabbits are wooden, all three croissants are pink, and both zebras are purple.",
+            "Place the five wooden rabbits in front of the three pink croissants.",
+            "Keep all objects clearly visible and countable; avoid extra rabbits, croissants, zebras, or unrequested duplicate objects."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with separated count groups. Arrange three pink croissants in a rear row and five wooden rabbits in a front row, with the rabbits visibly in front of the croissants while leaving the croissants countable. Place two purple zebras separately in the scene so both are fully visible and not confused with the rabbits or croissants.",
+          "initial_prompt": "Create a clear image with exactly five wooden rabbits in the foreground, arranged in front of exactly three pink croissants behind them. The five rabbits must all look wooden and be individually visible and countable. The three croissants must all be pink and remain visible behind the rabbits, not fully hidden. Also include exactly two purple zebras, both clearly visible and countable, separated from the rabbits and croissants. Do not include any additional rabbits, croissants, or zebras.",
+          "parsed_constraints": {
+            "attributes": {
+              "croissants": [
+                "pink"
+              ],
+              "rabbits": [
+                "wooden"
+              ],
+              "zebras": [
+                "purple"
+              ]
+            },
+            "counts": {
+              "croissants": 3,
+              "rabbits": 5,
+              "zebras": 2
+            },
+            "objects": [
+              "rabbits",
+              "croissants",
+              "zebras"
+            ],
+            "relations": [
+              "five wooden rabbits are in front of three pink croissants"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly five rabbits, exactly three croissants, and exactly two zebras.",
+            "Bind material/color correctly: all five rabbits are wooden, all three croissants are pink, and both zebras are purple.",
+            "Place the five wooden rabbits in front of the three pink croissants.",
+            "Keep all objects clearly visible and countable; avoid extra rabbits, croissants, zebras, or unrequested duplicate objects."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with separated count groups. Arrange three pink croissants in a rear row and five wooden rabbits in a front row, with the rabbits visibly in front of the croissants while leaving the croissants countable. Place two purple zebras separately in the scene so both are fully visible and not confused with the rabbits or croissants.",
+          "initial_prompt": "Create a clear image with exactly five wooden rabbits in the foreground, arranged in front of exactly three pink croissants behind them. The five rabbits must all look wooden and be individually visible and countable. The three croissants must all be pink and remain visible behind the rabbits, not fully hidden. Also include exactly two purple zebras, both clearly visible and countable, separated from the rabbits and croissants. Do not include any additional rabbits, croissants, or zebras.",
+          "parsed_constraints": {
+            "attributes": {
+              "croissants": [
+                "pink"
+              ],
+              "rabbits": [
+                "wooden"
+              ],
+              "zebras": [
+                "purple"
+              ]
+            },
+            "counts": {
+              "croissants": 3,
+              "rabbits": 5,
+              "zebras": 2
+            },
+            "objects": [
+              "rabbits",
+              "croissants",
+              "zebras"
+            ],
+            "relations": [
+              "five wooden rabbits are in front of three pink croissants"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "prompt_used": "Create a clear image with exactly five wooden rabbits in the foreground, arranged in front of exactly three pink croissants behind them. The five rabbits must all look wooden and be individually visible and countable. The three croissants must all be pink and remain visible behind the rabbits, not fully hidden. Also include exactly two purple zebras, both clearly visible and countable, separated from the rabbits and croissants. Do not include any additional rabbits, croissants, or zebras.",
+        "round": 0,
+        "score": 0.7845940993290763,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the rabbits wooden?",
+                "score": 1.2812096259473549e-06,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1.28121e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the rabbits wooden?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many croissants are in the image?",
+                "score": 0.02823234814988783,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.0282323",
+              "expected": "three",
+              "status": "failed",
+              "target": "How many croissants are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the zebras purple?",
+                "score": 0.8177379088665475,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.817738",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the zebras purple?",
+              "type": "color_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00727_16dbd807"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the rabbits wooden?",
+          "score": 1.2812096259473549e-06,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=1.28121e-06",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the rabbits wooden?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many croissants are in the image?",
+          "score": 0.02823234814988783,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.0282323",
+        "expected": "three",
+        "status": "failed",
+        "target": "How many croissants are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the zebras purple?",
+          "score": 0.8177379088665475,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.817738",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the zebras purple?",
+        "type": "color_mismatch"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00079/samples/00002.png",
+    "best_so_far_prompt": "Create a clear image with exactly five wooden rabbits in the foreground, arranged in front of exactly three pink croissants behind them. The five rabbits must all look wooden and be individually visible and countable. The three croissants must all be pink and remain visible behind the rabbits, not fully hidden. Also include exactly two purple zebras, both clearly visible and countable, separated from the rabbits and croissants. Do not include any additional rabbits, croissants, or zebras.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.7845940993290763,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the rabbits wooden?",
+          "score": 1.2812096259473549e-06,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=1.28121e-06",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the rabbits wooden?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many croissants are in the image?",
+          "score": 0.02823234814988783,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.0282323",
+        "expected": "three",
+        "status": "failed",
+        "target": "How many croissants are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the zebras purple?",
+          "score": 0.8177379088665475,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.817738",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the zebras purple?",
+        "type": "color_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly five rabbits, exactly three croissants, and exactly two zebras.",
+        "Bind material/color correctly: all five rabbits are wooden, all three croissants are pink, and both zebras are purple.",
+        "Place the five wooden rabbits in front of the three pink croissants.",
+        "Keep all objects clearly visible and countable; avoid extra rabbits, croissants, zebras, or unrequested duplicate objects."
+      ],
+      "generation_strategy": "Use a clear multi-object composition with separated count groups. Arrange three pink croissants in a rear row and five wooden rabbits in a front row, with the rabbits visibly in front of the croissants while leaving the croissants countable. Place two purple zebras separately in the scene so both are fully visible and not confused with the rabbits or croissants.",
+      "initial_prompt": "Create a clear image with exactly five wooden rabbits in the foreground, arranged in front of exactly three pink croissants behind them. The five rabbits must all look wooden and be individually visible and countable. The three croissants must all be pink and remain visible behind the rabbits, not fully hidden. Also include exactly two purple zebras, both clearly visible and countable, separated from the rabbits and croissants. Do not include any additional rabbits, croissants, or zebras.",
+      "parsed_constraints": {
+        "attributes": {
+          "croissants": [
+            "pink"
+          ],
+          "rabbits": [
+            "wooden"
+          ],
+          "zebras": [
+            "purple"
+          ]
+        },
+        "counts": {
+          "croissants": 3,
+          "rabbits": 5,
+          "zebras": 2
+        },
+        "objects": [
+          "rabbits",
+          "croissants",
+          "zebras"
+        ],
+        "relations": [
+          "five wooden rabbits are in front of three pink croissants"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.785 failed=['Are the rabbits wooden?', 'How many croissants are in the image?', 'Are the zebras purple?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_incremental/snapshot_003_worker_03/geneval2_00727_16dbd807__geneval2_00727_16dbd807_cand_02__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00727_16dbd807__geneval2_00727_16dbd807_cand_02__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00727_16dbd807",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image preserved the presence and count of five rabbits, the rabbit-in-front-of-croissants relation, pink croissants, and two zebras, but failed three requirements: the rabbits were not recognized as wooden, the croissants were not counted as exactly three, and the zebras were not reliably recognized as purple.",
+    "expected_improvement": [
+      "All five rabbits should be identifiable as wooden by using explicit carved wood figurine wording and visible wood grain on each rabbit.",
+      "Exactly three croissants should be countable by placing them in a separated rear row with clear gaps and no overlaps or duplicates.",
+      "Both zebras should be recognized as purple by binding purple to each zebra's whole body and avoiding ordinary black-and-white zebra coloring."
+    ],
+    "failure_types": [
+      "attribute_mismatch",
+      "count_mismatch",
+      "color_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly five rabbits visible and individually countable.",
+      "Keep the rabbits in front of the croissants.",
+      "Keep the croissants pink.",
+      "Keep croissants present and visible.",
+      "Keep exactly two zebras visible and individually countable.",
+      "Keep zebras present and separate enough to count."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt stated the target attributes and counts, but it did not make the wooden material visually concrete enough for the rabbits, did not strongly enforce three separated croissant instances, and did not prevent the model from rendering zebras with normal non-purple zebra coloration.",
+      "error_source": "Insufficient attribute binding and count-disambiguation wording in the generation prompt."
+    },
+    "regeneration_strategy": "Use a simple staged composition: five carved wooden rabbit figurines in a front row; exactly three separated pink croissants in a rear row behind them, visible above and between the rabbits; exactly two fully purple zebras placed apart from the rabbit-croissant group. Emphasize countable separation, complete visibility, material texture for the rabbits, and negative constraints against extra objects or wrong zebra colors.",
+    "regression_risks": [
+      "Adding stronger wood-grain wording could make rabbits look like generic wooden toys unless rabbit shapes remain clear.",
+      "Putting croissants behind rabbits could hide one croissant and break the count, so they must remain visibly separated.",
+      "The generator may default zebras to black-and-white, so purple must be bound to both zebras explicitly.",
+      "Complex multi-object composition could introduce extra rabbits, croissants, or zebras unless negatives are repeated."
+    ],
+    "repair_constraints": [
+      "Make all five rabbits clearly wooden: each rabbit is a carved wooden rabbit figurine with visible wood grain texture.",
+      "Show exactly three croissants: three separate pink croissants in the rear row, with visible gaps between them and no extra croissants.",
+      "Make both zebras purple: exactly two zebras, each zebra's body visibly purple, not ordinary black-and-white.",
+      "Maintain the spatial relation: the five wooden rabbits are in front of the three pink croissants.",
+      "Avoid extra rabbits, croissants, zebras, duplicates, merged objects, or partially hidden count-critical objects."
+    ],
+    "retry_prompt": "Create a clear, simple image with exactly five rabbits in the front row, and every rabbit is a carved wooden rabbit figurine with visible wood grain texture. The five wooden rabbits must be separate, complete, and individually countable. Directly behind the rabbits, place exactly three pink croissants in a rear row; all three croissants must be separate from one another, visible above or between the rabbits, and countable, with no fourth croissant or duplicated pastry. The five wooden rabbits are in front of the three pink croissants. Also include exactly two zebras, and both zebras must be visibly purple over their bodies, not ordinary black-and-white; the two purple zebras must be complete, separate, and countable. Do not include any additional rabbits, croissants, zebras, or duplicate animal or pastry shapes.",
+    "skill_revision": {
+      "new_skills": [
+        "attribute_binding",
+        "quantity_counting",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints",
+        "spatial_layout",
+        "multi_object_composition",
+        "object_presence"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same skill set but apply it more concretely: stronger attribute binding for wooden rabbits and purple zebras, stronger quantity-counting and anti-occlusion clauses for exactly three croissants, and repeated negative constraints to avoid extras."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "five wooden rabbits in front of three pink croissants, and two purple zebras",
+    "prompt": "five wooden rabbits in front of three pink croissants, and two purple zebras",
+    "prompt_id": "geneval2_00727_16dbd807",
+    "sampling_bucket": "multi_constraint",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 3,
+      "count": 3,
+      "object": 3,
+      "position": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 727,
+    "vqa_list": [
+      [
+        "How many rabbits are in the image?",
+        "five"
+      ],
+      [
+        "Are the rabbits wooden?",
+        "Yes"
+      ],
+      [
+        "Are there any rabbits in the image?",
+        "Yes"
+      ],
+      [
+        "Are the rabbits in front of the croissants?",
+        "Yes"
+      ],
+      [
+        "How many croissants are in the image?",
+        "three"
+      ],
+      [
+        "Are the croissants pink?",
+        "Yes"
+      ],
+      [
+        "Are there any croissants in the image?",
+        "Yes"
+      ],
+      [
+        "How many zebras are in the image?",
+        "two"
+      ],
+      [
+        "Are the zebras purple?",
+        "Yes"
+      ],
+      [
+        "Are there any zebras in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00727_16dbd807"
+}

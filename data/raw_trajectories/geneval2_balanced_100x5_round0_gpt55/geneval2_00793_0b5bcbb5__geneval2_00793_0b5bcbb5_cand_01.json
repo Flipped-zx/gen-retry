@@ -1,0 +1,2581 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "count_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many donuts are in the image?",
+              "score": 2.2603685625767795e-06,
+              "skill": "count"
+            },
+            "detected": "soft_score=2.26037e-06",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many donuts are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many chairs are in the image?",
+              "score": 0.3758203014881372,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.37582",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many chairs are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many suitcases are in the image?",
+              "score": 0.9526065065012354,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.952607",
+            "expected": "five",
+            "status": "passed",
+            "target": "How many suitcases are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the suitcases spotted?",
+              "score": 0.99999999670748,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the suitcases spotted?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any suitcases in the image?",
+              "score": 0.9999999980373104,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any suitcases in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the suitcases behind the donuts?",
+              "score": 0.9999239182543533,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.999924",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the suitcases behind the donuts?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any donuts in the image?",
+              "score": 0.9999999690280674,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any donuts in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the donuts to the left of the chairs?",
+              "score": 1.0,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the donuts to the left of the chairs?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the chairs yellow?",
+              "score": 1.0,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the chairs yellow?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any chairs in the image?",
+              "score": 0.9999999915685294,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any chairs in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00793_0b5bcbb5_cand_01",
+          "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+          "rows": [
+            {
+              "answer": "five",
+              "atom_count": 10,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00793_0b5bcbb5_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00087/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00087/samples/00001.png",
+              "prompt": "five spotted suitcases behind six donuts to the left of seven yellow chairs",
+              "prompt_id": "geneval2_00793_0b5bcbb5",
+              "question": "How many suitcases are in the image?",
+              "score": 0.9526065065012354,
+              "skill": "count",
+              "source_index": 793
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00793_0b5bcbb5_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00087/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00087/samples/00001.png",
+              "prompt": "five spotted suitcases behind six donuts to the left of seven yellow chairs",
+              "prompt_id": "geneval2_00793_0b5bcbb5",
+              "question": "Are the suitcases spotted?",
+              "score": 0.99999999670748,
+              "skill": "attribute",
+              "source_index": 793
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00793_0b5bcbb5_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00087/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00087/samples/00001.png",
+              "prompt": "five spotted suitcases behind six donuts to the left of seven yellow chairs",
+              "prompt_id": "geneval2_00793_0b5bcbb5",
+              "question": "Are there any suitcases in the image?",
+              "score": 0.9999999980373104,
+              "skill": "object",
+              "source_index": 793
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00793_0b5bcbb5_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00087/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00087/samples/00001.png",
+              "prompt": "five spotted suitcases behind six donuts to the left of seven yellow chairs",
+              "prompt_id": "geneval2_00793_0b5bcbb5",
+              "question": "Are the suitcases behind the donuts?",
+              "score": 0.9999239182543533,
+              "skill": "position",
+              "source_index": 793
+            },
+            {
+              "answer": "six",
+              "atom_count": 10,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00793_0b5bcbb5_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00087/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00087/samples/00001.png",
+              "prompt": "five spotted suitcases behind six donuts to the left of seven yellow chairs",
+              "prompt_id": "geneval2_00793_0b5bcbb5",
+              "question": "How many donuts are in the image?",
+              "score": 2.2603685625767795e-06,
+              "skill": "count",
+              "source_index": 793
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00793_0b5bcbb5_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00087/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00087/samples/00001.png",
+              "prompt": "five spotted suitcases behind six donuts to the left of seven yellow chairs",
+              "prompt_id": "geneval2_00793_0b5bcbb5",
+              "question": "Are there any donuts in the image?",
+              "score": 0.9999999690280674,
+              "skill": "object",
+              "source_index": 793
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00793_0b5bcbb5_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00087/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00087/samples/00001.png",
+              "prompt": "five spotted suitcases behind six donuts to the left of seven yellow chairs",
+              "prompt_id": "geneval2_00793_0b5bcbb5",
+              "question": "Are the donuts to the left of the chairs?",
+              "score": 1.0000000790093964,
+              "skill": "position",
+              "source_index": 793
+            },
+            {
+              "answer": "seven",
+              "atom_count": 10,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00793_0b5bcbb5_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00087/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00087/samples/00001.png",
+              "prompt": "five spotted suitcases behind six donuts to the left of seven yellow chairs",
+              "prompt_id": "geneval2_00793_0b5bcbb5",
+              "question": "How many chairs are in the image?",
+              "score": 0.3758203014881372,
+              "skill": "count",
+              "source_index": 793
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00793_0b5bcbb5_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00087/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00087/samples/00001.png",
+              "prompt": "five spotted suitcases behind six donuts to the left of seven yellow chairs",
+              "prompt_id": "geneval2_00793_0b5bcbb5",
+              "question": "Are the chairs yellow?",
+              "score": 1.000000010402914,
+              "skill": "attribute",
+              "source_index": 793
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00793_0b5bcbb5_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00087/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00087/samples/00001.png",
+              "prompt": "five spotted suitcases behind six donuts to the left of seven yellow chairs",
+              "prompt_id": "geneval2_00793_0b5bcbb5",
+              "question": "Are there any chairs in the image?",
+              "score": 0.9999999915685294,
+              "skill": "object",
+              "source_index": 793
+            }
+          ],
+          "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.8328352941953676,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 1,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00793_0b5bcbb5.json",
+          "manifest_prompt_index": 87,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00793_0b5bcbb5"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00793_0b5bcbb5_cand_01",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00087/samples/00001.png",
+        "prompt_used": "A clear scene with exactly five spotted suitcases arranged as a visible group in the background, behind exactly six donuts arranged in the foreground or middle ground. The six donuts are positioned clearly to the left of exactly seven yellow chairs arranged as a separate visible group on the right. All five suitcases have spotted patterns, all seven chairs are yellow, and the donuts are distinct from both groups. Keep every suitcase, donut, and chair fully visible, separated, unobstructed, and easy to count, with no extra suitcases, no extra donuts, and no extra chairs.",
+        "seed": 1436
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly five suitcases, exactly six donuts, and exactly seven chairs.",
+          "Bind the spotted pattern only to the five suitcases.",
+          "Bind the yellow color only to the seven chairs.",
+          "Place the five spotted suitcases behind the six donuts, with enough vertical/depth separation that the suitcases are visibly farther back.",
+          "Place the six donuts to the left of the seven yellow chairs, with clear horizontal separation.",
+          "Keep all objects fully visible and avoid occlusion that prevents counting."
+        ],
+        "generation_strategy": "Use a clear three-group composition: five spotted suitcases in the back row, six donuts in a front/middle row, and seven yellow chairs in a separate group to the right. Arrange each group in an orderly line or grid so every item is individually visible and countable. Emphasize the depth relation by placing the suitcases higher/farther back behind the donuts, and emphasize the left-right relation by placing donuts clearly left of the chairs.",
+        "initial_prompt": "A clear scene with exactly five spotted suitcases arranged as a visible group in the background, behind exactly six donuts arranged in the foreground or middle ground. The six donuts are positioned clearly to the left of exactly seven yellow chairs arranged as a separate visible group on the right. All five suitcases have spotted patterns, all seven chairs are yellow, and the donuts are distinct from both groups. Keep every suitcase, donut, and chair fully visible, separated, unobstructed, and easy to count, with no extra suitcases, no extra donuts, and no extra chairs.",
+        "parsed_constraints": {
+          "attributes": {
+            "chairs": [
+              "yellow"
+            ],
+            "suitcases": [
+              "spotted"
+            ]
+          },
+          "counts": {
+            "chairs": 7,
+            "donuts": 6,
+            "suitcases": 5
+          },
+          "objects": [
+            "suitcases",
+            "donuts",
+            "chairs"
+          ],
+          "relations": [
+            "five spotted suitcases are behind six donuts",
+            "six donuts are to the left of seven yellow chairs"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility",
+          "negative_constraints"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly five suitcases, exactly six donuts, and exactly seven chairs.",
+          "Bind the spotted pattern only to the five suitcases.",
+          "Bind the yellow color only to the seven chairs.",
+          "Place the five spotted suitcases behind the six donuts, with enough vertical/depth separation that the suitcases are visibly farther back.",
+          "Place the six donuts to the left of the seven yellow chairs, with clear horizontal separation.",
+          "Keep all objects fully visible and avoid occlusion that prevents counting."
+        ],
+        "generation_strategy": "Use a clear three-group composition: five spotted suitcases in the back row, six donuts in a front/middle row, and seven yellow chairs in a separate group to the right. Arrange each group in an orderly line or grid so every item is individually visible and countable. Emphasize the depth relation by placing the suitcases higher/farther back behind the donuts, and emphasize the left-right relation by placing donuts clearly left of the chairs.",
+        "initial_prompt": "A clear scene with exactly five spotted suitcases arranged as a visible group in the background, behind exactly six donuts arranged in the foreground or middle ground. The six donuts are positioned clearly to the left of exactly seven yellow chairs arranged as a separate visible group on the right. All five suitcases have spotted patterns, all seven chairs are yellow, and the donuts are distinct from both groups. Keep every suitcase, donut, and chair fully visible, separated, unobstructed, and easy to count, with no extra suitcases, no extra donuts, and no extra chairs.",
+        "parsed_constraints": {
+          "attributes": {
+            "chairs": [
+              "yellow"
+            ],
+            "suitcases": [
+              "spotted"
+            ]
+          },
+          "counts": {
+            "chairs": 7,
+            "donuts": 6,
+            "suitcases": 5
+          },
+          "objects": [
+            "suitcases",
+            "donuts",
+            "chairs"
+          ],
+          "relations": [
+            "five spotted suitcases are behind six donuts",
+            "six donuts are to the left of seven yellow chairs"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility",
+          "negative_constraints"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many donuts are in the image?",
+                "score": 2.2603685625767795e-06,
+                "skill": "count"
+              },
+              "detected": "soft_score=2.26037e-06",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many donuts are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many chairs are in the image?",
+                "score": 0.3758203014881372,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.37582",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many chairs are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00087/samples/00001.png",
+          "prompt": "A clear scene with exactly five spotted suitcases arranged as a visible group in the background, behind exactly six donuts arranged in the foreground or middle ground. The six donuts are positioned clearly to the left of exactly seven yellow chairs arranged as a separate visible group on the right. All five suitcases have spotted patterns, all seven chairs are yellow, and the donuts are distinct from both groups. Keep every suitcase, donut, and chair fully visible, separated, unobstructed, and easy to count, with no extra suitcases, no extra donuts, and no extra chairs.",
+          "round": 0,
+          "score": 0.8328352941953676
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00793_0b5bcbb5_cand_01",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "count_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many donuts are in the image?",
+                "score": 2.2603685625767795e-06,
+                "skill": "count"
+              },
+              "detected": "soft_score=2.26037e-06",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many donuts are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many chairs are in the image?",
+                "score": 0.3758203014881372,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.37582",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many chairs are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many suitcases are in the image?",
+                "score": 0.9526065065012354,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.952607",
+              "expected": "five",
+              "status": "passed",
+              "target": "How many suitcases are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the suitcases spotted?",
+                "score": 0.99999999670748,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the suitcases spotted?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any suitcases in the image?",
+                "score": 0.9999999980373104,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any suitcases in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the suitcases behind the donuts?",
+                "score": 0.9999239182543533,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.999924",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the suitcases behind the donuts?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any donuts in the image?",
+                "score": 0.9999999690280674,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any donuts in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the donuts to the left of the chairs?",
+                "score": 1.0,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the donuts to the left of the chairs?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the chairs yellow?",
+                "score": 1.0,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the chairs yellow?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any chairs in the image?",
+                "score": 0.9999999915685294,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any chairs in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.8328352941953676,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many donuts are in the image?",
+                  "score": 2.2603685625767795e-06,
+                  "skill": "count"
+                },
+                "detected": "soft_score=2.26037e-06",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many donuts are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many chairs are in the image?",
+                  "score": 0.3758203014881372,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.37582",
+                "expected": "seven",
+                "status": "failed",
+                "target": "How many chairs are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00087/samples/00001.png",
+            "prompt": "A clear scene with exactly five spotted suitcases arranged as a visible group in the background, behind exactly six donuts arranged in the foreground or middle ground. The six donuts are positioned clearly to the left of exactly seven yellow chairs arranged as a separate visible group on the right. All five suitcases have spotted patterns, all seven chairs are yellow, and the donuts are distinct from both groups. Keep every suitcase, donut, and chair fully visible, separated, unobstructed, and easy to count, with no extra suitcases, no extra donuts, and no extra chairs.",
+            "round": 0,
+            "score": 0.8328352941953676
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many donuts are in the image?",
+                "score": 2.2603685625767795e-06,
+                "skill": "count"
+              },
+              "detected": "soft_score=2.26037e-06",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many donuts are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many chairs are in the image?",
+                "score": 0.3758203014881372,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.37582",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many chairs are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "count_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many donuts are in the image?",
+                "score": 2.2603685625767795e-06,
+                "skill": "count"
+              },
+              "detected": "soft_score=2.26037e-06",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many donuts are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many chairs are in the image?",
+                "score": 0.3758203014881372,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.37582",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many chairs are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many suitcases are in the image?",
+                "score": 0.9526065065012354,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.952607",
+              "expected": "five",
+              "status": "passed",
+              "target": "How many suitcases are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the suitcases spotted?",
+                "score": 0.99999999670748,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the suitcases spotted?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any suitcases in the image?",
+                "score": 0.9999999980373104,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any suitcases in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the suitcases behind the donuts?",
+                "score": 0.9999239182543533,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.999924",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the suitcases behind the donuts?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any donuts in the image?",
+                "score": 0.9999999690280674,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any donuts in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the donuts to the left of the chairs?",
+                "score": 1.0,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the donuts to the left of the chairs?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the chairs yellow?",
+                "score": 1.0,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the chairs yellow?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any chairs in the image?",
+                "score": 0.9999999915685294,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any chairs in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.8328352941953676,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "five spotted suitcases behind six donuts to the left of seven yellow chairs",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many donuts are in the image?",
+              "score": 2.2603685625767795e-06,
+              "skill": "count"
+            },
+            "detected": "soft_score=2.26037e-06",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many donuts are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many chairs are in the image?",
+              "score": 0.3758203014881372,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.37582",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many chairs are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly five suitcases, exactly six donuts, and exactly seven chairs.",
+            "Bind the spotted pattern only to the five suitcases.",
+            "Bind the yellow color only to the seven chairs.",
+            "Place the five spotted suitcases behind the six donuts, with enough vertical/depth separation that the suitcases are visibly farther back.",
+            "Place the six donuts to the left of the seven yellow chairs, with clear horizontal separation.",
+            "Keep all objects fully visible and avoid occlusion that prevents counting."
+          ],
+          "generation_strategy": "Use a clear three-group composition: five spotted suitcases in the back row, six donuts in a front/middle row, and seven yellow chairs in a separate group to the right. Arrange each group in an orderly line or grid so every item is individually visible and countable. Emphasize the depth relation by placing the suitcases higher/farther back behind the donuts, and emphasize the left-right relation by placing donuts clearly left of the chairs.",
+          "initial_prompt": "A clear scene with exactly five spotted suitcases arranged as a visible group in the background, behind exactly six donuts arranged in the foreground or middle ground. The six donuts are positioned clearly to the left of exactly seven yellow chairs arranged as a separate visible group on the right. All five suitcases have spotted patterns, all seven chairs are yellow, and the donuts are distinct from both groups. Keep every suitcase, donut, and chair fully visible, separated, unobstructed, and easy to count, with no extra suitcases, no extra donuts, and no extra chairs.",
+          "parsed_constraints": {
+            "attributes": {
+              "chairs": [
+                "yellow"
+              ],
+              "suitcases": [
+                "spotted"
+              ]
+            },
+            "counts": {
+              "chairs": 7,
+              "donuts": 6,
+              "suitcases": 5
+            },
+            "objects": [
+              "suitcases",
+              "donuts",
+              "chairs"
+            ],
+            "relations": [
+              "five spotted suitcases are behind six donuts",
+              "six donuts are to the left of seven yellow chairs"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly five suitcases, exactly six donuts, and exactly seven chairs.",
+            "Bind the spotted pattern only to the five suitcases.",
+            "Bind the yellow color only to the seven chairs.",
+            "Place the five spotted suitcases behind the six donuts, with enough vertical/depth separation that the suitcases are visibly farther back.",
+            "Place the six donuts to the left of the seven yellow chairs, with clear horizontal separation.",
+            "Keep all objects fully visible and avoid occlusion that prevents counting."
+          ],
+          "generation_strategy": "Use a clear three-group composition: five spotted suitcases in the back row, six donuts in a front/middle row, and seven yellow chairs in a separate group to the right. Arrange each group in an orderly line or grid so every item is individually visible and countable. Emphasize the depth relation by placing the suitcases higher/farther back behind the donuts, and emphasize the left-right relation by placing donuts clearly left of the chairs.",
+          "initial_prompt": "A clear scene with exactly five spotted suitcases arranged as a visible group in the background, behind exactly six donuts arranged in the foreground or middle ground. The six donuts are positioned clearly to the left of exactly seven yellow chairs arranged as a separate visible group on the right. All five suitcases have spotted patterns, all seven chairs are yellow, and the donuts are distinct from both groups. Keep every suitcase, donut, and chair fully visible, separated, unobstructed, and easy to count, with no extra suitcases, no extra donuts, and no extra chairs.",
+          "parsed_constraints": {
+            "attributes": {
+              "chairs": [
+                "yellow"
+              ],
+              "suitcases": [
+                "spotted"
+              ]
+            },
+            "counts": {
+              "chairs": 7,
+              "donuts": 6,
+              "suitcases": 5
+            },
+            "objects": [
+              "suitcases",
+              "donuts",
+              "chairs"
+            ],
+            "relations": [
+              "five spotted suitcases are behind six donuts",
+              "six donuts are to the left of seven yellow chairs"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "previous_prompt": "A clear scene with exactly five spotted suitcases arranged as a visible group in the background, behind exactly six donuts arranged in the foreground or middle ground. The six donuts are positioned clearly to the left of exactly seven yellow chairs arranged as a separate visible group on the right. All five suitcases have spotted patterns, all seven chairs are yellow, and the donuts are distinct from both groups. Keep every suitcase, donut, and chair fully visible, separated, unobstructed, and easy to count, with no extra suitcases, no extra donuts, and no extra chairs.",
+        "previous_selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility",
+          "negative_constraints"
+        ],
+        "prompt_id": "geneval2_00793_0b5bcbb5",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "count_mismatch"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many donuts are in the image?",
+                  "score": 2.2603685625767795e-06,
+                  "skill": "count"
+                },
+                "detected": "soft_score=2.26037e-06",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many donuts are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many chairs are in the image?",
+                  "score": 0.3758203014881372,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.37582",
+                "expected": "seven",
+                "status": "failed",
+                "target": "How many chairs are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many suitcases are in the image?",
+                  "score": 0.9526065065012354,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.952607",
+                "expected": "five",
+                "status": "passed",
+                "target": "How many suitcases are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the suitcases spotted?",
+                  "score": 0.99999999670748,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the suitcases spotted?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any suitcases in the image?",
+                  "score": 0.9999999980373104,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any suitcases in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the suitcases behind the donuts?",
+                  "score": 0.9999239182543533,
+                  "skill": "position"
+                },
+                "detected": "soft_score=0.999924",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the suitcases behind the donuts?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any donuts in the image?",
+                  "score": 0.9999999690280674,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any donuts in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the donuts to the left of the chairs?",
+                  "score": 1.0,
+                  "skill": "position"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the donuts to the left of the chairs?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the chairs yellow?",
+                  "score": 1.0,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the chairs yellow?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any chairs in the image?",
+                  "score": 0.9999999915685294,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any chairs in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly five suitcases, exactly six donuts, and exactly seven chairs.",
+                "Bind the spotted pattern only to the five suitcases.",
+                "Bind the yellow color only to the seven chairs.",
+                "Place the five spotted suitcases behind the six donuts, with enough vertical/depth separation that the suitcases are visibly farther back.",
+                "Place the six donuts to the left of the seven yellow chairs, with clear horizontal separation.",
+                "Keep all objects fully visible and avoid occlusion that prevents counting."
+              ],
+              "generation_strategy": "Use a clear three-group composition: five spotted suitcases in the back row, six donuts in a front/middle row, and seven yellow chairs in a separate group to the right. Arrange each group in an orderly line or grid so every item is individually visible and countable. Emphasize the depth relation by placing the suitcases higher/farther back behind the donuts, and emphasize the left-right relation by placing donuts clearly left of the chairs.",
+              "initial_prompt": "A clear scene with exactly five spotted suitcases arranged as a visible group in the background, behind exactly six donuts arranged in the foreground or middle ground. The six donuts are positioned clearly to the left of exactly seven yellow chairs arranged as a separate visible group on the right. All five suitcases have spotted patterns, all seven chairs are yellow, and the donuts are distinct from both groups. Keep every suitcase, donut, and chair fully visible, separated, unobstructed, and easy to count, with no extra suitcases, no extra donuts, and no extra chairs.",
+              "parsed_constraints": {
+                "attributes": {
+                  "chairs": [
+                    "yellow"
+                  ],
+                  "suitcases": [
+                    "spotted"
+                  ]
+                },
+                "counts": {
+                  "chairs": 7,
+                  "donuts": 6,
+                  "suitcases": 5
+                },
+                "objects": [
+                  "suitcases",
+                  "donuts",
+                  "chairs"
+                ],
+                "relations": [
+                  "five spotted suitcases are behind six donuts",
+                  "six donuts are to the left of seven yellow chairs"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "anti_occlusion",
+                "clarity_visibility",
+                "negative_constraints"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly five suitcases, exactly six donuts, and exactly seven chairs.",
+                "Bind the spotted pattern only to the five suitcases.",
+                "Bind the yellow color only to the seven chairs.",
+                "Place the five spotted suitcases behind the six donuts, with enough vertical/depth separation that the suitcases are visibly farther back.",
+                "Place the six donuts to the left of the seven yellow chairs, with clear horizontal separation.",
+                "Keep all objects fully visible and avoid occlusion that prevents counting."
+              ],
+              "generation_strategy": "Use a clear three-group composition: five spotted suitcases in the back row, six donuts in a front/middle row, and seven yellow chairs in a separate group to the right. Arrange each group in an orderly line or grid so every item is individually visible and countable. Emphasize the depth relation by placing the suitcases higher/farther back behind the donuts, and emphasize the left-right relation by placing donuts clearly left of the chairs.",
+              "initial_prompt": "A clear scene with exactly five spotted suitcases arranged as a visible group in the background, behind exactly six donuts arranged in the foreground or middle ground. The six donuts are positioned clearly to the left of exactly seven yellow chairs arranged as a separate visible group on the right. All five suitcases have spotted patterns, all seven chairs are yellow, and the donuts are distinct from both groups. Keep every suitcase, donut, and chair fully visible, separated, unobstructed, and easy to count, with no extra suitcases, no extra donuts, and no extra chairs.",
+              "parsed_constraints": {
+                "attributes": {
+                  "chairs": [
+                    "yellow"
+                  ],
+                  "suitcases": [
+                    "spotted"
+                  ]
+                },
+                "counts": {
+                  "chairs": 7,
+                  "donuts": 6,
+                  "suitcases": 5
+                },
+                "objects": [
+                  "suitcases",
+                  "donuts",
+                  "chairs"
+                ],
+                "relations": [
+                  "five spotted suitcases are behind six donuts",
+                  "six donuts are to the left of seven yellow chairs"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "anti_occlusion",
+                "clarity_visibility",
+                "negative_constraints"
+              ]
+            },
+            "prompt_used": "A clear scene with exactly five spotted suitcases arranged as a visible group in the background, behind exactly six donuts arranged in the foreground or middle ground. The six donuts are positioned clearly to the left of exactly seven yellow chairs arranged as a separate visible group on the right. All five suitcases have spotted patterns, all seven chairs are yellow, and the donuts are distinct from both groups. Keep every suitcase, donut, and chair fully visible, separated, unobstructed, and easy to count, with no extra suitcases, no extra donuts, and no extra chairs.",
+            "round": 0,
+            "score": 0.8328352941953676,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 4,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many donuts are in the image?",
+                    "score": 2.2603685625767795e-06,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=2.26037e-06",
+                  "expected": "six",
+                  "status": "failed",
+                  "target": "How many donuts are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 7,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many chairs are in the image?",
+                    "score": 0.3758203014881372,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=0.37582",
+                  "expected": "seven",
+                  "status": "failed",
+                  "target": "How many chairs are in the image?",
+                  "type": "count_mismatch"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00793_0b5bcbb5"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many donuts are in the image?",
+              "score": 2.2603685625767795e-06,
+              "skill": "count"
+            },
+            "detected": "soft_score=2.26037e-06",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many donuts are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many chairs are in the image?",
+              "score": 0.3758203014881372,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.37582",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many chairs are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00793_0b5bcbb5_cand_01",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly five suitcases, exactly six donuts, and exactly seven chairs.",
+      "Bind the spotted pattern only to the five suitcases.",
+      "Bind the yellow color only to the seven chairs.",
+      "Place the five spotted suitcases behind the six donuts, with enough vertical/depth separation that the suitcases are visibly farther back.",
+      "Place the six donuts to the left of the seven yellow chairs, with clear horizontal separation.",
+      "Keep all objects fully visible and avoid occlusion that prevents counting."
+    ],
+    "generation_strategy": "Use a clear three-group composition: five spotted suitcases in the back row, six donuts in a front/middle row, and seven yellow chairs in a separate group to the right. Arrange each group in an orderly line or grid so every item is individually visible and countable. Emphasize the depth relation by placing the suitcases higher/farther back behind the donuts, and emphasize the left-right relation by placing donuts clearly left of the chairs.",
+    "initial_prompt": "A clear scene with exactly five spotted suitcases arranged as a visible group in the background, behind exactly six donuts arranged in the foreground or middle ground. The six donuts are positioned clearly to the left of exactly seven yellow chairs arranged as a separate visible group on the right. All five suitcases have spotted patterns, all seven chairs are yellow, and the donuts are distinct from both groups. Keep every suitcase, donut, and chair fully visible, separated, unobstructed, and easy to count, with no extra suitcases, no extra donuts, and no extra chairs.",
+    "parsed_constraints": {
+      "attributes": {
+        "chairs": [
+          "yellow"
+        ],
+        "suitcases": [
+          "spotted"
+        ]
+      },
+      "counts": {
+        "chairs": 7,
+        "donuts": 6,
+        "suitcases": 5
+      },
+      "objects": [
+        "suitcases",
+        "donuts",
+        "chairs"
+      ],
+      "relations": [
+        "five spotted suitcases are behind six donuts",
+        "six donuts are to the left of seven yellow chairs"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image satisfies the five spotted suitcases, suitcase presence, spotted attribute, suitcases behind donuts, donut presence, donuts left of chairs, yellow chair color, and chair presence constraints, but fails the exact counts for donuts and chairs. The retry must make exactly six donuts and exactly seven yellow chairs individually separable and easy to count while preserving the already correct suitcase count, spotted suitcase attribute, yellow chair attribute, and spatial relations.",
+    "expected_improvement": [
+      "Exact donut count should improve by arranging six donuts as six separate visible circles in a simple 2-by-3 grid on the left/middle foreground.",
+      "Exact chair count should improve by arranging seven yellow chairs as seven separate visible chairs in a clear 4-plus-3 staggered group on the right.",
+      "Preserved spatial relations should remain clear by keeping the five spotted suitcases behind the donuts and the six donuts entirely to the left of the seven yellow chairs."
+    ],
+    "failure_types": [
+      "count_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly five suitcases visible.",
+      "Make all five suitcases spotted, with the spotted pattern bound only to the suitcases.",
+      "Keep the five spotted suitcases behind the donuts in the background/back row.",
+      "Keep donuts present and fully visible.",
+      "Keep the donuts to the left of the chairs with clear horizontal separation.",
+      "Keep chairs present and fully visible.",
+      "Make all seven chairs yellow, with the yellow color bound only to the chairs."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt asked for exact counts but used broad grouped wording, which may have encouraged merged or ambiguous donuts and chairs. It did not impose a concrete countable layout for the six donuts or the seven chairs beyond saying they were arranged as groups.",
+      "error_source": "Insufficient quantity_counting specificity for the failed donut and chair groups."
+    },
+    "regeneration_strategy": "Use a simple front-facing composition with three clearly separated zones: five spotted suitcases in a back row, six donuts in a precise 2-by-3 grid in front of the suitcases and left of the chairs, and seven yellow chairs on the right in a precise 4-front, 3-back staggered arrangement. Emphasize spacing, full visibility, and no duplicates or extra objects.",
+    "regression_risks": [
+      "The suitcase count could regress if the prompt overemphasizes fixing donuts and chairs, so exactly five spotted suitcases must be restated.",
+      "The suitcases-behind-donuts relation could regress if the composition becomes flat, so the back-row/background placement must be explicit.",
+      "The donuts-left-of-chairs relation could regress if the objects are mixed together, so the left and right zones must be explicit.",
+      "The yellow attribute could leak or be lost, so yellow must be bound specifically to the seven chairs."
+    ],
+    "repair_constraints": [
+      "Show exactly six donuts, no fewer and no more, each donut separate, fully visible, non-overlapping, and countable.",
+      "Arrange the six donuts in two neat rows of three in the left foreground or middle ground.",
+      "Show exactly seven yellow chairs, no fewer and no more, each chair separate, fully visible, non-overlapping, and countable.",
+      "Arrange the seven yellow chairs on the right as four chairs in the front row and three chairs in a second row, with all seven distinct and visible.",
+      "Do not add extra donuts, extra chairs, or duplicate-looking partial donuts or chairs."
+    ],
+    "retry_prompt": "A clear front-facing scene with exactly five spotted suitcases in the background/back row. The five spotted suitcases are behind the donuts and are fully visible, separated, and easy to count. In front of the suitcases and to the left side, show exactly six donuts arranged as a neat 2-by-3 grid: three donuts in the top row and three donuts in the bottom row, with every donut separate, round, unobstructed, and countable. On the right side, clearly to the right of all six donuts, show exactly seven yellow chairs arranged as four yellow chairs in the front row and three yellow chairs in a second row, with every chair separate, fully visible, unobstructed, and countable. All five suitcases have spotted patterns, all seven chairs are yellow, and the donuts are not yellow chairs or suitcases. No extra suitcases, no extra donuts, no extra chairs, no cropped objects, no overlapping or merged objects.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "spatial_layout",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints",
+        "attribute_binding",
+        "object_presence",
+        "multi_object_composition"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same skill set but shift emphasis toward quantity_counting with explicit grid and row layouts for the persistent donut and chair count failures, supported by anti_occlusion, clarity_visibility, and negative_constraints to prevent merged or extra instances."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many donuts are in the image?",
+            "score": 2.2603685625767795e-06,
+            "skill": "count"
+          },
+          "detected": "soft_score=2.26037e-06",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many donuts are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many chairs are in the image?",
+            "score": 0.3758203014881372,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.37582",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many chairs are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00087/samples/00001.png",
+      "prompt": "A clear scene with exactly five spotted suitcases arranged as a visible group in the background, behind exactly six donuts arranged in the foreground or middle ground. The six donuts are positioned clearly to the left of exactly seven yellow chairs arranged as a separate visible group on the right. All five suitcases have spotted patterns, all seven chairs are yellow, and the donuts are distinct from both groups. Keep every suitcase, donut, and chair fully visible, separated, unobstructed, and easy to count, with no extra suitcases, no extra donuts, and no extra chairs.",
+      "round": 0,
+      "score": 0.8328352941953676
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00793_0b5bcbb5_cand_01",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "count_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many donuts are in the image?",
+            "score": 2.2603685625767795e-06,
+            "skill": "count"
+          },
+          "detected": "soft_score=2.26037e-06",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many donuts are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many chairs are in the image?",
+            "score": 0.3758203014881372,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.37582",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many chairs are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many suitcases are in the image?",
+            "score": 0.9526065065012354,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.952607",
+          "expected": "five",
+          "status": "passed",
+          "target": "How many suitcases are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the suitcases spotted?",
+            "score": 0.99999999670748,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the suitcases spotted?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any suitcases in the image?",
+            "score": 0.9999999980373104,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any suitcases in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the suitcases behind the donuts?",
+            "score": 0.9999239182543533,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.999924",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the suitcases behind the donuts?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any donuts in the image?",
+            "score": 0.9999999690280674,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any donuts in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the donuts to the left of the chairs?",
+            "score": 1.0,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the donuts to the left of the chairs?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the chairs yellow?",
+            "score": 1.0,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the chairs yellow?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any chairs in the image?",
+            "score": 0.9999999915685294,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any chairs in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.8328352941953676,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many donuts are in the image?",
+              "score": 2.2603685625767795e-06,
+              "skill": "count"
+            },
+            "detected": "soft_score=2.26037e-06",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many donuts are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many chairs are in the image?",
+              "score": 0.3758203014881372,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.37582",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many chairs are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00087/samples/00001.png",
+        "prompt": "A clear scene with exactly five spotted suitcases arranged as a visible group in the background, behind exactly six donuts arranged in the foreground or middle ground. The six donuts are positioned clearly to the left of exactly seven yellow chairs arranged as a separate visible group on the right. All five suitcases have spotted patterns, all seven chairs are yellow, and the donuts are distinct from both groups. Keep every suitcase, donut, and chair fully visible, separated, unobstructed, and easy to count, with no extra suitcases, no extra donuts, and no extra chairs.",
+        "round": 0,
+        "score": 0.8328352941953676
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many donuts are in the image?",
+            "score": 2.2603685625767795e-06,
+            "skill": "count"
+          },
+          "detected": "soft_score=2.26037e-06",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many donuts are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many chairs are in the image?",
+            "score": 0.3758203014881372,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.37582",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many chairs are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "count_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many donuts are in the image?",
+            "score": 2.2603685625767795e-06,
+            "skill": "count"
+          },
+          "detected": "soft_score=2.26037e-06",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many donuts are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many chairs are in the image?",
+            "score": 0.3758203014881372,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.37582",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many chairs are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many suitcases are in the image?",
+            "score": 0.9526065065012354,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.952607",
+          "expected": "five",
+          "status": "passed",
+          "target": "How many suitcases are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the suitcases spotted?",
+            "score": 0.99999999670748,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the suitcases spotted?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any suitcases in the image?",
+            "score": 0.9999999980373104,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any suitcases in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the suitcases behind the donuts?",
+            "score": 0.9999239182543533,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.999924",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the suitcases behind the donuts?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any donuts in the image?",
+            "score": 0.9999999690280674,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any donuts in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the donuts to the left of the chairs?",
+            "score": 1.0,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the donuts to the left of the chairs?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the chairs yellow?",
+            "score": 1.0,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the chairs yellow?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any chairs in the image?",
+            "score": 0.9999999915685294,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any chairs in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.8328352941953676,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "five spotted suitcases behind six donuts to the left of seven yellow chairs",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many donuts are in the image?",
+          "score": 2.2603685625767795e-06,
+          "skill": "count"
+        },
+        "detected": "soft_score=2.26037e-06",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many donuts are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many chairs are in the image?",
+          "score": 0.3758203014881372,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.37582",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many chairs are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly five suitcases, exactly six donuts, and exactly seven chairs.",
+        "Bind the spotted pattern only to the five suitcases.",
+        "Bind the yellow color only to the seven chairs.",
+        "Place the five spotted suitcases behind the six donuts, with enough vertical/depth separation that the suitcases are visibly farther back.",
+        "Place the six donuts to the left of the seven yellow chairs, with clear horizontal separation.",
+        "Keep all objects fully visible and avoid occlusion that prevents counting."
+      ],
+      "generation_strategy": "Use a clear three-group composition: five spotted suitcases in the back row, six donuts in a front/middle row, and seven yellow chairs in a separate group to the right. Arrange each group in an orderly line or grid so every item is individually visible and countable. Emphasize the depth relation by placing the suitcases higher/farther back behind the donuts, and emphasize the left-right relation by placing donuts clearly left of the chairs.",
+      "initial_prompt": "A clear scene with exactly five spotted suitcases arranged as a visible group in the background, behind exactly six donuts arranged in the foreground or middle ground. The six donuts are positioned clearly to the left of exactly seven yellow chairs arranged as a separate visible group on the right. All five suitcases have spotted patterns, all seven chairs are yellow, and the donuts are distinct from both groups. Keep every suitcase, donut, and chair fully visible, separated, unobstructed, and easy to count, with no extra suitcases, no extra donuts, and no extra chairs.",
+      "parsed_constraints": {
+        "attributes": {
+          "chairs": [
+            "yellow"
+          ],
+          "suitcases": [
+            "spotted"
+          ]
+        },
+        "counts": {
+          "chairs": 7,
+          "donuts": 6,
+          "suitcases": 5
+        },
+        "objects": [
+          "suitcases",
+          "donuts",
+          "chairs"
+        ],
+        "relations": [
+          "five spotted suitcases are behind six donuts",
+          "six donuts are to the left of seven yellow chairs"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly five suitcases, exactly six donuts, and exactly seven chairs.",
+        "Bind the spotted pattern only to the five suitcases.",
+        "Bind the yellow color only to the seven chairs.",
+        "Place the five spotted suitcases behind the six donuts, with enough vertical/depth separation that the suitcases are visibly farther back.",
+        "Place the six donuts to the left of the seven yellow chairs, with clear horizontal separation.",
+        "Keep all objects fully visible and avoid occlusion that prevents counting."
+      ],
+      "generation_strategy": "Use a clear three-group composition: five spotted suitcases in the back row, six donuts in a front/middle row, and seven yellow chairs in a separate group to the right. Arrange each group in an orderly line or grid so every item is individually visible and countable. Emphasize the depth relation by placing the suitcases higher/farther back behind the donuts, and emphasize the left-right relation by placing donuts clearly left of the chairs.",
+      "initial_prompt": "A clear scene with exactly five spotted suitcases arranged as a visible group in the background, behind exactly six donuts arranged in the foreground or middle ground. The six donuts are positioned clearly to the left of exactly seven yellow chairs arranged as a separate visible group on the right. All five suitcases have spotted patterns, all seven chairs are yellow, and the donuts are distinct from both groups. Keep every suitcase, donut, and chair fully visible, separated, unobstructed, and easy to count, with no extra suitcases, no extra donuts, and no extra chairs.",
+      "parsed_constraints": {
+        "attributes": {
+          "chairs": [
+            "yellow"
+          ],
+          "suitcases": [
+            "spotted"
+          ]
+        },
+        "counts": {
+          "chairs": 7,
+          "donuts": 6,
+          "suitcases": 5
+        },
+        "objects": [
+          "suitcases",
+          "donuts",
+          "chairs"
+        ],
+        "relations": [
+          "five spotted suitcases are behind six donuts",
+          "six donuts are to the left of seven yellow chairs"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ]
+    },
+    "previous_prompt": "A clear scene with exactly five spotted suitcases arranged as a visible group in the background, behind exactly six donuts arranged in the foreground or middle ground. The six donuts are positioned clearly to the left of exactly seven yellow chairs arranged as a separate visible group on the right. All five suitcases have spotted patterns, all seven chairs are yellow, and the donuts are distinct from both groups. Keep every suitcase, donut, and chair fully visible, separated, unobstructed, and easy to count, with no extra suitcases, no extra donuts, and no extra chairs.",
+    "previous_selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ],
+    "prompt_id": "geneval2_00793_0b5bcbb5",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "count_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many donuts are in the image?",
+              "score": 2.2603685625767795e-06,
+              "skill": "count"
+            },
+            "detected": "soft_score=2.26037e-06",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many donuts are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many chairs are in the image?",
+              "score": 0.3758203014881372,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.37582",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many chairs are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many suitcases are in the image?",
+              "score": 0.9526065065012354,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.952607",
+            "expected": "five",
+            "status": "passed",
+            "target": "How many suitcases are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the suitcases spotted?",
+              "score": 0.99999999670748,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the suitcases spotted?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any suitcases in the image?",
+              "score": 0.9999999980373104,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any suitcases in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the suitcases behind the donuts?",
+              "score": 0.9999239182543533,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.999924",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the suitcases behind the donuts?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any donuts in the image?",
+              "score": 0.9999999690280674,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any donuts in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the donuts to the left of the chairs?",
+              "score": 1.0,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the donuts to the left of the chairs?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the chairs yellow?",
+              "score": 1.0,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the chairs yellow?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any chairs in the image?",
+              "score": 0.9999999915685294,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any chairs in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly five suitcases, exactly six donuts, and exactly seven chairs.",
+            "Bind the spotted pattern only to the five suitcases.",
+            "Bind the yellow color only to the seven chairs.",
+            "Place the five spotted suitcases behind the six donuts, with enough vertical/depth separation that the suitcases are visibly farther back.",
+            "Place the six donuts to the left of the seven yellow chairs, with clear horizontal separation.",
+            "Keep all objects fully visible and avoid occlusion that prevents counting."
+          ],
+          "generation_strategy": "Use a clear three-group composition: five spotted suitcases in the back row, six donuts in a front/middle row, and seven yellow chairs in a separate group to the right. Arrange each group in an orderly line or grid so every item is individually visible and countable. Emphasize the depth relation by placing the suitcases higher/farther back behind the donuts, and emphasize the left-right relation by placing donuts clearly left of the chairs.",
+          "initial_prompt": "A clear scene with exactly five spotted suitcases arranged as a visible group in the background, behind exactly six donuts arranged in the foreground or middle ground. The six donuts are positioned clearly to the left of exactly seven yellow chairs arranged as a separate visible group on the right. All five suitcases have spotted patterns, all seven chairs are yellow, and the donuts are distinct from both groups. Keep every suitcase, donut, and chair fully visible, separated, unobstructed, and easy to count, with no extra suitcases, no extra donuts, and no extra chairs.",
+          "parsed_constraints": {
+            "attributes": {
+              "chairs": [
+                "yellow"
+              ],
+              "suitcases": [
+                "spotted"
+              ]
+            },
+            "counts": {
+              "chairs": 7,
+              "donuts": 6,
+              "suitcases": 5
+            },
+            "objects": [
+              "suitcases",
+              "donuts",
+              "chairs"
+            ],
+            "relations": [
+              "five spotted suitcases are behind six donuts",
+              "six donuts are to the left of seven yellow chairs"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly five suitcases, exactly six donuts, and exactly seven chairs.",
+            "Bind the spotted pattern only to the five suitcases.",
+            "Bind the yellow color only to the seven chairs.",
+            "Place the five spotted suitcases behind the six donuts, with enough vertical/depth separation that the suitcases are visibly farther back.",
+            "Place the six donuts to the left of the seven yellow chairs, with clear horizontal separation.",
+            "Keep all objects fully visible and avoid occlusion that prevents counting."
+          ],
+          "generation_strategy": "Use a clear three-group composition: five spotted suitcases in the back row, six donuts in a front/middle row, and seven yellow chairs in a separate group to the right. Arrange each group in an orderly line or grid so every item is individually visible and countable. Emphasize the depth relation by placing the suitcases higher/farther back behind the donuts, and emphasize the left-right relation by placing donuts clearly left of the chairs.",
+          "initial_prompt": "A clear scene with exactly five spotted suitcases arranged as a visible group in the background, behind exactly six donuts arranged in the foreground or middle ground. The six donuts are positioned clearly to the left of exactly seven yellow chairs arranged as a separate visible group on the right. All five suitcases have spotted patterns, all seven chairs are yellow, and the donuts are distinct from both groups. Keep every suitcase, donut, and chair fully visible, separated, unobstructed, and easy to count, with no extra suitcases, no extra donuts, and no extra chairs.",
+          "parsed_constraints": {
+            "attributes": {
+              "chairs": [
+                "yellow"
+              ],
+              "suitcases": [
+                "spotted"
+              ]
+            },
+            "counts": {
+              "chairs": 7,
+              "donuts": 6,
+              "suitcases": 5
+            },
+            "objects": [
+              "suitcases",
+              "donuts",
+              "chairs"
+            ],
+            "relations": [
+              "five spotted suitcases are behind six donuts",
+              "six donuts are to the left of seven yellow chairs"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "prompt_used": "A clear scene with exactly five spotted suitcases arranged as a visible group in the background, behind exactly six donuts arranged in the foreground or middle ground. The six donuts are positioned clearly to the left of exactly seven yellow chairs arranged as a separate visible group on the right. All five suitcases have spotted patterns, all seven chairs are yellow, and the donuts are distinct from both groups. Keep every suitcase, donut, and chair fully visible, separated, unobstructed, and easy to count, with no extra suitcases, no extra donuts, and no extra chairs.",
+        "round": 0,
+        "score": 0.8328352941953676,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many donuts are in the image?",
+                "score": 2.2603685625767795e-06,
+                "skill": "count"
+              },
+              "detected": "soft_score=2.26037e-06",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many donuts are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many chairs are in the image?",
+                "score": 0.3758203014881372,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.37582",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many chairs are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00793_0b5bcbb5"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many donuts are in the image?",
+          "score": 2.2603685625767795e-06,
+          "skill": "count"
+        },
+        "detected": "soft_score=2.26037e-06",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many donuts are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many chairs are in the image?",
+          "score": 0.3758203014881372,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.37582",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many chairs are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00087/samples/00001.png",
+    "best_so_far_prompt": "A clear scene with exactly five spotted suitcases arranged as a visible group in the background, behind exactly six donuts arranged in the foreground or middle ground. The six donuts are positioned clearly to the left of exactly seven yellow chairs arranged as a separate visible group on the right. All five suitcases have spotted patterns, all seven chairs are yellow, and the donuts are distinct from both groups. Keep every suitcase, donut, and chair fully visible, separated, unobstructed, and easy to count, with no extra suitcases, no extra donuts, and no extra chairs.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.8328352941953676,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many donuts are in the image?",
+          "score": 2.2603685625767795e-06,
+          "skill": "count"
+        },
+        "detected": "soft_score=2.26037e-06",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many donuts are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many chairs are in the image?",
+          "score": 0.3758203014881372,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.37582",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many chairs are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly five suitcases, exactly six donuts, and exactly seven chairs.",
+        "Bind the spotted pattern only to the five suitcases.",
+        "Bind the yellow color only to the seven chairs.",
+        "Place the five spotted suitcases behind the six donuts, with enough vertical/depth separation that the suitcases are visibly farther back.",
+        "Place the six donuts to the left of the seven yellow chairs, with clear horizontal separation.",
+        "Keep all objects fully visible and avoid occlusion that prevents counting."
+      ],
+      "generation_strategy": "Use a clear three-group composition: five spotted suitcases in the back row, six donuts in a front/middle row, and seven yellow chairs in a separate group to the right. Arrange each group in an orderly line or grid so every item is individually visible and countable. Emphasize the depth relation by placing the suitcases higher/farther back behind the donuts, and emphasize the left-right relation by placing donuts clearly left of the chairs.",
+      "initial_prompt": "A clear scene with exactly five spotted suitcases arranged as a visible group in the background, behind exactly six donuts arranged in the foreground or middle ground. The six donuts are positioned clearly to the left of exactly seven yellow chairs arranged as a separate visible group on the right. All five suitcases have spotted patterns, all seven chairs are yellow, and the donuts are distinct from both groups. Keep every suitcase, donut, and chair fully visible, separated, unobstructed, and easy to count, with no extra suitcases, no extra donuts, and no extra chairs.",
+      "parsed_constraints": {
+        "attributes": {
+          "chairs": [
+            "yellow"
+          ],
+          "suitcases": [
+            "spotted"
+          ]
+        },
+        "counts": {
+          "chairs": 7,
+          "donuts": 6,
+          "suitcases": 5
+        },
+        "objects": [
+          "suitcases",
+          "donuts",
+          "chairs"
+        ],
+        "relations": [
+          "five spotted suitcases are behind six donuts",
+          "six donuts are to the left of seven yellow chairs"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.833 failed=['How many donuts are in the image?', 'How many chairs are in the image?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_incremental/snapshot_003_worker_00/geneval2_00793_0b5bcbb5__geneval2_00793_0b5bcbb5_cand_01__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00793_0b5bcbb5__geneval2_00793_0b5bcbb5_cand_01__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00793_0b5bcbb5",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image satisfies the five spotted suitcases, suitcase presence, spotted attribute, suitcases behind donuts, donut presence, donuts left of chairs, yellow chair color, and chair presence constraints, but fails the exact counts for donuts and chairs. The retry must make exactly six donuts and exactly seven yellow chairs individually separable and easy to count while preserving the already correct suitcase count, spotted suitcase attribute, yellow chair attribute, and spatial relations.",
+    "expected_improvement": [
+      "Exact donut count should improve by arranging six donuts as six separate visible circles in a simple 2-by-3 grid on the left/middle foreground.",
+      "Exact chair count should improve by arranging seven yellow chairs as seven separate visible chairs in a clear 4-plus-3 staggered group on the right.",
+      "Preserved spatial relations should remain clear by keeping the five spotted suitcases behind the donuts and the six donuts entirely to the left of the seven yellow chairs."
+    ],
+    "failure_types": [
+      "count_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly five suitcases visible.",
+      "Make all five suitcases spotted, with the spotted pattern bound only to the suitcases.",
+      "Keep the five spotted suitcases behind the donuts in the background/back row.",
+      "Keep donuts present and fully visible.",
+      "Keep the donuts to the left of the chairs with clear horizontal separation.",
+      "Keep chairs present and fully visible.",
+      "Make all seven chairs yellow, with the yellow color bound only to the chairs."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt asked for exact counts but used broad grouped wording, which may have encouraged merged or ambiguous donuts and chairs. It did not impose a concrete countable layout for the six donuts or the seven chairs beyond saying they were arranged as groups.",
+      "error_source": "Insufficient quantity_counting specificity for the failed donut and chair groups."
+    },
+    "regeneration_strategy": "Use a simple front-facing composition with three clearly separated zones: five spotted suitcases in a back row, six donuts in a precise 2-by-3 grid in front of the suitcases and left of the chairs, and seven yellow chairs on the right in a precise 4-front, 3-back staggered arrangement. Emphasize spacing, full visibility, and no duplicates or extra objects.",
+    "regression_risks": [
+      "The suitcase count could regress if the prompt overemphasizes fixing donuts and chairs, so exactly five spotted suitcases must be restated.",
+      "The suitcases-behind-donuts relation could regress if the composition becomes flat, so the back-row/background placement must be explicit.",
+      "The donuts-left-of-chairs relation could regress if the objects are mixed together, so the left and right zones must be explicit.",
+      "The yellow attribute could leak or be lost, so yellow must be bound specifically to the seven chairs."
+    ],
+    "repair_constraints": [
+      "Show exactly six donuts, no fewer and no more, each donut separate, fully visible, non-overlapping, and countable.",
+      "Arrange the six donuts in two neat rows of three in the left foreground or middle ground.",
+      "Show exactly seven yellow chairs, no fewer and no more, each chair separate, fully visible, non-overlapping, and countable.",
+      "Arrange the seven yellow chairs on the right as four chairs in the front row and three chairs in a second row, with all seven distinct and visible.",
+      "Do not add extra donuts, extra chairs, or duplicate-looking partial donuts or chairs."
+    ],
+    "retry_prompt": "A clear front-facing scene with exactly five spotted suitcases in the background/back row. The five spotted suitcases are behind the donuts and are fully visible, separated, and easy to count. In front of the suitcases and to the left side, show exactly six donuts arranged as a neat 2-by-3 grid: three donuts in the top row and three donuts in the bottom row, with every donut separate, round, unobstructed, and countable. On the right side, clearly to the right of all six donuts, show exactly seven yellow chairs arranged as four yellow chairs in the front row and three yellow chairs in a second row, with every chair separate, fully visible, unobstructed, and countable. All five suitcases have spotted patterns, all seven chairs are yellow, and the donuts are not yellow chairs or suitcases. No extra suitcases, no extra donuts, no extra chairs, no cropped objects, no overlapping or merged objects.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "spatial_layout",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints",
+        "attribute_binding",
+        "object_presence",
+        "multi_object_composition"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same skill set but shift emphasis toward quantity_counting with explicit grid and row layouts for the persistent donut and chair count failures, supported by anti_occlusion, clarity_visibility, and negative_constraints to prevent merged or extra instances."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "five spotted suitcases behind six donuts to the left of seven yellow chairs",
+    "prompt": "five spotted suitcases behind six donuts to the left of seven yellow chairs",
+    "prompt_id": "geneval2_00793_0b5bcbb5",
+    "sampling_bucket": "multi_constraint",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 2,
+      "count": 3,
+      "object": 3,
+      "position": 2
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 793,
+    "vqa_list": [
+      [
+        "How many suitcases are in the image?",
+        "five"
+      ],
+      [
+        "Are the suitcases spotted?",
+        "Yes"
+      ],
+      [
+        "Are there any suitcases in the image?",
+        "Yes"
+      ],
+      [
+        "Are the suitcases behind the donuts?",
+        "Yes"
+      ],
+      [
+        "How many donuts are in the image?",
+        "six"
+      ],
+      [
+        "Are there any donuts in the image?",
+        "Yes"
+      ],
+      [
+        "Are the donuts to the left of the chairs?",
+        "Yes"
+      ],
+      [
+        "How many chairs are in the image?",
+        "seven"
+      ],
+      [
+        "Are the chairs yellow?",
+        "Yes"
+      ],
+      [
+        "Are there any chairs in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00793_0b5bcbb5"
+}

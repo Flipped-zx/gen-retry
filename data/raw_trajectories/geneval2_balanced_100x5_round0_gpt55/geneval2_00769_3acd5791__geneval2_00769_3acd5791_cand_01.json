@@ -1,0 +1,2461 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "count_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many bicycles are in the image?",
+              "score": 0.8307754711301432,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.830775",
+            "expected": "three",
+            "status": "failed",
+            "target": "How many bicycles are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many horses are in the image?",
+              "score": 1.0,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "one",
+            "status": "passed",
+            "target": "How many horses are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the horse black?",
+              "score": 0.9999998187413439,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Is the horse black?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any horses in the image?",
+              "score": 0.9999999549754648,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any horses in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the horse behind the cookies?",
+              "score": 0.9998412520387205,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.999841",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Is the horse behind the cookies?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cookies are in the image?",
+              "score": 0.9999998352025834,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "four",
+            "status": "passed",
+            "target": "How many cookies are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cookies white?",
+              "score": 0.9048850536637474,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.904885",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the cookies white?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any cookies in the image?",
+              "score": 0.9993495464304942,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.99935",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any cookies in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cookies behind the bicycles?",
+              "score": 0.9999430547179031,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.999943",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the cookies behind the bicycles?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the bicycles red?",
+              "score": 1.0,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the bicycles red?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 10,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any bicycles in the image?",
+              "score": 0.9999999190840754,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any bicycles in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_002/raw_score_lists.by_candidate.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00769_3acd5791_cand_01",
+          "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_002/raw_score_lists.by_candidate.json",
+          "rows": [
+            {
+              "answer": "one",
+              "atom_count": 10,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00769_3acd5791_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00046/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00046/samples/00001.png",
+              "prompt": "a black horse behind four white cookies behind three red bicycles",
+              "prompt_id": "geneval2_00769_3acd5791",
+              "question": "How many horses are in the image?",
+              "score": 1.0000000063105974,
+              "skill": "count",
+              "source_index": 769
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00769_3acd5791_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00046/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00046/samples/00001.png",
+              "prompt": "a black horse behind four white cookies behind three red bicycles",
+              "prompt_id": "geneval2_00769_3acd5791",
+              "question": "Is the horse black?",
+              "score": 0.9999998187413439,
+              "skill": "attribute",
+              "source_index": 769
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00769_3acd5791_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00046/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00046/samples/00001.png",
+              "prompt": "a black horse behind four white cookies behind three red bicycles",
+              "prompt_id": "geneval2_00769_3acd5791",
+              "question": "Are there any horses in the image?",
+              "score": 0.9999999549754648,
+              "skill": "object",
+              "source_index": 769
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00769_3acd5791_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00046/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00046/samples/00001.png",
+              "prompt": "a black horse behind four white cookies behind three red bicycles",
+              "prompt_id": "geneval2_00769_3acd5791",
+              "question": "Is the horse behind the cookies?",
+              "score": 0.9998412520387205,
+              "skill": "position",
+              "source_index": 769
+            },
+            {
+              "answer": "four",
+              "atom_count": 10,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00769_3acd5791_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00046/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00046/samples/00001.png",
+              "prompt": "a black horse behind four white cookies behind three red bicycles",
+              "prompt_id": "geneval2_00769_3acd5791",
+              "question": "How many cookies are in the image?",
+              "score": 0.9999998352025834,
+              "skill": "count",
+              "source_index": 769
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00769_3acd5791_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00046/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00046/samples/00001.png",
+              "prompt": "a black horse behind four white cookies behind three red bicycles",
+              "prompt_id": "geneval2_00769_3acd5791",
+              "question": "Are the cookies white?",
+              "score": 0.9048850536637474,
+              "skill": "attribute",
+              "source_index": 769
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00769_3acd5791_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00046/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00046/samples/00001.png",
+              "prompt": "a black horse behind four white cookies behind three red bicycles",
+              "prompt_id": "geneval2_00769_3acd5791",
+              "question": "Are there any cookies in the image?",
+              "score": 0.9993495464304942,
+              "skill": "object",
+              "source_index": 769
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00769_3acd5791_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00046/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00046/samples/00001.png",
+              "prompt": "a black horse behind four white cookies behind three red bicycles",
+              "prompt_id": "geneval2_00769_3acd5791",
+              "question": "Are the cookies behind the bicycles?",
+              "score": 0.9999430547179031,
+              "skill": "position",
+              "source_index": 769
+            },
+            {
+              "answer": "three",
+              "atom_count": 10,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00769_3acd5791_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00046/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00046/samples/00001.png",
+              "prompt": "a black horse behind four white cookies behind three red bicycles",
+              "prompt_id": "geneval2_00769_3acd5791",
+              "question": "How many bicycles are in the image?",
+              "score": 0.8307754711301432,
+              "skill": "count",
+              "source_index": 769
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00769_3acd5791_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00046/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00046/samples/00001.png",
+              "prompt": "a black horse behind four white cookies behind three red bicycles",
+              "prompt_id": "geneval2_00769_3acd5791",
+              "question": "Are the bicycles red?",
+              "score": 1.0000000047402864,
+              "skill": "attribute",
+              "source_index": 769
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 10,
+              "candidate_id": "geneval2_00769_3acd5791_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00046/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00046/samples/00001.png",
+              "prompt": "a black horse behind four white cookies behind three red bicycles",
+              "prompt_id": "geneval2_00769_3acd5791",
+              "question": "Are there any bicycles in the image?",
+              "score": 0.9999999190840754,
+              "skill": "object",
+              "source_index": 769
+            }
+          ],
+          "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_002/raw_score_lists.by_candidate.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.9758903550894978,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 1,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00769_3acd5791.json",
+          "manifest_prompt_index": 46,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00769_3acd5791"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00769_3acd5791_cand_01",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00046/samples/00001.png",
+        "prompt_used": "Create a clear image with exactly one black horse in the back layer, behind exactly four white cookies in the middle layer, and the four white cookies behind exactly three red bicycles in the front layer. Show the three red bicycles closest to the viewer, separated and fully visible. Show the four white cookies behind the bicycles, separated from each other and visible enough to count. Show the single black horse behind the cookies, visible and clearly black. Maintain the depth order: black horse behind white cookies, white cookies behind red bicycles. Avoid occlusion that hides any object, and do not include any extra horses, cookies, or bicycles.",
+        "seed": 1231
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Depict exactly one horse, exactly four cookies, and exactly three bicycles.",
+          "Bind colors correctly: the single horse is black, all four cookies are white, and all three bicycles are red.",
+          "Arrange depth clearly: the black horse is in the back, the four white cookies are in the middle in front of the horse, and the three red bicycles are in the front in front of the cookies.",
+          "Keep each object separately visible and countable; avoid overlaps that hide objects or make the counts ambiguous.",
+          "Do not add extra horses, cookies, bicycles, or differently colored versions of these objects."
+        ],
+        "generation_strategy": "Use a simple staged depth composition with three horizontal rows/layers: back layer has one black horse, middle layer has four distinct white cookies, front layer has three distinct red bicycles. Separate objects enough so every item is visible and countable, while still making the behind relationships clear.",
+        "initial_prompt": "Create a clear image with exactly one black horse in the back layer, behind exactly four white cookies in the middle layer, and the four white cookies behind exactly three red bicycles in the front layer. Show the three red bicycles closest to the viewer, separated and fully visible. Show the four white cookies behind the bicycles, separated from each other and visible enough to count. Show the single black horse behind the cookies, visible and clearly black. Maintain the depth order: black horse behind white cookies, white cookies behind red bicycles. Avoid occlusion that hides any object, and do not include any extra horses, cookies, or bicycles.",
+        "parsed_constraints": {
+          "attributes": {
+            "bicycles": "red",
+            "cookies": "white",
+            "horse": "black"
+          },
+          "counts": {
+            "bicycles": 3,
+            "cookies": 4,
+            "horse": 1
+          },
+          "objects": [
+            "horse",
+            "cookies",
+            "bicycles"
+          ],
+          "relations": [
+            "the black horse is behind the four white cookies",
+            "the four white cookies are behind the three red bicycles"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility",
+          "negative_constraints"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Depict exactly one horse, exactly four cookies, and exactly three bicycles.",
+          "Bind colors correctly: the single horse is black, all four cookies are white, and all three bicycles are red.",
+          "Arrange depth clearly: the black horse is in the back, the four white cookies are in the middle in front of the horse, and the three red bicycles are in the front in front of the cookies.",
+          "Keep each object separately visible and countable; avoid overlaps that hide objects or make the counts ambiguous.",
+          "Do not add extra horses, cookies, bicycles, or differently colored versions of these objects."
+        ],
+        "generation_strategy": "Use a simple staged depth composition with three horizontal rows/layers: back layer has one black horse, middle layer has four distinct white cookies, front layer has three distinct red bicycles. Separate objects enough so every item is visible and countable, while still making the behind relationships clear.",
+        "initial_prompt": "Create a clear image with exactly one black horse in the back layer, behind exactly four white cookies in the middle layer, and the four white cookies behind exactly three red bicycles in the front layer. Show the three red bicycles closest to the viewer, separated and fully visible. Show the four white cookies behind the bicycles, separated from each other and visible enough to count. Show the single black horse behind the cookies, visible and clearly black. Maintain the depth order: black horse behind white cookies, white cookies behind red bicycles. Avoid occlusion that hides any object, and do not include any extra horses, cookies, or bicycles.",
+        "parsed_constraints": {
+          "attributes": {
+            "bicycles": "red",
+            "cookies": "white",
+            "horse": "black"
+          },
+          "counts": {
+            "bicycles": 3,
+            "cookies": 4,
+            "horse": 1
+          },
+          "objects": [
+            "horse",
+            "cookies",
+            "bicycles"
+          ],
+          "relations": [
+            "the black horse is behind the four white cookies",
+            "the four white cookies are behind the three red bicycles"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility",
+          "negative_constraints"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many bicycles are in the image?",
+                "score": 0.8307754711301432,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.830775",
+              "expected": "three",
+              "status": "failed",
+              "target": "How many bicycles are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00046/samples/00001.png",
+          "prompt": "Create a clear image with exactly one black horse in the back layer, behind exactly four white cookies in the middle layer, and the four white cookies behind exactly three red bicycles in the front layer. Show the three red bicycles closest to the viewer, separated and fully visible. Show the four white cookies behind the bicycles, separated from each other and visible enough to count. Show the single black horse behind the cookies, visible and clearly black. Maintain the depth order: black horse behind white cookies, white cookies behind red bicycles. Avoid occlusion that hides any object, and do not include any extra horses, cookies, or bicycles.",
+          "round": 0,
+          "score": 0.9758903550894978
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00769_3acd5791_cand_01",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "count_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many bicycles are in the image?",
+                "score": 0.8307754711301432,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.830775",
+              "expected": "three",
+              "status": "failed",
+              "target": "How many bicycles are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many horses are in the image?",
+                "score": 1.0,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "one",
+              "status": "passed",
+              "target": "How many horses are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the horse black?",
+                "score": 0.9999998187413439,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Is the horse black?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any horses in the image?",
+                "score": 0.9999999549754648,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any horses in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the horse behind the cookies?",
+                "score": 0.9998412520387205,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.999841",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Is the horse behind the cookies?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cookies are in the image?",
+                "score": 0.9999998352025834,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "four",
+              "status": "passed",
+              "target": "How many cookies are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cookies white?",
+                "score": 0.9048850536637474,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.904885",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the cookies white?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any cookies in the image?",
+                "score": 0.9993495464304942,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.99935",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any cookies in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cookies behind the bicycles?",
+                "score": 0.9999430547179031,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.999943",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the cookies behind the bicycles?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the bicycles red?",
+                "score": 1.0,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the bicycles red?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 10,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any bicycles in the image?",
+                "score": 0.9999999190840754,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any bicycles in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.9758903550894978,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many bicycles are in the image?",
+                  "score": 0.8307754711301432,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.830775",
+                "expected": "three",
+                "status": "failed",
+                "target": "How many bicycles are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00046/samples/00001.png",
+            "prompt": "Create a clear image with exactly one black horse in the back layer, behind exactly four white cookies in the middle layer, and the four white cookies behind exactly three red bicycles in the front layer. Show the three red bicycles closest to the viewer, separated and fully visible. Show the four white cookies behind the bicycles, separated from each other and visible enough to count. Show the single black horse behind the cookies, visible and clearly black. Maintain the depth order: black horse behind white cookies, white cookies behind red bicycles. Avoid occlusion that hides any object, and do not include any extra horses, cookies, or bicycles.",
+            "round": 0,
+            "score": 0.9758903550894978
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many bicycles are in the image?",
+                "score": 0.8307754711301432,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.830775",
+              "expected": "three",
+              "status": "failed",
+              "target": "How many bicycles are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "count_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many bicycles are in the image?",
+                "score": 0.8307754711301432,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.830775",
+              "expected": "three",
+              "status": "failed",
+              "target": "How many bicycles are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many horses are in the image?",
+                "score": 1.0,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "one",
+              "status": "passed",
+              "target": "How many horses are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the horse black?",
+                "score": 0.9999998187413439,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Is the horse black?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any horses in the image?",
+                "score": 0.9999999549754648,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any horses in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the horse behind the cookies?",
+                "score": 0.9998412520387205,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.999841",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Is the horse behind the cookies?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cookies are in the image?",
+                "score": 0.9999998352025834,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "four",
+              "status": "passed",
+              "target": "How many cookies are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cookies white?",
+                "score": 0.9048850536637474,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.904885",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the cookies white?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any cookies in the image?",
+                "score": 0.9993495464304942,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.99935",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any cookies in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cookies behind the bicycles?",
+                "score": 0.9999430547179031,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.999943",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the cookies behind the bicycles?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the bicycles red?",
+                "score": 1.0,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the bicycles red?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 10,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any bicycles in the image?",
+                "score": 0.9999999190840754,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any bicycles in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.9758903550894978,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "a black horse behind four white cookies behind three red bicycles",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many bicycles are in the image?",
+              "score": 0.8307754711301432,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.830775",
+            "expected": "three",
+            "status": "failed",
+            "target": "How many bicycles are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly one horse, exactly four cookies, and exactly three bicycles.",
+            "Bind colors correctly: the single horse is black, all four cookies are white, and all three bicycles are red.",
+            "Arrange depth clearly: the black horse is in the back, the four white cookies are in the middle in front of the horse, and the three red bicycles are in the front in front of the cookies.",
+            "Keep each object separately visible and countable; avoid overlaps that hide objects or make the counts ambiguous.",
+            "Do not add extra horses, cookies, bicycles, or differently colored versions of these objects."
+          ],
+          "generation_strategy": "Use a simple staged depth composition with three horizontal rows/layers: back layer has one black horse, middle layer has four distinct white cookies, front layer has three distinct red bicycles. Separate objects enough so every item is visible and countable, while still making the behind relationships clear.",
+          "initial_prompt": "Create a clear image with exactly one black horse in the back layer, behind exactly four white cookies in the middle layer, and the four white cookies behind exactly three red bicycles in the front layer. Show the three red bicycles closest to the viewer, separated and fully visible. Show the four white cookies behind the bicycles, separated from each other and visible enough to count. Show the single black horse behind the cookies, visible and clearly black. Maintain the depth order: black horse behind white cookies, white cookies behind red bicycles. Avoid occlusion that hides any object, and do not include any extra horses, cookies, or bicycles.",
+          "parsed_constraints": {
+            "attributes": {
+              "bicycles": "red",
+              "cookies": "white",
+              "horse": "black"
+            },
+            "counts": {
+              "bicycles": 3,
+              "cookies": 4,
+              "horse": 1
+            },
+            "objects": [
+              "horse",
+              "cookies",
+              "bicycles"
+            ],
+            "relations": [
+              "the black horse is behind the four white cookies",
+              "the four white cookies are behind the three red bicycles"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly one horse, exactly four cookies, and exactly three bicycles.",
+            "Bind colors correctly: the single horse is black, all four cookies are white, and all three bicycles are red.",
+            "Arrange depth clearly: the black horse is in the back, the four white cookies are in the middle in front of the horse, and the three red bicycles are in the front in front of the cookies.",
+            "Keep each object separately visible and countable; avoid overlaps that hide objects or make the counts ambiguous.",
+            "Do not add extra horses, cookies, bicycles, or differently colored versions of these objects."
+          ],
+          "generation_strategy": "Use a simple staged depth composition with three horizontal rows/layers: back layer has one black horse, middle layer has four distinct white cookies, front layer has three distinct red bicycles. Separate objects enough so every item is visible and countable, while still making the behind relationships clear.",
+          "initial_prompt": "Create a clear image with exactly one black horse in the back layer, behind exactly four white cookies in the middle layer, and the four white cookies behind exactly three red bicycles in the front layer. Show the three red bicycles closest to the viewer, separated and fully visible. Show the four white cookies behind the bicycles, separated from each other and visible enough to count. Show the single black horse behind the cookies, visible and clearly black. Maintain the depth order: black horse behind white cookies, white cookies behind red bicycles. Avoid occlusion that hides any object, and do not include any extra horses, cookies, or bicycles.",
+          "parsed_constraints": {
+            "attributes": {
+              "bicycles": "red",
+              "cookies": "white",
+              "horse": "black"
+            },
+            "counts": {
+              "bicycles": 3,
+              "cookies": 4,
+              "horse": 1
+            },
+            "objects": [
+              "horse",
+              "cookies",
+              "bicycles"
+            ],
+            "relations": [
+              "the black horse is behind the four white cookies",
+              "the four white cookies are behind the three red bicycles"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "previous_prompt": "Create a clear image with exactly one black horse in the back layer, behind exactly four white cookies in the middle layer, and the four white cookies behind exactly three red bicycles in the front layer. Show the three red bicycles closest to the viewer, separated and fully visible. Show the four white cookies behind the bicycles, separated from each other and visible enough to count. Show the single black horse behind the cookies, visible and clearly black. Maintain the depth order: black horse behind white cookies, white cookies behind red bicycles. Avoid occlusion that hides any object, and do not include any extra horses, cookies, or bicycles.",
+        "previous_selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility",
+          "negative_constraints"
+        ],
+        "prompt_id": "geneval2_00769_3acd5791",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "count_mismatch"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many bicycles are in the image?",
+                  "score": 0.8307754711301432,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.830775",
+                "expected": "three",
+                "status": "failed",
+                "target": "How many bicycles are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many horses are in the image?",
+                  "score": 1.0,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1",
+                "expected": "one",
+                "status": "passed",
+                "target": "How many horses are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Is the horse black?",
+                  "score": 0.9999998187413439,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Is the horse black?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any horses in the image?",
+                  "score": 0.9999999549754648,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any horses in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Is the horse behind the cookies?",
+                  "score": 0.9998412520387205,
+                  "skill": "position"
+                },
+                "detected": "soft_score=0.999841",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Is the horse behind the cookies?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many cookies are in the image?",
+                  "score": 0.9999998352025834,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1",
+                "expected": "four",
+                "status": "passed",
+                "target": "How many cookies are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the cookies white?",
+                  "score": 0.9048850536637474,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.904885",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the cookies white?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any cookies in the image?",
+                  "score": 0.9993495464304942,
+                  "skill": "object"
+                },
+                "detected": "soft_score=0.99935",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any cookies in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the cookies behind the bicycles?",
+                  "score": 0.9999430547179031,
+                  "skill": "position"
+                },
+                "detected": "soft_score=0.999943",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the cookies behind the bicycles?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the bicycles red?",
+                  "score": 1.0,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the bicycles red?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 10,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any bicycles in the image?",
+                  "score": 0.9999999190840754,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any bicycles in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Depict exactly one horse, exactly four cookies, and exactly three bicycles.",
+                "Bind colors correctly: the single horse is black, all four cookies are white, and all three bicycles are red.",
+                "Arrange depth clearly: the black horse is in the back, the four white cookies are in the middle in front of the horse, and the three red bicycles are in the front in front of the cookies.",
+                "Keep each object separately visible and countable; avoid overlaps that hide objects or make the counts ambiguous.",
+                "Do not add extra horses, cookies, bicycles, or differently colored versions of these objects."
+              ],
+              "generation_strategy": "Use a simple staged depth composition with three horizontal rows/layers: back layer has one black horse, middle layer has four distinct white cookies, front layer has three distinct red bicycles. Separate objects enough so every item is visible and countable, while still making the behind relationships clear.",
+              "initial_prompt": "Create a clear image with exactly one black horse in the back layer, behind exactly four white cookies in the middle layer, and the four white cookies behind exactly three red bicycles in the front layer. Show the three red bicycles closest to the viewer, separated and fully visible. Show the four white cookies behind the bicycles, separated from each other and visible enough to count. Show the single black horse behind the cookies, visible and clearly black. Maintain the depth order: black horse behind white cookies, white cookies behind red bicycles. Avoid occlusion that hides any object, and do not include any extra horses, cookies, or bicycles.",
+              "parsed_constraints": {
+                "attributes": {
+                  "bicycles": "red",
+                  "cookies": "white",
+                  "horse": "black"
+                },
+                "counts": {
+                  "bicycles": 3,
+                  "cookies": 4,
+                  "horse": 1
+                },
+                "objects": [
+                  "horse",
+                  "cookies",
+                  "bicycles"
+                ],
+                "relations": [
+                  "the black horse is behind the four white cookies",
+                  "the four white cookies are behind the three red bicycles"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "anti_occlusion",
+                "clarity_visibility",
+                "negative_constraints"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Depict exactly one horse, exactly four cookies, and exactly three bicycles.",
+                "Bind colors correctly: the single horse is black, all four cookies are white, and all three bicycles are red.",
+                "Arrange depth clearly: the black horse is in the back, the four white cookies are in the middle in front of the horse, and the three red bicycles are in the front in front of the cookies.",
+                "Keep each object separately visible and countable; avoid overlaps that hide objects or make the counts ambiguous.",
+                "Do not add extra horses, cookies, bicycles, or differently colored versions of these objects."
+              ],
+              "generation_strategy": "Use a simple staged depth composition with three horizontal rows/layers: back layer has one black horse, middle layer has four distinct white cookies, front layer has three distinct red bicycles. Separate objects enough so every item is visible and countable, while still making the behind relationships clear.",
+              "initial_prompt": "Create a clear image with exactly one black horse in the back layer, behind exactly four white cookies in the middle layer, and the four white cookies behind exactly three red bicycles in the front layer. Show the three red bicycles closest to the viewer, separated and fully visible. Show the four white cookies behind the bicycles, separated from each other and visible enough to count. Show the single black horse behind the cookies, visible and clearly black. Maintain the depth order: black horse behind white cookies, white cookies behind red bicycles. Avoid occlusion that hides any object, and do not include any extra horses, cookies, or bicycles.",
+              "parsed_constraints": {
+                "attributes": {
+                  "bicycles": "red",
+                  "cookies": "white",
+                  "horse": "black"
+                },
+                "counts": {
+                  "bicycles": 3,
+                  "cookies": 4,
+                  "horse": 1
+                },
+                "objects": [
+                  "horse",
+                  "cookies",
+                  "bicycles"
+                ],
+                "relations": [
+                  "the black horse is behind the four white cookies",
+                  "the four white cookies are behind the three red bicycles"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "anti_occlusion",
+                "clarity_visibility",
+                "negative_constraints"
+              ]
+            },
+            "prompt_used": "Create a clear image with exactly one black horse in the back layer, behind exactly four white cookies in the middle layer, and the four white cookies behind exactly three red bicycles in the front layer. Show the three red bicycles closest to the viewer, separated and fully visible. Show the four white cookies behind the bicycles, separated from each other and visible enough to count. Show the single black horse behind the cookies, visible and clearly black. Maintain the depth order: black horse behind white cookies, white cookies behind red bicycles. Avoid occlusion that hides any object, and do not include any extra horses, cookies, or bicycles.",
+            "round": 0,
+            "score": 0.9758903550894978,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 8,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many bicycles are in the image?",
+                    "score": 0.8307754711301432,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=0.830775",
+                  "expected": "three",
+                  "status": "failed",
+                  "target": "How many bicycles are in the image?",
+                  "type": "count_mismatch"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00769_3acd5791"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many bicycles are in the image?",
+              "score": 0.8307754711301432,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.830775",
+            "expected": "three",
+            "status": "failed",
+            "target": "How many bicycles are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00769_3acd5791_cand_01",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Depict exactly one horse, exactly four cookies, and exactly three bicycles.",
+      "Bind colors correctly: the single horse is black, all four cookies are white, and all three bicycles are red.",
+      "Arrange depth clearly: the black horse is in the back, the four white cookies are in the middle in front of the horse, and the three red bicycles are in the front in front of the cookies.",
+      "Keep each object separately visible and countable; avoid overlaps that hide objects or make the counts ambiguous.",
+      "Do not add extra horses, cookies, bicycles, or differently colored versions of these objects."
+    ],
+    "generation_strategy": "Use a simple staged depth composition with three horizontal rows/layers: back layer has one black horse, middle layer has four distinct white cookies, front layer has three distinct red bicycles. Separate objects enough so every item is visible and countable, while still making the behind relationships clear.",
+    "initial_prompt": "Create a clear image with exactly one black horse in the back layer, behind exactly four white cookies in the middle layer, and the four white cookies behind exactly three red bicycles in the front layer. Show the three red bicycles closest to the viewer, separated and fully visible. Show the four white cookies behind the bicycles, separated from each other and visible enough to count. Show the single black horse behind the cookies, visible and clearly black. Maintain the depth order: black horse behind white cookies, white cookies behind red bicycles. Avoid occlusion that hides any object, and do not include any extra horses, cookies, or bicycles.",
+    "parsed_constraints": {
+      "attributes": {
+        "bicycles": "red",
+        "cookies": "white",
+        "horse": "black"
+      },
+      "counts": {
+        "bicycles": 3,
+        "cookies": 4,
+        "horse": 1
+      },
+      "objects": [
+        "horse",
+        "cookies",
+        "bicycles"
+      ],
+      "relations": [
+        "the black horse is behind the four white cookies",
+        "the four white cookies are behind the three red bicycles"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image already satisfied the single black horse, four white cookies, white cookie color, red bicycle color, object presence, and depth relations. The only failed constraint is the bicycle count: the verifier did not confidently identify exactly three bicycles. The front bicycles may have been too close together, partially overlapped, cropped, or visually merged, making the count ambiguous.",
+    "expected_improvement": [
+      "The regenerated image should make exactly three red bicycles easy to count by placing them as three separate complete instances in the front layer.",
+      "The passed constraints should remain intact: one black horse behind four white cookies, four white cookies behind the bicycles, correct colors, and no extra objects."
+    ],
+    "failure_types": [
+      "count_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly one horse, and make the single horse black.",
+      "Keep the black horse behind the cookies.",
+      "Keep exactly four cookies, and make all four cookies white.",
+      "Keep the four white cookies behind the bicycles.",
+      "Keep bicycles present and make all bicycles red.",
+      "Keep the overall depth order: black horse in the back, four white cookies in the middle, three red bicycles in the front."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt said the three red bicycles should be separated and fully visible, but it did not force a simple countable left-center-right layout with enough empty space around each complete bicycle. As a result, bicycle parts could merge or be interpreted as fewer than three bicycles.",
+      "error_source": "quantity_counting"
+    },
+    "regeneration_strategy": "Use a stricter staged layout: three complete red bicycles in the front row, one on the left, one in the center, and one on the right, with clear gaps between them and no overlap. Put the four white cookies in a separate middle row behind the bicycles, and the single black horse in the back behind the cookies. Emphasize complete bicycle frames and wheels, no cropped bicycles, no extra bicycle parts, and no additional bicycles.",
+    "regression_risks": [
+      "Adding strong emphasis to the three bicycles could accidentally obscure the four cookies behind them.",
+      "The generator could add extra bicycle-like wheels or partial bicycles while trying to depict the front row.",
+      "The white cookies could lose their white color or become too hidden if the front bicycles are too large."
+    ],
+    "repair_constraints": [
+      "Show exactly three red bicycles, not two and not four.",
+      "Make the three bicycles visually separable and countable: one red bicycle on the front-left, one red bicycle on the front-center, and one red bicycle on the front-right.",
+      "Each of the three red bicycles must be complete, uncropped, fully visible, and separated by clear empty gaps.",
+      "Do not include any extra bicycles, duplicate bicycles, partial bicycles, loose wheels, or additional bicycle-like shapes."
+    ],
+    "retry_prompt": "Create a clear staged image of a black horse behind four white cookies behind three red bicycles. In the back layer, show exactly one black horse, clearly black, behind the cookies. In the middle layer, show exactly four white cookies, all white, separated and countable, in front of the horse and behind the bicycles. In the front layer closest to the viewer, show exactly three red bicycles: one complete red bicycle on the left, one complete red bicycle in the center, and one complete red bicycle on the right. Make the three red bicycles fully visible, uncropped, non-overlapping, and separated by clear empty gaps so they can be counted as exactly three. Maintain the depth order: black horse behind the four white cookies, and the four white cookies behind the three red bicycles. Do not include any extra horses, cookies, bicycles, partial bicycles, loose wheels, duplicate bicycle parts, or additional objects of these types.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "spatial_layout",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints",
+        "object_presence",
+        "attribute_binding",
+        "multi_object_composition"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same skill set but change the count strategy for bicycles from a generic front layer to an explicit left-center-right countable layout with anti-occlusion and negative constraints against extra or partial bicycle-like shapes."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many bicycles are in the image?",
+            "score": 0.8307754711301432,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.830775",
+          "expected": "three",
+          "status": "failed",
+          "target": "How many bicycles are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00046/samples/00001.png",
+      "prompt": "Create a clear image with exactly one black horse in the back layer, behind exactly four white cookies in the middle layer, and the four white cookies behind exactly three red bicycles in the front layer. Show the three red bicycles closest to the viewer, separated and fully visible. Show the four white cookies behind the bicycles, separated from each other and visible enough to count. Show the single black horse behind the cookies, visible and clearly black. Maintain the depth order: black horse behind white cookies, white cookies behind red bicycles. Avoid occlusion that hides any object, and do not include any extra horses, cookies, or bicycles.",
+      "round": 0,
+      "score": 0.9758903550894978
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00769_3acd5791_cand_01",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "count_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many bicycles are in the image?",
+            "score": 0.8307754711301432,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.830775",
+          "expected": "three",
+          "status": "failed",
+          "target": "How many bicycles are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many horses are in the image?",
+            "score": 1.0,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "one",
+          "status": "passed",
+          "target": "How many horses are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the horse black?",
+            "score": 0.9999998187413439,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the horse black?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any horses in the image?",
+            "score": 0.9999999549754648,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any horses in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the horse behind the cookies?",
+            "score": 0.9998412520387205,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.999841",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the horse behind the cookies?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cookies are in the image?",
+            "score": 0.9999998352025834,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "four",
+          "status": "passed",
+          "target": "How many cookies are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cookies white?",
+            "score": 0.9048850536637474,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.904885",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the cookies white?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any cookies in the image?",
+            "score": 0.9993495464304942,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.99935",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any cookies in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cookies behind the bicycles?",
+            "score": 0.9999430547179031,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.999943",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the cookies behind the bicycles?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the bicycles red?",
+            "score": 1.0,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the bicycles red?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 10,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any bicycles in the image?",
+            "score": 0.9999999190840754,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any bicycles in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.9758903550894978,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many bicycles are in the image?",
+              "score": 0.8307754711301432,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.830775",
+            "expected": "three",
+            "status": "failed",
+            "target": "How many bicycles are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00046/samples/00001.png",
+        "prompt": "Create a clear image with exactly one black horse in the back layer, behind exactly four white cookies in the middle layer, and the four white cookies behind exactly three red bicycles in the front layer. Show the three red bicycles closest to the viewer, separated and fully visible. Show the four white cookies behind the bicycles, separated from each other and visible enough to count. Show the single black horse behind the cookies, visible and clearly black. Maintain the depth order: black horse behind white cookies, white cookies behind red bicycles. Avoid occlusion that hides any object, and do not include any extra horses, cookies, or bicycles.",
+        "round": 0,
+        "score": 0.9758903550894978
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many bicycles are in the image?",
+            "score": 0.8307754711301432,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.830775",
+          "expected": "three",
+          "status": "failed",
+          "target": "How many bicycles are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "count_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many bicycles are in the image?",
+            "score": 0.8307754711301432,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.830775",
+          "expected": "three",
+          "status": "failed",
+          "target": "How many bicycles are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many horses are in the image?",
+            "score": 1.0,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "one",
+          "status": "passed",
+          "target": "How many horses are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the horse black?",
+            "score": 0.9999998187413439,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the horse black?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any horses in the image?",
+            "score": 0.9999999549754648,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any horses in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the horse behind the cookies?",
+            "score": 0.9998412520387205,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.999841",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the horse behind the cookies?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cookies are in the image?",
+            "score": 0.9999998352025834,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "four",
+          "status": "passed",
+          "target": "How many cookies are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cookies white?",
+            "score": 0.9048850536637474,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.904885",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the cookies white?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any cookies in the image?",
+            "score": 0.9993495464304942,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.99935",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any cookies in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cookies behind the bicycles?",
+            "score": 0.9999430547179031,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.999943",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the cookies behind the bicycles?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the bicycles red?",
+            "score": 1.0,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the bicycles red?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 10,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any bicycles in the image?",
+            "score": 0.9999999190840754,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any bicycles in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.9758903550894978,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "a black horse behind four white cookies behind three red bicycles",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many bicycles are in the image?",
+          "score": 0.8307754711301432,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.830775",
+        "expected": "three",
+        "status": "failed",
+        "target": "How many bicycles are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Depict exactly one horse, exactly four cookies, and exactly three bicycles.",
+        "Bind colors correctly: the single horse is black, all four cookies are white, and all three bicycles are red.",
+        "Arrange depth clearly: the black horse is in the back, the four white cookies are in the middle in front of the horse, and the three red bicycles are in the front in front of the cookies.",
+        "Keep each object separately visible and countable; avoid overlaps that hide objects or make the counts ambiguous.",
+        "Do not add extra horses, cookies, bicycles, or differently colored versions of these objects."
+      ],
+      "generation_strategy": "Use a simple staged depth composition with three horizontal rows/layers: back layer has one black horse, middle layer has four distinct white cookies, front layer has three distinct red bicycles. Separate objects enough so every item is visible and countable, while still making the behind relationships clear.",
+      "initial_prompt": "Create a clear image with exactly one black horse in the back layer, behind exactly four white cookies in the middle layer, and the four white cookies behind exactly three red bicycles in the front layer. Show the three red bicycles closest to the viewer, separated and fully visible. Show the four white cookies behind the bicycles, separated from each other and visible enough to count. Show the single black horse behind the cookies, visible and clearly black. Maintain the depth order: black horse behind white cookies, white cookies behind red bicycles. Avoid occlusion that hides any object, and do not include any extra horses, cookies, or bicycles.",
+      "parsed_constraints": {
+        "attributes": {
+          "bicycles": "red",
+          "cookies": "white",
+          "horse": "black"
+        },
+        "counts": {
+          "bicycles": 3,
+          "cookies": 4,
+          "horse": 1
+        },
+        "objects": [
+          "horse",
+          "cookies",
+          "bicycles"
+        ],
+        "relations": [
+          "the black horse is behind the four white cookies",
+          "the four white cookies are behind the three red bicycles"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Depict exactly one horse, exactly four cookies, and exactly three bicycles.",
+        "Bind colors correctly: the single horse is black, all four cookies are white, and all three bicycles are red.",
+        "Arrange depth clearly: the black horse is in the back, the four white cookies are in the middle in front of the horse, and the three red bicycles are in the front in front of the cookies.",
+        "Keep each object separately visible and countable; avoid overlaps that hide objects or make the counts ambiguous.",
+        "Do not add extra horses, cookies, bicycles, or differently colored versions of these objects."
+      ],
+      "generation_strategy": "Use a simple staged depth composition with three horizontal rows/layers: back layer has one black horse, middle layer has four distinct white cookies, front layer has three distinct red bicycles. Separate objects enough so every item is visible and countable, while still making the behind relationships clear.",
+      "initial_prompt": "Create a clear image with exactly one black horse in the back layer, behind exactly four white cookies in the middle layer, and the four white cookies behind exactly three red bicycles in the front layer. Show the three red bicycles closest to the viewer, separated and fully visible. Show the four white cookies behind the bicycles, separated from each other and visible enough to count. Show the single black horse behind the cookies, visible and clearly black. Maintain the depth order: black horse behind white cookies, white cookies behind red bicycles. Avoid occlusion that hides any object, and do not include any extra horses, cookies, or bicycles.",
+      "parsed_constraints": {
+        "attributes": {
+          "bicycles": "red",
+          "cookies": "white",
+          "horse": "black"
+        },
+        "counts": {
+          "bicycles": 3,
+          "cookies": 4,
+          "horse": 1
+        },
+        "objects": [
+          "horse",
+          "cookies",
+          "bicycles"
+        ],
+        "relations": [
+          "the black horse is behind the four white cookies",
+          "the four white cookies are behind the three red bicycles"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ]
+    },
+    "previous_prompt": "Create a clear image with exactly one black horse in the back layer, behind exactly four white cookies in the middle layer, and the four white cookies behind exactly three red bicycles in the front layer. Show the three red bicycles closest to the viewer, separated and fully visible. Show the four white cookies behind the bicycles, separated from each other and visible enough to count. Show the single black horse behind the cookies, visible and clearly black. Maintain the depth order: black horse behind white cookies, white cookies behind red bicycles. Avoid occlusion that hides any object, and do not include any extra horses, cookies, or bicycles.",
+    "previous_selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ],
+    "prompt_id": "geneval2_00769_3acd5791",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "count_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many bicycles are in the image?",
+              "score": 0.8307754711301432,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.830775",
+            "expected": "three",
+            "status": "failed",
+            "target": "How many bicycles are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many horses are in the image?",
+              "score": 1.0,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "one",
+            "status": "passed",
+            "target": "How many horses are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the horse black?",
+              "score": 0.9999998187413439,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Is the horse black?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any horses in the image?",
+              "score": 0.9999999549754648,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any horses in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the horse behind the cookies?",
+              "score": 0.9998412520387205,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.999841",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Is the horse behind the cookies?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cookies are in the image?",
+              "score": 0.9999998352025834,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "four",
+            "status": "passed",
+            "target": "How many cookies are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cookies white?",
+              "score": 0.9048850536637474,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.904885",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the cookies white?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any cookies in the image?",
+              "score": 0.9993495464304942,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.99935",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any cookies in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cookies behind the bicycles?",
+              "score": 0.9999430547179031,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.999943",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the cookies behind the bicycles?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the bicycles red?",
+              "score": 1.0,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the bicycles red?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 10,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any bicycles in the image?",
+              "score": 0.9999999190840754,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any bicycles in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly one horse, exactly four cookies, and exactly three bicycles.",
+            "Bind colors correctly: the single horse is black, all four cookies are white, and all three bicycles are red.",
+            "Arrange depth clearly: the black horse is in the back, the four white cookies are in the middle in front of the horse, and the three red bicycles are in the front in front of the cookies.",
+            "Keep each object separately visible and countable; avoid overlaps that hide objects or make the counts ambiguous.",
+            "Do not add extra horses, cookies, bicycles, or differently colored versions of these objects."
+          ],
+          "generation_strategy": "Use a simple staged depth composition with three horizontal rows/layers: back layer has one black horse, middle layer has four distinct white cookies, front layer has three distinct red bicycles. Separate objects enough so every item is visible and countable, while still making the behind relationships clear.",
+          "initial_prompt": "Create a clear image with exactly one black horse in the back layer, behind exactly four white cookies in the middle layer, and the four white cookies behind exactly three red bicycles in the front layer. Show the three red bicycles closest to the viewer, separated and fully visible. Show the four white cookies behind the bicycles, separated from each other and visible enough to count. Show the single black horse behind the cookies, visible and clearly black. Maintain the depth order: black horse behind white cookies, white cookies behind red bicycles. Avoid occlusion that hides any object, and do not include any extra horses, cookies, or bicycles.",
+          "parsed_constraints": {
+            "attributes": {
+              "bicycles": "red",
+              "cookies": "white",
+              "horse": "black"
+            },
+            "counts": {
+              "bicycles": 3,
+              "cookies": 4,
+              "horse": 1
+            },
+            "objects": [
+              "horse",
+              "cookies",
+              "bicycles"
+            ],
+            "relations": [
+              "the black horse is behind the four white cookies",
+              "the four white cookies are behind the three red bicycles"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly one horse, exactly four cookies, and exactly three bicycles.",
+            "Bind colors correctly: the single horse is black, all four cookies are white, and all three bicycles are red.",
+            "Arrange depth clearly: the black horse is in the back, the four white cookies are in the middle in front of the horse, and the three red bicycles are in the front in front of the cookies.",
+            "Keep each object separately visible and countable; avoid overlaps that hide objects or make the counts ambiguous.",
+            "Do not add extra horses, cookies, bicycles, or differently colored versions of these objects."
+          ],
+          "generation_strategy": "Use a simple staged depth composition with three horizontal rows/layers: back layer has one black horse, middle layer has four distinct white cookies, front layer has three distinct red bicycles. Separate objects enough so every item is visible and countable, while still making the behind relationships clear.",
+          "initial_prompt": "Create a clear image with exactly one black horse in the back layer, behind exactly four white cookies in the middle layer, and the four white cookies behind exactly three red bicycles in the front layer. Show the three red bicycles closest to the viewer, separated and fully visible. Show the four white cookies behind the bicycles, separated from each other and visible enough to count. Show the single black horse behind the cookies, visible and clearly black. Maintain the depth order: black horse behind white cookies, white cookies behind red bicycles. Avoid occlusion that hides any object, and do not include any extra horses, cookies, or bicycles.",
+          "parsed_constraints": {
+            "attributes": {
+              "bicycles": "red",
+              "cookies": "white",
+              "horse": "black"
+            },
+            "counts": {
+              "bicycles": 3,
+              "cookies": 4,
+              "horse": 1
+            },
+            "objects": [
+              "horse",
+              "cookies",
+              "bicycles"
+            ],
+            "relations": [
+              "the black horse is behind the four white cookies",
+              "the four white cookies are behind the three red bicycles"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "prompt_used": "Create a clear image with exactly one black horse in the back layer, behind exactly four white cookies in the middle layer, and the four white cookies behind exactly three red bicycles in the front layer. Show the three red bicycles closest to the viewer, separated and fully visible. Show the four white cookies behind the bicycles, separated from each other and visible enough to count. Show the single black horse behind the cookies, visible and clearly black. Maintain the depth order: black horse behind white cookies, white cookies behind red bicycles. Avoid occlusion that hides any object, and do not include any extra horses, cookies, or bicycles.",
+        "round": 0,
+        "score": 0.9758903550894978,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many bicycles are in the image?",
+                "score": 0.8307754711301432,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.830775",
+              "expected": "three",
+              "status": "failed",
+              "target": "How many bicycles are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00769_3acd5791"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many bicycles are in the image?",
+          "score": 0.8307754711301432,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.830775",
+        "expected": "three",
+        "status": "failed",
+        "target": "How many bicycles are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00046/samples/00001.png",
+    "best_so_far_prompt": "Create a clear image with exactly one black horse in the back layer, behind exactly four white cookies in the middle layer, and the four white cookies behind exactly three red bicycles in the front layer. Show the three red bicycles closest to the viewer, separated and fully visible. Show the four white cookies behind the bicycles, separated from each other and visible enough to count. Show the single black horse behind the cookies, visible and clearly black. Maintain the depth order: black horse behind white cookies, white cookies behind red bicycles. Avoid occlusion that hides any object, and do not include any extra horses, cookies, or bicycles.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.9758903550894978,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many bicycles are in the image?",
+          "score": 0.8307754711301432,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.830775",
+        "expected": "three",
+        "status": "failed",
+        "target": "How many bicycles are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Depict exactly one horse, exactly four cookies, and exactly three bicycles.",
+        "Bind colors correctly: the single horse is black, all four cookies are white, and all three bicycles are red.",
+        "Arrange depth clearly: the black horse is in the back, the four white cookies are in the middle in front of the horse, and the three red bicycles are in the front in front of the cookies.",
+        "Keep each object separately visible and countable; avoid overlaps that hide objects or make the counts ambiguous.",
+        "Do not add extra horses, cookies, bicycles, or differently colored versions of these objects."
+      ],
+      "generation_strategy": "Use a simple staged depth composition with three horizontal rows/layers: back layer has one black horse, middle layer has four distinct white cookies, front layer has three distinct red bicycles. Separate objects enough so every item is visible and countable, while still making the behind relationships clear.",
+      "initial_prompt": "Create a clear image with exactly one black horse in the back layer, behind exactly four white cookies in the middle layer, and the four white cookies behind exactly three red bicycles in the front layer. Show the three red bicycles closest to the viewer, separated and fully visible. Show the four white cookies behind the bicycles, separated from each other and visible enough to count. Show the single black horse behind the cookies, visible and clearly black. Maintain the depth order: black horse behind white cookies, white cookies behind red bicycles. Avoid occlusion that hides any object, and do not include any extra horses, cookies, or bicycles.",
+      "parsed_constraints": {
+        "attributes": {
+          "bicycles": "red",
+          "cookies": "white",
+          "horse": "black"
+        },
+        "counts": {
+          "bicycles": 3,
+          "cookies": 4,
+          "horse": 1
+        },
+        "objects": [
+          "horse",
+          "cookies",
+          "bicycles"
+        ],
+        "relations": [
+          "the black horse is behind the four white cookies",
+          "the four white cookies are behind the three red bicycles"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.976 failed=['How many bicycles are in the image?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_incremental/snapshot_002_worker_02/geneval2_00769_3acd5791__geneval2_00769_3acd5791_cand_01__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00769_3acd5791__geneval2_00769_3acd5791_cand_01__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00769_3acd5791",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image already satisfied the single black horse, four white cookies, white cookie color, red bicycle color, object presence, and depth relations. The only failed constraint is the bicycle count: the verifier did not confidently identify exactly three bicycles. The front bicycles may have been too close together, partially overlapped, cropped, or visually merged, making the count ambiguous.",
+    "expected_improvement": [
+      "The regenerated image should make exactly three red bicycles easy to count by placing them as three separate complete instances in the front layer.",
+      "The passed constraints should remain intact: one black horse behind four white cookies, four white cookies behind the bicycles, correct colors, and no extra objects."
+    ],
+    "failure_types": [
+      "count_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly one horse, and make the single horse black.",
+      "Keep the black horse behind the cookies.",
+      "Keep exactly four cookies, and make all four cookies white.",
+      "Keep the four white cookies behind the bicycles.",
+      "Keep bicycles present and make all bicycles red.",
+      "Keep the overall depth order: black horse in the back, four white cookies in the middle, three red bicycles in the front."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt said the three red bicycles should be separated and fully visible, but it did not force a simple countable left-center-right layout with enough empty space around each complete bicycle. As a result, bicycle parts could merge or be interpreted as fewer than three bicycles.",
+      "error_source": "quantity_counting"
+    },
+    "regeneration_strategy": "Use a stricter staged layout: three complete red bicycles in the front row, one on the left, one in the center, and one on the right, with clear gaps between them and no overlap. Put the four white cookies in a separate middle row behind the bicycles, and the single black horse in the back behind the cookies. Emphasize complete bicycle frames and wheels, no cropped bicycles, no extra bicycle parts, and no additional bicycles.",
+    "regression_risks": [
+      "Adding strong emphasis to the three bicycles could accidentally obscure the four cookies behind them.",
+      "The generator could add extra bicycle-like wheels or partial bicycles while trying to depict the front row.",
+      "The white cookies could lose their white color or become too hidden if the front bicycles are too large."
+    ],
+    "repair_constraints": [
+      "Show exactly three red bicycles, not two and not four.",
+      "Make the three bicycles visually separable and countable: one red bicycle on the front-left, one red bicycle on the front-center, and one red bicycle on the front-right.",
+      "Each of the three red bicycles must be complete, uncropped, fully visible, and separated by clear empty gaps.",
+      "Do not include any extra bicycles, duplicate bicycles, partial bicycles, loose wheels, or additional bicycle-like shapes."
+    ],
+    "retry_prompt": "Create a clear staged image of a black horse behind four white cookies behind three red bicycles. In the back layer, show exactly one black horse, clearly black, behind the cookies. In the middle layer, show exactly four white cookies, all white, separated and countable, in front of the horse and behind the bicycles. In the front layer closest to the viewer, show exactly three red bicycles: one complete red bicycle on the left, one complete red bicycle in the center, and one complete red bicycle on the right. Make the three red bicycles fully visible, uncropped, non-overlapping, and separated by clear empty gaps so they can be counted as exactly three. Maintain the depth order: black horse behind the four white cookies, and the four white cookies behind the three red bicycles. Do not include any extra horses, cookies, bicycles, partial bicycles, loose wheels, duplicate bicycle parts, or additional objects of these types.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "spatial_layout",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints",
+        "object_presence",
+        "attribute_binding",
+        "multi_object_composition"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same skill set but change the count strategy for bicycles from a generic front layer to an explicit left-center-right countable layout with anti-occlusion and negative constraints against extra or partial bicycle-like shapes."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "a black horse behind four white cookies behind three red bicycles",
+    "prompt": "a black horse behind four white cookies behind three red bicycles",
+    "prompt_id": "geneval2_00769_3acd5791",
+    "sampling_bucket": "color_binding",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 3,
+      "count": 3,
+      "object": 3,
+      "position": 2
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 769,
+    "vqa_list": [
+      [
+        "How many horses are in the image?",
+        "one"
+      ],
+      [
+        "Is the horse black?",
+        "Yes"
+      ],
+      [
+        "Are there any horses in the image?",
+        "Yes"
+      ],
+      [
+        "Is the horse behind the cookies?",
+        "Yes"
+      ],
+      [
+        "How many cookies are in the image?",
+        "four"
+      ],
+      [
+        "Are the cookies white?",
+        "Yes"
+      ],
+      [
+        "Are there any cookies in the image?",
+        "Yes"
+      ],
+      [
+        "Are the cookies behind the bicycles?",
+        "Yes"
+      ],
+      [
+        "How many bicycles are in the image?",
+        "three"
+      ],
+      [
+        "Are the bicycles red?",
+        "Yes"
+      ],
+      [
+        "Are there any bicycles in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00769_3acd5791"
+}

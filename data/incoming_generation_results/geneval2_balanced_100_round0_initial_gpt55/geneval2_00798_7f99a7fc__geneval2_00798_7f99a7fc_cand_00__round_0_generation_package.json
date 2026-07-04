@@ -1,0 +1,154 @@
+{
+  "candidate_id": "geneval2_00798_7f99a7fc_cand_00",
+  "generation": {
+    "generation_metadata": {
+      "candidate_index": 0,
+      "generation_prompt_source": "initial_plan",
+      "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00798_7f99a7fc.json",
+      "manifest_prompt_index": 51,
+      "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+      "sample_id": "geneval2_00798_7f99a7fc"
+    },
+    "generator_name": "qwen-image-2512",
+    "image_id": "geneval2_00798_7f99a7fc_cand_00",
+    "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00051/samples/00000.png",
+    "prompt_used": "A clear scene showing exactly four yellow lions chasing exactly three turtles. The three turtles are playing with exactly two wooden sheep. Arrange the four yellow lions behind the turtles, moving toward them in a chase, while the three turtles are near the two wooden sheep and visibly interacting playfully with them. Keep all four lions, all three turtles, and both wooden sheep fully visible, separated, and easy to count, with no extra lions, turtles, or sheep and no major occlusion.",
+    "seed": 1255
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "eval_lookup_key": "",
+    "image_path_is_artifact_reference": true,
+    "teacher_uses_image_bytes": false
+  },
+  "previous_action": null,
+  "previous_initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly four lions, exactly three turtles, and exactly two wooden sheep; do not add extra lions, turtles, or sheep.",
+      "Bind the yellow color only to the four lions and the wooden material only to the two sheep.",
+      "Keep all nine main subjects clearly visible and separated enough to count, with no major occlusion.",
+      "Depict the four yellow lions chasing the three turtles, and depict the three turtles playing with the two wooden sheep."
+    ],
+    "generation_strategy": "Create a clear multi-object scene with three separated groups in one continuous action: four yellow lions positioned behind and moving toward three turtles, while the three turtles are beside and interacting playfully with two wooden sheep. Use spacing and visibility to make each individual animal countable and to preserve the action relations.",
+    "initial_prompt": "A clear scene showing exactly four yellow lions chasing exactly three turtles. The three turtles are playing with exactly two wooden sheep. Arrange the four yellow lions behind the turtles, moving toward them in a chase, while the three turtles are near the two wooden sheep and visibly interacting playfully with them. Keep all four lions, all three turtles, and both wooden sheep fully visible, separated, and easy to count, with no extra lions, turtles, or sheep and no major occlusion.",
+    "parsed_constraints": {
+      "attributes": {
+        "lions": [
+          "yellow"
+        ],
+        "sheeps": [
+          "wooden"
+        ]
+      },
+      "counts": {
+        "lions": 4,
+        "sheeps": 2,
+        "turtles": 3
+      },
+      "objects": [
+        "lions",
+        "turtles",
+        "sheeps"
+      ],
+      "relations": [
+        "four yellow lions chasing three turtles",
+        "three turtles playing with two wooden sheeps"
+      ]
+    },
+    "selected_skills": [
+      "quantity_counting",
+      "object_presence",
+      "attribute_binding",
+      "multi_object_composition",
+      "spatial_layout",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "prompt_id": "geneval2_00798_7f99a7fc",
+  "retry_history": [],
+  "round": 0,
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "four yellow lions chasing three turtles playing with two wooden sheeps",
+    "prompt": "four yellow lions chasing three turtles playing with two wooden sheeps",
+    "prompt_id": "geneval2_00798_7f99a7fc",
+    "sampling_bucket": "color_binding",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "relation_action",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 2,
+      "count": 3,
+      "object": 3,
+      "verb": 2
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "verb",
+      "count",
+      "object",
+      "verb",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 798,
+    "vqa_list": [
+      [
+        "How many lions are in the image?",
+        "four"
+      ],
+      [
+        "Are the lions yellow?",
+        "Yes"
+      ],
+      [
+        "Are there any lions in the image?",
+        "Yes"
+      ],
+      [
+        "Are the lions chasing the turtles?",
+        "Yes"
+      ],
+      [
+        "How many turtles are in the image?",
+        "three"
+      ],
+      [
+        "Are there any turtles in the image?",
+        "Yes"
+      ],
+      [
+        "Are the turtles playing with the sheeps?",
+        "Yes"
+      ],
+      [
+        "How many sheeps are in the image?",
+        "two"
+      ],
+      [
+        "Are the sheeps wooden?",
+        "Yes"
+      ],
+      [
+        "Are there any sheeps in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "trajectory_id": "geneval2_00798_7f99a7fc"
+}

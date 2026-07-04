@@ -1,0 +1,3140 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "count_mismatch",
+          "missing_object",
+          "spatial_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many suitcases are in the image?",
+              "score": 1.7368570678997972e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.73686e-09",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many suitcases are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the suitcases on top of the koalas?",
+              "score": 8.667946327555601e-08,
+              "skill": "position"
+            },
+            "detected": "soft_score=8.66795e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the suitcases on top of the koalas?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many koalas are in the image?",
+              "score": 7.850132166634042e-07,
+              "skill": "count"
+            },
+            "detected": "soft_score=7.85013e-07",
+            "expected": "five",
+            "status": "failed",
+            "target": "How many koalas are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the koalas wooden?",
+              "score": 1.4518246845285354e-06,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1.45182e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the koalas wooden?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any koalas in the image?",
+              "score": 4.357765433769291e-10,
+              "skill": "object"
+            },
+            "detected": "soft_score=4.35777e-10",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any koalas in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cows are in the image?",
+              "score": 1.0,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "two",
+            "status": "passed",
+            "target": "How many cows are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows white?",
+              "score": 0.9859011166299751,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.985901",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the cows white?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any cows in the image?",
+              "score": 0.9999999719457264,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any cows in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows on top of the suitcases?",
+              "score": 0.9999997337276056,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the cows on top of the suitcases?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any suitcases in the image?",
+              "score": 0.999999984504484,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any suitcases in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_002/raw_score_lists.by_candidate.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00711_6b2f80b9_cand_00",
+          "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_002/raw_score_lists.by_candidate.json",
+          "rows": [
+            {
+              "answer": "two",
+              "atom_count": 10,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00711_6b2f80b9_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00052/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00052/samples/00000.png",
+              "prompt": "two white cows on top of six suitcases on top of five wooden koalas",
+              "prompt_id": "geneval2_00711_6b2f80b9",
+              "question": "How many cows are in the image?",
+              "score": 1.0000000630784476,
+              "skill": "count",
+              "source_index": 711
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00711_6b2f80b9_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00052/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00052/samples/00000.png",
+              "prompt": "two white cows on top of six suitcases on top of five wooden koalas",
+              "prompt_id": "geneval2_00711_6b2f80b9",
+              "question": "Are the cows white?",
+              "score": 0.9859011166299751,
+              "skill": "attribute",
+              "source_index": 711
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00711_6b2f80b9_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00052/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00052/samples/00000.png",
+              "prompt": "two white cows on top of six suitcases on top of five wooden koalas",
+              "prompt_id": "geneval2_00711_6b2f80b9",
+              "question": "Are there any cows in the image?",
+              "score": 0.9999999719457264,
+              "skill": "object",
+              "source_index": 711
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00711_6b2f80b9_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00052/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00052/samples/00000.png",
+              "prompt": "two white cows on top of six suitcases on top of five wooden koalas",
+              "prompt_id": "geneval2_00711_6b2f80b9",
+              "question": "Are the cows on top of the suitcases?",
+              "score": 0.9999997337276056,
+              "skill": "position",
+              "source_index": 711
+            },
+            {
+              "answer": "six",
+              "atom_count": 10,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00711_6b2f80b9_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00052/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00052/samples/00000.png",
+              "prompt": "two white cows on top of six suitcases on top of five wooden koalas",
+              "prompt_id": "geneval2_00711_6b2f80b9",
+              "question": "How many suitcases are in the image?",
+              "score": 1.7368570678997972e-09,
+              "skill": "count",
+              "source_index": 711
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00711_6b2f80b9_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00052/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00052/samples/00000.png",
+              "prompt": "two white cows on top of six suitcases on top of five wooden koalas",
+              "prompt_id": "geneval2_00711_6b2f80b9",
+              "question": "Are there any suitcases in the image?",
+              "score": 0.999999984504484,
+              "skill": "object",
+              "source_index": 711
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00711_6b2f80b9_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00052/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00052/samples/00000.png",
+              "prompt": "two white cows on top of six suitcases on top of five wooden koalas",
+              "prompt_id": "geneval2_00711_6b2f80b9",
+              "question": "Are the suitcases on top of the koalas?",
+              "score": 8.667946327555601e-08,
+              "skill": "position",
+              "source_index": 711
+            },
+            {
+              "answer": "five",
+              "atom_count": 10,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00711_6b2f80b9_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00052/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00052/samples/00000.png",
+              "prompt": "two white cows on top of six suitcases on top of five wooden koalas",
+              "prompt_id": "geneval2_00711_6b2f80b9",
+              "question": "How many koalas are in the image?",
+              "score": 7.850132166634042e-07,
+              "skill": "count",
+              "source_index": 711
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00711_6b2f80b9_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00052/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00052/samples/00000.png",
+              "prompt": "two white cows on top of six suitcases on top of five wooden koalas",
+              "prompt_id": "geneval2_00711_6b2f80b9",
+              "question": "Are the koalas wooden?",
+              "score": 1.4518246845285354e-06,
+              "skill": "attribute",
+              "source_index": 711
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00711_6b2f80b9_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00052/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00052/samples/00000.png",
+              "prompt": "two white cows on top of six suitcases on top of five wooden koalas",
+              "prompt_id": "geneval2_00711_6b2f80b9",
+              "question": "Are there any koalas in the image?",
+              "score": 4.357765433769291e-10,
+              "skill": "object",
+              "source_index": 711
+            }
+          ],
+          "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_002/raw_score_lists.by_candidate.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.4985903132497789,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 0,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00711_6b2f80b9.json",
+          "manifest_prompt_index": 52,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00711_6b2f80b9"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00711_6b2f80b9_cand_00",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00052/samples/00000.png",
+        "prompt_used": "A clear centered scene showing exactly two white cows standing on top of exactly six separate suitcases, and the six suitcases are stacked on top of exactly five wooden koalas. Arrange the objects in three visible horizontal layers: bottom layer has five distinct wooden koalas side by side, middle layer has six distinct suitcases resting on the koalas, top layer has two distinct white cows standing on the suitcases. Make every object fully visible, separated enough to count, with no extra cows, no extra suitcases, no extra koalas, and no hidden or heavily occluded objects.",
+        "seed": 1260
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Depict exactly 2 cows, exactly 6 suitcases, and exactly 5 wooden koalas.",
+          "Bind the white color only to the cows.",
+          "Bind the wooden material only to the koalas.",
+          "Arrange the scene as a clear vertical stack: cows on top, suitcases in the middle, koalas at the bottom.",
+          "Keep all objects fully visible and countable, with minimal overlap and no hidden items."
+        ],
+        "generation_strategy": "Create a clear, centered compositional scene with three horizontal layers. Place five wooden koalas on the bottom as the base, six distinct suitcases directly on top of the koalas, and two distinct white cows standing on top of the suitcases. Use spacing and front-facing visibility so every cow, suitcase, and koala can be counted separately.",
+        "initial_prompt": "A clear centered scene showing exactly two white cows standing on top of exactly six separate suitcases, and the six suitcases are stacked on top of exactly five wooden koalas. Arrange the objects in three visible horizontal layers: bottom layer has five distinct wooden koalas side by side, middle layer has six distinct suitcases resting on the koalas, top layer has two distinct white cows standing on the suitcases. Make every object fully visible, separated enough to count, with no extra cows, no extra suitcases, no extra koalas, and no hidden or heavily occluded objects.",
+        "parsed_constraints": {
+          "attributes": {
+            "cows": [
+              "white"
+            ],
+            "koalas": [
+              "wooden"
+            ]
+          },
+          "counts": {
+            "cows": 2,
+            "koalas": 5,
+            "suitcases": 6
+          },
+          "objects": [
+            "cows",
+            "suitcases",
+            "koalas"
+          ],
+          "relations": [
+            "two white cows are on top of six suitcases",
+            "six suitcases are on top of five wooden koalas"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Depict exactly 2 cows, exactly 6 suitcases, and exactly 5 wooden koalas.",
+          "Bind the white color only to the cows.",
+          "Bind the wooden material only to the koalas.",
+          "Arrange the scene as a clear vertical stack: cows on top, suitcases in the middle, koalas at the bottom.",
+          "Keep all objects fully visible and countable, with minimal overlap and no hidden items."
+        ],
+        "generation_strategy": "Create a clear, centered compositional scene with three horizontal layers. Place five wooden koalas on the bottom as the base, six distinct suitcases directly on top of the koalas, and two distinct white cows standing on top of the suitcases. Use spacing and front-facing visibility so every cow, suitcase, and koala can be counted separately.",
+        "initial_prompt": "A clear centered scene showing exactly two white cows standing on top of exactly six separate suitcases, and the six suitcases are stacked on top of exactly five wooden koalas. Arrange the objects in three visible horizontal layers: bottom layer has five distinct wooden koalas side by side, middle layer has six distinct suitcases resting on the koalas, top layer has two distinct white cows standing on the suitcases. Make every object fully visible, separated enough to count, with no extra cows, no extra suitcases, no extra koalas, and no hidden or heavily occluded objects.",
+        "parsed_constraints": {
+          "attributes": {
+            "cows": [
+              "white"
+            ],
+            "koalas": [
+              "wooden"
+            ]
+          },
+          "counts": {
+            "cows": 2,
+            "koalas": 5,
+            "suitcases": 6
+          },
+          "objects": [
+            "cows",
+            "suitcases",
+            "koalas"
+          ],
+          "relations": [
+            "two white cows are on top of six suitcases",
+            "six suitcases are on top of five wooden koalas"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many suitcases are in the image?",
+                "score": 1.7368570678997972e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.73686e-09",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many suitcases are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the suitcases on top of the koalas?",
+                "score": 8.667946327555601e-08,
+                "skill": "position"
+              },
+              "detected": "soft_score=8.66795e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the suitcases on top of the koalas?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many koalas are in the image?",
+                "score": 7.850132166634042e-07,
+                "skill": "count"
+              },
+              "detected": "soft_score=7.85013e-07",
+              "expected": "five",
+              "status": "failed",
+              "target": "How many koalas are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the koalas wooden?",
+                "score": 1.4518246845285354e-06,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1.45182e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the koalas wooden?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any koalas in the image?",
+                "score": 4.357765433769291e-10,
+                "skill": "object"
+              },
+              "detected": "soft_score=4.35777e-10",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any koalas in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00052/samples/00000.png",
+          "prompt": "A clear centered scene showing exactly two white cows standing on top of exactly six separate suitcases, and the six suitcases are stacked on top of exactly five wooden koalas. Arrange the objects in three visible horizontal layers: bottom layer has five distinct wooden koalas side by side, middle layer has six distinct suitcases resting on the koalas, top layer has two distinct white cows standing on the suitcases. Make every object fully visible, separated enough to count, with no extra cows, no extra suitcases, no extra koalas, and no hidden or heavily occluded objects.",
+          "round": 0,
+          "score": 0.4985903132497789
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00711_6b2f80b9_cand_00",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "attribute_mismatch",
+            "count_mismatch",
+            "missing_object",
+            "spatial_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many suitcases are in the image?",
+                "score": 1.7368570678997972e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.73686e-09",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many suitcases are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the suitcases on top of the koalas?",
+                "score": 8.667946327555601e-08,
+                "skill": "position"
+              },
+              "detected": "soft_score=8.66795e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the suitcases on top of the koalas?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many koalas are in the image?",
+                "score": 7.850132166634042e-07,
+                "skill": "count"
+              },
+              "detected": "soft_score=7.85013e-07",
+              "expected": "five",
+              "status": "failed",
+              "target": "How many koalas are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the koalas wooden?",
+                "score": 1.4518246845285354e-06,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1.45182e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the koalas wooden?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any koalas in the image?",
+                "score": 4.357765433769291e-10,
+                "skill": "object"
+              },
+              "detected": "soft_score=4.35777e-10",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any koalas in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cows are in the image?",
+                "score": 1.0,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "two",
+              "status": "passed",
+              "target": "How many cows are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows white?",
+                "score": 0.9859011166299751,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.985901",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the cows white?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any cows in the image?",
+                "score": 0.9999999719457264,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any cows in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows on top of the suitcases?",
+                "score": 0.9999997337276056,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the cows on top of the suitcases?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any suitcases in the image?",
+                "score": 0.999999984504484,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any suitcases in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.4985903132497789,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many suitcases are in the image?",
+                  "score": 1.7368570678997972e-09,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1.73686e-09",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many suitcases are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the suitcases on top of the koalas?",
+                  "score": 8.667946327555601e-08,
+                  "skill": "position"
+                },
+                "detected": "soft_score=8.66795e-08",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the suitcases on top of the koalas?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many koalas are in the image?",
+                  "score": 7.850132166634042e-07,
+                  "skill": "count"
+                },
+                "detected": "soft_score=7.85013e-07",
+                "expected": "five",
+                "status": "failed",
+                "target": "How many koalas are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the koalas wooden?",
+                  "score": 1.4518246845285354e-06,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1.45182e-06",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the koalas wooden?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any koalas in the image?",
+                  "score": 4.357765433769291e-10,
+                  "skill": "object"
+                },
+                "detected": "soft_score=4.35777e-10",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are there any koalas in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00052/samples/00000.png",
+            "prompt": "A clear centered scene showing exactly two white cows standing on top of exactly six separate suitcases, and the six suitcases are stacked on top of exactly five wooden koalas. Arrange the objects in three visible horizontal layers: bottom layer has five distinct wooden koalas side by side, middle layer has six distinct suitcases resting on the koalas, top layer has two distinct white cows standing on the suitcases. Make every object fully visible, separated enough to count, with no extra cows, no extra suitcases, no extra koalas, and no hidden or heavily occluded objects.",
+            "round": 0,
+            "score": 0.4985903132497789
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many suitcases are in the image?",
+                "score": 1.7368570678997972e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.73686e-09",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many suitcases are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the suitcases on top of the koalas?",
+                "score": 8.667946327555601e-08,
+                "skill": "position"
+              },
+              "detected": "soft_score=8.66795e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the suitcases on top of the koalas?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many koalas are in the image?",
+                "score": 7.850132166634042e-07,
+                "skill": "count"
+              },
+              "detected": "soft_score=7.85013e-07",
+              "expected": "five",
+              "status": "failed",
+              "target": "How many koalas are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the koalas wooden?",
+                "score": 1.4518246845285354e-06,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1.45182e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the koalas wooden?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any koalas in the image?",
+                "score": 4.357765433769291e-10,
+                "skill": "object"
+              },
+              "detected": "soft_score=4.35777e-10",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any koalas in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "attribute_mismatch",
+            "count_mismatch",
+            "missing_object",
+            "spatial_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many suitcases are in the image?",
+                "score": 1.7368570678997972e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.73686e-09",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many suitcases are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the suitcases on top of the koalas?",
+                "score": 8.667946327555601e-08,
+                "skill": "position"
+              },
+              "detected": "soft_score=8.66795e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the suitcases on top of the koalas?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many koalas are in the image?",
+                "score": 7.850132166634042e-07,
+                "skill": "count"
+              },
+              "detected": "soft_score=7.85013e-07",
+              "expected": "five",
+              "status": "failed",
+              "target": "How many koalas are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the koalas wooden?",
+                "score": 1.4518246845285354e-06,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1.45182e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the koalas wooden?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any koalas in the image?",
+                "score": 4.357765433769291e-10,
+                "skill": "object"
+              },
+              "detected": "soft_score=4.35777e-10",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any koalas in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cows are in the image?",
+                "score": 1.0,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "two",
+              "status": "passed",
+              "target": "How many cows are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows white?",
+                "score": 0.9859011166299751,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.985901",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the cows white?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any cows in the image?",
+                "score": 0.9999999719457264,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any cows in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows on top of the suitcases?",
+                "score": 0.9999997337276056,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the cows on top of the suitcases?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any suitcases in the image?",
+                "score": 0.999999984504484,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any suitcases in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.4985903132497789,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "two white cows on top of six suitcases on top of five wooden koalas",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many suitcases are in the image?",
+              "score": 1.7368570678997972e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.73686e-09",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many suitcases are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the suitcases on top of the koalas?",
+              "score": 8.667946327555601e-08,
+              "skill": "position"
+            },
+            "detected": "soft_score=8.66795e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the suitcases on top of the koalas?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many koalas are in the image?",
+              "score": 7.850132166634042e-07,
+              "skill": "count"
+            },
+            "detected": "soft_score=7.85013e-07",
+            "expected": "five",
+            "status": "failed",
+            "target": "How many koalas are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the koalas wooden?",
+              "score": 1.4518246845285354e-06,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1.45182e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the koalas wooden?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any koalas in the image?",
+              "score": 4.357765433769291e-10,
+              "skill": "object"
+            },
+            "detected": "soft_score=4.35777e-10",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any koalas in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly 2 cows, exactly 6 suitcases, and exactly 5 wooden koalas.",
+            "Bind the white color only to the cows.",
+            "Bind the wooden material only to the koalas.",
+            "Arrange the scene as a clear vertical stack: cows on top, suitcases in the middle, koalas at the bottom.",
+            "Keep all objects fully visible and countable, with minimal overlap and no hidden items."
+          ],
+          "generation_strategy": "Create a clear, centered compositional scene with three horizontal layers. Place five wooden koalas on the bottom as the base, six distinct suitcases directly on top of the koalas, and two distinct white cows standing on top of the suitcases. Use spacing and front-facing visibility so every cow, suitcase, and koala can be counted separately.",
+          "initial_prompt": "A clear centered scene showing exactly two white cows standing on top of exactly six separate suitcases, and the six suitcases are stacked on top of exactly five wooden koalas. Arrange the objects in three visible horizontal layers: bottom layer has five distinct wooden koalas side by side, middle layer has six distinct suitcases resting on the koalas, top layer has two distinct white cows standing on the suitcases. Make every object fully visible, separated enough to count, with no extra cows, no extra suitcases, no extra koalas, and no hidden or heavily occluded objects.",
+          "parsed_constraints": {
+            "attributes": {
+              "cows": [
+                "white"
+              ],
+              "koalas": [
+                "wooden"
+              ]
+            },
+            "counts": {
+              "cows": 2,
+              "koalas": 5,
+              "suitcases": 6
+            },
+            "objects": [
+              "cows",
+              "suitcases",
+              "koalas"
+            ],
+            "relations": [
+              "two white cows are on top of six suitcases",
+              "six suitcases are on top of five wooden koalas"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly 2 cows, exactly 6 suitcases, and exactly 5 wooden koalas.",
+            "Bind the white color only to the cows.",
+            "Bind the wooden material only to the koalas.",
+            "Arrange the scene as a clear vertical stack: cows on top, suitcases in the middle, koalas at the bottom.",
+            "Keep all objects fully visible and countable, with minimal overlap and no hidden items."
+          ],
+          "generation_strategy": "Create a clear, centered compositional scene with three horizontal layers. Place five wooden koalas on the bottom as the base, six distinct suitcases directly on top of the koalas, and two distinct white cows standing on top of the suitcases. Use spacing and front-facing visibility so every cow, suitcase, and koala can be counted separately.",
+          "initial_prompt": "A clear centered scene showing exactly two white cows standing on top of exactly six separate suitcases, and the six suitcases are stacked on top of exactly five wooden koalas. Arrange the objects in three visible horizontal layers: bottom layer has five distinct wooden koalas side by side, middle layer has six distinct suitcases resting on the koalas, top layer has two distinct white cows standing on the suitcases. Make every object fully visible, separated enough to count, with no extra cows, no extra suitcases, no extra koalas, and no hidden or heavily occluded objects.",
+          "parsed_constraints": {
+            "attributes": {
+              "cows": [
+                "white"
+              ],
+              "koalas": [
+                "wooden"
+              ]
+            },
+            "counts": {
+              "cows": 2,
+              "koalas": 5,
+              "suitcases": 6
+            },
+            "objects": [
+              "cows",
+              "suitcases",
+              "koalas"
+            ],
+            "relations": [
+              "two white cows are on top of six suitcases",
+              "six suitcases are on top of five wooden koalas"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_prompt": "A clear centered scene showing exactly two white cows standing on top of exactly six separate suitcases, and the six suitcases are stacked on top of exactly five wooden koalas. Arrange the objects in three visible horizontal layers: bottom layer has five distinct wooden koalas side by side, middle layer has six distinct suitcases resting on the koalas, top layer has two distinct white cows standing on the suitcases. Make every object fully visible, separated enough to count, with no extra cows, no extra suitcases, no extra koalas, and no hidden or heavily occluded objects.",
+        "previous_selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ],
+        "prompt_id": "geneval2_00711_6b2f80b9",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "attribute_mismatch",
+              "count_mismatch",
+              "missing_object",
+              "spatial_mismatch"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many suitcases are in the image?",
+                  "score": 1.7368570678997972e-09,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1.73686e-09",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many suitcases are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the suitcases on top of the koalas?",
+                  "score": 8.667946327555601e-08,
+                  "skill": "position"
+                },
+                "detected": "soft_score=8.66795e-08",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the suitcases on top of the koalas?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many koalas are in the image?",
+                  "score": 7.850132166634042e-07,
+                  "skill": "count"
+                },
+                "detected": "soft_score=7.85013e-07",
+                "expected": "five",
+                "status": "failed",
+                "target": "How many koalas are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the koalas wooden?",
+                  "score": 1.4518246845285354e-06,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1.45182e-06",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the koalas wooden?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any koalas in the image?",
+                  "score": 4.357765433769291e-10,
+                  "skill": "object"
+                },
+                "detected": "soft_score=4.35777e-10",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are there any koalas in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many cows are in the image?",
+                  "score": 1.0,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1",
+                "expected": "two",
+                "status": "passed",
+                "target": "How many cows are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the cows white?",
+                  "score": 0.9859011166299751,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.985901",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the cows white?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any cows in the image?",
+                  "score": 0.9999999719457264,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any cows in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the cows on top of the suitcases?",
+                  "score": 0.9999997337276056,
+                  "skill": "position"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the cows on top of the suitcases?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any suitcases in the image?",
+                  "score": 0.999999984504484,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any suitcases in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Depict exactly 2 cows, exactly 6 suitcases, and exactly 5 wooden koalas.",
+                "Bind the white color only to the cows.",
+                "Bind the wooden material only to the koalas.",
+                "Arrange the scene as a clear vertical stack: cows on top, suitcases in the middle, koalas at the bottom.",
+                "Keep all objects fully visible and countable, with minimal overlap and no hidden items."
+              ],
+              "generation_strategy": "Create a clear, centered compositional scene with three horizontal layers. Place five wooden koalas on the bottom as the base, six distinct suitcases directly on top of the koalas, and two distinct white cows standing on top of the suitcases. Use spacing and front-facing visibility so every cow, suitcase, and koala can be counted separately.",
+              "initial_prompt": "A clear centered scene showing exactly two white cows standing on top of exactly six separate suitcases, and the six suitcases are stacked on top of exactly five wooden koalas. Arrange the objects in three visible horizontal layers: bottom layer has five distinct wooden koalas side by side, middle layer has six distinct suitcases resting on the koalas, top layer has two distinct white cows standing on the suitcases. Make every object fully visible, separated enough to count, with no extra cows, no extra suitcases, no extra koalas, and no hidden or heavily occluded objects.",
+              "parsed_constraints": {
+                "attributes": {
+                  "cows": [
+                    "white"
+                  ],
+                  "koalas": [
+                    "wooden"
+                  ]
+                },
+                "counts": {
+                  "cows": 2,
+                  "koalas": 5,
+                  "suitcases": 6
+                },
+                "objects": [
+                  "cows",
+                  "suitcases",
+                  "koalas"
+                ],
+                "relations": [
+                  "two white cows are on top of six suitcases",
+                  "six suitcases are on top of five wooden koalas"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Depict exactly 2 cows, exactly 6 suitcases, and exactly 5 wooden koalas.",
+                "Bind the white color only to the cows.",
+                "Bind the wooden material only to the koalas.",
+                "Arrange the scene as a clear vertical stack: cows on top, suitcases in the middle, koalas at the bottom.",
+                "Keep all objects fully visible and countable, with minimal overlap and no hidden items."
+              ],
+              "generation_strategy": "Create a clear, centered compositional scene with three horizontal layers. Place five wooden koalas on the bottom as the base, six distinct suitcases directly on top of the koalas, and two distinct white cows standing on top of the suitcases. Use spacing and front-facing visibility so every cow, suitcase, and koala can be counted separately.",
+              "initial_prompt": "A clear centered scene showing exactly two white cows standing on top of exactly six separate suitcases, and the six suitcases are stacked on top of exactly five wooden koalas. Arrange the objects in three visible horizontal layers: bottom layer has five distinct wooden koalas side by side, middle layer has six distinct suitcases resting on the koalas, top layer has two distinct white cows standing on the suitcases. Make every object fully visible, separated enough to count, with no extra cows, no extra suitcases, no extra koalas, and no hidden or heavily occluded objects.",
+              "parsed_constraints": {
+                "attributes": {
+                  "cows": [
+                    "white"
+                  ],
+                  "koalas": [
+                    "wooden"
+                  ]
+                },
+                "counts": {
+                  "cows": 2,
+                  "koalas": 5,
+                  "suitcases": 6
+                },
+                "objects": [
+                  "cows",
+                  "suitcases",
+                  "koalas"
+                ],
+                "relations": [
+                  "two white cows are on top of six suitcases",
+                  "six suitcases are on top of five wooden koalas"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "prompt_used": "A clear centered scene showing exactly two white cows standing on top of exactly six separate suitcases, and the six suitcases are stacked on top of exactly five wooden koalas. Arrange the objects in three visible horizontal layers: bottom layer has five distinct wooden koalas side by side, middle layer has six distinct suitcases resting on the koalas, top layer has two distinct white cows standing on the suitcases. Make every object fully visible, separated enough to count, with no extra cows, no extra suitcases, no extra koalas, and no hidden or heavily occluded objects.",
+            "round": 0,
+            "score": 0.4985903132497789,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 4,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many suitcases are in the image?",
+                    "score": 1.7368570678997972e-09,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=1.73686e-09",
+                  "expected": "six",
+                  "status": "failed",
+                  "target": "How many suitcases are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 6,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the suitcases on top of the koalas?",
+                    "score": 8.667946327555601e-08,
+                    "skill": "position"
+                  },
+                  "detected": "soft_score=8.66795e-08",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the suitcases on top of the koalas?",
+                  "type": "spatial_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 7,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many koalas are in the image?",
+                    "score": 7.850132166634042e-07,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=7.85013e-07",
+                  "expected": "five",
+                  "status": "failed",
+                  "target": "How many koalas are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 8,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the koalas wooden?",
+                    "score": 1.4518246845285354e-06,
+                    "skill": "attribute"
+                  },
+                  "detected": "soft_score=1.45182e-06",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the koalas wooden?",
+                  "type": "attribute_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 9,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are there any koalas in the image?",
+                    "score": 4.357765433769291e-10,
+                    "skill": "object"
+                  },
+                  "detected": "soft_score=4.35777e-10",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are there any koalas in the image?",
+                  "type": "missing_object"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00711_6b2f80b9"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many suitcases are in the image?",
+              "score": 1.7368570678997972e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.73686e-09",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many suitcases are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the suitcases on top of the koalas?",
+              "score": 8.667946327555601e-08,
+              "skill": "position"
+            },
+            "detected": "soft_score=8.66795e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the suitcases on top of the koalas?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many koalas are in the image?",
+              "score": 7.850132166634042e-07,
+              "skill": "count"
+            },
+            "detected": "soft_score=7.85013e-07",
+            "expected": "five",
+            "status": "failed",
+            "target": "How many koalas are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the koalas wooden?",
+              "score": 1.4518246845285354e-06,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1.45182e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the koalas wooden?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any koalas in the image?",
+              "score": 4.357765433769291e-10,
+              "skill": "object"
+            },
+            "detected": "soft_score=4.35777e-10",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any koalas in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00711_6b2f80b9_cand_00",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Depict exactly 2 cows, exactly 6 suitcases, and exactly 5 wooden koalas.",
+      "Bind the white color only to the cows.",
+      "Bind the wooden material only to the koalas.",
+      "Arrange the scene as a clear vertical stack: cows on top, suitcases in the middle, koalas at the bottom.",
+      "Keep all objects fully visible and countable, with minimal overlap and no hidden items."
+    ],
+    "generation_strategy": "Create a clear, centered compositional scene with three horizontal layers. Place five wooden koalas on the bottom as the base, six distinct suitcases directly on top of the koalas, and two distinct white cows standing on top of the suitcases. Use spacing and front-facing visibility so every cow, suitcase, and koala can be counted separately.",
+    "initial_prompt": "A clear centered scene showing exactly two white cows standing on top of exactly six separate suitcases, and the six suitcases are stacked on top of exactly five wooden koalas. Arrange the objects in three visible horizontal layers: bottom layer has five distinct wooden koalas side by side, middle layer has six distinct suitcases resting on the koalas, top layer has two distinct white cows standing on the suitcases. Make every object fully visible, separated enough to count, with no extra cows, no extra suitcases, no extra koalas, and no hidden or heavily occluded objects.",
+    "parsed_constraints": {
+      "attributes": {
+        "cows": [
+          "white"
+        ],
+        "koalas": [
+          "wooden"
+        ]
+      },
+      "counts": {
+        "cows": 2,
+        "koalas": 5,
+        "suitcases": 6
+      },
+      "objects": [
+        "cows",
+        "suitcases",
+        "koalas"
+      ],
+      "relations": [
+        "two white cows are on top of six suitcases",
+        "six suitcases are on top of five wooden koalas"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image preserved the two white cows, the presence of suitcases, and the cows standing on suitcases, but failed to make the lower support layer recognizable: the five koalas were missing or not detected, their wooden material was not clear, the six-suitcase count was not reliably countable, and the suitcases were not clearly on top of the koalas. The next prompt should make the koalas larger, front-facing, separated, explicitly wooden, and directly underneath the suitcases in a simple stacked display.",
+    "expected_improvement": [
+      "Five koalas should be visibly present and countable as five separate wooden koala figures.",
+      "Six suitcases should be visibly present and countable as six separate items with no extras.",
+      "The suitcases should clearly rest directly on top of the five wooden koalas.",
+      "The already-passed constraints should remain: exactly two cows, white cows, cows present, suitcases present, and cows on top of the suitcases."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "spatial_mismatch",
+      "attribute_mismatch",
+      "missing_object"
+    ],
+    "preserve_constraints": [
+      "Keep exactly two cows visible.",
+      "Bind the white color specifically to the two cows.",
+      "Keep the cows clearly present and fully visible.",
+      "Keep the two white cows standing on top of the suitcases.",
+      "Keep suitcases clearly present and visible."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt described a three-layer stack, but the bottom koala layer was likely too visually difficult or too occluded under the suitcases, causing the model or verifier to miss the koalas and their wooden material. It also did not force the six suitcases and five koalas into a highly countable, front-facing arrangement with enough vertical separation to verify that the suitcases are on the koalas.",
+      "error_source": "Insufficient object-presence emphasis, countability, material binding, and spatial clarity for the lower wooden koala layer."
+    },
+    "regeneration_strategy": "Use a simple front-facing vertical display with three separated horizontal tiers. Make the five wooden koalas large, carved-looking, and side by side at the bottom; place exactly six separate suitcases in a clearly visible row directly resting on the koalas; place exactly two white cows standing on the suitcases. Emphasize visible gaps, full bodies, no overlap, and no extra duplicates.",
+    "regression_risks": [
+      "The generator may reduce the number of suitcases or merge adjacent suitcases.",
+      "The generator may omit koalas or turn them into non-wooden animals instead of wooden koalas.",
+      "The cows could stop being white or the cow count could change while repairing the lower layers.",
+      "The stacked relation could become ambiguous if objects overlap too much."
+    ],
+    "repair_constraints": [
+      "Show exactly six suitcases, each as a separate visible suitcase, with no extra suitcases and no merged duplicates.",
+      "Show exactly five koalas, each as a separate visible koala, with no extra koalas and no hidden koalas.",
+      "Bind the wooden material to the five koalas: each koala should look like a carved wooden koala with brown wood grain.",
+      "Place the six suitcases directly on top of the five wooden koalas, with the suitcase bottoms visibly resting on the koalas.",
+      "Keep exactly two white cows standing on top of the suitcases."
+    ],
+    "retry_prompt": "A clear front-facing scene with three simple horizontal layers. Bottom layer: exactly five separate wooden koalas, all fully visible, side by side, each clearly shaped like a koala and made of carved brown wood with visible wood grain. Middle layer: exactly six separate suitcases, all fully visible and countable, arranged in one row directly resting on top of the five wooden koalas; the bottoms of the suitcases clearly touch the koalas. Top layer: exactly two white cows, both fully visible, standing on top of the suitcases. Keep the two cows white. Make every cow, suitcase, and wooden koala distinct with small gaps between neighboring objects, no occlusion, no cropped objects, no extra cows, no extra suitcases, and no extra koalas.",
+    "skill_revision": {
+      "new_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "Use the same skill set but apply it more strongly: prioritize object_presence and attribute_binding for the wooden koalas, quantity_counting for exactly five koalas and six suitcases, and spatial_layout plus anti_occlusion to make the suitcases visibly rest on the koalas."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many suitcases are in the image?",
+            "score": 1.7368570678997972e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.73686e-09",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many suitcases are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the suitcases on top of the koalas?",
+            "score": 8.667946327555601e-08,
+            "skill": "position"
+          },
+          "detected": "soft_score=8.66795e-08",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the suitcases on top of the koalas?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many koalas are in the image?",
+            "score": 7.850132166634042e-07,
+            "skill": "count"
+          },
+          "detected": "soft_score=7.85013e-07",
+          "expected": "five",
+          "status": "failed",
+          "target": "How many koalas are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the koalas wooden?",
+            "score": 1.4518246845285354e-06,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1.45182e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the koalas wooden?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any koalas in the image?",
+            "score": 4.357765433769291e-10,
+            "skill": "object"
+          },
+          "detected": "soft_score=4.35777e-10",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any koalas in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00052/samples/00000.png",
+      "prompt": "A clear centered scene showing exactly two white cows standing on top of exactly six separate suitcases, and the six suitcases are stacked on top of exactly five wooden koalas. Arrange the objects in three visible horizontal layers: bottom layer has five distinct wooden koalas side by side, middle layer has six distinct suitcases resting on the koalas, top layer has two distinct white cows standing on the suitcases. Make every object fully visible, separated enough to count, with no extra cows, no extra suitcases, no extra koalas, and no hidden or heavily occluded objects.",
+      "round": 0,
+      "score": 0.4985903132497789
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00711_6b2f80b9_cand_00",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "count_mismatch",
+        "missing_object",
+        "spatial_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many suitcases are in the image?",
+            "score": 1.7368570678997972e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.73686e-09",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many suitcases are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the suitcases on top of the koalas?",
+            "score": 8.667946327555601e-08,
+            "skill": "position"
+          },
+          "detected": "soft_score=8.66795e-08",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the suitcases on top of the koalas?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many koalas are in the image?",
+            "score": 7.850132166634042e-07,
+            "skill": "count"
+          },
+          "detected": "soft_score=7.85013e-07",
+          "expected": "five",
+          "status": "failed",
+          "target": "How many koalas are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the koalas wooden?",
+            "score": 1.4518246845285354e-06,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1.45182e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the koalas wooden?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any koalas in the image?",
+            "score": 4.357765433769291e-10,
+            "skill": "object"
+          },
+          "detected": "soft_score=4.35777e-10",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any koalas in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cows are in the image?",
+            "score": 1.0,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "two",
+          "status": "passed",
+          "target": "How many cows are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cows white?",
+            "score": 0.9859011166299751,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.985901",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the cows white?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any cows in the image?",
+            "score": 0.9999999719457264,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any cows in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cows on top of the suitcases?",
+            "score": 0.9999997337276056,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the cows on top of the suitcases?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any suitcases in the image?",
+            "score": 0.999999984504484,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any suitcases in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.4985903132497789,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many suitcases are in the image?",
+              "score": 1.7368570678997972e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.73686e-09",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many suitcases are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the suitcases on top of the koalas?",
+              "score": 8.667946327555601e-08,
+              "skill": "position"
+            },
+            "detected": "soft_score=8.66795e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the suitcases on top of the koalas?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many koalas are in the image?",
+              "score": 7.850132166634042e-07,
+              "skill": "count"
+            },
+            "detected": "soft_score=7.85013e-07",
+            "expected": "five",
+            "status": "failed",
+            "target": "How many koalas are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the koalas wooden?",
+              "score": 1.4518246845285354e-06,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1.45182e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the koalas wooden?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any koalas in the image?",
+              "score": 4.357765433769291e-10,
+              "skill": "object"
+            },
+            "detected": "soft_score=4.35777e-10",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any koalas in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00052/samples/00000.png",
+        "prompt": "A clear centered scene showing exactly two white cows standing on top of exactly six separate suitcases, and the six suitcases are stacked on top of exactly five wooden koalas. Arrange the objects in three visible horizontal layers: bottom layer has five distinct wooden koalas side by side, middle layer has six distinct suitcases resting on the koalas, top layer has two distinct white cows standing on the suitcases. Make every object fully visible, separated enough to count, with no extra cows, no extra suitcases, no extra koalas, and no hidden or heavily occluded objects.",
+        "round": 0,
+        "score": 0.4985903132497789
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many suitcases are in the image?",
+            "score": 1.7368570678997972e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.73686e-09",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many suitcases are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the suitcases on top of the koalas?",
+            "score": 8.667946327555601e-08,
+            "skill": "position"
+          },
+          "detected": "soft_score=8.66795e-08",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the suitcases on top of the koalas?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many koalas are in the image?",
+            "score": 7.850132166634042e-07,
+            "skill": "count"
+          },
+          "detected": "soft_score=7.85013e-07",
+          "expected": "five",
+          "status": "failed",
+          "target": "How many koalas are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the koalas wooden?",
+            "score": 1.4518246845285354e-06,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1.45182e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the koalas wooden?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any koalas in the image?",
+            "score": 4.357765433769291e-10,
+            "skill": "object"
+          },
+          "detected": "soft_score=4.35777e-10",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any koalas in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "count_mismatch",
+        "missing_object",
+        "spatial_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many suitcases are in the image?",
+            "score": 1.7368570678997972e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.73686e-09",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many suitcases are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the suitcases on top of the koalas?",
+            "score": 8.667946327555601e-08,
+            "skill": "position"
+          },
+          "detected": "soft_score=8.66795e-08",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the suitcases on top of the koalas?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many koalas are in the image?",
+            "score": 7.850132166634042e-07,
+            "skill": "count"
+          },
+          "detected": "soft_score=7.85013e-07",
+          "expected": "five",
+          "status": "failed",
+          "target": "How many koalas are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the koalas wooden?",
+            "score": 1.4518246845285354e-06,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1.45182e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the koalas wooden?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any koalas in the image?",
+            "score": 4.357765433769291e-10,
+            "skill": "object"
+          },
+          "detected": "soft_score=4.35777e-10",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any koalas in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cows are in the image?",
+            "score": 1.0,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "two",
+          "status": "passed",
+          "target": "How many cows are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cows white?",
+            "score": 0.9859011166299751,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.985901",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the cows white?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any cows in the image?",
+            "score": 0.9999999719457264,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any cows in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cows on top of the suitcases?",
+            "score": 0.9999997337276056,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the cows on top of the suitcases?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any suitcases in the image?",
+            "score": 0.999999984504484,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any suitcases in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.4985903132497789,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "two white cows on top of six suitcases on top of five wooden koalas",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many suitcases are in the image?",
+          "score": 1.7368570678997972e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.73686e-09",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many suitcases are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 6,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the suitcases on top of the koalas?",
+          "score": 8.667946327555601e-08,
+          "skill": "position"
+        },
+        "detected": "soft_score=8.66795e-08",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the suitcases on top of the koalas?",
+        "type": "spatial_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many koalas are in the image?",
+          "score": 7.850132166634042e-07,
+          "skill": "count"
+        },
+        "detected": "soft_score=7.85013e-07",
+        "expected": "five",
+        "status": "failed",
+        "target": "How many koalas are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the koalas wooden?",
+          "score": 1.4518246845285354e-06,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=1.45182e-06",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the koalas wooden?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 9,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any koalas in the image?",
+          "score": 4.357765433769291e-10,
+          "skill": "object"
+        },
+        "detected": "soft_score=4.35777e-10",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are there any koalas in the image?",
+        "type": "missing_object"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Depict exactly 2 cows, exactly 6 suitcases, and exactly 5 wooden koalas.",
+        "Bind the white color only to the cows.",
+        "Bind the wooden material only to the koalas.",
+        "Arrange the scene as a clear vertical stack: cows on top, suitcases in the middle, koalas at the bottom.",
+        "Keep all objects fully visible and countable, with minimal overlap and no hidden items."
+      ],
+      "generation_strategy": "Create a clear, centered compositional scene with three horizontal layers. Place five wooden koalas on the bottom as the base, six distinct suitcases directly on top of the koalas, and two distinct white cows standing on top of the suitcases. Use spacing and front-facing visibility so every cow, suitcase, and koala can be counted separately.",
+      "initial_prompt": "A clear centered scene showing exactly two white cows standing on top of exactly six separate suitcases, and the six suitcases are stacked on top of exactly five wooden koalas. Arrange the objects in three visible horizontal layers: bottom layer has five distinct wooden koalas side by side, middle layer has six distinct suitcases resting on the koalas, top layer has two distinct white cows standing on the suitcases. Make every object fully visible, separated enough to count, with no extra cows, no extra suitcases, no extra koalas, and no hidden or heavily occluded objects.",
+      "parsed_constraints": {
+        "attributes": {
+          "cows": [
+            "white"
+          ],
+          "koalas": [
+            "wooden"
+          ]
+        },
+        "counts": {
+          "cows": 2,
+          "koalas": 5,
+          "suitcases": 6
+        },
+        "objects": [
+          "cows",
+          "suitcases",
+          "koalas"
+        ],
+        "relations": [
+          "two white cows are on top of six suitcases",
+          "six suitcases are on top of five wooden koalas"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Depict exactly 2 cows, exactly 6 suitcases, and exactly 5 wooden koalas.",
+        "Bind the white color only to the cows.",
+        "Bind the wooden material only to the koalas.",
+        "Arrange the scene as a clear vertical stack: cows on top, suitcases in the middle, koalas at the bottom.",
+        "Keep all objects fully visible and countable, with minimal overlap and no hidden items."
+      ],
+      "generation_strategy": "Create a clear, centered compositional scene with three horizontal layers. Place five wooden koalas on the bottom as the base, six distinct suitcases directly on top of the koalas, and two distinct white cows standing on top of the suitcases. Use spacing and front-facing visibility so every cow, suitcase, and koala can be counted separately.",
+      "initial_prompt": "A clear centered scene showing exactly two white cows standing on top of exactly six separate suitcases, and the six suitcases are stacked on top of exactly five wooden koalas. Arrange the objects in three visible horizontal layers: bottom layer has five distinct wooden koalas side by side, middle layer has six distinct suitcases resting on the koalas, top layer has two distinct white cows standing on the suitcases. Make every object fully visible, separated enough to count, with no extra cows, no extra suitcases, no extra koalas, and no hidden or heavily occluded objects.",
+      "parsed_constraints": {
+        "attributes": {
+          "cows": [
+            "white"
+          ],
+          "koalas": [
+            "wooden"
+          ]
+        },
+        "counts": {
+          "cows": 2,
+          "koalas": 5,
+          "suitcases": 6
+        },
+        "objects": [
+          "cows",
+          "suitcases",
+          "koalas"
+        ],
+        "relations": [
+          "two white cows are on top of six suitcases",
+          "six suitcases are on top of five wooden koalas"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_prompt": "A clear centered scene showing exactly two white cows standing on top of exactly six separate suitcases, and the six suitcases are stacked on top of exactly five wooden koalas. Arrange the objects in three visible horizontal layers: bottom layer has five distinct wooden koalas side by side, middle layer has six distinct suitcases resting on the koalas, top layer has two distinct white cows standing on the suitcases. Make every object fully visible, separated enough to count, with no extra cows, no extra suitcases, no extra koalas, and no hidden or heavily occluded objects.",
+    "previous_selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ],
+    "prompt_id": "geneval2_00711_6b2f80b9",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "count_mismatch",
+          "missing_object",
+          "spatial_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many suitcases are in the image?",
+              "score": 1.7368570678997972e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.73686e-09",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many suitcases are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the suitcases on top of the koalas?",
+              "score": 8.667946327555601e-08,
+              "skill": "position"
+            },
+            "detected": "soft_score=8.66795e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the suitcases on top of the koalas?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many koalas are in the image?",
+              "score": 7.850132166634042e-07,
+              "skill": "count"
+            },
+            "detected": "soft_score=7.85013e-07",
+            "expected": "five",
+            "status": "failed",
+            "target": "How many koalas are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the koalas wooden?",
+              "score": 1.4518246845285354e-06,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1.45182e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the koalas wooden?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any koalas in the image?",
+              "score": 4.357765433769291e-10,
+              "skill": "object"
+            },
+            "detected": "soft_score=4.35777e-10",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any koalas in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cows are in the image?",
+              "score": 1.0,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "two",
+            "status": "passed",
+            "target": "How many cows are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows white?",
+              "score": 0.9859011166299751,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.985901",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the cows white?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any cows in the image?",
+              "score": 0.9999999719457264,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any cows in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows on top of the suitcases?",
+              "score": 0.9999997337276056,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the cows on top of the suitcases?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any suitcases in the image?",
+              "score": 0.999999984504484,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any suitcases in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly 2 cows, exactly 6 suitcases, and exactly 5 wooden koalas.",
+            "Bind the white color only to the cows.",
+            "Bind the wooden material only to the koalas.",
+            "Arrange the scene as a clear vertical stack: cows on top, suitcases in the middle, koalas at the bottom.",
+            "Keep all objects fully visible and countable, with minimal overlap and no hidden items."
+          ],
+          "generation_strategy": "Create a clear, centered compositional scene with three horizontal layers. Place five wooden koalas on the bottom as the base, six distinct suitcases directly on top of the koalas, and two distinct white cows standing on top of the suitcases. Use spacing and front-facing visibility so every cow, suitcase, and koala can be counted separately.",
+          "initial_prompt": "A clear centered scene showing exactly two white cows standing on top of exactly six separate suitcases, and the six suitcases are stacked on top of exactly five wooden koalas. Arrange the objects in three visible horizontal layers: bottom layer has five distinct wooden koalas side by side, middle layer has six distinct suitcases resting on the koalas, top layer has two distinct white cows standing on the suitcases. Make every object fully visible, separated enough to count, with no extra cows, no extra suitcases, no extra koalas, and no hidden or heavily occluded objects.",
+          "parsed_constraints": {
+            "attributes": {
+              "cows": [
+                "white"
+              ],
+              "koalas": [
+                "wooden"
+              ]
+            },
+            "counts": {
+              "cows": 2,
+              "koalas": 5,
+              "suitcases": 6
+            },
+            "objects": [
+              "cows",
+              "suitcases",
+              "koalas"
+            ],
+            "relations": [
+              "two white cows are on top of six suitcases",
+              "six suitcases are on top of five wooden koalas"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly 2 cows, exactly 6 suitcases, and exactly 5 wooden koalas.",
+            "Bind the white color only to the cows.",
+            "Bind the wooden material only to the koalas.",
+            "Arrange the scene as a clear vertical stack: cows on top, suitcases in the middle, koalas at the bottom.",
+            "Keep all objects fully visible and countable, with minimal overlap and no hidden items."
+          ],
+          "generation_strategy": "Create a clear, centered compositional scene with three horizontal layers. Place five wooden koalas on the bottom as the base, six distinct suitcases directly on top of the koalas, and two distinct white cows standing on top of the suitcases. Use spacing and front-facing visibility so every cow, suitcase, and koala can be counted separately.",
+          "initial_prompt": "A clear centered scene showing exactly two white cows standing on top of exactly six separate suitcases, and the six suitcases are stacked on top of exactly five wooden koalas. Arrange the objects in three visible horizontal layers: bottom layer has five distinct wooden koalas side by side, middle layer has six distinct suitcases resting on the koalas, top layer has two distinct white cows standing on the suitcases. Make every object fully visible, separated enough to count, with no extra cows, no extra suitcases, no extra koalas, and no hidden or heavily occluded objects.",
+          "parsed_constraints": {
+            "attributes": {
+              "cows": [
+                "white"
+              ],
+              "koalas": [
+                "wooden"
+              ]
+            },
+            "counts": {
+              "cows": 2,
+              "koalas": 5,
+              "suitcases": 6
+            },
+            "objects": [
+              "cows",
+              "suitcases",
+              "koalas"
+            ],
+            "relations": [
+              "two white cows are on top of six suitcases",
+              "six suitcases are on top of five wooden koalas"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "prompt_used": "A clear centered scene showing exactly two white cows standing on top of exactly six separate suitcases, and the six suitcases are stacked on top of exactly five wooden koalas. Arrange the objects in three visible horizontal layers: bottom layer has five distinct wooden koalas side by side, middle layer has six distinct suitcases resting on the koalas, top layer has two distinct white cows standing on the suitcases. Make every object fully visible, separated enough to count, with no extra cows, no extra suitcases, no extra koalas, and no hidden or heavily occluded objects.",
+        "round": 0,
+        "score": 0.4985903132497789,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many suitcases are in the image?",
+                "score": 1.7368570678997972e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.73686e-09",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many suitcases are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the suitcases on top of the koalas?",
+                "score": 8.667946327555601e-08,
+                "skill": "position"
+              },
+              "detected": "soft_score=8.66795e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the suitcases on top of the koalas?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many koalas are in the image?",
+                "score": 7.850132166634042e-07,
+                "skill": "count"
+              },
+              "detected": "soft_score=7.85013e-07",
+              "expected": "five",
+              "status": "failed",
+              "target": "How many koalas are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the koalas wooden?",
+                "score": 1.4518246845285354e-06,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1.45182e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the koalas wooden?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any koalas in the image?",
+                "score": 4.357765433769291e-10,
+                "skill": "object"
+              },
+              "detected": "soft_score=4.35777e-10",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any koalas in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00711_6b2f80b9"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many suitcases are in the image?",
+          "score": 1.7368570678997972e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.73686e-09",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many suitcases are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 6,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the suitcases on top of the koalas?",
+          "score": 8.667946327555601e-08,
+          "skill": "position"
+        },
+        "detected": "soft_score=8.66795e-08",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the suitcases on top of the koalas?",
+        "type": "spatial_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many koalas are in the image?",
+          "score": 7.850132166634042e-07,
+          "skill": "count"
+        },
+        "detected": "soft_score=7.85013e-07",
+        "expected": "five",
+        "status": "failed",
+        "target": "How many koalas are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the koalas wooden?",
+          "score": 1.4518246845285354e-06,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=1.45182e-06",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the koalas wooden?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 9,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any koalas in the image?",
+          "score": 4.357765433769291e-10,
+          "skill": "object"
+        },
+        "detected": "soft_score=4.35777e-10",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are there any koalas in the image?",
+        "type": "missing_object"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00052/samples/00000.png",
+    "best_so_far_prompt": "A clear centered scene showing exactly two white cows standing on top of exactly six separate suitcases, and the six suitcases are stacked on top of exactly five wooden koalas. Arrange the objects in three visible horizontal layers: bottom layer has five distinct wooden koalas side by side, middle layer has six distinct suitcases resting on the koalas, top layer has two distinct white cows standing on the suitcases. Make every object fully visible, separated enough to count, with no extra cows, no extra suitcases, no extra koalas, and no hidden or heavily occluded objects.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.4985903132497789,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many suitcases are in the image?",
+          "score": 1.7368570678997972e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.73686e-09",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many suitcases are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 6,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the suitcases on top of the koalas?",
+          "score": 8.667946327555601e-08,
+          "skill": "position"
+        },
+        "detected": "soft_score=8.66795e-08",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the suitcases on top of the koalas?",
+        "type": "spatial_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many koalas are in the image?",
+          "score": 7.850132166634042e-07,
+          "skill": "count"
+        },
+        "detected": "soft_score=7.85013e-07",
+        "expected": "five",
+        "status": "failed",
+        "target": "How many koalas are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the koalas wooden?",
+          "score": 1.4518246845285354e-06,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=1.45182e-06",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the koalas wooden?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 9,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any koalas in the image?",
+          "score": 4.357765433769291e-10,
+          "skill": "object"
+        },
+        "detected": "soft_score=4.35777e-10",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are there any koalas in the image?",
+        "type": "missing_object"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Depict exactly 2 cows, exactly 6 suitcases, and exactly 5 wooden koalas.",
+        "Bind the white color only to the cows.",
+        "Bind the wooden material only to the koalas.",
+        "Arrange the scene as a clear vertical stack: cows on top, suitcases in the middle, koalas at the bottom.",
+        "Keep all objects fully visible and countable, with minimal overlap and no hidden items."
+      ],
+      "generation_strategy": "Create a clear, centered compositional scene with three horizontal layers. Place five wooden koalas on the bottom as the base, six distinct suitcases directly on top of the koalas, and two distinct white cows standing on top of the suitcases. Use spacing and front-facing visibility so every cow, suitcase, and koala can be counted separately.",
+      "initial_prompt": "A clear centered scene showing exactly two white cows standing on top of exactly six separate suitcases, and the six suitcases are stacked on top of exactly five wooden koalas. Arrange the objects in three visible horizontal layers: bottom layer has five distinct wooden koalas side by side, middle layer has six distinct suitcases resting on the koalas, top layer has two distinct white cows standing on the suitcases. Make every object fully visible, separated enough to count, with no extra cows, no extra suitcases, no extra koalas, and no hidden or heavily occluded objects.",
+      "parsed_constraints": {
+        "attributes": {
+          "cows": [
+            "white"
+          ],
+          "koalas": [
+            "wooden"
+          ]
+        },
+        "counts": {
+          "cows": 2,
+          "koalas": 5,
+          "suitcases": 6
+        },
+        "objects": [
+          "cows",
+          "suitcases",
+          "koalas"
+        ],
+        "relations": [
+          "two white cows are on top of six suitcases",
+          "six suitcases are on top of five wooden koalas"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.499 failed=['How many suitcases are in the image?', 'Are the suitcases on top of the koalas?', 'How many koalas are in the image?', 'Are the koalas wooden?', 'Are there any koalas in the image?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_incremental/snapshot_002_worker_00/geneval2_00711_6b2f80b9__geneval2_00711_6b2f80b9_cand_00__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00711_6b2f80b9__geneval2_00711_6b2f80b9_cand_00__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00711_6b2f80b9",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image preserved the two white cows, the presence of suitcases, and the cows standing on suitcases, but failed to make the lower support layer recognizable: the five koalas were missing or not detected, their wooden material was not clear, the six-suitcase count was not reliably countable, and the suitcases were not clearly on top of the koalas. The next prompt should make the koalas larger, front-facing, separated, explicitly wooden, and directly underneath the suitcases in a simple stacked display.",
+    "expected_improvement": [
+      "Five koalas should be visibly present and countable as five separate wooden koala figures.",
+      "Six suitcases should be visibly present and countable as six separate items with no extras.",
+      "The suitcases should clearly rest directly on top of the five wooden koalas.",
+      "The already-passed constraints should remain: exactly two cows, white cows, cows present, suitcases present, and cows on top of the suitcases."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "spatial_mismatch",
+      "attribute_mismatch",
+      "missing_object"
+    ],
+    "preserve_constraints": [
+      "Keep exactly two cows visible.",
+      "Bind the white color specifically to the two cows.",
+      "Keep the cows clearly present and fully visible.",
+      "Keep the two white cows standing on top of the suitcases.",
+      "Keep suitcases clearly present and visible."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt described a three-layer stack, but the bottom koala layer was likely too visually difficult or too occluded under the suitcases, causing the model or verifier to miss the koalas and their wooden material. It also did not force the six suitcases and five koalas into a highly countable, front-facing arrangement with enough vertical separation to verify that the suitcases are on the koalas.",
+      "error_source": "Insufficient object-presence emphasis, countability, material binding, and spatial clarity for the lower wooden koala layer."
+    },
+    "regeneration_strategy": "Use a simple front-facing vertical display with three separated horizontal tiers. Make the five wooden koalas large, carved-looking, and side by side at the bottom; place exactly six separate suitcases in a clearly visible row directly resting on the koalas; place exactly two white cows standing on the suitcases. Emphasize visible gaps, full bodies, no overlap, and no extra duplicates.",
+    "regression_risks": [
+      "The generator may reduce the number of suitcases or merge adjacent suitcases.",
+      "The generator may omit koalas or turn them into non-wooden animals instead of wooden koalas.",
+      "The cows could stop being white or the cow count could change while repairing the lower layers.",
+      "The stacked relation could become ambiguous if objects overlap too much."
+    ],
+    "repair_constraints": [
+      "Show exactly six suitcases, each as a separate visible suitcase, with no extra suitcases and no merged duplicates.",
+      "Show exactly five koalas, each as a separate visible koala, with no extra koalas and no hidden koalas.",
+      "Bind the wooden material to the five koalas: each koala should look like a carved wooden koala with brown wood grain.",
+      "Place the six suitcases directly on top of the five wooden koalas, with the suitcase bottoms visibly resting on the koalas.",
+      "Keep exactly two white cows standing on top of the suitcases."
+    ],
+    "retry_prompt": "A clear front-facing scene with three simple horizontal layers. Bottom layer: exactly five separate wooden koalas, all fully visible, side by side, each clearly shaped like a koala and made of carved brown wood with visible wood grain. Middle layer: exactly six separate suitcases, all fully visible and countable, arranged in one row directly resting on top of the five wooden koalas; the bottoms of the suitcases clearly touch the koalas. Top layer: exactly two white cows, both fully visible, standing on top of the suitcases. Keep the two cows white. Make every cow, suitcase, and wooden koala distinct with small gaps between neighboring objects, no occlusion, no cropped objects, no extra cows, no extra suitcases, and no extra koalas.",
+    "skill_revision": {
+      "new_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "Use the same skill set but apply it more strongly: prioritize object_presence and attribute_binding for the wooden koalas, quantity_counting for exactly five koalas and six suitcases, and spatial_layout plus anti_occlusion to make the suitcases visibly rest on the koalas."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "two white cows on top of six suitcases on top of five wooden koalas",
+    "prompt": "two white cows on top of six suitcases on top of five wooden koalas",
+    "prompt_id": "geneval2_00711_6b2f80b9",
+    "sampling_bucket": "position_spatial",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 2,
+      "count": 3,
+      "object": 3,
+      "position": 2
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 711,
+    "vqa_list": [
+      [
+        "How many cows are in the image?",
+        "two"
+      ],
+      [
+        "Are the cows white?",
+        "Yes"
+      ],
+      [
+        "Are there any cows in the image?",
+        "Yes"
+      ],
+      [
+        "Are the cows on top of the suitcases?",
+        "Yes"
+      ],
+      [
+        "How many suitcases are in the image?",
+        "six"
+      ],
+      [
+        "Are there any suitcases in the image?",
+        "Yes"
+      ],
+      [
+        "Are the suitcases on top of the koalas?",
+        "Yes"
+      ],
+      [
+        "How many koalas are in the image?",
+        "five"
+      ],
+      [
+        "Are the koalas wooden?",
+        "Yes"
+      ],
+      [
+        "Are there any koalas in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00711_6b2f80b9"
+}

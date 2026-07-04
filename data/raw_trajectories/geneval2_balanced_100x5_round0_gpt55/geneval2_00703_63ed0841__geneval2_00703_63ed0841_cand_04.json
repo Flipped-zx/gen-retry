@@ -1,0 +1,3143 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "count_mismatch",
+          "missing_object",
+          "spatial_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many mushrooms are in the image?",
+              "score": 1.7009772577187188e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.70098e-08",
+            "expected": "five",
+            "status": "failed",
+            "target": "How many mushrooms are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the mushrooms on top of the toys?",
+              "score": 3.9271830419476027e-07,
+              "skill": "position"
+            },
+            "detected": "soft_score=3.92718e-07",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the mushrooms on top of the toys?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many toys are in the image?",
+              "score": 0.0009266437858529339,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.000926644",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many toys are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any toys in the image?",
+              "score": 1.7753979399681707e-05,
+              "skill": "object"
+            },
+            "detected": "soft_score=1.7754e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any toys in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the toys behind the bears?",
+              "score": 1.012995774872374e-05,
+              "skill": "position"
+            },
+            "detected": "soft_score=1.013e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the toys behind the bears?",
+            "type": "spatial_mismatch"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the mushrooms pink?",
+              "score": 0.9999994290119503,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.999999",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the mushrooms pink?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any mushrooms in the image?",
+              "score": 0.9999999812562237,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any mushrooms in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many bears are in the image?",
+              "score": 0.9999995495066857,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "four",
+            "status": "passed",
+            "target": "How many bears are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the bears white?",
+              "score": 0.9819902311865008,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.98199",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the bears white?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any bears in the image?",
+              "score": 0.9999999513065632,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any bears in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_002/raw_score_lists.by_candidate.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00703_63ed0841_cand_04",
+          "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_002/raw_score_lists.by_candidate.json",
+          "rows": [
+            {
+              "answer": "five",
+              "atom_count": 10,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00703_63ed0841_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00041/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00041/samples/00004.png",
+              "prompt": "five pink mushrooms on top of four toys behind four white bears",
+              "prompt_id": "geneval2_00703_63ed0841",
+              "question": "How many mushrooms are in the image?",
+              "score": 1.7009772577187188e-08,
+              "skill": "count",
+              "source_index": 703
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00703_63ed0841_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00041/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00041/samples/00004.png",
+              "prompt": "five pink mushrooms on top of four toys behind four white bears",
+              "prompt_id": "geneval2_00703_63ed0841",
+              "question": "Are the mushrooms pink?",
+              "score": 0.9999994290119503,
+              "skill": "attribute",
+              "source_index": 703
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00703_63ed0841_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00041/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00041/samples/00004.png",
+              "prompt": "five pink mushrooms on top of four toys behind four white bears",
+              "prompt_id": "geneval2_00703_63ed0841",
+              "question": "Are there any mushrooms in the image?",
+              "score": 0.9999999812562237,
+              "skill": "object",
+              "source_index": 703
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00703_63ed0841_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00041/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00041/samples/00004.png",
+              "prompt": "five pink mushrooms on top of four toys behind four white bears",
+              "prompt_id": "geneval2_00703_63ed0841",
+              "question": "Are the mushrooms on top of the toys?",
+              "score": 3.9271830419476027e-07,
+              "skill": "position",
+              "source_index": 703
+            },
+            {
+              "answer": "four",
+              "atom_count": 10,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00703_63ed0841_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00041/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00041/samples/00004.png",
+              "prompt": "five pink mushrooms on top of four toys behind four white bears",
+              "prompt_id": "geneval2_00703_63ed0841",
+              "question": "How many toys are in the image?",
+              "score": 0.0009266437858529339,
+              "skill": "count",
+              "source_index": 703
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00703_63ed0841_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00041/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00041/samples/00004.png",
+              "prompt": "five pink mushrooms on top of four toys behind four white bears",
+              "prompt_id": "geneval2_00703_63ed0841",
+              "question": "Are there any toys in the image?",
+              "score": 1.7753979399681707e-05,
+              "skill": "object",
+              "source_index": 703
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00703_63ed0841_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00041/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00041/samples/00004.png",
+              "prompt": "five pink mushrooms on top of four toys behind four white bears",
+              "prompt_id": "geneval2_00703_63ed0841",
+              "question": "Are the toys behind the bears?",
+              "score": 1.012995774872374e-05,
+              "skill": "position",
+              "source_index": 703
+            },
+            {
+              "answer": "four",
+              "atom_count": 10,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00703_63ed0841_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00041/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00041/samples/00004.png",
+              "prompt": "five pink mushrooms on top of four toys behind four white bears",
+              "prompt_id": "geneval2_00703_63ed0841",
+              "question": "How many bears are in the image?",
+              "score": 0.9999995495066857,
+              "skill": "count",
+              "source_index": 703
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00703_63ed0841_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00041/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00041/samples/00004.png",
+              "prompt": "five pink mushrooms on top of four toys behind four white bears",
+              "prompt_id": "geneval2_00703_63ed0841",
+              "question": "Are the bears white?",
+              "score": 0.9819902311865008,
+              "skill": "attribute",
+              "source_index": 703
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00703_63ed0841_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00041/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00041/samples/00004.png",
+              "prompt": "five pink mushrooms on top of four toys behind four white bears",
+              "prompt_id": "geneval2_00703_63ed0841",
+              "question": "Are there any bears in the image?",
+              "score": 0.9999999513065632,
+              "skill": "object",
+              "source_index": 703
+            }
+          ],
+          "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_002/raw_score_lists.by_candidate.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.49829440797190017,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 4,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00703_63ed0841.json",
+          "manifest_prompt_index": 41,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00703_63ed0841"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00703_63ed0841_cand_04",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00041/samples/00004.png",
+        "prompt_used": "A clear layered scene with exactly four white bears in the foreground, arranged side by side. Directly behind the bears are exactly four distinct toys, partially but clearly visible, positioned as a middle row behind the bears. On top of the four toys are exactly five pink mushrooms total: place one pink mushroom on top of three of the toys and two pink mushrooms on top of the remaining toy. The mushrooms must visibly rest on the toys, not on the bears or ground. Keep all four white bears, all four toys, and all five pink mushrooms separated and countable, with no extra bears, toys, or mushrooms and minimal occlusion.",
+        "seed": 1209
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly five mushrooms, exactly four toys, and exactly four bears.",
+          "Bind pink color only to the mushrooms and white color to the bears.",
+          "Make the toys behind the bears while keeping all four toys at least partly visible.",
+          "Place all five mushrooms on top of the four toys; do not place mushrooms on the bears or ground.",
+          "Avoid occlusion that hides counts; keep each object separable and countable.",
+          "Do not add extra mushrooms, toys, or bears."
+        ],
+        "generation_strategy": "Use a layered spatial composition with four white bears in the foreground, four distinct toys in a middle row behind the bears, and five pink mushrooms resting on top of the toys. Keep the toys' upper surfaces visible above or between the bears so the mushrooms-on-toys relation is clear, and separate all objects enough for reliable counting.",
+        "initial_prompt": "A clear layered scene with exactly four white bears in the foreground, arranged side by side. Directly behind the bears are exactly four distinct toys, partially but clearly visible, positioned as a middle row behind the bears. On top of the four toys are exactly five pink mushrooms total: place one pink mushroom on top of three of the toys and two pink mushrooms on top of the remaining toy. The mushrooms must visibly rest on the toys, not on the bears or ground. Keep all four white bears, all four toys, and all five pink mushrooms separated and countable, with no extra bears, toys, or mushrooms and minimal occlusion.",
+        "parsed_constraints": {
+          "attributes": {
+            "bears": [
+              "white"
+            ],
+            "mushrooms": [
+              "pink"
+            ]
+          },
+          "counts": {
+            "bears": 4,
+            "mushrooms": 5,
+            "toys": 4
+          },
+          "objects": [
+            "mushrooms",
+            "toys",
+            "bears"
+          ],
+          "relations": [
+            "mushrooms on top of toys",
+            "toys behind bears"
+          ]
+        },
+        "selected_skills": [
+          "quantity_counting",
+          "attribute_binding",
+          "object_presence",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility",
+          "negative_constraints"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly five mushrooms, exactly four toys, and exactly four bears.",
+          "Bind pink color only to the mushrooms and white color to the bears.",
+          "Make the toys behind the bears while keeping all four toys at least partly visible.",
+          "Place all five mushrooms on top of the four toys; do not place mushrooms on the bears or ground.",
+          "Avoid occlusion that hides counts; keep each object separable and countable.",
+          "Do not add extra mushrooms, toys, or bears."
+        ],
+        "generation_strategy": "Use a layered spatial composition with four white bears in the foreground, four distinct toys in a middle row behind the bears, and five pink mushrooms resting on top of the toys. Keep the toys' upper surfaces visible above or between the bears so the mushrooms-on-toys relation is clear, and separate all objects enough for reliable counting.",
+        "initial_prompt": "A clear layered scene with exactly four white bears in the foreground, arranged side by side. Directly behind the bears are exactly four distinct toys, partially but clearly visible, positioned as a middle row behind the bears. On top of the four toys are exactly five pink mushrooms total: place one pink mushroom on top of three of the toys and two pink mushrooms on top of the remaining toy. The mushrooms must visibly rest on the toys, not on the bears or ground. Keep all four white bears, all four toys, and all five pink mushrooms separated and countable, with no extra bears, toys, or mushrooms and minimal occlusion.",
+        "parsed_constraints": {
+          "attributes": {
+            "bears": [
+              "white"
+            ],
+            "mushrooms": [
+              "pink"
+            ]
+          },
+          "counts": {
+            "bears": 4,
+            "mushrooms": 5,
+            "toys": 4
+          },
+          "objects": [
+            "mushrooms",
+            "toys",
+            "bears"
+          ],
+          "relations": [
+            "mushrooms on top of toys",
+            "toys behind bears"
+          ]
+        },
+        "selected_skills": [
+          "quantity_counting",
+          "attribute_binding",
+          "object_presence",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility",
+          "negative_constraints"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many mushrooms are in the image?",
+                "score": 1.7009772577187188e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.70098e-08",
+              "expected": "five",
+              "status": "failed",
+              "target": "How many mushrooms are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the mushrooms on top of the toys?",
+                "score": 3.9271830419476027e-07,
+                "skill": "position"
+              },
+              "detected": "soft_score=3.92718e-07",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the mushrooms on top of the toys?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many toys are in the image?",
+                "score": 0.0009266437858529339,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.000926644",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many toys are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any toys in the image?",
+                "score": 1.7753979399681707e-05,
+                "skill": "object"
+              },
+              "detected": "soft_score=1.7754e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any toys in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the toys behind the bears?",
+                "score": 1.012995774872374e-05,
+                "skill": "position"
+              },
+              "detected": "soft_score=1.013e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the toys behind the bears?",
+              "type": "spatial_mismatch"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00041/samples/00004.png",
+          "prompt": "A clear layered scene with exactly four white bears in the foreground, arranged side by side. Directly behind the bears are exactly four distinct toys, partially but clearly visible, positioned as a middle row behind the bears. On top of the four toys are exactly five pink mushrooms total: place one pink mushroom on top of three of the toys and two pink mushrooms on top of the remaining toy. The mushrooms must visibly rest on the toys, not on the bears or ground. Keep all four white bears, all four toys, and all five pink mushrooms separated and countable, with no extra bears, toys, or mushrooms and minimal occlusion.",
+          "round": 0,
+          "score": 0.49829440797190017
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00703_63ed0841_cand_04",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "count_mismatch",
+            "missing_object",
+            "spatial_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many mushrooms are in the image?",
+                "score": 1.7009772577187188e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.70098e-08",
+              "expected": "five",
+              "status": "failed",
+              "target": "How many mushrooms are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the mushrooms on top of the toys?",
+                "score": 3.9271830419476027e-07,
+                "skill": "position"
+              },
+              "detected": "soft_score=3.92718e-07",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the mushrooms on top of the toys?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many toys are in the image?",
+                "score": 0.0009266437858529339,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.000926644",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many toys are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any toys in the image?",
+                "score": 1.7753979399681707e-05,
+                "skill": "object"
+              },
+              "detected": "soft_score=1.7754e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any toys in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the toys behind the bears?",
+                "score": 1.012995774872374e-05,
+                "skill": "position"
+              },
+              "detected": "soft_score=1.013e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the toys behind the bears?",
+              "type": "spatial_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the mushrooms pink?",
+                "score": 0.9999994290119503,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.999999",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the mushrooms pink?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any mushrooms in the image?",
+                "score": 0.9999999812562237,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any mushrooms in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many bears are in the image?",
+                "score": 0.9999995495066857,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "four",
+              "status": "passed",
+              "target": "How many bears are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the bears white?",
+                "score": 0.9819902311865008,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.98199",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the bears white?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any bears in the image?",
+                "score": 0.9999999513065632,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any bears in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.49829440797190017,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many mushrooms are in the image?",
+                  "score": 1.7009772577187188e-08,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1.70098e-08",
+                "expected": "five",
+                "status": "failed",
+                "target": "How many mushrooms are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the mushrooms on top of the toys?",
+                  "score": 3.9271830419476027e-07,
+                  "skill": "position"
+                },
+                "detected": "soft_score=3.92718e-07",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the mushrooms on top of the toys?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many toys are in the image?",
+                  "score": 0.0009266437858529339,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.000926644",
+                "expected": "four",
+                "status": "failed",
+                "target": "How many toys are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any toys in the image?",
+                  "score": 1.7753979399681707e-05,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1.7754e-05",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are there any toys in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the toys behind the bears?",
+                  "score": 1.012995774872374e-05,
+                  "skill": "position"
+                },
+                "detected": "soft_score=1.013e-05",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the toys behind the bears?",
+                "type": "spatial_mismatch"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00041/samples/00004.png",
+            "prompt": "A clear layered scene with exactly four white bears in the foreground, arranged side by side. Directly behind the bears are exactly four distinct toys, partially but clearly visible, positioned as a middle row behind the bears. On top of the four toys are exactly five pink mushrooms total: place one pink mushroom on top of three of the toys and two pink mushrooms on top of the remaining toy. The mushrooms must visibly rest on the toys, not on the bears or ground. Keep all four white bears, all four toys, and all five pink mushrooms separated and countable, with no extra bears, toys, or mushrooms and minimal occlusion.",
+            "round": 0,
+            "score": 0.49829440797190017
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many mushrooms are in the image?",
+                "score": 1.7009772577187188e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.70098e-08",
+              "expected": "five",
+              "status": "failed",
+              "target": "How many mushrooms are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the mushrooms on top of the toys?",
+                "score": 3.9271830419476027e-07,
+                "skill": "position"
+              },
+              "detected": "soft_score=3.92718e-07",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the mushrooms on top of the toys?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many toys are in the image?",
+                "score": 0.0009266437858529339,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.000926644",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many toys are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any toys in the image?",
+                "score": 1.7753979399681707e-05,
+                "skill": "object"
+              },
+              "detected": "soft_score=1.7754e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any toys in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the toys behind the bears?",
+                "score": 1.012995774872374e-05,
+                "skill": "position"
+              },
+              "detected": "soft_score=1.013e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the toys behind the bears?",
+              "type": "spatial_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "count_mismatch",
+            "missing_object",
+            "spatial_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many mushrooms are in the image?",
+                "score": 1.7009772577187188e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.70098e-08",
+              "expected": "five",
+              "status": "failed",
+              "target": "How many mushrooms are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the mushrooms on top of the toys?",
+                "score": 3.9271830419476027e-07,
+                "skill": "position"
+              },
+              "detected": "soft_score=3.92718e-07",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the mushrooms on top of the toys?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many toys are in the image?",
+                "score": 0.0009266437858529339,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.000926644",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many toys are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any toys in the image?",
+                "score": 1.7753979399681707e-05,
+                "skill": "object"
+              },
+              "detected": "soft_score=1.7754e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any toys in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the toys behind the bears?",
+                "score": 1.012995774872374e-05,
+                "skill": "position"
+              },
+              "detected": "soft_score=1.013e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the toys behind the bears?",
+              "type": "spatial_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the mushrooms pink?",
+                "score": 0.9999994290119503,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.999999",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the mushrooms pink?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any mushrooms in the image?",
+                "score": 0.9999999812562237,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any mushrooms in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many bears are in the image?",
+                "score": 0.9999995495066857,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "four",
+              "status": "passed",
+              "target": "How many bears are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the bears white?",
+                "score": 0.9819902311865008,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.98199",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the bears white?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any bears in the image?",
+                "score": 0.9999999513065632,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any bears in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.49829440797190017,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "five pink mushrooms on top of four toys behind four white bears",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many mushrooms are in the image?",
+              "score": 1.7009772577187188e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.70098e-08",
+            "expected": "five",
+            "status": "failed",
+            "target": "How many mushrooms are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the mushrooms on top of the toys?",
+              "score": 3.9271830419476027e-07,
+              "skill": "position"
+            },
+            "detected": "soft_score=3.92718e-07",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the mushrooms on top of the toys?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many toys are in the image?",
+              "score": 0.0009266437858529339,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.000926644",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many toys are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any toys in the image?",
+              "score": 1.7753979399681707e-05,
+              "skill": "object"
+            },
+            "detected": "soft_score=1.7754e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any toys in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the toys behind the bears?",
+              "score": 1.012995774872374e-05,
+              "skill": "position"
+            },
+            "detected": "soft_score=1.013e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the toys behind the bears?",
+            "type": "spatial_mismatch"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly five mushrooms, exactly four toys, and exactly four bears.",
+            "Bind pink color only to the mushrooms and white color to the bears.",
+            "Make the toys behind the bears while keeping all four toys at least partly visible.",
+            "Place all five mushrooms on top of the four toys; do not place mushrooms on the bears or ground.",
+            "Avoid occlusion that hides counts; keep each object separable and countable.",
+            "Do not add extra mushrooms, toys, or bears."
+          ],
+          "generation_strategy": "Use a layered spatial composition with four white bears in the foreground, four distinct toys in a middle row behind the bears, and five pink mushrooms resting on top of the toys. Keep the toys' upper surfaces visible above or between the bears so the mushrooms-on-toys relation is clear, and separate all objects enough for reliable counting.",
+          "initial_prompt": "A clear layered scene with exactly four white bears in the foreground, arranged side by side. Directly behind the bears are exactly four distinct toys, partially but clearly visible, positioned as a middle row behind the bears. On top of the four toys are exactly five pink mushrooms total: place one pink mushroom on top of three of the toys and two pink mushrooms on top of the remaining toy. The mushrooms must visibly rest on the toys, not on the bears or ground. Keep all four white bears, all four toys, and all five pink mushrooms separated and countable, with no extra bears, toys, or mushrooms and minimal occlusion.",
+          "parsed_constraints": {
+            "attributes": {
+              "bears": [
+                "white"
+              ],
+              "mushrooms": [
+                "pink"
+              ]
+            },
+            "counts": {
+              "bears": 4,
+              "mushrooms": 5,
+              "toys": 4
+            },
+            "objects": [
+              "mushrooms",
+              "toys",
+              "bears"
+            ],
+            "relations": [
+              "mushrooms on top of toys",
+              "toys behind bears"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "attribute_binding",
+            "object_presence",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly five mushrooms, exactly four toys, and exactly four bears.",
+            "Bind pink color only to the mushrooms and white color to the bears.",
+            "Make the toys behind the bears while keeping all four toys at least partly visible.",
+            "Place all five mushrooms on top of the four toys; do not place mushrooms on the bears or ground.",
+            "Avoid occlusion that hides counts; keep each object separable and countable.",
+            "Do not add extra mushrooms, toys, or bears."
+          ],
+          "generation_strategy": "Use a layered spatial composition with four white bears in the foreground, four distinct toys in a middle row behind the bears, and five pink mushrooms resting on top of the toys. Keep the toys' upper surfaces visible above or between the bears so the mushrooms-on-toys relation is clear, and separate all objects enough for reliable counting.",
+          "initial_prompt": "A clear layered scene with exactly four white bears in the foreground, arranged side by side. Directly behind the bears are exactly four distinct toys, partially but clearly visible, positioned as a middle row behind the bears. On top of the four toys are exactly five pink mushrooms total: place one pink mushroom on top of three of the toys and two pink mushrooms on top of the remaining toy. The mushrooms must visibly rest on the toys, not on the bears or ground. Keep all four white bears, all four toys, and all five pink mushrooms separated and countable, with no extra bears, toys, or mushrooms and minimal occlusion.",
+          "parsed_constraints": {
+            "attributes": {
+              "bears": [
+                "white"
+              ],
+              "mushrooms": [
+                "pink"
+              ]
+            },
+            "counts": {
+              "bears": 4,
+              "mushrooms": 5,
+              "toys": 4
+            },
+            "objects": [
+              "mushrooms",
+              "toys",
+              "bears"
+            ],
+            "relations": [
+              "mushrooms on top of toys",
+              "toys behind bears"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "attribute_binding",
+            "object_presence",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "previous_prompt": "A clear layered scene with exactly four white bears in the foreground, arranged side by side. Directly behind the bears are exactly four distinct toys, partially but clearly visible, positioned as a middle row behind the bears. On top of the four toys are exactly five pink mushrooms total: place one pink mushroom on top of three of the toys and two pink mushrooms on top of the remaining toy. The mushrooms must visibly rest on the toys, not on the bears or ground. Keep all four white bears, all four toys, and all five pink mushrooms separated and countable, with no extra bears, toys, or mushrooms and minimal occlusion.",
+        "previous_selected_skills": [
+          "quantity_counting",
+          "attribute_binding",
+          "object_presence",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility",
+          "negative_constraints"
+        ],
+        "prompt_id": "geneval2_00703_63ed0841",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "count_mismatch",
+              "missing_object",
+              "spatial_mismatch"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many mushrooms are in the image?",
+                  "score": 1.7009772577187188e-08,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1.70098e-08",
+                "expected": "five",
+                "status": "failed",
+                "target": "How many mushrooms are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the mushrooms on top of the toys?",
+                  "score": 3.9271830419476027e-07,
+                  "skill": "position"
+                },
+                "detected": "soft_score=3.92718e-07",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the mushrooms on top of the toys?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many toys are in the image?",
+                  "score": 0.0009266437858529339,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.000926644",
+                "expected": "four",
+                "status": "failed",
+                "target": "How many toys are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any toys in the image?",
+                  "score": 1.7753979399681707e-05,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1.7754e-05",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are there any toys in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the toys behind the bears?",
+                  "score": 1.012995774872374e-05,
+                  "skill": "position"
+                },
+                "detected": "soft_score=1.013e-05",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the toys behind the bears?",
+                "type": "spatial_mismatch"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the mushrooms pink?",
+                  "score": 0.9999994290119503,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.999999",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the mushrooms pink?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any mushrooms in the image?",
+                  "score": 0.9999999812562237,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any mushrooms in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many bears are in the image?",
+                  "score": 0.9999995495066857,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1",
+                "expected": "four",
+                "status": "passed",
+                "target": "How many bears are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the bears white?",
+                  "score": 0.9819902311865008,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.98199",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the bears white?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any bears in the image?",
+                  "score": 0.9999999513065632,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any bears in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly five mushrooms, exactly four toys, and exactly four bears.",
+                "Bind pink color only to the mushrooms and white color to the bears.",
+                "Make the toys behind the bears while keeping all four toys at least partly visible.",
+                "Place all five mushrooms on top of the four toys; do not place mushrooms on the bears or ground.",
+                "Avoid occlusion that hides counts; keep each object separable and countable.",
+                "Do not add extra mushrooms, toys, or bears."
+              ],
+              "generation_strategy": "Use a layered spatial composition with four white bears in the foreground, four distinct toys in a middle row behind the bears, and five pink mushrooms resting on top of the toys. Keep the toys' upper surfaces visible above or between the bears so the mushrooms-on-toys relation is clear, and separate all objects enough for reliable counting.",
+              "initial_prompt": "A clear layered scene with exactly four white bears in the foreground, arranged side by side. Directly behind the bears are exactly four distinct toys, partially but clearly visible, positioned as a middle row behind the bears. On top of the four toys are exactly five pink mushrooms total: place one pink mushroom on top of three of the toys and two pink mushrooms on top of the remaining toy. The mushrooms must visibly rest on the toys, not on the bears or ground. Keep all four white bears, all four toys, and all five pink mushrooms separated and countable, with no extra bears, toys, or mushrooms and minimal occlusion.",
+              "parsed_constraints": {
+                "attributes": {
+                  "bears": [
+                    "white"
+                  ],
+                  "mushrooms": [
+                    "pink"
+                  ]
+                },
+                "counts": {
+                  "bears": 4,
+                  "mushrooms": 5,
+                  "toys": 4
+                },
+                "objects": [
+                  "mushrooms",
+                  "toys",
+                  "bears"
+                ],
+                "relations": [
+                  "mushrooms on top of toys",
+                  "toys behind bears"
+                ]
+              },
+              "selected_skills": [
+                "quantity_counting",
+                "attribute_binding",
+                "object_presence",
+                "spatial_layout",
+                "multi_object_composition",
+                "anti_occlusion",
+                "clarity_visibility",
+                "negative_constraints"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly five mushrooms, exactly four toys, and exactly four bears.",
+                "Bind pink color only to the mushrooms and white color to the bears.",
+                "Make the toys behind the bears while keeping all four toys at least partly visible.",
+                "Place all five mushrooms on top of the four toys; do not place mushrooms on the bears or ground.",
+                "Avoid occlusion that hides counts; keep each object separable and countable.",
+                "Do not add extra mushrooms, toys, or bears."
+              ],
+              "generation_strategy": "Use a layered spatial composition with four white bears in the foreground, four distinct toys in a middle row behind the bears, and five pink mushrooms resting on top of the toys. Keep the toys' upper surfaces visible above or between the bears so the mushrooms-on-toys relation is clear, and separate all objects enough for reliable counting.",
+              "initial_prompt": "A clear layered scene with exactly four white bears in the foreground, arranged side by side. Directly behind the bears are exactly four distinct toys, partially but clearly visible, positioned as a middle row behind the bears. On top of the four toys are exactly five pink mushrooms total: place one pink mushroom on top of three of the toys and two pink mushrooms on top of the remaining toy. The mushrooms must visibly rest on the toys, not on the bears or ground. Keep all four white bears, all four toys, and all five pink mushrooms separated and countable, with no extra bears, toys, or mushrooms and minimal occlusion.",
+              "parsed_constraints": {
+                "attributes": {
+                  "bears": [
+                    "white"
+                  ],
+                  "mushrooms": [
+                    "pink"
+                  ]
+                },
+                "counts": {
+                  "bears": 4,
+                  "mushrooms": 5,
+                  "toys": 4
+                },
+                "objects": [
+                  "mushrooms",
+                  "toys",
+                  "bears"
+                ],
+                "relations": [
+                  "mushrooms on top of toys",
+                  "toys behind bears"
+                ]
+              },
+              "selected_skills": [
+                "quantity_counting",
+                "attribute_binding",
+                "object_presence",
+                "spatial_layout",
+                "multi_object_composition",
+                "anti_occlusion",
+                "clarity_visibility",
+                "negative_constraints"
+              ]
+            },
+            "prompt_used": "A clear layered scene with exactly four white bears in the foreground, arranged side by side. Directly behind the bears are exactly four distinct toys, partially but clearly visible, positioned as a middle row behind the bears. On top of the four toys are exactly five pink mushrooms total: place one pink mushroom on top of three of the toys and two pink mushrooms on top of the remaining toy. The mushrooms must visibly rest on the toys, not on the bears or ground. Keep all four white bears, all four toys, and all five pink mushrooms separated and countable, with no extra bears, toys, or mushrooms and minimal occlusion.",
+            "round": 0,
+            "score": 0.49829440797190017,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 0,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many mushrooms are in the image?",
+                    "score": 1.7009772577187188e-08,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=1.70098e-08",
+                  "expected": "five",
+                  "status": "failed",
+                  "target": "How many mushrooms are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 3,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the mushrooms on top of the toys?",
+                    "score": 3.9271830419476027e-07,
+                    "skill": "position"
+                  },
+                  "detected": "soft_score=3.92718e-07",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the mushrooms on top of the toys?",
+                  "type": "spatial_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 4,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many toys are in the image?",
+                    "score": 0.0009266437858529339,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=0.000926644",
+                  "expected": "four",
+                  "status": "failed",
+                  "target": "How many toys are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 5,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are there any toys in the image?",
+                    "score": 1.7753979399681707e-05,
+                    "skill": "object"
+                  },
+                  "detected": "soft_score=1.7754e-05",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are there any toys in the image?",
+                  "type": "missing_object"
+                },
+                {
+                  "details": {
+                    "atom_index": 6,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the toys behind the bears?",
+                    "score": 1.012995774872374e-05,
+                    "skill": "position"
+                  },
+                  "detected": "soft_score=1.013e-05",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the toys behind the bears?",
+                  "type": "spatial_mismatch"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00703_63ed0841"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many mushrooms are in the image?",
+              "score": 1.7009772577187188e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.70098e-08",
+            "expected": "five",
+            "status": "failed",
+            "target": "How many mushrooms are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the mushrooms on top of the toys?",
+              "score": 3.9271830419476027e-07,
+              "skill": "position"
+            },
+            "detected": "soft_score=3.92718e-07",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the mushrooms on top of the toys?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many toys are in the image?",
+              "score": 0.0009266437858529339,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.000926644",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many toys are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any toys in the image?",
+              "score": 1.7753979399681707e-05,
+              "skill": "object"
+            },
+            "detected": "soft_score=1.7754e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any toys in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the toys behind the bears?",
+              "score": 1.012995774872374e-05,
+              "skill": "position"
+            },
+            "detected": "soft_score=1.013e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the toys behind the bears?",
+            "type": "spatial_mismatch"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00703_63ed0841_cand_04",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly five mushrooms, exactly four toys, and exactly four bears.",
+      "Bind pink color only to the mushrooms and white color to the bears.",
+      "Make the toys behind the bears while keeping all four toys at least partly visible.",
+      "Place all five mushrooms on top of the four toys; do not place mushrooms on the bears or ground.",
+      "Avoid occlusion that hides counts; keep each object separable and countable.",
+      "Do not add extra mushrooms, toys, or bears."
+    ],
+    "generation_strategy": "Use a layered spatial composition with four white bears in the foreground, four distinct toys in a middle row behind the bears, and five pink mushrooms resting on top of the toys. Keep the toys' upper surfaces visible above or between the bears so the mushrooms-on-toys relation is clear, and separate all objects enough for reliable counting.",
+    "initial_prompt": "A clear layered scene with exactly four white bears in the foreground, arranged side by side. Directly behind the bears are exactly four distinct toys, partially but clearly visible, positioned as a middle row behind the bears. On top of the four toys are exactly five pink mushrooms total: place one pink mushroom on top of three of the toys and two pink mushrooms on top of the remaining toy. The mushrooms must visibly rest on the toys, not on the bears or ground. Keep all four white bears, all four toys, and all five pink mushrooms separated and countable, with no extra bears, toys, or mushrooms and minimal occlusion.",
+    "parsed_constraints": {
+      "attributes": {
+        "bears": [
+          "white"
+        ],
+        "mushrooms": [
+          "pink"
+        ]
+      },
+      "counts": {
+        "bears": 4,
+        "mushrooms": 5,
+        "toys": 4
+      },
+      "objects": [
+        "mushrooms",
+        "toys",
+        "bears"
+      ],
+      "relations": [
+        "mushrooms on top of toys",
+        "toys behind bears"
+      ]
+    },
+    "selected_skills": [
+      "quantity_counting",
+      "attribute_binding",
+      "object_presence",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image passed the presence and color of pink mushrooms, the count of four bears, the white color of the bears, and bear presence. It failed the exact count of five mushrooms, the exact count and presence of four toys, the relation that mushrooms are on top of toys, and the relation that toys are behind bears. The likely issue is that the previous layered prompt allowed the toys to be too hidden or visually ambiguous behind the bears, so the generator emphasized bears and mushrooms while losing the toys and their support role.",
+    "expected_improvement": [
+      "Four toys should become clearly detectable and countable.",
+      "Five pink mushrooms should be visually separable and countable.",
+      "Each pink mushroom should visibly rest on a toy rather than on a bear or the ground.",
+      "The four toys should read as a row behind the four white bears while remaining visible.",
+      "Previously passed constraints for four white bears and pink mushrooms should be preserved."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "missing_object",
+      "spatial_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly four white bears visible in the foreground.",
+      "Keep the bears white, with the white attribute bound only to the bears.",
+      "Keep pink mushrooms present and clearly pink, with the pink attribute bound to the mushrooms.",
+      "Do not add extra bears, extra toys, or extra mushrooms."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt described toys as partially visible behind the bears, which likely caused the toys to be occluded or not recognized. Because the toys were not clear, the verifier could not confirm four toys, could not confirm toys behind bears, and could not verify that the mushrooms were on top of the toys. The five-mushroom count also needed stronger separation and placement.",
+      "error_source": "Prompt composition and occlusion: the middle toy row was not made visible enough, and the mushroom-on-toy support relation was not emphasized with a simple countable layout."
+    },
+    "regeneration_strategy": "Use a cleaner three-row depth layout: four white bears in a low front row, four clearly visible toys directly behind them in a higher middle/back row, and five pink mushrooms placed on top of those toys. Make every object separated and countable, with the toys not hidden by the bears. Use explicit per-toy mushroom distribution to enforce five mushrooms total.",
+    "regression_risks": [
+      "The generator may hide toys behind the bears again, causing toy presence and count failures.",
+      "The generator may place mushrooms on bears instead of toys if the support relation is not explicit.",
+      "The generator may add extra mushrooms or merge mushrooms together, causing count errors.",
+      "The generator may change the number of bears or make bears non-white while trying to fit the toys."
+    ],
+    "repair_constraints": [
+      "Show exactly five pink mushrooms, all separate and countable, with no extra mushrooms.",
+      "Show exactly four toys, all separate, recognizable, and countable, with no extra toys.",
+      "Place all five pink mushrooms physically on top of the four toys: two mushrooms on top of one toy, and one mushroom on top of each of the other three toys.",
+      "Place the four toys behind the four white bears, not beside or in front of the bears.",
+      "Keep the toys visible enough above and between the bears so the viewer can see that the toys are behind the bears and that the mushrooms rest on the toys."
+    ],
+    "retry_prompt": "Create a clear scene with exactly four white bears in the foreground, arranged in a low front row from left to right. Directly behind the bears, show exactly four distinct toys in a second row; the toys must be clearly visible above and between the bears, not hidden, so they are recognizable and countable as four toys behind the bears. On top of the toys, place exactly five pink mushrooms total: put two separate pink mushrooms on top of the leftmost toy, and put one separate pink mushroom on top of each of the other three toys. Every mushroom must visibly rest on a toy, not on a bear and not on the ground. Keep all four white bears, all four toys, and all five pink mushrooms separated, unobstructed, and easy to count. No extra bears, no extra toys, and no extra mushrooms.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "object_presence",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "attribute_binding",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "object_presence",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same skill set but change the emphasis: prioritize object_presence, clarity_visibility, anti_occlusion, and spatial_layout for the toys, because the previous prompt made toys only partially visible and they were not detected. Quantity_counting remains critical for exactly five mushrooms, four toys, and four bears."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many mushrooms are in the image?",
+            "score": 1.7009772577187188e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.70098e-08",
+          "expected": "five",
+          "status": "failed",
+          "target": "How many mushrooms are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the mushrooms on top of the toys?",
+            "score": 3.9271830419476027e-07,
+            "skill": "position"
+          },
+          "detected": "soft_score=3.92718e-07",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the mushrooms on top of the toys?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many toys are in the image?",
+            "score": 0.0009266437858529339,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.000926644",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many toys are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any toys in the image?",
+            "score": 1.7753979399681707e-05,
+            "skill": "object"
+          },
+          "detected": "soft_score=1.7754e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any toys in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the toys behind the bears?",
+            "score": 1.012995774872374e-05,
+            "skill": "position"
+          },
+          "detected": "soft_score=1.013e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the toys behind the bears?",
+          "type": "spatial_mismatch"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00041/samples/00004.png",
+      "prompt": "A clear layered scene with exactly four white bears in the foreground, arranged side by side. Directly behind the bears are exactly four distinct toys, partially but clearly visible, positioned as a middle row behind the bears. On top of the four toys are exactly five pink mushrooms total: place one pink mushroom on top of three of the toys and two pink mushrooms on top of the remaining toy. The mushrooms must visibly rest on the toys, not on the bears or ground. Keep all four white bears, all four toys, and all five pink mushrooms separated and countable, with no extra bears, toys, or mushrooms and minimal occlusion.",
+      "round": 0,
+      "score": 0.49829440797190017
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00703_63ed0841_cand_04",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "count_mismatch",
+        "missing_object",
+        "spatial_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many mushrooms are in the image?",
+            "score": 1.7009772577187188e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.70098e-08",
+          "expected": "five",
+          "status": "failed",
+          "target": "How many mushrooms are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the mushrooms on top of the toys?",
+            "score": 3.9271830419476027e-07,
+            "skill": "position"
+          },
+          "detected": "soft_score=3.92718e-07",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the mushrooms on top of the toys?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many toys are in the image?",
+            "score": 0.0009266437858529339,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.000926644",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many toys are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any toys in the image?",
+            "score": 1.7753979399681707e-05,
+            "skill": "object"
+          },
+          "detected": "soft_score=1.7754e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any toys in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the toys behind the bears?",
+            "score": 1.012995774872374e-05,
+            "skill": "position"
+          },
+          "detected": "soft_score=1.013e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the toys behind the bears?",
+          "type": "spatial_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the mushrooms pink?",
+            "score": 0.9999994290119503,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.999999",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the mushrooms pink?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any mushrooms in the image?",
+            "score": 0.9999999812562237,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any mushrooms in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many bears are in the image?",
+            "score": 0.9999995495066857,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "four",
+          "status": "passed",
+          "target": "How many bears are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the bears white?",
+            "score": 0.9819902311865008,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.98199",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the bears white?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any bears in the image?",
+            "score": 0.9999999513065632,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any bears in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.49829440797190017,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many mushrooms are in the image?",
+              "score": 1.7009772577187188e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.70098e-08",
+            "expected": "five",
+            "status": "failed",
+            "target": "How many mushrooms are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the mushrooms on top of the toys?",
+              "score": 3.9271830419476027e-07,
+              "skill": "position"
+            },
+            "detected": "soft_score=3.92718e-07",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the mushrooms on top of the toys?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many toys are in the image?",
+              "score": 0.0009266437858529339,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.000926644",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many toys are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any toys in the image?",
+              "score": 1.7753979399681707e-05,
+              "skill": "object"
+            },
+            "detected": "soft_score=1.7754e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any toys in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the toys behind the bears?",
+              "score": 1.012995774872374e-05,
+              "skill": "position"
+            },
+            "detected": "soft_score=1.013e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the toys behind the bears?",
+            "type": "spatial_mismatch"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00041/samples/00004.png",
+        "prompt": "A clear layered scene with exactly four white bears in the foreground, arranged side by side. Directly behind the bears are exactly four distinct toys, partially but clearly visible, positioned as a middle row behind the bears. On top of the four toys are exactly five pink mushrooms total: place one pink mushroom on top of three of the toys and two pink mushrooms on top of the remaining toy. The mushrooms must visibly rest on the toys, not on the bears or ground. Keep all four white bears, all four toys, and all five pink mushrooms separated and countable, with no extra bears, toys, or mushrooms and minimal occlusion.",
+        "round": 0,
+        "score": 0.49829440797190017
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many mushrooms are in the image?",
+            "score": 1.7009772577187188e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.70098e-08",
+          "expected": "five",
+          "status": "failed",
+          "target": "How many mushrooms are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the mushrooms on top of the toys?",
+            "score": 3.9271830419476027e-07,
+            "skill": "position"
+          },
+          "detected": "soft_score=3.92718e-07",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the mushrooms on top of the toys?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many toys are in the image?",
+            "score": 0.0009266437858529339,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.000926644",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many toys are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any toys in the image?",
+            "score": 1.7753979399681707e-05,
+            "skill": "object"
+          },
+          "detected": "soft_score=1.7754e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any toys in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the toys behind the bears?",
+            "score": 1.012995774872374e-05,
+            "skill": "position"
+          },
+          "detected": "soft_score=1.013e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the toys behind the bears?",
+          "type": "spatial_mismatch"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "count_mismatch",
+        "missing_object",
+        "spatial_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many mushrooms are in the image?",
+            "score": 1.7009772577187188e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.70098e-08",
+          "expected": "five",
+          "status": "failed",
+          "target": "How many mushrooms are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the mushrooms on top of the toys?",
+            "score": 3.9271830419476027e-07,
+            "skill": "position"
+          },
+          "detected": "soft_score=3.92718e-07",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the mushrooms on top of the toys?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many toys are in the image?",
+            "score": 0.0009266437858529339,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.000926644",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many toys are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any toys in the image?",
+            "score": 1.7753979399681707e-05,
+            "skill": "object"
+          },
+          "detected": "soft_score=1.7754e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any toys in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the toys behind the bears?",
+            "score": 1.012995774872374e-05,
+            "skill": "position"
+          },
+          "detected": "soft_score=1.013e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the toys behind the bears?",
+          "type": "spatial_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the mushrooms pink?",
+            "score": 0.9999994290119503,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.999999",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the mushrooms pink?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any mushrooms in the image?",
+            "score": 0.9999999812562237,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any mushrooms in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many bears are in the image?",
+            "score": 0.9999995495066857,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "four",
+          "status": "passed",
+          "target": "How many bears are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the bears white?",
+            "score": 0.9819902311865008,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.98199",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the bears white?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any bears in the image?",
+            "score": 0.9999999513065632,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any bears in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.49829440797190017,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "five pink mushrooms on top of four toys behind four white bears",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many mushrooms are in the image?",
+          "score": 1.7009772577187188e-08,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.70098e-08",
+        "expected": "five",
+        "status": "failed",
+        "target": "How many mushrooms are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the mushrooms on top of the toys?",
+          "score": 3.9271830419476027e-07,
+          "skill": "position"
+        },
+        "detected": "soft_score=3.92718e-07",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the mushrooms on top of the toys?",
+        "type": "spatial_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many toys are in the image?",
+          "score": 0.0009266437858529339,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.000926644",
+        "expected": "four",
+        "status": "failed",
+        "target": "How many toys are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any toys in the image?",
+          "score": 1.7753979399681707e-05,
+          "skill": "object"
+        },
+        "detected": "soft_score=1.7754e-05",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are there any toys in the image?",
+        "type": "missing_object"
+      },
+      {
+        "details": {
+          "atom_index": 6,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the toys behind the bears?",
+          "score": 1.012995774872374e-05,
+          "skill": "position"
+        },
+        "detected": "soft_score=1.013e-05",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the toys behind the bears?",
+        "type": "spatial_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly five mushrooms, exactly four toys, and exactly four bears.",
+        "Bind pink color only to the mushrooms and white color to the bears.",
+        "Make the toys behind the bears while keeping all four toys at least partly visible.",
+        "Place all five mushrooms on top of the four toys; do not place mushrooms on the bears or ground.",
+        "Avoid occlusion that hides counts; keep each object separable and countable.",
+        "Do not add extra mushrooms, toys, or bears."
+      ],
+      "generation_strategy": "Use a layered spatial composition with four white bears in the foreground, four distinct toys in a middle row behind the bears, and five pink mushrooms resting on top of the toys. Keep the toys' upper surfaces visible above or between the bears so the mushrooms-on-toys relation is clear, and separate all objects enough for reliable counting.",
+      "initial_prompt": "A clear layered scene with exactly four white bears in the foreground, arranged side by side. Directly behind the bears are exactly four distinct toys, partially but clearly visible, positioned as a middle row behind the bears. On top of the four toys are exactly five pink mushrooms total: place one pink mushroom on top of three of the toys and two pink mushrooms on top of the remaining toy. The mushrooms must visibly rest on the toys, not on the bears or ground. Keep all four white bears, all four toys, and all five pink mushrooms separated and countable, with no extra bears, toys, or mushrooms and minimal occlusion.",
+      "parsed_constraints": {
+        "attributes": {
+          "bears": [
+            "white"
+          ],
+          "mushrooms": [
+            "pink"
+          ]
+        },
+        "counts": {
+          "bears": 4,
+          "mushrooms": 5,
+          "toys": 4
+        },
+        "objects": [
+          "mushrooms",
+          "toys",
+          "bears"
+        ],
+        "relations": [
+          "mushrooms on top of toys",
+          "toys behind bears"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "object_presence",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly five mushrooms, exactly four toys, and exactly four bears.",
+        "Bind pink color only to the mushrooms and white color to the bears.",
+        "Make the toys behind the bears while keeping all four toys at least partly visible.",
+        "Place all five mushrooms on top of the four toys; do not place mushrooms on the bears or ground.",
+        "Avoid occlusion that hides counts; keep each object separable and countable.",
+        "Do not add extra mushrooms, toys, or bears."
+      ],
+      "generation_strategy": "Use a layered spatial composition with four white bears in the foreground, four distinct toys in a middle row behind the bears, and five pink mushrooms resting on top of the toys. Keep the toys' upper surfaces visible above or between the bears so the mushrooms-on-toys relation is clear, and separate all objects enough for reliable counting.",
+      "initial_prompt": "A clear layered scene with exactly four white bears in the foreground, arranged side by side. Directly behind the bears are exactly four distinct toys, partially but clearly visible, positioned as a middle row behind the bears. On top of the four toys are exactly five pink mushrooms total: place one pink mushroom on top of three of the toys and two pink mushrooms on top of the remaining toy. The mushrooms must visibly rest on the toys, not on the bears or ground. Keep all four white bears, all four toys, and all five pink mushrooms separated and countable, with no extra bears, toys, or mushrooms and minimal occlusion.",
+      "parsed_constraints": {
+        "attributes": {
+          "bears": [
+            "white"
+          ],
+          "mushrooms": [
+            "pink"
+          ]
+        },
+        "counts": {
+          "bears": 4,
+          "mushrooms": 5,
+          "toys": 4
+        },
+        "objects": [
+          "mushrooms",
+          "toys",
+          "bears"
+        ],
+        "relations": [
+          "mushrooms on top of toys",
+          "toys behind bears"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "object_presence",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ]
+    },
+    "previous_prompt": "A clear layered scene with exactly four white bears in the foreground, arranged side by side. Directly behind the bears are exactly four distinct toys, partially but clearly visible, positioned as a middle row behind the bears. On top of the four toys are exactly five pink mushrooms total: place one pink mushroom on top of three of the toys and two pink mushrooms on top of the remaining toy. The mushrooms must visibly rest on the toys, not on the bears or ground. Keep all four white bears, all four toys, and all five pink mushrooms separated and countable, with no extra bears, toys, or mushrooms and minimal occlusion.",
+    "previous_selected_skills": [
+      "quantity_counting",
+      "attribute_binding",
+      "object_presence",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ],
+    "prompt_id": "geneval2_00703_63ed0841",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "count_mismatch",
+          "missing_object",
+          "spatial_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many mushrooms are in the image?",
+              "score": 1.7009772577187188e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.70098e-08",
+            "expected": "five",
+            "status": "failed",
+            "target": "How many mushrooms are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the mushrooms on top of the toys?",
+              "score": 3.9271830419476027e-07,
+              "skill": "position"
+            },
+            "detected": "soft_score=3.92718e-07",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the mushrooms on top of the toys?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many toys are in the image?",
+              "score": 0.0009266437858529339,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.000926644",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many toys are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any toys in the image?",
+              "score": 1.7753979399681707e-05,
+              "skill": "object"
+            },
+            "detected": "soft_score=1.7754e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any toys in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the toys behind the bears?",
+              "score": 1.012995774872374e-05,
+              "skill": "position"
+            },
+            "detected": "soft_score=1.013e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the toys behind the bears?",
+            "type": "spatial_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the mushrooms pink?",
+              "score": 0.9999994290119503,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.999999",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the mushrooms pink?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any mushrooms in the image?",
+              "score": 0.9999999812562237,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any mushrooms in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many bears are in the image?",
+              "score": 0.9999995495066857,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "four",
+            "status": "passed",
+            "target": "How many bears are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the bears white?",
+              "score": 0.9819902311865008,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.98199",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the bears white?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any bears in the image?",
+              "score": 0.9999999513065632,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any bears in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly five mushrooms, exactly four toys, and exactly four bears.",
+            "Bind pink color only to the mushrooms and white color to the bears.",
+            "Make the toys behind the bears while keeping all four toys at least partly visible.",
+            "Place all five mushrooms on top of the four toys; do not place mushrooms on the bears or ground.",
+            "Avoid occlusion that hides counts; keep each object separable and countable.",
+            "Do not add extra mushrooms, toys, or bears."
+          ],
+          "generation_strategy": "Use a layered spatial composition with four white bears in the foreground, four distinct toys in a middle row behind the bears, and five pink mushrooms resting on top of the toys. Keep the toys' upper surfaces visible above or between the bears so the mushrooms-on-toys relation is clear, and separate all objects enough for reliable counting.",
+          "initial_prompt": "A clear layered scene with exactly four white bears in the foreground, arranged side by side. Directly behind the bears are exactly four distinct toys, partially but clearly visible, positioned as a middle row behind the bears. On top of the four toys are exactly five pink mushrooms total: place one pink mushroom on top of three of the toys and two pink mushrooms on top of the remaining toy. The mushrooms must visibly rest on the toys, not on the bears or ground. Keep all four white bears, all four toys, and all five pink mushrooms separated and countable, with no extra bears, toys, or mushrooms and minimal occlusion.",
+          "parsed_constraints": {
+            "attributes": {
+              "bears": [
+                "white"
+              ],
+              "mushrooms": [
+                "pink"
+              ]
+            },
+            "counts": {
+              "bears": 4,
+              "mushrooms": 5,
+              "toys": 4
+            },
+            "objects": [
+              "mushrooms",
+              "toys",
+              "bears"
+            ],
+            "relations": [
+              "mushrooms on top of toys",
+              "toys behind bears"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "attribute_binding",
+            "object_presence",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly five mushrooms, exactly four toys, and exactly four bears.",
+            "Bind pink color only to the mushrooms and white color to the bears.",
+            "Make the toys behind the bears while keeping all four toys at least partly visible.",
+            "Place all five mushrooms on top of the four toys; do not place mushrooms on the bears or ground.",
+            "Avoid occlusion that hides counts; keep each object separable and countable.",
+            "Do not add extra mushrooms, toys, or bears."
+          ],
+          "generation_strategy": "Use a layered spatial composition with four white bears in the foreground, four distinct toys in a middle row behind the bears, and five pink mushrooms resting on top of the toys. Keep the toys' upper surfaces visible above or between the bears so the mushrooms-on-toys relation is clear, and separate all objects enough for reliable counting.",
+          "initial_prompt": "A clear layered scene with exactly four white bears in the foreground, arranged side by side. Directly behind the bears are exactly four distinct toys, partially but clearly visible, positioned as a middle row behind the bears. On top of the four toys are exactly five pink mushrooms total: place one pink mushroom on top of three of the toys and two pink mushrooms on top of the remaining toy. The mushrooms must visibly rest on the toys, not on the bears or ground. Keep all four white bears, all four toys, and all five pink mushrooms separated and countable, with no extra bears, toys, or mushrooms and minimal occlusion.",
+          "parsed_constraints": {
+            "attributes": {
+              "bears": [
+                "white"
+              ],
+              "mushrooms": [
+                "pink"
+              ]
+            },
+            "counts": {
+              "bears": 4,
+              "mushrooms": 5,
+              "toys": 4
+            },
+            "objects": [
+              "mushrooms",
+              "toys",
+              "bears"
+            ],
+            "relations": [
+              "mushrooms on top of toys",
+              "toys behind bears"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "attribute_binding",
+            "object_presence",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "prompt_used": "A clear layered scene with exactly four white bears in the foreground, arranged side by side. Directly behind the bears are exactly four distinct toys, partially but clearly visible, positioned as a middle row behind the bears. On top of the four toys are exactly five pink mushrooms total: place one pink mushroom on top of three of the toys and two pink mushrooms on top of the remaining toy. The mushrooms must visibly rest on the toys, not on the bears or ground. Keep all four white bears, all four toys, and all five pink mushrooms separated and countable, with no extra bears, toys, or mushrooms and minimal occlusion.",
+        "round": 0,
+        "score": 0.49829440797190017,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many mushrooms are in the image?",
+                "score": 1.7009772577187188e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.70098e-08",
+              "expected": "five",
+              "status": "failed",
+              "target": "How many mushrooms are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the mushrooms on top of the toys?",
+                "score": 3.9271830419476027e-07,
+                "skill": "position"
+              },
+              "detected": "soft_score=3.92718e-07",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the mushrooms on top of the toys?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many toys are in the image?",
+                "score": 0.0009266437858529339,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.000926644",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many toys are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any toys in the image?",
+                "score": 1.7753979399681707e-05,
+                "skill": "object"
+              },
+              "detected": "soft_score=1.7754e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any toys in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the toys behind the bears?",
+                "score": 1.012995774872374e-05,
+                "skill": "position"
+              },
+              "detected": "soft_score=1.013e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the toys behind the bears?",
+              "type": "spatial_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00703_63ed0841"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many mushrooms are in the image?",
+          "score": 1.7009772577187188e-08,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.70098e-08",
+        "expected": "five",
+        "status": "failed",
+        "target": "How many mushrooms are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the mushrooms on top of the toys?",
+          "score": 3.9271830419476027e-07,
+          "skill": "position"
+        },
+        "detected": "soft_score=3.92718e-07",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the mushrooms on top of the toys?",
+        "type": "spatial_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many toys are in the image?",
+          "score": 0.0009266437858529339,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.000926644",
+        "expected": "four",
+        "status": "failed",
+        "target": "How many toys are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any toys in the image?",
+          "score": 1.7753979399681707e-05,
+          "skill": "object"
+        },
+        "detected": "soft_score=1.7754e-05",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are there any toys in the image?",
+        "type": "missing_object"
+      },
+      {
+        "details": {
+          "atom_index": 6,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the toys behind the bears?",
+          "score": 1.012995774872374e-05,
+          "skill": "position"
+        },
+        "detected": "soft_score=1.013e-05",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the toys behind the bears?",
+        "type": "spatial_mismatch"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00041/samples/00004.png",
+    "best_so_far_prompt": "A clear layered scene with exactly four white bears in the foreground, arranged side by side. Directly behind the bears are exactly four distinct toys, partially but clearly visible, positioned as a middle row behind the bears. On top of the four toys are exactly five pink mushrooms total: place one pink mushroom on top of three of the toys and two pink mushrooms on top of the remaining toy. The mushrooms must visibly rest on the toys, not on the bears or ground. Keep all four white bears, all four toys, and all five pink mushrooms separated and countable, with no extra bears, toys, or mushrooms and minimal occlusion.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.49829440797190017,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many mushrooms are in the image?",
+          "score": 1.7009772577187188e-08,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.70098e-08",
+        "expected": "five",
+        "status": "failed",
+        "target": "How many mushrooms are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the mushrooms on top of the toys?",
+          "score": 3.9271830419476027e-07,
+          "skill": "position"
+        },
+        "detected": "soft_score=3.92718e-07",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the mushrooms on top of the toys?",
+        "type": "spatial_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many toys are in the image?",
+          "score": 0.0009266437858529339,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.000926644",
+        "expected": "four",
+        "status": "failed",
+        "target": "How many toys are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any toys in the image?",
+          "score": 1.7753979399681707e-05,
+          "skill": "object"
+        },
+        "detected": "soft_score=1.7754e-05",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are there any toys in the image?",
+        "type": "missing_object"
+      },
+      {
+        "details": {
+          "atom_index": 6,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the toys behind the bears?",
+          "score": 1.012995774872374e-05,
+          "skill": "position"
+        },
+        "detected": "soft_score=1.013e-05",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the toys behind the bears?",
+        "type": "spatial_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly five mushrooms, exactly four toys, and exactly four bears.",
+        "Bind pink color only to the mushrooms and white color to the bears.",
+        "Make the toys behind the bears while keeping all four toys at least partly visible.",
+        "Place all five mushrooms on top of the four toys; do not place mushrooms on the bears or ground.",
+        "Avoid occlusion that hides counts; keep each object separable and countable.",
+        "Do not add extra mushrooms, toys, or bears."
+      ],
+      "generation_strategy": "Use a layered spatial composition with four white bears in the foreground, four distinct toys in a middle row behind the bears, and five pink mushrooms resting on top of the toys. Keep the toys' upper surfaces visible above or between the bears so the mushrooms-on-toys relation is clear, and separate all objects enough for reliable counting.",
+      "initial_prompt": "A clear layered scene with exactly four white bears in the foreground, arranged side by side. Directly behind the bears are exactly four distinct toys, partially but clearly visible, positioned as a middle row behind the bears. On top of the four toys are exactly five pink mushrooms total: place one pink mushroom on top of three of the toys and two pink mushrooms on top of the remaining toy. The mushrooms must visibly rest on the toys, not on the bears or ground. Keep all four white bears, all four toys, and all five pink mushrooms separated and countable, with no extra bears, toys, or mushrooms and minimal occlusion.",
+      "parsed_constraints": {
+        "attributes": {
+          "bears": [
+            "white"
+          ],
+          "mushrooms": [
+            "pink"
+          ]
+        },
+        "counts": {
+          "bears": 4,
+          "mushrooms": 5,
+          "toys": 4
+        },
+        "objects": [
+          "mushrooms",
+          "toys",
+          "bears"
+        ],
+        "relations": [
+          "mushrooms on top of toys",
+          "toys behind bears"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "object_presence",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.498 failed=['How many mushrooms are in the image?', 'Are the mushrooms on top of the toys?', 'How many toys are in the image?', 'Are there any toys in the image?', 'Are the toys behind the bears?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_incremental/snapshot_002_worker_02/geneval2_00703_63ed0841__geneval2_00703_63ed0841_cand_04__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00703_63ed0841__geneval2_00703_63ed0841_cand_04__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00703_63ed0841",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image passed the presence and color of pink mushrooms, the count of four bears, the white color of the bears, and bear presence. It failed the exact count of five mushrooms, the exact count and presence of four toys, the relation that mushrooms are on top of toys, and the relation that toys are behind bears. The likely issue is that the previous layered prompt allowed the toys to be too hidden or visually ambiguous behind the bears, so the generator emphasized bears and mushrooms while losing the toys and their support role.",
+    "expected_improvement": [
+      "Four toys should become clearly detectable and countable.",
+      "Five pink mushrooms should be visually separable and countable.",
+      "Each pink mushroom should visibly rest on a toy rather than on a bear or the ground.",
+      "The four toys should read as a row behind the four white bears while remaining visible.",
+      "Previously passed constraints for four white bears and pink mushrooms should be preserved."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "missing_object",
+      "spatial_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly four white bears visible in the foreground.",
+      "Keep the bears white, with the white attribute bound only to the bears.",
+      "Keep pink mushrooms present and clearly pink, with the pink attribute bound to the mushrooms.",
+      "Do not add extra bears, extra toys, or extra mushrooms."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt described toys as partially visible behind the bears, which likely caused the toys to be occluded or not recognized. Because the toys were not clear, the verifier could not confirm four toys, could not confirm toys behind bears, and could not verify that the mushrooms were on top of the toys. The five-mushroom count also needed stronger separation and placement.",
+      "error_source": "Prompt composition and occlusion: the middle toy row was not made visible enough, and the mushroom-on-toy support relation was not emphasized with a simple countable layout."
+    },
+    "regeneration_strategy": "Use a cleaner three-row depth layout: four white bears in a low front row, four clearly visible toys directly behind them in a higher middle/back row, and five pink mushrooms placed on top of those toys. Make every object separated and countable, with the toys not hidden by the bears. Use explicit per-toy mushroom distribution to enforce five mushrooms total.",
+    "regression_risks": [
+      "The generator may hide toys behind the bears again, causing toy presence and count failures.",
+      "The generator may place mushrooms on bears instead of toys if the support relation is not explicit.",
+      "The generator may add extra mushrooms or merge mushrooms together, causing count errors.",
+      "The generator may change the number of bears or make bears non-white while trying to fit the toys."
+    ],
+    "repair_constraints": [
+      "Show exactly five pink mushrooms, all separate and countable, with no extra mushrooms.",
+      "Show exactly four toys, all separate, recognizable, and countable, with no extra toys.",
+      "Place all five pink mushrooms physically on top of the four toys: two mushrooms on top of one toy, and one mushroom on top of each of the other three toys.",
+      "Place the four toys behind the four white bears, not beside or in front of the bears.",
+      "Keep the toys visible enough above and between the bears so the viewer can see that the toys are behind the bears and that the mushrooms rest on the toys."
+    ],
+    "retry_prompt": "Create a clear scene with exactly four white bears in the foreground, arranged in a low front row from left to right. Directly behind the bears, show exactly four distinct toys in a second row; the toys must be clearly visible above and between the bears, not hidden, so they are recognizable and countable as four toys behind the bears. On top of the toys, place exactly five pink mushrooms total: put two separate pink mushrooms on top of the leftmost toy, and put one separate pink mushroom on top of each of the other three toys. Every mushroom must visibly rest on a toy, not on a bear and not on the ground. Keep all four white bears, all four toys, and all five pink mushrooms separated, unobstructed, and easy to count. No extra bears, no extra toys, and no extra mushrooms.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "object_presence",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "attribute_binding",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "object_presence",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same skill set but change the emphasis: prioritize object_presence, clarity_visibility, anti_occlusion, and spatial_layout for the toys, because the previous prompt made toys only partially visible and they were not detected. Quantity_counting remains critical for exactly five mushrooms, four toys, and four bears."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "five pink mushrooms on top of four toys behind four white bears",
+    "prompt": "five pink mushrooms on top of four toys behind four white bears",
+    "prompt_id": "geneval2_00703_63ed0841",
+    "sampling_bucket": "color_binding",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 2,
+      "count": 3,
+      "object": 3,
+      "position": 2
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 703,
+    "vqa_list": [
+      [
+        "How many mushrooms are in the image?",
+        "five"
+      ],
+      [
+        "Are the mushrooms pink?",
+        "Yes"
+      ],
+      [
+        "Are there any mushrooms in the image?",
+        "Yes"
+      ],
+      [
+        "Are the mushrooms on top of the toys?",
+        "Yes"
+      ],
+      [
+        "How many toys are in the image?",
+        "four"
+      ],
+      [
+        "Are there any toys in the image?",
+        "Yes"
+      ],
+      [
+        "Are the toys behind the bears?",
+        "Yes"
+      ],
+      [
+        "How many bears are in the image?",
+        "four"
+      ],
+      [
+        "Are the bears white?",
+        "Yes"
+      ],
+      [
+        "Are there any bears in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00703_63ed0841"
+}

@@ -1,0 +1,3318 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "count_mismatch",
+          "missing_object",
+          "relation_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many koalas are in the image?",
+              "score": 1.4710877711231565e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.47109e-09",
+            "expected": "two",
+            "status": "failed",
+            "target": "How many koalas are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the koalas metal?",
+              "score": 0.0032097378134494647,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.00320974",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the koalas metal?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any koalas in the image?",
+              "score": 5.893261038891762e-09,
+              "skill": "object"
+            },
+            "detected": "soft_score=5.89326e-09",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any koalas in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the koalas chasing the rabbits?",
+              "score": 3.928979151367456e-06,
+              "skill": "verb"
+            },
+            "detected": "soft_score=3.92898e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the koalas chasing the rabbits?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the rabbits glass?",
+              "score": 0.8853125130408444,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.885313",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the rabbits glass?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cars are in the image?",
+              "score": 2.0712166929872293e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=2.07122e-09",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many cars are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many rabbits are in the image?",
+              "score": 1.0,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "three",
+            "status": "passed",
+            "target": "How many rabbits are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any rabbits in the image?",
+              "score": 0.9999725416855654,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999973",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any rabbits in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cars white?",
+              "score": 0.9999999003994162,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the cars white?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any cars in the image?",
+              "score": 0.9999999912824933,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any cars in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00783_ba07fc9b_cand_04",
+          "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+          "rows": [
+            {
+              "answer": "two",
+              "atom_count": 10,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00783_ba07fc9b_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00074/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00074/samples/00004.png",
+              "prompt": "two metal koalas chasing three glass rabbits, and six white cars",
+              "prompt_id": "geneval2_00783_ba07fc9b",
+              "question": "How many koalas are in the image?",
+              "score": 1.4710877711231565e-09,
+              "skill": "count",
+              "source_index": 783
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00783_ba07fc9b_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00074/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00074/samples/00004.png",
+              "prompt": "two metal koalas chasing three glass rabbits, and six white cars",
+              "prompt_id": "geneval2_00783_ba07fc9b",
+              "question": "Are the koalas metal?",
+              "score": 0.0032097378134494647,
+              "skill": "attribute",
+              "source_index": 783
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00783_ba07fc9b_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00074/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00074/samples/00004.png",
+              "prompt": "two metal koalas chasing three glass rabbits, and six white cars",
+              "prompt_id": "geneval2_00783_ba07fc9b",
+              "question": "Are there any koalas in the image?",
+              "score": 5.893261038891762e-09,
+              "skill": "object",
+              "source_index": 783
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00783_ba07fc9b_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00074/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00074/samples/00004.png",
+              "prompt": "two metal koalas chasing three glass rabbits, and six white cars",
+              "prompt_id": "geneval2_00783_ba07fc9b",
+              "question": "Are the koalas chasing the rabbits?",
+              "score": 3.928979151367456e-06,
+              "skill": "verb",
+              "source_index": 783
+            },
+            {
+              "answer": "three",
+              "atom_count": 10,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00783_ba07fc9b_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00074/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00074/samples/00004.png",
+              "prompt": "two metal koalas chasing three glass rabbits, and six white cars",
+              "prompt_id": "geneval2_00783_ba07fc9b",
+              "question": "How many rabbits are in the image?",
+              "score": 1.000000040440646,
+              "skill": "count",
+              "source_index": 783
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00783_ba07fc9b_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00074/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00074/samples/00004.png",
+              "prompt": "two metal koalas chasing three glass rabbits, and six white cars",
+              "prompt_id": "geneval2_00783_ba07fc9b",
+              "question": "Are the rabbits glass?",
+              "score": 0.8853125130408444,
+              "skill": "attribute",
+              "source_index": 783
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00783_ba07fc9b_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00074/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00074/samples/00004.png",
+              "prompt": "two metal koalas chasing three glass rabbits, and six white cars",
+              "prompt_id": "geneval2_00783_ba07fc9b",
+              "question": "Are there any rabbits in the image?",
+              "score": 0.9999725416855654,
+              "skill": "object",
+              "source_index": 783
+            },
+            {
+              "answer": "six",
+              "atom_count": 10,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00783_ba07fc9b_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00074/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00074/samples/00004.png",
+              "prompt": "two metal koalas chasing three glass rabbits, and six white cars",
+              "prompt_id": "geneval2_00783_ba07fc9b",
+              "question": "How many cars are in the image?",
+              "score": 2.0712166929872293e-09,
+              "skill": "count",
+              "source_index": 783
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00783_ba07fc9b_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00074/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00074/samples/00004.png",
+              "prompt": "two metal koalas chasing three glass rabbits, and six white cars",
+              "prompt_id": "geneval2_00783_ba07fc9b",
+              "question": "Are the cars white?",
+              "score": 0.9999999003994162,
+              "skill": "attribute",
+              "source_index": 783
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00783_ba07fc9b_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00074/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00074/samples/00004.png",
+              "prompt": "two metal koalas chasing three glass rabbits, and six white cars",
+              "prompt_id": "geneval2_00783_ba07fc9b",
+              "question": "Are there any cars in the image?",
+              "score": 0.9999999912824933,
+              "skill": "object",
+              "source_index": 783
+            }
+          ],
+          "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.48884986226364857,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 4,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00783_ba07fc9b.json",
+          "manifest_prompt_index": 74,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00783_ba07fc9b"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00783_ba07fc9b_cand_04",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00074/samples/00004.png",
+        "prompt_used": "A clear wide scene showing exactly two metal koalas chasing exactly three glass rabbits. The two metal koalas are behind the three glass rabbits and facing toward them in a chasing action. Also show exactly six white cars arranged separately nearby. Make all two koalas, all three rabbits, and all six cars fully visible, distinct, countable, and not overlapping or occluding one another. Ensure the koalas look metallic, the rabbits look made of glass, and the cars are white.",
+        "seed": 1374
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly two koalas, exactly three rabbits, and exactly six cars.",
+          "Bind materials and colors correctly: both koalas are metal, all three rabbits are glass, and all six cars are white.",
+          "Depict the two metal koalas chasing the three glass rabbits, with the koalas positioned behind the rabbits and oriented toward them.",
+          "Keep every animal and car fully visible, separated, and not occluding each other."
+        ],
+        "generation_strategy": "Use a clear wide composition with three distinct groups: two metal koalas behind and chasing three glass rabbits, plus six white cars arranged separately so they are countable. Emphasize material attributes and keep all ten objects unobstructed and visible.",
+        "initial_prompt": "A clear wide scene showing exactly two metal koalas chasing exactly three glass rabbits. The two metal koalas are behind the three glass rabbits and facing toward them in a chasing action. Also show exactly six white cars arranged separately nearby. Make all two koalas, all three rabbits, and all six cars fully visible, distinct, countable, and not overlapping or occluding one another. Ensure the koalas look metallic, the rabbits look made of glass, and the cars are white.",
+        "parsed_constraints": {
+          "attributes": {
+            "cars": [
+              "white"
+            ],
+            "koalas": [
+              "metal"
+            ],
+            "rabbits": [
+              "glass"
+            ]
+          },
+          "counts": {
+            "cars": 6,
+            "koalas": 2,
+            "rabbits": 3
+          },
+          "objects": [
+            "koalas",
+            "rabbits",
+            "cars"
+          ],
+          "relations": [
+            "two metal koalas are chasing three glass rabbits"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "multi_object_composition",
+          "spatial_layout",
+          "clarity_visibility",
+          "anti_occlusion"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly two koalas, exactly three rabbits, and exactly six cars.",
+          "Bind materials and colors correctly: both koalas are metal, all three rabbits are glass, and all six cars are white.",
+          "Depict the two metal koalas chasing the three glass rabbits, with the koalas positioned behind the rabbits and oriented toward them.",
+          "Keep every animal and car fully visible, separated, and not occluding each other."
+        ],
+        "generation_strategy": "Use a clear wide composition with three distinct groups: two metal koalas behind and chasing three glass rabbits, plus six white cars arranged separately so they are countable. Emphasize material attributes and keep all ten objects unobstructed and visible.",
+        "initial_prompt": "A clear wide scene showing exactly two metal koalas chasing exactly three glass rabbits. The two metal koalas are behind the three glass rabbits and facing toward them in a chasing action. Also show exactly six white cars arranged separately nearby. Make all two koalas, all three rabbits, and all six cars fully visible, distinct, countable, and not overlapping or occluding one another. Ensure the koalas look metallic, the rabbits look made of glass, and the cars are white.",
+        "parsed_constraints": {
+          "attributes": {
+            "cars": [
+              "white"
+            ],
+            "koalas": [
+              "metal"
+            ],
+            "rabbits": [
+              "glass"
+            ]
+          },
+          "counts": {
+            "cars": 6,
+            "koalas": 2,
+            "rabbits": 3
+          },
+          "objects": [
+            "koalas",
+            "rabbits",
+            "cars"
+          ],
+          "relations": [
+            "two metal koalas are chasing three glass rabbits"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "multi_object_composition",
+          "spatial_layout",
+          "clarity_visibility",
+          "anti_occlusion"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many koalas are in the image?",
+                "score": 1.4710877711231565e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.47109e-09",
+              "expected": "two",
+              "status": "failed",
+              "target": "How many koalas are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the koalas metal?",
+                "score": 0.0032097378134494647,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.00320974",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the koalas metal?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any koalas in the image?",
+                "score": 5.893261038891762e-09,
+                "skill": "object"
+              },
+              "detected": "soft_score=5.89326e-09",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any koalas in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the koalas chasing the rabbits?",
+                "score": 3.928979151367456e-06,
+                "skill": "verb"
+              },
+              "detected": "soft_score=3.92898e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the koalas chasing the rabbits?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the rabbits glass?",
+                "score": 0.8853125130408444,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.885313",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the rabbits glass?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cars are in the image?",
+                "score": 2.0712166929872293e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=2.07122e-09",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many cars are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00074/samples/00004.png",
+          "prompt": "A clear wide scene showing exactly two metal koalas chasing exactly three glass rabbits. The two metal koalas are behind the three glass rabbits and facing toward them in a chasing action. Also show exactly six white cars arranged separately nearby. Make all two koalas, all three rabbits, and all six cars fully visible, distinct, countable, and not overlapping or occluding one another. Ensure the koalas look metallic, the rabbits look made of glass, and the cars are white.",
+          "round": 0,
+          "score": 0.48884986226364857
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00783_ba07fc9b_cand_04",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "attribute_mismatch",
+            "count_mismatch",
+            "missing_object",
+            "relation_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many koalas are in the image?",
+                "score": 1.4710877711231565e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.47109e-09",
+              "expected": "two",
+              "status": "failed",
+              "target": "How many koalas are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the koalas metal?",
+                "score": 0.0032097378134494647,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.00320974",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the koalas metal?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any koalas in the image?",
+                "score": 5.893261038891762e-09,
+                "skill": "object"
+              },
+              "detected": "soft_score=5.89326e-09",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any koalas in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the koalas chasing the rabbits?",
+                "score": 3.928979151367456e-06,
+                "skill": "verb"
+              },
+              "detected": "soft_score=3.92898e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the koalas chasing the rabbits?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the rabbits glass?",
+                "score": 0.8853125130408444,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.885313",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the rabbits glass?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cars are in the image?",
+                "score": 2.0712166929872293e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=2.07122e-09",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many cars are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many rabbits are in the image?",
+                "score": 1.0,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "three",
+              "status": "passed",
+              "target": "How many rabbits are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any rabbits in the image?",
+                "score": 0.9999725416855654,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999973",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any rabbits in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cars white?",
+                "score": 0.9999999003994162,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the cars white?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any cars in the image?",
+                "score": 0.9999999912824933,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any cars in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.48884986226364857,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many koalas are in the image?",
+                  "score": 1.4710877711231565e-09,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1.47109e-09",
+                "expected": "two",
+                "status": "failed",
+                "target": "How many koalas are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the koalas metal?",
+                  "score": 0.0032097378134494647,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.00320974",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the koalas metal?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any koalas in the image?",
+                  "score": 5.893261038891762e-09,
+                  "skill": "object"
+                },
+                "detected": "soft_score=5.89326e-09",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are there any koalas in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the koalas chasing the rabbits?",
+                  "score": 3.928979151367456e-06,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=3.92898e-06",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the koalas chasing the rabbits?",
+                "type": "relation_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the rabbits glass?",
+                  "score": 0.8853125130408444,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.885313",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the rabbits glass?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many cars are in the image?",
+                  "score": 2.0712166929872293e-09,
+                  "skill": "count"
+                },
+                "detected": "soft_score=2.07122e-09",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many cars are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00074/samples/00004.png",
+            "prompt": "A clear wide scene showing exactly two metal koalas chasing exactly three glass rabbits. The two metal koalas are behind the three glass rabbits and facing toward them in a chasing action. Also show exactly six white cars arranged separately nearby. Make all two koalas, all three rabbits, and all six cars fully visible, distinct, countable, and not overlapping or occluding one another. Ensure the koalas look metallic, the rabbits look made of glass, and the cars are white.",
+            "round": 0,
+            "score": 0.48884986226364857
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many koalas are in the image?",
+                "score": 1.4710877711231565e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.47109e-09",
+              "expected": "two",
+              "status": "failed",
+              "target": "How many koalas are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the koalas metal?",
+                "score": 0.0032097378134494647,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.00320974",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the koalas metal?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any koalas in the image?",
+                "score": 5.893261038891762e-09,
+                "skill": "object"
+              },
+              "detected": "soft_score=5.89326e-09",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any koalas in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the koalas chasing the rabbits?",
+                "score": 3.928979151367456e-06,
+                "skill": "verb"
+              },
+              "detected": "soft_score=3.92898e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the koalas chasing the rabbits?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the rabbits glass?",
+                "score": 0.8853125130408444,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.885313",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the rabbits glass?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cars are in the image?",
+                "score": 2.0712166929872293e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=2.07122e-09",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many cars are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "attribute_mismatch",
+            "count_mismatch",
+            "missing_object",
+            "relation_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many koalas are in the image?",
+                "score": 1.4710877711231565e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.47109e-09",
+              "expected": "two",
+              "status": "failed",
+              "target": "How many koalas are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the koalas metal?",
+                "score": 0.0032097378134494647,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.00320974",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the koalas metal?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any koalas in the image?",
+                "score": 5.893261038891762e-09,
+                "skill": "object"
+              },
+              "detected": "soft_score=5.89326e-09",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any koalas in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the koalas chasing the rabbits?",
+                "score": 3.928979151367456e-06,
+                "skill": "verb"
+              },
+              "detected": "soft_score=3.92898e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the koalas chasing the rabbits?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the rabbits glass?",
+                "score": 0.8853125130408444,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.885313",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the rabbits glass?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cars are in the image?",
+                "score": 2.0712166929872293e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=2.07122e-09",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many cars are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many rabbits are in the image?",
+                "score": 1.0,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "three",
+              "status": "passed",
+              "target": "How many rabbits are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any rabbits in the image?",
+                "score": 0.9999725416855654,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999973",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any rabbits in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cars white?",
+                "score": 0.9999999003994162,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the cars white?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any cars in the image?",
+                "score": 0.9999999912824933,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any cars in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.48884986226364857,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "two metal koalas chasing three glass rabbits, and six white cars",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many koalas are in the image?",
+              "score": 1.4710877711231565e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.47109e-09",
+            "expected": "two",
+            "status": "failed",
+            "target": "How many koalas are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the koalas metal?",
+              "score": 0.0032097378134494647,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.00320974",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the koalas metal?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any koalas in the image?",
+              "score": 5.893261038891762e-09,
+              "skill": "object"
+            },
+            "detected": "soft_score=5.89326e-09",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any koalas in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the koalas chasing the rabbits?",
+              "score": 3.928979151367456e-06,
+              "skill": "verb"
+            },
+            "detected": "soft_score=3.92898e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the koalas chasing the rabbits?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the rabbits glass?",
+              "score": 0.8853125130408444,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.885313",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the rabbits glass?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cars are in the image?",
+              "score": 2.0712166929872293e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=2.07122e-09",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many cars are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly two koalas, exactly three rabbits, and exactly six cars.",
+            "Bind materials and colors correctly: both koalas are metal, all three rabbits are glass, and all six cars are white.",
+            "Depict the two metal koalas chasing the three glass rabbits, with the koalas positioned behind the rabbits and oriented toward them.",
+            "Keep every animal and car fully visible, separated, and not occluding each other."
+          ],
+          "generation_strategy": "Use a clear wide composition with three distinct groups: two metal koalas behind and chasing three glass rabbits, plus six white cars arranged separately so they are countable. Emphasize material attributes and keep all ten objects unobstructed and visible.",
+          "initial_prompt": "A clear wide scene showing exactly two metal koalas chasing exactly three glass rabbits. The two metal koalas are behind the three glass rabbits and facing toward them in a chasing action. Also show exactly six white cars arranged separately nearby. Make all two koalas, all three rabbits, and all six cars fully visible, distinct, countable, and not overlapping or occluding one another. Ensure the koalas look metallic, the rabbits look made of glass, and the cars are white.",
+          "parsed_constraints": {
+            "attributes": {
+              "cars": [
+                "white"
+              ],
+              "koalas": [
+                "metal"
+              ],
+              "rabbits": [
+                "glass"
+              ]
+            },
+            "counts": {
+              "cars": 6,
+              "koalas": 2,
+              "rabbits": 3
+            },
+            "objects": [
+              "koalas",
+              "rabbits",
+              "cars"
+            ],
+            "relations": [
+              "two metal koalas are chasing three glass rabbits"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "multi_object_composition",
+            "spatial_layout",
+            "clarity_visibility",
+            "anti_occlusion"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly two koalas, exactly three rabbits, and exactly six cars.",
+            "Bind materials and colors correctly: both koalas are metal, all three rabbits are glass, and all six cars are white.",
+            "Depict the two metal koalas chasing the three glass rabbits, with the koalas positioned behind the rabbits and oriented toward them.",
+            "Keep every animal and car fully visible, separated, and not occluding each other."
+          ],
+          "generation_strategy": "Use a clear wide composition with three distinct groups: two metal koalas behind and chasing three glass rabbits, plus six white cars arranged separately so they are countable. Emphasize material attributes and keep all ten objects unobstructed and visible.",
+          "initial_prompt": "A clear wide scene showing exactly two metal koalas chasing exactly three glass rabbits. The two metal koalas are behind the three glass rabbits and facing toward them in a chasing action. Also show exactly six white cars arranged separately nearby. Make all two koalas, all three rabbits, and all six cars fully visible, distinct, countable, and not overlapping or occluding one another. Ensure the koalas look metallic, the rabbits look made of glass, and the cars are white.",
+          "parsed_constraints": {
+            "attributes": {
+              "cars": [
+                "white"
+              ],
+              "koalas": [
+                "metal"
+              ],
+              "rabbits": [
+                "glass"
+              ]
+            },
+            "counts": {
+              "cars": 6,
+              "koalas": 2,
+              "rabbits": 3
+            },
+            "objects": [
+              "koalas",
+              "rabbits",
+              "cars"
+            ],
+            "relations": [
+              "two metal koalas are chasing three glass rabbits"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "multi_object_composition",
+            "spatial_layout",
+            "clarity_visibility",
+            "anti_occlusion"
+          ]
+        },
+        "previous_prompt": "A clear wide scene showing exactly two metal koalas chasing exactly three glass rabbits. The two metal koalas are behind the three glass rabbits and facing toward them in a chasing action. Also show exactly six white cars arranged separately nearby. Make all two koalas, all three rabbits, and all six cars fully visible, distinct, countable, and not overlapping or occluding one another. Ensure the koalas look metallic, the rabbits look made of glass, and the cars are white.",
+        "previous_selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "multi_object_composition",
+          "spatial_layout",
+          "clarity_visibility",
+          "anti_occlusion"
+        ],
+        "prompt_id": "geneval2_00783_ba07fc9b",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "attribute_mismatch",
+              "count_mismatch",
+              "missing_object",
+              "relation_mismatch"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many koalas are in the image?",
+                  "score": 1.4710877711231565e-09,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1.47109e-09",
+                "expected": "two",
+                "status": "failed",
+                "target": "How many koalas are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the koalas metal?",
+                  "score": 0.0032097378134494647,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.00320974",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the koalas metal?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any koalas in the image?",
+                  "score": 5.893261038891762e-09,
+                  "skill": "object"
+                },
+                "detected": "soft_score=5.89326e-09",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are there any koalas in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the koalas chasing the rabbits?",
+                  "score": 3.928979151367456e-06,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=3.92898e-06",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the koalas chasing the rabbits?",
+                "type": "relation_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the rabbits glass?",
+                  "score": 0.8853125130408444,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.885313",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the rabbits glass?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many cars are in the image?",
+                  "score": 2.0712166929872293e-09,
+                  "skill": "count"
+                },
+                "detected": "soft_score=2.07122e-09",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many cars are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many rabbits are in the image?",
+                  "score": 1.0,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1",
+                "expected": "three",
+                "status": "passed",
+                "target": "How many rabbits are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any rabbits in the image?",
+                  "score": 0.9999725416855654,
+                  "skill": "object"
+                },
+                "detected": "soft_score=0.999973",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any rabbits in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the cars white?",
+                  "score": 0.9999999003994162,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the cars white?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any cars in the image?",
+                  "score": 0.9999999912824933,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any cars in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly two koalas, exactly three rabbits, and exactly six cars.",
+                "Bind materials and colors correctly: both koalas are metal, all three rabbits are glass, and all six cars are white.",
+                "Depict the two metal koalas chasing the three glass rabbits, with the koalas positioned behind the rabbits and oriented toward them.",
+                "Keep every animal and car fully visible, separated, and not occluding each other."
+              ],
+              "generation_strategy": "Use a clear wide composition with three distinct groups: two metal koalas behind and chasing three glass rabbits, plus six white cars arranged separately so they are countable. Emphasize material attributes and keep all ten objects unobstructed and visible.",
+              "initial_prompt": "A clear wide scene showing exactly two metal koalas chasing exactly three glass rabbits. The two metal koalas are behind the three glass rabbits and facing toward them in a chasing action. Also show exactly six white cars arranged separately nearby. Make all two koalas, all three rabbits, and all six cars fully visible, distinct, countable, and not overlapping or occluding one another. Ensure the koalas look metallic, the rabbits look made of glass, and the cars are white.",
+              "parsed_constraints": {
+                "attributes": {
+                  "cars": [
+                    "white"
+                  ],
+                  "koalas": [
+                    "metal"
+                  ],
+                  "rabbits": [
+                    "glass"
+                  ]
+                },
+                "counts": {
+                  "cars": 6,
+                  "koalas": 2,
+                  "rabbits": 3
+                },
+                "objects": [
+                  "koalas",
+                  "rabbits",
+                  "cars"
+                ],
+                "relations": [
+                  "two metal koalas are chasing three glass rabbits"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "multi_object_composition",
+                "spatial_layout",
+                "clarity_visibility",
+                "anti_occlusion"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly two koalas, exactly three rabbits, and exactly six cars.",
+                "Bind materials and colors correctly: both koalas are metal, all three rabbits are glass, and all six cars are white.",
+                "Depict the two metal koalas chasing the three glass rabbits, with the koalas positioned behind the rabbits and oriented toward them.",
+                "Keep every animal and car fully visible, separated, and not occluding each other."
+              ],
+              "generation_strategy": "Use a clear wide composition with three distinct groups: two metal koalas behind and chasing three glass rabbits, plus six white cars arranged separately so they are countable. Emphasize material attributes and keep all ten objects unobstructed and visible.",
+              "initial_prompt": "A clear wide scene showing exactly two metal koalas chasing exactly three glass rabbits. The two metal koalas are behind the three glass rabbits and facing toward them in a chasing action. Also show exactly six white cars arranged separately nearby. Make all two koalas, all three rabbits, and all six cars fully visible, distinct, countable, and not overlapping or occluding one another. Ensure the koalas look metallic, the rabbits look made of glass, and the cars are white.",
+              "parsed_constraints": {
+                "attributes": {
+                  "cars": [
+                    "white"
+                  ],
+                  "koalas": [
+                    "metal"
+                  ],
+                  "rabbits": [
+                    "glass"
+                  ]
+                },
+                "counts": {
+                  "cars": 6,
+                  "koalas": 2,
+                  "rabbits": 3
+                },
+                "objects": [
+                  "koalas",
+                  "rabbits",
+                  "cars"
+                ],
+                "relations": [
+                  "two metal koalas are chasing three glass rabbits"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "multi_object_composition",
+                "spatial_layout",
+                "clarity_visibility",
+                "anti_occlusion"
+              ]
+            },
+            "prompt_used": "A clear wide scene showing exactly two metal koalas chasing exactly three glass rabbits. The two metal koalas are behind the three glass rabbits and facing toward them in a chasing action. Also show exactly six white cars arranged separately nearby. Make all two koalas, all three rabbits, and all six cars fully visible, distinct, countable, and not overlapping or occluding one another. Ensure the koalas look metallic, the rabbits look made of glass, and the cars are white.",
+            "round": 0,
+            "score": 0.48884986226364857,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 0,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many koalas are in the image?",
+                    "score": 1.4710877711231565e-09,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=1.47109e-09",
+                  "expected": "two",
+                  "status": "failed",
+                  "target": "How many koalas are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 1,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the koalas metal?",
+                    "score": 0.0032097378134494647,
+                    "skill": "attribute"
+                  },
+                  "detected": "soft_score=0.00320974",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the koalas metal?",
+                  "type": "attribute_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 2,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are there any koalas in the image?",
+                    "score": 5.893261038891762e-09,
+                    "skill": "object"
+                  },
+                  "detected": "soft_score=5.89326e-09",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are there any koalas in the image?",
+                  "type": "missing_object"
+                },
+                {
+                  "details": {
+                    "atom_index": 3,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the koalas chasing the rabbits?",
+                    "score": 3.928979151367456e-06,
+                    "skill": "verb"
+                  },
+                  "detected": "soft_score=3.92898e-06",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the koalas chasing the rabbits?",
+                  "type": "relation_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 5,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the rabbits glass?",
+                    "score": 0.8853125130408444,
+                    "skill": "attribute"
+                  },
+                  "detected": "soft_score=0.885313",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the rabbits glass?",
+                  "type": "attribute_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 7,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many cars are in the image?",
+                    "score": 2.0712166929872293e-09,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=2.07122e-09",
+                  "expected": "six",
+                  "status": "failed",
+                  "target": "How many cars are in the image?",
+                  "type": "count_mismatch"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00783_ba07fc9b"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many koalas are in the image?",
+              "score": 1.4710877711231565e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.47109e-09",
+            "expected": "two",
+            "status": "failed",
+            "target": "How many koalas are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the koalas metal?",
+              "score": 0.0032097378134494647,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.00320974",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the koalas metal?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any koalas in the image?",
+              "score": 5.893261038891762e-09,
+              "skill": "object"
+            },
+            "detected": "soft_score=5.89326e-09",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any koalas in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the koalas chasing the rabbits?",
+              "score": 3.928979151367456e-06,
+              "skill": "verb"
+            },
+            "detected": "soft_score=3.92898e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the koalas chasing the rabbits?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the rabbits glass?",
+              "score": 0.8853125130408444,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.885313",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the rabbits glass?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cars are in the image?",
+              "score": 2.0712166929872293e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=2.07122e-09",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many cars are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00783_ba07fc9b_cand_04",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly two koalas, exactly three rabbits, and exactly six cars.",
+      "Bind materials and colors correctly: both koalas are metal, all three rabbits are glass, and all six cars are white.",
+      "Depict the two metal koalas chasing the three glass rabbits, with the koalas positioned behind the rabbits and oriented toward them.",
+      "Keep every animal and car fully visible, separated, and not occluding each other."
+    ],
+    "generation_strategy": "Use a clear wide composition with three distinct groups: two metal koalas behind and chasing three glass rabbits, plus six white cars arranged separately so they are countable. Emphasize material attributes and keep all ten objects unobstructed and visible.",
+    "initial_prompt": "A clear wide scene showing exactly two metal koalas chasing exactly three glass rabbits. The two metal koalas are behind the three glass rabbits and facing toward them in a chasing action. Also show exactly six white cars arranged separately nearby. Make all two koalas, all three rabbits, and all six cars fully visible, distinct, countable, and not overlapping or occluding one another. Ensure the koalas look metallic, the rabbits look made of glass, and the cars are white.",
+    "parsed_constraints": {
+      "attributes": {
+        "cars": [
+          "white"
+        ],
+        "koalas": [
+          "metal"
+        ],
+        "rabbits": [
+          "glass"
+        ]
+      },
+      "counts": {
+        "cars": 6,
+        "koalas": 2,
+        "rabbits": 3
+      },
+      "objects": [
+        "koalas",
+        "rabbits",
+        "cars"
+      ],
+      "relations": [
+        "two metal koalas are chasing three glass rabbits"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "multi_object_composition",
+      "spatial_layout",
+      "clarity_visibility",
+      "anti_occlusion"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image passed presence and exact count for three rabbits, presence of cars, and white color for cars, but failed to show any recognizable koalas, so the two-koala count, metal-koala attribute, and koalas-chasing-rabbits relation all failed. The six-car count also failed even though cars were present and white. The glass-rabbit attribute was close but below threshold, so the rabbits need stronger explicit glass material binding.",
+    "expected_improvement": [
+      "Two recognizable koalas should be present and countable.",
+      "Both koalas should read as metal rather than ordinary animals or unrelated objects.",
+      "The koalas should clearly be chasing the rabbits by being behind them and facing toward them.",
+      "All three rabbits should remain present and countable while looking clearly glass.",
+      "Cars should remain present and white, with exactly six separate visible cars and no extras."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "attribute_mismatch",
+      "missing_object",
+      "relation_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly three rabbits visible and countable.",
+      "Keep rabbits present as rabbits, not replaced by other animals.",
+      "Keep cars present.",
+      "Keep the cars white."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt put many constraints into one broad scene, but did not make the koalas visually dominant enough; the generator appears to have omitted or failed to render recognizable koalas. It also did not make the six cars individually countable enough. Material wording for the glass rabbits was not strong enough to pass reliably.",
+      "error_source": "Insufficient object-presence emphasis for koalas, weak count separability for cars, and insufficient attribute binding for metal koalas and glass rabbits."
+    },
+    "regeneration_strategy": "Use a simpler verifier-friendly composition: make the two metal koalas prominent and unmistakable, place them directly behind the three glass rabbits and facing the rabbits to show chasing, and keep the six white cars as six separate complete vehicles. Add explicit negative constraints against extra koalas, rabbits, or cars and against merged or hidden instances.",
+    "regression_risks": [
+      "The already-correct three-rabbit count could regress if extra rabbits are generated.",
+      "The already-correct car presence and white color could regress while trying to fix the car count.",
+      "The chasing relation could still be unclear if koalas and rabbits are separated too much or face different directions.",
+      "Metal and glass materials may leak to the wrong objects if not bound to the specific animals."
+    ],
+    "repair_constraints": [
+      "Show exactly two koalas, no fewer and no more, with both koalas fully visible and visually recognizable as koalas.",
+      "Bind metal only to the two koalas: both koalas must have shiny metallic surfaces.",
+      "Place the two metal koalas behind the three rabbits, facing and moving toward the rabbits, so the koalas are clearly chasing the rabbits.",
+      "Bind glass only to the three rabbits: each rabbit must look transparent, reflective, and glass-like while still clearly shaped like a rabbit.",
+      "Show exactly six white cars, no fewer and no more, with all six cars separate, complete, visible, and countable; do not merge cars or add extra cars."
+    ],
+    "retry_prompt": "A clear wide scene with exactly two shiny metal koalas chasing exactly three glass rabbits, and exactly six white cars. Make the two koalas large enough to recognize as koalas, fully visible, separate from each other, and made of shiny metal. Put the two metal koalas directly behind the three rabbits, facing toward the rabbits and moving after them, so the koalas are clearly chasing the rabbits. Keep exactly three rabbits in front of the koalas; each rabbit is a distinct transparent reflective glass rabbit, fully visible and countable. Also include exactly six white cars nearby; each car is a separate complete white car, fully visible and individually countable. No extra koalas, no extra rabbits, no extra cars. Do not hide, crop, overlap, or merge any koala, rabbit, or car.",
+    "skill_revision": {
+      "new_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "clarity_visibility",
+        "anti_occlusion"
+      ],
+      "reason": "Add negative_constraints because exact counts failed for koalas and cars; explicitly forbid extra or missing instances and merged duplicates while preserving the passed rabbit and car constraints."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many koalas are in the image?",
+            "score": 1.4710877711231565e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.47109e-09",
+          "expected": "two",
+          "status": "failed",
+          "target": "How many koalas are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the koalas metal?",
+            "score": 0.0032097378134494647,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.00320974",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the koalas metal?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any koalas in the image?",
+            "score": 5.893261038891762e-09,
+            "skill": "object"
+          },
+          "detected": "soft_score=5.89326e-09",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any koalas in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the koalas chasing the rabbits?",
+            "score": 3.928979151367456e-06,
+            "skill": "verb"
+          },
+          "detected": "soft_score=3.92898e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the koalas chasing the rabbits?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the rabbits glass?",
+            "score": 0.8853125130408444,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.885313",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the rabbits glass?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cars are in the image?",
+            "score": 2.0712166929872293e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=2.07122e-09",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many cars are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00074/samples/00004.png",
+      "prompt": "A clear wide scene showing exactly two metal koalas chasing exactly three glass rabbits. The two metal koalas are behind the three glass rabbits and facing toward them in a chasing action. Also show exactly six white cars arranged separately nearby. Make all two koalas, all three rabbits, and all six cars fully visible, distinct, countable, and not overlapping or occluding one another. Ensure the koalas look metallic, the rabbits look made of glass, and the cars are white.",
+      "round": 0,
+      "score": 0.48884986226364857
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00783_ba07fc9b_cand_04",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "count_mismatch",
+        "missing_object",
+        "relation_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many koalas are in the image?",
+            "score": 1.4710877711231565e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.47109e-09",
+          "expected": "two",
+          "status": "failed",
+          "target": "How many koalas are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the koalas metal?",
+            "score": 0.0032097378134494647,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.00320974",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the koalas metal?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any koalas in the image?",
+            "score": 5.893261038891762e-09,
+            "skill": "object"
+          },
+          "detected": "soft_score=5.89326e-09",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any koalas in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the koalas chasing the rabbits?",
+            "score": 3.928979151367456e-06,
+            "skill": "verb"
+          },
+          "detected": "soft_score=3.92898e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the koalas chasing the rabbits?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the rabbits glass?",
+            "score": 0.8853125130408444,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.885313",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the rabbits glass?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cars are in the image?",
+            "score": 2.0712166929872293e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=2.07122e-09",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many cars are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many rabbits are in the image?",
+            "score": 1.0,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "three",
+          "status": "passed",
+          "target": "How many rabbits are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any rabbits in the image?",
+            "score": 0.9999725416855654,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999973",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any rabbits in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cars white?",
+            "score": 0.9999999003994162,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the cars white?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any cars in the image?",
+            "score": 0.9999999912824933,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any cars in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.48884986226364857,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many koalas are in the image?",
+              "score": 1.4710877711231565e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.47109e-09",
+            "expected": "two",
+            "status": "failed",
+            "target": "How many koalas are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the koalas metal?",
+              "score": 0.0032097378134494647,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.00320974",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the koalas metal?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any koalas in the image?",
+              "score": 5.893261038891762e-09,
+              "skill": "object"
+            },
+            "detected": "soft_score=5.89326e-09",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any koalas in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the koalas chasing the rabbits?",
+              "score": 3.928979151367456e-06,
+              "skill": "verb"
+            },
+            "detected": "soft_score=3.92898e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the koalas chasing the rabbits?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the rabbits glass?",
+              "score": 0.8853125130408444,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.885313",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the rabbits glass?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cars are in the image?",
+              "score": 2.0712166929872293e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=2.07122e-09",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many cars are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00074/samples/00004.png",
+        "prompt": "A clear wide scene showing exactly two metal koalas chasing exactly three glass rabbits. The two metal koalas are behind the three glass rabbits and facing toward them in a chasing action. Also show exactly six white cars arranged separately nearby. Make all two koalas, all three rabbits, and all six cars fully visible, distinct, countable, and not overlapping or occluding one another. Ensure the koalas look metallic, the rabbits look made of glass, and the cars are white.",
+        "round": 0,
+        "score": 0.48884986226364857
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many koalas are in the image?",
+            "score": 1.4710877711231565e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.47109e-09",
+          "expected": "two",
+          "status": "failed",
+          "target": "How many koalas are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the koalas metal?",
+            "score": 0.0032097378134494647,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.00320974",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the koalas metal?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any koalas in the image?",
+            "score": 5.893261038891762e-09,
+            "skill": "object"
+          },
+          "detected": "soft_score=5.89326e-09",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any koalas in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the koalas chasing the rabbits?",
+            "score": 3.928979151367456e-06,
+            "skill": "verb"
+          },
+          "detected": "soft_score=3.92898e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the koalas chasing the rabbits?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the rabbits glass?",
+            "score": 0.8853125130408444,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.885313",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the rabbits glass?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cars are in the image?",
+            "score": 2.0712166929872293e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=2.07122e-09",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many cars are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "count_mismatch",
+        "missing_object",
+        "relation_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many koalas are in the image?",
+            "score": 1.4710877711231565e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.47109e-09",
+          "expected": "two",
+          "status": "failed",
+          "target": "How many koalas are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the koalas metal?",
+            "score": 0.0032097378134494647,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.00320974",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the koalas metal?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any koalas in the image?",
+            "score": 5.893261038891762e-09,
+            "skill": "object"
+          },
+          "detected": "soft_score=5.89326e-09",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any koalas in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the koalas chasing the rabbits?",
+            "score": 3.928979151367456e-06,
+            "skill": "verb"
+          },
+          "detected": "soft_score=3.92898e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the koalas chasing the rabbits?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the rabbits glass?",
+            "score": 0.8853125130408444,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.885313",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the rabbits glass?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cars are in the image?",
+            "score": 2.0712166929872293e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=2.07122e-09",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many cars are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many rabbits are in the image?",
+            "score": 1.0,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "three",
+          "status": "passed",
+          "target": "How many rabbits are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any rabbits in the image?",
+            "score": 0.9999725416855654,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999973",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any rabbits in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cars white?",
+            "score": 0.9999999003994162,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the cars white?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any cars in the image?",
+            "score": 0.9999999912824933,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any cars in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.48884986226364857,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "two metal koalas chasing three glass rabbits, and six white cars",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many koalas are in the image?",
+          "score": 1.4710877711231565e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.47109e-09",
+        "expected": "two",
+        "status": "failed",
+        "target": "How many koalas are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the koalas metal?",
+          "score": 0.0032097378134494647,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.00320974",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the koalas metal?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 2,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any koalas in the image?",
+          "score": 5.893261038891762e-09,
+          "skill": "object"
+        },
+        "detected": "soft_score=5.89326e-09",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are there any koalas in the image?",
+        "type": "missing_object"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the koalas chasing the rabbits?",
+          "score": 3.928979151367456e-06,
+          "skill": "verb"
+        },
+        "detected": "soft_score=3.92898e-06",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the koalas chasing the rabbits?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the rabbits glass?",
+          "score": 0.8853125130408444,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.885313",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the rabbits glass?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cars are in the image?",
+          "score": 2.0712166929872293e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=2.07122e-09",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many cars are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly two koalas, exactly three rabbits, and exactly six cars.",
+        "Bind materials and colors correctly: both koalas are metal, all three rabbits are glass, and all six cars are white.",
+        "Depict the two metal koalas chasing the three glass rabbits, with the koalas positioned behind the rabbits and oriented toward them.",
+        "Keep every animal and car fully visible, separated, and not occluding each other."
+      ],
+      "generation_strategy": "Use a clear wide composition with three distinct groups: two metal koalas behind and chasing three glass rabbits, plus six white cars arranged separately so they are countable. Emphasize material attributes and keep all ten objects unobstructed and visible.",
+      "initial_prompt": "A clear wide scene showing exactly two metal koalas chasing exactly three glass rabbits. The two metal koalas are behind the three glass rabbits and facing toward them in a chasing action. Also show exactly six white cars arranged separately nearby. Make all two koalas, all three rabbits, and all six cars fully visible, distinct, countable, and not overlapping or occluding one another. Ensure the koalas look metallic, the rabbits look made of glass, and the cars are white.",
+      "parsed_constraints": {
+        "attributes": {
+          "cars": [
+            "white"
+          ],
+          "koalas": [
+            "metal"
+          ],
+          "rabbits": [
+            "glass"
+          ]
+        },
+        "counts": {
+          "cars": 6,
+          "koalas": 2,
+          "rabbits": 3
+        },
+        "objects": [
+          "koalas",
+          "rabbits",
+          "cars"
+        ],
+        "relations": [
+          "two metal koalas are chasing three glass rabbits"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "clarity_visibility",
+        "anti_occlusion"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly two koalas, exactly three rabbits, and exactly six cars.",
+        "Bind materials and colors correctly: both koalas are metal, all three rabbits are glass, and all six cars are white.",
+        "Depict the two metal koalas chasing the three glass rabbits, with the koalas positioned behind the rabbits and oriented toward them.",
+        "Keep every animal and car fully visible, separated, and not occluding each other."
+      ],
+      "generation_strategy": "Use a clear wide composition with three distinct groups: two metal koalas behind and chasing three glass rabbits, plus six white cars arranged separately so they are countable. Emphasize material attributes and keep all ten objects unobstructed and visible.",
+      "initial_prompt": "A clear wide scene showing exactly two metal koalas chasing exactly three glass rabbits. The two metal koalas are behind the three glass rabbits and facing toward them in a chasing action. Also show exactly six white cars arranged separately nearby. Make all two koalas, all three rabbits, and all six cars fully visible, distinct, countable, and not overlapping or occluding one another. Ensure the koalas look metallic, the rabbits look made of glass, and the cars are white.",
+      "parsed_constraints": {
+        "attributes": {
+          "cars": [
+            "white"
+          ],
+          "koalas": [
+            "metal"
+          ],
+          "rabbits": [
+            "glass"
+          ]
+        },
+        "counts": {
+          "cars": 6,
+          "koalas": 2,
+          "rabbits": 3
+        },
+        "objects": [
+          "koalas",
+          "rabbits",
+          "cars"
+        ],
+        "relations": [
+          "two metal koalas are chasing three glass rabbits"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "clarity_visibility",
+        "anti_occlusion"
+      ]
+    },
+    "previous_prompt": "A clear wide scene showing exactly two metal koalas chasing exactly three glass rabbits. The two metal koalas are behind the three glass rabbits and facing toward them in a chasing action. Also show exactly six white cars arranged separately nearby. Make all two koalas, all three rabbits, and all six cars fully visible, distinct, countable, and not overlapping or occluding one another. Ensure the koalas look metallic, the rabbits look made of glass, and the cars are white.",
+    "previous_selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "multi_object_composition",
+      "spatial_layout",
+      "clarity_visibility",
+      "anti_occlusion"
+    ],
+    "prompt_id": "geneval2_00783_ba07fc9b",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "count_mismatch",
+          "missing_object",
+          "relation_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many koalas are in the image?",
+              "score": 1.4710877711231565e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.47109e-09",
+            "expected": "two",
+            "status": "failed",
+            "target": "How many koalas are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the koalas metal?",
+              "score": 0.0032097378134494647,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.00320974",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the koalas metal?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any koalas in the image?",
+              "score": 5.893261038891762e-09,
+              "skill": "object"
+            },
+            "detected": "soft_score=5.89326e-09",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any koalas in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the koalas chasing the rabbits?",
+              "score": 3.928979151367456e-06,
+              "skill": "verb"
+            },
+            "detected": "soft_score=3.92898e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the koalas chasing the rabbits?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the rabbits glass?",
+              "score": 0.8853125130408444,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.885313",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the rabbits glass?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cars are in the image?",
+              "score": 2.0712166929872293e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=2.07122e-09",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many cars are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many rabbits are in the image?",
+              "score": 1.0,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "three",
+            "status": "passed",
+            "target": "How many rabbits are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any rabbits in the image?",
+              "score": 0.9999725416855654,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999973",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any rabbits in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cars white?",
+              "score": 0.9999999003994162,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the cars white?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any cars in the image?",
+              "score": 0.9999999912824933,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any cars in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly two koalas, exactly three rabbits, and exactly six cars.",
+            "Bind materials and colors correctly: both koalas are metal, all three rabbits are glass, and all six cars are white.",
+            "Depict the two metal koalas chasing the three glass rabbits, with the koalas positioned behind the rabbits and oriented toward them.",
+            "Keep every animal and car fully visible, separated, and not occluding each other."
+          ],
+          "generation_strategy": "Use a clear wide composition with three distinct groups: two metal koalas behind and chasing three glass rabbits, plus six white cars arranged separately so they are countable. Emphasize material attributes and keep all ten objects unobstructed and visible.",
+          "initial_prompt": "A clear wide scene showing exactly two metal koalas chasing exactly three glass rabbits. The two metal koalas are behind the three glass rabbits and facing toward them in a chasing action. Also show exactly six white cars arranged separately nearby. Make all two koalas, all three rabbits, and all six cars fully visible, distinct, countable, and not overlapping or occluding one another. Ensure the koalas look metallic, the rabbits look made of glass, and the cars are white.",
+          "parsed_constraints": {
+            "attributes": {
+              "cars": [
+                "white"
+              ],
+              "koalas": [
+                "metal"
+              ],
+              "rabbits": [
+                "glass"
+              ]
+            },
+            "counts": {
+              "cars": 6,
+              "koalas": 2,
+              "rabbits": 3
+            },
+            "objects": [
+              "koalas",
+              "rabbits",
+              "cars"
+            ],
+            "relations": [
+              "two metal koalas are chasing three glass rabbits"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "multi_object_composition",
+            "spatial_layout",
+            "clarity_visibility",
+            "anti_occlusion"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly two koalas, exactly three rabbits, and exactly six cars.",
+            "Bind materials and colors correctly: both koalas are metal, all three rabbits are glass, and all six cars are white.",
+            "Depict the two metal koalas chasing the three glass rabbits, with the koalas positioned behind the rabbits and oriented toward them.",
+            "Keep every animal and car fully visible, separated, and not occluding each other."
+          ],
+          "generation_strategy": "Use a clear wide composition with three distinct groups: two metal koalas behind and chasing three glass rabbits, plus six white cars arranged separately so they are countable. Emphasize material attributes and keep all ten objects unobstructed and visible.",
+          "initial_prompt": "A clear wide scene showing exactly two metal koalas chasing exactly three glass rabbits. The two metal koalas are behind the three glass rabbits and facing toward them in a chasing action. Also show exactly six white cars arranged separately nearby. Make all two koalas, all three rabbits, and all six cars fully visible, distinct, countable, and not overlapping or occluding one another. Ensure the koalas look metallic, the rabbits look made of glass, and the cars are white.",
+          "parsed_constraints": {
+            "attributes": {
+              "cars": [
+                "white"
+              ],
+              "koalas": [
+                "metal"
+              ],
+              "rabbits": [
+                "glass"
+              ]
+            },
+            "counts": {
+              "cars": 6,
+              "koalas": 2,
+              "rabbits": 3
+            },
+            "objects": [
+              "koalas",
+              "rabbits",
+              "cars"
+            ],
+            "relations": [
+              "two metal koalas are chasing three glass rabbits"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "multi_object_composition",
+            "spatial_layout",
+            "clarity_visibility",
+            "anti_occlusion"
+          ]
+        },
+        "prompt_used": "A clear wide scene showing exactly two metal koalas chasing exactly three glass rabbits. The two metal koalas are behind the three glass rabbits and facing toward them in a chasing action. Also show exactly six white cars arranged separately nearby. Make all two koalas, all three rabbits, and all six cars fully visible, distinct, countable, and not overlapping or occluding one another. Ensure the koalas look metallic, the rabbits look made of glass, and the cars are white.",
+        "round": 0,
+        "score": 0.48884986226364857,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many koalas are in the image?",
+                "score": 1.4710877711231565e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.47109e-09",
+              "expected": "two",
+              "status": "failed",
+              "target": "How many koalas are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the koalas metal?",
+                "score": 0.0032097378134494647,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.00320974",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the koalas metal?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any koalas in the image?",
+                "score": 5.893261038891762e-09,
+                "skill": "object"
+              },
+              "detected": "soft_score=5.89326e-09",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any koalas in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the koalas chasing the rabbits?",
+                "score": 3.928979151367456e-06,
+                "skill": "verb"
+              },
+              "detected": "soft_score=3.92898e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the koalas chasing the rabbits?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the rabbits glass?",
+                "score": 0.8853125130408444,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.885313",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the rabbits glass?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cars are in the image?",
+                "score": 2.0712166929872293e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=2.07122e-09",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many cars are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00783_ba07fc9b"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many koalas are in the image?",
+          "score": 1.4710877711231565e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.47109e-09",
+        "expected": "two",
+        "status": "failed",
+        "target": "How many koalas are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the koalas metal?",
+          "score": 0.0032097378134494647,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.00320974",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the koalas metal?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 2,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any koalas in the image?",
+          "score": 5.893261038891762e-09,
+          "skill": "object"
+        },
+        "detected": "soft_score=5.89326e-09",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are there any koalas in the image?",
+        "type": "missing_object"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the koalas chasing the rabbits?",
+          "score": 3.928979151367456e-06,
+          "skill": "verb"
+        },
+        "detected": "soft_score=3.92898e-06",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the koalas chasing the rabbits?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the rabbits glass?",
+          "score": 0.8853125130408444,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.885313",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the rabbits glass?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cars are in the image?",
+          "score": 2.0712166929872293e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=2.07122e-09",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many cars are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00074/samples/00004.png",
+    "best_so_far_prompt": "A clear wide scene showing exactly two metal koalas chasing exactly three glass rabbits. The two metal koalas are behind the three glass rabbits and facing toward them in a chasing action. Also show exactly six white cars arranged separately nearby. Make all two koalas, all three rabbits, and all six cars fully visible, distinct, countable, and not overlapping or occluding one another. Ensure the koalas look metallic, the rabbits look made of glass, and the cars are white.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.48884986226364857,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many koalas are in the image?",
+          "score": 1.4710877711231565e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.47109e-09",
+        "expected": "two",
+        "status": "failed",
+        "target": "How many koalas are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the koalas metal?",
+          "score": 0.0032097378134494647,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.00320974",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the koalas metal?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 2,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any koalas in the image?",
+          "score": 5.893261038891762e-09,
+          "skill": "object"
+        },
+        "detected": "soft_score=5.89326e-09",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are there any koalas in the image?",
+        "type": "missing_object"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the koalas chasing the rabbits?",
+          "score": 3.928979151367456e-06,
+          "skill": "verb"
+        },
+        "detected": "soft_score=3.92898e-06",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the koalas chasing the rabbits?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the rabbits glass?",
+          "score": 0.8853125130408444,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.885313",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the rabbits glass?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cars are in the image?",
+          "score": 2.0712166929872293e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=2.07122e-09",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many cars are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly two koalas, exactly three rabbits, and exactly six cars.",
+        "Bind materials and colors correctly: both koalas are metal, all three rabbits are glass, and all six cars are white.",
+        "Depict the two metal koalas chasing the three glass rabbits, with the koalas positioned behind the rabbits and oriented toward them.",
+        "Keep every animal and car fully visible, separated, and not occluding each other."
+      ],
+      "generation_strategy": "Use a clear wide composition with three distinct groups: two metal koalas behind and chasing three glass rabbits, plus six white cars arranged separately so they are countable. Emphasize material attributes and keep all ten objects unobstructed and visible.",
+      "initial_prompt": "A clear wide scene showing exactly two metal koalas chasing exactly three glass rabbits. The two metal koalas are behind the three glass rabbits and facing toward them in a chasing action. Also show exactly six white cars arranged separately nearby. Make all two koalas, all three rabbits, and all six cars fully visible, distinct, countable, and not overlapping or occluding one another. Ensure the koalas look metallic, the rabbits look made of glass, and the cars are white.",
+      "parsed_constraints": {
+        "attributes": {
+          "cars": [
+            "white"
+          ],
+          "koalas": [
+            "metal"
+          ],
+          "rabbits": [
+            "glass"
+          ]
+        },
+        "counts": {
+          "cars": 6,
+          "koalas": 2,
+          "rabbits": 3
+        },
+        "objects": [
+          "koalas",
+          "rabbits",
+          "cars"
+        ],
+        "relations": [
+          "two metal koalas are chasing three glass rabbits"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "clarity_visibility",
+        "anti_occlusion"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.489 failed=['How many koalas are in the image?', 'Are the koalas metal?', 'Are there any koalas in the image?', 'Are the koalas chasing the rabbits?', 'Are the rabbits glass?', 'How many cars are in the image?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_incremental/snapshot_003_worker_02/geneval2_00783_ba07fc9b__geneval2_00783_ba07fc9b_cand_04__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00783_ba07fc9b__geneval2_00783_ba07fc9b_cand_04__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00783_ba07fc9b",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image passed presence and exact count for three rabbits, presence of cars, and white color for cars, but failed to show any recognizable koalas, so the two-koala count, metal-koala attribute, and koalas-chasing-rabbits relation all failed. The six-car count also failed even though cars were present and white. The glass-rabbit attribute was close but below threshold, so the rabbits need stronger explicit glass material binding.",
+    "expected_improvement": [
+      "Two recognizable koalas should be present and countable.",
+      "Both koalas should read as metal rather than ordinary animals or unrelated objects.",
+      "The koalas should clearly be chasing the rabbits by being behind them and facing toward them.",
+      "All three rabbits should remain present and countable while looking clearly glass.",
+      "Cars should remain present and white, with exactly six separate visible cars and no extras."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "attribute_mismatch",
+      "missing_object",
+      "relation_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly three rabbits visible and countable.",
+      "Keep rabbits present as rabbits, not replaced by other animals.",
+      "Keep cars present.",
+      "Keep the cars white."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt put many constraints into one broad scene, but did not make the koalas visually dominant enough; the generator appears to have omitted or failed to render recognizable koalas. It also did not make the six cars individually countable enough. Material wording for the glass rabbits was not strong enough to pass reliably.",
+      "error_source": "Insufficient object-presence emphasis for koalas, weak count separability for cars, and insufficient attribute binding for metal koalas and glass rabbits."
+    },
+    "regeneration_strategy": "Use a simpler verifier-friendly composition: make the two metal koalas prominent and unmistakable, place them directly behind the three glass rabbits and facing the rabbits to show chasing, and keep the six white cars as six separate complete vehicles. Add explicit negative constraints against extra koalas, rabbits, or cars and against merged or hidden instances.",
+    "regression_risks": [
+      "The already-correct three-rabbit count could regress if extra rabbits are generated.",
+      "The already-correct car presence and white color could regress while trying to fix the car count.",
+      "The chasing relation could still be unclear if koalas and rabbits are separated too much or face different directions.",
+      "Metal and glass materials may leak to the wrong objects if not bound to the specific animals."
+    ],
+    "repair_constraints": [
+      "Show exactly two koalas, no fewer and no more, with both koalas fully visible and visually recognizable as koalas.",
+      "Bind metal only to the two koalas: both koalas must have shiny metallic surfaces.",
+      "Place the two metal koalas behind the three rabbits, facing and moving toward the rabbits, so the koalas are clearly chasing the rabbits.",
+      "Bind glass only to the three rabbits: each rabbit must look transparent, reflective, and glass-like while still clearly shaped like a rabbit.",
+      "Show exactly six white cars, no fewer and no more, with all six cars separate, complete, visible, and countable; do not merge cars or add extra cars."
+    ],
+    "retry_prompt": "A clear wide scene with exactly two shiny metal koalas chasing exactly three glass rabbits, and exactly six white cars. Make the two koalas large enough to recognize as koalas, fully visible, separate from each other, and made of shiny metal. Put the two metal koalas directly behind the three rabbits, facing toward the rabbits and moving after them, so the koalas are clearly chasing the rabbits. Keep exactly three rabbits in front of the koalas; each rabbit is a distinct transparent reflective glass rabbit, fully visible and countable. Also include exactly six white cars nearby; each car is a separate complete white car, fully visible and individually countable. No extra koalas, no extra rabbits, no extra cars. Do not hide, crop, overlap, or merge any koala, rabbit, or car.",
+    "skill_revision": {
+      "new_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "clarity_visibility",
+        "anti_occlusion"
+      ],
+      "reason": "Add negative_constraints because exact counts failed for koalas and cars; explicitly forbid extra or missing instances and merged duplicates while preserving the passed rabbit and car constraints."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "two metal koalas chasing three glass rabbits, and six white cars",
+    "prompt": "two metal koalas chasing three glass rabbits, and six white cars",
+    "prompt_id": "geneval2_00783_ba07fc9b",
+    "sampling_bucket": "relation_action",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "relation_action",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 3,
+      "count": 3,
+      "object": 3,
+      "verb": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "verb",
+      "count",
+      "attribute",
+      "object",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 783,
+    "vqa_list": [
+      [
+        "How many koalas are in the image?",
+        "two"
+      ],
+      [
+        "Are the koalas metal?",
+        "Yes"
+      ],
+      [
+        "Are there any koalas in the image?",
+        "Yes"
+      ],
+      [
+        "Are the koalas chasing the rabbits?",
+        "Yes"
+      ],
+      [
+        "How many rabbits are in the image?",
+        "three"
+      ],
+      [
+        "Are the rabbits glass?",
+        "Yes"
+      ],
+      [
+        "Are there any rabbits in the image?",
+        "Yes"
+      ],
+      [
+        "How many cars are in the image?",
+        "six"
+      ],
+      [
+        "Are the cars white?",
+        "Yes"
+      ],
+      [
+        "Are there any cars in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00783_ba07fc9b"
+}

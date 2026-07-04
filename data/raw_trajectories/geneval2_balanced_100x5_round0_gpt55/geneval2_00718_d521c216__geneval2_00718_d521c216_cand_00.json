@@ -1,0 +1,2581 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "count_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many kangaroos are in the image?",
+              "score": 2.9977080896539943e-06,
+              "skill": "count"
+            },
+            "detected": "soft_score=2.99771e-06",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many kangaroos are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many umbrellas are in the image?",
+              "score": 0.0021783852481372227,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.00217839",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many umbrellas are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the kangaroos green?",
+              "score": 0.9999999454666977,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the kangaroos green?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any kangaroos in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any kangaroos in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the kangaroos under the umbrellas?",
+              "score": 0.9999997396298568,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the kangaroos under the umbrellas?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the umbrellas brown?",
+              "score": 1.0,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the umbrellas brown?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any umbrellas in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any umbrellas in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the umbrellas to the left of the toys?",
+              "score": 0.9999038509636762,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.999904",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the umbrellas to the left of the toys?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many toys are in the image?",
+              "score": 0.9999898256017086,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.99999",
+            "expected": "four",
+            "status": "passed",
+            "target": "How many toys are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any toys in the image?",
+              "score": 0.9999999840019882,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any toys in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_002/raw_score_lists.by_candidate.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00718_d521c216_cand_00",
+          "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_002/raw_score_lists.by_candidate.json",
+          "rows": [
+            {
+              "answer": "seven",
+              "atom_count": 10,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00718_d521c216_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00055/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00055/samples/00000.png",
+              "prompt": "seven green kangaroos under six brown umbrellas to the left of four toys",
+              "prompt_id": "geneval2_00718_d521c216",
+              "question": "How many kangaroos are in the image?",
+              "score": 2.9977080896539943e-06,
+              "skill": "count",
+              "source_index": 718
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00718_d521c216_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00055/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00055/samples/00000.png",
+              "prompt": "seven green kangaroos under six brown umbrellas to the left of four toys",
+              "prompt_id": "geneval2_00718_d521c216",
+              "question": "Are the kangaroos green?",
+              "score": 0.9999999454666977,
+              "skill": "attribute",
+              "source_index": 718
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00718_d521c216_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00055/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00055/samples/00000.png",
+              "prompt": "seven green kangaroos under six brown umbrellas to the left of four toys",
+              "prompt_id": "geneval2_00718_d521c216",
+              "question": "Are there any kangaroos in the image?",
+              "score": 1.0000000052641553,
+              "skill": "object",
+              "source_index": 718
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00718_d521c216_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00055/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00055/samples/00000.png",
+              "prompt": "seven green kangaroos under six brown umbrellas to the left of four toys",
+              "prompt_id": "geneval2_00718_d521c216",
+              "question": "Are the kangaroos under the umbrellas?",
+              "score": 0.9999997396298568,
+              "skill": "position",
+              "source_index": 718
+            },
+            {
+              "answer": "six",
+              "atom_count": 10,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00718_d521c216_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00055/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00055/samples/00000.png",
+              "prompt": "seven green kangaroos under six brown umbrellas to the left of four toys",
+              "prompt_id": "geneval2_00718_d521c216",
+              "question": "How many umbrellas are in the image?",
+              "score": 0.0021783852481372227,
+              "skill": "count",
+              "source_index": 718
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00718_d521c216_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00055/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00055/samples/00000.png",
+              "prompt": "seven green kangaroos under six brown umbrellas to the left of four toys",
+              "prompt_id": "geneval2_00718_d521c216",
+              "question": "Are the umbrellas brown?",
+              "score": 1.0000000868203642,
+              "skill": "attribute",
+              "source_index": 718
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00718_d521c216_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00055/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00055/samples/00000.png",
+              "prompt": "seven green kangaroos under six brown umbrellas to the left of four toys",
+              "prompt_id": "geneval2_00718_d521c216",
+              "question": "Are there any umbrellas in the image?",
+              "score": 1.0000000038053258,
+              "skill": "object",
+              "source_index": 718
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00718_d521c216_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00055/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00055/samples/00000.png",
+              "prompt": "seven green kangaroos under six brown umbrellas to the left of four toys",
+              "prompt_id": "geneval2_00718_d521c216",
+              "question": "Are the umbrellas to the left of the toys?",
+              "score": 0.9999038509636762,
+              "skill": "position",
+              "source_index": 718
+            },
+            {
+              "answer": "four",
+              "atom_count": 10,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00718_d521c216_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00055/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00055/samples/00000.png",
+              "prompt": "seven green kangaroos under six brown umbrellas to the left of four toys",
+              "prompt_id": "geneval2_00718_d521c216",
+              "question": "How many toys are in the image?",
+              "score": 0.9999898256017086,
+              "skill": "count",
+              "source_index": 718
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00718_d521c216_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00055/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00055/samples/00000.png",
+              "prompt": "seven green kangaroos under six brown umbrellas to the left of four toys",
+              "prompt_id": "geneval2_00718_d521c216",
+              "question": "Are there any toys in the image?",
+              "score": 0.9999999840019882,
+              "skill": "object",
+              "source_index": 718
+            }
+          ],
+          "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_002/raw_score_lists.by_candidate.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.8002074728620154,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 0,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00718_d521c216.json",
+          "manifest_prompt_index": 55,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00718_d521c216"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00718_d521c216_cand_00",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00055/samples/00000.png",
+        "prompt_used": "A clear scene showing exactly seven green kangaroos under exactly six brown umbrellas. The six brown umbrellas are grouped on the left side of the image, with all seven green kangaroos directly beneath them. To the right of the umbrellas, show exactly four toys. Keep every kangaroo, umbrella, and toy fully visible and individually countable, with minimal overlap and no extra kangaroos, umbrellas, or toys.",
+        "seed": 1275
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly seven kangaroos, all green, and no additional kangaroos.",
+          "Show exactly six umbrellas, all brown, and no additional umbrellas.",
+          "Show exactly four toys, with no additional toys.",
+          "Keep the six brown umbrellas clearly to the left of the four toys.",
+          "Place all seven green kangaroos directly under the six brown umbrellas.",
+          "Keep objects separated and visible so counts are easy to verify; avoid heavy overlap or occlusion."
+        ],
+        "generation_strategy": "Create a clear multi-object scene with three count-separated groups: seven green kangaroos beneath six brown umbrellas on the left side, and four toys on the right side. Bind green only to the kangaroos and brown only to the umbrellas. Use spacing and visibility to make each individual kangaroo, umbrella, and toy countable, while preserving the spatial relation that the umbrellas are left of the toys and the kangaroos are under the umbrellas.",
+        "initial_prompt": "A clear scene showing exactly seven green kangaroos under exactly six brown umbrellas. The six brown umbrellas are grouped on the left side of the image, with all seven green kangaroos directly beneath them. To the right of the umbrellas, show exactly four toys. Keep every kangaroo, umbrella, and toy fully visible and individually countable, with minimal overlap and no extra kangaroos, umbrellas, or toys.",
+        "parsed_constraints": {
+          "attributes": {
+            "kangaroos": [
+              "green"
+            ],
+            "umbrellas": [
+              "brown"
+            ]
+          },
+          "counts": {
+            "kangaroos": 7,
+            "toys": 4,
+            "umbrellas": 6
+          },
+          "objects": [
+            "kangaroos",
+            "umbrellas",
+            "toys"
+          ],
+          "relations": [
+            "seven green kangaroos are under six brown umbrellas",
+            "six brown umbrellas are to the left of four toys"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly seven kangaroos, all green, and no additional kangaroos.",
+          "Show exactly six umbrellas, all brown, and no additional umbrellas.",
+          "Show exactly four toys, with no additional toys.",
+          "Keep the six brown umbrellas clearly to the left of the four toys.",
+          "Place all seven green kangaroos directly under the six brown umbrellas.",
+          "Keep objects separated and visible so counts are easy to verify; avoid heavy overlap or occlusion."
+        ],
+        "generation_strategy": "Create a clear multi-object scene with three count-separated groups: seven green kangaroos beneath six brown umbrellas on the left side, and four toys on the right side. Bind green only to the kangaroos and brown only to the umbrellas. Use spacing and visibility to make each individual kangaroo, umbrella, and toy countable, while preserving the spatial relation that the umbrellas are left of the toys and the kangaroos are under the umbrellas.",
+        "initial_prompt": "A clear scene showing exactly seven green kangaroos under exactly six brown umbrellas. The six brown umbrellas are grouped on the left side of the image, with all seven green kangaroos directly beneath them. To the right of the umbrellas, show exactly four toys. Keep every kangaroo, umbrella, and toy fully visible and individually countable, with minimal overlap and no extra kangaroos, umbrellas, or toys.",
+        "parsed_constraints": {
+          "attributes": {
+            "kangaroos": [
+              "green"
+            ],
+            "umbrellas": [
+              "brown"
+            ]
+          },
+          "counts": {
+            "kangaroos": 7,
+            "toys": 4,
+            "umbrellas": 6
+          },
+          "objects": [
+            "kangaroos",
+            "umbrellas",
+            "toys"
+          ],
+          "relations": [
+            "seven green kangaroos are under six brown umbrellas",
+            "six brown umbrellas are to the left of four toys"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many kangaroos are in the image?",
+                "score": 2.9977080896539943e-06,
+                "skill": "count"
+              },
+              "detected": "soft_score=2.99771e-06",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many kangaroos are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many umbrellas are in the image?",
+                "score": 0.0021783852481372227,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.00217839",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many umbrellas are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00055/samples/00000.png",
+          "prompt": "A clear scene showing exactly seven green kangaroos under exactly six brown umbrellas. The six brown umbrellas are grouped on the left side of the image, with all seven green kangaroos directly beneath them. To the right of the umbrellas, show exactly four toys. Keep every kangaroo, umbrella, and toy fully visible and individually countable, with minimal overlap and no extra kangaroos, umbrellas, or toys.",
+          "round": 0,
+          "score": 0.8002074728620154
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00718_d521c216_cand_00",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "count_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many kangaroos are in the image?",
+                "score": 2.9977080896539943e-06,
+                "skill": "count"
+              },
+              "detected": "soft_score=2.99771e-06",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many kangaroos are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many umbrellas are in the image?",
+                "score": 0.0021783852481372227,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.00217839",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many umbrellas are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the kangaroos green?",
+                "score": 0.9999999454666977,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the kangaroos green?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any kangaroos in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any kangaroos in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the kangaroos under the umbrellas?",
+                "score": 0.9999997396298568,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the kangaroos under the umbrellas?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the umbrellas brown?",
+                "score": 1.0,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the umbrellas brown?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any umbrellas in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any umbrellas in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the umbrellas to the left of the toys?",
+                "score": 0.9999038509636762,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.999904",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the umbrellas to the left of the toys?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many toys are in the image?",
+                "score": 0.9999898256017086,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.99999",
+              "expected": "four",
+              "status": "passed",
+              "target": "How many toys are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any toys in the image?",
+                "score": 0.9999999840019882,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any toys in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.8002074728620154,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many kangaroos are in the image?",
+                  "score": 2.9977080896539943e-06,
+                  "skill": "count"
+                },
+                "detected": "soft_score=2.99771e-06",
+                "expected": "seven",
+                "status": "failed",
+                "target": "How many kangaroos are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many umbrellas are in the image?",
+                  "score": 0.0021783852481372227,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.00217839",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many umbrellas are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00055/samples/00000.png",
+            "prompt": "A clear scene showing exactly seven green kangaroos under exactly six brown umbrellas. The six brown umbrellas are grouped on the left side of the image, with all seven green kangaroos directly beneath them. To the right of the umbrellas, show exactly four toys. Keep every kangaroo, umbrella, and toy fully visible and individually countable, with minimal overlap and no extra kangaroos, umbrellas, or toys.",
+            "round": 0,
+            "score": 0.8002074728620154
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many kangaroos are in the image?",
+                "score": 2.9977080896539943e-06,
+                "skill": "count"
+              },
+              "detected": "soft_score=2.99771e-06",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many kangaroos are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many umbrellas are in the image?",
+                "score": 0.0021783852481372227,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.00217839",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many umbrellas are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "count_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many kangaroos are in the image?",
+                "score": 2.9977080896539943e-06,
+                "skill": "count"
+              },
+              "detected": "soft_score=2.99771e-06",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many kangaroos are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many umbrellas are in the image?",
+                "score": 0.0021783852481372227,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.00217839",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many umbrellas are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the kangaroos green?",
+                "score": 0.9999999454666977,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the kangaroos green?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any kangaroos in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any kangaroos in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the kangaroos under the umbrellas?",
+                "score": 0.9999997396298568,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the kangaroos under the umbrellas?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the umbrellas brown?",
+                "score": 1.0,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the umbrellas brown?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any umbrellas in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any umbrellas in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the umbrellas to the left of the toys?",
+                "score": 0.9999038509636762,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.999904",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the umbrellas to the left of the toys?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many toys are in the image?",
+                "score": 0.9999898256017086,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.99999",
+              "expected": "four",
+              "status": "passed",
+              "target": "How many toys are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any toys in the image?",
+                "score": 0.9999999840019882,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any toys in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.8002074728620154,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "seven green kangaroos under six brown umbrellas to the left of four toys",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many kangaroos are in the image?",
+              "score": 2.9977080896539943e-06,
+              "skill": "count"
+            },
+            "detected": "soft_score=2.99771e-06",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many kangaroos are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many umbrellas are in the image?",
+              "score": 0.0021783852481372227,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.00217839",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many umbrellas are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly seven kangaroos, all green, and no additional kangaroos.",
+            "Show exactly six umbrellas, all brown, and no additional umbrellas.",
+            "Show exactly four toys, with no additional toys.",
+            "Keep the six brown umbrellas clearly to the left of the four toys.",
+            "Place all seven green kangaroos directly under the six brown umbrellas.",
+            "Keep objects separated and visible so counts are easy to verify; avoid heavy overlap or occlusion."
+          ],
+          "generation_strategy": "Create a clear multi-object scene with three count-separated groups: seven green kangaroos beneath six brown umbrellas on the left side, and four toys on the right side. Bind green only to the kangaroos and brown only to the umbrellas. Use spacing and visibility to make each individual kangaroo, umbrella, and toy countable, while preserving the spatial relation that the umbrellas are left of the toys and the kangaroos are under the umbrellas.",
+          "initial_prompt": "A clear scene showing exactly seven green kangaroos under exactly six brown umbrellas. The six brown umbrellas are grouped on the left side of the image, with all seven green kangaroos directly beneath them. To the right of the umbrellas, show exactly four toys. Keep every kangaroo, umbrella, and toy fully visible and individually countable, with minimal overlap and no extra kangaroos, umbrellas, or toys.",
+          "parsed_constraints": {
+            "attributes": {
+              "kangaroos": [
+                "green"
+              ],
+              "umbrellas": [
+                "brown"
+              ]
+            },
+            "counts": {
+              "kangaroos": 7,
+              "toys": 4,
+              "umbrellas": 6
+            },
+            "objects": [
+              "kangaroos",
+              "umbrellas",
+              "toys"
+            ],
+            "relations": [
+              "seven green kangaroos are under six brown umbrellas",
+              "six brown umbrellas are to the left of four toys"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly seven kangaroos, all green, and no additional kangaroos.",
+            "Show exactly six umbrellas, all brown, and no additional umbrellas.",
+            "Show exactly four toys, with no additional toys.",
+            "Keep the six brown umbrellas clearly to the left of the four toys.",
+            "Place all seven green kangaroos directly under the six brown umbrellas.",
+            "Keep objects separated and visible so counts are easy to verify; avoid heavy overlap or occlusion."
+          ],
+          "generation_strategy": "Create a clear multi-object scene with three count-separated groups: seven green kangaroos beneath six brown umbrellas on the left side, and four toys on the right side. Bind green only to the kangaroos and brown only to the umbrellas. Use spacing and visibility to make each individual kangaroo, umbrella, and toy countable, while preserving the spatial relation that the umbrellas are left of the toys and the kangaroos are under the umbrellas.",
+          "initial_prompt": "A clear scene showing exactly seven green kangaroos under exactly six brown umbrellas. The six brown umbrellas are grouped on the left side of the image, with all seven green kangaroos directly beneath them. To the right of the umbrellas, show exactly four toys. Keep every kangaroo, umbrella, and toy fully visible and individually countable, with minimal overlap and no extra kangaroos, umbrellas, or toys.",
+          "parsed_constraints": {
+            "attributes": {
+              "kangaroos": [
+                "green"
+              ],
+              "umbrellas": [
+                "brown"
+              ]
+            },
+            "counts": {
+              "kangaroos": 7,
+              "toys": 4,
+              "umbrellas": 6
+            },
+            "objects": [
+              "kangaroos",
+              "umbrellas",
+              "toys"
+            ],
+            "relations": [
+              "seven green kangaroos are under six brown umbrellas",
+              "six brown umbrellas are to the left of four toys"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_prompt": "A clear scene showing exactly seven green kangaroos under exactly six brown umbrellas. The six brown umbrellas are grouped on the left side of the image, with all seven green kangaroos directly beneath them. To the right of the umbrellas, show exactly four toys. Keep every kangaroo, umbrella, and toy fully visible and individually countable, with minimal overlap and no extra kangaroos, umbrellas, or toys.",
+        "previous_selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ],
+        "prompt_id": "geneval2_00718_d521c216",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "count_mismatch"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many kangaroos are in the image?",
+                  "score": 2.9977080896539943e-06,
+                  "skill": "count"
+                },
+                "detected": "soft_score=2.99771e-06",
+                "expected": "seven",
+                "status": "failed",
+                "target": "How many kangaroos are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many umbrellas are in the image?",
+                  "score": 0.0021783852481372227,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.00217839",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many umbrellas are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the kangaroos green?",
+                  "score": 0.9999999454666977,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the kangaroos green?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any kangaroos in the image?",
+                  "score": 1.0,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any kangaroos in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the kangaroos under the umbrellas?",
+                  "score": 0.9999997396298568,
+                  "skill": "position"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the kangaroos under the umbrellas?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the umbrellas brown?",
+                  "score": 1.0,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the umbrellas brown?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any umbrellas in the image?",
+                  "score": 1.0,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any umbrellas in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the umbrellas to the left of the toys?",
+                  "score": 0.9999038509636762,
+                  "skill": "position"
+                },
+                "detected": "soft_score=0.999904",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the umbrellas to the left of the toys?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many toys are in the image?",
+                  "score": 0.9999898256017086,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.99999",
+                "expected": "four",
+                "status": "passed",
+                "target": "How many toys are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any toys in the image?",
+                  "score": 0.9999999840019882,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any toys in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly seven kangaroos, all green, and no additional kangaroos.",
+                "Show exactly six umbrellas, all brown, and no additional umbrellas.",
+                "Show exactly four toys, with no additional toys.",
+                "Keep the six brown umbrellas clearly to the left of the four toys.",
+                "Place all seven green kangaroos directly under the six brown umbrellas.",
+                "Keep objects separated and visible so counts are easy to verify; avoid heavy overlap or occlusion."
+              ],
+              "generation_strategy": "Create a clear multi-object scene with three count-separated groups: seven green kangaroos beneath six brown umbrellas on the left side, and four toys on the right side. Bind green only to the kangaroos and brown only to the umbrellas. Use spacing and visibility to make each individual kangaroo, umbrella, and toy countable, while preserving the spatial relation that the umbrellas are left of the toys and the kangaroos are under the umbrellas.",
+              "initial_prompt": "A clear scene showing exactly seven green kangaroos under exactly six brown umbrellas. The six brown umbrellas are grouped on the left side of the image, with all seven green kangaroos directly beneath them. To the right of the umbrellas, show exactly four toys. Keep every kangaroo, umbrella, and toy fully visible and individually countable, with minimal overlap and no extra kangaroos, umbrellas, or toys.",
+              "parsed_constraints": {
+                "attributes": {
+                  "kangaroos": [
+                    "green"
+                  ],
+                  "umbrellas": [
+                    "brown"
+                  ]
+                },
+                "counts": {
+                  "kangaroos": 7,
+                  "toys": 4,
+                  "umbrellas": 6
+                },
+                "objects": [
+                  "kangaroos",
+                  "umbrellas",
+                  "toys"
+                ],
+                "relations": [
+                  "seven green kangaroos are under six brown umbrellas",
+                  "six brown umbrellas are to the left of four toys"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly seven kangaroos, all green, and no additional kangaroos.",
+                "Show exactly six umbrellas, all brown, and no additional umbrellas.",
+                "Show exactly four toys, with no additional toys.",
+                "Keep the six brown umbrellas clearly to the left of the four toys.",
+                "Place all seven green kangaroos directly under the six brown umbrellas.",
+                "Keep objects separated and visible so counts are easy to verify; avoid heavy overlap or occlusion."
+              ],
+              "generation_strategy": "Create a clear multi-object scene with three count-separated groups: seven green kangaroos beneath six brown umbrellas on the left side, and four toys on the right side. Bind green only to the kangaroos and brown only to the umbrellas. Use spacing and visibility to make each individual kangaroo, umbrella, and toy countable, while preserving the spatial relation that the umbrellas are left of the toys and the kangaroos are under the umbrellas.",
+              "initial_prompt": "A clear scene showing exactly seven green kangaroos under exactly six brown umbrellas. The six brown umbrellas are grouped on the left side of the image, with all seven green kangaroos directly beneath them. To the right of the umbrellas, show exactly four toys. Keep every kangaroo, umbrella, and toy fully visible and individually countable, with minimal overlap and no extra kangaroos, umbrellas, or toys.",
+              "parsed_constraints": {
+                "attributes": {
+                  "kangaroos": [
+                    "green"
+                  ],
+                  "umbrellas": [
+                    "brown"
+                  ]
+                },
+                "counts": {
+                  "kangaroos": 7,
+                  "toys": 4,
+                  "umbrellas": 6
+                },
+                "objects": [
+                  "kangaroos",
+                  "umbrellas",
+                  "toys"
+                ],
+                "relations": [
+                  "seven green kangaroos are under six brown umbrellas",
+                  "six brown umbrellas are to the left of four toys"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "prompt_used": "A clear scene showing exactly seven green kangaroos under exactly six brown umbrellas. The six brown umbrellas are grouped on the left side of the image, with all seven green kangaroos directly beneath them. To the right of the umbrellas, show exactly four toys. Keep every kangaroo, umbrella, and toy fully visible and individually countable, with minimal overlap and no extra kangaroos, umbrellas, or toys.",
+            "round": 0,
+            "score": 0.8002074728620154,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 0,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many kangaroos are in the image?",
+                    "score": 2.9977080896539943e-06,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=2.99771e-06",
+                  "expected": "seven",
+                  "status": "failed",
+                  "target": "How many kangaroos are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 4,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many umbrellas are in the image?",
+                    "score": 0.0021783852481372227,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=0.00217839",
+                  "expected": "six",
+                  "status": "failed",
+                  "target": "How many umbrellas are in the image?",
+                  "type": "count_mismatch"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00718_d521c216"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many kangaroos are in the image?",
+              "score": 2.9977080896539943e-06,
+              "skill": "count"
+            },
+            "detected": "soft_score=2.99771e-06",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many kangaroos are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many umbrellas are in the image?",
+              "score": 0.0021783852481372227,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.00217839",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many umbrellas are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00718_d521c216_cand_00",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly seven kangaroos, all green, and no additional kangaroos.",
+      "Show exactly six umbrellas, all brown, and no additional umbrellas.",
+      "Show exactly four toys, with no additional toys.",
+      "Keep the six brown umbrellas clearly to the left of the four toys.",
+      "Place all seven green kangaroos directly under the six brown umbrellas.",
+      "Keep objects separated and visible so counts are easy to verify; avoid heavy overlap or occlusion."
+    ],
+    "generation_strategy": "Create a clear multi-object scene with three count-separated groups: seven green kangaroos beneath six brown umbrellas on the left side, and four toys on the right side. Bind green only to the kangaroos and brown only to the umbrellas. Use spacing and visibility to make each individual kangaroo, umbrella, and toy countable, while preserving the spatial relation that the umbrellas are left of the toys and the kangaroos are under the umbrellas.",
+    "initial_prompt": "A clear scene showing exactly seven green kangaroos under exactly six brown umbrellas. The six brown umbrellas are grouped on the left side of the image, with all seven green kangaroos directly beneath them. To the right of the umbrellas, show exactly four toys. Keep every kangaroo, umbrella, and toy fully visible and individually countable, with minimal overlap and no extra kangaroos, umbrellas, or toys.",
+    "parsed_constraints": {
+      "attributes": {
+        "kangaroos": [
+          "green"
+        ],
+        "umbrellas": [
+          "brown"
+        ]
+      },
+      "counts": {
+        "kangaroos": 7,
+        "toys": 4,
+        "umbrellas": 6
+      },
+      "objects": [
+        "kangaroos",
+        "umbrellas",
+        "toys"
+      ],
+      "relations": [
+        "seven green kangaroos are under six brown umbrellas",
+        "six brown umbrellas are to the left of four toys"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image passed object presence, colors, spatial relations, and the count of four toys, but failed the exact counts for kangaroos and umbrellas. The next prompt must make exactly seven green kangaroos and exactly six brown umbrellas easier to count by using a simple non-overlapping layout with separated instances.",
+    "expected_improvement": [
+      "Exact count of seven green kangaroos should become more verifiable.",
+      "Exact count of six brown umbrellas should become more verifiable.",
+      "Previously passed constraints should be maintained: kangaroos are green, umbrellas are brown, kangaroos are under umbrellas, umbrellas are left of the four toys, and exactly four toys remain visible."
+    ],
+    "failure_types": [
+      "count_mismatch"
+    ],
+    "preserve_constraints": [
+      "All kangaroos must be green.",
+      "All umbrellas must be brown.",
+      "The green kangaroos must be directly under the brown umbrellas.",
+      "The brown umbrellas must be to the left of the toys.",
+      "There must be exactly four toys on the right side.",
+      "All required objects must be visible and individually countable."
+    ],
+    "previous_plan_error": {
+      "details": "The prior prompt requested exact counts but allowed the kangaroos and umbrellas to be grouped, which likely caused overlapping, merging, or ambiguous repeated instances. It did not provide a strong count-friendly arrangement for seven kangaroos and six umbrellas.",
+      "error_source": "Insufficient quantity_counting layout specificity for the larger counted groups."
+    },
+    "regeneration_strategy": "Use a structured, count-friendly composition: place six separate brown umbrellas in a clear row on the left, with seven separate green kangaroos in a clear row beneath them. Keep the four toys as a separate group on the right. Add negative constraints against extra or hidden kangaroos, umbrellas, and toys.",
+    "regression_risks": [
+      "The generator may produce fewer or more than seven kangaroos.",
+      "The generator may merge umbrellas or create extra umbrella-like shapes.",
+      "The four toys could be omitted or their count could change while repairing the failed counts.",
+      "The spatial relation could regress if toys are placed among the umbrellas instead of to the right."
+    ],
+    "repair_constraints": [
+      "Show exactly seven green kangaroos, each separated from the others and fully visible.",
+      "Show exactly six brown umbrellas, each separated from the others and fully visible.",
+      "Do not show any extra kangaroos beyond seven.",
+      "Do not show any extra umbrellas beyond six.",
+      "Keep the seven kangaroos directly beneath the six umbrellas.",
+      "Keep the six umbrellas clearly to the left of the four toys."
+    ],
+    "retry_prompt": "A clear countable scene with exactly six brown umbrellas in a separated row on the left side of the image. Directly below those umbrellas, show exactly seven green kangaroos, all fully visible, separated from each other, and easy to count. The seven green kangaroos are under the six brown umbrellas. On the right side of the image, to the right of the umbrellas, show exactly four toys, separated and easy to count. Use a simple uncluttered composition with no overlapping or merging between objects. No extra kangaroos, no extra umbrellas, and no extra toys.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "spatial_layout",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints",
+        "attribute_binding",
+        "object_presence",
+        "multi_object_composition"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same valid skill set, but apply quantity_counting, anti_occlusion, and spatial_layout more strongly by requiring separated rows and explicit negative constraints against extra or merged kangaroos and umbrellas."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many kangaroos are in the image?",
+            "score": 2.9977080896539943e-06,
+            "skill": "count"
+          },
+          "detected": "soft_score=2.99771e-06",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many kangaroos are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many umbrellas are in the image?",
+            "score": 0.0021783852481372227,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.00217839",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many umbrellas are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00055/samples/00000.png",
+      "prompt": "A clear scene showing exactly seven green kangaroos under exactly six brown umbrellas. The six brown umbrellas are grouped on the left side of the image, with all seven green kangaroos directly beneath them. To the right of the umbrellas, show exactly four toys. Keep every kangaroo, umbrella, and toy fully visible and individually countable, with minimal overlap and no extra kangaroos, umbrellas, or toys.",
+      "round": 0,
+      "score": 0.8002074728620154
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00718_d521c216_cand_00",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "count_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many kangaroos are in the image?",
+            "score": 2.9977080896539943e-06,
+            "skill": "count"
+          },
+          "detected": "soft_score=2.99771e-06",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many kangaroos are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many umbrellas are in the image?",
+            "score": 0.0021783852481372227,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.00217839",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many umbrellas are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the kangaroos green?",
+            "score": 0.9999999454666977,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the kangaroos green?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any kangaroos in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any kangaroos in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the kangaroos under the umbrellas?",
+            "score": 0.9999997396298568,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the kangaroos under the umbrellas?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the umbrellas brown?",
+            "score": 1.0,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the umbrellas brown?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any umbrellas in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any umbrellas in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the umbrellas to the left of the toys?",
+            "score": 0.9999038509636762,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.999904",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the umbrellas to the left of the toys?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many toys are in the image?",
+            "score": 0.9999898256017086,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.99999",
+          "expected": "four",
+          "status": "passed",
+          "target": "How many toys are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any toys in the image?",
+            "score": 0.9999999840019882,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any toys in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.8002074728620154,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many kangaroos are in the image?",
+              "score": 2.9977080896539943e-06,
+              "skill": "count"
+            },
+            "detected": "soft_score=2.99771e-06",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many kangaroos are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many umbrellas are in the image?",
+              "score": 0.0021783852481372227,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.00217839",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many umbrellas are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00055/samples/00000.png",
+        "prompt": "A clear scene showing exactly seven green kangaroos under exactly six brown umbrellas. The six brown umbrellas are grouped on the left side of the image, with all seven green kangaroos directly beneath them. To the right of the umbrellas, show exactly four toys. Keep every kangaroo, umbrella, and toy fully visible and individually countable, with minimal overlap and no extra kangaroos, umbrellas, or toys.",
+        "round": 0,
+        "score": 0.8002074728620154
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many kangaroos are in the image?",
+            "score": 2.9977080896539943e-06,
+            "skill": "count"
+          },
+          "detected": "soft_score=2.99771e-06",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many kangaroos are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many umbrellas are in the image?",
+            "score": 0.0021783852481372227,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.00217839",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many umbrellas are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "count_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many kangaroos are in the image?",
+            "score": 2.9977080896539943e-06,
+            "skill": "count"
+          },
+          "detected": "soft_score=2.99771e-06",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many kangaroos are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many umbrellas are in the image?",
+            "score": 0.0021783852481372227,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.00217839",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many umbrellas are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the kangaroos green?",
+            "score": 0.9999999454666977,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the kangaroos green?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any kangaroos in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any kangaroos in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the kangaroos under the umbrellas?",
+            "score": 0.9999997396298568,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the kangaroos under the umbrellas?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the umbrellas brown?",
+            "score": 1.0,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the umbrellas brown?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any umbrellas in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any umbrellas in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the umbrellas to the left of the toys?",
+            "score": 0.9999038509636762,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.999904",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the umbrellas to the left of the toys?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many toys are in the image?",
+            "score": 0.9999898256017086,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.99999",
+          "expected": "four",
+          "status": "passed",
+          "target": "How many toys are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any toys in the image?",
+            "score": 0.9999999840019882,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any toys in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.8002074728620154,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "seven green kangaroos under six brown umbrellas to the left of four toys",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many kangaroos are in the image?",
+          "score": 2.9977080896539943e-06,
+          "skill": "count"
+        },
+        "detected": "soft_score=2.99771e-06",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many kangaroos are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many umbrellas are in the image?",
+          "score": 0.0021783852481372227,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.00217839",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many umbrellas are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly seven kangaroos, all green, and no additional kangaroos.",
+        "Show exactly six umbrellas, all brown, and no additional umbrellas.",
+        "Show exactly four toys, with no additional toys.",
+        "Keep the six brown umbrellas clearly to the left of the four toys.",
+        "Place all seven green kangaroos directly under the six brown umbrellas.",
+        "Keep objects separated and visible so counts are easy to verify; avoid heavy overlap or occlusion."
+      ],
+      "generation_strategy": "Create a clear multi-object scene with three count-separated groups: seven green kangaroos beneath six brown umbrellas on the left side, and four toys on the right side. Bind green only to the kangaroos and brown only to the umbrellas. Use spacing and visibility to make each individual kangaroo, umbrella, and toy countable, while preserving the spatial relation that the umbrellas are left of the toys and the kangaroos are under the umbrellas.",
+      "initial_prompt": "A clear scene showing exactly seven green kangaroos under exactly six brown umbrellas. The six brown umbrellas are grouped on the left side of the image, with all seven green kangaroos directly beneath them. To the right of the umbrellas, show exactly four toys. Keep every kangaroo, umbrella, and toy fully visible and individually countable, with minimal overlap and no extra kangaroos, umbrellas, or toys.",
+      "parsed_constraints": {
+        "attributes": {
+          "kangaroos": [
+            "green"
+          ],
+          "umbrellas": [
+            "brown"
+          ]
+        },
+        "counts": {
+          "kangaroos": 7,
+          "toys": 4,
+          "umbrellas": 6
+        },
+        "objects": [
+          "kangaroos",
+          "umbrellas",
+          "toys"
+        ],
+        "relations": [
+          "seven green kangaroos are under six brown umbrellas",
+          "six brown umbrellas are to the left of four toys"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly seven kangaroos, all green, and no additional kangaroos.",
+        "Show exactly six umbrellas, all brown, and no additional umbrellas.",
+        "Show exactly four toys, with no additional toys.",
+        "Keep the six brown umbrellas clearly to the left of the four toys.",
+        "Place all seven green kangaroos directly under the six brown umbrellas.",
+        "Keep objects separated and visible so counts are easy to verify; avoid heavy overlap or occlusion."
+      ],
+      "generation_strategy": "Create a clear multi-object scene with three count-separated groups: seven green kangaroos beneath six brown umbrellas on the left side, and four toys on the right side. Bind green only to the kangaroos and brown only to the umbrellas. Use spacing and visibility to make each individual kangaroo, umbrella, and toy countable, while preserving the spatial relation that the umbrellas are left of the toys and the kangaroos are under the umbrellas.",
+      "initial_prompt": "A clear scene showing exactly seven green kangaroos under exactly six brown umbrellas. The six brown umbrellas are grouped on the left side of the image, with all seven green kangaroos directly beneath them. To the right of the umbrellas, show exactly four toys. Keep every kangaroo, umbrella, and toy fully visible and individually countable, with minimal overlap and no extra kangaroos, umbrellas, or toys.",
+      "parsed_constraints": {
+        "attributes": {
+          "kangaroos": [
+            "green"
+          ],
+          "umbrellas": [
+            "brown"
+          ]
+        },
+        "counts": {
+          "kangaroos": 7,
+          "toys": 4,
+          "umbrellas": 6
+        },
+        "objects": [
+          "kangaroos",
+          "umbrellas",
+          "toys"
+        ],
+        "relations": [
+          "seven green kangaroos are under six brown umbrellas",
+          "six brown umbrellas are to the left of four toys"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_prompt": "A clear scene showing exactly seven green kangaroos under exactly six brown umbrellas. The six brown umbrellas are grouped on the left side of the image, with all seven green kangaroos directly beneath them. To the right of the umbrellas, show exactly four toys. Keep every kangaroo, umbrella, and toy fully visible and individually countable, with minimal overlap and no extra kangaroos, umbrellas, or toys.",
+    "previous_selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ],
+    "prompt_id": "geneval2_00718_d521c216",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "count_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many kangaroos are in the image?",
+              "score": 2.9977080896539943e-06,
+              "skill": "count"
+            },
+            "detected": "soft_score=2.99771e-06",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many kangaroos are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many umbrellas are in the image?",
+              "score": 0.0021783852481372227,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.00217839",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many umbrellas are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the kangaroos green?",
+              "score": 0.9999999454666977,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the kangaroos green?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any kangaroos in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any kangaroos in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the kangaroos under the umbrellas?",
+              "score": 0.9999997396298568,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the kangaroos under the umbrellas?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the umbrellas brown?",
+              "score": 1.0,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the umbrellas brown?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any umbrellas in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any umbrellas in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the umbrellas to the left of the toys?",
+              "score": 0.9999038509636762,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.999904",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the umbrellas to the left of the toys?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many toys are in the image?",
+              "score": 0.9999898256017086,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.99999",
+            "expected": "four",
+            "status": "passed",
+            "target": "How many toys are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any toys in the image?",
+              "score": 0.9999999840019882,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any toys in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly seven kangaroos, all green, and no additional kangaroos.",
+            "Show exactly six umbrellas, all brown, and no additional umbrellas.",
+            "Show exactly four toys, with no additional toys.",
+            "Keep the six brown umbrellas clearly to the left of the four toys.",
+            "Place all seven green kangaroos directly under the six brown umbrellas.",
+            "Keep objects separated and visible so counts are easy to verify; avoid heavy overlap or occlusion."
+          ],
+          "generation_strategy": "Create a clear multi-object scene with three count-separated groups: seven green kangaroos beneath six brown umbrellas on the left side, and four toys on the right side. Bind green only to the kangaroos and brown only to the umbrellas. Use spacing and visibility to make each individual kangaroo, umbrella, and toy countable, while preserving the spatial relation that the umbrellas are left of the toys and the kangaroos are under the umbrellas.",
+          "initial_prompt": "A clear scene showing exactly seven green kangaroos under exactly six brown umbrellas. The six brown umbrellas are grouped on the left side of the image, with all seven green kangaroos directly beneath them. To the right of the umbrellas, show exactly four toys. Keep every kangaroo, umbrella, and toy fully visible and individually countable, with minimal overlap and no extra kangaroos, umbrellas, or toys.",
+          "parsed_constraints": {
+            "attributes": {
+              "kangaroos": [
+                "green"
+              ],
+              "umbrellas": [
+                "brown"
+              ]
+            },
+            "counts": {
+              "kangaroos": 7,
+              "toys": 4,
+              "umbrellas": 6
+            },
+            "objects": [
+              "kangaroos",
+              "umbrellas",
+              "toys"
+            ],
+            "relations": [
+              "seven green kangaroos are under six brown umbrellas",
+              "six brown umbrellas are to the left of four toys"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly seven kangaroos, all green, and no additional kangaroos.",
+            "Show exactly six umbrellas, all brown, and no additional umbrellas.",
+            "Show exactly four toys, with no additional toys.",
+            "Keep the six brown umbrellas clearly to the left of the four toys.",
+            "Place all seven green kangaroos directly under the six brown umbrellas.",
+            "Keep objects separated and visible so counts are easy to verify; avoid heavy overlap or occlusion."
+          ],
+          "generation_strategy": "Create a clear multi-object scene with three count-separated groups: seven green kangaroos beneath six brown umbrellas on the left side, and four toys on the right side. Bind green only to the kangaroos and brown only to the umbrellas. Use spacing and visibility to make each individual kangaroo, umbrella, and toy countable, while preserving the spatial relation that the umbrellas are left of the toys and the kangaroos are under the umbrellas.",
+          "initial_prompt": "A clear scene showing exactly seven green kangaroos under exactly six brown umbrellas. The six brown umbrellas are grouped on the left side of the image, with all seven green kangaroos directly beneath them. To the right of the umbrellas, show exactly four toys. Keep every kangaroo, umbrella, and toy fully visible and individually countable, with minimal overlap and no extra kangaroos, umbrellas, or toys.",
+          "parsed_constraints": {
+            "attributes": {
+              "kangaroos": [
+                "green"
+              ],
+              "umbrellas": [
+                "brown"
+              ]
+            },
+            "counts": {
+              "kangaroos": 7,
+              "toys": 4,
+              "umbrellas": 6
+            },
+            "objects": [
+              "kangaroos",
+              "umbrellas",
+              "toys"
+            ],
+            "relations": [
+              "seven green kangaroos are under six brown umbrellas",
+              "six brown umbrellas are to the left of four toys"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "prompt_used": "A clear scene showing exactly seven green kangaroos under exactly six brown umbrellas. The six brown umbrellas are grouped on the left side of the image, with all seven green kangaroos directly beneath them. To the right of the umbrellas, show exactly four toys. Keep every kangaroo, umbrella, and toy fully visible and individually countable, with minimal overlap and no extra kangaroos, umbrellas, or toys.",
+        "round": 0,
+        "score": 0.8002074728620154,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many kangaroos are in the image?",
+                "score": 2.9977080896539943e-06,
+                "skill": "count"
+              },
+              "detected": "soft_score=2.99771e-06",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many kangaroos are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many umbrellas are in the image?",
+                "score": 0.0021783852481372227,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.00217839",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many umbrellas are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00718_d521c216"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many kangaroos are in the image?",
+          "score": 2.9977080896539943e-06,
+          "skill": "count"
+        },
+        "detected": "soft_score=2.99771e-06",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many kangaroos are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many umbrellas are in the image?",
+          "score": 0.0021783852481372227,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.00217839",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many umbrellas are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00055/samples/00000.png",
+    "best_so_far_prompt": "A clear scene showing exactly seven green kangaroos under exactly six brown umbrellas. The six brown umbrellas are grouped on the left side of the image, with all seven green kangaroos directly beneath them. To the right of the umbrellas, show exactly four toys. Keep every kangaroo, umbrella, and toy fully visible and individually countable, with minimal overlap and no extra kangaroos, umbrellas, or toys.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.8002074728620154,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many kangaroos are in the image?",
+          "score": 2.9977080896539943e-06,
+          "skill": "count"
+        },
+        "detected": "soft_score=2.99771e-06",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many kangaroos are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many umbrellas are in the image?",
+          "score": 0.0021783852481372227,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.00217839",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many umbrellas are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly seven kangaroos, all green, and no additional kangaroos.",
+        "Show exactly six umbrellas, all brown, and no additional umbrellas.",
+        "Show exactly four toys, with no additional toys.",
+        "Keep the six brown umbrellas clearly to the left of the four toys.",
+        "Place all seven green kangaroos directly under the six brown umbrellas.",
+        "Keep objects separated and visible so counts are easy to verify; avoid heavy overlap or occlusion."
+      ],
+      "generation_strategy": "Create a clear multi-object scene with three count-separated groups: seven green kangaroos beneath six brown umbrellas on the left side, and four toys on the right side. Bind green only to the kangaroos and brown only to the umbrellas. Use spacing and visibility to make each individual kangaroo, umbrella, and toy countable, while preserving the spatial relation that the umbrellas are left of the toys and the kangaroos are under the umbrellas.",
+      "initial_prompt": "A clear scene showing exactly seven green kangaroos under exactly six brown umbrellas. The six brown umbrellas are grouped on the left side of the image, with all seven green kangaroos directly beneath them. To the right of the umbrellas, show exactly four toys. Keep every kangaroo, umbrella, and toy fully visible and individually countable, with minimal overlap and no extra kangaroos, umbrellas, or toys.",
+      "parsed_constraints": {
+        "attributes": {
+          "kangaroos": [
+            "green"
+          ],
+          "umbrellas": [
+            "brown"
+          ]
+        },
+        "counts": {
+          "kangaroos": 7,
+          "toys": 4,
+          "umbrellas": 6
+        },
+        "objects": [
+          "kangaroos",
+          "umbrellas",
+          "toys"
+        ],
+        "relations": [
+          "seven green kangaroos are under six brown umbrellas",
+          "six brown umbrellas are to the left of four toys"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.800 failed=['How many kangaroos are in the image?', 'How many umbrellas are in the image?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_incremental/snapshot_002_worker_01/geneval2_00718_d521c216__geneval2_00718_d521c216_cand_00__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00718_d521c216__geneval2_00718_d521c216_cand_00__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00718_d521c216",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image passed object presence, colors, spatial relations, and the count of four toys, but failed the exact counts for kangaroos and umbrellas. The next prompt must make exactly seven green kangaroos and exactly six brown umbrellas easier to count by using a simple non-overlapping layout with separated instances.",
+    "expected_improvement": [
+      "Exact count of seven green kangaroos should become more verifiable.",
+      "Exact count of six brown umbrellas should become more verifiable.",
+      "Previously passed constraints should be maintained: kangaroos are green, umbrellas are brown, kangaroos are under umbrellas, umbrellas are left of the four toys, and exactly four toys remain visible."
+    ],
+    "failure_types": [
+      "count_mismatch"
+    ],
+    "preserve_constraints": [
+      "All kangaroos must be green.",
+      "All umbrellas must be brown.",
+      "The green kangaroos must be directly under the brown umbrellas.",
+      "The brown umbrellas must be to the left of the toys.",
+      "There must be exactly four toys on the right side.",
+      "All required objects must be visible and individually countable."
+    ],
+    "previous_plan_error": {
+      "details": "The prior prompt requested exact counts but allowed the kangaroos and umbrellas to be grouped, which likely caused overlapping, merging, or ambiguous repeated instances. It did not provide a strong count-friendly arrangement for seven kangaroos and six umbrellas.",
+      "error_source": "Insufficient quantity_counting layout specificity for the larger counted groups."
+    },
+    "regeneration_strategy": "Use a structured, count-friendly composition: place six separate brown umbrellas in a clear row on the left, with seven separate green kangaroos in a clear row beneath them. Keep the four toys as a separate group on the right. Add negative constraints against extra or hidden kangaroos, umbrellas, and toys.",
+    "regression_risks": [
+      "The generator may produce fewer or more than seven kangaroos.",
+      "The generator may merge umbrellas or create extra umbrella-like shapes.",
+      "The four toys could be omitted or their count could change while repairing the failed counts.",
+      "The spatial relation could regress if toys are placed among the umbrellas instead of to the right."
+    ],
+    "repair_constraints": [
+      "Show exactly seven green kangaroos, each separated from the others and fully visible.",
+      "Show exactly six brown umbrellas, each separated from the others and fully visible.",
+      "Do not show any extra kangaroos beyond seven.",
+      "Do not show any extra umbrellas beyond six.",
+      "Keep the seven kangaroos directly beneath the six umbrellas.",
+      "Keep the six umbrellas clearly to the left of the four toys."
+    ],
+    "retry_prompt": "A clear countable scene with exactly six brown umbrellas in a separated row on the left side of the image. Directly below those umbrellas, show exactly seven green kangaroos, all fully visible, separated from each other, and easy to count. The seven green kangaroos are under the six brown umbrellas. On the right side of the image, to the right of the umbrellas, show exactly four toys, separated and easy to count. Use a simple uncluttered composition with no overlapping or merging between objects. No extra kangaroos, no extra umbrellas, and no extra toys.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "spatial_layout",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints",
+        "attribute_binding",
+        "object_presence",
+        "multi_object_composition"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same valid skill set, but apply quantity_counting, anti_occlusion, and spatial_layout more strongly by requiring separated rows and explicit negative constraints against extra or merged kangaroos and umbrellas."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "seven green kangaroos under six brown umbrellas to the left of four toys",
+    "prompt": "seven green kangaroos under six brown umbrellas to the left of four toys",
+    "prompt_id": "geneval2_00718_d521c216",
+    "sampling_bucket": "position_spatial",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 2,
+      "count": 3,
+      "object": 3,
+      "position": 2
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 718,
+    "vqa_list": [
+      [
+        "How many kangaroos are in the image?",
+        "seven"
+      ],
+      [
+        "Are the kangaroos green?",
+        "Yes"
+      ],
+      [
+        "Are there any kangaroos in the image?",
+        "Yes"
+      ],
+      [
+        "Are the kangaroos under the umbrellas?",
+        "Yes"
+      ],
+      [
+        "How many umbrellas are in the image?",
+        "six"
+      ],
+      [
+        "Are the umbrellas brown?",
+        "Yes"
+      ],
+      [
+        "Are there any umbrellas in the image?",
+        "Yes"
+      ],
+      [
+        "Are the umbrellas to the left of the toys?",
+        "Yes"
+      ],
+      [
+        "How many toys are in the image?",
+        "four"
+      ],
+      [
+        "Are there any toys in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00718_d521c216"
+}

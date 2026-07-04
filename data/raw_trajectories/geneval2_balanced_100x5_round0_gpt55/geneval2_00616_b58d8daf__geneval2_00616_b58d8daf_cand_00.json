@@ -1,0 +1,2594 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "count_mismatch",
+          "relation_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many flamingos are in the image?",
+              "score": 1.525733892754631e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.52573e-08",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many flamingos are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the flamingos chasing the horse?",
+              "score": 0.13363280207340722,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.133633",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the flamingos chasing the horse?",
+            "type": "relation_mismatch"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the flamingos pink?",
+              "score": 0.9999999825959094,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the flamingos pink?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any flamingos in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any flamingos in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many horses are in the image?",
+              "score": 1.0,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "one",
+            "status": "passed",
+            "target": "How many horses are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any horses in the image?",
+              "score": 0.9999999827559805,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any horses in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the horse to the left of the chairs?",
+              "score": 0.9999999380906672,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Is the horse to the left of the chairs?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many chairs are in the image?",
+              "score": 0.9999984850985906,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.999998",
+            "expected": "four",
+            "status": "passed",
+            "target": "How many chairs are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the chairs wooden?",
+              "score": 1.0,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the chairs wooden?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any chairs in the image?",
+              "score": 0.9999999800234036,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any chairs in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00616_b58d8daf_cand_00",
+          "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+          "rows": [
+            {
+              "answer": "four",
+              "atom_count": 9,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00616_b58d8daf_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00013/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00013/samples/00000.png",
+              "prompt": "four pink flamingos chasing a horse to the left of four wooden chairs",
+              "prompt_id": "geneval2_00616_b58d8daf",
+              "question": "How many flamingos are in the image?",
+              "score": 1.525733892754631e-08,
+              "skill": "count",
+              "source_index": 616
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00616_b58d8daf_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00013/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00013/samples/00000.png",
+              "prompt": "four pink flamingos chasing a horse to the left of four wooden chairs",
+              "prompt_id": "geneval2_00616_b58d8daf",
+              "question": "Are the flamingos pink?",
+              "score": 0.9999999825959094,
+              "skill": "attribute",
+              "source_index": 616
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00616_b58d8daf_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00013/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00013/samples/00000.png",
+              "prompt": "four pink flamingos chasing a horse to the left of four wooden chairs",
+              "prompt_id": "geneval2_00616_b58d8daf",
+              "question": "Are there any flamingos in the image?",
+              "score": 1.0000000666623237,
+              "skill": "object",
+              "source_index": 616
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00616_b58d8daf_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00013/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00013/samples/00000.png",
+              "prompt": "four pink flamingos chasing a horse to the left of four wooden chairs",
+              "prompt_id": "geneval2_00616_b58d8daf",
+              "question": "Are the flamingos chasing the horse?",
+              "score": 0.13363280207340722,
+              "skill": "verb",
+              "source_index": 616
+            },
+            {
+              "answer": "one",
+              "atom_count": 9,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00616_b58d8daf_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00013/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00013/samples/00000.png",
+              "prompt": "four pink flamingos chasing a horse to the left of four wooden chairs",
+              "prompt_id": "geneval2_00616_b58d8daf",
+              "question": "How many horses are in the image?",
+              "score": 1.0000000126169555,
+              "skill": "count",
+              "source_index": 616
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00616_b58d8daf_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00013/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00013/samples/00000.png",
+              "prompt": "four pink flamingos chasing a horse to the left of four wooden chairs",
+              "prompt_id": "geneval2_00616_b58d8daf",
+              "question": "Are there any horses in the image?",
+              "score": 0.9999999827559805,
+              "skill": "object",
+              "source_index": 616
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00616_b58d8daf_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00013/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00013/samples/00000.png",
+              "prompt": "four pink flamingos chasing a horse to the left of four wooden chairs",
+              "prompt_id": "geneval2_00616_b58d8daf",
+              "question": "Is the horse to the left of the chairs?",
+              "score": 0.9999999380906672,
+              "skill": "position",
+              "source_index": 616
+            },
+            {
+              "answer": "four",
+              "atom_count": 9,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00616_b58d8daf_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00013/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00013/samples/00000.png",
+              "prompt": "four pink flamingos chasing a horse to the left of four wooden chairs",
+              "prompt_id": "geneval2_00616_b58d8daf",
+              "question": "How many chairs are in the image?",
+              "score": 0.9999984850985906,
+              "skill": "count",
+              "source_index": 616
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00616_b58d8daf_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00013/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00013/samples/00000.png",
+              "prompt": "four pink flamingos chasing a horse to the left of four wooden chairs",
+              "prompt_id": "geneval2_00616_b58d8daf",
+              "question": "Are the chairs wooden?",
+              "score": 1.0000000797990651,
+              "skill": "attribute",
+              "source_index": 616
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00616_b58d8daf_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00013/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00013/samples/00000.png",
+              "prompt": "four pink flamingos chasing a horse to the left of four wooden chairs",
+              "prompt_id": "geneval2_00616_b58d8daf",
+              "question": "Are there any chairs in the image?",
+              "score": 0.9999999800234036,
+              "skill": "object",
+              "source_index": 616
+            }
+          ],
+          "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.8133631185895297,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 0,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00616_b58d8daf.json",
+          "manifest_prompt_index": 13,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00616_b58d8daf"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00616_b58d8daf_cand_00",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00013/samples/00000.png",
+        "prompt_used": "A clear scene showing exactly four pink flamingos chasing exactly one horse. The horse is positioned to the left of exactly four wooden chairs. Arrange the four wooden chairs as a separate visible group on the right side, all made of wood. The four pink flamingos are distinct, fully visible, and moving toward the horse as if chasing it. The single horse is fully visible and clearly left of all four chairs. Keep every flamingo, the horse, and each chair unobstructed and easy to count; do not include any extra flamingos, horses, or chairs.",
+        "seed": 1065
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly four pink flamingos, exactly one horse, and exactly four wooden chairs.",
+          "Keep all flamingos, the horse, and all chairs fully visible and separated enough to count.",
+          "Bind pink color only to the flamingos and wooden material to the chairs.",
+          "Place the horse clearly to the left of the group of four wooden chairs.",
+          "Depict the four pink flamingos actively chasing the horse, with their orientation and motion directed toward the horse.",
+          "Avoid extra flamingos, extra horses, extra chairs, or occlusion that hides counts."
+        ],
+        "generation_strategy": "Use a clear side-view composition with three countable groups: four pink flamingos on the left/mid-left chasing one horse, and four wooden chairs arranged separately on the right. Keep the horse spatially left of all four chairs, and maintain open spacing so each object is distinct and visible.",
+        "initial_prompt": "A clear scene showing exactly four pink flamingos chasing exactly one horse. The horse is positioned to the left of exactly four wooden chairs. Arrange the four wooden chairs as a separate visible group on the right side, all made of wood. The four pink flamingos are distinct, fully visible, and moving toward the horse as if chasing it. The single horse is fully visible and clearly left of all four chairs. Keep every flamingo, the horse, and each chair unobstructed and easy to count; do not include any extra flamingos, horses, or chairs.",
+        "parsed_constraints": {
+          "attributes": {
+            "chairs": [
+              "wooden"
+            ],
+            "flamingos": [
+              "pink"
+            ]
+          },
+          "counts": {
+            "chairs": 4,
+            "flamingos": 4,
+            "horse": 1
+          },
+          "objects": [
+            "flamingos",
+            "horse",
+            "chairs"
+          ],
+          "relations": [
+            "four pink flamingos are chasing the horse",
+            "the horse is to the left of four wooden chairs"
+          ]
+        },
+        "selected_skills": [
+          "quantity_counting",
+          "object_presence",
+          "attribute_binding",
+          "multi_object_composition",
+          "spatial_layout",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly four pink flamingos, exactly one horse, and exactly four wooden chairs.",
+          "Keep all flamingos, the horse, and all chairs fully visible and separated enough to count.",
+          "Bind pink color only to the flamingos and wooden material to the chairs.",
+          "Place the horse clearly to the left of the group of four wooden chairs.",
+          "Depict the four pink flamingos actively chasing the horse, with their orientation and motion directed toward the horse.",
+          "Avoid extra flamingos, extra horses, extra chairs, or occlusion that hides counts."
+        ],
+        "generation_strategy": "Use a clear side-view composition with three countable groups: four pink flamingos on the left/mid-left chasing one horse, and four wooden chairs arranged separately on the right. Keep the horse spatially left of all four chairs, and maintain open spacing so each object is distinct and visible.",
+        "initial_prompt": "A clear scene showing exactly four pink flamingos chasing exactly one horse. The horse is positioned to the left of exactly four wooden chairs. Arrange the four wooden chairs as a separate visible group on the right side, all made of wood. The four pink flamingos are distinct, fully visible, and moving toward the horse as if chasing it. The single horse is fully visible and clearly left of all four chairs. Keep every flamingo, the horse, and each chair unobstructed and easy to count; do not include any extra flamingos, horses, or chairs.",
+        "parsed_constraints": {
+          "attributes": {
+            "chairs": [
+              "wooden"
+            ],
+            "flamingos": [
+              "pink"
+            ]
+          },
+          "counts": {
+            "chairs": 4,
+            "flamingos": 4,
+            "horse": 1
+          },
+          "objects": [
+            "flamingos",
+            "horse",
+            "chairs"
+          ],
+          "relations": [
+            "four pink flamingos are chasing the horse",
+            "the horse is to the left of four wooden chairs"
+          ]
+        },
+        "selected_skills": [
+          "quantity_counting",
+          "object_presence",
+          "attribute_binding",
+          "multi_object_composition",
+          "spatial_layout",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many flamingos are in the image?",
+                "score": 1.525733892754631e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.52573e-08",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many flamingos are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the flamingos chasing the horse?",
+                "score": 0.13363280207340722,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.133633",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the flamingos chasing the horse?",
+              "type": "relation_mismatch"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00013/samples/00000.png",
+          "prompt": "A clear scene showing exactly four pink flamingos chasing exactly one horse. The horse is positioned to the left of exactly four wooden chairs. Arrange the four wooden chairs as a separate visible group on the right side, all made of wood. The four pink flamingos are distinct, fully visible, and moving toward the horse as if chasing it. The single horse is fully visible and clearly left of all four chairs. Keep every flamingo, the horse, and each chair unobstructed and easy to count; do not include any extra flamingos, horses, or chairs.",
+          "round": 0,
+          "score": 0.8133631185895297
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00616_b58d8daf_cand_00",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "count_mismatch",
+            "relation_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many flamingos are in the image?",
+                "score": 1.525733892754631e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.52573e-08",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many flamingos are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the flamingos chasing the horse?",
+                "score": 0.13363280207340722,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.133633",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the flamingos chasing the horse?",
+              "type": "relation_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the flamingos pink?",
+                "score": 0.9999999825959094,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the flamingos pink?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any flamingos in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any flamingos in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many horses are in the image?",
+                "score": 1.0,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "one",
+              "status": "passed",
+              "target": "How many horses are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any horses in the image?",
+                "score": 0.9999999827559805,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any horses in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the horse to the left of the chairs?",
+                "score": 0.9999999380906672,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Is the horse to the left of the chairs?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many chairs are in the image?",
+                "score": 0.9999984850985906,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.999998",
+              "expected": "four",
+              "status": "passed",
+              "target": "How many chairs are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the chairs wooden?",
+                "score": 1.0,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the chairs wooden?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any chairs in the image?",
+                "score": 0.9999999800234036,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any chairs in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.8133631185895297,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many flamingos are in the image?",
+                  "score": 1.525733892754631e-08,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1.52573e-08",
+                "expected": "four",
+                "status": "failed",
+                "target": "How many flamingos are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the flamingos chasing the horse?",
+                  "score": 0.13363280207340722,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=0.133633",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the flamingos chasing the horse?",
+                "type": "relation_mismatch"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00013/samples/00000.png",
+            "prompt": "A clear scene showing exactly four pink flamingos chasing exactly one horse. The horse is positioned to the left of exactly four wooden chairs. Arrange the four wooden chairs as a separate visible group on the right side, all made of wood. The four pink flamingos are distinct, fully visible, and moving toward the horse as if chasing it. The single horse is fully visible and clearly left of all four chairs. Keep every flamingo, the horse, and each chair unobstructed and easy to count; do not include any extra flamingos, horses, or chairs.",
+            "round": 0,
+            "score": 0.8133631185895297
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many flamingos are in the image?",
+                "score": 1.525733892754631e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.52573e-08",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many flamingos are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the flamingos chasing the horse?",
+                "score": 0.13363280207340722,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.133633",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the flamingos chasing the horse?",
+              "type": "relation_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "count_mismatch",
+            "relation_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many flamingos are in the image?",
+                "score": 1.525733892754631e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.52573e-08",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many flamingos are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the flamingos chasing the horse?",
+                "score": 0.13363280207340722,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.133633",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the flamingos chasing the horse?",
+              "type": "relation_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the flamingos pink?",
+                "score": 0.9999999825959094,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the flamingos pink?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any flamingos in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any flamingos in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many horses are in the image?",
+                "score": 1.0,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "one",
+              "status": "passed",
+              "target": "How many horses are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any horses in the image?",
+                "score": 0.9999999827559805,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any horses in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the horse to the left of the chairs?",
+                "score": 0.9999999380906672,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Is the horse to the left of the chairs?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many chairs are in the image?",
+                "score": 0.9999984850985906,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.999998",
+              "expected": "four",
+              "status": "passed",
+              "target": "How many chairs are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the chairs wooden?",
+                "score": 1.0,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the chairs wooden?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any chairs in the image?",
+                "score": 0.9999999800234036,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any chairs in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.8133631185895297,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "four pink flamingos chasing a horse to the left of four wooden chairs",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many flamingos are in the image?",
+              "score": 1.525733892754631e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.52573e-08",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many flamingos are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the flamingos chasing the horse?",
+              "score": 0.13363280207340722,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.133633",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the flamingos chasing the horse?",
+            "type": "relation_mismatch"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly four pink flamingos, exactly one horse, and exactly four wooden chairs.",
+            "Keep all flamingos, the horse, and all chairs fully visible and separated enough to count.",
+            "Bind pink color only to the flamingos and wooden material to the chairs.",
+            "Place the horse clearly to the left of the group of four wooden chairs.",
+            "Depict the four pink flamingos actively chasing the horse, with their orientation and motion directed toward the horse.",
+            "Avoid extra flamingos, extra horses, extra chairs, or occlusion that hides counts."
+          ],
+          "generation_strategy": "Use a clear side-view composition with three countable groups: four pink flamingos on the left/mid-left chasing one horse, and four wooden chairs arranged separately on the right. Keep the horse spatially left of all four chairs, and maintain open spacing so each object is distinct and visible.",
+          "initial_prompt": "A clear scene showing exactly four pink flamingos chasing exactly one horse. The horse is positioned to the left of exactly four wooden chairs. Arrange the four wooden chairs as a separate visible group on the right side, all made of wood. The four pink flamingos are distinct, fully visible, and moving toward the horse as if chasing it. The single horse is fully visible and clearly left of all four chairs. Keep every flamingo, the horse, and each chair unobstructed and easy to count; do not include any extra flamingos, horses, or chairs.",
+          "parsed_constraints": {
+            "attributes": {
+              "chairs": [
+                "wooden"
+              ],
+              "flamingos": [
+                "pink"
+              ]
+            },
+            "counts": {
+              "chairs": 4,
+              "flamingos": 4,
+              "horse": 1
+            },
+            "objects": [
+              "flamingos",
+              "horse",
+              "chairs"
+            ],
+            "relations": [
+              "four pink flamingos are chasing the horse",
+              "the horse is to the left of four wooden chairs"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "object_presence",
+            "attribute_binding",
+            "multi_object_composition",
+            "spatial_layout",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly four pink flamingos, exactly one horse, and exactly four wooden chairs.",
+            "Keep all flamingos, the horse, and all chairs fully visible and separated enough to count.",
+            "Bind pink color only to the flamingos and wooden material to the chairs.",
+            "Place the horse clearly to the left of the group of four wooden chairs.",
+            "Depict the four pink flamingos actively chasing the horse, with their orientation and motion directed toward the horse.",
+            "Avoid extra flamingos, extra horses, extra chairs, or occlusion that hides counts."
+          ],
+          "generation_strategy": "Use a clear side-view composition with three countable groups: four pink flamingos on the left/mid-left chasing one horse, and four wooden chairs arranged separately on the right. Keep the horse spatially left of all four chairs, and maintain open spacing so each object is distinct and visible.",
+          "initial_prompt": "A clear scene showing exactly four pink flamingos chasing exactly one horse. The horse is positioned to the left of exactly four wooden chairs. Arrange the four wooden chairs as a separate visible group on the right side, all made of wood. The four pink flamingos are distinct, fully visible, and moving toward the horse as if chasing it. The single horse is fully visible and clearly left of all four chairs. Keep every flamingo, the horse, and each chair unobstructed and easy to count; do not include any extra flamingos, horses, or chairs.",
+          "parsed_constraints": {
+            "attributes": {
+              "chairs": [
+                "wooden"
+              ],
+              "flamingos": [
+                "pink"
+              ]
+            },
+            "counts": {
+              "chairs": 4,
+              "flamingos": 4,
+              "horse": 1
+            },
+            "objects": [
+              "flamingos",
+              "horse",
+              "chairs"
+            ],
+            "relations": [
+              "four pink flamingos are chasing the horse",
+              "the horse is to the left of four wooden chairs"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "object_presence",
+            "attribute_binding",
+            "multi_object_composition",
+            "spatial_layout",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_prompt": "A clear scene showing exactly four pink flamingos chasing exactly one horse. The horse is positioned to the left of exactly four wooden chairs. Arrange the four wooden chairs as a separate visible group on the right side, all made of wood. The four pink flamingos are distinct, fully visible, and moving toward the horse as if chasing it. The single horse is fully visible and clearly left of all four chairs. Keep every flamingo, the horse, and each chair unobstructed and easy to count; do not include any extra flamingos, horses, or chairs.",
+        "previous_selected_skills": [
+          "quantity_counting",
+          "object_presence",
+          "attribute_binding",
+          "multi_object_composition",
+          "spatial_layout",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ],
+        "prompt_id": "geneval2_00616_b58d8daf",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "count_mismatch",
+              "relation_mismatch"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many flamingos are in the image?",
+                  "score": 1.525733892754631e-08,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1.52573e-08",
+                "expected": "four",
+                "status": "failed",
+                "target": "How many flamingos are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the flamingos chasing the horse?",
+                  "score": 0.13363280207340722,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=0.133633",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the flamingos chasing the horse?",
+                "type": "relation_mismatch"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the flamingos pink?",
+                  "score": 0.9999999825959094,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the flamingos pink?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any flamingos in the image?",
+                  "score": 1.0,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any flamingos in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many horses are in the image?",
+                  "score": 1.0,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1",
+                "expected": "one",
+                "status": "passed",
+                "target": "How many horses are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any horses in the image?",
+                  "score": 0.9999999827559805,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any horses in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Is the horse to the left of the chairs?",
+                  "score": 0.9999999380906672,
+                  "skill": "position"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Is the horse to the left of the chairs?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many chairs are in the image?",
+                  "score": 0.9999984850985906,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.999998",
+                "expected": "four",
+                "status": "passed",
+                "target": "How many chairs are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the chairs wooden?",
+                  "score": 1.0,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the chairs wooden?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any chairs in the image?",
+                  "score": 0.9999999800234036,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any chairs in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly four pink flamingos, exactly one horse, and exactly four wooden chairs.",
+                "Keep all flamingos, the horse, and all chairs fully visible and separated enough to count.",
+                "Bind pink color only to the flamingos and wooden material to the chairs.",
+                "Place the horse clearly to the left of the group of four wooden chairs.",
+                "Depict the four pink flamingos actively chasing the horse, with their orientation and motion directed toward the horse.",
+                "Avoid extra flamingos, extra horses, extra chairs, or occlusion that hides counts."
+              ],
+              "generation_strategy": "Use a clear side-view composition with three countable groups: four pink flamingos on the left/mid-left chasing one horse, and four wooden chairs arranged separately on the right. Keep the horse spatially left of all four chairs, and maintain open spacing so each object is distinct and visible.",
+              "initial_prompt": "A clear scene showing exactly four pink flamingos chasing exactly one horse. The horse is positioned to the left of exactly four wooden chairs. Arrange the four wooden chairs as a separate visible group on the right side, all made of wood. The four pink flamingos are distinct, fully visible, and moving toward the horse as if chasing it. The single horse is fully visible and clearly left of all four chairs. Keep every flamingo, the horse, and each chair unobstructed and easy to count; do not include any extra flamingos, horses, or chairs.",
+              "parsed_constraints": {
+                "attributes": {
+                  "chairs": [
+                    "wooden"
+                  ],
+                  "flamingos": [
+                    "pink"
+                  ]
+                },
+                "counts": {
+                  "chairs": 4,
+                  "flamingos": 4,
+                  "horse": 1
+                },
+                "objects": [
+                  "flamingos",
+                  "horse",
+                  "chairs"
+                ],
+                "relations": [
+                  "four pink flamingos are chasing the horse",
+                  "the horse is to the left of four wooden chairs"
+                ]
+              },
+              "selected_skills": [
+                "quantity_counting",
+                "object_presence",
+                "attribute_binding",
+                "multi_object_composition",
+                "spatial_layout",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly four pink flamingos, exactly one horse, and exactly four wooden chairs.",
+                "Keep all flamingos, the horse, and all chairs fully visible and separated enough to count.",
+                "Bind pink color only to the flamingos and wooden material to the chairs.",
+                "Place the horse clearly to the left of the group of four wooden chairs.",
+                "Depict the four pink flamingos actively chasing the horse, with their orientation and motion directed toward the horse.",
+                "Avoid extra flamingos, extra horses, extra chairs, or occlusion that hides counts."
+              ],
+              "generation_strategy": "Use a clear side-view composition with three countable groups: four pink flamingos on the left/mid-left chasing one horse, and four wooden chairs arranged separately on the right. Keep the horse spatially left of all four chairs, and maintain open spacing so each object is distinct and visible.",
+              "initial_prompt": "A clear scene showing exactly four pink flamingos chasing exactly one horse. The horse is positioned to the left of exactly four wooden chairs. Arrange the four wooden chairs as a separate visible group on the right side, all made of wood. The four pink flamingos are distinct, fully visible, and moving toward the horse as if chasing it. The single horse is fully visible and clearly left of all four chairs. Keep every flamingo, the horse, and each chair unobstructed and easy to count; do not include any extra flamingos, horses, or chairs.",
+              "parsed_constraints": {
+                "attributes": {
+                  "chairs": [
+                    "wooden"
+                  ],
+                  "flamingos": [
+                    "pink"
+                  ]
+                },
+                "counts": {
+                  "chairs": 4,
+                  "flamingos": 4,
+                  "horse": 1
+                },
+                "objects": [
+                  "flamingos",
+                  "horse",
+                  "chairs"
+                ],
+                "relations": [
+                  "four pink flamingos are chasing the horse",
+                  "the horse is to the left of four wooden chairs"
+                ]
+              },
+              "selected_skills": [
+                "quantity_counting",
+                "object_presence",
+                "attribute_binding",
+                "multi_object_composition",
+                "spatial_layout",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "prompt_used": "A clear scene showing exactly four pink flamingos chasing exactly one horse. The horse is positioned to the left of exactly four wooden chairs. Arrange the four wooden chairs as a separate visible group on the right side, all made of wood. The four pink flamingos are distinct, fully visible, and moving toward the horse as if chasing it. The single horse is fully visible and clearly left of all four chairs. Keep every flamingo, the horse, and each chair unobstructed and easy to count; do not include any extra flamingos, horses, or chairs.",
+            "round": 0,
+            "score": 0.8133631185895297,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 0,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many flamingos are in the image?",
+                    "score": 1.525733892754631e-08,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=1.52573e-08",
+                  "expected": "four",
+                  "status": "failed",
+                  "target": "How many flamingos are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 3,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the flamingos chasing the horse?",
+                    "score": 0.13363280207340722,
+                    "skill": "verb"
+                  },
+                  "detected": "soft_score=0.133633",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the flamingos chasing the horse?",
+                  "type": "relation_mismatch"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00616_b58d8daf"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many flamingos are in the image?",
+              "score": 1.525733892754631e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.52573e-08",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many flamingos are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the flamingos chasing the horse?",
+              "score": 0.13363280207340722,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.133633",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the flamingos chasing the horse?",
+            "type": "relation_mismatch"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00616_b58d8daf_cand_00",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly four pink flamingos, exactly one horse, and exactly four wooden chairs.",
+      "Keep all flamingos, the horse, and all chairs fully visible and separated enough to count.",
+      "Bind pink color only to the flamingos and wooden material to the chairs.",
+      "Place the horse clearly to the left of the group of four wooden chairs.",
+      "Depict the four pink flamingos actively chasing the horse, with their orientation and motion directed toward the horse.",
+      "Avoid extra flamingos, extra horses, extra chairs, or occlusion that hides counts."
+    ],
+    "generation_strategy": "Use a clear side-view composition with three countable groups: four pink flamingos on the left/mid-left chasing one horse, and four wooden chairs arranged separately on the right. Keep the horse spatially left of all four chairs, and maintain open spacing so each object is distinct and visible.",
+    "initial_prompt": "A clear scene showing exactly four pink flamingos chasing exactly one horse. The horse is positioned to the left of exactly four wooden chairs. Arrange the four wooden chairs as a separate visible group on the right side, all made of wood. The four pink flamingos are distinct, fully visible, and moving toward the horse as if chasing it. The single horse is fully visible and clearly left of all four chairs. Keep every flamingo, the horse, and each chair unobstructed and easy to count; do not include any extra flamingos, horses, or chairs.",
+    "parsed_constraints": {
+      "attributes": {
+        "chairs": [
+          "wooden"
+        ],
+        "flamingos": [
+          "pink"
+        ]
+      },
+      "counts": {
+        "chairs": 4,
+        "flamingos": 4,
+        "horse": 1
+      },
+      "objects": [
+        "flamingos",
+        "horse",
+        "chairs"
+      ],
+      "relations": [
+        "four pink flamingos are chasing the horse",
+        "the horse is to the left of four wooden chairs"
+      ]
+    },
+    "selected_skills": [
+      "quantity_counting",
+      "object_presence",
+      "attribute_binding",
+      "multi_object_composition",
+      "spatial_layout",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image passed pink flamingos, flamingo presence, one horse, horse presence, horse left of chairs, four chairs, wooden chairs, and chair presence. It failed the exact flamingo count and the action relation: the scene did not clearly show exactly four flamingos, and the flamingos were not clearly chasing the horse.",
+    "expected_improvement": [
+      "Exact flamingo count should improve by using a simple side-view lineup of four separate, fully visible pink flamingos with visible gaps between them.",
+      "The chasing relation should improve by placing all four flamingos behind the horse, facing and moving toward the horse, while the horse moves away from them.",
+      "Previously passed constraints should remain stable by keeping one horse left of a separate group of four wooden chairs."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "relation_mismatch"
+    ],
+    "preserve_constraints": [
+      "The flamingos must be pink.",
+      "There must be flamingos visible in the image.",
+      "There must be exactly one horse, fully visible.",
+      "The horse must be to the left of the chairs.",
+      "There must be exactly four chairs.",
+      "The chairs must be wooden.",
+      "The chairs must be visible as chairs."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt stated the correct count and chasing action, but did not force a simple enough layout for the verifier to count four flamingos or recognize pursuit. The flamingos may have been merged, obscured, under-emphasized, or not clearly oriented toward the horse.",
+      "error_source": "Prompt layout and relation depiction were too general for the count and chasing constraints."
+    },
+    "regeneration_strategy": "Use a clean side-view composition with three separated zones: four pink flamingos in a visible row on the left, one horse just ahead of them toward the middle-left, and four wooden chairs farther right. Make the flamingos countable by separating each body and legs with open space, and make the chase relation explicit by having all four flamingos face the horse and pursue it from behind while the horse is moving away from them. Keep the chairs as a separate right-side group so the horse remains clearly left of all chairs.",
+    "regression_risks": [
+      "The generator may add extra flamingos or merge flamingos together, causing another count failure.",
+      "The generator may make the flamingos merely standing near the horse instead of chasing it.",
+      "The generator may move the horse among or to the right of the chairs, regressing the passed spatial relation.",
+      "The generator may add extra chairs or make the chairs non-wooden."
+    ],
+    "repair_constraints": [
+      "Show exactly four pink flamingos, no more and no fewer.",
+      "Make the four flamingos separate, fully visible, non-overlapping, and easy to count as four distinct birds.",
+      "Depict all four flamingos chasing the horse: each flamingo is behind the horse, facing toward the horse, and moving in the horse's direction.",
+      "Show exactly one horse ahead of the flamingos and left of all chairs.",
+      "Show exactly four wooden chairs as a separate visible group to the right of the horse.",
+      "Do not include extra flamingos, horses, or chairs."
+    ],
+    "retry_prompt": "A clear side-view scene with exactly four pink flamingos chasing exactly one horse. Place the four pink flamingos in a separated row on the left, each flamingo fully visible, pink, non-overlapping, and easy to count: one, two, three, four, with no extra flamingos. Put the single horse just ahead of them toward the middle-left, fully visible, with all four flamingos behind it, facing toward the horse and moving toward it as if pursuing and chasing the horse. Place exactly four wooden chairs as a separate group on the right side, and keep the horse clearly to the left of all four chairs. The four chairs are made of wood, fully visible, separated enough to count, with no extra chairs. Keep every flamingo, the horse, and every chair unobstructed; do not include any extra horses, flamingos, or chairs.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "attribute_binding",
+        "object_presence",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same allowed skills but shift emphasis toward quantity_counting and spatial_layout: use a simple separated row for the four flamingos and a directional behind-to-ahead pursuit layout to make chasing the horse visually unambiguous."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many flamingos are in the image?",
+            "score": 1.525733892754631e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.52573e-08",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many flamingos are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the flamingos chasing the horse?",
+            "score": 0.13363280207340722,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.133633",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the flamingos chasing the horse?",
+          "type": "relation_mismatch"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00013/samples/00000.png",
+      "prompt": "A clear scene showing exactly four pink flamingos chasing exactly one horse. The horse is positioned to the left of exactly four wooden chairs. Arrange the four wooden chairs as a separate visible group on the right side, all made of wood. The four pink flamingos are distinct, fully visible, and moving toward the horse as if chasing it. The single horse is fully visible and clearly left of all four chairs. Keep every flamingo, the horse, and each chair unobstructed and easy to count; do not include any extra flamingos, horses, or chairs.",
+      "round": 0,
+      "score": 0.8133631185895297
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00616_b58d8daf_cand_00",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "count_mismatch",
+        "relation_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many flamingos are in the image?",
+            "score": 1.525733892754631e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.52573e-08",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many flamingos are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the flamingos chasing the horse?",
+            "score": 0.13363280207340722,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.133633",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the flamingos chasing the horse?",
+          "type": "relation_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the flamingos pink?",
+            "score": 0.9999999825959094,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the flamingos pink?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any flamingos in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any flamingos in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many horses are in the image?",
+            "score": 1.0,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "one",
+          "status": "passed",
+          "target": "How many horses are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any horses in the image?",
+            "score": 0.9999999827559805,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any horses in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the horse to the left of the chairs?",
+            "score": 0.9999999380906672,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the horse to the left of the chairs?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many chairs are in the image?",
+            "score": 0.9999984850985906,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.999998",
+          "expected": "four",
+          "status": "passed",
+          "target": "How many chairs are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the chairs wooden?",
+            "score": 1.0,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the chairs wooden?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any chairs in the image?",
+            "score": 0.9999999800234036,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any chairs in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.8133631185895297,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many flamingos are in the image?",
+              "score": 1.525733892754631e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.52573e-08",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many flamingos are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the flamingos chasing the horse?",
+              "score": 0.13363280207340722,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.133633",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the flamingos chasing the horse?",
+            "type": "relation_mismatch"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00013/samples/00000.png",
+        "prompt": "A clear scene showing exactly four pink flamingos chasing exactly one horse. The horse is positioned to the left of exactly four wooden chairs. Arrange the four wooden chairs as a separate visible group on the right side, all made of wood. The four pink flamingos are distinct, fully visible, and moving toward the horse as if chasing it. The single horse is fully visible and clearly left of all four chairs. Keep every flamingo, the horse, and each chair unobstructed and easy to count; do not include any extra flamingos, horses, or chairs.",
+        "round": 0,
+        "score": 0.8133631185895297
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many flamingos are in the image?",
+            "score": 1.525733892754631e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.52573e-08",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many flamingos are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the flamingos chasing the horse?",
+            "score": 0.13363280207340722,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.133633",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the flamingos chasing the horse?",
+          "type": "relation_mismatch"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "count_mismatch",
+        "relation_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many flamingos are in the image?",
+            "score": 1.525733892754631e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.52573e-08",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many flamingos are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the flamingos chasing the horse?",
+            "score": 0.13363280207340722,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.133633",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the flamingos chasing the horse?",
+          "type": "relation_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the flamingos pink?",
+            "score": 0.9999999825959094,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the flamingos pink?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any flamingos in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any flamingos in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many horses are in the image?",
+            "score": 1.0,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "one",
+          "status": "passed",
+          "target": "How many horses are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any horses in the image?",
+            "score": 0.9999999827559805,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any horses in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the horse to the left of the chairs?",
+            "score": 0.9999999380906672,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the horse to the left of the chairs?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many chairs are in the image?",
+            "score": 0.9999984850985906,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.999998",
+          "expected": "four",
+          "status": "passed",
+          "target": "How many chairs are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the chairs wooden?",
+            "score": 1.0,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the chairs wooden?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any chairs in the image?",
+            "score": 0.9999999800234036,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any chairs in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.8133631185895297,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "four pink flamingos chasing a horse to the left of four wooden chairs",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many flamingos are in the image?",
+          "score": 1.525733892754631e-08,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.52573e-08",
+        "expected": "four",
+        "status": "failed",
+        "target": "How many flamingos are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the flamingos chasing the horse?",
+          "score": 0.13363280207340722,
+          "skill": "verb"
+        },
+        "detected": "soft_score=0.133633",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the flamingos chasing the horse?",
+        "type": "relation_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly four pink flamingos, exactly one horse, and exactly four wooden chairs.",
+        "Keep all flamingos, the horse, and all chairs fully visible and separated enough to count.",
+        "Bind pink color only to the flamingos and wooden material to the chairs.",
+        "Place the horse clearly to the left of the group of four wooden chairs.",
+        "Depict the four pink flamingos actively chasing the horse, with their orientation and motion directed toward the horse.",
+        "Avoid extra flamingos, extra horses, extra chairs, or occlusion that hides counts."
+      ],
+      "generation_strategy": "Use a clear side-view composition with three countable groups: four pink flamingos on the left/mid-left chasing one horse, and four wooden chairs arranged separately on the right. Keep the horse spatially left of all four chairs, and maintain open spacing so each object is distinct and visible.",
+      "initial_prompt": "A clear scene showing exactly four pink flamingos chasing exactly one horse. The horse is positioned to the left of exactly four wooden chairs. Arrange the four wooden chairs as a separate visible group on the right side, all made of wood. The four pink flamingos are distinct, fully visible, and moving toward the horse as if chasing it. The single horse is fully visible and clearly left of all four chairs. Keep every flamingo, the horse, and each chair unobstructed and easy to count; do not include any extra flamingos, horses, or chairs.",
+      "parsed_constraints": {
+        "attributes": {
+          "chairs": [
+            "wooden"
+          ],
+          "flamingos": [
+            "pink"
+          ]
+        },
+        "counts": {
+          "chairs": 4,
+          "flamingos": 4,
+          "horse": 1
+        },
+        "objects": [
+          "flamingos",
+          "horse",
+          "chairs"
+        ],
+        "relations": [
+          "four pink flamingos are chasing the horse",
+          "the horse is to the left of four wooden chairs"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly four pink flamingos, exactly one horse, and exactly four wooden chairs.",
+        "Keep all flamingos, the horse, and all chairs fully visible and separated enough to count.",
+        "Bind pink color only to the flamingos and wooden material to the chairs.",
+        "Place the horse clearly to the left of the group of four wooden chairs.",
+        "Depict the four pink flamingos actively chasing the horse, with their orientation and motion directed toward the horse.",
+        "Avoid extra flamingos, extra horses, extra chairs, or occlusion that hides counts."
+      ],
+      "generation_strategy": "Use a clear side-view composition with three countable groups: four pink flamingos on the left/mid-left chasing one horse, and four wooden chairs arranged separately on the right. Keep the horse spatially left of all four chairs, and maintain open spacing so each object is distinct and visible.",
+      "initial_prompt": "A clear scene showing exactly four pink flamingos chasing exactly one horse. The horse is positioned to the left of exactly four wooden chairs. Arrange the four wooden chairs as a separate visible group on the right side, all made of wood. The four pink flamingos are distinct, fully visible, and moving toward the horse as if chasing it. The single horse is fully visible and clearly left of all four chairs. Keep every flamingo, the horse, and each chair unobstructed and easy to count; do not include any extra flamingos, horses, or chairs.",
+      "parsed_constraints": {
+        "attributes": {
+          "chairs": [
+            "wooden"
+          ],
+          "flamingos": [
+            "pink"
+          ]
+        },
+        "counts": {
+          "chairs": 4,
+          "flamingos": 4,
+          "horse": 1
+        },
+        "objects": [
+          "flamingos",
+          "horse",
+          "chairs"
+        ],
+        "relations": [
+          "four pink flamingos are chasing the horse",
+          "the horse is to the left of four wooden chairs"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_prompt": "A clear scene showing exactly four pink flamingos chasing exactly one horse. The horse is positioned to the left of exactly four wooden chairs. Arrange the four wooden chairs as a separate visible group on the right side, all made of wood. The four pink flamingos are distinct, fully visible, and moving toward the horse as if chasing it. The single horse is fully visible and clearly left of all four chairs. Keep every flamingo, the horse, and each chair unobstructed and easy to count; do not include any extra flamingos, horses, or chairs.",
+    "previous_selected_skills": [
+      "quantity_counting",
+      "object_presence",
+      "attribute_binding",
+      "multi_object_composition",
+      "spatial_layout",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ],
+    "prompt_id": "geneval2_00616_b58d8daf",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "count_mismatch",
+          "relation_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many flamingos are in the image?",
+              "score": 1.525733892754631e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.52573e-08",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many flamingos are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the flamingos chasing the horse?",
+              "score": 0.13363280207340722,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.133633",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the flamingos chasing the horse?",
+            "type": "relation_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the flamingos pink?",
+              "score": 0.9999999825959094,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the flamingos pink?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any flamingos in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any flamingos in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many horses are in the image?",
+              "score": 1.0,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "one",
+            "status": "passed",
+            "target": "How many horses are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any horses in the image?",
+              "score": 0.9999999827559805,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any horses in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the horse to the left of the chairs?",
+              "score": 0.9999999380906672,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Is the horse to the left of the chairs?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many chairs are in the image?",
+              "score": 0.9999984850985906,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.999998",
+            "expected": "four",
+            "status": "passed",
+            "target": "How many chairs are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the chairs wooden?",
+              "score": 1.0,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the chairs wooden?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any chairs in the image?",
+              "score": 0.9999999800234036,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any chairs in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly four pink flamingos, exactly one horse, and exactly four wooden chairs.",
+            "Keep all flamingos, the horse, and all chairs fully visible and separated enough to count.",
+            "Bind pink color only to the flamingos and wooden material to the chairs.",
+            "Place the horse clearly to the left of the group of four wooden chairs.",
+            "Depict the four pink flamingos actively chasing the horse, with their orientation and motion directed toward the horse.",
+            "Avoid extra flamingos, extra horses, extra chairs, or occlusion that hides counts."
+          ],
+          "generation_strategy": "Use a clear side-view composition with three countable groups: four pink flamingos on the left/mid-left chasing one horse, and four wooden chairs arranged separately on the right. Keep the horse spatially left of all four chairs, and maintain open spacing so each object is distinct and visible.",
+          "initial_prompt": "A clear scene showing exactly four pink flamingos chasing exactly one horse. The horse is positioned to the left of exactly four wooden chairs. Arrange the four wooden chairs as a separate visible group on the right side, all made of wood. The four pink flamingos are distinct, fully visible, and moving toward the horse as if chasing it. The single horse is fully visible and clearly left of all four chairs. Keep every flamingo, the horse, and each chair unobstructed and easy to count; do not include any extra flamingos, horses, or chairs.",
+          "parsed_constraints": {
+            "attributes": {
+              "chairs": [
+                "wooden"
+              ],
+              "flamingos": [
+                "pink"
+              ]
+            },
+            "counts": {
+              "chairs": 4,
+              "flamingos": 4,
+              "horse": 1
+            },
+            "objects": [
+              "flamingos",
+              "horse",
+              "chairs"
+            ],
+            "relations": [
+              "four pink flamingos are chasing the horse",
+              "the horse is to the left of four wooden chairs"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "object_presence",
+            "attribute_binding",
+            "multi_object_composition",
+            "spatial_layout",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly four pink flamingos, exactly one horse, and exactly four wooden chairs.",
+            "Keep all flamingos, the horse, and all chairs fully visible and separated enough to count.",
+            "Bind pink color only to the flamingos and wooden material to the chairs.",
+            "Place the horse clearly to the left of the group of four wooden chairs.",
+            "Depict the four pink flamingos actively chasing the horse, with their orientation and motion directed toward the horse.",
+            "Avoid extra flamingos, extra horses, extra chairs, or occlusion that hides counts."
+          ],
+          "generation_strategy": "Use a clear side-view composition with three countable groups: four pink flamingos on the left/mid-left chasing one horse, and four wooden chairs arranged separately on the right. Keep the horse spatially left of all four chairs, and maintain open spacing so each object is distinct and visible.",
+          "initial_prompt": "A clear scene showing exactly four pink flamingos chasing exactly one horse. The horse is positioned to the left of exactly four wooden chairs. Arrange the four wooden chairs as a separate visible group on the right side, all made of wood. The four pink flamingos are distinct, fully visible, and moving toward the horse as if chasing it. The single horse is fully visible and clearly left of all four chairs. Keep every flamingo, the horse, and each chair unobstructed and easy to count; do not include any extra flamingos, horses, or chairs.",
+          "parsed_constraints": {
+            "attributes": {
+              "chairs": [
+                "wooden"
+              ],
+              "flamingos": [
+                "pink"
+              ]
+            },
+            "counts": {
+              "chairs": 4,
+              "flamingos": 4,
+              "horse": 1
+            },
+            "objects": [
+              "flamingos",
+              "horse",
+              "chairs"
+            ],
+            "relations": [
+              "four pink flamingos are chasing the horse",
+              "the horse is to the left of four wooden chairs"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "object_presence",
+            "attribute_binding",
+            "multi_object_composition",
+            "spatial_layout",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "prompt_used": "A clear scene showing exactly four pink flamingos chasing exactly one horse. The horse is positioned to the left of exactly four wooden chairs. Arrange the four wooden chairs as a separate visible group on the right side, all made of wood. The four pink flamingos are distinct, fully visible, and moving toward the horse as if chasing it. The single horse is fully visible and clearly left of all four chairs. Keep every flamingo, the horse, and each chair unobstructed and easy to count; do not include any extra flamingos, horses, or chairs.",
+        "round": 0,
+        "score": 0.8133631185895297,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many flamingos are in the image?",
+                "score": 1.525733892754631e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.52573e-08",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many flamingos are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the flamingos chasing the horse?",
+                "score": 0.13363280207340722,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.133633",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the flamingos chasing the horse?",
+              "type": "relation_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00616_b58d8daf"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many flamingos are in the image?",
+          "score": 1.525733892754631e-08,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.52573e-08",
+        "expected": "four",
+        "status": "failed",
+        "target": "How many flamingos are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the flamingos chasing the horse?",
+          "score": 0.13363280207340722,
+          "skill": "verb"
+        },
+        "detected": "soft_score=0.133633",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the flamingos chasing the horse?",
+        "type": "relation_mismatch"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00013/samples/00000.png",
+    "best_so_far_prompt": "A clear scene showing exactly four pink flamingos chasing exactly one horse. The horse is positioned to the left of exactly four wooden chairs. Arrange the four wooden chairs as a separate visible group on the right side, all made of wood. The four pink flamingos are distinct, fully visible, and moving toward the horse as if chasing it. The single horse is fully visible and clearly left of all four chairs. Keep every flamingo, the horse, and each chair unobstructed and easy to count; do not include any extra flamingos, horses, or chairs.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.8133631185895297,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many flamingos are in the image?",
+          "score": 1.525733892754631e-08,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.52573e-08",
+        "expected": "four",
+        "status": "failed",
+        "target": "How many flamingos are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the flamingos chasing the horse?",
+          "score": 0.13363280207340722,
+          "skill": "verb"
+        },
+        "detected": "soft_score=0.133633",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the flamingos chasing the horse?",
+        "type": "relation_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly four pink flamingos, exactly one horse, and exactly four wooden chairs.",
+        "Keep all flamingos, the horse, and all chairs fully visible and separated enough to count.",
+        "Bind pink color only to the flamingos and wooden material to the chairs.",
+        "Place the horse clearly to the left of the group of four wooden chairs.",
+        "Depict the four pink flamingos actively chasing the horse, with their orientation and motion directed toward the horse.",
+        "Avoid extra flamingos, extra horses, extra chairs, or occlusion that hides counts."
+      ],
+      "generation_strategy": "Use a clear side-view composition with three countable groups: four pink flamingos on the left/mid-left chasing one horse, and four wooden chairs arranged separately on the right. Keep the horse spatially left of all four chairs, and maintain open spacing so each object is distinct and visible.",
+      "initial_prompt": "A clear scene showing exactly four pink flamingos chasing exactly one horse. The horse is positioned to the left of exactly four wooden chairs. Arrange the four wooden chairs as a separate visible group on the right side, all made of wood. The four pink flamingos are distinct, fully visible, and moving toward the horse as if chasing it. The single horse is fully visible and clearly left of all four chairs. Keep every flamingo, the horse, and each chair unobstructed and easy to count; do not include any extra flamingos, horses, or chairs.",
+      "parsed_constraints": {
+        "attributes": {
+          "chairs": [
+            "wooden"
+          ],
+          "flamingos": [
+            "pink"
+          ]
+        },
+        "counts": {
+          "chairs": 4,
+          "flamingos": 4,
+          "horse": 1
+        },
+        "objects": [
+          "flamingos",
+          "horse",
+          "chairs"
+        ],
+        "relations": [
+          "four pink flamingos are chasing the horse",
+          "the horse is to the left of four wooden chairs"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.813 failed=['How many flamingos are in the image?', 'Are the flamingos chasing the horse?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_incremental/snapshot_001_worker_00/geneval2_00616_b58d8daf__geneval2_00616_b58d8daf_cand_00__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00616_b58d8daf__geneval2_00616_b58d8daf_cand_00__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00616_b58d8daf",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image passed pink flamingos, flamingo presence, one horse, horse presence, horse left of chairs, four chairs, wooden chairs, and chair presence. It failed the exact flamingo count and the action relation: the scene did not clearly show exactly four flamingos, and the flamingos were not clearly chasing the horse.",
+    "expected_improvement": [
+      "Exact flamingo count should improve by using a simple side-view lineup of four separate, fully visible pink flamingos with visible gaps between them.",
+      "The chasing relation should improve by placing all four flamingos behind the horse, facing and moving toward the horse, while the horse moves away from them.",
+      "Previously passed constraints should remain stable by keeping one horse left of a separate group of four wooden chairs."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "relation_mismatch"
+    ],
+    "preserve_constraints": [
+      "The flamingos must be pink.",
+      "There must be flamingos visible in the image.",
+      "There must be exactly one horse, fully visible.",
+      "The horse must be to the left of the chairs.",
+      "There must be exactly four chairs.",
+      "The chairs must be wooden.",
+      "The chairs must be visible as chairs."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt stated the correct count and chasing action, but did not force a simple enough layout for the verifier to count four flamingos or recognize pursuit. The flamingos may have been merged, obscured, under-emphasized, or not clearly oriented toward the horse.",
+      "error_source": "Prompt layout and relation depiction were too general for the count and chasing constraints."
+    },
+    "regeneration_strategy": "Use a clean side-view composition with three separated zones: four pink flamingos in a visible row on the left, one horse just ahead of them toward the middle-left, and four wooden chairs farther right. Make the flamingos countable by separating each body and legs with open space, and make the chase relation explicit by having all four flamingos face the horse and pursue it from behind while the horse is moving away from them. Keep the chairs as a separate right-side group so the horse remains clearly left of all chairs.",
+    "regression_risks": [
+      "The generator may add extra flamingos or merge flamingos together, causing another count failure.",
+      "The generator may make the flamingos merely standing near the horse instead of chasing it.",
+      "The generator may move the horse among or to the right of the chairs, regressing the passed spatial relation.",
+      "The generator may add extra chairs or make the chairs non-wooden."
+    ],
+    "repair_constraints": [
+      "Show exactly four pink flamingos, no more and no fewer.",
+      "Make the four flamingos separate, fully visible, non-overlapping, and easy to count as four distinct birds.",
+      "Depict all four flamingos chasing the horse: each flamingo is behind the horse, facing toward the horse, and moving in the horse's direction.",
+      "Show exactly one horse ahead of the flamingos and left of all chairs.",
+      "Show exactly four wooden chairs as a separate visible group to the right of the horse.",
+      "Do not include extra flamingos, horses, or chairs."
+    ],
+    "retry_prompt": "A clear side-view scene with exactly four pink flamingos chasing exactly one horse. Place the four pink flamingos in a separated row on the left, each flamingo fully visible, pink, non-overlapping, and easy to count: one, two, three, four, with no extra flamingos. Put the single horse just ahead of them toward the middle-left, fully visible, with all four flamingos behind it, facing toward the horse and moving toward it as if pursuing and chasing the horse. Place exactly four wooden chairs as a separate group on the right side, and keep the horse clearly to the left of all four chairs. The four chairs are made of wood, fully visible, separated enough to count, with no extra chairs. Keep every flamingo, the horse, and every chair unobstructed; do not include any extra horses, flamingos, or chairs.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "attribute_binding",
+        "object_presence",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same allowed skills but shift emphasis toward quantity_counting and spatial_layout: use a simple separated row for the four flamingos and a directional behind-to-ahead pursuit layout to make chasing the horse visually unambiguous."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 9,
+    "dataset": "geneval2",
+    "original_prompt": "four pink flamingos chasing a horse to the left of four wooden chairs",
+    "prompt": "four pink flamingos chasing a horse to the left of four wooden chairs",
+    "prompt_id": "geneval2_00616_b58d8daf",
+    "sampling_bucket": "object",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "relation_action",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 2,
+      "count": 3,
+      "object": 3,
+      "position": 1,
+      "verb": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "verb",
+      "count",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 616,
+    "vqa_list": [
+      [
+        "How many flamingos are in the image?",
+        "four"
+      ],
+      [
+        "Are the flamingos pink?",
+        "Yes"
+      ],
+      [
+        "Are there any flamingos in the image?",
+        "Yes"
+      ],
+      [
+        "Are the flamingos chasing the horse?",
+        "Yes"
+      ],
+      [
+        "How many horses are in the image?",
+        "one"
+      ],
+      [
+        "Are there any horses in the image?",
+        "Yes"
+      ],
+      [
+        "Is the horse to the left of the chairs?",
+        "Yes"
+      ],
+      [
+        "How many chairs are in the image?",
+        "four"
+      ],
+      [
+        "Are the chairs wooden?",
+        "Yes"
+      ],
+      [
+        "Are there any chairs in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00616_b58d8daf"
+}

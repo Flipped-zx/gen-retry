@@ -21,6 +21,11 @@ def main() -> int:
     )
     parser.add_argument("paths", nargs="+")
     parser.add_argument("--base-dir", help="Base directory for resolving relative image paths.")
+    parser.add_argument(
+        "--allow-missing-images",
+        action="store_true",
+        help="Validate JSON contracts without requiring local image files to exist.",
+    )
     args = parser.parse_args()
 
     total_errors = 0
@@ -32,7 +37,11 @@ def main() -> int:
             total_errors += 1
             continue
         base_dir = Path(args.base_dir) if args.base_dir else path.parent
-        errors = validate_offline_object(data, base_dir=base_dir)
+        errors = validate_offline_object(
+            data,
+            base_dir=base_dir,
+            require_image_path_exists=not args.allow_missing_images,
+        )
         if errors:
             total_errors += len(errors)
             print(f"{path}: FAIL")

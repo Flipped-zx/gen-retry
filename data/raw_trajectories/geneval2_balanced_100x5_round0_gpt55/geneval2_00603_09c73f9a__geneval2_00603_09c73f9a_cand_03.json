@@ -1,0 +1,3127 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "count_mismatch",
+          "relation_mismatch",
+          "spatial_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many kangaroos are in the image?",
+              "score": 0.0015015795605631014,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.00150158",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many kangaroos are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the kangaroos in front of the pigs?",
+              "score": 0.002075905167032488,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.00207591",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the kangaroos in front of the pigs?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many pigs are in the image?",
+              "score": 1.1012098166748028e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.10121e-09",
+            "expected": "two",
+            "status": "failed",
+            "target": "How many pigs are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the pigs plastic?",
+              "score": 3.496198753794033e-05,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=3.4962e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the pigs plastic?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the pigs playing with the elephant?",
+              "score": 4.539789410975105e-05,
+              "skill": "verb"
+            },
+            "detected": "soft_score=4.53979e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the pigs playing with the elephant?",
+            "type": "relation_mismatch"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any kangaroos in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any kangaroos in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any pigs in the image?",
+              "score": 0.9999982961599017,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999998",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any pigs in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many elephants are in the image?",
+              "score": 0.999999866160513,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "one",
+            "status": "passed",
+            "target": "How many elephants are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the elephant checkered?",
+              "score": 0.9998766314720342,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.999877",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Is the elephant checkered?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any elephants in the image?",
+              "score": 0.9999598591311951,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.99996",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any elephants in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00603_09c73f9a_cand_03",
+          "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+          "rows": [
+            {
+              "answer": "six",
+              "atom_count": 9,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00603_09c73f9a_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00068/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00068/samples/00003.png",
+              "prompt": "six kangaroos in front of two plastic pigs playing with a checkered elephant",
+              "prompt_id": "geneval2_00603_09c73f9a",
+              "question": "How many kangaroos are in the image?",
+              "score": 0.0015015795605631014,
+              "skill": "count",
+              "source_index": 603
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00603_09c73f9a_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00068/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00068/samples/00003.png",
+              "prompt": "six kangaroos in front of two plastic pigs playing with a checkered elephant",
+              "prompt_id": "geneval2_00603_09c73f9a",
+              "question": "Are there any kangaroos in the image?",
+              "score": 1.000000057319994,
+              "skill": "object",
+              "source_index": 603
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00603_09c73f9a_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00068/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00068/samples/00003.png",
+              "prompt": "six kangaroos in front of two plastic pigs playing with a checkered elephant",
+              "prompt_id": "geneval2_00603_09c73f9a",
+              "question": "Are the kangaroos in front of the pigs?",
+              "score": 0.002075905167032488,
+              "skill": "position",
+              "source_index": 603
+            },
+            {
+              "answer": "two",
+              "atom_count": 9,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00603_09c73f9a_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00068/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00068/samples/00003.png",
+              "prompt": "six kangaroos in front of two plastic pigs playing with a checkered elephant",
+              "prompt_id": "geneval2_00603_09c73f9a",
+              "question": "How many pigs are in the image?",
+              "score": 1.1012098166748028e-09,
+              "skill": "count",
+              "source_index": 603
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00603_09c73f9a_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00068/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00068/samples/00003.png",
+              "prompt": "six kangaroos in front of two plastic pigs playing with a checkered elephant",
+              "prompt_id": "geneval2_00603_09c73f9a",
+              "question": "Are the pigs plastic?",
+              "score": 3.496198753794033e-05,
+              "skill": "attribute",
+              "source_index": 603
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00603_09c73f9a_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00068/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00068/samples/00003.png",
+              "prompt": "six kangaroos in front of two plastic pigs playing with a checkered elephant",
+              "prompt_id": "geneval2_00603_09c73f9a",
+              "question": "Are there any pigs in the image?",
+              "score": 0.9999982961599017,
+              "skill": "object",
+              "source_index": 603
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00603_09c73f9a_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00068/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00068/samples/00003.png",
+              "prompt": "six kangaroos in front of two plastic pigs playing with a checkered elephant",
+              "prompt_id": "geneval2_00603_09c73f9a",
+              "question": "Are the pigs playing with the elephant?",
+              "score": 4.539789410975105e-05,
+              "skill": "verb",
+              "source_index": 603
+            },
+            {
+              "answer": "one",
+              "atom_count": 9,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00603_09c73f9a_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00068/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00068/samples/00003.png",
+              "prompt": "six kangaroos in front of two plastic pigs playing with a checkered elephant",
+              "prompt_id": "geneval2_00603_09c73f9a",
+              "question": "How many elephants are in the image?",
+              "score": 0.999999866160513,
+              "skill": "count",
+              "source_index": 603
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00603_09c73f9a_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00068/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00068/samples/00003.png",
+              "prompt": "six kangaroos in front of two plastic pigs playing with a checkered elephant",
+              "prompt_id": "geneval2_00603_09c73f9a",
+              "question": "Is the elephant checkered?",
+              "score": 0.9998766314720342,
+              "skill": "attribute",
+              "source_index": 603
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00603_09c73f9a_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00068/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00068/samples/00003.png",
+              "prompt": "six kangaroos in front of two plastic pigs playing with a checkered elephant",
+              "prompt_id": "geneval2_00603_09c73f9a",
+              "question": "Are there any elephants in the image?",
+              "score": 0.9999598591311951,
+              "skill": "object",
+              "source_index": 603
+            }
+          ],
+          "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.5003492498634097,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 3,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00603_09c73f9a.json",
+          "manifest_prompt_index": 68,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00603_09c73f9a"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00603_09c73f9a_cand_03",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00068/samples/00003.png",
+        "prompt_used": "Create an image with exactly six kangaroos in the foreground, clearly in front of exactly two plastic pigs. The two pigs must visibly look like plastic pigs and must be playing with exactly one checkered elephant. The elephant must have a clear checkered pattern. Keep all six kangaroos, both plastic pigs, and the single checkered elephant fully visible, separated enough to count, with minimal overlap and no occlusion hiding any required animal.",
+        "seed": 1343
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly six kangaroos, exactly two pigs, and exactly one elephant.",
+          "Make the two pigs clearly plastic in material/texture, and make the elephant clearly checkered.",
+          "Place all six kangaroos in the foreground in front of the two pigs; keep the two pigs behind the kangaroos but still visible.",
+          "Depict the two plastic pigs playing with the single checkered elephant.",
+          "Keep all animals separated enough to count, with minimal overlap and no occlusion hiding any required object."
+        ],
+        "generation_strategy": "Use a clear multi-object composition with foreground-to-background depth: six separate kangaroos across the front, two plastic pigs behind them, and one checkered elephant near the pigs so the pigs' interaction with the elephant is visible. Prioritize exact counts, attribute binding, spatial relation, and visibility.",
+        "initial_prompt": "Create an image with exactly six kangaroos in the foreground, clearly in front of exactly two plastic pigs. The two pigs must visibly look like plastic pigs and must be playing with exactly one checkered elephant. The elephant must have a clear checkered pattern. Keep all six kangaroos, both plastic pigs, and the single checkered elephant fully visible, separated enough to count, with minimal overlap and no occlusion hiding any required animal.",
+        "parsed_constraints": {
+          "attributes": {
+            "elephant": [
+              "checkered"
+            ],
+            "pigs": [
+              "plastic"
+            ]
+          },
+          "counts": {
+            "elephant": 1,
+            "kangaroos": 6,
+            "pigs": 2
+          },
+          "objects": [
+            "kangaroos",
+            "pigs",
+            "elephant"
+          ],
+          "relations": [
+            "six kangaroos are in front of two plastic pigs",
+            "two plastic pigs are playing with one checkered elephant"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly six kangaroos, exactly two pigs, and exactly one elephant.",
+          "Make the two pigs clearly plastic in material/texture, and make the elephant clearly checkered.",
+          "Place all six kangaroos in the foreground in front of the two pigs; keep the two pigs behind the kangaroos but still visible.",
+          "Depict the two plastic pigs playing with the single checkered elephant.",
+          "Keep all animals separated enough to count, with minimal overlap and no occlusion hiding any required object."
+        ],
+        "generation_strategy": "Use a clear multi-object composition with foreground-to-background depth: six separate kangaroos across the front, two plastic pigs behind them, and one checkered elephant near the pigs so the pigs' interaction with the elephant is visible. Prioritize exact counts, attribute binding, spatial relation, and visibility.",
+        "initial_prompt": "Create an image with exactly six kangaroos in the foreground, clearly in front of exactly two plastic pigs. The two pigs must visibly look like plastic pigs and must be playing with exactly one checkered elephant. The elephant must have a clear checkered pattern. Keep all six kangaroos, both plastic pigs, and the single checkered elephant fully visible, separated enough to count, with minimal overlap and no occlusion hiding any required animal.",
+        "parsed_constraints": {
+          "attributes": {
+            "elephant": [
+              "checkered"
+            ],
+            "pigs": [
+              "plastic"
+            ]
+          },
+          "counts": {
+            "elephant": 1,
+            "kangaroos": 6,
+            "pigs": 2
+          },
+          "objects": [
+            "kangaroos",
+            "pigs",
+            "elephant"
+          ],
+          "relations": [
+            "six kangaroos are in front of two plastic pigs",
+            "two plastic pigs are playing with one checkered elephant"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many kangaroos are in the image?",
+                "score": 0.0015015795605631014,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.00150158",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many kangaroos are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the kangaroos in front of the pigs?",
+                "score": 0.002075905167032488,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.00207591",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the kangaroos in front of the pigs?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many pigs are in the image?",
+                "score": 1.1012098166748028e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.10121e-09",
+              "expected": "two",
+              "status": "failed",
+              "target": "How many pigs are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the pigs plastic?",
+                "score": 3.496198753794033e-05,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=3.4962e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the pigs plastic?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the pigs playing with the elephant?",
+                "score": 4.539789410975105e-05,
+                "skill": "verb"
+              },
+              "detected": "soft_score=4.53979e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the pigs playing with the elephant?",
+              "type": "relation_mismatch"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00068/samples/00003.png",
+          "prompt": "Create an image with exactly six kangaroos in the foreground, clearly in front of exactly two plastic pigs. The two pigs must visibly look like plastic pigs and must be playing with exactly one checkered elephant. The elephant must have a clear checkered pattern. Keep all six kangaroos, both plastic pigs, and the single checkered elephant fully visible, separated enough to count, with minimal overlap and no occlusion hiding any required animal.",
+          "round": 0,
+          "score": 0.5003492498634097
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00603_09c73f9a_cand_03",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "attribute_mismatch",
+            "count_mismatch",
+            "relation_mismatch",
+            "spatial_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many kangaroos are in the image?",
+                "score": 0.0015015795605631014,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.00150158",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many kangaroos are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the kangaroos in front of the pigs?",
+                "score": 0.002075905167032488,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.00207591",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the kangaroos in front of the pigs?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many pigs are in the image?",
+                "score": 1.1012098166748028e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.10121e-09",
+              "expected": "two",
+              "status": "failed",
+              "target": "How many pigs are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the pigs plastic?",
+                "score": 3.496198753794033e-05,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=3.4962e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the pigs plastic?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the pigs playing with the elephant?",
+                "score": 4.539789410975105e-05,
+                "skill": "verb"
+              },
+              "detected": "soft_score=4.53979e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the pigs playing with the elephant?",
+              "type": "relation_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any kangaroos in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any kangaroos in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any pigs in the image?",
+                "score": 0.9999982961599017,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999998",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any pigs in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many elephants are in the image?",
+                "score": 0.999999866160513,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "one",
+              "status": "passed",
+              "target": "How many elephants are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the elephant checkered?",
+                "score": 0.9998766314720342,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.999877",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Is the elephant checkered?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any elephants in the image?",
+                "score": 0.9999598591311951,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.99996",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any elephants in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.5003492498634097,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many kangaroos are in the image?",
+                  "score": 0.0015015795605631014,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.00150158",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many kangaroos are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the kangaroos in front of the pigs?",
+                  "score": 0.002075905167032488,
+                  "skill": "position"
+                },
+                "detected": "soft_score=0.00207591",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the kangaroos in front of the pigs?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many pigs are in the image?",
+                  "score": 1.1012098166748028e-09,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1.10121e-09",
+                "expected": "two",
+                "status": "failed",
+                "target": "How many pigs are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the pigs plastic?",
+                  "score": 3.496198753794033e-05,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=3.4962e-05",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the pigs plastic?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the pigs playing with the elephant?",
+                  "score": 4.539789410975105e-05,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=4.53979e-05",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the pigs playing with the elephant?",
+                "type": "relation_mismatch"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00068/samples/00003.png",
+            "prompt": "Create an image with exactly six kangaroos in the foreground, clearly in front of exactly two plastic pigs. The two pigs must visibly look like plastic pigs and must be playing with exactly one checkered elephant. The elephant must have a clear checkered pattern. Keep all six kangaroos, both plastic pigs, and the single checkered elephant fully visible, separated enough to count, with minimal overlap and no occlusion hiding any required animal.",
+            "round": 0,
+            "score": 0.5003492498634097
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many kangaroos are in the image?",
+                "score": 0.0015015795605631014,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.00150158",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many kangaroos are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the kangaroos in front of the pigs?",
+                "score": 0.002075905167032488,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.00207591",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the kangaroos in front of the pigs?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many pigs are in the image?",
+                "score": 1.1012098166748028e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.10121e-09",
+              "expected": "two",
+              "status": "failed",
+              "target": "How many pigs are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the pigs plastic?",
+                "score": 3.496198753794033e-05,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=3.4962e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the pigs plastic?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the pigs playing with the elephant?",
+                "score": 4.539789410975105e-05,
+                "skill": "verb"
+              },
+              "detected": "soft_score=4.53979e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the pigs playing with the elephant?",
+              "type": "relation_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "attribute_mismatch",
+            "count_mismatch",
+            "relation_mismatch",
+            "spatial_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many kangaroos are in the image?",
+                "score": 0.0015015795605631014,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.00150158",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many kangaroos are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the kangaroos in front of the pigs?",
+                "score": 0.002075905167032488,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.00207591",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the kangaroos in front of the pigs?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many pigs are in the image?",
+                "score": 1.1012098166748028e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.10121e-09",
+              "expected": "two",
+              "status": "failed",
+              "target": "How many pigs are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the pigs plastic?",
+                "score": 3.496198753794033e-05,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=3.4962e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the pigs plastic?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the pigs playing with the elephant?",
+                "score": 4.539789410975105e-05,
+                "skill": "verb"
+              },
+              "detected": "soft_score=4.53979e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the pigs playing with the elephant?",
+              "type": "relation_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any kangaroos in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any kangaroos in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any pigs in the image?",
+                "score": 0.9999982961599017,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999998",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any pigs in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many elephants are in the image?",
+                "score": 0.999999866160513,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "one",
+              "status": "passed",
+              "target": "How many elephants are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the elephant checkered?",
+                "score": 0.9998766314720342,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.999877",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Is the elephant checkered?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any elephants in the image?",
+                "score": 0.9999598591311951,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.99996",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any elephants in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.5003492498634097,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "six kangaroos in front of two plastic pigs playing with a checkered elephant",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many kangaroos are in the image?",
+              "score": 0.0015015795605631014,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.00150158",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many kangaroos are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the kangaroos in front of the pigs?",
+              "score": 0.002075905167032488,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.00207591",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the kangaroos in front of the pigs?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many pigs are in the image?",
+              "score": 1.1012098166748028e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.10121e-09",
+            "expected": "two",
+            "status": "failed",
+            "target": "How many pigs are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the pigs plastic?",
+              "score": 3.496198753794033e-05,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=3.4962e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the pigs plastic?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the pigs playing with the elephant?",
+              "score": 4.539789410975105e-05,
+              "skill": "verb"
+            },
+            "detected": "soft_score=4.53979e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the pigs playing with the elephant?",
+            "type": "relation_mismatch"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly six kangaroos, exactly two pigs, and exactly one elephant.",
+            "Make the two pigs clearly plastic in material/texture, and make the elephant clearly checkered.",
+            "Place all six kangaroos in the foreground in front of the two pigs; keep the two pigs behind the kangaroos but still visible.",
+            "Depict the two plastic pigs playing with the single checkered elephant.",
+            "Keep all animals separated enough to count, with minimal overlap and no occlusion hiding any required object."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with foreground-to-background depth: six separate kangaroos across the front, two plastic pigs behind them, and one checkered elephant near the pigs so the pigs' interaction with the elephant is visible. Prioritize exact counts, attribute binding, spatial relation, and visibility.",
+          "initial_prompt": "Create an image with exactly six kangaroos in the foreground, clearly in front of exactly two plastic pigs. The two pigs must visibly look like plastic pigs and must be playing with exactly one checkered elephant. The elephant must have a clear checkered pattern. Keep all six kangaroos, both plastic pigs, and the single checkered elephant fully visible, separated enough to count, with minimal overlap and no occlusion hiding any required animal.",
+          "parsed_constraints": {
+            "attributes": {
+              "elephant": [
+                "checkered"
+              ],
+              "pigs": [
+                "plastic"
+              ]
+            },
+            "counts": {
+              "elephant": 1,
+              "kangaroos": 6,
+              "pigs": 2
+            },
+            "objects": [
+              "kangaroos",
+              "pigs",
+              "elephant"
+            ],
+            "relations": [
+              "six kangaroos are in front of two plastic pigs",
+              "two plastic pigs are playing with one checkered elephant"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly six kangaroos, exactly two pigs, and exactly one elephant.",
+            "Make the two pigs clearly plastic in material/texture, and make the elephant clearly checkered.",
+            "Place all six kangaroos in the foreground in front of the two pigs; keep the two pigs behind the kangaroos but still visible.",
+            "Depict the two plastic pigs playing with the single checkered elephant.",
+            "Keep all animals separated enough to count, with minimal overlap and no occlusion hiding any required object."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with foreground-to-background depth: six separate kangaroos across the front, two plastic pigs behind them, and one checkered elephant near the pigs so the pigs' interaction with the elephant is visible. Prioritize exact counts, attribute binding, spatial relation, and visibility.",
+          "initial_prompt": "Create an image with exactly six kangaroos in the foreground, clearly in front of exactly two plastic pigs. The two pigs must visibly look like plastic pigs and must be playing with exactly one checkered elephant. The elephant must have a clear checkered pattern. Keep all six kangaroos, both plastic pigs, and the single checkered elephant fully visible, separated enough to count, with minimal overlap and no occlusion hiding any required animal.",
+          "parsed_constraints": {
+            "attributes": {
+              "elephant": [
+                "checkered"
+              ],
+              "pigs": [
+                "plastic"
+              ]
+            },
+            "counts": {
+              "elephant": 1,
+              "kangaroos": 6,
+              "pigs": 2
+            },
+            "objects": [
+              "kangaroos",
+              "pigs",
+              "elephant"
+            ],
+            "relations": [
+              "six kangaroos are in front of two plastic pigs",
+              "two plastic pigs are playing with one checkered elephant"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion"
+          ]
+        },
+        "previous_prompt": "Create an image with exactly six kangaroos in the foreground, clearly in front of exactly two plastic pigs. The two pigs must visibly look like plastic pigs and must be playing with exactly one checkered elephant. The elephant must have a clear checkered pattern. Keep all six kangaroos, both plastic pigs, and the single checkered elephant fully visible, separated enough to count, with minimal overlap and no occlusion hiding any required animal.",
+        "previous_selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion"
+        ],
+        "prompt_id": "geneval2_00603_09c73f9a",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "attribute_mismatch",
+              "count_mismatch",
+              "relation_mismatch",
+              "spatial_mismatch"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many kangaroos are in the image?",
+                  "score": 0.0015015795605631014,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.00150158",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many kangaroos are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the kangaroos in front of the pigs?",
+                  "score": 0.002075905167032488,
+                  "skill": "position"
+                },
+                "detected": "soft_score=0.00207591",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the kangaroos in front of the pigs?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many pigs are in the image?",
+                  "score": 1.1012098166748028e-09,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1.10121e-09",
+                "expected": "two",
+                "status": "failed",
+                "target": "How many pigs are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the pigs plastic?",
+                  "score": 3.496198753794033e-05,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=3.4962e-05",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the pigs plastic?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the pigs playing with the elephant?",
+                  "score": 4.539789410975105e-05,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=4.53979e-05",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the pigs playing with the elephant?",
+                "type": "relation_mismatch"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any kangaroos in the image?",
+                  "score": 1.0,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any kangaroos in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any pigs in the image?",
+                  "score": 0.9999982961599017,
+                  "skill": "object"
+                },
+                "detected": "soft_score=0.999998",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any pigs in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many elephants are in the image?",
+                  "score": 0.999999866160513,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1",
+                "expected": "one",
+                "status": "passed",
+                "target": "How many elephants are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Is the elephant checkered?",
+                  "score": 0.9998766314720342,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.999877",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Is the elephant checkered?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any elephants in the image?",
+                  "score": 0.9999598591311951,
+                  "skill": "object"
+                },
+                "detected": "soft_score=0.99996",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any elephants in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly six kangaroos, exactly two pigs, and exactly one elephant.",
+                "Make the two pigs clearly plastic in material/texture, and make the elephant clearly checkered.",
+                "Place all six kangaroos in the foreground in front of the two pigs; keep the two pigs behind the kangaroos but still visible.",
+                "Depict the two plastic pigs playing with the single checkered elephant.",
+                "Keep all animals separated enough to count, with minimal overlap and no occlusion hiding any required object."
+              ],
+              "generation_strategy": "Use a clear multi-object composition with foreground-to-background depth: six separate kangaroos across the front, two plastic pigs behind them, and one checkered elephant near the pigs so the pigs' interaction with the elephant is visible. Prioritize exact counts, attribute binding, spatial relation, and visibility.",
+              "initial_prompt": "Create an image with exactly six kangaroos in the foreground, clearly in front of exactly two plastic pigs. The two pigs must visibly look like plastic pigs and must be playing with exactly one checkered elephant. The elephant must have a clear checkered pattern. Keep all six kangaroos, both plastic pigs, and the single checkered elephant fully visible, separated enough to count, with minimal overlap and no occlusion hiding any required animal.",
+              "parsed_constraints": {
+                "attributes": {
+                  "elephant": [
+                    "checkered"
+                  ],
+                  "pigs": [
+                    "plastic"
+                  ]
+                },
+                "counts": {
+                  "elephant": 1,
+                  "kangaroos": 6,
+                  "pigs": 2
+                },
+                "objects": [
+                  "kangaroos",
+                  "pigs",
+                  "elephant"
+                ],
+                "relations": [
+                  "six kangaroos are in front of two plastic pigs",
+                  "two plastic pigs are playing with one checkered elephant"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly six kangaroos, exactly two pigs, and exactly one elephant.",
+                "Make the two pigs clearly plastic in material/texture, and make the elephant clearly checkered.",
+                "Place all six kangaroos in the foreground in front of the two pigs; keep the two pigs behind the kangaroos but still visible.",
+                "Depict the two plastic pigs playing with the single checkered elephant.",
+                "Keep all animals separated enough to count, with minimal overlap and no occlusion hiding any required object."
+              ],
+              "generation_strategy": "Use a clear multi-object composition with foreground-to-background depth: six separate kangaroos across the front, two plastic pigs behind them, and one checkered elephant near the pigs so the pigs' interaction with the elephant is visible. Prioritize exact counts, attribute binding, spatial relation, and visibility.",
+              "initial_prompt": "Create an image with exactly six kangaroos in the foreground, clearly in front of exactly two plastic pigs. The two pigs must visibly look like plastic pigs and must be playing with exactly one checkered elephant. The elephant must have a clear checkered pattern. Keep all six kangaroos, both plastic pigs, and the single checkered elephant fully visible, separated enough to count, with minimal overlap and no occlusion hiding any required animal.",
+              "parsed_constraints": {
+                "attributes": {
+                  "elephant": [
+                    "checkered"
+                  ],
+                  "pigs": [
+                    "plastic"
+                  ]
+                },
+                "counts": {
+                  "elephant": 1,
+                  "kangaroos": 6,
+                  "pigs": 2
+                },
+                "objects": [
+                  "kangaroos",
+                  "pigs",
+                  "elephant"
+                ],
+                "relations": [
+                  "six kangaroos are in front of two plastic pigs",
+                  "two plastic pigs are playing with one checkered elephant"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion"
+              ]
+            },
+            "prompt_used": "Create an image with exactly six kangaroos in the foreground, clearly in front of exactly two plastic pigs. The two pigs must visibly look like plastic pigs and must be playing with exactly one checkered elephant. The elephant must have a clear checkered pattern. Keep all six kangaroos, both plastic pigs, and the single checkered elephant fully visible, separated enough to count, with minimal overlap and no occlusion hiding any required animal.",
+            "round": 0,
+            "score": 0.5003492498634097,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 0,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many kangaroos are in the image?",
+                    "score": 0.0015015795605631014,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=0.00150158",
+                  "expected": "six",
+                  "status": "failed",
+                  "target": "How many kangaroos are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 2,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the kangaroos in front of the pigs?",
+                    "score": 0.002075905167032488,
+                    "skill": "position"
+                  },
+                  "detected": "soft_score=0.00207591",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the kangaroos in front of the pigs?",
+                  "type": "spatial_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 3,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many pigs are in the image?",
+                    "score": 1.1012098166748028e-09,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=1.10121e-09",
+                  "expected": "two",
+                  "status": "failed",
+                  "target": "How many pigs are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 4,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the pigs plastic?",
+                    "score": 3.496198753794033e-05,
+                    "skill": "attribute"
+                  },
+                  "detected": "soft_score=3.4962e-05",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the pigs plastic?",
+                  "type": "attribute_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 6,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the pigs playing with the elephant?",
+                    "score": 4.539789410975105e-05,
+                    "skill": "verb"
+                  },
+                  "detected": "soft_score=4.53979e-05",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the pigs playing with the elephant?",
+                  "type": "relation_mismatch"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00603_09c73f9a"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many kangaroos are in the image?",
+              "score": 0.0015015795605631014,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.00150158",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many kangaroos are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the kangaroos in front of the pigs?",
+              "score": 0.002075905167032488,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.00207591",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the kangaroos in front of the pigs?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many pigs are in the image?",
+              "score": 1.1012098166748028e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.10121e-09",
+            "expected": "two",
+            "status": "failed",
+            "target": "How many pigs are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the pigs plastic?",
+              "score": 3.496198753794033e-05,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=3.4962e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the pigs plastic?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the pigs playing with the elephant?",
+              "score": 4.539789410975105e-05,
+              "skill": "verb"
+            },
+            "detected": "soft_score=4.53979e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the pigs playing with the elephant?",
+            "type": "relation_mismatch"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00603_09c73f9a_cand_03",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly six kangaroos, exactly two pigs, and exactly one elephant.",
+      "Make the two pigs clearly plastic in material/texture, and make the elephant clearly checkered.",
+      "Place all six kangaroos in the foreground in front of the two pigs; keep the two pigs behind the kangaroos but still visible.",
+      "Depict the two plastic pigs playing with the single checkered elephant.",
+      "Keep all animals separated enough to count, with minimal overlap and no occlusion hiding any required object."
+    ],
+    "generation_strategy": "Use a clear multi-object composition with foreground-to-background depth: six separate kangaroos across the front, two plastic pigs behind them, and one checkered elephant near the pigs so the pigs' interaction with the elephant is visible. Prioritize exact counts, attribute binding, spatial relation, and visibility.",
+    "initial_prompt": "Create an image with exactly six kangaroos in the foreground, clearly in front of exactly two plastic pigs. The two pigs must visibly look like plastic pigs and must be playing with exactly one checkered elephant. The elephant must have a clear checkered pattern. Keep all six kangaroos, both plastic pigs, and the single checkered elephant fully visible, separated enough to count, with minimal overlap and no occlusion hiding any required animal.",
+    "parsed_constraints": {
+      "attributes": {
+        "elephant": [
+          "checkered"
+        ],
+        "pigs": [
+          "plastic"
+        ]
+      },
+      "counts": {
+        "elephant": 1,
+        "kangaroos": 6,
+        "pigs": 2
+      },
+      "objects": [
+        "kangaroos",
+        "pigs",
+        "elephant"
+      ],
+      "relations": [
+        "six kangaroos are in front of two plastic pigs",
+        "two plastic pigs are playing with one checkered elephant"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image kept the required object categories present and preserved one checkered elephant, but failed exact counts for kangaroos and pigs, failed to make all kangaroos clearly in front of the pigs, failed to bind a visibly plastic material to the pigs, and failed to show the two pigs playing with the elephant.",
+    "expected_improvement": [
+      "Six kangaroos should become countable as six separate foreground figures.",
+      "Two pigs should become countable as exactly two separate figures.",
+      "The foreground-to-background layout should make the kangaroos unambiguously in front of the pigs.",
+      "The pigs should read as plastic through glossy toy-like surfaces.",
+      "The pigs should visibly interact playfully with the single checkered elephant."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "spatial_mismatch",
+      "attribute_mismatch",
+      "relation_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep kangaroos present in the image.",
+      "Keep pigs present in the image.",
+      "Keep exactly one elephant present in the image.",
+      "Keep the single elephant clearly checkered."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt stated the counts and relations, but did not force a simple countable row structure or enough separation for six kangaroos and two pigs. It also used a generic plastic-pig description without strong visual material cues, and the playing relation between pigs and elephant was not staged as a visible interaction.",
+      "error_source": "Prompt under-specified countable layout, material binding, and visible interaction staging."
+    },
+    "regeneration_strategy": "Use a simple staged composition with three depth bands: exactly six separate kangaroos in a front row, exactly two glossy plastic pigs in a middle row behind them, and exactly one checkered elephant adjacent to the pigs. Keep gaps between all animals so every instance is countable, and explicitly prohibit extra kangaroos, pigs, or elephants.",
+    "regression_risks": [
+      "The generator may add extra kangaroos or pigs when filling the scene.",
+      "The pigs may be hidden behind the foreground kangaroos if the depth layout is too crowded.",
+      "The plastic attribute may be applied weakly or omitted.",
+      "The elephant could lose its checkered pattern while repairing the failed pig and kangaroo constraints."
+    ],
+    "repair_constraints": [
+      "Show exactly six kangaroos, all separate and fully visible, with no extra kangaroos.",
+      "Place all six kangaroos in the foreground/front row, unambiguously in front of the pigs.",
+      "Show exactly two pigs, both separate and fully visible, with no extra pigs.",
+      "Make both pigs visibly plastic by giving each pig a glossy toy-like plastic surface.",
+      "Show the two plastic pigs playing with the single checkered elephant through clear playful interaction and close positioning.",
+      "Keep exactly one elephant and keep that elephant clearly checkered, with no extra elephants."
+    ],
+    "retry_prompt": "Create a clear, countable scene with exactly six kangaroos, exactly two plastic pigs, and exactly one checkered elephant. Put the six kangaroos in a separated front row across the foreground, all fully visible and countable: one, two, three, four, five, six kangaroos, with no extra kangaroos. Put the two pigs in a middle row behind the kangaroos, visible in the gaps and above the front row, so the kangaroos are clearly in front of the pigs. Make both pigs glossy toy-like plastic pigs, and show exactly two pigs, no more and no fewer. Place the single checkered elephant next to the two plastic pigs, and show the two plastic pigs playing with the checkered elephant by facing and playfully interacting with it. Keep the elephant clearly checkered and show exactly one elephant, with no extra elephants. Keep every required animal unobstructed, separated enough to count, and avoid merging, duplicates, or hidden animals.",
+    "skill_revision": {
+      "new_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion"
+      ],
+      "reason": "Add negative_constraints to explicitly prevent extra or duplicate kangaroos, pigs, and elephants while retaining count, layout, visibility, and attribute-binding skills."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many kangaroos are in the image?",
+            "score": 0.0015015795605631014,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.00150158",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many kangaroos are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the kangaroos in front of the pigs?",
+            "score": 0.002075905167032488,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.00207591",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the kangaroos in front of the pigs?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many pigs are in the image?",
+            "score": 1.1012098166748028e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.10121e-09",
+          "expected": "two",
+          "status": "failed",
+          "target": "How many pigs are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the pigs plastic?",
+            "score": 3.496198753794033e-05,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=3.4962e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the pigs plastic?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the pigs playing with the elephant?",
+            "score": 4.539789410975105e-05,
+            "skill": "verb"
+          },
+          "detected": "soft_score=4.53979e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the pigs playing with the elephant?",
+          "type": "relation_mismatch"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00068/samples/00003.png",
+      "prompt": "Create an image with exactly six kangaroos in the foreground, clearly in front of exactly two plastic pigs. The two pigs must visibly look like plastic pigs and must be playing with exactly one checkered elephant. The elephant must have a clear checkered pattern. Keep all six kangaroos, both plastic pigs, and the single checkered elephant fully visible, separated enough to count, with minimal overlap and no occlusion hiding any required animal.",
+      "round": 0,
+      "score": 0.5003492498634097
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00603_09c73f9a_cand_03",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "count_mismatch",
+        "relation_mismatch",
+        "spatial_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many kangaroos are in the image?",
+            "score": 0.0015015795605631014,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.00150158",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many kangaroos are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the kangaroos in front of the pigs?",
+            "score": 0.002075905167032488,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.00207591",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the kangaroos in front of the pigs?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many pigs are in the image?",
+            "score": 1.1012098166748028e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.10121e-09",
+          "expected": "two",
+          "status": "failed",
+          "target": "How many pigs are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the pigs plastic?",
+            "score": 3.496198753794033e-05,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=3.4962e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the pigs plastic?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the pigs playing with the elephant?",
+            "score": 4.539789410975105e-05,
+            "skill": "verb"
+          },
+          "detected": "soft_score=4.53979e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the pigs playing with the elephant?",
+          "type": "relation_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any kangaroos in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any kangaroos in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any pigs in the image?",
+            "score": 0.9999982961599017,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999998",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any pigs in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many elephants are in the image?",
+            "score": 0.999999866160513,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "one",
+          "status": "passed",
+          "target": "How many elephants are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the elephant checkered?",
+            "score": 0.9998766314720342,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.999877",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the elephant checkered?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any elephants in the image?",
+            "score": 0.9999598591311951,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.99996",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any elephants in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.5003492498634097,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many kangaroos are in the image?",
+              "score": 0.0015015795605631014,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.00150158",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many kangaroos are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the kangaroos in front of the pigs?",
+              "score": 0.002075905167032488,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.00207591",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the kangaroos in front of the pigs?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many pigs are in the image?",
+              "score": 1.1012098166748028e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.10121e-09",
+            "expected": "two",
+            "status": "failed",
+            "target": "How many pigs are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the pigs plastic?",
+              "score": 3.496198753794033e-05,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=3.4962e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the pigs plastic?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the pigs playing with the elephant?",
+              "score": 4.539789410975105e-05,
+              "skill": "verb"
+            },
+            "detected": "soft_score=4.53979e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the pigs playing with the elephant?",
+            "type": "relation_mismatch"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00068/samples/00003.png",
+        "prompt": "Create an image with exactly six kangaroos in the foreground, clearly in front of exactly two plastic pigs. The two pigs must visibly look like plastic pigs and must be playing with exactly one checkered elephant. The elephant must have a clear checkered pattern. Keep all six kangaroos, both plastic pigs, and the single checkered elephant fully visible, separated enough to count, with minimal overlap and no occlusion hiding any required animal.",
+        "round": 0,
+        "score": 0.5003492498634097
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many kangaroos are in the image?",
+            "score": 0.0015015795605631014,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.00150158",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many kangaroos are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the kangaroos in front of the pigs?",
+            "score": 0.002075905167032488,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.00207591",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the kangaroos in front of the pigs?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many pigs are in the image?",
+            "score": 1.1012098166748028e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.10121e-09",
+          "expected": "two",
+          "status": "failed",
+          "target": "How many pigs are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the pigs plastic?",
+            "score": 3.496198753794033e-05,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=3.4962e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the pigs plastic?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the pigs playing with the elephant?",
+            "score": 4.539789410975105e-05,
+            "skill": "verb"
+          },
+          "detected": "soft_score=4.53979e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the pigs playing with the elephant?",
+          "type": "relation_mismatch"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "count_mismatch",
+        "relation_mismatch",
+        "spatial_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many kangaroos are in the image?",
+            "score": 0.0015015795605631014,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.00150158",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many kangaroos are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the kangaroos in front of the pigs?",
+            "score": 0.002075905167032488,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.00207591",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the kangaroos in front of the pigs?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many pigs are in the image?",
+            "score": 1.1012098166748028e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.10121e-09",
+          "expected": "two",
+          "status": "failed",
+          "target": "How many pigs are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the pigs plastic?",
+            "score": 3.496198753794033e-05,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=3.4962e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the pigs plastic?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the pigs playing with the elephant?",
+            "score": 4.539789410975105e-05,
+            "skill": "verb"
+          },
+          "detected": "soft_score=4.53979e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the pigs playing with the elephant?",
+          "type": "relation_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any kangaroos in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any kangaroos in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any pigs in the image?",
+            "score": 0.9999982961599017,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999998",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any pigs in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many elephants are in the image?",
+            "score": 0.999999866160513,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "one",
+          "status": "passed",
+          "target": "How many elephants are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the elephant checkered?",
+            "score": 0.9998766314720342,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.999877",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the elephant checkered?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any elephants in the image?",
+            "score": 0.9999598591311951,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.99996",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any elephants in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.5003492498634097,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "six kangaroos in front of two plastic pigs playing with a checkered elephant",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many kangaroos are in the image?",
+          "score": 0.0015015795605631014,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.00150158",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many kangaroos are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 2,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the kangaroos in front of the pigs?",
+          "score": 0.002075905167032488,
+          "skill": "position"
+        },
+        "detected": "soft_score=0.00207591",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the kangaroos in front of the pigs?",
+        "type": "spatial_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many pigs are in the image?",
+          "score": 1.1012098166748028e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.10121e-09",
+        "expected": "two",
+        "status": "failed",
+        "target": "How many pigs are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the pigs plastic?",
+          "score": 3.496198753794033e-05,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=3.4962e-05",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the pigs plastic?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 6,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the pigs playing with the elephant?",
+          "score": 4.539789410975105e-05,
+          "skill": "verb"
+        },
+        "detected": "soft_score=4.53979e-05",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the pigs playing with the elephant?",
+        "type": "relation_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly six kangaroos, exactly two pigs, and exactly one elephant.",
+        "Make the two pigs clearly plastic in material/texture, and make the elephant clearly checkered.",
+        "Place all six kangaroos in the foreground in front of the two pigs; keep the two pigs behind the kangaroos but still visible.",
+        "Depict the two plastic pigs playing with the single checkered elephant.",
+        "Keep all animals separated enough to count, with minimal overlap and no occlusion hiding any required object."
+      ],
+      "generation_strategy": "Use a clear multi-object composition with foreground-to-background depth: six separate kangaroos across the front, two plastic pigs behind them, and one checkered elephant near the pigs so the pigs' interaction with the elephant is visible. Prioritize exact counts, attribute binding, spatial relation, and visibility.",
+      "initial_prompt": "Create an image with exactly six kangaroos in the foreground, clearly in front of exactly two plastic pigs. The two pigs must visibly look like plastic pigs and must be playing with exactly one checkered elephant. The elephant must have a clear checkered pattern. Keep all six kangaroos, both plastic pigs, and the single checkered elephant fully visible, separated enough to count, with minimal overlap and no occlusion hiding any required animal.",
+      "parsed_constraints": {
+        "attributes": {
+          "elephant": [
+            "checkered"
+          ],
+          "pigs": [
+            "plastic"
+          ]
+        },
+        "counts": {
+          "elephant": 1,
+          "kangaroos": 6,
+          "pigs": 2
+        },
+        "objects": [
+          "kangaroos",
+          "pigs",
+          "elephant"
+        ],
+        "relations": [
+          "six kangaroos are in front of two plastic pigs",
+          "two plastic pigs are playing with one checkered elephant"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly six kangaroos, exactly two pigs, and exactly one elephant.",
+        "Make the two pigs clearly plastic in material/texture, and make the elephant clearly checkered.",
+        "Place all six kangaroos in the foreground in front of the two pigs; keep the two pigs behind the kangaroos but still visible.",
+        "Depict the two plastic pigs playing with the single checkered elephant.",
+        "Keep all animals separated enough to count, with minimal overlap and no occlusion hiding any required object."
+      ],
+      "generation_strategy": "Use a clear multi-object composition with foreground-to-background depth: six separate kangaroos across the front, two plastic pigs behind them, and one checkered elephant near the pigs so the pigs' interaction with the elephant is visible. Prioritize exact counts, attribute binding, spatial relation, and visibility.",
+      "initial_prompt": "Create an image with exactly six kangaroos in the foreground, clearly in front of exactly two plastic pigs. The two pigs must visibly look like plastic pigs and must be playing with exactly one checkered elephant. The elephant must have a clear checkered pattern. Keep all six kangaroos, both plastic pigs, and the single checkered elephant fully visible, separated enough to count, with minimal overlap and no occlusion hiding any required animal.",
+      "parsed_constraints": {
+        "attributes": {
+          "elephant": [
+            "checkered"
+          ],
+          "pigs": [
+            "plastic"
+          ]
+        },
+        "counts": {
+          "elephant": 1,
+          "kangaroos": 6,
+          "pigs": 2
+        },
+        "objects": [
+          "kangaroos",
+          "pigs",
+          "elephant"
+        ],
+        "relations": [
+          "six kangaroos are in front of two plastic pigs",
+          "two plastic pigs are playing with one checkered elephant"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion"
+      ]
+    },
+    "previous_prompt": "Create an image with exactly six kangaroos in the foreground, clearly in front of exactly two plastic pigs. The two pigs must visibly look like plastic pigs and must be playing with exactly one checkered elephant. The elephant must have a clear checkered pattern. Keep all six kangaroos, both plastic pigs, and the single checkered elephant fully visible, separated enough to count, with minimal overlap and no occlusion hiding any required animal.",
+    "previous_selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion"
+    ],
+    "prompt_id": "geneval2_00603_09c73f9a",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "count_mismatch",
+          "relation_mismatch",
+          "spatial_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many kangaroos are in the image?",
+              "score": 0.0015015795605631014,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.00150158",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many kangaroos are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the kangaroos in front of the pigs?",
+              "score": 0.002075905167032488,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.00207591",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the kangaroos in front of the pigs?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many pigs are in the image?",
+              "score": 1.1012098166748028e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.10121e-09",
+            "expected": "two",
+            "status": "failed",
+            "target": "How many pigs are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the pigs plastic?",
+              "score": 3.496198753794033e-05,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=3.4962e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the pigs plastic?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the pigs playing with the elephant?",
+              "score": 4.539789410975105e-05,
+              "skill": "verb"
+            },
+            "detected": "soft_score=4.53979e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the pigs playing with the elephant?",
+            "type": "relation_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any kangaroos in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any kangaroos in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any pigs in the image?",
+              "score": 0.9999982961599017,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999998",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any pigs in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many elephants are in the image?",
+              "score": 0.999999866160513,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "one",
+            "status": "passed",
+            "target": "How many elephants are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the elephant checkered?",
+              "score": 0.9998766314720342,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.999877",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Is the elephant checkered?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any elephants in the image?",
+              "score": 0.9999598591311951,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.99996",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any elephants in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly six kangaroos, exactly two pigs, and exactly one elephant.",
+            "Make the two pigs clearly plastic in material/texture, and make the elephant clearly checkered.",
+            "Place all six kangaroos in the foreground in front of the two pigs; keep the two pigs behind the kangaroos but still visible.",
+            "Depict the two plastic pigs playing with the single checkered elephant.",
+            "Keep all animals separated enough to count, with minimal overlap and no occlusion hiding any required object."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with foreground-to-background depth: six separate kangaroos across the front, two plastic pigs behind them, and one checkered elephant near the pigs so the pigs' interaction with the elephant is visible. Prioritize exact counts, attribute binding, spatial relation, and visibility.",
+          "initial_prompt": "Create an image with exactly six kangaroos in the foreground, clearly in front of exactly two plastic pigs. The two pigs must visibly look like plastic pigs and must be playing with exactly one checkered elephant. The elephant must have a clear checkered pattern. Keep all six kangaroos, both plastic pigs, and the single checkered elephant fully visible, separated enough to count, with minimal overlap and no occlusion hiding any required animal.",
+          "parsed_constraints": {
+            "attributes": {
+              "elephant": [
+                "checkered"
+              ],
+              "pigs": [
+                "plastic"
+              ]
+            },
+            "counts": {
+              "elephant": 1,
+              "kangaroos": 6,
+              "pigs": 2
+            },
+            "objects": [
+              "kangaroos",
+              "pigs",
+              "elephant"
+            ],
+            "relations": [
+              "six kangaroos are in front of two plastic pigs",
+              "two plastic pigs are playing with one checkered elephant"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly six kangaroos, exactly two pigs, and exactly one elephant.",
+            "Make the two pigs clearly plastic in material/texture, and make the elephant clearly checkered.",
+            "Place all six kangaroos in the foreground in front of the two pigs; keep the two pigs behind the kangaroos but still visible.",
+            "Depict the two plastic pigs playing with the single checkered elephant.",
+            "Keep all animals separated enough to count, with minimal overlap and no occlusion hiding any required object."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with foreground-to-background depth: six separate kangaroos across the front, two plastic pigs behind them, and one checkered elephant near the pigs so the pigs' interaction with the elephant is visible. Prioritize exact counts, attribute binding, spatial relation, and visibility.",
+          "initial_prompt": "Create an image with exactly six kangaroos in the foreground, clearly in front of exactly two plastic pigs. The two pigs must visibly look like plastic pigs and must be playing with exactly one checkered elephant. The elephant must have a clear checkered pattern. Keep all six kangaroos, both plastic pigs, and the single checkered elephant fully visible, separated enough to count, with minimal overlap and no occlusion hiding any required animal.",
+          "parsed_constraints": {
+            "attributes": {
+              "elephant": [
+                "checkered"
+              ],
+              "pigs": [
+                "plastic"
+              ]
+            },
+            "counts": {
+              "elephant": 1,
+              "kangaroos": 6,
+              "pigs": 2
+            },
+            "objects": [
+              "kangaroos",
+              "pigs",
+              "elephant"
+            ],
+            "relations": [
+              "six kangaroos are in front of two plastic pigs",
+              "two plastic pigs are playing with one checkered elephant"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion"
+          ]
+        },
+        "prompt_used": "Create an image with exactly six kangaroos in the foreground, clearly in front of exactly two plastic pigs. The two pigs must visibly look like plastic pigs and must be playing with exactly one checkered elephant. The elephant must have a clear checkered pattern. Keep all six kangaroos, both plastic pigs, and the single checkered elephant fully visible, separated enough to count, with minimal overlap and no occlusion hiding any required animal.",
+        "round": 0,
+        "score": 0.5003492498634097,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many kangaroos are in the image?",
+                "score": 0.0015015795605631014,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.00150158",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many kangaroos are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the kangaroos in front of the pigs?",
+                "score": 0.002075905167032488,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.00207591",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the kangaroos in front of the pigs?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many pigs are in the image?",
+                "score": 1.1012098166748028e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.10121e-09",
+              "expected": "two",
+              "status": "failed",
+              "target": "How many pigs are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the pigs plastic?",
+                "score": 3.496198753794033e-05,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=3.4962e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the pigs plastic?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the pigs playing with the elephant?",
+                "score": 4.539789410975105e-05,
+                "skill": "verb"
+              },
+              "detected": "soft_score=4.53979e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the pigs playing with the elephant?",
+              "type": "relation_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00603_09c73f9a"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many kangaroos are in the image?",
+          "score": 0.0015015795605631014,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.00150158",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many kangaroos are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 2,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the kangaroos in front of the pigs?",
+          "score": 0.002075905167032488,
+          "skill": "position"
+        },
+        "detected": "soft_score=0.00207591",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the kangaroos in front of the pigs?",
+        "type": "spatial_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many pigs are in the image?",
+          "score": 1.1012098166748028e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.10121e-09",
+        "expected": "two",
+        "status": "failed",
+        "target": "How many pigs are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the pigs plastic?",
+          "score": 3.496198753794033e-05,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=3.4962e-05",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the pigs plastic?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 6,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the pigs playing with the elephant?",
+          "score": 4.539789410975105e-05,
+          "skill": "verb"
+        },
+        "detected": "soft_score=4.53979e-05",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the pigs playing with the elephant?",
+        "type": "relation_mismatch"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00068/samples/00003.png",
+    "best_so_far_prompt": "Create an image with exactly six kangaroos in the foreground, clearly in front of exactly two plastic pigs. The two pigs must visibly look like plastic pigs and must be playing with exactly one checkered elephant. The elephant must have a clear checkered pattern. Keep all six kangaroos, both plastic pigs, and the single checkered elephant fully visible, separated enough to count, with minimal overlap and no occlusion hiding any required animal.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.5003492498634097,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many kangaroos are in the image?",
+          "score": 0.0015015795605631014,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.00150158",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many kangaroos are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 2,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the kangaroos in front of the pigs?",
+          "score": 0.002075905167032488,
+          "skill": "position"
+        },
+        "detected": "soft_score=0.00207591",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the kangaroos in front of the pigs?",
+        "type": "spatial_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many pigs are in the image?",
+          "score": 1.1012098166748028e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.10121e-09",
+        "expected": "two",
+        "status": "failed",
+        "target": "How many pigs are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the pigs plastic?",
+          "score": 3.496198753794033e-05,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=3.4962e-05",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the pigs plastic?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 6,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the pigs playing with the elephant?",
+          "score": 4.539789410975105e-05,
+          "skill": "verb"
+        },
+        "detected": "soft_score=4.53979e-05",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the pigs playing with the elephant?",
+        "type": "relation_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly six kangaroos, exactly two pigs, and exactly one elephant.",
+        "Make the two pigs clearly plastic in material/texture, and make the elephant clearly checkered.",
+        "Place all six kangaroos in the foreground in front of the two pigs; keep the two pigs behind the kangaroos but still visible.",
+        "Depict the two plastic pigs playing with the single checkered elephant.",
+        "Keep all animals separated enough to count, with minimal overlap and no occlusion hiding any required object."
+      ],
+      "generation_strategy": "Use a clear multi-object composition with foreground-to-background depth: six separate kangaroos across the front, two plastic pigs behind them, and one checkered elephant near the pigs so the pigs' interaction with the elephant is visible. Prioritize exact counts, attribute binding, spatial relation, and visibility.",
+      "initial_prompt": "Create an image with exactly six kangaroos in the foreground, clearly in front of exactly two plastic pigs. The two pigs must visibly look like plastic pigs and must be playing with exactly one checkered elephant. The elephant must have a clear checkered pattern. Keep all six kangaroos, both plastic pigs, and the single checkered elephant fully visible, separated enough to count, with minimal overlap and no occlusion hiding any required animal.",
+      "parsed_constraints": {
+        "attributes": {
+          "elephant": [
+            "checkered"
+          ],
+          "pigs": [
+            "plastic"
+          ]
+        },
+        "counts": {
+          "elephant": 1,
+          "kangaroos": 6,
+          "pigs": 2
+        },
+        "objects": [
+          "kangaroos",
+          "pigs",
+          "elephant"
+        ],
+        "relations": [
+          "six kangaroos are in front of two plastic pigs",
+          "two plastic pigs are playing with one checkered elephant"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.500 failed=['How many kangaroos are in the image?', 'Are the kangaroos in front of the pigs?', 'How many pigs are in the image?', 'Are the pigs plastic?', 'Are the pigs playing with the elephant?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_incremental/snapshot_003_worker_03/geneval2_00603_09c73f9a__geneval2_00603_09c73f9a_cand_03__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00603_09c73f9a__geneval2_00603_09c73f9a_cand_03__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00603_09c73f9a",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image kept the required object categories present and preserved one checkered elephant, but failed exact counts for kangaroos and pigs, failed to make all kangaroos clearly in front of the pigs, failed to bind a visibly plastic material to the pigs, and failed to show the two pigs playing with the elephant.",
+    "expected_improvement": [
+      "Six kangaroos should become countable as six separate foreground figures.",
+      "Two pigs should become countable as exactly two separate figures.",
+      "The foreground-to-background layout should make the kangaroos unambiguously in front of the pigs.",
+      "The pigs should read as plastic through glossy toy-like surfaces.",
+      "The pigs should visibly interact playfully with the single checkered elephant."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "spatial_mismatch",
+      "attribute_mismatch",
+      "relation_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep kangaroos present in the image.",
+      "Keep pigs present in the image.",
+      "Keep exactly one elephant present in the image.",
+      "Keep the single elephant clearly checkered."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt stated the counts and relations, but did not force a simple countable row structure or enough separation for six kangaroos and two pigs. It also used a generic plastic-pig description without strong visual material cues, and the playing relation between pigs and elephant was not staged as a visible interaction.",
+      "error_source": "Prompt under-specified countable layout, material binding, and visible interaction staging."
+    },
+    "regeneration_strategy": "Use a simple staged composition with three depth bands: exactly six separate kangaroos in a front row, exactly two glossy plastic pigs in a middle row behind them, and exactly one checkered elephant adjacent to the pigs. Keep gaps between all animals so every instance is countable, and explicitly prohibit extra kangaroos, pigs, or elephants.",
+    "regression_risks": [
+      "The generator may add extra kangaroos or pigs when filling the scene.",
+      "The pigs may be hidden behind the foreground kangaroos if the depth layout is too crowded.",
+      "The plastic attribute may be applied weakly or omitted.",
+      "The elephant could lose its checkered pattern while repairing the failed pig and kangaroo constraints."
+    ],
+    "repair_constraints": [
+      "Show exactly six kangaroos, all separate and fully visible, with no extra kangaroos.",
+      "Place all six kangaroos in the foreground/front row, unambiguously in front of the pigs.",
+      "Show exactly two pigs, both separate and fully visible, with no extra pigs.",
+      "Make both pigs visibly plastic by giving each pig a glossy toy-like plastic surface.",
+      "Show the two plastic pigs playing with the single checkered elephant through clear playful interaction and close positioning.",
+      "Keep exactly one elephant and keep that elephant clearly checkered, with no extra elephants."
+    ],
+    "retry_prompt": "Create a clear, countable scene with exactly six kangaroos, exactly two plastic pigs, and exactly one checkered elephant. Put the six kangaroos in a separated front row across the foreground, all fully visible and countable: one, two, three, four, five, six kangaroos, with no extra kangaroos. Put the two pigs in a middle row behind the kangaroos, visible in the gaps and above the front row, so the kangaroos are clearly in front of the pigs. Make both pigs glossy toy-like plastic pigs, and show exactly two pigs, no more and no fewer. Place the single checkered elephant next to the two plastic pigs, and show the two plastic pigs playing with the checkered elephant by facing and playfully interacting with it. Keep the elephant clearly checkered and show exactly one elephant, with no extra elephants. Keep every required animal unobstructed, separated enough to count, and avoid merging, duplicates, or hidden animals.",
+    "skill_revision": {
+      "new_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion"
+      ],
+      "reason": "Add negative_constraints to explicitly prevent extra or duplicate kangaroos, pigs, and elephants while retaining count, layout, visibility, and attribute-binding skills."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 9,
+    "dataset": "geneval2",
+    "original_prompt": "six kangaroos in front of two plastic pigs playing with a checkered elephant",
+    "prompt": "six kangaroos in front of two plastic pigs playing with a checkered elephant",
+    "prompt_id": "geneval2_00603_09c73f9a",
+    "sampling_bucket": "relation_action",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "position_spatial",
+      "relation_action",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 2,
+      "count": 3,
+      "object": 3,
+      "position": 1,
+      "verb": 1
+    },
+    "skills": [
+      "count",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object",
+      "verb",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 603,
+    "vqa_list": [
+      [
+        "How many kangaroos are in the image?",
+        "six"
+      ],
+      [
+        "Are there any kangaroos in the image?",
+        "Yes"
+      ],
+      [
+        "Are the kangaroos in front of the pigs?",
+        "Yes"
+      ],
+      [
+        "How many pigs are in the image?",
+        "two"
+      ],
+      [
+        "Are the pigs plastic?",
+        "Yes"
+      ],
+      [
+        "Are there any pigs in the image?",
+        "Yes"
+      ],
+      [
+        "Are the pigs playing with the elephant?",
+        "Yes"
+      ],
+      [
+        "How many elephants are in the image?",
+        "one"
+      ],
+      [
+        "Is the elephant checkered?",
+        "Yes"
+      ],
+      [
+        "Are there any elephants in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00603_09c73f9a"
+}

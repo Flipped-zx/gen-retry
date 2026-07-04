@@ -1,0 +1,152 @@
+{
+  "candidate_id": "geneval2_00773_4a49f4e8_cand_00",
+  "generation": {
+    "generation_metadata": {
+      "candidate_index": 0,
+      "generation_prompt_source": "initial_plan",
+      "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00773_4a49f4e8.json",
+      "manifest_prompt_index": 62,
+      "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+      "sample_id": "geneval2_00773_4a49f4e8"
+    },
+    "generator_name": "qwen-image-2512",
+    "image_id": "geneval2_00773_4a49f4e8_cand_00",
+    "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00062/samples/00000.png",
+    "prompt_used": "A clear image showing exactly five sparkling birds on the bottom layer, exactly three blue chairs on top of the birds, and exactly seven bagels on top of the blue chairs. The seven bagels are visibly resting on the three blue chairs, and the three blue chairs are visibly resting on the five sparkling birds. Keep all seven bagels, all three blue chairs, and all five sparkling birds separate, unobstructed, fully visible, and easy to count. Do not include any additional bagels, chairs, or birds.",
+    "seed": 1310
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "eval_lookup_key": "",
+    "image_path_is_artifact_reference": true,
+    "teacher_uses_image_bytes": false
+  },
+  "previous_action": null,
+  "previous_initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly seven bagels, exactly three chairs, and exactly five birds.",
+      "Bind the blue color only to the three chairs.",
+      "Bind sparkling appearance to the five birds.",
+      "Arrange the seven bagels visibly on top of the three blue chairs.",
+      "Arrange the three blue chairs visibly on top of the five sparkling birds.",
+      "Keep all objects separated enough to count; avoid hiding bagels, chairs, or birds behind each other."
+    ],
+    "generation_strategy": "Use a clear stacked composition with three horizontal layers: five sparkling birds at the bottom, three blue chairs directly above and resting on the birds, and seven bagels directly above and resting on the chairs. Keep every object fully visible and countable, with minimal overlap only where contact is needed to show the on-top-of relations.",
+    "initial_prompt": "A clear image showing exactly five sparkling birds on the bottom layer, exactly three blue chairs on top of the birds, and exactly seven bagels on top of the blue chairs. The seven bagels are visibly resting on the three blue chairs, and the three blue chairs are visibly resting on the five sparkling birds. Keep all seven bagels, all three blue chairs, and all five sparkling birds separate, unobstructed, fully visible, and easy to count. Do not include any additional bagels, chairs, or birds.",
+    "parsed_constraints": {
+      "attributes": {
+        "birds": "sparkling",
+        "chairs": "blue"
+      },
+      "counts": {
+        "bagels": 7,
+        "birds": 5,
+        "chairs": 3
+      },
+      "objects": [
+        "bagels",
+        "chairs",
+        "birds"
+      ],
+      "relations": [
+        "bagels on top of chairs",
+        "chairs on top of birds"
+      ]
+    },
+    "selected_skills": [
+      "quantity_counting",
+      "object_presence",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "prompt_id": "geneval2_00773_4a49f4e8",
+  "retry_history": [],
+  "round": 0,
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "seven bagels on top of three blue chairs on top of five sparkling birds",
+    "prompt": "seven bagels on top of three blue chairs on top of five sparkling birds",
+    "prompt_id": "geneval2_00773_4a49f4e8",
+    "sampling_bucket": "position_spatial",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 2,
+      "count": 3,
+      "object": 3,
+      "position": 2
+    },
+    "skills": [
+      "count",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 773,
+    "vqa_list": [
+      [
+        "How many bagels are in the image?",
+        "seven"
+      ],
+      [
+        "Are there any bagels in the image?",
+        "Yes"
+      ],
+      [
+        "Are the bagels on top of the chairs?",
+        "Yes"
+      ],
+      [
+        "How many chairs are in the image?",
+        "three"
+      ],
+      [
+        "Are the chairs blue?",
+        "Yes"
+      ],
+      [
+        "Are there any chairs in the image?",
+        "Yes"
+      ],
+      [
+        "Are the chairs on top of the birds?",
+        "Yes"
+      ],
+      [
+        "How many birds are in the image?",
+        "five"
+      ],
+      [
+        "Are the birds sparkling?",
+        "Yes"
+      ],
+      [
+        "Are there any birds in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "trajectory_id": "geneval2_00773_4a49f4e8"
+}

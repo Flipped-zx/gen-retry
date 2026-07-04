@@ -1,0 +1,2758 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "count_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the monkeys striped?",
+              "score": 1.013658734062145e-05,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1.01366e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the monkeys striped?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cows are in the image?",
+              "score": 1.013190600535524e-05,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.01319e-05",
+            "expected": "three",
+            "status": "failed",
+            "target": "How many cows are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many clocks are in the image?",
+              "score": 7.335081904076072e-10,
+              "skill": "count"
+            },
+            "detected": "soft_score=7.33508e-10",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many clocks are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many monkeys are in the image?",
+              "score": 0.9999997530707264,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "five",
+            "status": "passed",
+            "target": "How many monkeys are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any monkeys in the image?",
+              "score": 0.9999999801475496,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any monkeys in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the monkeys in front of the cows?",
+              "score": 0.9945993701112457,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.994599",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the monkeys in front of the cows?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows pink?",
+              "score": 0.9999997311970219,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the cows pink?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any cows in the image?",
+              "score": 0.9999999579740688,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any cows in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows to the left of the clocks?",
+              "score": 0.9999999812989699,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the cows to the left of the clocks?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any clocks in the image?",
+              "score": 0.9999999690280674,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any clocks in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00726_019cbc13_cand_03",
+          "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+          "rows": [
+            {
+              "answer": "five",
+              "atom_count": 10,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00726_019cbc13_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00056/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00056/samples/00003.png",
+              "prompt": "five striped monkeys in front of three pink cows to the left of four clocks",
+              "prompt_id": "geneval2_00726_019cbc13",
+              "question": "How many monkeys are in the image?",
+              "score": 0.9999997530707264,
+              "skill": "count",
+              "source_index": 726
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00726_019cbc13_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00056/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00056/samples/00003.png",
+              "prompt": "five striped monkeys in front of three pink cows to the left of four clocks",
+              "prompt_id": "geneval2_00726_019cbc13",
+              "question": "Are the monkeys striped?",
+              "score": 1.013658734062145e-05,
+              "skill": "attribute",
+              "source_index": 726
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00726_019cbc13_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00056/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00056/samples/00003.png",
+              "prompt": "five striped monkeys in front of three pink cows to the left of four clocks",
+              "prompt_id": "geneval2_00726_019cbc13",
+              "question": "Are there any monkeys in the image?",
+              "score": 0.9999999801475496,
+              "skill": "object",
+              "source_index": 726
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00726_019cbc13_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00056/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00056/samples/00003.png",
+              "prompt": "five striped monkeys in front of three pink cows to the left of four clocks",
+              "prompt_id": "geneval2_00726_019cbc13",
+              "question": "Are the monkeys in front of the cows?",
+              "score": 0.9945993701112457,
+              "skill": "position",
+              "source_index": 726
+            },
+            {
+              "answer": "three",
+              "atom_count": 10,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00726_019cbc13_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00056/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00056/samples/00003.png",
+              "prompt": "five striped monkeys in front of three pink cows to the left of four clocks",
+              "prompt_id": "geneval2_00726_019cbc13",
+              "question": "How many cows are in the image?",
+              "score": 1.013190600535524e-05,
+              "skill": "count",
+              "source_index": 726
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00726_019cbc13_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00056/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00056/samples/00003.png",
+              "prompt": "five striped monkeys in front of three pink cows to the left of four clocks",
+              "prompt_id": "geneval2_00726_019cbc13",
+              "question": "Are the cows pink?",
+              "score": 0.9999997311970219,
+              "skill": "attribute",
+              "source_index": 726
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00726_019cbc13_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00056/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00056/samples/00003.png",
+              "prompt": "five striped monkeys in front of three pink cows to the left of four clocks",
+              "prompt_id": "geneval2_00726_019cbc13",
+              "question": "Are there any cows in the image?",
+              "score": 0.9999999579740688,
+              "skill": "object",
+              "source_index": 726
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00726_019cbc13_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00056/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00056/samples/00003.png",
+              "prompt": "five striped monkeys in front of three pink cows to the left of four clocks",
+              "prompt_id": "geneval2_00726_019cbc13",
+              "question": "Are the cows to the left of the clocks?",
+              "score": 0.9999999812989699,
+              "skill": "position",
+              "source_index": 726
+            },
+            {
+              "answer": "four",
+              "atom_count": 10,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00726_019cbc13_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00056/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00056/samples/00003.png",
+              "prompt": "five striped monkeys in front of three pink cows to the left of four clocks",
+              "prompt_id": "geneval2_00726_019cbc13",
+              "question": "How many clocks are in the image?",
+              "score": 7.335081904076072e-10,
+              "skill": "count",
+              "source_index": 726
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00726_019cbc13_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00056/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00056/samples/00003.png",
+              "prompt": "five striped monkeys in front of three pink cows to the left of four clocks",
+              "prompt_id": "geneval2_00726_019cbc13",
+              "question": "Are there any clocks in the image?",
+              "score": 0.9999999690280674,
+              "skill": "object",
+              "source_index": 726
+            }
+          ],
+          "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.6994619012054504,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 3,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00726_019cbc13.json",
+          "manifest_prompt_index": 56,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00726_019cbc13"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00726_019cbc13_cand_03",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00056/samples/00003.png",
+        "prompt_used": "A clear scene with exactly five striped monkeys in the foreground, arranged separately and fully visible. Behind the monkeys are exactly three pink cows, all visible and countable, with the monkeys clearly in front of the cows. To the right of the three pink cows are exactly four clocks, each separate and clearly visible. The cows are to the left of the clocks. No extra monkeys, cows, or clocks. Avoid occlusion; keep every animal and clock distinct for counting.",
+        "seed": 1283
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Depict exactly five monkeys, exactly three cows, and exactly four clocks; do not add extra monkeys, cows, or clocks.",
+          "Bind stripes only to the five monkeys, and bind pink color only to the three cows.",
+          "Place the five striped monkeys in the foreground in front of the three pink cows, while keeping all three cows clearly visible.",
+          "Place the three pink cows to the left of the four clocks.",
+          "Keep all objects separated enough for accurate counting; avoid heavy overlap or occlusion."
+        ],
+        "generation_strategy": "Create a clear multi-object composition with three depth/lateral groups: five striped monkeys in the foreground, three pink cows behind them, and four clocks positioned to the right of the cows. Use spacing and visibility to make each object individually countable while preserving the specified front/left relations.",
+        "initial_prompt": "A clear scene with exactly five striped monkeys in the foreground, arranged separately and fully visible. Behind the monkeys are exactly three pink cows, all visible and countable, with the monkeys clearly in front of the cows. To the right of the three pink cows are exactly four clocks, each separate and clearly visible. The cows are to the left of the clocks. No extra monkeys, cows, or clocks. Avoid occlusion; keep every animal and clock distinct for counting.",
+        "parsed_constraints": {
+          "attributes": {
+            "cows": [
+              "pink"
+            ],
+            "monkeys": [
+              "striped"
+            ]
+          },
+          "counts": {
+            "clocks": 4,
+            "cows": 3,
+            "monkeys": 5
+          },
+          "objects": [
+            "monkeys",
+            "cows",
+            "clocks"
+          ],
+          "relations": [
+            "five striped monkeys are in front of three pink cows",
+            "three pink cows are to the left of four clocks"
+          ]
+        },
+        "selected_skills": [
+          "quantity_counting",
+          "object_presence",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility",
+          "negative_constraints"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Depict exactly five monkeys, exactly three cows, and exactly four clocks; do not add extra monkeys, cows, or clocks.",
+          "Bind stripes only to the five monkeys, and bind pink color only to the three cows.",
+          "Place the five striped monkeys in the foreground in front of the three pink cows, while keeping all three cows clearly visible.",
+          "Place the three pink cows to the left of the four clocks.",
+          "Keep all objects separated enough for accurate counting; avoid heavy overlap or occlusion."
+        ],
+        "generation_strategy": "Create a clear multi-object composition with three depth/lateral groups: five striped monkeys in the foreground, three pink cows behind them, and four clocks positioned to the right of the cows. Use spacing and visibility to make each object individually countable while preserving the specified front/left relations.",
+        "initial_prompt": "A clear scene with exactly five striped monkeys in the foreground, arranged separately and fully visible. Behind the monkeys are exactly three pink cows, all visible and countable, with the monkeys clearly in front of the cows. To the right of the three pink cows are exactly four clocks, each separate and clearly visible. The cows are to the left of the clocks. No extra monkeys, cows, or clocks. Avoid occlusion; keep every animal and clock distinct for counting.",
+        "parsed_constraints": {
+          "attributes": {
+            "cows": [
+              "pink"
+            ],
+            "monkeys": [
+              "striped"
+            ]
+          },
+          "counts": {
+            "clocks": 4,
+            "cows": 3,
+            "monkeys": 5
+          },
+          "objects": [
+            "monkeys",
+            "cows",
+            "clocks"
+          ],
+          "relations": [
+            "five striped monkeys are in front of three pink cows",
+            "three pink cows are to the left of four clocks"
+          ]
+        },
+        "selected_skills": [
+          "quantity_counting",
+          "object_presence",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility",
+          "negative_constraints"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the monkeys striped?",
+                "score": 1.013658734062145e-05,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1.01366e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the monkeys striped?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cows are in the image?",
+                "score": 1.013190600535524e-05,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.01319e-05",
+              "expected": "three",
+              "status": "failed",
+              "target": "How many cows are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many clocks are in the image?",
+                "score": 7.335081904076072e-10,
+                "skill": "count"
+              },
+              "detected": "soft_score=7.33508e-10",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many clocks are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00056/samples/00003.png",
+          "prompt": "A clear scene with exactly five striped monkeys in the foreground, arranged separately and fully visible. Behind the monkeys are exactly three pink cows, all visible and countable, with the monkeys clearly in front of the cows. To the right of the three pink cows are exactly four clocks, each separate and clearly visible. The cows are to the left of the clocks. No extra monkeys, cows, or clocks. Avoid occlusion; keep every animal and clock distinct for counting.",
+          "round": 0,
+          "score": 0.6994619012054504
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00726_019cbc13_cand_03",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "attribute_mismatch",
+            "count_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the monkeys striped?",
+                "score": 1.013658734062145e-05,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1.01366e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the monkeys striped?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cows are in the image?",
+                "score": 1.013190600535524e-05,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.01319e-05",
+              "expected": "three",
+              "status": "failed",
+              "target": "How many cows are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many clocks are in the image?",
+                "score": 7.335081904076072e-10,
+                "skill": "count"
+              },
+              "detected": "soft_score=7.33508e-10",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many clocks are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many monkeys are in the image?",
+                "score": 0.9999997530707264,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "five",
+              "status": "passed",
+              "target": "How many monkeys are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any monkeys in the image?",
+                "score": 0.9999999801475496,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any monkeys in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the monkeys in front of the cows?",
+                "score": 0.9945993701112457,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.994599",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the monkeys in front of the cows?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows pink?",
+                "score": 0.9999997311970219,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the cows pink?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any cows in the image?",
+                "score": 0.9999999579740688,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any cows in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows to the left of the clocks?",
+                "score": 0.9999999812989699,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the cows to the left of the clocks?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any clocks in the image?",
+                "score": 0.9999999690280674,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any clocks in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.6994619012054504,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the monkeys striped?",
+                  "score": 1.013658734062145e-05,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1.01366e-05",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the monkeys striped?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many cows are in the image?",
+                  "score": 1.013190600535524e-05,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1.01319e-05",
+                "expected": "three",
+                "status": "failed",
+                "target": "How many cows are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many clocks are in the image?",
+                  "score": 7.335081904076072e-10,
+                  "skill": "count"
+                },
+                "detected": "soft_score=7.33508e-10",
+                "expected": "four",
+                "status": "failed",
+                "target": "How many clocks are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00056/samples/00003.png",
+            "prompt": "A clear scene with exactly five striped monkeys in the foreground, arranged separately and fully visible. Behind the monkeys are exactly three pink cows, all visible and countable, with the monkeys clearly in front of the cows. To the right of the three pink cows are exactly four clocks, each separate and clearly visible. The cows are to the left of the clocks. No extra monkeys, cows, or clocks. Avoid occlusion; keep every animal and clock distinct for counting.",
+            "round": 0,
+            "score": 0.6994619012054504
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the monkeys striped?",
+                "score": 1.013658734062145e-05,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1.01366e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the monkeys striped?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cows are in the image?",
+                "score": 1.013190600535524e-05,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.01319e-05",
+              "expected": "three",
+              "status": "failed",
+              "target": "How many cows are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many clocks are in the image?",
+                "score": 7.335081904076072e-10,
+                "skill": "count"
+              },
+              "detected": "soft_score=7.33508e-10",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many clocks are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "attribute_mismatch",
+            "count_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the monkeys striped?",
+                "score": 1.013658734062145e-05,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1.01366e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the monkeys striped?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cows are in the image?",
+                "score": 1.013190600535524e-05,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.01319e-05",
+              "expected": "three",
+              "status": "failed",
+              "target": "How many cows are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many clocks are in the image?",
+                "score": 7.335081904076072e-10,
+                "skill": "count"
+              },
+              "detected": "soft_score=7.33508e-10",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many clocks are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many monkeys are in the image?",
+                "score": 0.9999997530707264,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "five",
+              "status": "passed",
+              "target": "How many monkeys are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any monkeys in the image?",
+                "score": 0.9999999801475496,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any monkeys in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the monkeys in front of the cows?",
+                "score": 0.9945993701112457,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.994599",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the monkeys in front of the cows?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows pink?",
+                "score": 0.9999997311970219,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the cows pink?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any cows in the image?",
+                "score": 0.9999999579740688,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any cows in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows to the left of the clocks?",
+                "score": 0.9999999812989699,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the cows to the left of the clocks?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any clocks in the image?",
+                "score": 0.9999999690280674,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any clocks in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.6994619012054504,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "five striped monkeys in front of three pink cows to the left of four clocks",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the monkeys striped?",
+              "score": 1.013658734062145e-05,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1.01366e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the monkeys striped?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cows are in the image?",
+              "score": 1.013190600535524e-05,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.01319e-05",
+            "expected": "three",
+            "status": "failed",
+            "target": "How many cows are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many clocks are in the image?",
+              "score": 7.335081904076072e-10,
+              "skill": "count"
+            },
+            "detected": "soft_score=7.33508e-10",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many clocks are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly five monkeys, exactly three cows, and exactly four clocks; do not add extra monkeys, cows, or clocks.",
+            "Bind stripes only to the five monkeys, and bind pink color only to the three cows.",
+            "Place the five striped monkeys in the foreground in front of the three pink cows, while keeping all three cows clearly visible.",
+            "Place the three pink cows to the left of the four clocks.",
+            "Keep all objects separated enough for accurate counting; avoid heavy overlap or occlusion."
+          ],
+          "generation_strategy": "Create a clear multi-object composition with three depth/lateral groups: five striped monkeys in the foreground, three pink cows behind them, and four clocks positioned to the right of the cows. Use spacing and visibility to make each object individually countable while preserving the specified front/left relations.",
+          "initial_prompt": "A clear scene with exactly five striped monkeys in the foreground, arranged separately and fully visible. Behind the monkeys are exactly three pink cows, all visible and countable, with the monkeys clearly in front of the cows. To the right of the three pink cows are exactly four clocks, each separate and clearly visible. The cows are to the left of the clocks. No extra monkeys, cows, or clocks. Avoid occlusion; keep every animal and clock distinct for counting.",
+          "parsed_constraints": {
+            "attributes": {
+              "cows": [
+                "pink"
+              ],
+              "monkeys": [
+                "striped"
+              ]
+            },
+            "counts": {
+              "clocks": 4,
+              "cows": 3,
+              "monkeys": 5
+            },
+            "objects": [
+              "monkeys",
+              "cows",
+              "clocks"
+            ],
+            "relations": [
+              "five striped monkeys are in front of three pink cows",
+              "three pink cows are to the left of four clocks"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "object_presence",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly five monkeys, exactly three cows, and exactly four clocks; do not add extra monkeys, cows, or clocks.",
+            "Bind stripes only to the five monkeys, and bind pink color only to the three cows.",
+            "Place the five striped monkeys in the foreground in front of the three pink cows, while keeping all three cows clearly visible.",
+            "Place the three pink cows to the left of the four clocks.",
+            "Keep all objects separated enough for accurate counting; avoid heavy overlap or occlusion."
+          ],
+          "generation_strategy": "Create a clear multi-object composition with three depth/lateral groups: five striped monkeys in the foreground, three pink cows behind them, and four clocks positioned to the right of the cows. Use spacing and visibility to make each object individually countable while preserving the specified front/left relations.",
+          "initial_prompt": "A clear scene with exactly five striped monkeys in the foreground, arranged separately and fully visible. Behind the monkeys are exactly three pink cows, all visible and countable, with the monkeys clearly in front of the cows. To the right of the three pink cows are exactly four clocks, each separate and clearly visible. The cows are to the left of the clocks. No extra monkeys, cows, or clocks. Avoid occlusion; keep every animal and clock distinct for counting.",
+          "parsed_constraints": {
+            "attributes": {
+              "cows": [
+                "pink"
+              ],
+              "monkeys": [
+                "striped"
+              ]
+            },
+            "counts": {
+              "clocks": 4,
+              "cows": 3,
+              "monkeys": 5
+            },
+            "objects": [
+              "monkeys",
+              "cows",
+              "clocks"
+            ],
+            "relations": [
+              "five striped monkeys are in front of three pink cows",
+              "three pink cows are to the left of four clocks"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "object_presence",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "previous_prompt": "A clear scene with exactly five striped monkeys in the foreground, arranged separately and fully visible. Behind the monkeys are exactly three pink cows, all visible and countable, with the monkeys clearly in front of the cows. To the right of the three pink cows are exactly four clocks, each separate and clearly visible. The cows are to the left of the clocks. No extra monkeys, cows, or clocks. Avoid occlusion; keep every animal and clock distinct for counting.",
+        "previous_selected_skills": [
+          "quantity_counting",
+          "object_presence",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility",
+          "negative_constraints"
+        ],
+        "prompt_id": "geneval2_00726_019cbc13",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "attribute_mismatch",
+              "count_mismatch"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the monkeys striped?",
+                  "score": 1.013658734062145e-05,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1.01366e-05",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the monkeys striped?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many cows are in the image?",
+                  "score": 1.013190600535524e-05,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1.01319e-05",
+                "expected": "three",
+                "status": "failed",
+                "target": "How many cows are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many clocks are in the image?",
+                  "score": 7.335081904076072e-10,
+                  "skill": "count"
+                },
+                "detected": "soft_score=7.33508e-10",
+                "expected": "four",
+                "status": "failed",
+                "target": "How many clocks are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many monkeys are in the image?",
+                  "score": 0.9999997530707264,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1",
+                "expected": "five",
+                "status": "passed",
+                "target": "How many monkeys are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any monkeys in the image?",
+                  "score": 0.9999999801475496,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any monkeys in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the monkeys in front of the cows?",
+                  "score": 0.9945993701112457,
+                  "skill": "position"
+                },
+                "detected": "soft_score=0.994599",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the monkeys in front of the cows?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the cows pink?",
+                  "score": 0.9999997311970219,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the cows pink?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any cows in the image?",
+                  "score": 0.9999999579740688,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any cows in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the cows to the left of the clocks?",
+                  "score": 0.9999999812989699,
+                  "skill": "position"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the cows to the left of the clocks?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any clocks in the image?",
+                  "score": 0.9999999690280674,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any clocks in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Depict exactly five monkeys, exactly three cows, and exactly four clocks; do not add extra monkeys, cows, or clocks.",
+                "Bind stripes only to the five monkeys, and bind pink color only to the three cows.",
+                "Place the five striped monkeys in the foreground in front of the three pink cows, while keeping all three cows clearly visible.",
+                "Place the three pink cows to the left of the four clocks.",
+                "Keep all objects separated enough for accurate counting; avoid heavy overlap or occlusion."
+              ],
+              "generation_strategy": "Create a clear multi-object composition with three depth/lateral groups: five striped monkeys in the foreground, three pink cows behind them, and four clocks positioned to the right of the cows. Use spacing and visibility to make each object individually countable while preserving the specified front/left relations.",
+              "initial_prompt": "A clear scene with exactly five striped monkeys in the foreground, arranged separately and fully visible. Behind the monkeys are exactly three pink cows, all visible and countable, with the monkeys clearly in front of the cows. To the right of the three pink cows are exactly four clocks, each separate and clearly visible. The cows are to the left of the clocks. No extra monkeys, cows, or clocks. Avoid occlusion; keep every animal and clock distinct for counting.",
+              "parsed_constraints": {
+                "attributes": {
+                  "cows": [
+                    "pink"
+                  ],
+                  "monkeys": [
+                    "striped"
+                  ]
+                },
+                "counts": {
+                  "clocks": 4,
+                  "cows": 3,
+                  "monkeys": 5
+                },
+                "objects": [
+                  "monkeys",
+                  "cows",
+                  "clocks"
+                ],
+                "relations": [
+                  "five striped monkeys are in front of three pink cows",
+                  "three pink cows are to the left of four clocks"
+                ]
+              },
+              "selected_skills": [
+                "quantity_counting",
+                "object_presence",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "anti_occlusion",
+                "clarity_visibility",
+                "negative_constraints"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Depict exactly five monkeys, exactly three cows, and exactly four clocks; do not add extra monkeys, cows, or clocks.",
+                "Bind stripes only to the five monkeys, and bind pink color only to the three cows.",
+                "Place the five striped monkeys in the foreground in front of the three pink cows, while keeping all three cows clearly visible.",
+                "Place the three pink cows to the left of the four clocks.",
+                "Keep all objects separated enough for accurate counting; avoid heavy overlap or occlusion."
+              ],
+              "generation_strategy": "Create a clear multi-object composition with three depth/lateral groups: five striped monkeys in the foreground, three pink cows behind them, and four clocks positioned to the right of the cows. Use spacing and visibility to make each object individually countable while preserving the specified front/left relations.",
+              "initial_prompt": "A clear scene with exactly five striped monkeys in the foreground, arranged separately and fully visible. Behind the monkeys are exactly three pink cows, all visible and countable, with the monkeys clearly in front of the cows. To the right of the three pink cows are exactly four clocks, each separate and clearly visible. The cows are to the left of the clocks. No extra monkeys, cows, or clocks. Avoid occlusion; keep every animal and clock distinct for counting.",
+              "parsed_constraints": {
+                "attributes": {
+                  "cows": [
+                    "pink"
+                  ],
+                  "monkeys": [
+                    "striped"
+                  ]
+                },
+                "counts": {
+                  "clocks": 4,
+                  "cows": 3,
+                  "monkeys": 5
+                },
+                "objects": [
+                  "monkeys",
+                  "cows",
+                  "clocks"
+                ],
+                "relations": [
+                  "five striped monkeys are in front of three pink cows",
+                  "three pink cows are to the left of four clocks"
+                ]
+              },
+              "selected_skills": [
+                "quantity_counting",
+                "object_presence",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "anti_occlusion",
+                "clarity_visibility",
+                "negative_constraints"
+              ]
+            },
+            "prompt_used": "A clear scene with exactly five striped monkeys in the foreground, arranged separately and fully visible. Behind the monkeys are exactly three pink cows, all visible and countable, with the monkeys clearly in front of the cows. To the right of the three pink cows are exactly four clocks, each separate and clearly visible. The cows are to the left of the clocks. No extra monkeys, cows, or clocks. Avoid occlusion; keep every animal and clock distinct for counting.",
+            "round": 0,
+            "score": 0.6994619012054504,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 1,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the monkeys striped?",
+                    "score": 1.013658734062145e-05,
+                    "skill": "attribute"
+                  },
+                  "detected": "soft_score=1.01366e-05",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the monkeys striped?",
+                  "type": "attribute_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 4,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many cows are in the image?",
+                    "score": 1.013190600535524e-05,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=1.01319e-05",
+                  "expected": "three",
+                  "status": "failed",
+                  "target": "How many cows are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 8,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many clocks are in the image?",
+                    "score": 7.335081904076072e-10,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=7.33508e-10",
+                  "expected": "four",
+                  "status": "failed",
+                  "target": "How many clocks are in the image?",
+                  "type": "count_mismatch"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00726_019cbc13"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the monkeys striped?",
+              "score": 1.013658734062145e-05,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1.01366e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the monkeys striped?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cows are in the image?",
+              "score": 1.013190600535524e-05,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.01319e-05",
+            "expected": "three",
+            "status": "failed",
+            "target": "How many cows are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many clocks are in the image?",
+              "score": 7.335081904076072e-10,
+              "skill": "count"
+            },
+            "detected": "soft_score=7.33508e-10",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many clocks are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00726_019cbc13_cand_03",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Depict exactly five monkeys, exactly three cows, and exactly four clocks; do not add extra monkeys, cows, or clocks.",
+      "Bind stripes only to the five monkeys, and bind pink color only to the three cows.",
+      "Place the five striped monkeys in the foreground in front of the three pink cows, while keeping all three cows clearly visible.",
+      "Place the three pink cows to the left of the four clocks.",
+      "Keep all objects separated enough for accurate counting; avoid heavy overlap or occlusion."
+    ],
+    "generation_strategy": "Create a clear multi-object composition with three depth/lateral groups: five striped monkeys in the foreground, three pink cows behind them, and four clocks positioned to the right of the cows. Use spacing and visibility to make each object individually countable while preserving the specified front/left relations.",
+    "initial_prompt": "A clear scene with exactly five striped monkeys in the foreground, arranged separately and fully visible. Behind the monkeys are exactly three pink cows, all visible and countable, with the monkeys clearly in front of the cows. To the right of the three pink cows are exactly four clocks, each separate and clearly visible. The cows are to the left of the clocks. No extra monkeys, cows, or clocks. Avoid occlusion; keep every animal and clock distinct for counting.",
+    "parsed_constraints": {
+      "attributes": {
+        "cows": [
+          "pink"
+        ],
+        "monkeys": [
+          "striped"
+        ]
+      },
+      "counts": {
+        "clocks": 4,
+        "cows": 3,
+        "monkeys": 5
+      },
+      "objects": [
+        "monkeys",
+        "cows",
+        "clocks"
+      ],
+      "relations": [
+        "five striped monkeys are in front of three pink cows",
+        "three pink cows are to the left of four clocks"
+      ]
+    },
+    "selected_skills": [
+      "quantity_counting",
+      "object_presence",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image passed object presence, five monkeys, monkeys in front of cows, pink cows, cows left of clocks, and clock presence, but failed the visible striped attribute on the monkeys and the exact counts of three cows and four clocks. The next regeneration should make the monkey stripes much more salient and use a simpler, count-focused layout with cows and clocks separated into clear countable groups.",
+    "expected_improvement": [
+      "Monkeys should be recognized as striped because each of the five monkeys is explicitly described with bold visible stripes bound only to the monkeys.",
+      "Cow count should improve by placing exactly three pink cows as three separate, unobstructed instances behind the monkey row.",
+      "Clock count should improve by placing exactly four clocks as four separate, unobstructed instances in a simple 2 by 2 group to the right of the cows."
+    ],
+    "failure_types": [
+      "attribute_mismatch",
+      "count_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly five monkeys visible and countable.",
+      "Keep the five monkeys present in the image.",
+      "Keep the five monkeys in front of the cows using a foreground row of monkeys and a background row of cows.",
+      "Keep the cows pink, with the pink color bound only to the cows.",
+      "Keep cows present in the image.",
+      "Keep the cows to the left of the clocks.",
+      "Keep clocks present in the image."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt used the correct constraints but allowed a crowded multi-object scene where the cows and clocks may have merged, been occluded, or been under-counted. It also stated striped monkeys only once, without emphasizing bold, high-contrast stripe markings on every monkey, so the generator did not make the stripes verifier-salient.",
+      "error_source": "Prompt under-specified visual salience for the striped monkey attribute and did not impose a sufficiently simple countable layout for three cows and four clocks."
+    },
+    "regeneration_strategy": "Use a clean, diagram-like composition with three separated groups: five striped monkeys in a foreground row, exactly three pink cows in a clearly visible row behind them on the left, and exactly four clocks in a separate 2 by 2 grid on the right. Emphasize countability, separation, no overlap, and no extra animals or clocks.",
+    "regression_risks": [
+      "The generator may lose the exact count of five monkeys while focusing on cows and clocks.",
+      "The generator may make the monkeys plain instead of striped unless stripes are repeated and bound to every monkey.",
+      "The cows could be partially hidden by foreground monkeys, risking cow count failure.",
+      "The clocks could merge into one cluster or become decorative background details, risking clock count failure.",
+      "The left-right relation between cows and clocks could regress if the composition is not clearly divided."
+    ],
+    "repair_constraints": [
+      "Every one of the five monkeys must have obvious bold stripes on its body and tail; no plain monkeys.",
+      "There must be exactly three pink cows, each fully visible, separate, and countable; no extra cows and no duplicated cow parts.",
+      "There must be exactly four clocks, each fully visible, separate, and countable, arranged as four distinct clocks; no extra clocks and no merged clock faces."
+    ],
+    "retry_prompt": "Create a clear, simple scene for counting. In the lower foreground, show exactly five monkeys in one separated row; every monkey must have obvious bold visible stripes on its body and tail, and there must be no plain monkeys. Behind the monkeys on the left side, show exactly three pink cows, all fully visible, separate from each other, and countable; the monkeys are clearly in front of these cows without hiding them. To the right of the three pink cows, show exactly four clocks arranged as four distinct separate clocks in a simple 2 by 2 group. The three pink cows are clearly to the left of the four clocks. No extra monkeys, no extra cows, no extra clocks. Keep all monkeys, cows, and clocks unobstructed, non-overlapping, and easy to count.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints",
+        "multi_object_composition",
+        "object_presence"
+      ],
+      "previous_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ],
+      "reason": "Retain the same valid skill set but prioritize quantity_counting, attribute_binding, spatial_layout, and anti_occlusion more strongly by switching to a simpler row-and-grid layout and repeating the failed visual bindings."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the monkeys striped?",
+            "score": 1.013658734062145e-05,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1.01366e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the monkeys striped?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cows are in the image?",
+            "score": 1.013190600535524e-05,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.01319e-05",
+          "expected": "three",
+          "status": "failed",
+          "target": "How many cows are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many clocks are in the image?",
+            "score": 7.335081904076072e-10,
+            "skill": "count"
+          },
+          "detected": "soft_score=7.33508e-10",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many clocks are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00056/samples/00003.png",
+      "prompt": "A clear scene with exactly five striped monkeys in the foreground, arranged separately and fully visible. Behind the monkeys are exactly three pink cows, all visible and countable, with the monkeys clearly in front of the cows. To the right of the three pink cows are exactly four clocks, each separate and clearly visible. The cows are to the left of the clocks. No extra monkeys, cows, or clocks. Avoid occlusion; keep every animal and clock distinct for counting.",
+      "round": 0,
+      "score": 0.6994619012054504
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00726_019cbc13_cand_03",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "count_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the monkeys striped?",
+            "score": 1.013658734062145e-05,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1.01366e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the monkeys striped?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cows are in the image?",
+            "score": 1.013190600535524e-05,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.01319e-05",
+          "expected": "three",
+          "status": "failed",
+          "target": "How many cows are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many clocks are in the image?",
+            "score": 7.335081904076072e-10,
+            "skill": "count"
+          },
+          "detected": "soft_score=7.33508e-10",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many clocks are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many monkeys are in the image?",
+            "score": 0.9999997530707264,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "five",
+          "status": "passed",
+          "target": "How many monkeys are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any monkeys in the image?",
+            "score": 0.9999999801475496,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any monkeys in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the monkeys in front of the cows?",
+            "score": 0.9945993701112457,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.994599",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the monkeys in front of the cows?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cows pink?",
+            "score": 0.9999997311970219,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the cows pink?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any cows in the image?",
+            "score": 0.9999999579740688,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any cows in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cows to the left of the clocks?",
+            "score": 0.9999999812989699,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the cows to the left of the clocks?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any clocks in the image?",
+            "score": 0.9999999690280674,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any clocks in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.6994619012054504,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the monkeys striped?",
+              "score": 1.013658734062145e-05,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1.01366e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the monkeys striped?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cows are in the image?",
+              "score": 1.013190600535524e-05,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.01319e-05",
+            "expected": "three",
+            "status": "failed",
+            "target": "How many cows are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many clocks are in the image?",
+              "score": 7.335081904076072e-10,
+              "skill": "count"
+            },
+            "detected": "soft_score=7.33508e-10",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many clocks are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00056/samples/00003.png",
+        "prompt": "A clear scene with exactly five striped monkeys in the foreground, arranged separately and fully visible. Behind the monkeys are exactly three pink cows, all visible and countable, with the monkeys clearly in front of the cows. To the right of the three pink cows are exactly four clocks, each separate and clearly visible. The cows are to the left of the clocks. No extra monkeys, cows, or clocks. Avoid occlusion; keep every animal and clock distinct for counting.",
+        "round": 0,
+        "score": 0.6994619012054504
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the monkeys striped?",
+            "score": 1.013658734062145e-05,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1.01366e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the monkeys striped?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cows are in the image?",
+            "score": 1.013190600535524e-05,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.01319e-05",
+          "expected": "three",
+          "status": "failed",
+          "target": "How many cows are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many clocks are in the image?",
+            "score": 7.335081904076072e-10,
+            "skill": "count"
+          },
+          "detected": "soft_score=7.33508e-10",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many clocks are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "count_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the monkeys striped?",
+            "score": 1.013658734062145e-05,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1.01366e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the monkeys striped?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cows are in the image?",
+            "score": 1.013190600535524e-05,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.01319e-05",
+          "expected": "three",
+          "status": "failed",
+          "target": "How many cows are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many clocks are in the image?",
+            "score": 7.335081904076072e-10,
+            "skill": "count"
+          },
+          "detected": "soft_score=7.33508e-10",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many clocks are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many monkeys are in the image?",
+            "score": 0.9999997530707264,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "five",
+          "status": "passed",
+          "target": "How many monkeys are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any monkeys in the image?",
+            "score": 0.9999999801475496,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any monkeys in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the monkeys in front of the cows?",
+            "score": 0.9945993701112457,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.994599",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the monkeys in front of the cows?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cows pink?",
+            "score": 0.9999997311970219,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the cows pink?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any cows in the image?",
+            "score": 0.9999999579740688,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any cows in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cows to the left of the clocks?",
+            "score": 0.9999999812989699,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the cows to the left of the clocks?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any clocks in the image?",
+            "score": 0.9999999690280674,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any clocks in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.6994619012054504,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "five striped monkeys in front of three pink cows to the left of four clocks",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the monkeys striped?",
+          "score": 1.013658734062145e-05,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=1.01366e-05",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the monkeys striped?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cows are in the image?",
+          "score": 1.013190600535524e-05,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.01319e-05",
+        "expected": "three",
+        "status": "failed",
+        "target": "How many cows are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many clocks are in the image?",
+          "score": 7.335081904076072e-10,
+          "skill": "count"
+        },
+        "detected": "soft_score=7.33508e-10",
+        "expected": "four",
+        "status": "failed",
+        "target": "How many clocks are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Depict exactly five monkeys, exactly three cows, and exactly four clocks; do not add extra monkeys, cows, or clocks.",
+        "Bind stripes only to the five monkeys, and bind pink color only to the three cows.",
+        "Place the five striped monkeys in the foreground in front of the three pink cows, while keeping all three cows clearly visible.",
+        "Place the three pink cows to the left of the four clocks.",
+        "Keep all objects separated enough for accurate counting; avoid heavy overlap or occlusion."
+      ],
+      "generation_strategy": "Create a clear multi-object composition with three depth/lateral groups: five striped monkeys in the foreground, three pink cows behind them, and four clocks positioned to the right of the cows. Use spacing and visibility to make each object individually countable while preserving the specified front/left relations.",
+      "initial_prompt": "A clear scene with exactly five striped monkeys in the foreground, arranged separately and fully visible. Behind the monkeys are exactly three pink cows, all visible and countable, with the monkeys clearly in front of the cows. To the right of the three pink cows are exactly four clocks, each separate and clearly visible. The cows are to the left of the clocks. No extra monkeys, cows, or clocks. Avoid occlusion; keep every animal and clock distinct for counting.",
+      "parsed_constraints": {
+        "attributes": {
+          "cows": [
+            "pink"
+          ],
+          "monkeys": [
+            "striped"
+          ]
+        },
+        "counts": {
+          "clocks": 4,
+          "cows": 3,
+          "monkeys": 5
+        },
+        "objects": [
+          "monkeys",
+          "cows",
+          "clocks"
+        ],
+        "relations": [
+          "five striped monkeys are in front of three pink cows",
+          "three pink cows are to the left of four clocks"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Depict exactly five monkeys, exactly three cows, and exactly four clocks; do not add extra monkeys, cows, or clocks.",
+        "Bind stripes only to the five monkeys, and bind pink color only to the three cows.",
+        "Place the five striped monkeys in the foreground in front of the three pink cows, while keeping all three cows clearly visible.",
+        "Place the three pink cows to the left of the four clocks.",
+        "Keep all objects separated enough for accurate counting; avoid heavy overlap or occlusion."
+      ],
+      "generation_strategy": "Create a clear multi-object composition with three depth/lateral groups: five striped monkeys in the foreground, three pink cows behind them, and four clocks positioned to the right of the cows. Use spacing and visibility to make each object individually countable while preserving the specified front/left relations.",
+      "initial_prompt": "A clear scene with exactly five striped monkeys in the foreground, arranged separately and fully visible. Behind the monkeys are exactly three pink cows, all visible and countable, with the monkeys clearly in front of the cows. To the right of the three pink cows are exactly four clocks, each separate and clearly visible. The cows are to the left of the clocks. No extra monkeys, cows, or clocks. Avoid occlusion; keep every animal and clock distinct for counting.",
+      "parsed_constraints": {
+        "attributes": {
+          "cows": [
+            "pink"
+          ],
+          "monkeys": [
+            "striped"
+          ]
+        },
+        "counts": {
+          "clocks": 4,
+          "cows": 3,
+          "monkeys": 5
+        },
+        "objects": [
+          "monkeys",
+          "cows",
+          "clocks"
+        ],
+        "relations": [
+          "five striped monkeys are in front of three pink cows",
+          "three pink cows are to the left of four clocks"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ]
+    },
+    "previous_prompt": "A clear scene with exactly five striped monkeys in the foreground, arranged separately and fully visible. Behind the monkeys are exactly three pink cows, all visible and countable, with the monkeys clearly in front of the cows. To the right of the three pink cows are exactly four clocks, each separate and clearly visible. The cows are to the left of the clocks. No extra monkeys, cows, or clocks. Avoid occlusion; keep every animal and clock distinct for counting.",
+    "previous_selected_skills": [
+      "quantity_counting",
+      "object_presence",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ],
+    "prompt_id": "geneval2_00726_019cbc13",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "count_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the monkeys striped?",
+              "score": 1.013658734062145e-05,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1.01366e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the monkeys striped?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cows are in the image?",
+              "score": 1.013190600535524e-05,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.01319e-05",
+            "expected": "three",
+            "status": "failed",
+            "target": "How many cows are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many clocks are in the image?",
+              "score": 7.335081904076072e-10,
+              "skill": "count"
+            },
+            "detected": "soft_score=7.33508e-10",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many clocks are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many monkeys are in the image?",
+              "score": 0.9999997530707264,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "five",
+            "status": "passed",
+            "target": "How many monkeys are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any monkeys in the image?",
+              "score": 0.9999999801475496,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any monkeys in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the monkeys in front of the cows?",
+              "score": 0.9945993701112457,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.994599",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the monkeys in front of the cows?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows pink?",
+              "score": 0.9999997311970219,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the cows pink?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any cows in the image?",
+              "score": 0.9999999579740688,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any cows in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows to the left of the clocks?",
+              "score": 0.9999999812989699,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the cows to the left of the clocks?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any clocks in the image?",
+              "score": 0.9999999690280674,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any clocks in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly five monkeys, exactly three cows, and exactly four clocks; do not add extra monkeys, cows, or clocks.",
+            "Bind stripes only to the five monkeys, and bind pink color only to the three cows.",
+            "Place the five striped monkeys in the foreground in front of the three pink cows, while keeping all three cows clearly visible.",
+            "Place the three pink cows to the left of the four clocks.",
+            "Keep all objects separated enough for accurate counting; avoid heavy overlap or occlusion."
+          ],
+          "generation_strategy": "Create a clear multi-object composition with three depth/lateral groups: five striped monkeys in the foreground, three pink cows behind them, and four clocks positioned to the right of the cows. Use spacing and visibility to make each object individually countable while preserving the specified front/left relations.",
+          "initial_prompt": "A clear scene with exactly five striped monkeys in the foreground, arranged separately and fully visible. Behind the monkeys are exactly three pink cows, all visible and countable, with the monkeys clearly in front of the cows. To the right of the three pink cows are exactly four clocks, each separate and clearly visible. The cows are to the left of the clocks. No extra monkeys, cows, or clocks. Avoid occlusion; keep every animal and clock distinct for counting.",
+          "parsed_constraints": {
+            "attributes": {
+              "cows": [
+                "pink"
+              ],
+              "monkeys": [
+                "striped"
+              ]
+            },
+            "counts": {
+              "clocks": 4,
+              "cows": 3,
+              "monkeys": 5
+            },
+            "objects": [
+              "monkeys",
+              "cows",
+              "clocks"
+            ],
+            "relations": [
+              "five striped monkeys are in front of three pink cows",
+              "three pink cows are to the left of four clocks"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "object_presence",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly five monkeys, exactly three cows, and exactly four clocks; do not add extra monkeys, cows, or clocks.",
+            "Bind stripes only to the five monkeys, and bind pink color only to the three cows.",
+            "Place the five striped monkeys in the foreground in front of the three pink cows, while keeping all three cows clearly visible.",
+            "Place the three pink cows to the left of the four clocks.",
+            "Keep all objects separated enough for accurate counting; avoid heavy overlap or occlusion."
+          ],
+          "generation_strategy": "Create a clear multi-object composition with three depth/lateral groups: five striped monkeys in the foreground, three pink cows behind them, and four clocks positioned to the right of the cows. Use spacing and visibility to make each object individually countable while preserving the specified front/left relations.",
+          "initial_prompt": "A clear scene with exactly five striped monkeys in the foreground, arranged separately and fully visible. Behind the monkeys are exactly three pink cows, all visible and countable, with the monkeys clearly in front of the cows. To the right of the three pink cows are exactly four clocks, each separate and clearly visible. The cows are to the left of the clocks. No extra monkeys, cows, or clocks. Avoid occlusion; keep every animal and clock distinct for counting.",
+          "parsed_constraints": {
+            "attributes": {
+              "cows": [
+                "pink"
+              ],
+              "monkeys": [
+                "striped"
+              ]
+            },
+            "counts": {
+              "clocks": 4,
+              "cows": 3,
+              "monkeys": 5
+            },
+            "objects": [
+              "monkeys",
+              "cows",
+              "clocks"
+            ],
+            "relations": [
+              "five striped monkeys are in front of three pink cows",
+              "three pink cows are to the left of four clocks"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "object_presence",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "prompt_used": "A clear scene with exactly five striped monkeys in the foreground, arranged separately and fully visible. Behind the monkeys are exactly three pink cows, all visible and countable, with the monkeys clearly in front of the cows. To the right of the three pink cows are exactly four clocks, each separate and clearly visible. The cows are to the left of the clocks. No extra monkeys, cows, or clocks. Avoid occlusion; keep every animal and clock distinct for counting.",
+        "round": 0,
+        "score": 0.6994619012054504,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the monkeys striped?",
+                "score": 1.013658734062145e-05,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1.01366e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the monkeys striped?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cows are in the image?",
+                "score": 1.013190600535524e-05,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.01319e-05",
+              "expected": "three",
+              "status": "failed",
+              "target": "How many cows are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many clocks are in the image?",
+                "score": 7.335081904076072e-10,
+                "skill": "count"
+              },
+              "detected": "soft_score=7.33508e-10",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many clocks are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00726_019cbc13"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the monkeys striped?",
+          "score": 1.013658734062145e-05,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=1.01366e-05",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the monkeys striped?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cows are in the image?",
+          "score": 1.013190600535524e-05,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.01319e-05",
+        "expected": "three",
+        "status": "failed",
+        "target": "How many cows are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many clocks are in the image?",
+          "score": 7.335081904076072e-10,
+          "skill": "count"
+        },
+        "detected": "soft_score=7.33508e-10",
+        "expected": "four",
+        "status": "failed",
+        "target": "How many clocks are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00056/samples/00003.png",
+    "best_so_far_prompt": "A clear scene with exactly five striped monkeys in the foreground, arranged separately and fully visible. Behind the monkeys are exactly three pink cows, all visible and countable, with the monkeys clearly in front of the cows. To the right of the three pink cows are exactly four clocks, each separate and clearly visible. The cows are to the left of the clocks. No extra monkeys, cows, or clocks. Avoid occlusion; keep every animal and clock distinct for counting.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.6994619012054504,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the monkeys striped?",
+          "score": 1.013658734062145e-05,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=1.01366e-05",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the monkeys striped?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cows are in the image?",
+          "score": 1.013190600535524e-05,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.01319e-05",
+        "expected": "three",
+        "status": "failed",
+        "target": "How many cows are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many clocks are in the image?",
+          "score": 7.335081904076072e-10,
+          "skill": "count"
+        },
+        "detected": "soft_score=7.33508e-10",
+        "expected": "four",
+        "status": "failed",
+        "target": "How many clocks are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Depict exactly five monkeys, exactly three cows, and exactly four clocks; do not add extra monkeys, cows, or clocks.",
+        "Bind stripes only to the five monkeys, and bind pink color only to the three cows.",
+        "Place the five striped monkeys in the foreground in front of the three pink cows, while keeping all three cows clearly visible.",
+        "Place the three pink cows to the left of the four clocks.",
+        "Keep all objects separated enough for accurate counting; avoid heavy overlap or occlusion."
+      ],
+      "generation_strategy": "Create a clear multi-object composition with three depth/lateral groups: five striped monkeys in the foreground, three pink cows behind them, and four clocks positioned to the right of the cows. Use spacing and visibility to make each object individually countable while preserving the specified front/left relations.",
+      "initial_prompt": "A clear scene with exactly five striped monkeys in the foreground, arranged separately and fully visible. Behind the monkeys are exactly three pink cows, all visible and countable, with the monkeys clearly in front of the cows. To the right of the three pink cows are exactly four clocks, each separate and clearly visible. The cows are to the left of the clocks. No extra monkeys, cows, or clocks. Avoid occlusion; keep every animal and clock distinct for counting.",
+      "parsed_constraints": {
+        "attributes": {
+          "cows": [
+            "pink"
+          ],
+          "monkeys": [
+            "striped"
+          ]
+        },
+        "counts": {
+          "clocks": 4,
+          "cows": 3,
+          "monkeys": 5
+        },
+        "objects": [
+          "monkeys",
+          "cows",
+          "clocks"
+        ],
+        "relations": [
+          "five striped monkeys are in front of three pink cows",
+          "three pink cows are to the left of four clocks"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.699 failed=['Are the monkeys striped?', 'How many cows are in the image?', 'How many clocks are in the image?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_incremental/snapshot_003_worker_03/geneval2_00726_019cbc13__geneval2_00726_019cbc13_cand_03__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00726_019cbc13__geneval2_00726_019cbc13_cand_03__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00726_019cbc13",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image passed object presence, five monkeys, monkeys in front of cows, pink cows, cows left of clocks, and clock presence, but failed the visible striped attribute on the monkeys and the exact counts of three cows and four clocks. The next regeneration should make the monkey stripes much more salient and use a simpler, count-focused layout with cows and clocks separated into clear countable groups.",
+    "expected_improvement": [
+      "Monkeys should be recognized as striped because each of the five monkeys is explicitly described with bold visible stripes bound only to the monkeys.",
+      "Cow count should improve by placing exactly three pink cows as three separate, unobstructed instances behind the monkey row.",
+      "Clock count should improve by placing exactly four clocks as four separate, unobstructed instances in a simple 2 by 2 group to the right of the cows."
+    ],
+    "failure_types": [
+      "attribute_mismatch",
+      "count_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly five monkeys visible and countable.",
+      "Keep the five monkeys present in the image.",
+      "Keep the five monkeys in front of the cows using a foreground row of monkeys and a background row of cows.",
+      "Keep the cows pink, with the pink color bound only to the cows.",
+      "Keep cows present in the image.",
+      "Keep the cows to the left of the clocks.",
+      "Keep clocks present in the image."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt used the correct constraints but allowed a crowded multi-object scene where the cows and clocks may have merged, been occluded, or been under-counted. It also stated striped monkeys only once, without emphasizing bold, high-contrast stripe markings on every monkey, so the generator did not make the stripes verifier-salient.",
+      "error_source": "Prompt under-specified visual salience for the striped monkey attribute and did not impose a sufficiently simple countable layout for three cows and four clocks."
+    },
+    "regeneration_strategy": "Use a clean, diagram-like composition with three separated groups: five striped monkeys in a foreground row, exactly three pink cows in a clearly visible row behind them on the left, and exactly four clocks in a separate 2 by 2 grid on the right. Emphasize countability, separation, no overlap, and no extra animals or clocks.",
+    "regression_risks": [
+      "The generator may lose the exact count of five monkeys while focusing on cows and clocks.",
+      "The generator may make the monkeys plain instead of striped unless stripes are repeated and bound to every monkey.",
+      "The cows could be partially hidden by foreground monkeys, risking cow count failure.",
+      "The clocks could merge into one cluster or become decorative background details, risking clock count failure.",
+      "The left-right relation between cows and clocks could regress if the composition is not clearly divided."
+    ],
+    "repair_constraints": [
+      "Every one of the five monkeys must have obvious bold stripes on its body and tail; no plain monkeys.",
+      "There must be exactly three pink cows, each fully visible, separate, and countable; no extra cows and no duplicated cow parts.",
+      "There must be exactly four clocks, each fully visible, separate, and countable, arranged as four distinct clocks; no extra clocks and no merged clock faces."
+    ],
+    "retry_prompt": "Create a clear, simple scene for counting. In the lower foreground, show exactly five monkeys in one separated row; every monkey must have obvious bold visible stripes on its body and tail, and there must be no plain monkeys. Behind the monkeys on the left side, show exactly three pink cows, all fully visible, separate from each other, and countable; the monkeys are clearly in front of these cows without hiding them. To the right of the three pink cows, show exactly four clocks arranged as four distinct separate clocks in a simple 2 by 2 group. The three pink cows are clearly to the left of the four clocks. No extra monkeys, no extra cows, no extra clocks. Keep all monkeys, cows, and clocks unobstructed, non-overlapping, and easy to count.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints",
+        "multi_object_composition",
+        "object_presence"
+      ],
+      "previous_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ],
+      "reason": "Retain the same valid skill set but prioritize quantity_counting, attribute_binding, spatial_layout, and anti_occlusion more strongly by switching to a simpler row-and-grid layout and repeating the failed visual bindings."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "five striped monkeys in front of three pink cows to the left of four clocks",
+    "prompt": "five striped monkeys in front of three pink cows to the left of four clocks",
+    "prompt_id": "geneval2_00726_019cbc13",
+    "sampling_bucket": "position_spatial",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 2,
+      "count": 3,
+      "object": 3,
+      "position": 2
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 726,
+    "vqa_list": [
+      [
+        "How many monkeys are in the image?",
+        "five"
+      ],
+      [
+        "Are the monkeys striped?",
+        "Yes"
+      ],
+      [
+        "Are there any monkeys in the image?",
+        "Yes"
+      ],
+      [
+        "Are the monkeys in front of the cows?",
+        "Yes"
+      ],
+      [
+        "How many cows are in the image?",
+        "three"
+      ],
+      [
+        "Are the cows pink?",
+        "Yes"
+      ],
+      [
+        "Are there any cows in the image?",
+        "Yes"
+      ],
+      [
+        "Are the cows to the left of the clocks?",
+        "Yes"
+      ],
+      [
+        "How many clocks are in the image?",
+        "four"
+      ],
+      [
+        "Are there any clocks in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00726_019cbc13"
+}

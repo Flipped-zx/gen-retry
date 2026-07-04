@@ -1,0 +1,2777 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "count_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cookies are in the image?",
+              "score": 6.123127304393559e-06,
+              "skill": "count"
+            },
+            "detected": "soft_score=6.12313e-06",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many cookies are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many donuts are in the image?",
+              "score": 3.566232532901062e-12,
+              "skill": "count"
+            },
+            "detected": "soft_score=3.56623e-12",
+            "expected": "five",
+            "status": "failed",
+            "target": "How many donuts are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many rabbits are in the image?",
+              "score": 5.3922527236296884e-11,
+              "skill": "count"
+            },
+            "detected": "soft_score=5.39225e-11",
+            "expected": "five",
+            "status": "failed",
+            "target": "How many rabbits are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cookies striped?",
+              "score": 0.9999998781468147,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the cookies striped?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any cookies in the image?",
+              "score": 0.9999862831282371,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999986",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any cookies in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the donuts white?",
+              "score": 0.9999997722297849,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the donuts white?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any donuts in the image?",
+              "score": 0.999891420971835,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999891",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any donuts in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the donuts to the left of the rabbits?",
+              "score": 1.0,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the donuts to the left of the rabbits?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the rabbits spotted?",
+              "score": 0.9999999702023317,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the rabbits spotted?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any rabbits in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any rabbits in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/balanced100_all_candidates_shards4/shard_3/raw_score_lists.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00775_2d1efba4_cand_01",
+          "raw_eval_path": "data/geneval2_jobs/balanced100_all_candidates_shards4/shard_3/raw_score_lists.json",
+          "rows": [
+            {
+              "answer": "four",
+              "atom_count": 10,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00775_2d1efba4_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00094/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00094/samples/00001.png",
+              "prompt": "four striped cookies, and five white donuts to the left of five spotted rabbits",
+              "prompt_id": "geneval2_00775_2d1efba4",
+              "question": "How many cookies are in the image?",
+              "score": 6.123127304393559e-06,
+              "skill": "count",
+              "source_index": 775
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00775_2d1efba4_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00094/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00094/samples/00001.png",
+              "prompt": "four striped cookies, and five white donuts to the left of five spotted rabbits",
+              "prompt_id": "geneval2_00775_2d1efba4",
+              "question": "Are the cookies striped?",
+              "score": 0.9999998781468147,
+              "skill": "attribute",
+              "source_index": 775
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00775_2d1efba4_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00094/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00094/samples/00001.png",
+              "prompt": "four striped cookies, and five white donuts to the left of five spotted rabbits",
+              "prompt_id": "geneval2_00775_2d1efba4",
+              "question": "Are there any cookies in the image?",
+              "score": 0.9999862831282371,
+              "skill": "object",
+              "source_index": 775
+            },
+            {
+              "answer": "five",
+              "atom_count": 10,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00775_2d1efba4_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00094/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00094/samples/00001.png",
+              "prompt": "four striped cookies, and five white donuts to the left of five spotted rabbits",
+              "prompt_id": "geneval2_00775_2d1efba4",
+              "question": "How many donuts are in the image?",
+              "score": 3.566232532901062e-12,
+              "skill": "count",
+              "source_index": 775
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00775_2d1efba4_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00094/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00094/samples/00001.png",
+              "prompt": "four striped cookies, and five white donuts to the left of five spotted rabbits",
+              "prompt_id": "geneval2_00775_2d1efba4",
+              "question": "Are the donuts white?",
+              "score": 0.9999997722297849,
+              "skill": "attribute",
+              "source_index": 775
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00775_2d1efba4_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00094/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00094/samples/00001.png",
+              "prompt": "four striped cookies, and five white donuts to the left of five spotted rabbits",
+              "prompt_id": "geneval2_00775_2d1efba4",
+              "question": "Are there any donuts in the image?",
+              "score": 0.999891420971835,
+              "skill": "object",
+              "source_index": 775
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00775_2d1efba4_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00094/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00094/samples/00001.png",
+              "prompt": "four striped cookies, and five white donuts to the left of five spotted rabbits",
+              "prompt_id": "geneval2_00775_2d1efba4",
+              "question": "Are the donuts to the left of the rabbits?",
+              "score": 1.0000000034606273,
+              "skill": "position",
+              "source_index": 775
+            },
+            {
+              "answer": "five",
+              "atom_count": 10,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00775_2d1efba4_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00094/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00094/samples/00001.png",
+              "prompt": "four striped cookies, and five white donuts to the left of five spotted rabbits",
+              "prompt_id": "geneval2_00775_2d1efba4",
+              "question": "How many rabbits are in the image?",
+              "score": 5.3922527236296884e-11,
+              "skill": "count",
+              "source_index": 775
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00775_2d1efba4_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00094/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00094/samples/00001.png",
+              "prompt": "four striped cookies, and five white donuts to the left of five spotted rabbits",
+              "prompt_id": "geneval2_00775_2d1efba4",
+              "question": "Are the rabbits spotted?",
+              "score": 0.9999999702023317,
+              "skill": "attribute",
+              "source_index": 775
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00775_2d1efba4_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00094/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00094/samples/00001.png",
+              "prompt": "four striped cookies, and five white donuts to the left of five spotted rabbits",
+              "prompt_id": "geneval2_00775_2d1efba4",
+              "question": "Are there any rabbits in the image?",
+              "score": 1.0000000184372766,
+              "skill": "object",
+              "source_index": 775
+            }
+          ],
+          "source_path": "data/geneval2_jobs/balanced100_all_candidates_shards4/shard_3/raw_score_lists.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.6999883447863796,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 1,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00775_2d1efba4.json",
+          "manifest_prompt_index": 94,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00775_2d1efba4"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00775_2d1efba4_cand_01",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00094/samples/00001.png",
+        "prompt_used": "A clear image with exactly four striped cookies, exactly five white donuts, and exactly five spotted rabbits. Arrange the five white donuts in a neat separated group on the left side of the image, and arrange the five spotted rabbits in a neat separated group on the right side of the image, so every donut is to the left of every rabbit. Also show the four striped cookies as a separate visible group. Keep all fourteen objects fully visible, distinct, non-overlapping, and easy to count. Plain background, no extra cookies, no extra donuts, no extra rabbits.",
+        "seed": 1471
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly four cookies, exactly five donuts, and exactly five rabbits.",
+          "Bind stripes only to the four cookies, white color only to the five donuts, and spots only to the five rabbits.",
+          "Place the five white donuts clearly to the left of the five spotted rabbits.",
+          "Keep all objects fully visible, separated, and not overlapping so the counts are unambiguous.",
+          "Do not add extra cookies, donuts, rabbits, or other countable objects."
+        ],
+        "generation_strategy": "Use a clean, simple composition with three visually distinct groups. Arrange four striped cookies as one separated group, five white donuts as a separate group on the left side, and five spotted rabbits as a separate group on the right side. Ensure the donut group is entirely left of the rabbit group. Use spacing and a plain background to maximize count clarity and attribute binding.",
+        "initial_prompt": "A clear image with exactly four striped cookies, exactly five white donuts, and exactly five spotted rabbits. Arrange the five white donuts in a neat separated group on the left side of the image, and arrange the five spotted rabbits in a neat separated group on the right side of the image, so every donut is to the left of every rabbit. Also show the four striped cookies as a separate visible group. Keep all fourteen objects fully visible, distinct, non-overlapping, and easy to count. Plain background, no extra cookies, no extra donuts, no extra rabbits.",
+        "parsed_constraints": {
+          "attributes": {
+            "cookies": [
+              "striped"
+            ],
+            "donuts": [
+              "white"
+            ],
+            "rabbits": [
+              "spotted"
+            ]
+          },
+          "counts": {
+            "cookies": 4,
+            "donuts": 5,
+            "rabbits": 5
+          },
+          "objects": [
+            "cookies",
+            "donuts",
+            "rabbits"
+          ],
+          "relations": [
+            "five white donuts are to the left of five spotted rabbits"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly four cookies, exactly five donuts, and exactly five rabbits.",
+          "Bind stripes only to the four cookies, white color only to the five donuts, and spots only to the five rabbits.",
+          "Place the five white donuts clearly to the left of the five spotted rabbits.",
+          "Keep all objects fully visible, separated, and not overlapping so the counts are unambiguous.",
+          "Do not add extra cookies, donuts, rabbits, or other countable objects."
+        ],
+        "generation_strategy": "Use a clean, simple composition with three visually distinct groups. Arrange four striped cookies as one separated group, five white donuts as a separate group on the left side, and five spotted rabbits as a separate group on the right side. Ensure the donut group is entirely left of the rabbit group. Use spacing and a plain background to maximize count clarity and attribute binding.",
+        "initial_prompt": "A clear image with exactly four striped cookies, exactly five white donuts, and exactly five spotted rabbits. Arrange the five white donuts in a neat separated group on the left side of the image, and arrange the five spotted rabbits in a neat separated group on the right side of the image, so every donut is to the left of every rabbit. Also show the four striped cookies as a separate visible group. Keep all fourteen objects fully visible, distinct, non-overlapping, and easy to count. Plain background, no extra cookies, no extra donuts, no extra rabbits.",
+        "parsed_constraints": {
+          "attributes": {
+            "cookies": [
+              "striped"
+            ],
+            "donuts": [
+              "white"
+            ],
+            "rabbits": [
+              "spotted"
+            ]
+          },
+          "counts": {
+            "cookies": 4,
+            "donuts": 5,
+            "rabbits": 5
+          },
+          "objects": [
+            "cookies",
+            "donuts",
+            "rabbits"
+          ],
+          "relations": [
+            "five white donuts are to the left of five spotted rabbits"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cookies are in the image?",
+                "score": 6.123127304393559e-06,
+                "skill": "count"
+              },
+              "detected": "soft_score=6.12313e-06",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many cookies are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many donuts are in the image?",
+                "score": 3.566232532901062e-12,
+                "skill": "count"
+              },
+              "detected": "soft_score=3.56623e-12",
+              "expected": "five",
+              "status": "failed",
+              "target": "How many donuts are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many rabbits are in the image?",
+                "score": 5.3922527236296884e-11,
+                "skill": "count"
+              },
+              "detected": "soft_score=5.39225e-11",
+              "expected": "five",
+              "status": "failed",
+              "target": "How many rabbits are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00094/samples/00001.png",
+          "prompt": "A clear image with exactly four striped cookies, exactly five white donuts, and exactly five spotted rabbits. Arrange the five white donuts in a neat separated group on the left side of the image, and arrange the five spotted rabbits in a neat separated group on the right side of the image, so every donut is to the left of every rabbit. Also show the four striped cookies as a separate visible group. Keep all fourteen objects fully visible, distinct, non-overlapping, and easy to count. Plain background, no extra cookies, no extra donuts, no extra rabbits.",
+          "round": 0,
+          "score": 0.6999883447863796
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00775_2d1efba4_cand_01",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "count_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cookies are in the image?",
+                "score": 6.123127304393559e-06,
+                "skill": "count"
+              },
+              "detected": "soft_score=6.12313e-06",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many cookies are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many donuts are in the image?",
+                "score": 3.566232532901062e-12,
+                "skill": "count"
+              },
+              "detected": "soft_score=3.56623e-12",
+              "expected": "five",
+              "status": "failed",
+              "target": "How many donuts are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many rabbits are in the image?",
+                "score": 5.3922527236296884e-11,
+                "skill": "count"
+              },
+              "detected": "soft_score=5.39225e-11",
+              "expected": "five",
+              "status": "failed",
+              "target": "How many rabbits are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cookies striped?",
+                "score": 0.9999998781468147,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the cookies striped?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any cookies in the image?",
+                "score": 0.9999862831282371,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999986",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any cookies in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the donuts white?",
+                "score": 0.9999997722297849,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the donuts white?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any donuts in the image?",
+                "score": 0.999891420971835,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999891",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any donuts in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the donuts to the left of the rabbits?",
+                "score": 1.0,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the donuts to the left of the rabbits?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the rabbits spotted?",
+                "score": 0.9999999702023317,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the rabbits spotted?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any rabbits in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any rabbits in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.6999883447863796,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many cookies are in the image?",
+                  "score": 6.123127304393559e-06,
+                  "skill": "count"
+                },
+                "detected": "soft_score=6.12313e-06",
+                "expected": "four",
+                "status": "failed",
+                "target": "How many cookies are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many donuts are in the image?",
+                  "score": 3.566232532901062e-12,
+                  "skill": "count"
+                },
+                "detected": "soft_score=3.56623e-12",
+                "expected": "five",
+                "status": "failed",
+                "target": "How many donuts are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many rabbits are in the image?",
+                  "score": 5.3922527236296884e-11,
+                  "skill": "count"
+                },
+                "detected": "soft_score=5.39225e-11",
+                "expected": "five",
+                "status": "failed",
+                "target": "How many rabbits are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00094/samples/00001.png",
+            "prompt": "A clear image with exactly four striped cookies, exactly five white donuts, and exactly five spotted rabbits. Arrange the five white donuts in a neat separated group on the left side of the image, and arrange the five spotted rabbits in a neat separated group on the right side of the image, so every donut is to the left of every rabbit. Also show the four striped cookies as a separate visible group. Keep all fourteen objects fully visible, distinct, non-overlapping, and easy to count. Plain background, no extra cookies, no extra donuts, no extra rabbits.",
+            "round": 0,
+            "score": 0.6999883447863796
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cookies are in the image?",
+                "score": 6.123127304393559e-06,
+                "skill": "count"
+              },
+              "detected": "soft_score=6.12313e-06",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many cookies are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many donuts are in the image?",
+                "score": 3.566232532901062e-12,
+                "skill": "count"
+              },
+              "detected": "soft_score=3.56623e-12",
+              "expected": "five",
+              "status": "failed",
+              "target": "How many donuts are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many rabbits are in the image?",
+                "score": 5.3922527236296884e-11,
+                "skill": "count"
+              },
+              "detected": "soft_score=5.39225e-11",
+              "expected": "five",
+              "status": "failed",
+              "target": "How many rabbits are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "count_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cookies are in the image?",
+                "score": 6.123127304393559e-06,
+                "skill": "count"
+              },
+              "detected": "soft_score=6.12313e-06",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many cookies are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many donuts are in the image?",
+                "score": 3.566232532901062e-12,
+                "skill": "count"
+              },
+              "detected": "soft_score=3.56623e-12",
+              "expected": "five",
+              "status": "failed",
+              "target": "How many donuts are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many rabbits are in the image?",
+                "score": 5.3922527236296884e-11,
+                "skill": "count"
+              },
+              "detected": "soft_score=5.39225e-11",
+              "expected": "five",
+              "status": "failed",
+              "target": "How many rabbits are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cookies striped?",
+                "score": 0.9999998781468147,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the cookies striped?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any cookies in the image?",
+                "score": 0.9999862831282371,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999986",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any cookies in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the donuts white?",
+                "score": 0.9999997722297849,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the donuts white?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any donuts in the image?",
+                "score": 0.999891420971835,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999891",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any donuts in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the donuts to the left of the rabbits?",
+                "score": 1.0,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the donuts to the left of the rabbits?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the rabbits spotted?",
+                "score": 0.9999999702023317,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the rabbits spotted?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any rabbits in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any rabbits in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.6999883447863796,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "four striped cookies, and five white donuts to the left of five spotted rabbits",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cookies are in the image?",
+              "score": 6.123127304393559e-06,
+              "skill": "count"
+            },
+            "detected": "soft_score=6.12313e-06",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many cookies are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many donuts are in the image?",
+              "score": 3.566232532901062e-12,
+              "skill": "count"
+            },
+            "detected": "soft_score=3.56623e-12",
+            "expected": "five",
+            "status": "failed",
+            "target": "How many donuts are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many rabbits are in the image?",
+              "score": 5.3922527236296884e-11,
+              "skill": "count"
+            },
+            "detected": "soft_score=5.39225e-11",
+            "expected": "five",
+            "status": "failed",
+            "target": "How many rabbits are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly four cookies, exactly five donuts, and exactly five rabbits.",
+            "Bind stripes only to the four cookies, white color only to the five donuts, and spots only to the five rabbits.",
+            "Place the five white donuts clearly to the left of the five spotted rabbits.",
+            "Keep all objects fully visible, separated, and not overlapping so the counts are unambiguous.",
+            "Do not add extra cookies, donuts, rabbits, or other countable objects."
+          ],
+          "generation_strategy": "Use a clean, simple composition with three visually distinct groups. Arrange four striped cookies as one separated group, five white donuts as a separate group on the left side, and five spotted rabbits as a separate group on the right side. Ensure the donut group is entirely left of the rabbit group. Use spacing and a plain background to maximize count clarity and attribute binding.",
+          "initial_prompt": "A clear image with exactly four striped cookies, exactly five white donuts, and exactly five spotted rabbits. Arrange the five white donuts in a neat separated group on the left side of the image, and arrange the five spotted rabbits in a neat separated group on the right side of the image, so every donut is to the left of every rabbit. Also show the four striped cookies as a separate visible group. Keep all fourteen objects fully visible, distinct, non-overlapping, and easy to count. Plain background, no extra cookies, no extra donuts, no extra rabbits.",
+          "parsed_constraints": {
+            "attributes": {
+              "cookies": [
+                "striped"
+              ],
+              "donuts": [
+                "white"
+              ],
+              "rabbits": [
+                "spotted"
+              ]
+            },
+            "counts": {
+              "cookies": 4,
+              "donuts": 5,
+              "rabbits": 5
+            },
+            "objects": [
+              "cookies",
+              "donuts",
+              "rabbits"
+            ],
+            "relations": [
+              "five white donuts are to the left of five spotted rabbits"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly four cookies, exactly five donuts, and exactly five rabbits.",
+            "Bind stripes only to the four cookies, white color only to the five donuts, and spots only to the five rabbits.",
+            "Place the five white donuts clearly to the left of the five spotted rabbits.",
+            "Keep all objects fully visible, separated, and not overlapping so the counts are unambiguous.",
+            "Do not add extra cookies, donuts, rabbits, or other countable objects."
+          ],
+          "generation_strategy": "Use a clean, simple composition with three visually distinct groups. Arrange four striped cookies as one separated group, five white donuts as a separate group on the left side, and five spotted rabbits as a separate group on the right side. Ensure the donut group is entirely left of the rabbit group. Use spacing and a plain background to maximize count clarity and attribute binding.",
+          "initial_prompt": "A clear image with exactly four striped cookies, exactly five white donuts, and exactly five spotted rabbits. Arrange the five white donuts in a neat separated group on the left side of the image, and arrange the five spotted rabbits in a neat separated group on the right side of the image, so every donut is to the left of every rabbit. Also show the four striped cookies as a separate visible group. Keep all fourteen objects fully visible, distinct, non-overlapping, and easy to count. Plain background, no extra cookies, no extra donuts, no extra rabbits.",
+          "parsed_constraints": {
+            "attributes": {
+              "cookies": [
+                "striped"
+              ],
+              "donuts": [
+                "white"
+              ],
+              "rabbits": [
+                "spotted"
+              ]
+            },
+            "counts": {
+              "cookies": 4,
+              "donuts": 5,
+              "rabbits": 5
+            },
+            "objects": [
+              "cookies",
+              "donuts",
+              "rabbits"
+            ],
+            "relations": [
+              "five white donuts are to the left of five spotted rabbits"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_prompt": "A clear image with exactly four striped cookies, exactly five white donuts, and exactly five spotted rabbits. Arrange the five white donuts in a neat separated group on the left side of the image, and arrange the five spotted rabbits in a neat separated group on the right side of the image, so every donut is to the left of every rabbit. Also show the four striped cookies as a separate visible group. Keep all fourteen objects fully visible, distinct, non-overlapping, and easy to count. Plain background, no extra cookies, no extra donuts, no extra rabbits.",
+        "previous_selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ],
+        "prompt_id": "geneval2_00775_2d1efba4",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "count_mismatch"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many cookies are in the image?",
+                  "score": 6.123127304393559e-06,
+                  "skill": "count"
+                },
+                "detected": "soft_score=6.12313e-06",
+                "expected": "four",
+                "status": "failed",
+                "target": "How many cookies are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many donuts are in the image?",
+                  "score": 3.566232532901062e-12,
+                  "skill": "count"
+                },
+                "detected": "soft_score=3.56623e-12",
+                "expected": "five",
+                "status": "failed",
+                "target": "How many donuts are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many rabbits are in the image?",
+                  "score": 5.3922527236296884e-11,
+                  "skill": "count"
+                },
+                "detected": "soft_score=5.39225e-11",
+                "expected": "five",
+                "status": "failed",
+                "target": "How many rabbits are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the cookies striped?",
+                  "score": 0.9999998781468147,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the cookies striped?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any cookies in the image?",
+                  "score": 0.9999862831282371,
+                  "skill": "object"
+                },
+                "detected": "soft_score=0.999986",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any cookies in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the donuts white?",
+                  "score": 0.9999997722297849,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the donuts white?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any donuts in the image?",
+                  "score": 0.999891420971835,
+                  "skill": "object"
+                },
+                "detected": "soft_score=0.999891",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any donuts in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the donuts to the left of the rabbits?",
+                  "score": 1.0,
+                  "skill": "position"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the donuts to the left of the rabbits?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the rabbits spotted?",
+                  "score": 0.9999999702023317,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the rabbits spotted?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any rabbits in the image?",
+                  "score": 1.0,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any rabbits in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly four cookies, exactly five donuts, and exactly five rabbits.",
+                "Bind stripes only to the four cookies, white color only to the five donuts, and spots only to the five rabbits.",
+                "Place the five white donuts clearly to the left of the five spotted rabbits.",
+                "Keep all objects fully visible, separated, and not overlapping so the counts are unambiguous.",
+                "Do not add extra cookies, donuts, rabbits, or other countable objects."
+              ],
+              "generation_strategy": "Use a clean, simple composition with three visually distinct groups. Arrange four striped cookies as one separated group, five white donuts as a separate group on the left side, and five spotted rabbits as a separate group on the right side. Ensure the donut group is entirely left of the rabbit group. Use spacing and a plain background to maximize count clarity and attribute binding.",
+              "initial_prompt": "A clear image with exactly four striped cookies, exactly five white donuts, and exactly five spotted rabbits. Arrange the five white donuts in a neat separated group on the left side of the image, and arrange the five spotted rabbits in a neat separated group on the right side of the image, so every donut is to the left of every rabbit. Also show the four striped cookies as a separate visible group. Keep all fourteen objects fully visible, distinct, non-overlapping, and easy to count. Plain background, no extra cookies, no extra donuts, no extra rabbits.",
+              "parsed_constraints": {
+                "attributes": {
+                  "cookies": [
+                    "striped"
+                  ],
+                  "donuts": [
+                    "white"
+                  ],
+                  "rabbits": [
+                    "spotted"
+                  ]
+                },
+                "counts": {
+                  "cookies": 4,
+                  "donuts": 5,
+                  "rabbits": 5
+                },
+                "objects": [
+                  "cookies",
+                  "donuts",
+                  "rabbits"
+                ],
+                "relations": [
+                  "five white donuts are to the left of five spotted rabbits"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly four cookies, exactly five donuts, and exactly five rabbits.",
+                "Bind stripes only to the four cookies, white color only to the five donuts, and spots only to the five rabbits.",
+                "Place the five white donuts clearly to the left of the five spotted rabbits.",
+                "Keep all objects fully visible, separated, and not overlapping so the counts are unambiguous.",
+                "Do not add extra cookies, donuts, rabbits, or other countable objects."
+              ],
+              "generation_strategy": "Use a clean, simple composition with three visually distinct groups. Arrange four striped cookies as one separated group, five white donuts as a separate group on the left side, and five spotted rabbits as a separate group on the right side. Ensure the donut group is entirely left of the rabbit group. Use spacing and a plain background to maximize count clarity and attribute binding.",
+              "initial_prompt": "A clear image with exactly four striped cookies, exactly five white donuts, and exactly five spotted rabbits. Arrange the five white donuts in a neat separated group on the left side of the image, and arrange the five spotted rabbits in a neat separated group on the right side of the image, so every donut is to the left of every rabbit. Also show the four striped cookies as a separate visible group. Keep all fourteen objects fully visible, distinct, non-overlapping, and easy to count. Plain background, no extra cookies, no extra donuts, no extra rabbits.",
+              "parsed_constraints": {
+                "attributes": {
+                  "cookies": [
+                    "striped"
+                  ],
+                  "donuts": [
+                    "white"
+                  ],
+                  "rabbits": [
+                    "spotted"
+                  ]
+                },
+                "counts": {
+                  "cookies": 4,
+                  "donuts": 5,
+                  "rabbits": 5
+                },
+                "objects": [
+                  "cookies",
+                  "donuts",
+                  "rabbits"
+                ],
+                "relations": [
+                  "five white donuts are to the left of five spotted rabbits"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "prompt_used": "A clear image with exactly four striped cookies, exactly five white donuts, and exactly five spotted rabbits. Arrange the five white donuts in a neat separated group on the left side of the image, and arrange the five spotted rabbits in a neat separated group on the right side of the image, so every donut is to the left of every rabbit. Also show the four striped cookies as a separate visible group. Keep all fourteen objects fully visible, distinct, non-overlapping, and easy to count. Plain background, no extra cookies, no extra donuts, no extra rabbits.",
+            "round": 0,
+            "score": 0.6999883447863796,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 0,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many cookies are in the image?",
+                    "score": 6.123127304393559e-06,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=6.12313e-06",
+                  "expected": "four",
+                  "status": "failed",
+                  "target": "How many cookies are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 3,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many donuts are in the image?",
+                    "score": 3.566232532901062e-12,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=3.56623e-12",
+                  "expected": "five",
+                  "status": "failed",
+                  "target": "How many donuts are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 7,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many rabbits are in the image?",
+                    "score": 5.3922527236296884e-11,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=5.39225e-11",
+                  "expected": "five",
+                  "status": "failed",
+                  "target": "How many rabbits are in the image?",
+                  "type": "count_mismatch"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00775_2d1efba4"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cookies are in the image?",
+              "score": 6.123127304393559e-06,
+              "skill": "count"
+            },
+            "detected": "soft_score=6.12313e-06",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many cookies are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many donuts are in the image?",
+              "score": 3.566232532901062e-12,
+              "skill": "count"
+            },
+            "detected": "soft_score=3.56623e-12",
+            "expected": "five",
+            "status": "failed",
+            "target": "How many donuts are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many rabbits are in the image?",
+              "score": 5.3922527236296884e-11,
+              "skill": "count"
+            },
+            "detected": "soft_score=5.39225e-11",
+            "expected": "five",
+            "status": "failed",
+            "target": "How many rabbits are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00775_2d1efba4_cand_01",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly four cookies, exactly five donuts, and exactly five rabbits.",
+      "Bind stripes only to the four cookies, white color only to the five donuts, and spots only to the five rabbits.",
+      "Place the five white donuts clearly to the left of the five spotted rabbits.",
+      "Keep all objects fully visible, separated, and not overlapping so the counts are unambiguous.",
+      "Do not add extra cookies, donuts, rabbits, or other countable objects."
+    ],
+    "generation_strategy": "Use a clean, simple composition with three visually distinct groups. Arrange four striped cookies as one separated group, five white donuts as a separate group on the left side, and five spotted rabbits as a separate group on the right side. Ensure the donut group is entirely left of the rabbit group. Use spacing and a plain background to maximize count clarity and attribute binding.",
+    "initial_prompt": "A clear image with exactly four striped cookies, exactly five white donuts, and exactly five spotted rabbits. Arrange the five white donuts in a neat separated group on the left side of the image, and arrange the five spotted rabbits in a neat separated group on the right side of the image, so every donut is to the left of every rabbit. Also show the four striped cookies as a separate visible group. Keep all fourteen objects fully visible, distinct, non-overlapping, and easy to count. Plain background, no extra cookies, no extra donuts, no extra rabbits.",
+    "parsed_constraints": {
+      "attributes": {
+        "cookies": [
+          "striped"
+        ],
+        "donuts": [
+          "white"
+        ],
+        "rabbits": [
+          "spotted"
+        ]
+      },
+      "counts": {
+        "cookies": 4,
+        "donuts": 5,
+        "rabbits": 5
+      },
+      "objects": [
+        "cookies",
+        "donuts",
+        "rabbits"
+      ],
+      "relations": [
+        "five white donuts are to the left of five spotted rabbits"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image already satisfies object presence, attribute binding, and the left-of relation, but all three count constraints failed. The previous prompt used grouped objects in one scene, which likely encouraged the model to merge instances, omit some instances, or render them too small to count reliably. The weakness was not missing count language, but insufficiently concrete layout for fourteen separate items and insufficient emphasis on making each instance individually separable.",
+    "expected_improvement": [
+      "Improve count accuracy for the four cookies by placing them as four separate visible instances with clear spacing.",
+      "Improve count accuracy for the five donuts by placing five separate white donut instances in a simple countable arrangement on the left.",
+      "Improve count accuracy for the five rabbits by placing five separate spotted rabbit instances in a simple countable arrangement on the right while preserving the left-of relation."
+    ],
+    "failure_types": [
+      "count_mismatch"
+    ],
+    "preserve_constraints": [
+      "The cookies must be striped.",
+      "The donuts must be white.",
+      "The rabbits must be spotted.",
+      "The donuts must be to the left of the rabbits.",
+      "Cookies, donuts, and rabbits must all be present.",
+      "Keep all required objects fully visible and unobstructed."
+    ],
+    "previous_plan_error": {
+      "details": "The prior plan relied on generic 'separate visible group' wording for all three categories. That preserved attributes and left-right placement, but it did not force a rigid, countable arrangement for each exact quantity, so the generator likely produced ambiguous clusters or non-separable instances.",
+      "error_source": "prompt_and_strategy"
+    },
+    "regeneration_strategy": "Change from loosely grouped composition to a rigid count-first layout with three clearly separated zones and simple row arrangements. Explicitly require exactly four striped cookies in one row, exactly five white donuts in one row on the left, and exactly five spotted rabbits in one row on the right. Emphasize large spacing, no touching, no overlap, full bodies/shapes visible, and no extras or partial duplicates so each item is individually countable at a glance.",
+    "regression_risks": [
+      "Tightening count layout could cause attribute leakage unless stripes stay bound only to cookies, white only to donuts, and spotted only to rabbits.",
+      "Adding stronger separation for all objects could weaken the left-of relation unless the donut row is explicitly placed entirely left of the rabbit row.",
+      "A denser fourteen-object scene can still cause small or cropped instances unless the prompt keeps every object fully visible and well spaced."
+    ],
+    "repair_constraints": [
+      "Show exactly 4 striped cookies as 4 separate cookies, each fully visible and clearly separated from the others.",
+      "Show exactly 5 white donuts as 5 separate donuts, each fully visible and clearly separated from the others.",
+      "Show exactly 5 spotted rabbits as 5 separate rabbits, each fully visible and clearly separated from the others.",
+      "Place the 5 white donuts on the left side of the image.",
+      "Place the 5 spotted rabbits on the right side of the image, with every donut to the left of every rabbit.",
+      "Keep the 4 striped cookies as a separate group from both the donuts and the rabbits.",
+      "Make all 14 objects large, distinct, non-overlapping, and easy to count individually.",
+      "Do not show any extra cookies, extra donuts, extra rabbits, duplicates, merged objects, or partially cropped instances."
+    ],
+    "retry_prompt": "A plain-background image showing exactly 14 objects total: exactly 4 striped cookies, exactly 5 white donuts, and exactly 5 spotted rabbits. Arrange the 4 striped cookies as a separate horizontal row with clear gaps between each cookie so all 4 are individually countable. Arrange the 5 white donuts as a separate horizontal row on the left side of the image with clear gaps between each donut so all 5 are individually countable. Arrange the 5 spotted rabbits as a separate horizontal row on the right side of the image with clear gaps between each rabbit so all 5 are individually countable, with every donut to the left of every rabbit. Keep all objects fully visible, complete, large, distinct, unobstructed, and not touching or overlapping. No extra cookies, no extra donuts, no extra rabbits, no duplicate or merged objects, no cropped objects.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "spatial_layout",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints",
+        "attribute_binding",
+        "multi_object_composition",
+        "object_presence"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "The skill set remains appropriate, but the retry should emphasize quantity_counting, spatial_layout, clarity_visibility, and anti_occlusion more strongly than before because the failures are purely persistent count errors while attributes and relation already pass."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cookies are in the image?",
+            "score": 6.123127304393559e-06,
+            "skill": "count"
+          },
+          "detected": "soft_score=6.12313e-06",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many cookies are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many donuts are in the image?",
+            "score": 3.566232532901062e-12,
+            "skill": "count"
+          },
+          "detected": "soft_score=3.56623e-12",
+          "expected": "five",
+          "status": "failed",
+          "target": "How many donuts are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many rabbits are in the image?",
+            "score": 5.3922527236296884e-11,
+            "skill": "count"
+          },
+          "detected": "soft_score=5.39225e-11",
+          "expected": "five",
+          "status": "failed",
+          "target": "How many rabbits are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00094/samples/00001.png",
+      "prompt": "A clear image with exactly four striped cookies, exactly five white donuts, and exactly five spotted rabbits. Arrange the five white donuts in a neat separated group on the left side of the image, and arrange the five spotted rabbits in a neat separated group on the right side of the image, so every donut is to the left of every rabbit. Also show the four striped cookies as a separate visible group. Keep all fourteen objects fully visible, distinct, non-overlapping, and easy to count. Plain background, no extra cookies, no extra donuts, no extra rabbits.",
+      "round": 0,
+      "score": 0.6999883447863796
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00775_2d1efba4_cand_01",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "count_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cookies are in the image?",
+            "score": 6.123127304393559e-06,
+            "skill": "count"
+          },
+          "detected": "soft_score=6.12313e-06",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many cookies are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many donuts are in the image?",
+            "score": 3.566232532901062e-12,
+            "skill": "count"
+          },
+          "detected": "soft_score=3.56623e-12",
+          "expected": "five",
+          "status": "failed",
+          "target": "How many donuts are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many rabbits are in the image?",
+            "score": 5.3922527236296884e-11,
+            "skill": "count"
+          },
+          "detected": "soft_score=5.39225e-11",
+          "expected": "five",
+          "status": "failed",
+          "target": "How many rabbits are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cookies striped?",
+            "score": 0.9999998781468147,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the cookies striped?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any cookies in the image?",
+            "score": 0.9999862831282371,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999986",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any cookies in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the donuts white?",
+            "score": 0.9999997722297849,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the donuts white?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any donuts in the image?",
+            "score": 0.999891420971835,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999891",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any donuts in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the donuts to the left of the rabbits?",
+            "score": 1.0,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the donuts to the left of the rabbits?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the rabbits spotted?",
+            "score": 0.9999999702023317,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the rabbits spotted?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any rabbits in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any rabbits in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.6999883447863796,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cookies are in the image?",
+              "score": 6.123127304393559e-06,
+              "skill": "count"
+            },
+            "detected": "soft_score=6.12313e-06",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many cookies are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many donuts are in the image?",
+              "score": 3.566232532901062e-12,
+              "skill": "count"
+            },
+            "detected": "soft_score=3.56623e-12",
+            "expected": "five",
+            "status": "failed",
+            "target": "How many donuts are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many rabbits are in the image?",
+              "score": 5.3922527236296884e-11,
+              "skill": "count"
+            },
+            "detected": "soft_score=5.39225e-11",
+            "expected": "five",
+            "status": "failed",
+            "target": "How many rabbits are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00094/samples/00001.png",
+        "prompt": "A clear image with exactly four striped cookies, exactly five white donuts, and exactly five spotted rabbits. Arrange the five white donuts in a neat separated group on the left side of the image, and arrange the five spotted rabbits in a neat separated group on the right side of the image, so every donut is to the left of every rabbit. Also show the four striped cookies as a separate visible group. Keep all fourteen objects fully visible, distinct, non-overlapping, and easy to count. Plain background, no extra cookies, no extra donuts, no extra rabbits.",
+        "round": 0,
+        "score": 0.6999883447863796
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cookies are in the image?",
+            "score": 6.123127304393559e-06,
+            "skill": "count"
+          },
+          "detected": "soft_score=6.12313e-06",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many cookies are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many donuts are in the image?",
+            "score": 3.566232532901062e-12,
+            "skill": "count"
+          },
+          "detected": "soft_score=3.56623e-12",
+          "expected": "five",
+          "status": "failed",
+          "target": "How many donuts are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many rabbits are in the image?",
+            "score": 5.3922527236296884e-11,
+            "skill": "count"
+          },
+          "detected": "soft_score=5.39225e-11",
+          "expected": "five",
+          "status": "failed",
+          "target": "How many rabbits are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "count_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cookies are in the image?",
+            "score": 6.123127304393559e-06,
+            "skill": "count"
+          },
+          "detected": "soft_score=6.12313e-06",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many cookies are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many donuts are in the image?",
+            "score": 3.566232532901062e-12,
+            "skill": "count"
+          },
+          "detected": "soft_score=3.56623e-12",
+          "expected": "five",
+          "status": "failed",
+          "target": "How many donuts are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many rabbits are in the image?",
+            "score": 5.3922527236296884e-11,
+            "skill": "count"
+          },
+          "detected": "soft_score=5.39225e-11",
+          "expected": "five",
+          "status": "failed",
+          "target": "How many rabbits are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cookies striped?",
+            "score": 0.9999998781468147,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the cookies striped?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any cookies in the image?",
+            "score": 0.9999862831282371,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999986",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any cookies in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the donuts white?",
+            "score": 0.9999997722297849,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the donuts white?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any donuts in the image?",
+            "score": 0.999891420971835,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999891",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any donuts in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the donuts to the left of the rabbits?",
+            "score": 1.0,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the donuts to the left of the rabbits?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the rabbits spotted?",
+            "score": 0.9999999702023317,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the rabbits spotted?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any rabbits in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any rabbits in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.6999883447863796,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "four striped cookies, and five white donuts to the left of five spotted rabbits",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cookies are in the image?",
+          "score": 6.123127304393559e-06,
+          "skill": "count"
+        },
+        "detected": "soft_score=6.12313e-06",
+        "expected": "four",
+        "status": "failed",
+        "target": "How many cookies are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many donuts are in the image?",
+          "score": 3.566232532901062e-12,
+          "skill": "count"
+        },
+        "detected": "soft_score=3.56623e-12",
+        "expected": "five",
+        "status": "failed",
+        "target": "How many donuts are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many rabbits are in the image?",
+          "score": 5.3922527236296884e-11,
+          "skill": "count"
+        },
+        "detected": "soft_score=5.39225e-11",
+        "expected": "five",
+        "status": "failed",
+        "target": "How many rabbits are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly four cookies, exactly five donuts, and exactly five rabbits.",
+        "Bind stripes only to the four cookies, white color only to the five donuts, and spots only to the five rabbits.",
+        "Place the five white donuts clearly to the left of the five spotted rabbits.",
+        "Keep all objects fully visible, separated, and not overlapping so the counts are unambiguous.",
+        "Do not add extra cookies, donuts, rabbits, or other countable objects."
+      ],
+      "generation_strategy": "Use a clean, simple composition with three visually distinct groups. Arrange four striped cookies as one separated group, five white donuts as a separate group on the left side, and five spotted rabbits as a separate group on the right side. Ensure the donut group is entirely left of the rabbit group. Use spacing and a plain background to maximize count clarity and attribute binding.",
+      "initial_prompt": "A clear image with exactly four striped cookies, exactly five white donuts, and exactly five spotted rabbits. Arrange the five white donuts in a neat separated group on the left side of the image, and arrange the five spotted rabbits in a neat separated group on the right side of the image, so every donut is to the left of every rabbit. Also show the four striped cookies as a separate visible group. Keep all fourteen objects fully visible, distinct, non-overlapping, and easy to count. Plain background, no extra cookies, no extra donuts, no extra rabbits.",
+      "parsed_constraints": {
+        "attributes": {
+          "cookies": [
+            "striped"
+          ],
+          "donuts": [
+            "white"
+          ],
+          "rabbits": [
+            "spotted"
+          ]
+        },
+        "counts": {
+          "cookies": 4,
+          "donuts": 5,
+          "rabbits": 5
+        },
+        "objects": [
+          "cookies",
+          "donuts",
+          "rabbits"
+        ],
+        "relations": [
+          "five white donuts are to the left of five spotted rabbits"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly four cookies, exactly five donuts, and exactly five rabbits.",
+        "Bind stripes only to the four cookies, white color only to the five donuts, and spots only to the five rabbits.",
+        "Place the five white donuts clearly to the left of the five spotted rabbits.",
+        "Keep all objects fully visible, separated, and not overlapping so the counts are unambiguous.",
+        "Do not add extra cookies, donuts, rabbits, or other countable objects."
+      ],
+      "generation_strategy": "Use a clean, simple composition with three visually distinct groups. Arrange four striped cookies as one separated group, five white donuts as a separate group on the left side, and five spotted rabbits as a separate group on the right side. Ensure the donut group is entirely left of the rabbit group. Use spacing and a plain background to maximize count clarity and attribute binding.",
+      "initial_prompt": "A clear image with exactly four striped cookies, exactly five white donuts, and exactly five spotted rabbits. Arrange the five white donuts in a neat separated group on the left side of the image, and arrange the five spotted rabbits in a neat separated group on the right side of the image, so every donut is to the left of every rabbit. Also show the four striped cookies as a separate visible group. Keep all fourteen objects fully visible, distinct, non-overlapping, and easy to count. Plain background, no extra cookies, no extra donuts, no extra rabbits.",
+      "parsed_constraints": {
+        "attributes": {
+          "cookies": [
+            "striped"
+          ],
+          "donuts": [
+            "white"
+          ],
+          "rabbits": [
+            "spotted"
+          ]
+        },
+        "counts": {
+          "cookies": 4,
+          "donuts": 5,
+          "rabbits": 5
+        },
+        "objects": [
+          "cookies",
+          "donuts",
+          "rabbits"
+        ],
+        "relations": [
+          "five white donuts are to the left of five spotted rabbits"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_prompt": "A clear image with exactly four striped cookies, exactly five white donuts, and exactly five spotted rabbits. Arrange the five white donuts in a neat separated group on the left side of the image, and arrange the five spotted rabbits in a neat separated group on the right side of the image, so every donut is to the left of every rabbit. Also show the four striped cookies as a separate visible group. Keep all fourteen objects fully visible, distinct, non-overlapping, and easy to count. Plain background, no extra cookies, no extra donuts, no extra rabbits.",
+    "previous_selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ],
+    "prompt_id": "geneval2_00775_2d1efba4",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "count_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cookies are in the image?",
+              "score": 6.123127304393559e-06,
+              "skill": "count"
+            },
+            "detected": "soft_score=6.12313e-06",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many cookies are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many donuts are in the image?",
+              "score": 3.566232532901062e-12,
+              "skill": "count"
+            },
+            "detected": "soft_score=3.56623e-12",
+            "expected": "five",
+            "status": "failed",
+            "target": "How many donuts are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many rabbits are in the image?",
+              "score": 5.3922527236296884e-11,
+              "skill": "count"
+            },
+            "detected": "soft_score=5.39225e-11",
+            "expected": "five",
+            "status": "failed",
+            "target": "How many rabbits are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cookies striped?",
+              "score": 0.9999998781468147,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the cookies striped?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any cookies in the image?",
+              "score": 0.9999862831282371,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999986",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any cookies in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the donuts white?",
+              "score": 0.9999997722297849,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the donuts white?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any donuts in the image?",
+              "score": 0.999891420971835,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999891",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any donuts in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the donuts to the left of the rabbits?",
+              "score": 1.0,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the donuts to the left of the rabbits?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the rabbits spotted?",
+              "score": 0.9999999702023317,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the rabbits spotted?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any rabbits in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any rabbits in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly four cookies, exactly five donuts, and exactly five rabbits.",
+            "Bind stripes only to the four cookies, white color only to the five donuts, and spots only to the five rabbits.",
+            "Place the five white donuts clearly to the left of the five spotted rabbits.",
+            "Keep all objects fully visible, separated, and not overlapping so the counts are unambiguous.",
+            "Do not add extra cookies, donuts, rabbits, or other countable objects."
+          ],
+          "generation_strategy": "Use a clean, simple composition with three visually distinct groups. Arrange four striped cookies as one separated group, five white donuts as a separate group on the left side, and five spotted rabbits as a separate group on the right side. Ensure the donut group is entirely left of the rabbit group. Use spacing and a plain background to maximize count clarity and attribute binding.",
+          "initial_prompt": "A clear image with exactly four striped cookies, exactly five white donuts, and exactly five spotted rabbits. Arrange the five white donuts in a neat separated group on the left side of the image, and arrange the five spotted rabbits in a neat separated group on the right side of the image, so every donut is to the left of every rabbit. Also show the four striped cookies as a separate visible group. Keep all fourteen objects fully visible, distinct, non-overlapping, and easy to count. Plain background, no extra cookies, no extra donuts, no extra rabbits.",
+          "parsed_constraints": {
+            "attributes": {
+              "cookies": [
+                "striped"
+              ],
+              "donuts": [
+                "white"
+              ],
+              "rabbits": [
+                "spotted"
+              ]
+            },
+            "counts": {
+              "cookies": 4,
+              "donuts": 5,
+              "rabbits": 5
+            },
+            "objects": [
+              "cookies",
+              "donuts",
+              "rabbits"
+            ],
+            "relations": [
+              "five white donuts are to the left of five spotted rabbits"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly four cookies, exactly five donuts, and exactly five rabbits.",
+            "Bind stripes only to the four cookies, white color only to the five donuts, and spots only to the five rabbits.",
+            "Place the five white donuts clearly to the left of the five spotted rabbits.",
+            "Keep all objects fully visible, separated, and not overlapping so the counts are unambiguous.",
+            "Do not add extra cookies, donuts, rabbits, or other countable objects."
+          ],
+          "generation_strategy": "Use a clean, simple composition with three visually distinct groups. Arrange four striped cookies as one separated group, five white donuts as a separate group on the left side, and five spotted rabbits as a separate group on the right side. Ensure the donut group is entirely left of the rabbit group. Use spacing and a plain background to maximize count clarity and attribute binding.",
+          "initial_prompt": "A clear image with exactly four striped cookies, exactly five white donuts, and exactly five spotted rabbits. Arrange the five white donuts in a neat separated group on the left side of the image, and arrange the five spotted rabbits in a neat separated group on the right side of the image, so every donut is to the left of every rabbit. Also show the four striped cookies as a separate visible group. Keep all fourteen objects fully visible, distinct, non-overlapping, and easy to count. Plain background, no extra cookies, no extra donuts, no extra rabbits.",
+          "parsed_constraints": {
+            "attributes": {
+              "cookies": [
+                "striped"
+              ],
+              "donuts": [
+                "white"
+              ],
+              "rabbits": [
+                "spotted"
+              ]
+            },
+            "counts": {
+              "cookies": 4,
+              "donuts": 5,
+              "rabbits": 5
+            },
+            "objects": [
+              "cookies",
+              "donuts",
+              "rabbits"
+            ],
+            "relations": [
+              "five white donuts are to the left of five spotted rabbits"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "prompt_used": "A clear image with exactly four striped cookies, exactly five white donuts, and exactly five spotted rabbits. Arrange the five white donuts in a neat separated group on the left side of the image, and arrange the five spotted rabbits in a neat separated group on the right side of the image, so every donut is to the left of every rabbit. Also show the four striped cookies as a separate visible group. Keep all fourteen objects fully visible, distinct, non-overlapping, and easy to count. Plain background, no extra cookies, no extra donuts, no extra rabbits.",
+        "round": 0,
+        "score": 0.6999883447863796,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cookies are in the image?",
+                "score": 6.123127304393559e-06,
+                "skill": "count"
+              },
+              "detected": "soft_score=6.12313e-06",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many cookies are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many donuts are in the image?",
+                "score": 3.566232532901062e-12,
+                "skill": "count"
+              },
+              "detected": "soft_score=3.56623e-12",
+              "expected": "five",
+              "status": "failed",
+              "target": "How many donuts are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many rabbits are in the image?",
+                "score": 5.3922527236296884e-11,
+                "skill": "count"
+              },
+              "detected": "soft_score=5.39225e-11",
+              "expected": "five",
+              "status": "failed",
+              "target": "How many rabbits are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00775_2d1efba4"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cookies are in the image?",
+          "score": 6.123127304393559e-06,
+          "skill": "count"
+        },
+        "detected": "soft_score=6.12313e-06",
+        "expected": "four",
+        "status": "failed",
+        "target": "How many cookies are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many donuts are in the image?",
+          "score": 3.566232532901062e-12,
+          "skill": "count"
+        },
+        "detected": "soft_score=3.56623e-12",
+        "expected": "five",
+        "status": "failed",
+        "target": "How many donuts are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many rabbits are in the image?",
+          "score": 5.3922527236296884e-11,
+          "skill": "count"
+        },
+        "detected": "soft_score=5.39225e-11",
+        "expected": "five",
+        "status": "failed",
+        "target": "How many rabbits are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00094/samples/00001.png",
+    "best_so_far_prompt": "A clear image with exactly four striped cookies, exactly five white donuts, and exactly five spotted rabbits. Arrange the five white donuts in a neat separated group on the left side of the image, and arrange the five spotted rabbits in a neat separated group on the right side of the image, so every donut is to the left of every rabbit. Also show the four striped cookies as a separate visible group. Keep all fourteen objects fully visible, distinct, non-overlapping, and easy to count. Plain background, no extra cookies, no extra donuts, no extra rabbits.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.6999883447863796,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cookies are in the image?",
+          "score": 6.123127304393559e-06,
+          "skill": "count"
+        },
+        "detected": "soft_score=6.12313e-06",
+        "expected": "four",
+        "status": "failed",
+        "target": "How many cookies are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many donuts are in the image?",
+          "score": 3.566232532901062e-12,
+          "skill": "count"
+        },
+        "detected": "soft_score=3.56623e-12",
+        "expected": "five",
+        "status": "failed",
+        "target": "How many donuts are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many rabbits are in the image?",
+          "score": 5.3922527236296884e-11,
+          "skill": "count"
+        },
+        "detected": "soft_score=5.39225e-11",
+        "expected": "five",
+        "status": "failed",
+        "target": "How many rabbits are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly four cookies, exactly five donuts, and exactly five rabbits.",
+        "Bind stripes only to the four cookies, white color only to the five donuts, and spots only to the five rabbits.",
+        "Place the five white donuts clearly to the left of the five spotted rabbits.",
+        "Keep all objects fully visible, separated, and not overlapping so the counts are unambiguous.",
+        "Do not add extra cookies, donuts, rabbits, or other countable objects."
+      ],
+      "generation_strategy": "Use a clean, simple composition with three visually distinct groups. Arrange four striped cookies as one separated group, five white donuts as a separate group on the left side, and five spotted rabbits as a separate group on the right side. Ensure the donut group is entirely left of the rabbit group. Use spacing and a plain background to maximize count clarity and attribute binding.",
+      "initial_prompt": "A clear image with exactly four striped cookies, exactly five white donuts, and exactly five spotted rabbits. Arrange the five white donuts in a neat separated group on the left side of the image, and arrange the five spotted rabbits in a neat separated group on the right side of the image, so every donut is to the left of every rabbit. Also show the four striped cookies as a separate visible group. Keep all fourteen objects fully visible, distinct, non-overlapping, and easy to count. Plain background, no extra cookies, no extra donuts, no extra rabbits.",
+      "parsed_constraints": {
+        "attributes": {
+          "cookies": [
+            "striped"
+          ],
+          "donuts": [
+            "white"
+          ],
+          "rabbits": [
+            "spotted"
+          ]
+        },
+        "counts": {
+          "cookies": 4,
+          "donuts": 5,
+          "rabbits": 5
+        },
+        "objects": [
+          "cookies",
+          "donuts",
+          "rabbits"
+        ],
+        "relations": [
+          "five white donuts are to the left of five spotted rabbits"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.700 failed=['How many cookies are in the image?', 'How many donuts are in the image?', 'How many rabbits are in the image?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_error_retry_001_worker_00/geneval2_00775_2d1efba4__geneval2_00775_2d1efba4_cand_01__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00775_2d1efba4__geneval2_00775_2d1efba4_cand_01__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00775_2d1efba4",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image already satisfies object presence, attribute binding, and the left-of relation, but all three count constraints failed. The previous prompt used grouped objects in one scene, which likely encouraged the model to merge instances, omit some instances, or render them too small to count reliably. The weakness was not missing count language, but insufficiently concrete layout for fourteen separate items and insufficient emphasis on making each instance individually separable.",
+    "expected_improvement": [
+      "Improve count accuracy for the four cookies by placing them as four separate visible instances with clear spacing.",
+      "Improve count accuracy for the five donuts by placing five separate white donut instances in a simple countable arrangement on the left.",
+      "Improve count accuracy for the five rabbits by placing five separate spotted rabbit instances in a simple countable arrangement on the right while preserving the left-of relation."
+    ],
+    "failure_types": [
+      "count_mismatch"
+    ],
+    "preserve_constraints": [
+      "The cookies must be striped.",
+      "The donuts must be white.",
+      "The rabbits must be spotted.",
+      "The donuts must be to the left of the rabbits.",
+      "Cookies, donuts, and rabbits must all be present.",
+      "Keep all required objects fully visible and unobstructed."
+    ],
+    "previous_plan_error": {
+      "details": "The prior plan relied on generic 'separate visible group' wording for all three categories. That preserved attributes and left-right placement, but it did not force a rigid, countable arrangement for each exact quantity, so the generator likely produced ambiguous clusters or non-separable instances.",
+      "error_source": "prompt_and_strategy"
+    },
+    "regeneration_strategy": "Change from loosely grouped composition to a rigid count-first layout with three clearly separated zones and simple row arrangements. Explicitly require exactly four striped cookies in one row, exactly five white donuts in one row on the left, and exactly five spotted rabbits in one row on the right. Emphasize large spacing, no touching, no overlap, full bodies/shapes visible, and no extras or partial duplicates so each item is individually countable at a glance.",
+    "regression_risks": [
+      "Tightening count layout could cause attribute leakage unless stripes stay bound only to cookies, white only to donuts, and spotted only to rabbits.",
+      "Adding stronger separation for all objects could weaken the left-of relation unless the donut row is explicitly placed entirely left of the rabbit row.",
+      "A denser fourteen-object scene can still cause small or cropped instances unless the prompt keeps every object fully visible and well spaced."
+    ],
+    "repair_constraints": [
+      "Show exactly 4 striped cookies as 4 separate cookies, each fully visible and clearly separated from the others.",
+      "Show exactly 5 white donuts as 5 separate donuts, each fully visible and clearly separated from the others.",
+      "Show exactly 5 spotted rabbits as 5 separate rabbits, each fully visible and clearly separated from the others.",
+      "Place the 5 white donuts on the left side of the image.",
+      "Place the 5 spotted rabbits on the right side of the image, with every donut to the left of every rabbit.",
+      "Keep the 4 striped cookies as a separate group from both the donuts and the rabbits.",
+      "Make all 14 objects large, distinct, non-overlapping, and easy to count individually.",
+      "Do not show any extra cookies, extra donuts, extra rabbits, duplicates, merged objects, or partially cropped instances."
+    ],
+    "retry_prompt": "A plain-background image showing exactly 14 objects total: exactly 4 striped cookies, exactly 5 white donuts, and exactly 5 spotted rabbits. Arrange the 4 striped cookies as a separate horizontal row with clear gaps between each cookie so all 4 are individually countable. Arrange the 5 white donuts as a separate horizontal row on the left side of the image with clear gaps between each donut so all 5 are individually countable. Arrange the 5 spotted rabbits as a separate horizontal row on the right side of the image with clear gaps between each rabbit so all 5 are individually countable, with every donut to the left of every rabbit. Keep all objects fully visible, complete, large, distinct, unobstructed, and not touching or overlapping. No extra cookies, no extra donuts, no extra rabbits, no duplicate or merged objects, no cropped objects.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "spatial_layout",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints",
+        "attribute_binding",
+        "multi_object_composition",
+        "object_presence"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "The skill set remains appropriate, but the retry should emphasize quantity_counting, spatial_layout, clarity_visibility, and anti_occlusion more strongly than before because the failures are purely persistent count errors while attributes and relation already pass."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "four striped cookies, and five white donuts to the left of five spotted rabbits",
+    "prompt": "four striped cookies, and five white donuts to the left of five spotted rabbits",
+    "prompt_id": "geneval2_00775_2d1efba4",
+    "sampling_bucket": "high_atom_count",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 3,
+      "count": 3,
+      "object": 3,
+      "position": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 775,
+    "vqa_list": [
+      [
+        "How many cookies are in the image?",
+        "four"
+      ],
+      [
+        "Are the cookies striped?",
+        "Yes"
+      ],
+      [
+        "Are there any cookies in the image?",
+        "Yes"
+      ],
+      [
+        "How many donuts are in the image?",
+        "five"
+      ],
+      [
+        "Are the donuts white?",
+        "Yes"
+      ],
+      [
+        "Are there any donuts in the image?",
+        "Yes"
+      ],
+      [
+        "Are the donuts to the left of the rabbits?",
+        "Yes"
+      ],
+      [
+        "How many rabbits are in the image?",
+        "five"
+      ],
+      [
+        "Are the rabbits spotted?",
+        "Yes"
+      ],
+      [
+        "Are there any rabbits in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00775_2d1efba4"
+}

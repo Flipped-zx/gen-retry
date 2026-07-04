@@ -1,0 +1,2786 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "count_mismatch",
+          "relation_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many elephants are in the image?",
+              "score": 0.000552797660324943,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.000552798",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many elephants are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the elephants playing with the monkeys?",
+              "score": 0.005002660991785035,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.00500266",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the elephants playing with the monkeys?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many monkeys are in the image?",
+              "score": 0.5621683300971183,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.562168",
+            "expected": "five",
+            "status": "failed",
+            "target": "How many monkeys are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the elephants wooden?",
+              "score": 0.9994333673093934,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.999433",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the elephants wooden?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any elephants in the image?",
+              "score": 0.9999999482170097,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any elephants in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the monkeys plastic?",
+              "score": 0.9999918836401775,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.999992",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the monkeys plastic?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any monkeys in the image?",
+              "score": 0.999999945718173,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any monkeys in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many clocks are in the image?",
+              "score": 1.0,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "two",
+            "status": "passed",
+            "target": "How many clocks are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the clocks purple?",
+              "score": 0.9999986053794601,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.999999",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the clocks purple?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any clocks in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any clocks in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00799_b695e777_cand_00",
+          "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+          "rows": [
+            {
+              "answer": "six",
+              "atom_count": 10,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00799_b695e777_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00075/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00075/samples/00000.png",
+              "prompt": "six wooden elephants playing with five plastic monkeys, and two purple clocks",
+              "prompt_id": "geneval2_00799_b695e777",
+              "question": "How many elephants are in the image?",
+              "score": 0.000552797660324943,
+              "skill": "count",
+              "source_index": 799
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00799_b695e777_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00075/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00075/samples/00000.png",
+              "prompt": "six wooden elephants playing with five plastic monkeys, and two purple clocks",
+              "prompt_id": "geneval2_00799_b695e777",
+              "question": "Are the elephants wooden?",
+              "score": 0.9994333673093934,
+              "skill": "attribute",
+              "source_index": 799
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00799_b695e777_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00075/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00075/samples/00000.png",
+              "prompt": "six wooden elephants playing with five plastic monkeys, and two purple clocks",
+              "prompt_id": "geneval2_00799_b695e777",
+              "question": "Are there any elephants in the image?",
+              "score": 0.9999999482170097,
+              "skill": "object",
+              "source_index": 799
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00799_b695e777_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00075/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00075/samples/00000.png",
+              "prompt": "six wooden elephants playing with five plastic monkeys, and two purple clocks",
+              "prompt_id": "geneval2_00799_b695e777",
+              "question": "Are the elephants playing with the monkeys?",
+              "score": 0.005002660991785035,
+              "skill": "verb",
+              "source_index": 799
+            },
+            {
+              "answer": "five",
+              "atom_count": 10,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00799_b695e777_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00075/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00075/samples/00000.png",
+              "prompt": "six wooden elephants playing with five plastic monkeys, and two purple clocks",
+              "prompt_id": "geneval2_00799_b695e777",
+              "question": "How many monkeys are in the image?",
+              "score": 0.5621683300971183,
+              "skill": "count",
+              "source_index": 799
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00799_b695e777_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00075/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00075/samples/00000.png",
+              "prompt": "six wooden elephants playing with five plastic monkeys, and two purple clocks",
+              "prompt_id": "geneval2_00799_b695e777",
+              "question": "Are the monkeys plastic?",
+              "score": 0.9999918836401775,
+              "skill": "attribute",
+              "source_index": 799
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00799_b695e777_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00075/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00075/samples/00000.png",
+              "prompt": "six wooden elephants playing with five plastic monkeys, and two purple clocks",
+              "prompt_id": "geneval2_00799_b695e777",
+              "question": "Are there any monkeys in the image?",
+              "score": 0.999999945718173,
+              "skill": "object",
+              "source_index": 799
+            },
+            {
+              "answer": "two",
+              "atom_count": 10,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00799_b695e777_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00075/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00075/samples/00000.png",
+              "prompt": "six wooden elephants playing with five plastic monkeys, and two purple clocks",
+              "prompt_id": "geneval2_00799_b695e777",
+              "question": "How many clocks are in the image?",
+              "score": 1.0000000630093926,
+              "skill": "count",
+              "source_index": 799
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00799_b695e777_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00075/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00075/samples/00000.png",
+              "prompt": "six wooden elephants playing with five plastic monkeys, and two purple clocks",
+              "prompt_id": "geneval2_00799_b695e777",
+              "question": "Are the clocks purple?",
+              "score": 0.9999986053794601,
+              "skill": "attribute",
+              "source_index": 799
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00799_b695e777_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00075/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00075/samples/00000.png",
+              "prompt": "six wooden elephants playing with five plastic monkeys, and two purple clocks",
+              "prompt_id": "geneval2_00799_b695e777",
+              "question": "Are there any clocks in the image?",
+              "score": 1.0000000221862138,
+              "skill": "object",
+              "source_index": 799
+            }
+          ],
+          "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.7567147539013442,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 0,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00799_b695e777.json",
+          "manifest_prompt_index": 75,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00799_b695e777"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00799_b695e777_cand_00",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00075/samples/00000.png",
+        "prompt_used": "A clear scene with exactly six wooden elephants playing with exactly five plastic monkeys, plus exactly two purple clocks. Arrange the six wooden elephants and five plastic monkeys so they are visibly interacting and playing together. Place the two purple clocks separately in the scene, fully visible. Keep every elephant, monkey, and clock unobstructed, uncropped, and easy to count. No extra elephants, no extra monkeys, no extra clocks.",
+        "seed": 1375
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly six elephants, exactly five monkeys, and exactly two clocks.",
+          "Bind materials correctly: all six elephants are wooden, all five monkeys are plastic, and both clocks are purple.",
+          "Make the elephants visibly playing with the monkeys.",
+          "Keep all objects clearly visible and separated enough to count; avoid occlusion, cropping, duplicates, or extra elephants, monkeys, or clocks."
+        ],
+        "generation_strategy": "Use a clear multi-object composition with three count-separated groups: six wooden elephants interacting playfully with five plastic monkeys, and two purple clocks placed separately but visible. Emphasize exact counts, material/color binding, and unobstructed visibility for counting.",
+        "initial_prompt": "A clear scene with exactly six wooden elephants playing with exactly five plastic monkeys, plus exactly two purple clocks. Arrange the six wooden elephants and five plastic monkeys so they are visibly interacting and playing together. Place the two purple clocks separately in the scene, fully visible. Keep every elephant, monkey, and clock unobstructed, uncropped, and easy to count. No extra elephants, no extra monkeys, no extra clocks.",
+        "parsed_constraints": {
+          "attributes": {
+            "clocks": [
+              "purple"
+            ],
+            "elephants": [
+              "wooden"
+            ],
+            "monkeys": [
+              "plastic"
+            ]
+          },
+          "counts": {
+            "clocks": 2,
+            "elephants": 6,
+            "monkeys": 5
+          },
+          "objects": [
+            "elephants",
+            "monkeys",
+            "clocks"
+          ],
+          "relations": [
+            "six wooden elephants playing with five plastic monkeys",
+            "two purple clocks present in the same scene"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "multi_object_composition",
+          "spatial_layout",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly six elephants, exactly five monkeys, and exactly two clocks.",
+          "Bind materials correctly: all six elephants are wooden, all five monkeys are plastic, and both clocks are purple.",
+          "Make the elephants visibly playing with the monkeys.",
+          "Keep all objects clearly visible and separated enough to count; avoid occlusion, cropping, duplicates, or extra elephants, monkeys, or clocks."
+        ],
+        "generation_strategy": "Use a clear multi-object composition with three count-separated groups: six wooden elephants interacting playfully with five plastic monkeys, and two purple clocks placed separately but visible. Emphasize exact counts, material/color binding, and unobstructed visibility for counting.",
+        "initial_prompt": "A clear scene with exactly six wooden elephants playing with exactly five plastic monkeys, plus exactly two purple clocks. Arrange the six wooden elephants and five plastic monkeys so they are visibly interacting and playing together. Place the two purple clocks separately in the scene, fully visible. Keep every elephant, monkey, and clock unobstructed, uncropped, and easy to count. No extra elephants, no extra monkeys, no extra clocks.",
+        "parsed_constraints": {
+          "attributes": {
+            "clocks": [
+              "purple"
+            ],
+            "elephants": [
+              "wooden"
+            ],
+            "monkeys": [
+              "plastic"
+            ]
+          },
+          "counts": {
+            "clocks": 2,
+            "elephants": 6,
+            "monkeys": 5
+          },
+          "objects": [
+            "elephants",
+            "monkeys",
+            "clocks"
+          ],
+          "relations": [
+            "six wooden elephants playing with five plastic monkeys",
+            "two purple clocks present in the same scene"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "multi_object_composition",
+          "spatial_layout",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many elephants are in the image?",
+                "score": 0.000552797660324943,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.000552798",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many elephants are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the elephants playing with the monkeys?",
+                "score": 0.005002660991785035,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.00500266",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the elephants playing with the monkeys?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many monkeys are in the image?",
+                "score": 0.5621683300971183,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.562168",
+              "expected": "five",
+              "status": "failed",
+              "target": "How many monkeys are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00075/samples/00000.png",
+          "prompt": "A clear scene with exactly six wooden elephants playing with exactly five plastic monkeys, plus exactly two purple clocks. Arrange the six wooden elephants and five plastic monkeys so they are visibly interacting and playing together. Place the two purple clocks separately in the scene, fully visible. Keep every elephant, monkey, and clock unobstructed, uncropped, and easy to count. No extra elephants, no extra monkeys, no extra clocks.",
+          "round": 0,
+          "score": 0.7567147539013442
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00799_b695e777_cand_00",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "count_mismatch",
+            "relation_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many elephants are in the image?",
+                "score": 0.000552797660324943,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.000552798",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many elephants are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the elephants playing with the monkeys?",
+                "score": 0.005002660991785035,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.00500266",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the elephants playing with the monkeys?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many monkeys are in the image?",
+                "score": 0.5621683300971183,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.562168",
+              "expected": "five",
+              "status": "failed",
+              "target": "How many monkeys are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the elephants wooden?",
+                "score": 0.9994333673093934,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.999433",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the elephants wooden?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any elephants in the image?",
+                "score": 0.9999999482170097,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any elephants in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the monkeys plastic?",
+                "score": 0.9999918836401775,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.999992",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the monkeys plastic?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any monkeys in the image?",
+                "score": 0.999999945718173,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any monkeys in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many clocks are in the image?",
+                "score": 1.0,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "two",
+              "status": "passed",
+              "target": "How many clocks are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the clocks purple?",
+                "score": 0.9999986053794601,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.999999",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the clocks purple?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any clocks in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any clocks in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.7567147539013442,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many elephants are in the image?",
+                  "score": 0.000552797660324943,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.000552798",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many elephants are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the elephants playing with the monkeys?",
+                  "score": 0.005002660991785035,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=0.00500266",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the elephants playing with the monkeys?",
+                "type": "relation_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many monkeys are in the image?",
+                  "score": 0.5621683300971183,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.562168",
+                "expected": "five",
+                "status": "failed",
+                "target": "How many monkeys are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00075/samples/00000.png",
+            "prompt": "A clear scene with exactly six wooden elephants playing with exactly five plastic monkeys, plus exactly two purple clocks. Arrange the six wooden elephants and five plastic monkeys so they are visibly interacting and playing together. Place the two purple clocks separately in the scene, fully visible. Keep every elephant, monkey, and clock unobstructed, uncropped, and easy to count. No extra elephants, no extra monkeys, no extra clocks.",
+            "round": 0,
+            "score": 0.7567147539013442
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many elephants are in the image?",
+                "score": 0.000552797660324943,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.000552798",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many elephants are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the elephants playing with the monkeys?",
+                "score": 0.005002660991785035,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.00500266",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the elephants playing with the monkeys?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many monkeys are in the image?",
+                "score": 0.5621683300971183,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.562168",
+              "expected": "five",
+              "status": "failed",
+              "target": "How many monkeys are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "count_mismatch",
+            "relation_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many elephants are in the image?",
+                "score": 0.000552797660324943,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.000552798",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many elephants are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the elephants playing with the monkeys?",
+                "score": 0.005002660991785035,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.00500266",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the elephants playing with the monkeys?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many monkeys are in the image?",
+                "score": 0.5621683300971183,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.562168",
+              "expected": "five",
+              "status": "failed",
+              "target": "How many monkeys are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the elephants wooden?",
+                "score": 0.9994333673093934,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.999433",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the elephants wooden?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any elephants in the image?",
+                "score": 0.9999999482170097,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any elephants in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the monkeys plastic?",
+                "score": 0.9999918836401775,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.999992",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the monkeys plastic?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any monkeys in the image?",
+                "score": 0.999999945718173,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any monkeys in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many clocks are in the image?",
+                "score": 1.0,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "two",
+              "status": "passed",
+              "target": "How many clocks are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the clocks purple?",
+                "score": 0.9999986053794601,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.999999",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the clocks purple?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any clocks in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any clocks in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.7567147539013442,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "six wooden elephants playing with five plastic monkeys, and two purple clocks",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many elephants are in the image?",
+              "score": 0.000552797660324943,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.000552798",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many elephants are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the elephants playing with the monkeys?",
+              "score": 0.005002660991785035,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.00500266",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the elephants playing with the monkeys?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many monkeys are in the image?",
+              "score": 0.5621683300971183,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.562168",
+            "expected": "five",
+            "status": "failed",
+            "target": "How many monkeys are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly six elephants, exactly five monkeys, and exactly two clocks.",
+            "Bind materials correctly: all six elephants are wooden, all five monkeys are plastic, and both clocks are purple.",
+            "Make the elephants visibly playing with the monkeys.",
+            "Keep all objects clearly visible and separated enough to count; avoid occlusion, cropping, duplicates, or extra elephants, monkeys, or clocks."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with three count-separated groups: six wooden elephants interacting playfully with five plastic monkeys, and two purple clocks placed separately but visible. Emphasize exact counts, material/color binding, and unobstructed visibility for counting.",
+          "initial_prompt": "A clear scene with exactly six wooden elephants playing with exactly five plastic monkeys, plus exactly two purple clocks. Arrange the six wooden elephants and five plastic monkeys so they are visibly interacting and playing together. Place the two purple clocks separately in the scene, fully visible. Keep every elephant, monkey, and clock unobstructed, uncropped, and easy to count. No extra elephants, no extra monkeys, no extra clocks.",
+          "parsed_constraints": {
+            "attributes": {
+              "clocks": [
+                "purple"
+              ],
+              "elephants": [
+                "wooden"
+              ],
+              "monkeys": [
+                "plastic"
+              ]
+            },
+            "counts": {
+              "clocks": 2,
+              "elephants": 6,
+              "monkeys": 5
+            },
+            "objects": [
+              "elephants",
+              "monkeys",
+              "clocks"
+            ],
+            "relations": [
+              "six wooden elephants playing with five plastic monkeys",
+              "two purple clocks present in the same scene"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "multi_object_composition",
+            "spatial_layout",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly six elephants, exactly five monkeys, and exactly two clocks.",
+            "Bind materials correctly: all six elephants are wooden, all five monkeys are plastic, and both clocks are purple.",
+            "Make the elephants visibly playing with the monkeys.",
+            "Keep all objects clearly visible and separated enough to count; avoid occlusion, cropping, duplicates, or extra elephants, monkeys, or clocks."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with three count-separated groups: six wooden elephants interacting playfully with five plastic monkeys, and two purple clocks placed separately but visible. Emphasize exact counts, material/color binding, and unobstructed visibility for counting.",
+          "initial_prompt": "A clear scene with exactly six wooden elephants playing with exactly five plastic monkeys, plus exactly two purple clocks. Arrange the six wooden elephants and five plastic monkeys so they are visibly interacting and playing together. Place the two purple clocks separately in the scene, fully visible. Keep every elephant, monkey, and clock unobstructed, uncropped, and easy to count. No extra elephants, no extra monkeys, no extra clocks.",
+          "parsed_constraints": {
+            "attributes": {
+              "clocks": [
+                "purple"
+              ],
+              "elephants": [
+                "wooden"
+              ],
+              "monkeys": [
+                "plastic"
+              ]
+            },
+            "counts": {
+              "clocks": 2,
+              "elephants": 6,
+              "monkeys": 5
+            },
+            "objects": [
+              "elephants",
+              "monkeys",
+              "clocks"
+            ],
+            "relations": [
+              "six wooden elephants playing with five plastic monkeys",
+              "two purple clocks present in the same scene"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "multi_object_composition",
+            "spatial_layout",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_prompt": "A clear scene with exactly six wooden elephants playing with exactly five plastic monkeys, plus exactly two purple clocks. Arrange the six wooden elephants and five plastic monkeys so they are visibly interacting and playing together. Place the two purple clocks separately in the scene, fully visible. Keep every elephant, monkey, and clock unobstructed, uncropped, and easy to count. No extra elephants, no extra monkeys, no extra clocks.",
+        "previous_selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "multi_object_composition",
+          "spatial_layout",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ],
+        "prompt_id": "geneval2_00799_b695e777",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "count_mismatch",
+              "relation_mismatch"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many elephants are in the image?",
+                  "score": 0.000552797660324943,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.000552798",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many elephants are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the elephants playing with the monkeys?",
+                  "score": 0.005002660991785035,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=0.00500266",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the elephants playing with the monkeys?",
+                "type": "relation_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many monkeys are in the image?",
+                  "score": 0.5621683300971183,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.562168",
+                "expected": "five",
+                "status": "failed",
+                "target": "How many monkeys are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the elephants wooden?",
+                  "score": 0.9994333673093934,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.999433",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the elephants wooden?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any elephants in the image?",
+                  "score": 0.9999999482170097,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any elephants in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the monkeys plastic?",
+                  "score": 0.9999918836401775,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.999992",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the monkeys plastic?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any monkeys in the image?",
+                  "score": 0.999999945718173,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any monkeys in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many clocks are in the image?",
+                  "score": 1.0,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1",
+                "expected": "two",
+                "status": "passed",
+                "target": "How many clocks are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the clocks purple?",
+                  "score": 0.9999986053794601,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.999999",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the clocks purple?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any clocks in the image?",
+                  "score": 1.0,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any clocks in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly six elephants, exactly five monkeys, and exactly two clocks.",
+                "Bind materials correctly: all six elephants are wooden, all five monkeys are plastic, and both clocks are purple.",
+                "Make the elephants visibly playing with the monkeys.",
+                "Keep all objects clearly visible and separated enough to count; avoid occlusion, cropping, duplicates, or extra elephants, monkeys, or clocks."
+              ],
+              "generation_strategy": "Use a clear multi-object composition with three count-separated groups: six wooden elephants interacting playfully with five plastic monkeys, and two purple clocks placed separately but visible. Emphasize exact counts, material/color binding, and unobstructed visibility for counting.",
+              "initial_prompt": "A clear scene with exactly six wooden elephants playing with exactly five plastic monkeys, plus exactly two purple clocks. Arrange the six wooden elephants and five plastic monkeys so they are visibly interacting and playing together. Place the two purple clocks separately in the scene, fully visible. Keep every elephant, monkey, and clock unobstructed, uncropped, and easy to count. No extra elephants, no extra monkeys, no extra clocks.",
+              "parsed_constraints": {
+                "attributes": {
+                  "clocks": [
+                    "purple"
+                  ],
+                  "elephants": [
+                    "wooden"
+                  ],
+                  "monkeys": [
+                    "plastic"
+                  ]
+                },
+                "counts": {
+                  "clocks": 2,
+                  "elephants": 6,
+                  "monkeys": 5
+                },
+                "objects": [
+                  "elephants",
+                  "monkeys",
+                  "clocks"
+                ],
+                "relations": [
+                  "six wooden elephants playing with five plastic monkeys",
+                  "two purple clocks present in the same scene"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "multi_object_composition",
+                "spatial_layout",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly six elephants, exactly five monkeys, and exactly two clocks.",
+                "Bind materials correctly: all six elephants are wooden, all five monkeys are plastic, and both clocks are purple.",
+                "Make the elephants visibly playing with the monkeys.",
+                "Keep all objects clearly visible and separated enough to count; avoid occlusion, cropping, duplicates, or extra elephants, monkeys, or clocks."
+              ],
+              "generation_strategy": "Use a clear multi-object composition with three count-separated groups: six wooden elephants interacting playfully with five plastic monkeys, and two purple clocks placed separately but visible. Emphasize exact counts, material/color binding, and unobstructed visibility for counting.",
+              "initial_prompt": "A clear scene with exactly six wooden elephants playing with exactly five plastic monkeys, plus exactly two purple clocks. Arrange the six wooden elephants and five plastic monkeys so they are visibly interacting and playing together. Place the two purple clocks separately in the scene, fully visible. Keep every elephant, monkey, and clock unobstructed, uncropped, and easy to count. No extra elephants, no extra monkeys, no extra clocks.",
+              "parsed_constraints": {
+                "attributes": {
+                  "clocks": [
+                    "purple"
+                  ],
+                  "elephants": [
+                    "wooden"
+                  ],
+                  "monkeys": [
+                    "plastic"
+                  ]
+                },
+                "counts": {
+                  "clocks": 2,
+                  "elephants": 6,
+                  "monkeys": 5
+                },
+                "objects": [
+                  "elephants",
+                  "monkeys",
+                  "clocks"
+                ],
+                "relations": [
+                  "six wooden elephants playing with five plastic monkeys",
+                  "two purple clocks present in the same scene"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "multi_object_composition",
+                "spatial_layout",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "prompt_used": "A clear scene with exactly six wooden elephants playing with exactly five plastic monkeys, plus exactly two purple clocks. Arrange the six wooden elephants and five plastic monkeys so they are visibly interacting and playing together. Place the two purple clocks separately in the scene, fully visible. Keep every elephant, monkey, and clock unobstructed, uncropped, and easy to count. No extra elephants, no extra monkeys, no extra clocks.",
+            "round": 0,
+            "score": 0.7567147539013442,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 0,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many elephants are in the image?",
+                    "score": 0.000552797660324943,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=0.000552798",
+                  "expected": "six",
+                  "status": "failed",
+                  "target": "How many elephants are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 3,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the elephants playing with the monkeys?",
+                    "score": 0.005002660991785035,
+                    "skill": "verb"
+                  },
+                  "detected": "soft_score=0.00500266",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the elephants playing with the monkeys?",
+                  "type": "relation_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 4,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many monkeys are in the image?",
+                    "score": 0.5621683300971183,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=0.562168",
+                  "expected": "five",
+                  "status": "failed",
+                  "target": "How many monkeys are in the image?",
+                  "type": "count_mismatch"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00799_b695e777"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many elephants are in the image?",
+              "score": 0.000552797660324943,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.000552798",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many elephants are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the elephants playing with the monkeys?",
+              "score": 0.005002660991785035,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.00500266",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the elephants playing with the monkeys?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many monkeys are in the image?",
+              "score": 0.5621683300971183,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.562168",
+            "expected": "five",
+            "status": "failed",
+            "target": "How many monkeys are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00799_b695e777_cand_00",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly six elephants, exactly five monkeys, and exactly two clocks.",
+      "Bind materials correctly: all six elephants are wooden, all five monkeys are plastic, and both clocks are purple.",
+      "Make the elephants visibly playing with the monkeys.",
+      "Keep all objects clearly visible and separated enough to count; avoid occlusion, cropping, duplicates, or extra elephants, monkeys, or clocks."
+    ],
+    "generation_strategy": "Use a clear multi-object composition with three count-separated groups: six wooden elephants interacting playfully with five plastic monkeys, and two purple clocks placed separately but visible. Emphasize exact counts, material/color binding, and unobstructed visibility for counting.",
+    "initial_prompt": "A clear scene with exactly six wooden elephants playing with exactly five plastic monkeys, plus exactly two purple clocks. Arrange the six wooden elephants and five plastic monkeys so they are visibly interacting and playing together. Place the two purple clocks separately in the scene, fully visible. Keep every elephant, monkey, and clock unobstructed, uncropped, and easy to count. No extra elephants, no extra monkeys, no extra clocks.",
+    "parsed_constraints": {
+      "attributes": {
+        "clocks": [
+          "purple"
+        ],
+        "elephants": [
+          "wooden"
+        ],
+        "monkeys": [
+          "plastic"
+        ]
+      },
+      "counts": {
+        "clocks": 2,
+        "elephants": 6,
+        "monkeys": 5
+      },
+      "objects": [
+        "elephants",
+        "monkeys",
+        "clocks"
+      ],
+      "relations": [
+        "six wooden elephants playing with five plastic monkeys",
+        "two purple clocks present in the same scene"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "multi_object_composition",
+      "spatial_layout",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image preserved the materials and clock constraints but failed the exact counts for elephants and monkeys and did not make the elephants clearly playing with the monkeys. The elephant count score was extremely low, suggesting the six wooden elephants were not visually separable or not all depicted. The monkey count was also below threshold, likely due to overlap, merging, or missing monkeys. The interaction clause was too vague, so the verifier did not recognize a clear play relation between the elephants and monkeys.",
+    "expected_improvement": [
+      "Six wooden elephants should be easier to count because the retry prompt requires two neat rows of three, with each elephant fully visible and separated.",
+      "Five plastic monkeys should be easier to count because the retry prompt requires a single row of five distinct monkeys, each fully visible.",
+      "The playing relation should be clearer because the retry prompt places the monkeys directly between the elephant rows and requires the elephants to face inward toward the monkeys with trunks reaching toward them in a shared play arrangement.",
+      "The already-passed two purple clocks constraint should remain satisfied because the retry prompt explicitly keeps exactly two purple clocks visible and separate from the animals."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "relation_mismatch"
+    ],
+    "preserve_constraints": [
+      "All elephants must be wooden.",
+      "Elephants must be present and visible.",
+      "All monkeys must be plastic.",
+      "Monkeys must be present and visible.",
+      "There must be exactly two clocks.",
+      "Both clocks must be purple.",
+      "Clocks must be present and visible."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt stated exact counts and general visibility, but it did not impose a rigid, countable layout. It also described the animals as playing together without specifying an unambiguous visual interaction, so the generator could create a cluttered scene where objects merged or the relation was not apparent.",
+      "error_source": "Prompt underspecified count layout and play interaction despite using quantity_counting and spatial_layout."
+    },
+    "regeneration_strategy": "Use a structured, front-facing, countable composition: six wooden elephants in two rows of three, five plastic monkeys in one central row, and two purple clocks off to the sides. Make every animal complete, separated, and unobstructed. Define the play relation visually by having the elephants face the monkeys and reach toward them, so the elephants are clearly playing with the monkeys rather than merely coexisting.",
+    "regression_risks": [
+      "Adding a structured layout could cause the generator to omit one elephant or one monkey, so the prompt repeats the exact counts and says no extras or duplicates.",
+      "The clocks could regress in count or color if attention shifts to animals, so the prompt explicitly preserves exactly two purple clocks.",
+      "The wooden and plastic material bindings could leak or be omitted, so the prompt binds wooden only to elephants and plastic only to monkeys."
+    ],
+    "repair_constraints": [
+      "Show exactly six wooden elephants, no fewer and no more.",
+      "Make the six elephants visually separable, complete, unobstructed, and easy to count.",
+      "Show exactly five plastic monkeys, no fewer and no more.",
+      "Make the five monkeys visually separable, complete, unobstructed, and easy to count.",
+      "Make the elephants clearly playing with the monkeys by placing the five monkeys in the center and arranging all six elephants facing inward toward the monkeys with playful reaching poses.",
+      "Do not add extra elephants, extra monkeys, or extra clocks."
+    ],
+    "retry_prompt": "A clear front-facing scene with exactly six wooden elephants playing with exactly five plastic monkeys, and exactly two purple clocks. Arrange the six wooden elephants as two neat rows of three elephants, one row on the left side and one row on the right side, with each wooden elephant complete, separate, unobstructed, and easy to count. Arrange the five plastic monkeys in one clear central row between the elephant rows, each plastic monkey complete, separate, unobstructed, and easy to count. Make the elephants clearly playing with the monkeys: all six wooden elephants face inward toward the five plastic monkeys, with trunks reaching playfully toward the monkeys so the interaction is obvious. Place exactly two purple clocks in the background, one on each side, fully visible and separate from the animals. No extra elephants, no extra monkeys, no extra clocks, no duplicated or merged animals, no cropped objects.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "attribute_binding",
+        "negative_constraints",
+        "object_presence"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "The same skill set is retained, but the emphasis changes: quantity_counting and spatial_layout are made stricter through a row-based layout, while anti_occlusion and clarity_visibility are strengthened to prevent merged or hidden animals. Attribute_binding and negative_constraints preserve the already-passed material, color, and clock constraints."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many elephants are in the image?",
+            "score": 0.000552797660324943,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.000552798",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many elephants are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the elephants playing with the monkeys?",
+            "score": 0.005002660991785035,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.00500266",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the elephants playing with the monkeys?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many monkeys are in the image?",
+            "score": 0.5621683300971183,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.562168",
+          "expected": "five",
+          "status": "failed",
+          "target": "How many monkeys are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00075/samples/00000.png",
+      "prompt": "A clear scene with exactly six wooden elephants playing with exactly five plastic monkeys, plus exactly two purple clocks. Arrange the six wooden elephants and five plastic monkeys so they are visibly interacting and playing together. Place the two purple clocks separately in the scene, fully visible. Keep every elephant, monkey, and clock unobstructed, uncropped, and easy to count. No extra elephants, no extra monkeys, no extra clocks.",
+      "round": 0,
+      "score": 0.7567147539013442
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00799_b695e777_cand_00",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "count_mismatch",
+        "relation_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many elephants are in the image?",
+            "score": 0.000552797660324943,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.000552798",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many elephants are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the elephants playing with the monkeys?",
+            "score": 0.005002660991785035,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.00500266",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the elephants playing with the monkeys?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many monkeys are in the image?",
+            "score": 0.5621683300971183,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.562168",
+          "expected": "five",
+          "status": "failed",
+          "target": "How many monkeys are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the elephants wooden?",
+            "score": 0.9994333673093934,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.999433",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the elephants wooden?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any elephants in the image?",
+            "score": 0.9999999482170097,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any elephants in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the monkeys plastic?",
+            "score": 0.9999918836401775,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.999992",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the monkeys plastic?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any monkeys in the image?",
+            "score": 0.999999945718173,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any monkeys in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many clocks are in the image?",
+            "score": 1.0,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "two",
+          "status": "passed",
+          "target": "How many clocks are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the clocks purple?",
+            "score": 0.9999986053794601,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.999999",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the clocks purple?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any clocks in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any clocks in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.7567147539013442,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many elephants are in the image?",
+              "score": 0.000552797660324943,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.000552798",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many elephants are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the elephants playing with the monkeys?",
+              "score": 0.005002660991785035,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.00500266",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the elephants playing with the monkeys?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many monkeys are in the image?",
+              "score": 0.5621683300971183,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.562168",
+            "expected": "five",
+            "status": "failed",
+            "target": "How many monkeys are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00075/samples/00000.png",
+        "prompt": "A clear scene with exactly six wooden elephants playing with exactly five plastic monkeys, plus exactly two purple clocks. Arrange the six wooden elephants and five plastic monkeys so they are visibly interacting and playing together. Place the two purple clocks separately in the scene, fully visible. Keep every elephant, monkey, and clock unobstructed, uncropped, and easy to count. No extra elephants, no extra monkeys, no extra clocks.",
+        "round": 0,
+        "score": 0.7567147539013442
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many elephants are in the image?",
+            "score": 0.000552797660324943,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.000552798",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many elephants are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the elephants playing with the monkeys?",
+            "score": 0.005002660991785035,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.00500266",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the elephants playing with the monkeys?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many monkeys are in the image?",
+            "score": 0.5621683300971183,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.562168",
+          "expected": "five",
+          "status": "failed",
+          "target": "How many monkeys are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "count_mismatch",
+        "relation_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many elephants are in the image?",
+            "score": 0.000552797660324943,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.000552798",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many elephants are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the elephants playing with the monkeys?",
+            "score": 0.005002660991785035,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.00500266",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the elephants playing with the monkeys?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many monkeys are in the image?",
+            "score": 0.5621683300971183,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.562168",
+          "expected": "five",
+          "status": "failed",
+          "target": "How many monkeys are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the elephants wooden?",
+            "score": 0.9994333673093934,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.999433",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the elephants wooden?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any elephants in the image?",
+            "score": 0.9999999482170097,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any elephants in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the monkeys plastic?",
+            "score": 0.9999918836401775,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.999992",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the monkeys plastic?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any monkeys in the image?",
+            "score": 0.999999945718173,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any monkeys in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many clocks are in the image?",
+            "score": 1.0,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "two",
+          "status": "passed",
+          "target": "How many clocks are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the clocks purple?",
+            "score": 0.9999986053794601,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.999999",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the clocks purple?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any clocks in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any clocks in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.7567147539013442,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "six wooden elephants playing with five plastic monkeys, and two purple clocks",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many elephants are in the image?",
+          "score": 0.000552797660324943,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.000552798",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many elephants are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the elephants playing with the monkeys?",
+          "score": 0.005002660991785035,
+          "skill": "verb"
+        },
+        "detected": "soft_score=0.00500266",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the elephants playing with the monkeys?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many monkeys are in the image?",
+          "score": 0.5621683300971183,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.562168",
+        "expected": "five",
+        "status": "failed",
+        "target": "How many monkeys are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly six elephants, exactly five monkeys, and exactly two clocks.",
+        "Bind materials correctly: all six elephants are wooden, all five monkeys are plastic, and both clocks are purple.",
+        "Make the elephants visibly playing with the monkeys.",
+        "Keep all objects clearly visible and separated enough to count; avoid occlusion, cropping, duplicates, or extra elephants, monkeys, or clocks."
+      ],
+      "generation_strategy": "Use a clear multi-object composition with three count-separated groups: six wooden elephants interacting playfully with five plastic monkeys, and two purple clocks placed separately but visible. Emphasize exact counts, material/color binding, and unobstructed visibility for counting.",
+      "initial_prompt": "A clear scene with exactly six wooden elephants playing with exactly five plastic monkeys, plus exactly two purple clocks. Arrange the six wooden elephants and five plastic monkeys so they are visibly interacting and playing together. Place the two purple clocks separately in the scene, fully visible. Keep every elephant, monkey, and clock unobstructed, uncropped, and easy to count. No extra elephants, no extra monkeys, no extra clocks.",
+      "parsed_constraints": {
+        "attributes": {
+          "clocks": [
+            "purple"
+          ],
+          "elephants": [
+            "wooden"
+          ],
+          "monkeys": [
+            "plastic"
+          ]
+        },
+        "counts": {
+          "clocks": 2,
+          "elephants": 6,
+          "monkeys": 5
+        },
+        "objects": [
+          "elephants",
+          "monkeys",
+          "clocks"
+        ],
+        "relations": [
+          "six wooden elephants playing with five plastic monkeys",
+          "two purple clocks present in the same scene"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly six elephants, exactly five monkeys, and exactly two clocks.",
+        "Bind materials correctly: all six elephants are wooden, all five monkeys are plastic, and both clocks are purple.",
+        "Make the elephants visibly playing with the monkeys.",
+        "Keep all objects clearly visible and separated enough to count; avoid occlusion, cropping, duplicates, or extra elephants, monkeys, or clocks."
+      ],
+      "generation_strategy": "Use a clear multi-object composition with three count-separated groups: six wooden elephants interacting playfully with five plastic monkeys, and two purple clocks placed separately but visible. Emphasize exact counts, material/color binding, and unobstructed visibility for counting.",
+      "initial_prompt": "A clear scene with exactly six wooden elephants playing with exactly five plastic monkeys, plus exactly two purple clocks. Arrange the six wooden elephants and five plastic monkeys so they are visibly interacting and playing together. Place the two purple clocks separately in the scene, fully visible. Keep every elephant, monkey, and clock unobstructed, uncropped, and easy to count. No extra elephants, no extra monkeys, no extra clocks.",
+      "parsed_constraints": {
+        "attributes": {
+          "clocks": [
+            "purple"
+          ],
+          "elephants": [
+            "wooden"
+          ],
+          "monkeys": [
+            "plastic"
+          ]
+        },
+        "counts": {
+          "clocks": 2,
+          "elephants": 6,
+          "monkeys": 5
+        },
+        "objects": [
+          "elephants",
+          "monkeys",
+          "clocks"
+        ],
+        "relations": [
+          "six wooden elephants playing with five plastic monkeys",
+          "two purple clocks present in the same scene"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_prompt": "A clear scene with exactly six wooden elephants playing with exactly five plastic monkeys, plus exactly two purple clocks. Arrange the six wooden elephants and five plastic monkeys so they are visibly interacting and playing together. Place the two purple clocks separately in the scene, fully visible. Keep every elephant, monkey, and clock unobstructed, uncropped, and easy to count. No extra elephants, no extra monkeys, no extra clocks.",
+    "previous_selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "multi_object_composition",
+      "spatial_layout",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ],
+    "prompt_id": "geneval2_00799_b695e777",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "count_mismatch",
+          "relation_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many elephants are in the image?",
+              "score": 0.000552797660324943,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.000552798",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many elephants are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the elephants playing with the monkeys?",
+              "score": 0.005002660991785035,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.00500266",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the elephants playing with the monkeys?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many monkeys are in the image?",
+              "score": 0.5621683300971183,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.562168",
+            "expected": "five",
+            "status": "failed",
+            "target": "How many monkeys are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the elephants wooden?",
+              "score": 0.9994333673093934,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.999433",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the elephants wooden?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any elephants in the image?",
+              "score": 0.9999999482170097,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any elephants in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the monkeys plastic?",
+              "score": 0.9999918836401775,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.999992",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the monkeys plastic?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any monkeys in the image?",
+              "score": 0.999999945718173,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any monkeys in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many clocks are in the image?",
+              "score": 1.0,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "two",
+            "status": "passed",
+            "target": "How many clocks are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the clocks purple?",
+              "score": 0.9999986053794601,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.999999",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the clocks purple?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any clocks in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any clocks in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly six elephants, exactly five monkeys, and exactly two clocks.",
+            "Bind materials correctly: all six elephants are wooden, all five monkeys are plastic, and both clocks are purple.",
+            "Make the elephants visibly playing with the monkeys.",
+            "Keep all objects clearly visible and separated enough to count; avoid occlusion, cropping, duplicates, or extra elephants, monkeys, or clocks."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with three count-separated groups: six wooden elephants interacting playfully with five plastic monkeys, and two purple clocks placed separately but visible. Emphasize exact counts, material/color binding, and unobstructed visibility for counting.",
+          "initial_prompt": "A clear scene with exactly six wooden elephants playing with exactly five plastic monkeys, plus exactly two purple clocks. Arrange the six wooden elephants and five plastic monkeys so they are visibly interacting and playing together. Place the two purple clocks separately in the scene, fully visible. Keep every elephant, monkey, and clock unobstructed, uncropped, and easy to count. No extra elephants, no extra monkeys, no extra clocks.",
+          "parsed_constraints": {
+            "attributes": {
+              "clocks": [
+                "purple"
+              ],
+              "elephants": [
+                "wooden"
+              ],
+              "monkeys": [
+                "plastic"
+              ]
+            },
+            "counts": {
+              "clocks": 2,
+              "elephants": 6,
+              "monkeys": 5
+            },
+            "objects": [
+              "elephants",
+              "monkeys",
+              "clocks"
+            ],
+            "relations": [
+              "six wooden elephants playing with five plastic monkeys",
+              "two purple clocks present in the same scene"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "multi_object_composition",
+            "spatial_layout",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly six elephants, exactly five monkeys, and exactly two clocks.",
+            "Bind materials correctly: all six elephants are wooden, all five monkeys are plastic, and both clocks are purple.",
+            "Make the elephants visibly playing with the monkeys.",
+            "Keep all objects clearly visible and separated enough to count; avoid occlusion, cropping, duplicates, or extra elephants, monkeys, or clocks."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with three count-separated groups: six wooden elephants interacting playfully with five plastic monkeys, and two purple clocks placed separately but visible. Emphasize exact counts, material/color binding, and unobstructed visibility for counting.",
+          "initial_prompt": "A clear scene with exactly six wooden elephants playing with exactly five plastic monkeys, plus exactly two purple clocks. Arrange the six wooden elephants and five plastic monkeys so they are visibly interacting and playing together. Place the two purple clocks separately in the scene, fully visible. Keep every elephant, monkey, and clock unobstructed, uncropped, and easy to count. No extra elephants, no extra monkeys, no extra clocks.",
+          "parsed_constraints": {
+            "attributes": {
+              "clocks": [
+                "purple"
+              ],
+              "elephants": [
+                "wooden"
+              ],
+              "monkeys": [
+                "plastic"
+              ]
+            },
+            "counts": {
+              "clocks": 2,
+              "elephants": 6,
+              "monkeys": 5
+            },
+            "objects": [
+              "elephants",
+              "monkeys",
+              "clocks"
+            ],
+            "relations": [
+              "six wooden elephants playing with five plastic monkeys",
+              "two purple clocks present in the same scene"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "multi_object_composition",
+            "spatial_layout",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "prompt_used": "A clear scene with exactly six wooden elephants playing with exactly five plastic monkeys, plus exactly two purple clocks. Arrange the six wooden elephants and five plastic monkeys so they are visibly interacting and playing together. Place the two purple clocks separately in the scene, fully visible. Keep every elephant, monkey, and clock unobstructed, uncropped, and easy to count. No extra elephants, no extra monkeys, no extra clocks.",
+        "round": 0,
+        "score": 0.7567147539013442,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many elephants are in the image?",
+                "score": 0.000552797660324943,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.000552798",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many elephants are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the elephants playing with the monkeys?",
+                "score": 0.005002660991785035,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.00500266",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the elephants playing with the monkeys?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many monkeys are in the image?",
+                "score": 0.5621683300971183,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.562168",
+              "expected": "five",
+              "status": "failed",
+              "target": "How many monkeys are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00799_b695e777"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many elephants are in the image?",
+          "score": 0.000552797660324943,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.000552798",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many elephants are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the elephants playing with the monkeys?",
+          "score": 0.005002660991785035,
+          "skill": "verb"
+        },
+        "detected": "soft_score=0.00500266",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the elephants playing with the monkeys?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many monkeys are in the image?",
+          "score": 0.5621683300971183,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.562168",
+        "expected": "five",
+        "status": "failed",
+        "target": "How many monkeys are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00075/samples/00000.png",
+    "best_so_far_prompt": "A clear scene with exactly six wooden elephants playing with exactly five plastic monkeys, plus exactly two purple clocks. Arrange the six wooden elephants and five plastic monkeys so they are visibly interacting and playing together. Place the two purple clocks separately in the scene, fully visible. Keep every elephant, monkey, and clock unobstructed, uncropped, and easy to count. No extra elephants, no extra monkeys, no extra clocks.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.7567147539013442,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many elephants are in the image?",
+          "score": 0.000552797660324943,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.000552798",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many elephants are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the elephants playing with the monkeys?",
+          "score": 0.005002660991785035,
+          "skill": "verb"
+        },
+        "detected": "soft_score=0.00500266",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the elephants playing with the monkeys?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many monkeys are in the image?",
+          "score": 0.5621683300971183,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.562168",
+        "expected": "five",
+        "status": "failed",
+        "target": "How many monkeys are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly six elephants, exactly five monkeys, and exactly two clocks.",
+        "Bind materials correctly: all six elephants are wooden, all five monkeys are plastic, and both clocks are purple.",
+        "Make the elephants visibly playing with the monkeys.",
+        "Keep all objects clearly visible and separated enough to count; avoid occlusion, cropping, duplicates, or extra elephants, monkeys, or clocks."
+      ],
+      "generation_strategy": "Use a clear multi-object composition with three count-separated groups: six wooden elephants interacting playfully with five plastic monkeys, and two purple clocks placed separately but visible. Emphasize exact counts, material/color binding, and unobstructed visibility for counting.",
+      "initial_prompt": "A clear scene with exactly six wooden elephants playing with exactly five plastic monkeys, plus exactly two purple clocks. Arrange the six wooden elephants and five plastic monkeys so they are visibly interacting and playing together. Place the two purple clocks separately in the scene, fully visible. Keep every elephant, monkey, and clock unobstructed, uncropped, and easy to count. No extra elephants, no extra monkeys, no extra clocks.",
+      "parsed_constraints": {
+        "attributes": {
+          "clocks": [
+            "purple"
+          ],
+          "elephants": [
+            "wooden"
+          ],
+          "monkeys": [
+            "plastic"
+          ]
+        },
+        "counts": {
+          "clocks": 2,
+          "elephants": 6,
+          "monkeys": 5
+        },
+        "objects": [
+          "elephants",
+          "monkeys",
+          "clocks"
+        ],
+        "relations": [
+          "six wooden elephants playing with five plastic monkeys",
+          "two purple clocks present in the same scene"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.757 failed=['How many elephants are in the image?', 'Are the elephants playing with the monkeys?', 'How many monkeys are in the image?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_incremental/snapshot_003_worker_00/geneval2_00799_b695e777__geneval2_00799_b695e777_cand_00__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00799_b695e777__geneval2_00799_b695e777_cand_00__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00799_b695e777",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image preserved the materials and clock constraints but failed the exact counts for elephants and monkeys and did not make the elephants clearly playing with the monkeys. The elephant count score was extremely low, suggesting the six wooden elephants were not visually separable or not all depicted. The monkey count was also below threshold, likely due to overlap, merging, or missing monkeys. The interaction clause was too vague, so the verifier did not recognize a clear play relation between the elephants and monkeys.",
+    "expected_improvement": [
+      "Six wooden elephants should be easier to count because the retry prompt requires two neat rows of three, with each elephant fully visible and separated.",
+      "Five plastic monkeys should be easier to count because the retry prompt requires a single row of five distinct monkeys, each fully visible.",
+      "The playing relation should be clearer because the retry prompt places the monkeys directly between the elephant rows and requires the elephants to face inward toward the monkeys with trunks reaching toward them in a shared play arrangement.",
+      "The already-passed two purple clocks constraint should remain satisfied because the retry prompt explicitly keeps exactly two purple clocks visible and separate from the animals."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "relation_mismatch"
+    ],
+    "preserve_constraints": [
+      "All elephants must be wooden.",
+      "Elephants must be present and visible.",
+      "All monkeys must be plastic.",
+      "Monkeys must be present and visible.",
+      "There must be exactly two clocks.",
+      "Both clocks must be purple.",
+      "Clocks must be present and visible."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt stated exact counts and general visibility, but it did not impose a rigid, countable layout. It also described the animals as playing together without specifying an unambiguous visual interaction, so the generator could create a cluttered scene where objects merged or the relation was not apparent.",
+      "error_source": "Prompt underspecified count layout and play interaction despite using quantity_counting and spatial_layout."
+    },
+    "regeneration_strategy": "Use a structured, front-facing, countable composition: six wooden elephants in two rows of three, five plastic monkeys in one central row, and two purple clocks off to the sides. Make every animal complete, separated, and unobstructed. Define the play relation visually by having the elephants face the monkeys and reach toward them, so the elephants are clearly playing with the monkeys rather than merely coexisting.",
+    "regression_risks": [
+      "Adding a structured layout could cause the generator to omit one elephant or one monkey, so the prompt repeats the exact counts and says no extras or duplicates.",
+      "The clocks could regress in count or color if attention shifts to animals, so the prompt explicitly preserves exactly two purple clocks.",
+      "The wooden and plastic material bindings could leak or be omitted, so the prompt binds wooden only to elephants and plastic only to monkeys."
+    ],
+    "repair_constraints": [
+      "Show exactly six wooden elephants, no fewer and no more.",
+      "Make the six elephants visually separable, complete, unobstructed, and easy to count.",
+      "Show exactly five plastic monkeys, no fewer and no more.",
+      "Make the five monkeys visually separable, complete, unobstructed, and easy to count.",
+      "Make the elephants clearly playing with the monkeys by placing the five monkeys in the center and arranging all six elephants facing inward toward the monkeys with playful reaching poses.",
+      "Do not add extra elephants, extra monkeys, or extra clocks."
+    ],
+    "retry_prompt": "A clear front-facing scene with exactly six wooden elephants playing with exactly five plastic monkeys, and exactly two purple clocks. Arrange the six wooden elephants as two neat rows of three elephants, one row on the left side and one row on the right side, with each wooden elephant complete, separate, unobstructed, and easy to count. Arrange the five plastic monkeys in one clear central row between the elephant rows, each plastic monkey complete, separate, unobstructed, and easy to count. Make the elephants clearly playing with the monkeys: all six wooden elephants face inward toward the five plastic monkeys, with trunks reaching playfully toward the monkeys so the interaction is obvious. Place exactly two purple clocks in the background, one on each side, fully visible and separate from the animals. No extra elephants, no extra monkeys, no extra clocks, no duplicated or merged animals, no cropped objects.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "attribute_binding",
+        "negative_constraints",
+        "object_presence"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "The same skill set is retained, but the emphasis changes: quantity_counting and spatial_layout are made stricter through a row-based layout, while anti_occlusion and clarity_visibility are strengthened to prevent merged or hidden animals. Attribute_binding and negative_constraints preserve the already-passed material, color, and clock constraints."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "six wooden elephants playing with five plastic monkeys, and two purple clocks",
+    "prompt": "six wooden elephants playing with five plastic monkeys, and two purple clocks",
+    "prompt_id": "geneval2_00799_b695e777",
+    "sampling_bucket": "relation_action",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "relation_action",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 3,
+      "count": 3,
+      "object": 3,
+      "verb": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "verb",
+      "count",
+      "attribute",
+      "object",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 799,
+    "vqa_list": [
+      [
+        "How many elephants are in the image?",
+        "six"
+      ],
+      [
+        "Are the elephants wooden?",
+        "Yes"
+      ],
+      [
+        "Are there any elephants in the image?",
+        "Yes"
+      ],
+      [
+        "Are the elephants playing with the monkeys?",
+        "Yes"
+      ],
+      [
+        "How many monkeys are in the image?",
+        "five"
+      ],
+      [
+        "Are the monkeys plastic?",
+        "Yes"
+      ],
+      [
+        "Are there any monkeys in the image?",
+        "Yes"
+      ],
+      [
+        "How many clocks are in the image?",
+        "two"
+      ],
+      [
+        "Are the clocks purple?",
+        "Yes"
+      ],
+      [
+        "Are there any clocks in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00799_b695e777"
+}

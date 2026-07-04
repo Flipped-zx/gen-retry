@@ -1,0 +1,155 @@
+{
+  "candidate_id": "geneval2_00774_0a5ce0e9_cand_00",
+  "generation": {
+    "generation_metadata": {
+      "candidate_index": 0,
+      "generation_prompt_source": "initial_plan",
+      "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00774_0a5ce0e9.json",
+      "manifest_prompt_index": 63,
+      "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+      "sample_id": "geneval2_00774_0a5ce0e9"
+    },
+    "generator_name": "qwen-image-2512",
+    "image_id": "geneval2_00774_0a5ce0e9_cand_00",
+    "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00063/samples/00000.png",
+    "prompt_used": "A clear scene showing exactly four chairs under exactly two blue mushrooms, with the two blue mushrooms positioned to the left of exactly three wooden birds. Arrange the four chairs together below the mushrooms, fully visible and easy to count. The two mushrooms are blue, clearly visible above the chairs, and separated enough to count. The three birds are wooden, placed on the right side of the mushrooms, fully visible and easy to count. Keep all objects unobstructed, with no extra chairs, no extra mushrooms, and no extra birds.",
+    "seed": 1315
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "eval_lookup_key": "",
+    "image_path_is_artifact_reference": true,
+    "teacher_uses_image_bytes": false
+  },
+  "previous_action": null,
+  "previous_initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Depict exactly four chairs, exactly two mushrooms, and exactly three birds.",
+      "Bind blue color only to the two mushrooms and wooden material only to the three birds.",
+      "Place all four chairs underneath the two blue mushrooms.",
+      "Place the two blue mushrooms to the left of the three wooden birds.",
+      "Keep all objects clearly visible and separated enough to count; avoid occluding chairs, mushrooms, or birds."
+    ],
+    "generation_strategy": "Use a simple, clear composition with grouped counts: four chairs in a row near the lower left, two large blue mushrooms directly above them, and three wooden birds grouped on the right side. Emphasize left-right spatial relation between mushrooms and birds and vertical under relation between chairs and mushrooms.",
+    "initial_prompt": "A clear scene showing exactly four chairs under exactly two blue mushrooms, with the two blue mushrooms positioned to the left of exactly three wooden birds. Arrange the four chairs together below the mushrooms, fully visible and easy to count. The two mushrooms are blue, clearly visible above the chairs, and separated enough to count. The three birds are wooden, placed on the right side of the mushrooms, fully visible and easy to count. Keep all objects unobstructed, with no extra chairs, no extra mushrooms, and no extra birds.",
+    "parsed_constraints": {
+      "attributes": {
+        "birds": [
+          "wooden"
+        ],
+        "mushrooms": [
+          "blue"
+        ]
+      },
+      "counts": {
+        "birds": 3,
+        "chairs": 4,
+        "mushrooms": 2
+      },
+      "objects": [
+        "chairs",
+        "mushrooms",
+        "birds"
+      ],
+      "relations": [
+        "four chairs are under two blue mushrooms",
+        "two blue mushrooms are to the left of three wooden birds"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "prompt_id": "geneval2_00774_0a5ce0e9",
+  "retry_history": [],
+  "round": 0,
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "four chairs under two blue mushrooms to the left of three wooden birds",
+    "prompt": "four chairs under two blue mushrooms to the left of three wooden birds",
+    "prompt_id": "geneval2_00774_0a5ce0e9",
+    "sampling_bucket": "position_spatial",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 2,
+      "count": 3,
+      "object": 3,
+      "position": 2
+    },
+    "skills": [
+      "count",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 774,
+    "vqa_list": [
+      [
+        "How many chairs are in the image?",
+        "four"
+      ],
+      [
+        "Are there any chairs in the image?",
+        "Yes"
+      ],
+      [
+        "Are the chairs under the mushrooms?",
+        "Yes"
+      ],
+      [
+        "How many mushrooms are in the image?",
+        "two"
+      ],
+      [
+        "Are the mushrooms blue?",
+        "Yes"
+      ],
+      [
+        "Are there any mushrooms in the image?",
+        "Yes"
+      ],
+      [
+        "Are the mushrooms to the left of the birds?",
+        "Yes"
+      ],
+      [
+        "How many birds are in the image?",
+        "three"
+      ],
+      [
+        "Are the birds wooden?",
+        "Yes"
+      ],
+      [
+        "Are there any birds in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "trajectory_id": "geneval2_00774_0a5ce0e9"
+}

@@ -1,0 +1,164 @@
+{
+  "candidate_id": "geneval2_00732_f84861c3_cand_00",
+  "generation": {
+    "generation_metadata": {
+      "candidate_index": 0,
+      "generation_prompt_source": "initial_plan",
+      "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00732_f84861c3.json",
+      "manifest_prompt_index": 30,
+      "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+      "sample_id": "geneval2_00732_f84861c3"
+    },
+    "generator_name": "qwen-image-2512",
+    "image_id": "geneval2_00732_f84861c3_cand_00",
+    "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00030/samples/00000.png",
+    "prompt_used": "A clear scene with exactly one glass horse in the background. In front of the glass horse stand exactly three green giraffes, all fully visible and separated from each other. Under the three green giraffes are exactly five striped raccoons, all fully visible and separated from each other. The five raccoons are below the giraffes, and the three giraffes are in front of the glass horse. Avoid occlusion, keep every animal easy to count, and do not include any additional animals.",
+    "seed": 1150
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "eval_lookup_key": "",
+    "image_path_is_artifact_reference": true,
+    "teacher_uses_image_bytes": false
+  },
+  "previous_action": null,
+  "previous_initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly five raccoons, exactly three giraffes, and exactly one horse.",
+      "Bind stripes only to the five raccoons, green color only to the three giraffes, and glass material only to the one horse.",
+      "Arrange the five raccoons below the three giraffes.",
+      "Arrange the three green giraffes in front of the glass horse.",
+      "Keep all animals fully visible and separated enough to count; avoid occlusion between raccoons, giraffes, and horse.",
+      "Do not add extra raccoons, giraffes, horses, or other animals."
+    ],
+    "generation_strategy": "Use a clear layered composition with the single glass horse in the back, the three green giraffes in the middle foreground in front of the horse, and the five striped raccoons lower in the image underneath the giraffes. Space each animal apart so exact counts and attributes are easy to verify.",
+    "initial_prompt": "A clear scene with exactly one glass horse in the background. In front of the glass horse stand exactly three green giraffes, all fully visible and separated from each other. Under the three green giraffes are exactly five striped raccoons, all fully visible and separated from each other. The five raccoons are below the giraffes, and the three giraffes are in front of the glass horse. Avoid occlusion, keep every animal easy to count, and do not include any additional animals.",
+    "parsed_constraints": {
+      "attributes": {
+        "giraffes": [
+          "green"
+        ],
+        "horse": [
+          "glass"
+        ],
+        "raccoons": [
+          "striped"
+        ]
+      },
+      "counts": {
+        "giraffes": 3,
+        "horse": 1,
+        "raccoons": 5
+      },
+      "objects": [
+        "raccoons",
+        "giraffes",
+        "horse"
+      ],
+      "relations": [
+        "five striped raccoons under three green giraffes",
+        "three green giraffes in front of one glass horse"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ]
+  },
+  "prompt_id": "geneval2_00732_f84861c3",
+  "retry_history": [],
+  "round": 0,
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "five striped raccoons under three green giraffes in front of a glass horse",
+    "prompt": "five striped raccoons under three green giraffes in front of a glass horse",
+    "prompt_id": "geneval2_00732_f84861c3",
+    "sampling_bucket": "attribute",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 3,
+      "count": 3,
+      "object": 3,
+      "position": 2
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 732,
+    "vqa_list": [
+      [
+        "How many raccoons are in the image?",
+        "five"
+      ],
+      [
+        "Are the raccoons striped?",
+        "Yes"
+      ],
+      [
+        "Are there any raccoons in the image?",
+        "Yes"
+      ],
+      [
+        "Are the raccoons under the giraffes?",
+        "Yes"
+      ],
+      [
+        "How many giraffes are in the image?",
+        "three"
+      ],
+      [
+        "Are the giraffes green?",
+        "Yes"
+      ],
+      [
+        "Are there any giraffes in the image?",
+        "Yes"
+      ],
+      [
+        "Are the giraffes in front of the horse?",
+        "Yes"
+      ],
+      [
+        "How many horses are in the image?",
+        "one"
+      ],
+      [
+        "Is the horse glass?",
+        "Yes"
+      ],
+      [
+        "Are there any horses in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "trajectory_id": "geneval2_00732_f84861c3"
+}

@@ -1,0 +1,1525 @@
+{
+  "candidate_id": "geneval2_00531_278a7825_cand_00",
+  "evaluation": {
+    "critical_failure_types": [
+      "attribute_mismatch",
+      "count_mismatch"
+    ],
+    "failed_constraints": [
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cats are in the image?",
+          "score": 1.0086587844156786e-07,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.00866e-07",
+        "expected": "one",
+        "status": "failed",
+        "target": "How many cats are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the cat metal?",
+          "score": 3.0073108353345646e-05,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=3.00731e-05",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Is the cat metal?",
+        "type": "attribute_mismatch"
+      }
+    ],
+    "passed": false,
+    "passed_constraints": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cookies are in the image?",
+          "score": 1.0,
+          "skill": "count"
+        },
+        "detected": "soft_score=1",
+        "expected": "one",
+        "status": "passed",
+        "target": "How many cookies are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the cookie sparkling?",
+          "score": 0.9999999529391062,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=1",
+        "expected": "Yes",
+        "status": "passed",
+        "target": "Is the cookie sparkling?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 2,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any cookies in the image?",
+          "score": 1.0,
+          "skill": "object"
+        },
+        "detected": "soft_score=1",
+        "expected": "Yes",
+        "status": "passed",
+        "target": "Are there any cookies in the image?",
+        "type": "missing_object"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the cookie to the right of the cat?",
+          "score": 0.9999886027565026,
+          "skill": "position"
+        },
+        "detected": "soft_score=0.999989",
+        "expected": "Yes",
+        "status": "passed",
+        "target": "Is the cookie to the right of the cat?",
+        "type": "spatial_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 6,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any cats in the image?",
+          "score": 0.9999999600877345,
+          "skill": "object"
+        },
+        "detected": "soft_score=1",
+        "expected": "Yes",
+        "status": "passed",
+        "target": "Are there any cats in the image?",
+        "type": "missing_object"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the cat jumping over the monkey?",
+          "score": 0.9999031577649475,
+          "skill": "verb"
+        },
+        "detected": "soft_score=0.999903",
+        "expected": "Yes",
+        "status": "passed",
+        "target": "Is the cat jumping over the monkey?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many monkeys are in the image?",
+          "score": 0.9999999033863062,
+          "skill": "count"
+        },
+        "detected": "soft_score=1",
+        "expected": "one",
+        "status": "passed",
+        "target": "How many monkeys are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 9,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the monkey sparkling?",
+          "score": 1.0,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=1",
+        "expected": "Yes",
+        "status": "passed",
+        "target": "Is the monkey sparkling?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 10,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any monkeys in the image?",
+          "score": 1.0,
+          "skill": "object"
+        },
+        "detected": "soft_score=1",
+        "expected": "Yes",
+        "status": "passed",
+        "target": "Are there any monkeys in the image?",
+        "type": "missing_object"
+      }
+    ],
+    "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+    "raw_report": {
+      "diagnostic_atom_threshold": 0.9,
+      "group_id": "geneval2_00531_278a7825_cand_00",
+      "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+      "rows": [
+        {
+          "answer": "one",
+          "atom_count": 8,
+          "atom_index": 0,
+          "candidate_id": "geneval2_00531_278a7825_cand_00",
+          "candidate_index": 0,
+          "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00064/samples/00000.png",
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00064/samples/00000.png",
+          "prompt": "a sparkling cookie to the right of a metal cat jumping over a sparkling monkey",
+          "prompt_id": "geneval2_00531_278a7825",
+          "question": "How many cookies are in the image?",
+          "score": 1.0000000062769827,
+          "skill": "count",
+          "source_index": 531
+        },
+        {
+          "answer": "Yes",
+          "atom_count": 8,
+          "atom_index": 1,
+          "candidate_id": "geneval2_00531_278a7825_cand_00",
+          "candidate_index": 0,
+          "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00064/samples/00000.png",
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00064/samples/00000.png",
+          "prompt": "a sparkling cookie to the right of a metal cat jumping over a sparkling monkey",
+          "prompt_id": "geneval2_00531_278a7825",
+          "question": "Is the cookie sparkling?",
+          "score": 0.9999999529391062,
+          "skill": "attribute",
+          "source_index": 531
+        },
+        {
+          "answer": "Yes",
+          "atom_count": 8,
+          "atom_index": 2,
+          "candidate_id": "geneval2_00531_278a7825_cand_00",
+          "candidate_index": 0,
+          "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00064/samples/00000.png",
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00064/samples/00000.png",
+          "prompt": "a sparkling cookie to the right of a metal cat jumping over a sparkling monkey",
+          "prompt_id": "geneval2_00531_278a7825",
+          "question": "Are there any cookies in the image?",
+          "score": 1.0000000269849352,
+          "skill": "object",
+          "source_index": 531
+        },
+        {
+          "answer": "Yes",
+          "atom_count": 8,
+          "atom_index": 3,
+          "candidate_id": "geneval2_00531_278a7825_cand_00",
+          "candidate_index": 0,
+          "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00064/samples/00000.png",
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00064/samples/00000.png",
+          "prompt": "a sparkling cookie to the right of a metal cat jumping over a sparkling monkey",
+          "prompt_id": "geneval2_00531_278a7825",
+          "question": "Is the cookie to the right of the cat?",
+          "score": 0.9999886027565026,
+          "skill": "position",
+          "source_index": 531
+        },
+        {
+          "answer": "one",
+          "atom_count": 8,
+          "atom_index": 4,
+          "candidate_id": "geneval2_00531_278a7825_cand_00",
+          "candidate_index": 0,
+          "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00064/samples/00000.png",
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00064/samples/00000.png",
+          "prompt": "a sparkling cookie to the right of a metal cat jumping over a sparkling monkey",
+          "prompt_id": "geneval2_00531_278a7825",
+          "question": "How many cats are in the image?",
+          "score": 1.0086587844156786e-07,
+          "skill": "count",
+          "source_index": 531
+        },
+        {
+          "answer": "Yes",
+          "atom_count": 8,
+          "atom_index": 5,
+          "candidate_id": "geneval2_00531_278a7825_cand_00",
+          "candidate_index": 0,
+          "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00064/samples/00000.png",
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00064/samples/00000.png",
+          "prompt": "a sparkling cookie to the right of a metal cat jumping over a sparkling monkey",
+          "prompt_id": "geneval2_00531_278a7825",
+          "question": "Is the cat metal?",
+          "score": 3.0073108353345646e-05,
+          "skill": "attribute",
+          "source_index": 531
+        },
+        {
+          "answer": "Yes",
+          "atom_count": 8,
+          "atom_index": 6,
+          "candidate_id": "geneval2_00531_278a7825_cand_00",
+          "candidate_index": 0,
+          "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00064/samples/00000.png",
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00064/samples/00000.png",
+          "prompt": "a sparkling cookie to the right of a metal cat jumping over a sparkling monkey",
+          "prompt_id": "geneval2_00531_278a7825",
+          "question": "Are there any cats in the image?",
+          "score": 0.9999999600877345,
+          "skill": "object",
+          "source_index": 531
+        },
+        {
+          "answer": "Yes",
+          "atom_count": 8,
+          "atom_index": 7,
+          "candidate_id": "geneval2_00531_278a7825_cand_00",
+          "candidate_index": 0,
+          "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00064/samples/00000.png",
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00064/samples/00000.png",
+          "prompt": "a sparkling cookie to the right of a metal cat jumping over a sparkling monkey",
+          "prompt_id": "geneval2_00531_278a7825",
+          "question": "Is the cat jumping over the monkey?",
+          "score": 0.9999031577649475,
+          "skill": "verb",
+          "source_index": 531
+        },
+        {
+          "answer": "one",
+          "atom_count": 8,
+          "atom_index": 8,
+          "candidate_id": "geneval2_00531_278a7825_cand_00",
+          "candidate_index": 0,
+          "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00064/samples/00000.png",
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00064/samples/00000.png",
+          "prompt": "a sparkling cookie to the right of a metal cat jumping over a sparkling monkey",
+          "prompt_id": "geneval2_00531_278a7825",
+          "question": "How many monkeys are in the image?",
+          "score": 0.9999999033863062,
+          "skill": "count",
+          "source_index": 531
+        },
+        {
+          "answer": "Yes",
+          "atom_count": 8,
+          "atom_index": 9,
+          "candidate_id": "geneval2_00531_278a7825_cand_00",
+          "candidate_index": 0,
+          "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00064/samples/00000.png",
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00064/samples/00000.png",
+          "prompt": "a sparkling cookie to the right of a metal cat jumping over a sparkling monkey",
+          "prompt_id": "geneval2_00531_278a7825",
+          "question": "Is the monkey sparkling?",
+          "score": 1.0000000190048013,
+          "skill": "attribute",
+          "source_index": 531
+        },
+        {
+          "answer": "Yes",
+          "atom_count": 8,
+          "atom_index": 10,
+          "candidate_id": "geneval2_00531_278a7825_cand_00",
+          "candidate_index": 0,
+          "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00064/samples/00000.png",
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00064/samples/00000.png",
+          "prompt": "a sparkling cookie to the right of a metal cat jumping over a sparkling monkey",
+          "prompt_id": "geneval2_00531_278a7825",
+          "question": "Are there any monkeys in the image?",
+          "score": 1.0000000616055331,
+          "skill": "object",
+          "source_index": 531
+        }
+      ],
+      "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+      "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+    },
+    "score": 0.8181747046280753,
+    "uncertain_constraints": []
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cats are in the image?",
+          "score": 1.0086587844156786e-07,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.00866e-07",
+        "expected": "one",
+        "status": "failed",
+        "target": "How many cats are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the cat metal?",
+          "score": 3.0073108353345646e-05,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=3.00731e-05",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Is the cat metal?",
+        "type": "attribute_mismatch"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00064/samples/00000.png",
+    "best_so_far_prompt": "A clear image with exactly three main objects: one sparkling monkey near the lower center, one metal cat above it in midair jumping over the sparkling monkey, and one sparkling cookie positioned clearly to the right of the metal cat. The cookie is sparkling, the cat has a metallic appearance, and the monkey is sparkling. Keep all three objects fully visible, separated, unobstructed, and easy to count. No additional cats, monkeys, or cookies.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.8181747046280753,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cats are in the image?",
+          "score": 1.0086587844156786e-07,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.00866e-07",
+        "expected": "one",
+        "status": "failed",
+        "target": "How many cats are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the cat metal?",
+          "score": 3.0073108353345646e-05,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=3.00731e-05",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Is the cat metal?",
+        "type": "attribute_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly one cookie, exactly one cat, and exactly one monkey; do not add extra animals or cookies.",
+        "Bind attributes correctly: the cookie is sparkling, the cat is metal, and the monkey is sparkling.",
+        "Place the sparkling cookie clearly to the right of the metal cat.",
+        "Show the metal cat jumping over the sparkling monkey, with the cat visibly above the monkey and separated enough that both are clear.",
+        "Avoid occlusion so the cookie, cat, and monkey are all fully visible and countable."
+      ],
+      "generation_strategy": "Create a simple, uncluttered composition with three distinct subjects. Put the sparkling monkey lower in the scene, the metal cat above it in a jumping pose, and the sparkling cookie on the right side of the cat. Use clear spacing and visibility to preserve the spatial relation and action.",
+      "initial_prompt": "A clear image with exactly three main objects: one sparkling monkey near the lower center, one metal cat above it in midair jumping over the sparkling monkey, and one sparkling cookie positioned clearly to the right of the metal cat. The cookie is sparkling, the cat has a metallic appearance, and the monkey is sparkling. Keep all three objects fully visible, separated, unobstructed, and easy to count. No additional cats, monkeys, or cookies.",
+      "parsed_constraints": {
+        "attributes": {
+          "cat": [
+            "metal"
+          ],
+          "cookie": [
+            "sparkling"
+          ],
+          "monkey": [
+            "sparkling"
+          ]
+        },
+        "counts": {
+          "cat": 1,
+          "cookie": 1,
+          "monkey": 1
+        },
+        "objects": [
+          "cookie",
+          "cat",
+          "monkey"
+        ],
+        "relations": [
+          "cookie to the right of cat",
+          "cat jumping over monkey"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.818 failed=['How many cats are in the image?', 'Is the cat metal?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "prompt_id": "geneval2_00531_278a7825",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The verifier found the cat present and correctly related to the monkey, but failed the exact cat count and failed the cat's metal attribute. The retry must make there be exactly one visually separable cat and make that specific cat unmistakably metallic, while preserving the already-passed single sparkling cookie to the right of the cat, single sparkling monkey, and cat jumping over the monkey relation.",
+    "expected_improvement": [
+      "Exact cat count should improve by showing one isolated complete cat and explicitly forbidding any other cats, cat-like duplicates, or extra animal figures.",
+      "Metal cat attribute should improve by binding shiny chrome/silver metal material only to the cat with strong metallic visual cues.",
+      "Previously passed cookie, monkey, sparkling attributes, and spatial/action relations should remain stable through an uncluttered three-object layout."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "attribute_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly one cookie visible.",
+      "Keep the cookie sparkling.",
+      "Keep the sparkling cookie clearly to the right of the cat.",
+      "Keep exactly one monkey visible.",
+      "Keep the monkey sparkling.",
+      "Keep the cat jumping over the monkey, with the cat above the monkey in midair.",
+      "Keep the cat, cookie, and monkey fully visible, separated, unobstructed, and easy to verify."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt mentioned a metal cat, but it did not make the metal material visually dominant enough, and the composition may have allowed ambiguity in the cat count through duplicates, extra cat-like shapes, or unclear separability. It relied on a general 'exactly three main objects' clause rather than making the single cat the unmistakable only cat in the scene.",
+      "error_source": "Insufficient emphasis on quantity_counting and attribute_binding for the cat, especially negative constraints against extra or duplicate cats and concrete visual cues for metal material."
+    },
+    "regeneration_strategy": "Use a simple three-subject composition with the cat as one large, isolated, shiny chrome/silver metallic cat in midair above the sparkling monkey. Keep the sparkling cookie clearly to the cat's right. Strengthen count control by repeating exact counts and forbidding extra cats, duplicate cats, cat reflections, or additional animal figures. Strengthen attribute binding by describing only the cat as polished metal/chrome while leaving the cookie and monkey sparkling.",
+    "regression_risks": [
+      "The generator could add another cat or a cat-like duplicate while depicting motion or shine.",
+      "The metallic shine could be applied to the cookie or monkey instead of only the cat.",
+      "The cookie could drift from the right side of the cat if the layout is not kept simple.",
+      "The cat-over-monkey relation could become unclear if objects overlap or are cropped."
+    ],
+    "repair_constraints": [
+      "Show exactly one cat, not zero and not more than one; make the single cat a complete, isolated, countable figure.",
+      "Make the one cat unmistakably metal: a shiny silver/chrome metallic cat with reflective metal surface, and bind this material only to the cat.",
+      "Do not include any additional cats, duplicate cats, cat silhouettes, or cat-shaped reflections.",
+      "Keep exactly one sparkling cookie to the right of the metal cat.",
+      "Keep exactly one sparkling monkey below the cat, with the metal cat jumping over it."
+    ],
+    "retry_prompt": "A clean, uncluttered image with exactly three visible subjects: exactly one sparkling monkey near the lower center, exactly one shiny silver chrome metal cat in midair directly above the monkey, jumping over the monkey, and exactly one sparkling cookie clearly positioned to the right of the metal cat. The cat is the only cat in the scene: one complete isolated metallic cat with a polished reflective metal surface, visible head, body, legs, and tail, easy to count. The monkey is sparkling and below the cat. The cookie is sparkling and to the right of the cat. Keep all three subjects fully visible, separated, unobstructed, and countable. No additional cats, no duplicate cats, no cat silhouettes or cat-shaped reflections, no extra monkeys, and no extra cookies.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "negative_constraints",
+        "clarity_visibility",
+        "object_presence",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same valid skill set but shift emphasis toward quantity_counting, attribute_binding, and negative_constraints for the persistent cat count and metal-attribute failures, while retaining spatial_layout and visibility skills to preserve passed relations and objects."
+    }
+  },
+  "round": 0,
+  "schema_version": "v1",
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The verifier found the cat present and correctly related to the monkey, but failed the exact cat count and failed the cat's metal attribute. The retry must make there be exactly one visually separable cat and make that specific cat unmistakably metallic, while preserving the already-passed single sparkling cookie to the right of the cat, single sparkling monkey, and cat jumping over the monkey relation.",
+    "expected_improvement": [
+      "Exact cat count should improve by showing one isolated complete cat and explicitly forbidding any other cats, cat-like duplicates, or extra animal figures.",
+      "Metal cat attribute should improve by binding shiny chrome/silver metal material only to the cat with strong metallic visual cues.",
+      "Previously passed cookie, monkey, sparkling attributes, and spatial/action relations should remain stable through an uncluttered three-object layout."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "attribute_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly one cookie visible.",
+      "Keep the cookie sparkling.",
+      "Keep the sparkling cookie clearly to the right of the cat.",
+      "Keep exactly one monkey visible.",
+      "Keep the monkey sparkling.",
+      "Keep the cat jumping over the monkey, with the cat above the monkey in midair.",
+      "Keep the cat, cookie, and monkey fully visible, separated, unobstructed, and easy to verify."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt mentioned a metal cat, but it did not make the metal material visually dominant enough, and the composition may have allowed ambiguity in the cat count through duplicates, extra cat-like shapes, or unclear separability. It relied on a general 'exactly three main objects' clause rather than making the single cat the unmistakable only cat in the scene.",
+      "error_source": "Insufficient emphasis on quantity_counting and attribute_binding for the cat, especially negative constraints against extra or duplicate cats and concrete visual cues for metal material."
+    },
+    "regeneration_strategy": "Use a simple three-subject composition with the cat as one large, isolated, shiny chrome/silver metallic cat in midair above the sparkling monkey. Keep the sparkling cookie clearly to the cat's right. Strengthen count control by repeating exact counts and forbidding extra cats, duplicate cats, cat reflections, or additional animal figures. Strengthen attribute binding by describing only the cat as polished metal/chrome while leaving the cookie and monkey sparkling.",
+    "regression_risks": [
+      "The generator could add another cat or a cat-like duplicate while depicting motion or shine.",
+      "The metallic shine could be applied to the cookie or monkey instead of only the cat.",
+      "The cookie could drift from the right side of the cat if the layout is not kept simple.",
+      "The cat-over-monkey relation could become unclear if objects overlap or are cropped."
+    ],
+    "repair_constraints": [
+      "Show exactly one cat, not zero and not more than one; make the single cat a complete, isolated, countable figure.",
+      "Make the one cat unmistakably metal: a shiny silver/chrome metallic cat with reflective metal surface, and bind this material only to the cat.",
+      "Do not include any additional cats, duplicate cats, cat silhouettes, or cat-shaped reflections.",
+      "Keep exactly one sparkling cookie to the right of the metal cat.",
+      "Keep exactly one sparkling monkey below the cat, with the metal cat jumping over it."
+    ],
+    "retry_prompt": "A clean, uncluttered image with exactly three visible subjects: exactly one sparkling monkey near the lower center, exactly one shiny silver chrome metal cat in midair directly above the monkey, jumping over the monkey, and exactly one sparkling cookie clearly positioned to the right of the metal cat. The cat is the only cat in the scene: one complete isolated metallic cat with a polished reflective metal surface, visible head, body, legs, and tail, easy to count. The monkey is sparkling and below the cat. The cookie is sparkling and to the right of the cat. Keep all three subjects fully visible, separated, unobstructed, and countable. No additional cats, no duplicate cats, no cat silhouettes or cat-shaped reflections, no extra monkeys, and no extra cookies.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "negative_constraints",
+        "clarity_visibility",
+        "object_presence",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same valid skill set but shift emphasis toward quantity_counting, attribute_binding, and negative_constraints for the persistent cat count and metal-attribute failures, while retaining spatial_layout and visibility skills to preserve passed relations and objects."
+    }
+  },
+  "teacher_error": "",
+  "teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cats are in the image?",
+            "score": 1.0086587844156786e-07,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.00866e-07",
+          "expected": "one",
+          "status": "failed",
+          "target": "How many cats are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the cat metal?",
+            "score": 3.0073108353345646e-05,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=3.00731e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the cat metal?",
+          "type": "attribute_mismatch"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00064/samples/00000.png",
+      "prompt": "A clear image with exactly three main objects: one sparkling monkey near the lower center, one metal cat above it in midair jumping over the sparkling monkey, and one sparkling cookie positioned clearly to the right of the metal cat. The cookie is sparkling, the cat has a metallic appearance, and the monkey is sparkling. Keep all three objects fully visible, separated, unobstructed, and easy to count. No additional cats, monkeys, or cookies.",
+      "round": 0,
+      "score": 0.8181747046280753
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00531_278a7825_cand_00",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "count_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cats are in the image?",
+            "score": 1.0086587844156786e-07,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.00866e-07",
+          "expected": "one",
+          "status": "failed",
+          "target": "How many cats are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the cat metal?",
+            "score": 3.0073108353345646e-05,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=3.00731e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the cat metal?",
+          "type": "attribute_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cookies are in the image?",
+            "score": 1.0,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "one",
+          "status": "passed",
+          "target": "How many cookies are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the cookie sparkling?",
+            "score": 0.9999999529391062,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the cookie sparkling?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any cookies in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any cookies in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the cookie to the right of the cat?",
+            "score": 0.9999886027565026,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.999989",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the cookie to the right of the cat?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any cats in the image?",
+            "score": 0.9999999600877345,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any cats in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the cat jumping over the monkey?",
+            "score": 0.9999031577649475,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.999903",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the cat jumping over the monkey?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many monkeys are in the image?",
+            "score": 0.9999999033863062,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "one",
+          "status": "passed",
+          "target": "How many monkeys are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the monkey sparkling?",
+            "score": 1.0,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the monkey sparkling?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 10,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any monkeys in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any monkeys in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.8181747046280753,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cats are in the image?",
+              "score": 1.0086587844156786e-07,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.00866e-07",
+            "expected": "one",
+            "status": "failed",
+            "target": "How many cats are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the cat metal?",
+              "score": 3.0073108353345646e-05,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=3.00731e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the cat metal?",
+            "type": "attribute_mismatch"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00064/samples/00000.png",
+        "prompt": "A clear image with exactly three main objects: one sparkling monkey near the lower center, one metal cat above it in midair jumping over the sparkling monkey, and one sparkling cookie positioned clearly to the right of the metal cat. The cookie is sparkling, the cat has a metallic appearance, and the monkey is sparkling. Keep all three objects fully visible, separated, unobstructed, and easy to count. No additional cats, monkeys, or cookies.",
+        "round": 0,
+        "score": 0.8181747046280753
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cats are in the image?",
+            "score": 1.0086587844156786e-07,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.00866e-07",
+          "expected": "one",
+          "status": "failed",
+          "target": "How many cats are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the cat metal?",
+            "score": 3.0073108353345646e-05,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=3.00731e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the cat metal?",
+          "type": "attribute_mismatch"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "count_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cats are in the image?",
+            "score": 1.0086587844156786e-07,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.00866e-07",
+          "expected": "one",
+          "status": "failed",
+          "target": "How many cats are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the cat metal?",
+            "score": 3.0073108353345646e-05,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=3.00731e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the cat metal?",
+          "type": "attribute_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cookies are in the image?",
+            "score": 1.0,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "one",
+          "status": "passed",
+          "target": "How many cookies are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the cookie sparkling?",
+            "score": 0.9999999529391062,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the cookie sparkling?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any cookies in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any cookies in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the cookie to the right of the cat?",
+            "score": 0.9999886027565026,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.999989",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the cookie to the right of the cat?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any cats in the image?",
+            "score": 0.9999999600877345,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any cats in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the cat jumping over the monkey?",
+            "score": 0.9999031577649475,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.999903",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the cat jumping over the monkey?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many monkeys are in the image?",
+            "score": 0.9999999033863062,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "one",
+          "status": "passed",
+          "target": "How many monkeys are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the monkey sparkling?",
+            "score": 1.0,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the monkey sparkling?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 10,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any monkeys in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any monkeys in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.8181747046280753,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "a sparkling cookie to the right of a metal cat jumping over a sparkling monkey",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cats are in the image?",
+          "score": 1.0086587844156786e-07,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.00866e-07",
+        "expected": "one",
+        "status": "failed",
+        "target": "How many cats are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the cat metal?",
+          "score": 3.0073108353345646e-05,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=3.00731e-05",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Is the cat metal?",
+        "type": "attribute_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly one cookie, exactly one cat, and exactly one monkey; do not add extra animals or cookies.",
+        "Bind attributes correctly: the cookie is sparkling, the cat is metal, and the monkey is sparkling.",
+        "Place the sparkling cookie clearly to the right of the metal cat.",
+        "Show the metal cat jumping over the sparkling monkey, with the cat visibly above the monkey and separated enough that both are clear.",
+        "Avoid occlusion so the cookie, cat, and monkey are all fully visible and countable."
+      ],
+      "generation_strategy": "Create a simple, uncluttered composition with three distinct subjects. Put the sparkling monkey lower in the scene, the metal cat above it in a jumping pose, and the sparkling cookie on the right side of the cat. Use clear spacing and visibility to preserve the spatial relation and action.",
+      "initial_prompt": "A clear image with exactly three main objects: one sparkling monkey near the lower center, one metal cat above it in midair jumping over the sparkling monkey, and one sparkling cookie positioned clearly to the right of the metal cat. The cookie is sparkling, the cat has a metallic appearance, and the monkey is sparkling. Keep all three objects fully visible, separated, unobstructed, and easy to count. No additional cats, monkeys, or cookies.",
+      "parsed_constraints": {
+        "attributes": {
+          "cat": [
+            "metal"
+          ],
+          "cookie": [
+            "sparkling"
+          ],
+          "monkey": [
+            "sparkling"
+          ]
+        },
+        "counts": {
+          "cat": 1,
+          "cookie": 1,
+          "monkey": 1
+        },
+        "objects": [
+          "cookie",
+          "cat",
+          "monkey"
+        ],
+        "relations": [
+          "cookie to the right of cat",
+          "cat jumping over monkey"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly one cookie, exactly one cat, and exactly one monkey; do not add extra animals or cookies.",
+        "Bind attributes correctly: the cookie is sparkling, the cat is metal, and the monkey is sparkling.",
+        "Place the sparkling cookie clearly to the right of the metal cat.",
+        "Show the metal cat jumping over the sparkling monkey, with the cat visibly above the monkey and separated enough that both are clear.",
+        "Avoid occlusion so the cookie, cat, and monkey are all fully visible and countable."
+      ],
+      "generation_strategy": "Create a simple, uncluttered composition with three distinct subjects. Put the sparkling monkey lower in the scene, the metal cat above it in a jumping pose, and the sparkling cookie on the right side of the cat. Use clear spacing and visibility to preserve the spatial relation and action.",
+      "initial_prompt": "A clear image with exactly three main objects: one sparkling monkey near the lower center, one metal cat above it in midair jumping over the sparkling monkey, and one sparkling cookie positioned clearly to the right of the metal cat. The cookie is sparkling, the cat has a metallic appearance, and the monkey is sparkling. Keep all three objects fully visible, separated, unobstructed, and easy to count. No additional cats, monkeys, or cookies.",
+      "parsed_constraints": {
+        "attributes": {
+          "cat": [
+            "metal"
+          ],
+          "cookie": [
+            "sparkling"
+          ],
+          "monkey": [
+            "sparkling"
+          ]
+        },
+        "counts": {
+          "cat": 1,
+          "cookie": 1,
+          "monkey": 1
+        },
+        "objects": [
+          "cookie",
+          "cat",
+          "monkey"
+        ],
+        "relations": [
+          "cookie to the right of cat",
+          "cat jumping over monkey"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ]
+    },
+    "previous_prompt": "A clear image with exactly three main objects: one sparkling monkey near the lower center, one metal cat above it in midair jumping over the sparkling monkey, and one sparkling cookie positioned clearly to the right of the metal cat. The cookie is sparkling, the cat has a metallic appearance, and the monkey is sparkling. Keep all three objects fully visible, separated, unobstructed, and easy to count. No additional cats, monkeys, or cookies.",
+    "previous_selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ],
+    "prompt_id": "geneval2_00531_278a7825",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "count_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cats are in the image?",
+              "score": 1.0086587844156786e-07,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.00866e-07",
+            "expected": "one",
+            "status": "failed",
+            "target": "How many cats are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the cat metal?",
+              "score": 3.0073108353345646e-05,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=3.00731e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the cat metal?",
+            "type": "attribute_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cookies are in the image?",
+              "score": 1.0,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "one",
+            "status": "passed",
+            "target": "How many cookies are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the cookie sparkling?",
+              "score": 0.9999999529391062,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Is the cookie sparkling?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any cookies in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any cookies in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the cookie to the right of the cat?",
+              "score": 0.9999886027565026,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.999989",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Is the cookie to the right of the cat?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any cats in the image?",
+              "score": 0.9999999600877345,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any cats in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the cat jumping over the monkey?",
+              "score": 0.9999031577649475,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.999903",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Is the cat jumping over the monkey?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many monkeys are in the image?",
+              "score": 0.9999999033863062,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "one",
+            "status": "passed",
+            "target": "How many monkeys are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the monkey sparkling?",
+              "score": 1.0,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Is the monkey sparkling?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 10,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any monkeys in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any monkeys in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly one cookie, exactly one cat, and exactly one monkey; do not add extra animals or cookies.",
+            "Bind attributes correctly: the cookie is sparkling, the cat is metal, and the monkey is sparkling.",
+            "Place the sparkling cookie clearly to the right of the metal cat.",
+            "Show the metal cat jumping over the sparkling monkey, with the cat visibly above the monkey and separated enough that both are clear.",
+            "Avoid occlusion so the cookie, cat, and monkey are all fully visible and countable."
+          ],
+          "generation_strategy": "Create a simple, uncluttered composition with three distinct subjects. Put the sparkling monkey lower in the scene, the metal cat above it in a jumping pose, and the sparkling cookie on the right side of the cat. Use clear spacing and visibility to preserve the spatial relation and action.",
+          "initial_prompt": "A clear image with exactly three main objects: one sparkling monkey near the lower center, one metal cat above it in midair jumping over the sparkling monkey, and one sparkling cookie positioned clearly to the right of the metal cat. The cookie is sparkling, the cat has a metallic appearance, and the monkey is sparkling. Keep all three objects fully visible, separated, unobstructed, and easy to count. No additional cats, monkeys, or cookies.",
+          "parsed_constraints": {
+            "attributes": {
+              "cat": [
+                "metal"
+              ],
+              "cookie": [
+                "sparkling"
+              ],
+              "monkey": [
+                "sparkling"
+              ]
+            },
+            "counts": {
+              "cat": 1,
+              "cookie": 1,
+              "monkey": 1
+            },
+            "objects": [
+              "cookie",
+              "cat",
+              "monkey"
+            ],
+            "relations": [
+              "cookie to the right of cat",
+              "cat jumping over monkey"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly one cookie, exactly one cat, and exactly one monkey; do not add extra animals or cookies.",
+            "Bind attributes correctly: the cookie is sparkling, the cat is metal, and the monkey is sparkling.",
+            "Place the sparkling cookie clearly to the right of the metal cat.",
+            "Show the metal cat jumping over the sparkling monkey, with the cat visibly above the monkey and separated enough that both are clear.",
+            "Avoid occlusion so the cookie, cat, and monkey are all fully visible and countable."
+          ],
+          "generation_strategy": "Create a simple, uncluttered composition with three distinct subjects. Put the sparkling monkey lower in the scene, the metal cat above it in a jumping pose, and the sparkling cookie on the right side of the cat. Use clear spacing and visibility to preserve the spatial relation and action.",
+          "initial_prompt": "A clear image with exactly three main objects: one sparkling monkey near the lower center, one metal cat above it in midair jumping over the sparkling monkey, and one sparkling cookie positioned clearly to the right of the metal cat. The cookie is sparkling, the cat has a metallic appearance, and the monkey is sparkling. Keep all three objects fully visible, separated, unobstructed, and easy to count. No additional cats, monkeys, or cookies.",
+          "parsed_constraints": {
+            "attributes": {
+              "cat": [
+                "metal"
+              ],
+              "cookie": [
+                "sparkling"
+              ],
+              "monkey": [
+                "sparkling"
+              ]
+            },
+            "counts": {
+              "cat": 1,
+              "cookie": 1,
+              "monkey": 1
+            },
+            "objects": [
+              "cookie",
+              "cat",
+              "monkey"
+            ],
+            "relations": [
+              "cookie to the right of cat",
+              "cat jumping over monkey"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "prompt_used": "A clear image with exactly three main objects: one sparkling monkey near the lower center, one metal cat above it in midair jumping over the sparkling monkey, and one sparkling cookie positioned clearly to the right of the metal cat. The cookie is sparkling, the cat has a metallic appearance, and the monkey is sparkling. Keep all three objects fully visible, separated, unobstructed, and easy to count. No additional cats, monkeys, or cookies.",
+        "round": 0,
+        "score": 0.8181747046280753,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cats are in the image?",
+                "score": 1.0086587844156786e-07,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.00866e-07",
+              "expected": "one",
+              "status": "failed",
+              "target": "How many cats are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the cat metal?",
+                "score": 3.0073108353345646e-05,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=3.00731e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the cat metal?",
+              "type": "attribute_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00531_278a7825"
+  },
+  "trajectory_id": "geneval2_00531_278a7825",
+  "trajectory_path": "data/raw_trajectories/geneval2_balanced_100x5_round0_gpt55/geneval2_00531_278a7825__geneval2_00531_278a7825_cand_00.json"
+}

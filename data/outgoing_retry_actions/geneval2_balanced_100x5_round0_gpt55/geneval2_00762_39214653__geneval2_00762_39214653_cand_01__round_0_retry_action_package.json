@@ -1,0 +1,1591 @@
+{
+  "candidate_id": "geneval2_00762_39214653_cand_01",
+  "evaluation": {
+    "critical_failure_types": [
+      "attribute_mismatch",
+      "count_mismatch",
+      "relation_mismatch"
+    ],
+    "failed_constraints": [
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the dogs jumping over the horses?",
+          "score": 0.26887044761999235,
+          "skill": "verb"
+        },
+        "detected": "soft_score=0.26887",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the dogs jumping over the horses?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many horses are in the image?",
+          "score": 8.338476050690012e-07,
+          "skill": "count"
+        },
+        "detected": "soft_score=8.33848e-07",
+        "expected": "five",
+        "status": "failed",
+        "target": "How many horses are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the horses sparkling?",
+          "score": 0.126192182340219,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.126192",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the horses sparkling?",
+        "type": "attribute_mismatch"
+      }
+    ],
+    "passed": false,
+    "passed_constraints": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many dogs are in the image?",
+          "score": 1.0,
+          "skill": "count"
+        },
+        "detected": "soft_score=1",
+        "expected": "two",
+        "status": "passed",
+        "target": "How many dogs are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the dogs pink?",
+          "score": 0.9999999870778993,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=1",
+        "expected": "Yes",
+        "status": "passed",
+        "target": "Are the dogs pink?",
+        "type": "color_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 2,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any dogs in the image?",
+          "score": 0.9999998960920493,
+          "skill": "object"
+        },
+        "detected": "soft_score=1",
+        "expected": "Yes",
+        "status": "passed",
+        "target": "Are there any dogs in the image?",
+        "type": "missing_object"
+      },
+      {
+        "details": {
+          "atom_index": 6,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any horses in the image?",
+          "score": 1.0,
+          "skill": "object"
+        },
+        "detected": "soft_score=1",
+        "expected": "Yes",
+        "status": "passed",
+        "target": "Are there any horses in the image?",
+        "type": "missing_object"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the horses to the left of the car?",
+          "score": 0.9999999416029519,
+          "skill": "position"
+        },
+        "detected": "soft_score=1",
+        "expected": "Yes",
+        "status": "passed",
+        "target": "Are the horses to the left of the car?",
+        "type": "spatial_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cars are in the image?",
+          "score": 0.9999999748343459,
+          "skill": "count"
+        },
+        "detected": "soft_score=1",
+        "expected": "one",
+        "status": "passed",
+        "target": "How many cars are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 9,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the car brown?",
+          "score": 0.999999921885319,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=1",
+        "expected": "Yes",
+        "status": "passed",
+        "target": "Is the car brown?",
+        "type": "color_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 10,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any cars in the image?",
+          "score": 1.0,
+          "skill": "object"
+        },
+        "detected": "soft_score=1",
+        "expected": "Yes",
+        "status": "passed",
+        "target": "Are there any cars in the image?",
+        "type": "missing_object"
+      }
+    ],
+    "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+    "raw_report": {
+      "diagnostic_atom_threshold": 0.9,
+      "group_id": "geneval2_00762_39214653_cand_01",
+      "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+      "rows": [
+        {
+          "answer": "two",
+          "atom_count": 10,
+          "atom_index": 0,
+          "candidate_id": "geneval2_00762_39214653_cand_01",
+          "candidate_index": 1,
+          "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00008/samples/00001.png",
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00008/samples/00001.png",
+          "prompt": "two pink dogs jumping over five sparkling horses to the left of a brown car",
+          "prompt_id": "geneval2_00762_39214653",
+          "question": "How many dogs are in the image?",
+          "score": 1.000000062527053,
+          "skill": "count",
+          "source_index": 762
+        },
+        {
+          "answer": "Yes",
+          "atom_count": 10,
+          "atom_index": 1,
+          "candidate_id": "geneval2_00762_39214653_cand_01",
+          "candidate_index": 1,
+          "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00008/samples/00001.png",
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00008/samples/00001.png",
+          "prompt": "two pink dogs jumping over five sparkling horses to the left of a brown car",
+          "prompt_id": "geneval2_00762_39214653",
+          "question": "Are the dogs pink?",
+          "score": 0.9999999870778993,
+          "skill": "attribute",
+          "source_index": 762
+        },
+        {
+          "answer": "Yes",
+          "atom_count": 10,
+          "atom_index": 2,
+          "candidate_id": "geneval2_00762_39214653_cand_01",
+          "candidate_index": 1,
+          "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00008/samples/00001.png",
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00008/samples/00001.png",
+          "prompt": "two pink dogs jumping over five sparkling horses to the left of a brown car",
+          "prompt_id": "geneval2_00762_39214653",
+          "question": "Are there any dogs in the image?",
+          "score": 0.9999998960920493,
+          "skill": "object",
+          "source_index": 762
+        },
+        {
+          "answer": "Yes",
+          "atom_count": 10,
+          "atom_index": 3,
+          "candidate_id": "geneval2_00762_39214653_cand_01",
+          "candidate_index": 1,
+          "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00008/samples/00001.png",
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00008/samples/00001.png",
+          "prompt": "two pink dogs jumping over five sparkling horses to the left of a brown car",
+          "prompt_id": "geneval2_00762_39214653",
+          "question": "Are the dogs jumping over the horses?",
+          "score": 0.26887044761999235,
+          "skill": "verb",
+          "source_index": 762
+        },
+        {
+          "answer": "five",
+          "atom_count": 10,
+          "atom_index": 4,
+          "candidate_id": "geneval2_00762_39214653_cand_01",
+          "candidate_index": 1,
+          "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00008/samples/00001.png",
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00008/samples/00001.png",
+          "prompt": "two pink dogs jumping over five sparkling horses to the left of a brown car",
+          "prompt_id": "geneval2_00762_39214653",
+          "question": "How many horses are in the image?",
+          "score": 8.338476050690012e-07,
+          "skill": "count",
+          "source_index": 762
+        },
+        {
+          "answer": "Yes",
+          "atom_count": 10,
+          "atom_index": 5,
+          "candidate_id": "geneval2_00762_39214653_cand_01",
+          "candidate_index": 1,
+          "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00008/samples/00001.png",
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00008/samples/00001.png",
+          "prompt": "two pink dogs jumping over five sparkling horses to the left of a brown car",
+          "prompt_id": "geneval2_00762_39214653",
+          "question": "Are the horses sparkling?",
+          "score": 0.126192182340219,
+          "skill": "attribute",
+          "source_index": 762
+        },
+        {
+          "answer": "Yes",
+          "atom_count": 10,
+          "atom_index": 6,
+          "candidate_id": "geneval2_00762_39214653_cand_01",
+          "candidate_index": 1,
+          "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00008/samples/00001.png",
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00008/samples/00001.png",
+          "prompt": "two pink dogs jumping over five sparkling horses to the left of a brown car",
+          "prompt_id": "geneval2_00762_39214653",
+          "question": "Are there any horses in the image?",
+          "score": 1.000000002415618,
+          "skill": "object",
+          "source_index": 762
+        },
+        {
+          "answer": "Yes",
+          "atom_count": 10,
+          "atom_index": 7,
+          "candidate_id": "geneval2_00762_39214653_cand_01",
+          "candidate_index": 1,
+          "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00008/samples/00001.png",
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00008/samples/00001.png",
+          "prompt": "two pink dogs jumping over five sparkling horses to the left of a brown car",
+          "prompt_id": "geneval2_00762_39214653",
+          "question": "Are the horses to the left of the car?",
+          "score": 0.9999999416029519,
+          "skill": "position",
+          "source_index": 762
+        },
+        {
+          "answer": "one",
+          "atom_count": 10,
+          "atom_index": 8,
+          "candidate_id": "geneval2_00762_39214653_cand_01",
+          "candidate_index": 1,
+          "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00008/samples/00001.png",
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00008/samples/00001.png",
+          "prompt": "two pink dogs jumping over five sparkling horses to the left of a brown car",
+          "prompt_id": "geneval2_00762_39214653",
+          "question": "How many cars are in the image?",
+          "score": 0.9999999748343459,
+          "skill": "count",
+          "source_index": 762
+        },
+        {
+          "answer": "Yes",
+          "atom_count": 10,
+          "atom_index": 9,
+          "candidate_id": "geneval2_00762_39214653_cand_01",
+          "candidate_index": 1,
+          "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00008/samples/00001.png",
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00008/samples/00001.png",
+          "prompt": "two pink dogs jumping over five sparkling horses to the left of a brown car",
+          "prompt_id": "geneval2_00762_39214653",
+          "question": "Is the car brown?",
+          "score": 0.999999921885319,
+          "skill": "attribute",
+          "source_index": 762
+        },
+        {
+          "answer": "Yes",
+          "atom_count": 10,
+          "atom_index": 10,
+          "candidate_id": "geneval2_00762_39214653_cand_01",
+          "candidate_index": 1,
+          "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00008/samples/00001.png",
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00008/samples/00001.png",
+          "prompt": "two pink dogs jumping over five sparkling horses to the left of a brown car",
+          "prompt_id": "geneval2_00762_39214653",
+          "question": "Are there any cars in the image?",
+          "score": 1.0000000093295967,
+          "skill": "object",
+          "source_index": 762
+        }
+      ],
+      "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+      "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+    },
+    "score": 0.7631875623000347,
+    "uncertain_constraints": []
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the dogs jumping over the horses?",
+          "score": 0.26887044761999235,
+          "skill": "verb"
+        },
+        "detected": "soft_score=0.26887",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the dogs jumping over the horses?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many horses are in the image?",
+          "score": 8.338476050690012e-07,
+          "skill": "count"
+        },
+        "detected": "soft_score=8.33848e-07",
+        "expected": "five",
+        "status": "failed",
+        "target": "How many horses are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the horses sparkling?",
+          "score": 0.126192182340219,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.126192",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the horses sparkling?",
+        "type": "attribute_mismatch"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00008/samples/00001.png",
+    "best_so_far_prompt": "A clear side-view scene with exactly five sparkling horses arranged in a visible row on the left side of the image, all five horses fully visible and countable. Exactly one brown car is positioned to the right of the horses, with the horses clearly to the left of the car. Exactly two pink dogs are airborne above the five horses, visibly jumping over the horses. Keep the two pink dogs, five sparkling horses, and one brown car separated enough to count, with no hidden or occluded objects.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.7631875623000347,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the dogs jumping over the horses?",
+          "score": 0.26887044761999235,
+          "skill": "verb"
+        },
+        "detected": "soft_score=0.26887",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the dogs jumping over the horses?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many horses are in the image?",
+          "score": 8.338476050690012e-07,
+          "skill": "count"
+        },
+        "detected": "soft_score=8.33848e-07",
+        "expected": "five",
+        "status": "failed",
+        "target": "How many horses are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the horses sparkling?",
+          "score": 0.126192182340219,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.126192",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the horses sparkling?",
+        "type": "attribute_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly two dogs, exactly five horses, and exactly one car.",
+        "Bind pink color only to the two dogs, sparkling appearance to the five horses, and brown color to the single car.",
+        "Place all five sparkling horses to the left of the brown car.",
+        "Show both pink dogs jumping over the group of five sparkling horses, with the dogs visibly airborne above the horses.",
+        "Keep all animals and the car clearly visible and separated enough to count; avoid overlaps or occlusion that hide any dog, horse, or the car."
+      ],
+      "generation_strategy": "Use a clear side-view composition with the five sparkling horses arranged in a visible row on the left side of the image, the single brown car on the right, and the two pink dogs airborne above the horses to make the jumping-over relation unambiguous. Maintain count clarity and attribute binding by separating objects and keeping full bodies visible.",
+      "initial_prompt": "A clear side-view scene with exactly five sparkling horses arranged in a visible row on the left side of the image, all five horses fully visible and countable. Exactly one brown car is positioned to the right of the horses, with the horses clearly to the left of the car. Exactly two pink dogs are airborne above the five horses, visibly jumping over the horses. Keep the two pink dogs, five sparkling horses, and one brown car separated enough to count, with no hidden or occluded objects.",
+      "parsed_constraints": {
+        "attributes": {
+          "car": "brown",
+          "dogs": "pink",
+          "horses": "sparkling"
+        },
+        "counts": {
+          "car": 1,
+          "dogs": 2,
+          "horses": 5
+        },
+        "objects": [
+          "dogs",
+          "horses",
+          "car"
+        ],
+        "relations": [
+          "two pink dogs jumping over five sparkling horses",
+          "five sparkling horses to the left of one brown car"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.763 failed=['Are the dogs jumping over the horses?', 'How many horses are in the image?', 'Are the horses sparkling?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "prompt_id": "geneval2_00762_39214653",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image preserved the two pink dogs, dog presence, horse presence, one brown car, and horses left of the car, but failed three core constraints: the dogs were not clearly shown jumping over the horses, the horse count was not recognized as exactly five, and the horses did not appear sparkling. These are persistent failures from the initial attempt, so the next prompt should change strategy by using a simpler, more diagram-like side-view layout with five large, evenly spaced horses and highly visible sparkle effects bound only to the horses.",
+    "expected_improvement": [
+      "The horse count should improve by making exactly five horses large, separated, fully visible, and arranged in a straight row with no extras.",
+      "The sparkling horse attribute should improve by explicitly placing bright glitter and star-like sparkle effects on each of the five horses only.",
+      "The jumping-over relation should improve by positioning both pink dogs airborne above the horses in clear leaping poses with an unambiguous arc over the row of horses."
+    ],
+    "failure_types": [
+      "relation_mismatch",
+      "count_mismatch",
+      "attribute_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly two dogs visible.",
+      "Keep both dogs pink.",
+      "Keep the dogs clearly present and unobstructed.",
+      "Keep the horses clearly present and unobstructed.",
+      "Keep all horses to the left of the car.",
+      "Keep exactly one car visible.",
+      "Keep the single car brown."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt used a general row of five horses and airborne dogs, but it did not force the horses to be individually countable enough, did not make the sparkle effect visually prominent on each horse, and did not make the jumping action unmistakable as dogs crossing over the horses rather than merely floating above them.",
+      "error_source": "Prompt under-specified visual separability, attribute salience, and action geometry for the failed constraints."
+    },
+    "regeneration_strategy": "Use a clean side-view composition with the five horses as the main large, separate row on the left, one brown car on the right, and two pink dogs in dynamic leaping poses above and across the horse row. Emphasize exact counts, separations, no extras, and bind the sparkle effect to every horse.",
+    "regression_risks": [
+      "Adding strong sparkle effects could obscure the horse bodies and hurt the five-horse count.",
+      "The dogs could be generated as standing or floating instead of clearly jumping over the horses.",
+      "The car could be misplaced among the animals or extra cars could appear.",
+      "Crowding five horses with two dogs could cause occlusion or merged animals."
+    ],
+    "repair_constraints": [
+      "Show exactly five horses, no more and no fewer, with each horse fully visible and separated from the others so all five can be counted.",
+      "Make each of the five horses sparkling, with bright glitter or star-like sparkles visibly attached to the horse bodies, and do not apply the sparkling attribute to the dogs or car.",
+      "Show exactly two pink dogs jumping over the five horses: both dogs must be airborne above the horses in leaping poses, crossing over the row of horse backs.",
+      "Avoid extra horses, duplicate horse-like shapes, cropped horses, or merged horses.",
+      "Avoid occlusion between the dogs, horses, and car."
+    ],
+    "retry_prompt": "A clean, simple side-view scene. On the left side, show exactly five sparkling horses in one horizontal row, no more and no fewer; make all five horses large, fully visible, separate, and easy to count. Each horse has obvious bright glitter and star-like sparkles on its body, and only the horses are sparkling. Above the row of five horses, show exactly two pink dogs in clear leaping poses, airborne with legs stretched, visibly jumping over the horses and crossing over the horses' backs. On the right side of the image, place exactly one brown car, with all five sparkling horses clearly to the left of the brown car. Keep the two pink dogs, five sparkling horses, and one brown car unobstructed and separated; no extra dogs, no extra horses, no extra cars, no hidden or cropped objects.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints",
+        "object_presence"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion"
+      ],
+      "reason": "Add negative_constraints to explicitly prevent extra or merged horses and extra vehicles while retaining counting, attribute binding, spatial layout, visibility, and anti-occlusion skills."
+    }
+  },
+  "round": 0,
+  "schema_version": "v1",
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image preserved the two pink dogs, dog presence, horse presence, one brown car, and horses left of the car, but failed three core constraints: the dogs were not clearly shown jumping over the horses, the horse count was not recognized as exactly five, and the horses did not appear sparkling. These are persistent failures from the initial attempt, so the next prompt should change strategy by using a simpler, more diagram-like side-view layout with five large, evenly spaced horses and highly visible sparkle effects bound only to the horses.",
+    "expected_improvement": [
+      "The horse count should improve by making exactly five horses large, separated, fully visible, and arranged in a straight row with no extras.",
+      "The sparkling horse attribute should improve by explicitly placing bright glitter and star-like sparkle effects on each of the five horses only.",
+      "The jumping-over relation should improve by positioning both pink dogs airborne above the horses in clear leaping poses with an unambiguous arc over the row of horses."
+    ],
+    "failure_types": [
+      "relation_mismatch",
+      "count_mismatch",
+      "attribute_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly two dogs visible.",
+      "Keep both dogs pink.",
+      "Keep the dogs clearly present and unobstructed.",
+      "Keep the horses clearly present and unobstructed.",
+      "Keep all horses to the left of the car.",
+      "Keep exactly one car visible.",
+      "Keep the single car brown."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt used a general row of five horses and airborne dogs, but it did not force the horses to be individually countable enough, did not make the sparkle effect visually prominent on each horse, and did not make the jumping action unmistakable as dogs crossing over the horses rather than merely floating above them.",
+      "error_source": "Prompt under-specified visual separability, attribute salience, and action geometry for the failed constraints."
+    },
+    "regeneration_strategy": "Use a clean side-view composition with the five horses as the main large, separate row on the left, one brown car on the right, and two pink dogs in dynamic leaping poses above and across the horse row. Emphasize exact counts, separations, no extras, and bind the sparkle effect to every horse.",
+    "regression_risks": [
+      "Adding strong sparkle effects could obscure the horse bodies and hurt the five-horse count.",
+      "The dogs could be generated as standing or floating instead of clearly jumping over the horses.",
+      "The car could be misplaced among the animals or extra cars could appear.",
+      "Crowding five horses with two dogs could cause occlusion or merged animals."
+    ],
+    "repair_constraints": [
+      "Show exactly five horses, no more and no fewer, with each horse fully visible and separated from the others so all five can be counted.",
+      "Make each of the five horses sparkling, with bright glitter or star-like sparkles visibly attached to the horse bodies, and do not apply the sparkling attribute to the dogs or car.",
+      "Show exactly two pink dogs jumping over the five horses: both dogs must be airborne above the horses in leaping poses, crossing over the row of horse backs.",
+      "Avoid extra horses, duplicate horse-like shapes, cropped horses, or merged horses.",
+      "Avoid occlusion between the dogs, horses, and car."
+    ],
+    "retry_prompt": "A clean, simple side-view scene. On the left side, show exactly five sparkling horses in one horizontal row, no more and no fewer; make all five horses large, fully visible, separate, and easy to count. Each horse has obvious bright glitter and star-like sparkles on its body, and only the horses are sparkling. Above the row of five horses, show exactly two pink dogs in clear leaping poses, airborne with legs stretched, visibly jumping over the horses and crossing over the horses' backs. On the right side of the image, place exactly one brown car, with all five sparkling horses clearly to the left of the brown car. Keep the two pink dogs, five sparkling horses, and one brown car unobstructed and separated; no extra dogs, no extra horses, no extra cars, no hidden or cropped objects.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints",
+        "object_presence"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion"
+      ],
+      "reason": "Add negative_constraints to explicitly prevent extra or merged horses and extra vehicles while retaining counting, attribute binding, spatial layout, visibility, and anti-occlusion skills."
+    }
+  },
+  "teacher_error": "",
+  "teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the dogs jumping over the horses?",
+            "score": 0.26887044761999235,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.26887",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the dogs jumping over the horses?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many horses are in the image?",
+            "score": 8.338476050690012e-07,
+            "skill": "count"
+          },
+          "detected": "soft_score=8.33848e-07",
+          "expected": "five",
+          "status": "failed",
+          "target": "How many horses are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the horses sparkling?",
+            "score": 0.126192182340219,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.126192",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the horses sparkling?",
+          "type": "attribute_mismatch"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00008/samples/00001.png",
+      "prompt": "A clear side-view scene with exactly five sparkling horses arranged in a visible row on the left side of the image, all five horses fully visible and countable. Exactly one brown car is positioned to the right of the horses, with the horses clearly to the left of the car. Exactly two pink dogs are airborne above the five horses, visibly jumping over the horses. Keep the two pink dogs, five sparkling horses, and one brown car separated enough to count, with no hidden or occluded objects.",
+      "round": 0,
+      "score": 0.7631875623000347
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00762_39214653_cand_01",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "count_mismatch",
+        "relation_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the dogs jumping over the horses?",
+            "score": 0.26887044761999235,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.26887",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the dogs jumping over the horses?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many horses are in the image?",
+            "score": 8.338476050690012e-07,
+            "skill": "count"
+          },
+          "detected": "soft_score=8.33848e-07",
+          "expected": "five",
+          "status": "failed",
+          "target": "How many horses are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the horses sparkling?",
+            "score": 0.126192182340219,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.126192",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the horses sparkling?",
+          "type": "attribute_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many dogs are in the image?",
+            "score": 1.0,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "two",
+          "status": "passed",
+          "target": "How many dogs are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the dogs pink?",
+            "score": 0.9999999870778993,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the dogs pink?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any dogs in the image?",
+            "score": 0.9999998960920493,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any dogs in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any horses in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any horses in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the horses to the left of the car?",
+            "score": 0.9999999416029519,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the horses to the left of the car?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cars are in the image?",
+            "score": 0.9999999748343459,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "one",
+          "status": "passed",
+          "target": "How many cars are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the car brown?",
+            "score": 0.999999921885319,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the car brown?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 10,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any cars in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any cars in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.7631875623000347,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the dogs jumping over the horses?",
+              "score": 0.26887044761999235,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.26887",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the dogs jumping over the horses?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many horses are in the image?",
+              "score": 8.338476050690012e-07,
+              "skill": "count"
+            },
+            "detected": "soft_score=8.33848e-07",
+            "expected": "five",
+            "status": "failed",
+            "target": "How many horses are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the horses sparkling?",
+              "score": 0.126192182340219,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.126192",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the horses sparkling?",
+            "type": "attribute_mismatch"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00008/samples/00001.png",
+        "prompt": "A clear side-view scene with exactly five sparkling horses arranged in a visible row on the left side of the image, all five horses fully visible and countable. Exactly one brown car is positioned to the right of the horses, with the horses clearly to the left of the car. Exactly two pink dogs are airborne above the five horses, visibly jumping over the horses. Keep the two pink dogs, five sparkling horses, and one brown car separated enough to count, with no hidden or occluded objects.",
+        "round": 0,
+        "score": 0.7631875623000347
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the dogs jumping over the horses?",
+            "score": 0.26887044761999235,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.26887",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the dogs jumping over the horses?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many horses are in the image?",
+            "score": 8.338476050690012e-07,
+            "skill": "count"
+          },
+          "detected": "soft_score=8.33848e-07",
+          "expected": "five",
+          "status": "failed",
+          "target": "How many horses are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the horses sparkling?",
+            "score": 0.126192182340219,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.126192",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the horses sparkling?",
+          "type": "attribute_mismatch"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "count_mismatch",
+        "relation_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the dogs jumping over the horses?",
+            "score": 0.26887044761999235,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.26887",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the dogs jumping over the horses?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many horses are in the image?",
+            "score": 8.338476050690012e-07,
+            "skill": "count"
+          },
+          "detected": "soft_score=8.33848e-07",
+          "expected": "five",
+          "status": "failed",
+          "target": "How many horses are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the horses sparkling?",
+            "score": 0.126192182340219,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.126192",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the horses sparkling?",
+          "type": "attribute_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many dogs are in the image?",
+            "score": 1.0,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "two",
+          "status": "passed",
+          "target": "How many dogs are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the dogs pink?",
+            "score": 0.9999999870778993,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the dogs pink?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any dogs in the image?",
+            "score": 0.9999998960920493,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any dogs in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any horses in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any horses in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the horses to the left of the car?",
+            "score": 0.9999999416029519,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the horses to the left of the car?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cars are in the image?",
+            "score": 0.9999999748343459,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "one",
+          "status": "passed",
+          "target": "How many cars are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the car brown?",
+            "score": 0.999999921885319,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the car brown?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 10,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any cars in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any cars in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.7631875623000347,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "two pink dogs jumping over five sparkling horses to the left of a brown car",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the dogs jumping over the horses?",
+          "score": 0.26887044761999235,
+          "skill": "verb"
+        },
+        "detected": "soft_score=0.26887",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the dogs jumping over the horses?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many horses are in the image?",
+          "score": 8.338476050690012e-07,
+          "skill": "count"
+        },
+        "detected": "soft_score=8.33848e-07",
+        "expected": "five",
+        "status": "failed",
+        "target": "How many horses are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the horses sparkling?",
+          "score": 0.126192182340219,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.126192",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the horses sparkling?",
+        "type": "attribute_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly two dogs, exactly five horses, and exactly one car.",
+        "Bind pink color only to the two dogs, sparkling appearance to the five horses, and brown color to the single car.",
+        "Place all five sparkling horses to the left of the brown car.",
+        "Show both pink dogs jumping over the group of five sparkling horses, with the dogs visibly airborne above the horses.",
+        "Keep all animals and the car clearly visible and separated enough to count; avoid overlaps or occlusion that hide any dog, horse, or the car."
+      ],
+      "generation_strategy": "Use a clear side-view composition with the five sparkling horses arranged in a visible row on the left side of the image, the single brown car on the right, and the two pink dogs airborne above the horses to make the jumping-over relation unambiguous. Maintain count clarity and attribute binding by separating objects and keeping full bodies visible.",
+      "initial_prompt": "A clear side-view scene with exactly five sparkling horses arranged in a visible row on the left side of the image, all five horses fully visible and countable. Exactly one brown car is positioned to the right of the horses, with the horses clearly to the left of the car. Exactly two pink dogs are airborne above the five horses, visibly jumping over the horses. Keep the two pink dogs, five sparkling horses, and one brown car separated enough to count, with no hidden or occluded objects.",
+      "parsed_constraints": {
+        "attributes": {
+          "car": "brown",
+          "dogs": "pink",
+          "horses": "sparkling"
+        },
+        "counts": {
+          "car": 1,
+          "dogs": 2,
+          "horses": 5
+        },
+        "objects": [
+          "dogs",
+          "horses",
+          "car"
+        ],
+        "relations": [
+          "two pink dogs jumping over five sparkling horses",
+          "five sparkling horses to the left of one brown car"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly two dogs, exactly five horses, and exactly one car.",
+        "Bind pink color only to the two dogs, sparkling appearance to the five horses, and brown color to the single car.",
+        "Place all five sparkling horses to the left of the brown car.",
+        "Show both pink dogs jumping over the group of five sparkling horses, with the dogs visibly airborne above the horses.",
+        "Keep all animals and the car clearly visible and separated enough to count; avoid overlaps or occlusion that hide any dog, horse, or the car."
+      ],
+      "generation_strategy": "Use a clear side-view composition with the five sparkling horses arranged in a visible row on the left side of the image, the single brown car on the right, and the two pink dogs airborne above the horses to make the jumping-over relation unambiguous. Maintain count clarity and attribute binding by separating objects and keeping full bodies visible.",
+      "initial_prompt": "A clear side-view scene with exactly five sparkling horses arranged in a visible row on the left side of the image, all five horses fully visible and countable. Exactly one brown car is positioned to the right of the horses, with the horses clearly to the left of the car. Exactly two pink dogs are airborne above the five horses, visibly jumping over the horses. Keep the two pink dogs, five sparkling horses, and one brown car separated enough to count, with no hidden or occluded objects.",
+      "parsed_constraints": {
+        "attributes": {
+          "car": "brown",
+          "dogs": "pink",
+          "horses": "sparkling"
+        },
+        "counts": {
+          "car": 1,
+          "dogs": 2,
+          "horses": 5
+        },
+        "objects": [
+          "dogs",
+          "horses",
+          "car"
+        ],
+        "relations": [
+          "two pink dogs jumping over five sparkling horses",
+          "five sparkling horses to the left of one brown car"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion"
+      ]
+    },
+    "previous_prompt": "A clear side-view scene with exactly five sparkling horses arranged in a visible row on the left side of the image, all five horses fully visible and countable. Exactly one brown car is positioned to the right of the horses, with the horses clearly to the left of the car. Exactly two pink dogs are airborne above the five horses, visibly jumping over the horses. Keep the two pink dogs, five sparkling horses, and one brown car separated enough to count, with no hidden or occluded objects.",
+    "previous_selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion"
+    ],
+    "prompt_id": "geneval2_00762_39214653",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "count_mismatch",
+          "relation_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the dogs jumping over the horses?",
+              "score": 0.26887044761999235,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.26887",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the dogs jumping over the horses?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many horses are in the image?",
+              "score": 8.338476050690012e-07,
+              "skill": "count"
+            },
+            "detected": "soft_score=8.33848e-07",
+            "expected": "five",
+            "status": "failed",
+            "target": "How many horses are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the horses sparkling?",
+              "score": 0.126192182340219,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.126192",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the horses sparkling?",
+            "type": "attribute_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many dogs are in the image?",
+              "score": 1.0,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "two",
+            "status": "passed",
+            "target": "How many dogs are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the dogs pink?",
+              "score": 0.9999999870778993,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the dogs pink?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any dogs in the image?",
+              "score": 0.9999998960920493,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any dogs in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any horses in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any horses in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the horses to the left of the car?",
+              "score": 0.9999999416029519,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the horses to the left of the car?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cars are in the image?",
+              "score": 0.9999999748343459,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "one",
+            "status": "passed",
+            "target": "How many cars are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the car brown?",
+              "score": 0.999999921885319,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Is the car brown?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 10,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any cars in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any cars in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly two dogs, exactly five horses, and exactly one car.",
+            "Bind pink color only to the two dogs, sparkling appearance to the five horses, and brown color to the single car.",
+            "Place all five sparkling horses to the left of the brown car.",
+            "Show both pink dogs jumping over the group of five sparkling horses, with the dogs visibly airborne above the horses.",
+            "Keep all animals and the car clearly visible and separated enough to count; avoid overlaps or occlusion that hide any dog, horse, or the car."
+          ],
+          "generation_strategy": "Use a clear side-view composition with the five sparkling horses arranged in a visible row on the left side of the image, the single brown car on the right, and the two pink dogs airborne above the horses to make the jumping-over relation unambiguous. Maintain count clarity and attribute binding by separating objects and keeping full bodies visible.",
+          "initial_prompt": "A clear side-view scene with exactly five sparkling horses arranged in a visible row on the left side of the image, all five horses fully visible and countable. Exactly one brown car is positioned to the right of the horses, with the horses clearly to the left of the car. Exactly two pink dogs are airborne above the five horses, visibly jumping over the horses. Keep the two pink dogs, five sparkling horses, and one brown car separated enough to count, with no hidden or occluded objects.",
+          "parsed_constraints": {
+            "attributes": {
+              "car": "brown",
+              "dogs": "pink",
+              "horses": "sparkling"
+            },
+            "counts": {
+              "car": 1,
+              "dogs": 2,
+              "horses": 5
+            },
+            "objects": [
+              "dogs",
+              "horses",
+              "car"
+            ],
+            "relations": [
+              "two pink dogs jumping over five sparkling horses",
+              "five sparkling horses to the left of one brown car"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly two dogs, exactly five horses, and exactly one car.",
+            "Bind pink color only to the two dogs, sparkling appearance to the five horses, and brown color to the single car.",
+            "Place all five sparkling horses to the left of the brown car.",
+            "Show both pink dogs jumping over the group of five sparkling horses, with the dogs visibly airborne above the horses.",
+            "Keep all animals and the car clearly visible and separated enough to count; avoid overlaps or occlusion that hide any dog, horse, or the car."
+          ],
+          "generation_strategy": "Use a clear side-view composition with the five sparkling horses arranged in a visible row on the left side of the image, the single brown car on the right, and the two pink dogs airborne above the horses to make the jumping-over relation unambiguous. Maintain count clarity and attribute binding by separating objects and keeping full bodies visible.",
+          "initial_prompt": "A clear side-view scene with exactly five sparkling horses arranged in a visible row on the left side of the image, all five horses fully visible and countable. Exactly one brown car is positioned to the right of the horses, with the horses clearly to the left of the car. Exactly two pink dogs are airborne above the five horses, visibly jumping over the horses. Keep the two pink dogs, five sparkling horses, and one brown car separated enough to count, with no hidden or occluded objects.",
+          "parsed_constraints": {
+            "attributes": {
+              "car": "brown",
+              "dogs": "pink",
+              "horses": "sparkling"
+            },
+            "counts": {
+              "car": 1,
+              "dogs": 2,
+              "horses": 5
+            },
+            "objects": [
+              "dogs",
+              "horses",
+              "car"
+            ],
+            "relations": [
+              "two pink dogs jumping over five sparkling horses",
+              "five sparkling horses to the left of one brown car"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion"
+          ]
+        },
+        "prompt_used": "A clear side-view scene with exactly five sparkling horses arranged in a visible row on the left side of the image, all five horses fully visible and countable. Exactly one brown car is positioned to the right of the horses, with the horses clearly to the left of the car. Exactly two pink dogs are airborne above the five horses, visibly jumping over the horses. Keep the two pink dogs, five sparkling horses, and one brown car separated enough to count, with no hidden or occluded objects.",
+        "round": 0,
+        "score": 0.7631875623000347,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the dogs jumping over the horses?",
+                "score": 0.26887044761999235,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.26887",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the dogs jumping over the horses?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many horses are in the image?",
+                "score": 8.338476050690012e-07,
+                "skill": "count"
+              },
+              "detected": "soft_score=8.33848e-07",
+              "expected": "five",
+              "status": "failed",
+              "target": "How many horses are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the horses sparkling?",
+                "score": 0.126192182340219,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.126192",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the horses sparkling?",
+              "type": "attribute_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00762_39214653"
+  },
+  "trajectory_id": "geneval2_00762_39214653",
+  "trajectory_path": "data/raw_trajectories/geneval2_balanced_100x5_round0_gpt55/geneval2_00762_39214653__geneval2_00762_39214653_cand_01.json"
+}

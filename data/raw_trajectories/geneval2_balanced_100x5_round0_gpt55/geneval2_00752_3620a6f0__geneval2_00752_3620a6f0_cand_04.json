@@ -1,0 +1,2712 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "count_mismatch",
+          "missing_object"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many raccoons are in the image?",
+              "score": 4.882122748789281e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=4.88212e-09",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many raccoons are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any raccoons in the image?",
+              "score": 0.0024763707211121755,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.00247637",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any raccoons in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many kangaroos are in the image?",
+              "score": 0.0754754868246643,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.0754755",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many kangaroos are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many donuts are in the image?",
+              "score": 0.9999999960005047,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "six",
+            "status": "passed",
+            "target": "How many donuts are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the donuts black?",
+              "score": 0.9999998626663,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the donuts black?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any donuts in the image?",
+              "score": 0.9999999897663656,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any donuts in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the donuts to the left of the raccoons?",
+              "score": 1.0,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the donuts to the left of the raccoons?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the raccoons blue?",
+              "score": 0.9706848152945895,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.970685",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the raccoons blue?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the kangaroos purple?",
+              "score": 0.9999999431389597,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the kangaroos purple?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any kangaroos in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any kangaroos in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_004/raw_score_lists.by_candidate.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00752_3620a6f0_cand_04",
+          "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_004/raw_score_lists.by_candidate.json",
+          "rows": [
+            {
+              "answer": "six",
+              "atom_count": 10,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00752_3620a6f0_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00089/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00089/samples/00004.png",
+              "prompt": "six black donuts to the left of six blue raccoons, and seven purple kangaroos",
+              "prompt_id": "geneval2_00752_3620a6f0",
+              "question": "How many donuts are in the image?",
+              "score": 0.9999999960005047,
+              "skill": "count",
+              "source_index": 752
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00752_3620a6f0_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00089/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00089/samples/00004.png",
+              "prompt": "six black donuts to the left of six blue raccoons, and seven purple kangaroos",
+              "prompt_id": "geneval2_00752_3620a6f0",
+              "question": "Are the donuts black?",
+              "score": 0.9999998626663,
+              "skill": "attribute",
+              "source_index": 752
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00752_3620a6f0_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00089/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00089/samples/00004.png",
+              "prompt": "six black donuts to the left of six blue raccoons, and seven purple kangaroos",
+              "prompt_id": "geneval2_00752_3620a6f0",
+              "question": "Are there any donuts in the image?",
+              "score": 0.9999999897663656,
+              "skill": "object",
+              "source_index": 752
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00752_3620a6f0_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00089/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00089/samples/00004.png",
+              "prompt": "six black donuts to the left of six blue raccoons, and seven purple kangaroos",
+              "prompt_id": "geneval2_00752_3620a6f0",
+              "question": "Are the donuts to the left of the raccoons?",
+              "score": 1.0000000241411726,
+              "skill": "position",
+              "source_index": 752
+            },
+            {
+              "answer": "six",
+              "atom_count": 10,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00752_3620a6f0_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00089/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00089/samples/00004.png",
+              "prompt": "six black donuts to the left of six blue raccoons, and seven purple kangaroos",
+              "prompt_id": "geneval2_00752_3620a6f0",
+              "question": "How many raccoons are in the image?",
+              "score": 4.882122748789281e-09,
+              "skill": "count",
+              "source_index": 752
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00752_3620a6f0_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00089/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00089/samples/00004.png",
+              "prompt": "six black donuts to the left of six blue raccoons, and seven purple kangaroos",
+              "prompt_id": "geneval2_00752_3620a6f0",
+              "question": "Are the raccoons blue?",
+              "score": 0.9706848152945895,
+              "skill": "attribute",
+              "source_index": 752
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00752_3620a6f0_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00089/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00089/samples/00004.png",
+              "prompt": "six black donuts to the left of six blue raccoons, and seven purple kangaroos",
+              "prompt_id": "geneval2_00752_3620a6f0",
+              "question": "Are there any raccoons in the image?",
+              "score": 0.0024763707211121755,
+              "skill": "object",
+              "source_index": 752
+            },
+            {
+              "answer": "seven",
+              "atom_count": 10,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00752_3620a6f0_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00089/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00089/samples/00004.png",
+              "prompt": "six black donuts to the left of six blue raccoons, and seven purple kangaroos",
+              "prompt_id": "geneval2_00752_3620a6f0",
+              "question": "How many kangaroos are in the image?",
+              "score": 0.0754754868246643,
+              "skill": "count",
+              "source_index": 752
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00752_3620a6f0_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00089/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00089/samples/00004.png",
+              "prompt": "six black donuts to the left of six blue raccoons, and seven purple kangaroos",
+              "prompt_id": "geneval2_00752_3620a6f0",
+              "question": "Are the kangaroos purple?",
+              "score": 0.9999999431389597,
+              "skill": "attribute",
+              "source_index": 752
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00752_3620a6f0_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00089/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00089/samples/00004.png",
+              "prompt": "six black donuts to the left of six blue raccoons, and seven purple kangaroos",
+              "prompt_id": "geneval2_00752_3620a6f0",
+              "question": "Are there any kangaroos in the image?",
+              "score": 1.0000000475378101,
+              "skill": "object",
+              "source_index": 752
+            }
+          ],
+          "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_004/raw_score_lists.by_candidate.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.7048636469294619,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 4,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00752_3620a6f0.json",
+          "manifest_prompt_index": 89,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00752_3620a6f0"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00752_3620a6f0_cand_04",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00089/samples/00004.png",
+        "prompt_used": "Create a clear image with exactly six black donuts on the left side, exactly six blue raccoons to the right of the donuts, and exactly seven purple kangaroos in a separate visible group. The six black donuts must all be fully visible and individually countable, and the entire donut group must be to the left of the six blue raccoons. The six blue raccoons must all be fully visible and individually countable. The seven purple kangaroos must all be fully visible and individually countable. Keep all objects separated with minimal overlap, no occlusion, and do not include any extra donuts, raccoons, kangaroos, or other objects.",
+        "seed": 1449
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Ensure exactly six donuts, exactly six raccoons, and exactly seven kangaroos are visible.",
+          "Bind colors correctly: all donuts black, all raccoons blue, all kangaroos purple.",
+          "Place the group of six black donuts to the left of the group of six blue raccoons.",
+          "Keep all objects separated and fully visible with minimal overlap or occlusion.",
+          "Do not add extra donuts, raccoons, kangaroos, or other objects."
+        ],
+        "generation_strategy": "Use a clear multi-object composition with three distinct groups. Arrange six black donuts on the left side, six blue raccoons on the right side relative to the donuts, and seven purple kangaroos in a separate visible area. Use simple spacing and clean separation so each object can be counted and its color identified.",
+        "initial_prompt": "Create a clear image with exactly six black donuts on the left side, exactly six blue raccoons to the right of the donuts, and exactly seven purple kangaroos in a separate visible group. The six black donuts must all be fully visible and individually countable, and the entire donut group must be to the left of the six blue raccoons. The six blue raccoons must all be fully visible and individually countable. The seven purple kangaroos must all be fully visible and individually countable. Keep all objects separated with minimal overlap, no occlusion, and do not include any extra donuts, raccoons, kangaroos, or other objects.",
+        "parsed_constraints": {
+          "attributes": {
+            "donuts": "black",
+            "kangaroos": "purple",
+            "raccoons": "blue"
+          },
+          "counts": {
+            "donuts": 6,
+            "kangaroos": 7,
+            "raccoons": 6
+          },
+          "objects": [
+            "donuts",
+            "raccoons",
+            "kangaroos"
+          ],
+          "relations": [
+            "six black donuts are to the left of six blue raccoons"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility",
+          "negative_constraints"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Ensure exactly six donuts, exactly six raccoons, and exactly seven kangaroos are visible.",
+          "Bind colors correctly: all donuts black, all raccoons blue, all kangaroos purple.",
+          "Place the group of six black donuts to the left of the group of six blue raccoons.",
+          "Keep all objects separated and fully visible with minimal overlap or occlusion.",
+          "Do not add extra donuts, raccoons, kangaroos, or other objects."
+        ],
+        "generation_strategy": "Use a clear multi-object composition with three distinct groups. Arrange six black donuts on the left side, six blue raccoons on the right side relative to the donuts, and seven purple kangaroos in a separate visible area. Use simple spacing and clean separation so each object can be counted and its color identified.",
+        "initial_prompt": "Create a clear image with exactly six black donuts on the left side, exactly six blue raccoons to the right of the donuts, and exactly seven purple kangaroos in a separate visible group. The six black donuts must all be fully visible and individually countable, and the entire donut group must be to the left of the six blue raccoons. The six blue raccoons must all be fully visible and individually countable. The seven purple kangaroos must all be fully visible and individually countable. Keep all objects separated with minimal overlap, no occlusion, and do not include any extra donuts, raccoons, kangaroos, or other objects.",
+        "parsed_constraints": {
+          "attributes": {
+            "donuts": "black",
+            "kangaroos": "purple",
+            "raccoons": "blue"
+          },
+          "counts": {
+            "donuts": 6,
+            "kangaroos": 7,
+            "raccoons": 6
+          },
+          "objects": [
+            "donuts",
+            "raccoons",
+            "kangaroos"
+          ],
+          "relations": [
+            "six black donuts are to the left of six blue raccoons"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility",
+          "negative_constraints"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many raccoons are in the image?",
+                "score": 4.882122748789281e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=4.88212e-09",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many raccoons are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any raccoons in the image?",
+                "score": 0.0024763707211121755,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.00247637",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any raccoons in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many kangaroos are in the image?",
+                "score": 0.0754754868246643,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.0754755",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many kangaroos are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00089/samples/00004.png",
+          "prompt": "Create a clear image with exactly six black donuts on the left side, exactly six blue raccoons to the right of the donuts, and exactly seven purple kangaroos in a separate visible group. The six black donuts must all be fully visible and individually countable, and the entire donut group must be to the left of the six blue raccoons. The six blue raccoons must all be fully visible and individually countable. The seven purple kangaroos must all be fully visible and individually countable. Keep all objects separated with minimal overlap, no occlusion, and do not include any extra donuts, raccoons, kangaroos, or other objects.",
+          "round": 0,
+          "score": 0.7048636469294619
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00752_3620a6f0_cand_04",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "count_mismatch",
+            "missing_object"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many raccoons are in the image?",
+                "score": 4.882122748789281e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=4.88212e-09",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many raccoons are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any raccoons in the image?",
+                "score": 0.0024763707211121755,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.00247637",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any raccoons in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many kangaroos are in the image?",
+                "score": 0.0754754868246643,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.0754755",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many kangaroos are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many donuts are in the image?",
+                "score": 0.9999999960005047,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "six",
+              "status": "passed",
+              "target": "How many donuts are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the donuts black?",
+                "score": 0.9999998626663,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the donuts black?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any donuts in the image?",
+                "score": 0.9999999897663656,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any donuts in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the donuts to the left of the raccoons?",
+                "score": 1.0,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the donuts to the left of the raccoons?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the raccoons blue?",
+                "score": 0.9706848152945895,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.970685",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the raccoons blue?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the kangaroos purple?",
+                "score": 0.9999999431389597,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the kangaroos purple?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any kangaroos in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any kangaroos in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.7048636469294619,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many raccoons are in the image?",
+                  "score": 4.882122748789281e-09,
+                  "skill": "count"
+                },
+                "detected": "soft_score=4.88212e-09",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many raccoons are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any raccoons in the image?",
+                  "score": 0.0024763707211121755,
+                  "skill": "object"
+                },
+                "detected": "soft_score=0.00247637",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are there any raccoons in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many kangaroos are in the image?",
+                  "score": 0.0754754868246643,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.0754755",
+                "expected": "seven",
+                "status": "failed",
+                "target": "How many kangaroos are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00089/samples/00004.png",
+            "prompt": "Create a clear image with exactly six black donuts on the left side, exactly six blue raccoons to the right of the donuts, and exactly seven purple kangaroos in a separate visible group. The six black donuts must all be fully visible and individually countable, and the entire donut group must be to the left of the six blue raccoons. The six blue raccoons must all be fully visible and individually countable. The seven purple kangaroos must all be fully visible and individually countable. Keep all objects separated with minimal overlap, no occlusion, and do not include any extra donuts, raccoons, kangaroos, or other objects.",
+            "round": 0,
+            "score": 0.7048636469294619
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many raccoons are in the image?",
+                "score": 4.882122748789281e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=4.88212e-09",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many raccoons are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any raccoons in the image?",
+                "score": 0.0024763707211121755,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.00247637",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any raccoons in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many kangaroos are in the image?",
+                "score": 0.0754754868246643,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.0754755",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many kangaroos are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "count_mismatch",
+            "missing_object"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many raccoons are in the image?",
+                "score": 4.882122748789281e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=4.88212e-09",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many raccoons are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any raccoons in the image?",
+                "score": 0.0024763707211121755,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.00247637",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any raccoons in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many kangaroos are in the image?",
+                "score": 0.0754754868246643,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.0754755",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many kangaroos are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many donuts are in the image?",
+                "score": 0.9999999960005047,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "six",
+              "status": "passed",
+              "target": "How many donuts are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the donuts black?",
+                "score": 0.9999998626663,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the donuts black?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any donuts in the image?",
+                "score": 0.9999999897663656,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any donuts in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the donuts to the left of the raccoons?",
+                "score": 1.0,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the donuts to the left of the raccoons?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the raccoons blue?",
+                "score": 0.9706848152945895,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.970685",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the raccoons blue?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the kangaroos purple?",
+                "score": 0.9999999431389597,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the kangaroos purple?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any kangaroos in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any kangaroos in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.7048636469294619,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "six black donuts to the left of six blue raccoons, and seven purple kangaroos",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many raccoons are in the image?",
+              "score": 4.882122748789281e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=4.88212e-09",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many raccoons are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any raccoons in the image?",
+              "score": 0.0024763707211121755,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.00247637",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any raccoons in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many kangaroos are in the image?",
+              "score": 0.0754754868246643,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.0754755",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many kangaroos are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Ensure exactly six donuts, exactly six raccoons, and exactly seven kangaroos are visible.",
+            "Bind colors correctly: all donuts black, all raccoons blue, all kangaroos purple.",
+            "Place the group of six black donuts to the left of the group of six blue raccoons.",
+            "Keep all objects separated and fully visible with minimal overlap or occlusion.",
+            "Do not add extra donuts, raccoons, kangaroos, or other objects."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with three distinct groups. Arrange six black donuts on the left side, six blue raccoons on the right side relative to the donuts, and seven purple kangaroos in a separate visible area. Use simple spacing and clean separation so each object can be counted and its color identified.",
+          "initial_prompt": "Create a clear image with exactly six black donuts on the left side, exactly six blue raccoons to the right of the donuts, and exactly seven purple kangaroos in a separate visible group. The six black donuts must all be fully visible and individually countable, and the entire donut group must be to the left of the six blue raccoons. The six blue raccoons must all be fully visible and individually countable. The seven purple kangaroos must all be fully visible and individually countable. Keep all objects separated with minimal overlap, no occlusion, and do not include any extra donuts, raccoons, kangaroos, or other objects.",
+          "parsed_constraints": {
+            "attributes": {
+              "donuts": "black",
+              "kangaroos": "purple",
+              "raccoons": "blue"
+            },
+            "counts": {
+              "donuts": 6,
+              "kangaroos": 7,
+              "raccoons": 6
+            },
+            "objects": [
+              "donuts",
+              "raccoons",
+              "kangaroos"
+            ],
+            "relations": [
+              "six black donuts are to the left of six blue raccoons"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Ensure exactly six donuts, exactly six raccoons, and exactly seven kangaroos are visible.",
+            "Bind colors correctly: all donuts black, all raccoons blue, all kangaroos purple.",
+            "Place the group of six black donuts to the left of the group of six blue raccoons.",
+            "Keep all objects separated and fully visible with minimal overlap or occlusion.",
+            "Do not add extra donuts, raccoons, kangaroos, or other objects."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with three distinct groups. Arrange six black donuts on the left side, six blue raccoons on the right side relative to the donuts, and seven purple kangaroos in a separate visible area. Use simple spacing and clean separation so each object can be counted and its color identified.",
+          "initial_prompt": "Create a clear image with exactly six black donuts on the left side, exactly six blue raccoons to the right of the donuts, and exactly seven purple kangaroos in a separate visible group. The six black donuts must all be fully visible and individually countable, and the entire donut group must be to the left of the six blue raccoons. The six blue raccoons must all be fully visible and individually countable. The seven purple kangaroos must all be fully visible and individually countable. Keep all objects separated with minimal overlap, no occlusion, and do not include any extra donuts, raccoons, kangaroos, or other objects.",
+          "parsed_constraints": {
+            "attributes": {
+              "donuts": "black",
+              "kangaroos": "purple",
+              "raccoons": "blue"
+            },
+            "counts": {
+              "donuts": 6,
+              "kangaroos": 7,
+              "raccoons": 6
+            },
+            "objects": [
+              "donuts",
+              "raccoons",
+              "kangaroos"
+            ],
+            "relations": [
+              "six black donuts are to the left of six blue raccoons"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "previous_prompt": "Create a clear image with exactly six black donuts on the left side, exactly six blue raccoons to the right of the donuts, and exactly seven purple kangaroos in a separate visible group. The six black donuts must all be fully visible and individually countable, and the entire donut group must be to the left of the six blue raccoons. The six blue raccoons must all be fully visible and individually countable. The seven purple kangaroos must all be fully visible and individually countable. Keep all objects separated with minimal overlap, no occlusion, and do not include any extra donuts, raccoons, kangaroos, or other objects.",
+        "previous_selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility",
+          "negative_constraints"
+        ],
+        "prompt_id": "geneval2_00752_3620a6f0",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "count_mismatch",
+              "missing_object"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many raccoons are in the image?",
+                  "score": 4.882122748789281e-09,
+                  "skill": "count"
+                },
+                "detected": "soft_score=4.88212e-09",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many raccoons are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any raccoons in the image?",
+                  "score": 0.0024763707211121755,
+                  "skill": "object"
+                },
+                "detected": "soft_score=0.00247637",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are there any raccoons in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many kangaroos are in the image?",
+                  "score": 0.0754754868246643,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.0754755",
+                "expected": "seven",
+                "status": "failed",
+                "target": "How many kangaroos are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many donuts are in the image?",
+                  "score": 0.9999999960005047,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1",
+                "expected": "six",
+                "status": "passed",
+                "target": "How many donuts are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the donuts black?",
+                  "score": 0.9999998626663,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the donuts black?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any donuts in the image?",
+                  "score": 0.9999999897663656,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any donuts in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the donuts to the left of the raccoons?",
+                  "score": 1.0,
+                  "skill": "position"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the donuts to the left of the raccoons?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the raccoons blue?",
+                  "score": 0.9706848152945895,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.970685",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the raccoons blue?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the kangaroos purple?",
+                  "score": 0.9999999431389597,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the kangaroos purple?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any kangaroos in the image?",
+                  "score": 1.0,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any kangaroos in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Ensure exactly six donuts, exactly six raccoons, and exactly seven kangaroos are visible.",
+                "Bind colors correctly: all donuts black, all raccoons blue, all kangaroos purple.",
+                "Place the group of six black donuts to the left of the group of six blue raccoons.",
+                "Keep all objects separated and fully visible with minimal overlap or occlusion.",
+                "Do not add extra donuts, raccoons, kangaroos, or other objects."
+              ],
+              "generation_strategy": "Use a clear multi-object composition with three distinct groups. Arrange six black donuts on the left side, six blue raccoons on the right side relative to the donuts, and seven purple kangaroos in a separate visible area. Use simple spacing and clean separation so each object can be counted and its color identified.",
+              "initial_prompt": "Create a clear image with exactly six black donuts on the left side, exactly six blue raccoons to the right of the donuts, and exactly seven purple kangaroos in a separate visible group. The six black donuts must all be fully visible and individually countable, and the entire donut group must be to the left of the six blue raccoons. The six blue raccoons must all be fully visible and individually countable. The seven purple kangaroos must all be fully visible and individually countable. Keep all objects separated with minimal overlap, no occlusion, and do not include any extra donuts, raccoons, kangaroos, or other objects.",
+              "parsed_constraints": {
+                "attributes": {
+                  "donuts": "black",
+                  "kangaroos": "purple",
+                  "raccoons": "blue"
+                },
+                "counts": {
+                  "donuts": 6,
+                  "kangaroos": 7,
+                  "raccoons": 6
+                },
+                "objects": [
+                  "donuts",
+                  "raccoons",
+                  "kangaroos"
+                ],
+                "relations": [
+                  "six black donuts are to the left of six blue raccoons"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "anti_occlusion",
+                "clarity_visibility",
+                "negative_constraints"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Ensure exactly six donuts, exactly six raccoons, and exactly seven kangaroos are visible.",
+                "Bind colors correctly: all donuts black, all raccoons blue, all kangaroos purple.",
+                "Place the group of six black donuts to the left of the group of six blue raccoons.",
+                "Keep all objects separated and fully visible with minimal overlap or occlusion.",
+                "Do not add extra donuts, raccoons, kangaroos, or other objects."
+              ],
+              "generation_strategy": "Use a clear multi-object composition with three distinct groups. Arrange six black donuts on the left side, six blue raccoons on the right side relative to the donuts, and seven purple kangaroos in a separate visible area. Use simple spacing and clean separation so each object can be counted and its color identified.",
+              "initial_prompt": "Create a clear image with exactly six black donuts on the left side, exactly six blue raccoons to the right of the donuts, and exactly seven purple kangaroos in a separate visible group. The six black donuts must all be fully visible and individually countable, and the entire donut group must be to the left of the six blue raccoons. The six blue raccoons must all be fully visible and individually countable. The seven purple kangaroos must all be fully visible and individually countable. Keep all objects separated with minimal overlap, no occlusion, and do not include any extra donuts, raccoons, kangaroos, or other objects.",
+              "parsed_constraints": {
+                "attributes": {
+                  "donuts": "black",
+                  "kangaroos": "purple",
+                  "raccoons": "blue"
+                },
+                "counts": {
+                  "donuts": 6,
+                  "kangaroos": 7,
+                  "raccoons": 6
+                },
+                "objects": [
+                  "donuts",
+                  "raccoons",
+                  "kangaroos"
+                ],
+                "relations": [
+                  "six black donuts are to the left of six blue raccoons"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "anti_occlusion",
+                "clarity_visibility",
+                "negative_constraints"
+              ]
+            },
+            "prompt_used": "Create a clear image with exactly six black donuts on the left side, exactly six blue raccoons to the right of the donuts, and exactly seven purple kangaroos in a separate visible group. The six black donuts must all be fully visible and individually countable, and the entire donut group must be to the left of the six blue raccoons. The six blue raccoons must all be fully visible and individually countable. The seven purple kangaroos must all be fully visible and individually countable. Keep all objects separated with minimal overlap, no occlusion, and do not include any extra donuts, raccoons, kangaroos, or other objects.",
+            "round": 0,
+            "score": 0.7048636469294619,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 4,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many raccoons are in the image?",
+                    "score": 4.882122748789281e-09,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=4.88212e-09",
+                  "expected": "six",
+                  "status": "failed",
+                  "target": "How many raccoons are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 6,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are there any raccoons in the image?",
+                    "score": 0.0024763707211121755,
+                    "skill": "object"
+                  },
+                  "detected": "soft_score=0.00247637",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are there any raccoons in the image?",
+                  "type": "missing_object"
+                },
+                {
+                  "details": {
+                    "atom_index": 7,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many kangaroos are in the image?",
+                    "score": 0.0754754868246643,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=0.0754755",
+                  "expected": "seven",
+                  "status": "failed",
+                  "target": "How many kangaroos are in the image?",
+                  "type": "count_mismatch"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00752_3620a6f0"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many raccoons are in the image?",
+              "score": 4.882122748789281e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=4.88212e-09",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many raccoons are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any raccoons in the image?",
+              "score": 0.0024763707211121755,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.00247637",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any raccoons in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many kangaroos are in the image?",
+              "score": 0.0754754868246643,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.0754755",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many kangaroos are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00752_3620a6f0_cand_04",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Ensure exactly six donuts, exactly six raccoons, and exactly seven kangaroos are visible.",
+      "Bind colors correctly: all donuts black, all raccoons blue, all kangaroos purple.",
+      "Place the group of six black donuts to the left of the group of six blue raccoons.",
+      "Keep all objects separated and fully visible with minimal overlap or occlusion.",
+      "Do not add extra donuts, raccoons, kangaroos, or other objects."
+    ],
+    "generation_strategy": "Use a clear multi-object composition with three distinct groups. Arrange six black donuts on the left side, six blue raccoons on the right side relative to the donuts, and seven purple kangaroos in a separate visible area. Use simple spacing and clean separation so each object can be counted and its color identified.",
+    "initial_prompt": "Create a clear image with exactly six black donuts on the left side, exactly six blue raccoons to the right of the donuts, and exactly seven purple kangaroos in a separate visible group. The six black donuts must all be fully visible and individually countable, and the entire donut group must be to the left of the six blue raccoons. The six blue raccoons must all be fully visible and individually countable. The seven purple kangaroos must all be fully visible and individually countable. Keep all objects separated with minimal overlap, no occlusion, and do not include any extra donuts, raccoons, kangaroos, or other objects.",
+    "parsed_constraints": {
+      "attributes": {
+        "donuts": "black",
+        "kangaroos": "purple",
+        "raccoons": "blue"
+      },
+      "counts": {
+        "donuts": 6,
+        "kangaroos": 7,
+        "raccoons": 6
+      },
+      "objects": [
+        "donuts",
+        "raccoons",
+        "kangaroos"
+      ],
+      "relations": [
+        "six black donuts are to the left of six blue raccoons"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image passed the donut requirements, black donut color, donut presence, the left-of relation between donuts and raccoons, blue color binding for raccoons, purple color binding for kangaroos, and kangaroo presence. It failed because the six raccoons were not reliably present or countable, and the seven kangaroos were not reliably countable. The next prompt should make the raccoons a clearly labeled, central, visually separable group of exactly six blue raccoon animals and make the kangaroos an organized group of exactly seven purple kangaroo animals.",
+    "expected_improvement": [
+      "Six blue raccoons should be more recognizable as raccoons and individually countable.",
+      "Seven purple kangaroos should be separated into a simple countable arrangement.",
+      "Previously passed constraints for six black donuts, black donut color, purple kangaroo color, blue raccoon color, kangaroo presence, and donuts left of raccoons should be preserved."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "missing_object"
+    ],
+    "preserve_constraints": [
+      "Keep exactly six black donuts visible and individually countable.",
+      "Keep every donut black.",
+      "Keep the donut group to the left of the raccoon group.",
+      "Keep the raccoons blue, with the blue color bound specifically to the raccoons.",
+      "Keep the kangaroos purple, with the purple color bound specifically to the kangaroos.",
+      "Keep kangaroos present and clearly visible."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt used three broad object groups, but it did not give the raccoons and kangaroos a strict simple layout that would help the generator maintain exact counts and recognizable separate animal instances. The raccoons were likely omitted or merged, and the kangaroo group count was not controlled tightly enough.",
+      "error_source": "Insufficient quantity-counting and object-presence emphasis for the animal groups, especially the raccoons."
+    },
+    "regeneration_strategy": "Use a clean poster-like composition with three separated zones. Put six black donuts in a 2-by-3 grid on the left, six blue raccoons in a 2-by-3 grid immediately to the right of the donuts, and seven purple kangaroos in a separate 3-plus-4 grid. Emphasize full-body, non-overlapping, countable instances and forbid extras or duplicates.",
+    "regression_risks": [
+      "The generator may lose the exact six black donut count while trying to fix the animal counts.",
+      "The generator may place raccoons too far from or not clearly to the right of the donuts.",
+      "The generator may merge small animal figures, making the raccoon or kangaroo counts ambiguous.",
+      "The generator may add extra animals or background objects that confuse the count."
+    ],
+    "repair_constraints": [
+      "Include exactly six blue raccoons, not zero, and make all six raccoons fully visible, separate, and countable.",
+      "Make the raccoons clearly recognizable as raccoon animals while keeping them blue.",
+      "Include exactly seven purple kangaroos and make all seven kangaroos fully visible, separate, and countable.",
+      "Do not include fewer or more than six raccoons.",
+      "Do not include fewer or more than seven kangaroos.",
+      "Avoid overlapping or merging raccoons and kangaroos."
+    ],
+    "retry_prompt": "Create a clean, simple image with three clearly separated groups on a plain background. On the left, show exactly six black donuts arranged as two rows of three, each donut fully visible and separate. Immediately to the right of the donuts, show exactly six blue raccoons arranged as two rows of three; each raccoon must be a full-body blue raccoon animal, clearly visible, not overlapping, and individually countable. The entire group of six black donuts must be to the left of the entire group of six blue raccoons. In a separate visible group, show exactly seven purple kangaroos arranged as one row of three and one row of four; each kangaroo must be a full-body purple kangaroo animal, clearly visible, not overlapping, and individually countable. Use only these objects: six black donuts, six blue raccoons, and seven purple kangaroos. No extra donuts, no extra raccoons, no extra kangaroos, no duplicate merged animals, and no other objects.",
+    "skill_revision": {
+      "new_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same skill set but apply it more strictly: use grid layouts for exact counts, stronger object-presence wording for raccoons, explicit full-body separability for both animal groups, and stronger negative constraints against extras or merged figures."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many raccoons are in the image?",
+            "score": 4.882122748789281e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=4.88212e-09",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many raccoons are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any raccoons in the image?",
+            "score": 0.0024763707211121755,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.00247637",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any raccoons in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many kangaroos are in the image?",
+            "score": 0.0754754868246643,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.0754755",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many kangaroos are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00089/samples/00004.png",
+      "prompt": "Create a clear image with exactly six black donuts on the left side, exactly six blue raccoons to the right of the donuts, and exactly seven purple kangaroos in a separate visible group. The six black donuts must all be fully visible and individually countable, and the entire donut group must be to the left of the six blue raccoons. The six blue raccoons must all be fully visible and individually countable. The seven purple kangaroos must all be fully visible and individually countable. Keep all objects separated with minimal overlap, no occlusion, and do not include any extra donuts, raccoons, kangaroos, or other objects.",
+      "round": 0,
+      "score": 0.7048636469294619
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00752_3620a6f0_cand_04",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "count_mismatch",
+        "missing_object"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many raccoons are in the image?",
+            "score": 4.882122748789281e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=4.88212e-09",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many raccoons are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any raccoons in the image?",
+            "score": 0.0024763707211121755,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.00247637",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any raccoons in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many kangaroos are in the image?",
+            "score": 0.0754754868246643,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.0754755",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many kangaroos are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many donuts are in the image?",
+            "score": 0.9999999960005047,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "six",
+          "status": "passed",
+          "target": "How many donuts are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the donuts black?",
+            "score": 0.9999998626663,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the donuts black?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any donuts in the image?",
+            "score": 0.9999999897663656,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any donuts in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the donuts to the left of the raccoons?",
+            "score": 1.0,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the donuts to the left of the raccoons?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the raccoons blue?",
+            "score": 0.9706848152945895,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.970685",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the raccoons blue?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the kangaroos purple?",
+            "score": 0.9999999431389597,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the kangaroos purple?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any kangaroos in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any kangaroos in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.7048636469294619,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many raccoons are in the image?",
+              "score": 4.882122748789281e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=4.88212e-09",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many raccoons are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any raccoons in the image?",
+              "score": 0.0024763707211121755,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.00247637",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any raccoons in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many kangaroos are in the image?",
+              "score": 0.0754754868246643,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.0754755",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many kangaroos are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00089/samples/00004.png",
+        "prompt": "Create a clear image with exactly six black donuts on the left side, exactly six blue raccoons to the right of the donuts, and exactly seven purple kangaroos in a separate visible group. The six black donuts must all be fully visible and individually countable, and the entire donut group must be to the left of the six blue raccoons. The six blue raccoons must all be fully visible and individually countable. The seven purple kangaroos must all be fully visible and individually countable. Keep all objects separated with minimal overlap, no occlusion, and do not include any extra donuts, raccoons, kangaroos, or other objects.",
+        "round": 0,
+        "score": 0.7048636469294619
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many raccoons are in the image?",
+            "score": 4.882122748789281e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=4.88212e-09",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many raccoons are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any raccoons in the image?",
+            "score": 0.0024763707211121755,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.00247637",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any raccoons in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many kangaroos are in the image?",
+            "score": 0.0754754868246643,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.0754755",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many kangaroos are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "count_mismatch",
+        "missing_object"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many raccoons are in the image?",
+            "score": 4.882122748789281e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=4.88212e-09",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many raccoons are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any raccoons in the image?",
+            "score": 0.0024763707211121755,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.00247637",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any raccoons in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many kangaroos are in the image?",
+            "score": 0.0754754868246643,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.0754755",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many kangaroos are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many donuts are in the image?",
+            "score": 0.9999999960005047,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "six",
+          "status": "passed",
+          "target": "How many donuts are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the donuts black?",
+            "score": 0.9999998626663,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the donuts black?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any donuts in the image?",
+            "score": 0.9999999897663656,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any donuts in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the donuts to the left of the raccoons?",
+            "score": 1.0,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the donuts to the left of the raccoons?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the raccoons blue?",
+            "score": 0.9706848152945895,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.970685",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the raccoons blue?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the kangaroos purple?",
+            "score": 0.9999999431389597,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the kangaroos purple?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any kangaroos in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any kangaroos in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.7048636469294619,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "six black donuts to the left of six blue raccoons, and seven purple kangaroos",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many raccoons are in the image?",
+          "score": 4.882122748789281e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=4.88212e-09",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many raccoons are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 6,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any raccoons in the image?",
+          "score": 0.0024763707211121755,
+          "skill": "object"
+        },
+        "detected": "soft_score=0.00247637",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are there any raccoons in the image?",
+        "type": "missing_object"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many kangaroos are in the image?",
+          "score": 0.0754754868246643,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.0754755",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many kangaroos are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Ensure exactly six donuts, exactly six raccoons, and exactly seven kangaroos are visible.",
+        "Bind colors correctly: all donuts black, all raccoons blue, all kangaroos purple.",
+        "Place the group of six black donuts to the left of the group of six blue raccoons.",
+        "Keep all objects separated and fully visible with minimal overlap or occlusion.",
+        "Do not add extra donuts, raccoons, kangaroos, or other objects."
+      ],
+      "generation_strategy": "Use a clear multi-object composition with three distinct groups. Arrange six black donuts on the left side, six blue raccoons on the right side relative to the donuts, and seven purple kangaroos in a separate visible area. Use simple spacing and clean separation so each object can be counted and its color identified.",
+      "initial_prompt": "Create a clear image with exactly six black donuts on the left side, exactly six blue raccoons to the right of the donuts, and exactly seven purple kangaroos in a separate visible group. The six black donuts must all be fully visible and individually countable, and the entire donut group must be to the left of the six blue raccoons. The six blue raccoons must all be fully visible and individually countable. The seven purple kangaroos must all be fully visible and individually countable. Keep all objects separated with minimal overlap, no occlusion, and do not include any extra donuts, raccoons, kangaroos, or other objects.",
+      "parsed_constraints": {
+        "attributes": {
+          "donuts": "black",
+          "kangaroos": "purple",
+          "raccoons": "blue"
+        },
+        "counts": {
+          "donuts": 6,
+          "kangaroos": 7,
+          "raccoons": 6
+        },
+        "objects": [
+          "donuts",
+          "raccoons",
+          "kangaroos"
+        ],
+        "relations": [
+          "six black donuts are to the left of six blue raccoons"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Ensure exactly six donuts, exactly six raccoons, and exactly seven kangaroos are visible.",
+        "Bind colors correctly: all donuts black, all raccoons blue, all kangaroos purple.",
+        "Place the group of six black donuts to the left of the group of six blue raccoons.",
+        "Keep all objects separated and fully visible with minimal overlap or occlusion.",
+        "Do not add extra donuts, raccoons, kangaroos, or other objects."
+      ],
+      "generation_strategy": "Use a clear multi-object composition with three distinct groups. Arrange six black donuts on the left side, six blue raccoons on the right side relative to the donuts, and seven purple kangaroos in a separate visible area. Use simple spacing and clean separation so each object can be counted and its color identified.",
+      "initial_prompt": "Create a clear image with exactly six black donuts on the left side, exactly six blue raccoons to the right of the donuts, and exactly seven purple kangaroos in a separate visible group. The six black donuts must all be fully visible and individually countable, and the entire donut group must be to the left of the six blue raccoons. The six blue raccoons must all be fully visible and individually countable. The seven purple kangaroos must all be fully visible and individually countable. Keep all objects separated with minimal overlap, no occlusion, and do not include any extra donuts, raccoons, kangaroos, or other objects.",
+      "parsed_constraints": {
+        "attributes": {
+          "donuts": "black",
+          "kangaroos": "purple",
+          "raccoons": "blue"
+        },
+        "counts": {
+          "donuts": 6,
+          "kangaroos": 7,
+          "raccoons": 6
+        },
+        "objects": [
+          "donuts",
+          "raccoons",
+          "kangaroos"
+        ],
+        "relations": [
+          "six black donuts are to the left of six blue raccoons"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ]
+    },
+    "previous_prompt": "Create a clear image with exactly six black donuts on the left side, exactly six blue raccoons to the right of the donuts, and exactly seven purple kangaroos in a separate visible group. The six black donuts must all be fully visible and individually countable, and the entire donut group must be to the left of the six blue raccoons. The six blue raccoons must all be fully visible and individually countable. The seven purple kangaroos must all be fully visible and individually countable. Keep all objects separated with minimal overlap, no occlusion, and do not include any extra donuts, raccoons, kangaroos, or other objects.",
+    "previous_selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ],
+    "prompt_id": "geneval2_00752_3620a6f0",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "count_mismatch",
+          "missing_object"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many raccoons are in the image?",
+              "score": 4.882122748789281e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=4.88212e-09",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many raccoons are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any raccoons in the image?",
+              "score": 0.0024763707211121755,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.00247637",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any raccoons in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many kangaroos are in the image?",
+              "score": 0.0754754868246643,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.0754755",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many kangaroos are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many donuts are in the image?",
+              "score": 0.9999999960005047,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "six",
+            "status": "passed",
+            "target": "How many donuts are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the donuts black?",
+              "score": 0.9999998626663,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the donuts black?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any donuts in the image?",
+              "score": 0.9999999897663656,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any donuts in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the donuts to the left of the raccoons?",
+              "score": 1.0,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the donuts to the left of the raccoons?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the raccoons blue?",
+              "score": 0.9706848152945895,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.970685",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the raccoons blue?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the kangaroos purple?",
+              "score": 0.9999999431389597,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the kangaroos purple?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any kangaroos in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any kangaroos in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Ensure exactly six donuts, exactly six raccoons, and exactly seven kangaroos are visible.",
+            "Bind colors correctly: all donuts black, all raccoons blue, all kangaroos purple.",
+            "Place the group of six black donuts to the left of the group of six blue raccoons.",
+            "Keep all objects separated and fully visible with minimal overlap or occlusion.",
+            "Do not add extra donuts, raccoons, kangaroos, or other objects."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with three distinct groups. Arrange six black donuts on the left side, six blue raccoons on the right side relative to the donuts, and seven purple kangaroos in a separate visible area. Use simple spacing and clean separation so each object can be counted and its color identified.",
+          "initial_prompt": "Create a clear image with exactly six black donuts on the left side, exactly six blue raccoons to the right of the donuts, and exactly seven purple kangaroos in a separate visible group. The six black donuts must all be fully visible and individually countable, and the entire donut group must be to the left of the six blue raccoons. The six blue raccoons must all be fully visible and individually countable. The seven purple kangaroos must all be fully visible and individually countable. Keep all objects separated with minimal overlap, no occlusion, and do not include any extra donuts, raccoons, kangaroos, or other objects.",
+          "parsed_constraints": {
+            "attributes": {
+              "donuts": "black",
+              "kangaroos": "purple",
+              "raccoons": "blue"
+            },
+            "counts": {
+              "donuts": 6,
+              "kangaroos": 7,
+              "raccoons": 6
+            },
+            "objects": [
+              "donuts",
+              "raccoons",
+              "kangaroos"
+            ],
+            "relations": [
+              "six black donuts are to the left of six blue raccoons"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Ensure exactly six donuts, exactly six raccoons, and exactly seven kangaroos are visible.",
+            "Bind colors correctly: all donuts black, all raccoons blue, all kangaroos purple.",
+            "Place the group of six black donuts to the left of the group of six blue raccoons.",
+            "Keep all objects separated and fully visible with minimal overlap or occlusion.",
+            "Do not add extra donuts, raccoons, kangaroos, or other objects."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with three distinct groups. Arrange six black donuts on the left side, six blue raccoons on the right side relative to the donuts, and seven purple kangaroos in a separate visible area. Use simple spacing and clean separation so each object can be counted and its color identified.",
+          "initial_prompt": "Create a clear image with exactly six black donuts on the left side, exactly six blue raccoons to the right of the donuts, and exactly seven purple kangaroos in a separate visible group. The six black donuts must all be fully visible and individually countable, and the entire donut group must be to the left of the six blue raccoons. The six blue raccoons must all be fully visible and individually countable. The seven purple kangaroos must all be fully visible and individually countable. Keep all objects separated with minimal overlap, no occlusion, and do not include any extra donuts, raccoons, kangaroos, or other objects.",
+          "parsed_constraints": {
+            "attributes": {
+              "donuts": "black",
+              "kangaroos": "purple",
+              "raccoons": "blue"
+            },
+            "counts": {
+              "donuts": 6,
+              "kangaroos": 7,
+              "raccoons": 6
+            },
+            "objects": [
+              "donuts",
+              "raccoons",
+              "kangaroos"
+            ],
+            "relations": [
+              "six black donuts are to the left of six blue raccoons"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "prompt_used": "Create a clear image with exactly six black donuts on the left side, exactly six blue raccoons to the right of the donuts, and exactly seven purple kangaroos in a separate visible group. The six black donuts must all be fully visible and individually countable, and the entire donut group must be to the left of the six blue raccoons. The six blue raccoons must all be fully visible and individually countable. The seven purple kangaroos must all be fully visible and individually countable. Keep all objects separated with minimal overlap, no occlusion, and do not include any extra donuts, raccoons, kangaroos, or other objects.",
+        "round": 0,
+        "score": 0.7048636469294619,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many raccoons are in the image?",
+                "score": 4.882122748789281e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=4.88212e-09",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many raccoons are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any raccoons in the image?",
+                "score": 0.0024763707211121755,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.00247637",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any raccoons in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many kangaroos are in the image?",
+                "score": 0.0754754868246643,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.0754755",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many kangaroos are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00752_3620a6f0"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many raccoons are in the image?",
+          "score": 4.882122748789281e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=4.88212e-09",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many raccoons are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 6,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any raccoons in the image?",
+          "score": 0.0024763707211121755,
+          "skill": "object"
+        },
+        "detected": "soft_score=0.00247637",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are there any raccoons in the image?",
+        "type": "missing_object"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many kangaroos are in the image?",
+          "score": 0.0754754868246643,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.0754755",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many kangaroos are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00089/samples/00004.png",
+    "best_so_far_prompt": "Create a clear image with exactly six black donuts on the left side, exactly six blue raccoons to the right of the donuts, and exactly seven purple kangaroos in a separate visible group. The six black donuts must all be fully visible and individually countable, and the entire donut group must be to the left of the six blue raccoons. The six blue raccoons must all be fully visible and individually countable. The seven purple kangaroos must all be fully visible and individually countable. Keep all objects separated with minimal overlap, no occlusion, and do not include any extra donuts, raccoons, kangaroos, or other objects.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.7048636469294619,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many raccoons are in the image?",
+          "score": 4.882122748789281e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=4.88212e-09",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many raccoons are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 6,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any raccoons in the image?",
+          "score": 0.0024763707211121755,
+          "skill": "object"
+        },
+        "detected": "soft_score=0.00247637",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are there any raccoons in the image?",
+        "type": "missing_object"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many kangaroos are in the image?",
+          "score": 0.0754754868246643,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.0754755",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many kangaroos are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Ensure exactly six donuts, exactly six raccoons, and exactly seven kangaroos are visible.",
+        "Bind colors correctly: all donuts black, all raccoons blue, all kangaroos purple.",
+        "Place the group of six black donuts to the left of the group of six blue raccoons.",
+        "Keep all objects separated and fully visible with minimal overlap or occlusion.",
+        "Do not add extra donuts, raccoons, kangaroos, or other objects."
+      ],
+      "generation_strategy": "Use a clear multi-object composition with three distinct groups. Arrange six black donuts on the left side, six blue raccoons on the right side relative to the donuts, and seven purple kangaroos in a separate visible area. Use simple spacing and clean separation so each object can be counted and its color identified.",
+      "initial_prompt": "Create a clear image with exactly six black donuts on the left side, exactly six blue raccoons to the right of the donuts, and exactly seven purple kangaroos in a separate visible group. The six black donuts must all be fully visible and individually countable, and the entire donut group must be to the left of the six blue raccoons. The six blue raccoons must all be fully visible and individually countable. The seven purple kangaroos must all be fully visible and individually countable. Keep all objects separated with minimal overlap, no occlusion, and do not include any extra donuts, raccoons, kangaroos, or other objects.",
+      "parsed_constraints": {
+        "attributes": {
+          "donuts": "black",
+          "kangaroos": "purple",
+          "raccoons": "blue"
+        },
+        "counts": {
+          "donuts": 6,
+          "kangaroos": 7,
+          "raccoons": 6
+        },
+        "objects": [
+          "donuts",
+          "raccoons",
+          "kangaroos"
+        ],
+        "relations": [
+          "six black donuts are to the left of six blue raccoons"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.705 failed=['How many raccoons are in the image?', 'Are there any raccoons in the image?', 'How many kangaroos are in the image?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_incremental/snapshot_004_worker_01/geneval2_00752_3620a6f0__geneval2_00752_3620a6f0_cand_04__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00752_3620a6f0__geneval2_00752_3620a6f0_cand_04__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00752_3620a6f0",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image passed the donut requirements, black donut color, donut presence, the left-of relation between donuts and raccoons, blue color binding for raccoons, purple color binding for kangaroos, and kangaroo presence. It failed because the six raccoons were not reliably present or countable, and the seven kangaroos were not reliably countable. The next prompt should make the raccoons a clearly labeled, central, visually separable group of exactly six blue raccoon animals and make the kangaroos an organized group of exactly seven purple kangaroo animals.",
+    "expected_improvement": [
+      "Six blue raccoons should be more recognizable as raccoons and individually countable.",
+      "Seven purple kangaroos should be separated into a simple countable arrangement.",
+      "Previously passed constraints for six black donuts, black donut color, purple kangaroo color, blue raccoon color, kangaroo presence, and donuts left of raccoons should be preserved."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "missing_object"
+    ],
+    "preserve_constraints": [
+      "Keep exactly six black donuts visible and individually countable.",
+      "Keep every donut black.",
+      "Keep the donut group to the left of the raccoon group.",
+      "Keep the raccoons blue, with the blue color bound specifically to the raccoons.",
+      "Keep the kangaroos purple, with the purple color bound specifically to the kangaroos.",
+      "Keep kangaroos present and clearly visible."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt used three broad object groups, but it did not give the raccoons and kangaroos a strict simple layout that would help the generator maintain exact counts and recognizable separate animal instances. The raccoons were likely omitted or merged, and the kangaroo group count was not controlled tightly enough.",
+      "error_source": "Insufficient quantity-counting and object-presence emphasis for the animal groups, especially the raccoons."
+    },
+    "regeneration_strategy": "Use a clean poster-like composition with three separated zones. Put six black donuts in a 2-by-3 grid on the left, six blue raccoons in a 2-by-3 grid immediately to the right of the donuts, and seven purple kangaroos in a separate 3-plus-4 grid. Emphasize full-body, non-overlapping, countable instances and forbid extras or duplicates.",
+    "regression_risks": [
+      "The generator may lose the exact six black donut count while trying to fix the animal counts.",
+      "The generator may place raccoons too far from or not clearly to the right of the donuts.",
+      "The generator may merge small animal figures, making the raccoon or kangaroo counts ambiguous.",
+      "The generator may add extra animals or background objects that confuse the count."
+    ],
+    "repair_constraints": [
+      "Include exactly six blue raccoons, not zero, and make all six raccoons fully visible, separate, and countable.",
+      "Make the raccoons clearly recognizable as raccoon animals while keeping them blue.",
+      "Include exactly seven purple kangaroos and make all seven kangaroos fully visible, separate, and countable.",
+      "Do not include fewer or more than six raccoons.",
+      "Do not include fewer or more than seven kangaroos.",
+      "Avoid overlapping or merging raccoons and kangaroos."
+    ],
+    "retry_prompt": "Create a clean, simple image with three clearly separated groups on a plain background. On the left, show exactly six black donuts arranged as two rows of three, each donut fully visible and separate. Immediately to the right of the donuts, show exactly six blue raccoons arranged as two rows of three; each raccoon must be a full-body blue raccoon animal, clearly visible, not overlapping, and individually countable. The entire group of six black donuts must be to the left of the entire group of six blue raccoons. In a separate visible group, show exactly seven purple kangaroos arranged as one row of three and one row of four; each kangaroo must be a full-body purple kangaroo animal, clearly visible, not overlapping, and individually countable. Use only these objects: six black donuts, six blue raccoons, and seven purple kangaroos. No extra donuts, no extra raccoons, no extra kangaroos, no duplicate merged animals, and no other objects.",
+    "skill_revision": {
+      "new_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same skill set but apply it more strictly: use grid layouts for exact counts, stronger object-presence wording for raccoons, explicit full-body separability for both animal groups, and stronger negative constraints against extras or merged figures."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "six black donuts to the left of six blue raccoons, and seven purple kangaroos",
+    "prompt": "six black donuts to the left of six blue raccoons, and seven purple kangaroos",
+    "prompt_id": "geneval2_00752_3620a6f0",
+    "sampling_bucket": "high_atom_count",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 3,
+      "count": 3,
+      "object": 3,
+      "position": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 752,
+    "vqa_list": [
+      [
+        "How many donuts are in the image?",
+        "six"
+      ],
+      [
+        "Are the donuts black?",
+        "Yes"
+      ],
+      [
+        "Are there any donuts in the image?",
+        "Yes"
+      ],
+      [
+        "Are the donuts to the left of the raccoons?",
+        "Yes"
+      ],
+      [
+        "How many raccoons are in the image?",
+        "six"
+      ],
+      [
+        "Are the raccoons blue?",
+        "Yes"
+      ],
+      [
+        "Are there any raccoons in the image?",
+        "Yes"
+      ],
+      [
+        "How many kangaroos are in the image?",
+        "seven"
+      ],
+      [
+        "Are the kangaroos purple?",
+        "Yes"
+      ],
+      [
+        "Are there any kangaroos in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00752_3620a6f0"
+}

@@ -1,0 +1,3291 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "count_mismatch",
+          "missing_object",
+          "spatial_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many koalas are in the image?",
+              "score": 3.6540939665324e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=3.65409e-08",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many koalas are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any koalas in the image?",
+              "score": 0.0015375341798744557,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.00153753",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any koalas in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many flamingos are in the image?",
+              "score": 8.490205978019597e-05,
+              "skill": "count"
+            },
+            "detected": "soft_score=8.49021e-05",
+            "expected": "two",
+            "status": "failed",
+            "target": "How many flamingos are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the flamingos in front of the toy?",
+              "score": 0.1480572355728782,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.148057",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the flamingos in front of the toy?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many toys are in the image?",
+              "score": 1.1843648628825948e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.18436e-08",
+            "expected": "one",
+            "status": "failed",
+            "target": "How many toys are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the koalas metal?",
+              "score": 0.9999210191890597,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.999921",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the koalas metal?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the koalas to the left of the flamingos?",
+              "score": 0.9999997146096575,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the koalas to the left of the flamingos?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the flamingos glass?",
+              "score": 1.0,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the flamingos glass?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any flamingos in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any flamingos in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the toy purple?",
+              "score": 0.9959296477383646,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.99593",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Is the toy purple?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 10,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any toys in the image?",
+              "score": 0.9999038754535832,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999904",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any toys in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00716_fd02b627_cand_03",
+          "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+          "rows": [
+            {
+              "answer": "six",
+              "atom_count": 10,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00716_fd02b627_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00022/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00022/samples/00003.png",
+              "prompt": "six metal koalas to the left of two glass flamingos in front of a purple toy",
+              "prompt_id": "geneval2_00716_fd02b627",
+              "question": "How many koalas are in the image?",
+              "score": 3.6540939665324e-08,
+              "skill": "count",
+              "source_index": 716
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00716_fd02b627_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00022/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00022/samples/00003.png",
+              "prompt": "six metal koalas to the left of two glass flamingos in front of a purple toy",
+              "prompt_id": "geneval2_00716_fd02b627",
+              "question": "Are the koalas metal?",
+              "score": 0.9999210191890597,
+              "skill": "attribute",
+              "source_index": 716
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00716_fd02b627_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00022/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00022/samples/00003.png",
+              "prompt": "six metal koalas to the left of two glass flamingos in front of a purple toy",
+              "prompt_id": "geneval2_00716_fd02b627",
+              "question": "Are there any koalas in the image?",
+              "score": 0.0015375341798744557,
+              "skill": "object",
+              "source_index": 716
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00716_fd02b627_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00022/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00022/samples/00003.png",
+              "prompt": "six metal koalas to the left of two glass flamingos in front of a purple toy",
+              "prompt_id": "geneval2_00716_fd02b627",
+              "question": "Are the koalas to the left of the flamingos?",
+              "score": 0.9999997146096575,
+              "skill": "position",
+              "source_index": 716
+            },
+            {
+              "answer": "two",
+              "atom_count": 10,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00716_fd02b627_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00022/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00022/samples/00003.png",
+              "prompt": "six metal koalas to the left of two glass flamingos in front of a purple toy",
+              "prompt_id": "geneval2_00716_fd02b627",
+              "question": "How many flamingos are in the image?",
+              "score": 8.490205978019597e-05,
+              "skill": "count",
+              "source_index": 716
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00716_fd02b627_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00022/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00022/samples/00003.png",
+              "prompt": "six metal koalas to the left of two glass flamingos in front of a purple toy",
+              "prompt_id": "geneval2_00716_fd02b627",
+              "question": "Are the flamingos glass?",
+              "score": 1.0000000251311576,
+              "skill": "attribute",
+              "source_index": 716
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00716_fd02b627_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00022/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00022/samples/00003.png",
+              "prompt": "six metal koalas to the left of two glass flamingos in front of a purple toy",
+              "prompt_id": "geneval2_00716_fd02b627",
+              "question": "Are there any flamingos in the image?",
+              "score": 1.0000000225190888,
+              "skill": "object",
+              "source_index": 716
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00716_fd02b627_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00022/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00022/samples/00003.png",
+              "prompt": "six metal koalas to the left of two glass flamingos in front of a purple toy",
+              "prompt_id": "geneval2_00716_fd02b627",
+              "question": "Are the flamingos in front of the toy?",
+              "score": 0.1480572355728782,
+              "skill": "position",
+              "source_index": 716
+            },
+            {
+              "answer": "one",
+              "atom_count": 10,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00716_fd02b627_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00022/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00022/samples/00003.png",
+              "prompt": "six metal koalas to the left of two glass flamingos in front of a purple toy",
+              "prompt_id": "geneval2_00716_fd02b627",
+              "question": "How many toys are in the image?",
+              "score": 1.1843648628825948e-08,
+              "skill": "count",
+              "source_index": 716
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00716_fd02b627_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00022/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00022/samples/00003.png",
+              "prompt": "six metal koalas to the left of two glass flamingos in front of a purple toy",
+              "prompt_id": "geneval2_00716_fd02b627",
+              "question": "Is the toy purple?",
+              "score": 0.9959296477383646,
+              "skill": "attribute",
+              "source_index": 716
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 10,
+              "candidate_id": "geneval2_00716_fd02b627_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00022/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00022/samples/00003.png",
+              "prompt": "six metal koalas to the left of two glass flamingos in front of a purple toy",
+              "prompt_id": "geneval2_00716_fd02b627",
+              "question": "Are there any toys in the image?",
+              "score": 0.9999038754535832,
+              "skill": "object",
+              "source_index": 716
+            }
+          ],
+          "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.5586758161079806,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 3,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00716_fd02b627.json",
+          "manifest_prompt_index": 22,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00716_fd02b627"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00716_fd02b627_cand_03",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00022/samples/00003.png",
+        "prompt_used": "Create a clear scene with exactly six metal koalas grouped on the left side of the image. To the right of the koalas, place exactly two glass flamingos. The two glass flamingos must be in front of exactly one purple toy, with the purple toy visible behind them. Make all six koalas individually visible and metallic, both flamingos individually visible and glass, and the single toy clearly purple. Avoid extra koalas, extra flamingos, extra toys, or occlusion that would make the counts or left/front spatial relationships unclear.",
+        "seed": 1113
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly six koalas, exactly two flamingos, and exactly one toy.",
+          "Bind material attributes correctly: all six koalas are metal; both flamingos are glass; the single toy is purple.",
+          "Place the six metal koalas as a separated group on the left side of the image, clearly to the left of the two glass flamingos.",
+          "Place the two glass flamingos in front of the single purple toy, with the toy visible behind them.",
+          "Keep all objects clearly visible and avoid occlusion that would make counting difficult."
+        ],
+        "generation_strategy": "Use a clear, simple composition with three countable object groups: six metal koalas on the left, two glass flamingos on the right/front, and one purple toy behind the flamingos. Arrange objects with spacing so each koala and each flamingo can be individually counted, while preserving the spatial relations.",
+        "initial_prompt": "Create a clear scene with exactly six metal koalas grouped on the left side of the image. To the right of the koalas, place exactly two glass flamingos. The two glass flamingos must be in front of exactly one purple toy, with the purple toy visible behind them. Make all six koalas individually visible and metallic, both flamingos individually visible and glass, and the single toy clearly purple. Avoid extra koalas, extra flamingos, extra toys, or occlusion that would make the counts or left/front spatial relationships unclear.",
+        "parsed_constraints": {
+          "attributes": {
+            "flamingos": [
+              "glass"
+            ],
+            "koalas": [
+              "metal"
+            ],
+            "toy": [
+              "purple"
+            ]
+          },
+          "counts": {
+            "flamingos": 2,
+            "koalas": 6,
+            "toy": 1
+          },
+          "objects": [
+            "koalas",
+            "flamingos",
+            "toy"
+          ],
+          "relations": [
+            "six metal koalas are to the left of two glass flamingos",
+            "two glass flamingos are in front of one purple toy"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly six koalas, exactly two flamingos, and exactly one toy.",
+          "Bind material attributes correctly: all six koalas are metal; both flamingos are glass; the single toy is purple.",
+          "Place the six metal koalas as a separated group on the left side of the image, clearly to the left of the two glass flamingos.",
+          "Place the two glass flamingos in front of the single purple toy, with the toy visible behind them.",
+          "Keep all objects clearly visible and avoid occlusion that would make counting difficult."
+        ],
+        "generation_strategy": "Use a clear, simple composition with three countable object groups: six metal koalas on the left, two glass flamingos on the right/front, and one purple toy behind the flamingos. Arrange objects with spacing so each koala and each flamingo can be individually counted, while preserving the spatial relations.",
+        "initial_prompt": "Create a clear scene with exactly six metal koalas grouped on the left side of the image. To the right of the koalas, place exactly two glass flamingos. The two glass flamingos must be in front of exactly one purple toy, with the purple toy visible behind them. Make all six koalas individually visible and metallic, both flamingos individually visible and glass, and the single toy clearly purple. Avoid extra koalas, extra flamingos, extra toys, or occlusion that would make the counts or left/front spatial relationships unclear.",
+        "parsed_constraints": {
+          "attributes": {
+            "flamingos": [
+              "glass"
+            ],
+            "koalas": [
+              "metal"
+            ],
+            "toy": [
+              "purple"
+            ]
+          },
+          "counts": {
+            "flamingos": 2,
+            "koalas": 6,
+            "toy": 1
+          },
+          "objects": [
+            "koalas",
+            "flamingos",
+            "toy"
+          ],
+          "relations": [
+            "six metal koalas are to the left of two glass flamingos",
+            "two glass flamingos are in front of one purple toy"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many koalas are in the image?",
+                "score": 3.6540939665324e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=3.65409e-08",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many koalas are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any koalas in the image?",
+                "score": 0.0015375341798744557,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.00153753",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any koalas in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many flamingos are in the image?",
+                "score": 8.490205978019597e-05,
+                "skill": "count"
+              },
+              "detected": "soft_score=8.49021e-05",
+              "expected": "two",
+              "status": "failed",
+              "target": "How many flamingos are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the flamingos in front of the toy?",
+                "score": 0.1480572355728782,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.148057",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the flamingos in front of the toy?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many toys are in the image?",
+                "score": 1.1843648628825948e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.18436e-08",
+              "expected": "one",
+              "status": "failed",
+              "target": "How many toys are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00022/samples/00003.png",
+          "prompt": "Create a clear scene with exactly six metal koalas grouped on the left side of the image. To the right of the koalas, place exactly two glass flamingos. The two glass flamingos must be in front of exactly one purple toy, with the purple toy visible behind them. Make all six koalas individually visible and metallic, both flamingos individually visible and glass, and the single toy clearly purple. Avoid extra koalas, extra flamingos, extra toys, or occlusion that would make the counts or left/front spatial relationships unclear.",
+          "round": 0,
+          "score": 0.5586758161079806
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00716_fd02b627_cand_03",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "count_mismatch",
+            "missing_object",
+            "spatial_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many koalas are in the image?",
+                "score": 3.6540939665324e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=3.65409e-08",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many koalas are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any koalas in the image?",
+                "score": 0.0015375341798744557,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.00153753",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any koalas in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many flamingos are in the image?",
+                "score": 8.490205978019597e-05,
+                "skill": "count"
+              },
+              "detected": "soft_score=8.49021e-05",
+              "expected": "two",
+              "status": "failed",
+              "target": "How many flamingos are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the flamingos in front of the toy?",
+                "score": 0.1480572355728782,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.148057",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the flamingos in front of the toy?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many toys are in the image?",
+                "score": 1.1843648628825948e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.18436e-08",
+              "expected": "one",
+              "status": "failed",
+              "target": "How many toys are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the koalas metal?",
+                "score": 0.9999210191890597,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.999921",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the koalas metal?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the koalas to the left of the flamingos?",
+                "score": 0.9999997146096575,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the koalas to the left of the flamingos?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the flamingos glass?",
+                "score": 1.0,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the flamingos glass?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any flamingos in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any flamingos in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the toy purple?",
+                "score": 0.9959296477383646,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.99593",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Is the toy purple?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 10,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any toys in the image?",
+                "score": 0.9999038754535832,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999904",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any toys in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.5586758161079806,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many koalas are in the image?",
+                  "score": 3.6540939665324e-08,
+                  "skill": "count"
+                },
+                "detected": "soft_score=3.65409e-08",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many koalas are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any koalas in the image?",
+                  "score": 0.0015375341798744557,
+                  "skill": "object"
+                },
+                "detected": "soft_score=0.00153753",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are there any koalas in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many flamingos are in the image?",
+                  "score": 8.490205978019597e-05,
+                  "skill": "count"
+                },
+                "detected": "soft_score=8.49021e-05",
+                "expected": "two",
+                "status": "failed",
+                "target": "How many flamingos are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the flamingos in front of the toy?",
+                  "score": 0.1480572355728782,
+                  "skill": "position"
+                },
+                "detected": "soft_score=0.148057",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the flamingos in front of the toy?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many toys are in the image?",
+                  "score": 1.1843648628825948e-08,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1.18436e-08",
+                "expected": "one",
+                "status": "failed",
+                "target": "How many toys are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00022/samples/00003.png",
+            "prompt": "Create a clear scene with exactly six metal koalas grouped on the left side of the image. To the right of the koalas, place exactly two glass flamingos. The two glass flamingos must be in front of exactly one purple toy, with the purple toy visible behind them. Make all six koalas individually visible and metallic, both flamingos individually visible and glass, and the single toy clearly purple. Avoid extra koalas, extra flamingos, extra toys, or occlusion that would make the counts or left/front spatial relationships unclear.",
+            "round": 0,
+            "score": 0.5586758161079806
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many koalas are in the image?",
+                "score": 3.6540939665324e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=3.65409e-08",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many koalas are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any koalas in the image?",
+                "score": 0.0015375341798744557,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.00153753",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any koalas in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many flamingos are in the image?",
+                "score": 8.490205978019597e-05,
+                "skill": "count"
+              },
+              "detected": "soft_score=8.49021e-05",
+              "expected": "two",
+              "status": "failed",
+              "target": "How many flamingos are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the flamingos in front of the toy?",
+                "score": 0.1480572355728782,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.148057",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the flamingos in front of the toy?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many toys are in the image?",
+                "score": 1.1843648628825948e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.18436e-08",
+              "expected": "one",
+              "status": "failed",
+              "target": "How many toys are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "count_mismatch",
+            "missing_object",
+            "spatial_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many koalas are in the image?",
+                "score": 3.6540939665324e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=3.65409e-08",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many koalas are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any koalas in the image?",
+                "score": 0.0015375341798744557,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.00153753",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any koalas in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many flamingos are in the image?",
+                "score": 8.490205978019597e-05,
+                "skill": "count"
+              },
+              "detected": "soft_score=8.49021e-05",
+              "expected": "two",
+              "status": "failed",
+              "target": "How many flamingos are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the flamingos in front of the toy?",
+                "score": 0.1480572355728782,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.148057",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the flamingos in front of the toy?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many toys are in the image?",
+                "score": 1.1843648628825948e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.18436e-08",
+              "expected": "one",
+              "status": "failed",
+              "target": "How many toys are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the koalas metal?",
+                "score": 0.9999210191890597,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.999921",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the koalas metal?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the koalas to the left of the flamingos?",
+                "score": 0.9999997146096575,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the koalas to the left of the flamingos?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the flamingos glass?",
+                "score": 1.0,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the flamingos glass?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any flamingos in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any flamingos in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the toy purple?",
+                "score": 0.9959296477383646,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.99593",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Is the toy purple?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 10,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any toys in the image?",
+                "score": 0.9999038754535832,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999904",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any toys in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.5586758161079806,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "six metal koalas to the left of two glass flamingos in front of a purple toy",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many koalas are in the image?",
+              "score": 3.6540939665324e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=3.65409e-08",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many koalas are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any koalas in the image?",
+              "score": 0.0015375341798744557,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.00153753",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any koalas in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many flamingos are in the image?",
+              "score": 8.490205978019597e-05,
+              "skill": "count"
+            },
+            "detected": "soft_score=8.49021e-05",
+            "expected": "two",
+            "status": "failed",
+            "target": "How many flamingos are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the flamingos in front of the toy?",
+              "score": 0.1480572355728782,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.148057",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the flamingos in front of the toy?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many toys are in the image?",
+              "score": 1.1843648628825948e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.18436e-08",
+            "expected": "one",
+            "status": "failed",
+            "target": "How many toys are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly six koalas, exactly two flamingos, and exactly one toy.",
+            "Bind material attributes correctly: all six koalas are metal; both flamingos are glass; the single toy is purple.",
+            "Place the six metal koalas as a separated group on the left side of the image, clearly to the left of the two glass flamingos.",
+            "Place the two glass flamingos in front of the single purple toy, with the toy visible behind them.",
+            "Keep all objects clearly visible and avoid occlusion that would make counting difficult."
+          ],
+          "generation_strategy": "Use a clear, simple composition with three countable object groups: six metal koalas on the left, two glass flamingos on the right/front, and one purple toy behind the flamingos. Arrange objects with spacing so each koala and each flamingo can be individually counted, while preserving the spatial relations.",
+          "initial_prompt": "Create a clear scene with exactly six metal koalas grouped on the left side of the image. To the right of the koalas, place exactly two glass flamingos. The two glass flamingos must be in front of exactly one purple toy, with the purple toy visible behind them. Make all six koalas individually visible and metallic, both flamingos individually visible and glass, and the single toy clearly purple. Avoid extra koalas, extra flamingos, extra toys, or occlusion that would make the counts or left/front spatial relationships unclear.",
+          "parsed_constraints": {
+            "attributes": {
+              "flamingos": [
+                "glass"
+              ],
+              "koalas": [
+                "metal"
+              ],
+              "toy": [
+                "purple"
+              ]
+            },
+            "counts": {
+              "flamingos": 2,
+              "koalas": 6,
+              "toy": 1
+            },
+            "objects": [
+              "koalas",
+              "flamingos",
+              "toy"
+            ],
+            "relations": [
+              "six metal koalas are to the left of two glass flamingos",
+              "two glass flamingos are in front of one purple toy"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly six koalas, exactly two flamingos, and exactly one toy.",
+            "Bind material attributes correctly: all six koalas are metal; both flamingos are glass; the single toy is purple.",
+            "Place the six metal koalas as a separated group on the left side of the image, clearly to the left of the two glass flamingos.",
+            "Place the two glass flamingos in front of the single purple toy, with the toy visible behind them.",
+            "Keep all objects clearly visible and avoid occlusion that would make counting difficult."
+          ],
+          "generation_strategy": "Use a clear, simple composition with three countable object groups: six metal koalas on the left, two glass flamingos on the right/front, and one purple toy behind the flamingos. Arrange objects with spacing so each koala and each flamingo can be individually counted, while preserving the spatial relations.",
+          "initial_prompt": "Create a clear scene with exactly six metal koalas grouped on the left side of the image. To the right of the koalas, place exactly two glass flamingos. The two glass flamingos must be in front of exactly one purple toy, with the purple toy visible behind them. Make all six koalas individually visible and metallic, both flamingos individually visible and glass, and the single toy clearly purple. Avoid extra koalas, extra flamingos, extra toys, or occlusion that would make the counts or left/front spatial relationships unclear.",
+          "parsed_constraints": {
+            "attributes": {
+              "flamingos": [
+                "glass"
+              ],
+              "koalas": [
+                "metal"
+              ],
+              "toy": [
+                "purple"
+              ]
+            },
+            "counts": {
+              "flamingos": 2,
+              "koalas": 6,
+              "toy": 1
+            },
+            "objects": [
+              "koalas",
+              "flamingos",
+              "toy"
+            ],
+            "relations": [
+              "six metal koalas are to the left of two glass flamingos",
+              "two glass flamingos are in front of one purple toy"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_prompt": "Create a clear scene with exactly six metal koalas grouped on the left side of the image. To the right of the koalas, place exactly two glass flamingos. The two glass flamingos must be in front of exactly one purple toy, with the purple toy visible behind them. Make all six koalas individually visible and metallic, both flamingos individually visible and glass, and the single toy clearly purple. Avoid extra koalas, extra flamingos, extra toys, or occlusion that would make the counts or left/front spatial relationships unclear.",
+        "previous_selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ],
+        "prompt_id": "geneval2_00716_fd02b627",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "count_mismatch",
+              "missing_object",
+              "spatial_mismatch"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many koalas are in the image?",
+                  "score": 3.6540939665324e-08,
+                  "skill": "count"
+                },
+                "detected": "soft_score=3.65409e-08",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many koalas are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any koalas in the image?",
+                  "score": 0.0015375341798744557,
+                  "skill": "object"
+                },
+                "detected": "soft_score=0.00153753",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are there any koalas in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many flamingos are in the image?",
+                  "score": 8.490205978019597e-05,
+                  "skill": "count"
+                },
+                "detected": "soft_score=8.49021e-05",
+                "expected": "two",
+                "status": "failed",
+                "target": "How many flamingos are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the flamingos in front of the toy?",
+                  "score": 0.1480572355728782,
+                  "skill": "position"
+                },
+                "detected": "soft_score=0.148057",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the flamingos in front of the toy?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many toys are in the image?",
+                  "score": 1.1843648628825948e-08,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1.18436e-08",
+                "expected": "one",
+                "status": "failed",
+                "target": "How many toys are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the koalas metal?",
+                  "score": 0.9999210191890597,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.999921",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the koalas metal?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the koalas to the left of the flamingos?",
+                  "score": 0.9999997146096575,
+                  "skill": "position"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the koalas to the left of the flamingos?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the flamingos glass?",
+                  "score": 1.0,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the flamingos glass?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any flamingos in the image?",
+                  "score": 1.0,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any flamingos in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Is the toy purple?",
+                  "score": 0.9959296477383646,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.99593",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Is the toy purple?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 10,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any toys in the image?",
+                  "score": 0.9999038754535832,
+                  "skill": "object"
+                },
+                "detected": "soft_score=0.999904",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any toys in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly six koalas, exactly two flamingos, and exactly one toy.",
+                "Bind material attributes correctly: all six koalas are metal; both flamingos are glass; the single toy is purple.",
+                "Place the six metal koalas as a separated group on the left side of the image, clearly to the left of the two glass flamingos.",
+                "Place the two glass flamingos in front of the single purple toy, with the toy visible behind them.",
+                "Keep all objects clearly visible and avoid occlusion that would make counting difficult."
+              ],
+              "generation_strategy": "Use a clear, simple composition with three countable object groups: six metal koalas on the left, two glass flamingos on the right/front, and one purple toy behind the flamingos. Arrange objects with spacing so each koala and each flamingo can be individually counted, while preserving the spatial relations.",
+              "initial_prompt": "Create a clear scene with exactly six metal koalas grouped on the left side of the image. To the right of the koalas, place exactly two glass flamingos. The two glass flamingos must be in front of exactly one purple toy, with the purple toy visible behind them. Make all six koalas individually visible and metallic, both flamingos individually visible and glass, and the single toy clearly purple. Avoid extra koalas, extra flamingos, extra toys, or occlusion that would make the counts or left/front spatial relationships unclear.",
+              "parsed_constraints": {
+                "attributes": {
+                  "flamingos": [
+                    "glass"
+                  ],
+                  "koalas": [
+                    "metal"
+                  ],
+                  "toy": [
+                    "purple"
+                  ]
+                },
+                "counts": {
+                  "flamingos": 2,
+                  "koalas": 6,
+                  "toy": 1
+                },
+                "objects": [
+                  "koalas",
+                  "flamingos",
+                  "toy"
+                ],
+                "relations": [
+                  "six metal koalas are to the left of two glass flamingos",
+                  "two glass flamingos are in front of one purple toy"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly six koalas, exactly two flamingos, and exactly one toy.",
+                "Bind material attributes correctly: all six koalas are metal; both flamingos are glass; the single toy is purple.",
+                "Place the six metal koalas as a separated group on the left side of the image, clearly to the left of the two glass flamingos.",
+                "Place the two glass flamingos in front of the single purple toy, with the toy visible behind them.",
+                "Keep all objects clearly visible and avoid occlusion that would make counting difficult."
+              ],
+              "generation_strategy": "Use a clear, simple composition with three countable object groups: six metal koalas on the left, two glass flamingos on the right/front, and one purple toy behind the flamingos. Arrange objects with spacing so each koala and each flamingo can be individually counted, while preserving the spatial relations.",
+              "initial_prompt": "Create a clear scene with exactly six metal koalas grouped on the left side of the image. To the right of the koalas, place exactly two glass flamingos. The two glass flamingos must be in front of exactly one purple toy, with the purple toy visible behind them. Make all six koalas individually visible and metallic, both flamingos individually visible and glass, and the single toy clearly purple. Avoid extra koalas, extra flamingos, extra toys, or occlusion that would make the counts or left/front spatial relationships unclear.",
+              "parsed_constraints": {
+                "attributes": {
+                  "flamingos": [
+                    "glass"
+                  ],
+                  "koalas": [
+                    "metal"
+                  ],
+                  "toy": [
+                    "purple"
+                  ]
+                },
+                "counts": {
+                  "flamingos": 2,
+                  "koalas": 6,
+                  "toy": 1
+                },
+                "objects": [
+                  "koalas",
+                  "flamingos",
+                  "toy"
+                ],
+                "relations": [
+                  "six metal koalas are to the left of two glass flamingos",
+                  "two glass flamingos are in front of one purple toy"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "prompt_used": "Create a clear scene with exactly six metal koalas grouped on the left side of the image. To the right of the koalas, place exactly two glass flamingos. The two glass flamingos must be in front of exactly one purple toy, with the purple toy visible behind them. Make all six koalas individually visible and metallic, both flamingos individually visible and glass, and the single toy clearly purple. Avoid extra koalas, extra flamingos, extra toys, or occlusion that would make the counts or left/front spatial relationships unclear.",
+            "round": 0,
+            "score": 0.5586758161079806,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 0,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many koalas are in the image?",
+                    "score": 3.6540939665324e-08,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=3.65409e-08",
+                  "expected": "six",
+                  "status": "failed",
+                  "target": "How many koalas are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 2,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are there any koalas in the image?",
+                    "score": 0.0015375341798744557,
+                    "skill": "object"
+                  },
+                  "detected": "soft_score=0.00153753",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are there any koalas in the image?",
+                  "type": "missing_object"
+                },
+                {
+                  "details": {
+                    "atom_index": 4,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many flamingos are in the image?",
+                    "score": 8.490205978019597e-05,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=8.49021e-05",
+                  "expected": "two",
+                  "status": "failed",
+                  "target": "How many flamingos are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 7,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the flamingos in front of the toy?",
+                    "score": 0.1480572355728782,
+                    "skill": "position"
+                  },
+                  "detected": "soft_score=0.148057",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the flamingos in front of the toy?",
+                  "type": "spatial_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 8,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many toys are in the image?",
+                    "score": 1.1843648628825948e-08,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=1.18436e-08",
+                  "expected": "one",
+                  "status": "failed",
+                  "target": "How many toys are in the image?",
+                  "type": "count_mismatch"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00716_fd02b627"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many koalas are in the image?",
+              "score": 3.6540939665324e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=3.65409e-08",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many koalas are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any koalas in the image?",
+              "score": 0.0015375341798744557,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.00153753",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any koalas in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many flamingos are in the image?",
+              "score": 8.490205978019597e-05,
+              "skill": "count"
+            },
+            "detected": "soft_score=8.49021e-05",
+            "expected": "two",
+            "status": "failed",
+            "target": "How many flamingos are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the flamingos in front of the toy?",
+              "score": 0.1480572355728782,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.148057",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the flamingos in front of the toy?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many toys are in the image?",
+              "score": 1.1843648628825948e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.18436e-08",
+            "expected": "one",
+            "status": "failed",
+            "target": "How many toys are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00716_fd02b627_cand_03",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly six koalas, exactly two flamingos, and exactly one toy.",
+      "Bind material attributes correctly: all six koalas are metal; both flamingos are glass; the single toy is purple.",
+      "Place the six metal koalas as a separated group on the left side of the image, clearly to the left of the two glass flamingos.",
+      "Place the two glass flamingos in front of the single purple toy, with the toy visible behind them.",
+      "Keep all objects clearly visible and avoid occlusion that would make counting difficult."
+    ],
+    "generation_strategy": "Use a clear, simple composition with three countable object groups: six metal koalas on the left, two glass flamingos on the right/front, and one purple toy behind the flamingos. Arrange objects with spacing so each koala and each flamingo can be individually counted, while preserving the spatial relations.",
+    "initial_prompt": "Create a clear scene with exactly six metal koalas grouped on the left side of the image. To the right of the koalas, place exactly two glass flamingos. The two glass flamingos must be in front of exactly one purple toy, with the purple toy visible behind them. Make all six koalas individually visible and metallic, both flamingos individually visible and glass, and the single toy clearly purple. Avoid extra koalas, extra flamingos, extra toys, or occlusion that would make the counts or left/front spatial relationships unclear.",
+    "parsed_constraints": {
+      "attributes": {
+        "flamingos": [
+          "glass"
+        ],
+        "koalas": [
+          "metal"
+        ],
+        "toy": [
+          "purple"
+        ]
+      },
+      "counts": {
+        "flamingos": 2,
+        "koalas": 6,
+        "toy": 1
+      },
+      "objects": [
+        "koalas",
+        "flamingos",
+        "toy"
+      ],
+      "relations": [
+        "six metal koalas are to the left of two glass flamingos",
+        "two glass flamingos are in front of one purple toy"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The evaluation failed to detect the required six koalas and found count failures for koalas, flamingos, and toys. It also did not verify that the two flamingos are in front of the toy. The attributes that did pass were metal koalas, glass flamingos, purple toy, and the left-of relation between koalas and flamingos, so the retry should preserve those while making object identity, exact counts, and depth relation much more explicit.",
+    "expected_improvement": [
+      "Six koalas should be easier to detect because they are described as large, recognizable koala-shaped metal figures arranged in a visible 2-by-3 grid.",
+      "Two flamingos should be easier to count because they are separated, full-body, and clearly glass.",
+      "The single toy count should improve by emphasizing exactly one purple toy and forbidding any other toys.",
+      "The front relation should improve by placing the two glass flamingos in the foreground directly in front of the single purple toy, with the toy visibly behind them."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "missing_object",
+      "spatial_mismatch"
+    ],
+    "preserve_constraints": [
+      "All koalas must be metal.",
+      "The koala group must remain clearly to the left of the flamingos.",
+      "Both flamingos must be glass.",
+      "Flamingos must be present and visible.",
+      "The toy must be purple.",
+      "A toy must be present and visible."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt stated the correct counts and relations, but the composition did not sufficiently force recognizable, individually countable koalas or separated object instances. The phrase 'grouped' may have encouraged merged or unclear objects, and the toy-behind-flamingos relation was not staged strongly enough for the verifier to read the flamingos as in front.",
+      "error_source": "Insufficient count-enforcing layout and insufficient object-identity emphasis for koalas, plus weak foreground/background staging for flamingos and toy."
+    },
+    "regeneration_strategy": "Use a simple catalog-like layout with three clear zones: six separate metal koalas on the left in a 2-by-3 grid, two separate glass flamingos on the right foreground, and one purple toy directly behind the two flamingos. Make every required instance large, unobstructed, and visually separated, with negative constraints against extras.",
+    "regression_risks": [
+      "The generator may reduce the number of koalas or merge them unless the six are arranged in a strict 2-by-3 grid.",
+      "The generator may add extra toys or flamingos unless extras are explicitly forbidden.",
+      "The purple toy could hide the flamingos or appear beside them instead of behind them unless foreground/background placement is explicit.",
+      "Material attributes could leak or weaken if not bound to each object type."
+    ],
+    "repair_constraints": [
+      "Show exactly six koalas, all recognizable as koalas and all made of metal.",
+      "Arrange the six metal koalas as six separate full-body instances in two rows of three on the left side, with visible gaps between them and no extra koalas.",
+      "Show exactly two flamingos, both recognizable as flamingos and both made of glass.",
+      "Place the two glass flamingos as two separate full-body instances to the right of the koalas, with visible space between them and no extra flamingos.",
+      "Show exactly one toy, and make that single toy purple; do not show any other toys.",
+      "Place the two glass flamingos in the foreground directly in front of the one purple toy, with the purple toy behind them and still visible around or above them.",
+      "Keep the koalas clearly to the left of the flamingos."
+    ],
+    "retry_prompt": "Create a clear, simple scene with exactly six recognizable metal koalas on the left side of the image. Arrange the six metal koalas as six separate full-body figures in a neat 2-by-3 grid, with visible gaps between each koala, so they are easy to count; no extra koalas. To the right of the koalas, show exactly two recognizable glass flamingos, both full-body and separated from each other; no extra flamingos. Place exactly one purple toy behind the two glass flamingos, with the two glass flamingos in the foreground directly in front of the purple toy and the purple toy still visibly behind them; no extra toys. Keep the six metal koalas clearly to the left of the two glass flamingos, keep all objects unobstructed and countable, and bind the attributes clearly: koalas are metal, flamingos are glass, the single toy is purple.",
+    "skill_revision": {
+      "new_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same skill set but apply it more strongly: use quantity_counting with a 2-by-3 koala grid, object_presence with recognizable full-body animals, spatial_layout with explicit foreground/background placement, and negative_constraints to prevent extra koalas, flamingos, or toys."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many koalas are in the image?",
+            "score": 3.6540939665324e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=3.65409e-08",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many koalas are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any koalas in the image?",
+            "score": 0.0015375341798744557,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.00153753",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any koalas in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many flamingos are in the image?",
+            "score": 8.490205978019597e-05,
+            "skill": "count"
+          },
+          "detected": "soft_score=8.49021e-05",
+          "expected": "two",
+          "status": "failed",
+          "target": "How many flamingos are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the flamingos in front of the toy?",
+            "score": 0.1480572355728782,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.148057",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the flamingos in front of the toy?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many toys are in the image?",
+            "score": 1.1843648628825948e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.18436e-08",
+          "expected": "one",
+          "status": "failed",
+          "target": "How many toys are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00022/samples/00003.png",
+      "prompt": "Create a clear scene with exactly six metal koalas grouped on the left side of the image. To the right of the koalas, place exactly two glass flamingos. The two glass flamingos must be in front of exactly one purple toy, with the purple toy visible behind them. Make all six koalas individually visible and metallic, both flamingos individually visible and glass, and the single toy clearly purple. Avoid extra koalas, extra flamingos, extra toys, or occlusion that would make the counts or left/front spatial relationships unclear.",
+      "round": 0,
+      "score": 0.5586758161079806
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00716_fd02b627_cand_03",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "count_mismatch",
+        "missing_object",
+        "spatial_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many koalas are in the image?",
+            "score": 3.6540939665324e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=3.65409e-08",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many koalas are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any koalas in the image?",
+            "score": 0.0015375341798744557,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.00153753",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any koalas in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many flamingos are in the image?",
+            "score": 8.490205978019597e-05,
+            "skill": "count"
+          },
+          "detected": "soft_score=8.49021e-05",
+          "expected": "two",
+          "status": "failed",
+          "target": "How many flamingos are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the flamingos in front of the toy?",
+            "score": 0.1480572355728782,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.148057",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the flamingos in front of the toy?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many toys are in the image?",
+            "score": 1.1843648628825948e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.18436e-08",
+          "expected": "one",
+          "status": "failed",
+          "target": "How many toys are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the koalas metal?",
+            "score": 0.9999210191890597,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.999921",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the koalas metal?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the koalas to the left of the flamingos?",
+            "score": 0.9999997146096575,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the koalas to the left of the flamingos?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the flamingos glass?",
+            "score": 1.0,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the flamingos glass?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any flamingos in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any flamingos in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the toy purple?",
+            "score": 0.9959296477383646,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.99593",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the toy purple?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 10,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any toys in the image?",
+            "score": 0.9999038754535832,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999904",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any toys in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.5586758161079806,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many koalas are in the image?",
+              "score": 3.6540939665324e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=3.65409e-08",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many koalas are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any koalas in the image?",
+              "score": 0.0015375341798744557,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.00153753",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any koalas in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many flamingos are in the image?",
+              "score": 8.490205978019597e-05,
+              "skill": "count"
+            },
+            "detected": "soft_score=8.49021e-05",
+            "expected": "two",
+            "status": "failed",
+            "target": "How many flamingos are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the flamingos in front of the toy?",
+              "score": 0.1480572355728782,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.148057",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the flamingos in front of the toy?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many toys are in the image?",
+              "score": 1.1843648628825948e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.18436e-08",
+            "expected": "one",
+            "status": "failed",
+            "target": "How many toys are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00022/samples/00003.png",
+        "prompt": "Create a clear scene with exactly six metal koalas grouped on the left side of the image. To the right of the koalas, place exactly two glass flamingos. The two glass flamingos must be in front of exactly one purple toy, with the purple toy visible behind them. Make all six koalas individually visible and metallic, both flamingos individually visible and glass, and the single toy clearly purple. Avoid extra koalas, extra flamingos, extra toys, or occlusion that would make the counts or left/front spatial relationships unclear.",
+        "round": 0,
+        "score": 0.5586758161079806
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many koalas are in the image?",
+            "score": 3.6540939665324e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=3.65409e-08",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many koalas are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any koalas in the image?",
+            "score": 0.0015375341798744557,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.00153753",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any koalas in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many flamingos are in the image?",
+            "score": 8.490205978019597e-05,
+            "skill": "count"
+          },
+          "detected": "soft_score=8.49021e-05",
+          "expected": "two",
+          "status": "failed",
+          "target": "How many flamingos are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the flamingos in front of the toy?",
+            "score": 0.1480572355728782,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.148057",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the flamingos in front of the toy?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many toys are in the image?",
+            "score": 1.1843648628825948e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.18436e-08",
+          "expected": "one",
+          "status": "failed",
+          "target": "How many toys are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "count_mismatch",
+        "missing_object",
+        "spatial_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many koalas are in the image?",
+            "score": 3.6540939665324e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=3.65409e-08",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many koalas are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any koalas in the image?",
+            "score": 0.0015375341798744557,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.00153753",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any koalas in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many flamingos are in the image?",
+            "score": 8.490205978019597e-05,
+            "skill": "count"
+          },
+          "detected": "soft_score=8.49021e-05",
+          "expected": "two",
+          "status": "failed",
+          "target": "How many flamingos are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the flamingos in front of the toy?",
+            "score": 0.1480572355728782,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.148057",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the flamingos in front of the toy?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many toys are in the image?",
+            "score": 1.1843648628825948e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.18436e-08",
+          "expected": "one",
+          "status": "failed",
+          "target": "How many toys are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the koalas metal?",
+            "score": 0.9999210191890597,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.999921",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the koalas metal?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the koalas to the left of the flamingos?",
+            "score": 0.9999997146096575,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the koalas to the left of the flamingos?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the flamingos glass?",
+            "score": 1.0,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the flamingos glass?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any flamingos in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any flamingos in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the toy purple?",
+            "score": 0.9959296477383646,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.99593",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the toy purple?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 10,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any toys in the image?",
+            "score": 0.9999038754535832,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999904",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any toys in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.5586758161079806,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "six metal koalas to the left of two glass flamingos in front of a purple toy",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many koalas are in the image?",
+          "score": 3.6540939665324e-08,
+          "skill": "count"
+        },
+        "detected": "soft_score=3.65409e-08",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many koalas are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 2,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any koalas in the image?",
+          "score": 0.0015375341798744557,
+          "skill": "object"
+        },
+        "detected": "soft_score=0.00153753",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are there any koalas in the image?",
+        "type": "missing_object"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many flamingos are in the image?",
+          "score": 8.490205978019597e-05,
+          "skill": "count"
+        },
+        "detected": "soft_score=8.49021e-05",
+        "expected": "two",
+        "status": "failed",
+        "target": "How many flamingos are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the flamingos in front of the toy?",
+          "score": 0.1480572355728782,
+          "skill": "position"
+        },
+        "detected": "soft_score=0.148057",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the flamingos in front of the toy?",
+        "type": "spatial_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many toys are in the image?",
+          "score": 1.1843648628825948e-08,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.18436e-08",
+        "expected": "one",
+        "status": "failed",
+        "target": "How many toys are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly six koalas, exactly two flamingos, and exactly one toy.",
+        "Bind material attributes correctly: all six koalas are metal; both flamingos are glass; the single toy is purple.",
+        "Place the six metal koalas as a separated group on the left side of the image, clearly to the left of the two glass flamingos.",
+        "Place the two glass flamingos in front of the single purple toy, with the toy visible behind them.",
+        "Keep all objects clearly visible and avoid occlusion that would make counting difficult."
+      ],
+      "generation_strategy": "Use a clear, simple composition with three countable object groups: six metal koalas on the left, two glass flamingos on the right/front, and one purple toy behind the flamingos. Arrange objects with spacing so each koala and each flamingo can be individually counted, while preserving the spatial relations.",
+      "initial_prompt": "Create a clear scene with exactly six metal koalas grouped on the left side of the image. To the right of the koalas, place exactly two glass flamingos. The two glass flamingos must be in front of exactly one purple toy, with the purple toy visible behind them. Make all six koalas individually visible and metallic, both flamingos individually visible and glass, and the single toy clearly purple. Avoid extra koalas, extra flamingos, extra toys, or occlusion that would make the counts or left/front spatial relationships unclear.",
+      "parsed_constraints": {
+        "attributes": {
+          "flamingos": [
+            "glass"
+          ],
+          "koalas": [
+            "metal"
+          ],
+          "toy": [
+            "purple"
+          ]
+        },
+        "counts": {
+          "flamingos": 2,
+          "koalas": 6,
+          "toy": 1
+        },
+        "objects": [
+          "koalas",
+          "flamingos",
+          "toy"
+        ],
+        "relations": [
+          "six metal koalas are to the left of two glass flamingos",
+          "two glass flamingos are in front of one purple toy"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly six koalas, exactly two flamingos, and exactly one toy.",
+        "Bind material attributes correctly: all six koalas are metal; both flamingos are glass; the single toy is purple.",
+        "Place the six metal koalas as a separated group on the left side of the image, clearly to the left of the two glass flamingos.",
+        "Place the two glass flamingos in front of the single purple toy, with the toy visible behind them.",
+        "Keep all objects clearly visible and avoid occlusion that would make counting difficult."
+      ],
+      "generation_strategy": "Use a clear, simple composition with three countable object groups: six metal koalas on the left, two glass flamingos on the right/front, and one purple toy behind the flamingos. Arrange objects with spacing so each koala and each flamingo can be individually counted, while preserving the spatial relations.",
+      "initial_prompt": "Create a clear scene with exactly six metal koalas grouped on the left side of the image. To the right of the koalas, place exactly two glass flamingos. The two glass flamingos must be in front of exactly one purple toy, with the purple toy visible behind them. Make all six koalas individually visible and metallic, both flamingos individually visible and glass, and the single toy clearly purple. Avoid extra koalas, extra flamingos, extra toys, or occlusion that would make the counts or left/front spatial relationships unclear.",
+      "parsed_constraints": {
+        "attributes": {
+          "flamingos": [
+            "glass"
+          ],
+          "koalas": [
+            "metal"
+          ],
+          "toy": [
+            "purple"
+          ]
+        },
+        "counts": {
+          "flamingos": 2,
+          "koalas": 6,
+          "toy": 1
+        },
+        "objects": [
+          "koalas",
+          "flamingos",
+          "toy"
+        ],
+        "relations": [
+          "six metal koalas are to the left of two glass flamingos",
+          "two glass flamingos are in front of one purple toy"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_prompt": "Create a clear scene with exactly six metal koalas grouped on the left side of the image. To the right of the koalas, place exactly two glass flamingos. The two glass flamingos must be in front of exactly one purple toy, with the purple toy visible behind them. Make all six koalas individually visible and metallic, both flamingos individually visible and glass, and the single toy clearly purple. Avoid extra koalas, extra flamingos, extra toys, or occlusion that would make the counts or left/front spatial relationships unclear.",
+    "previous_selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ],
+    "prompt_id": "geneval2_00716_fd02b627",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "count_mismatch",
+          "missing_object",
+          "spatial_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many koalas are in the image?",
+              "score": 3.6540939665324e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=3.65409e-08",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many koalas are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any koalas in the image?",
+              "score": 0.0015375341798744557,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.00153753",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any koalas in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many flamingos are in the image?",
+              "score": 8.490205978019597e-05,
+              "skill": "count"
+            },
+            "detected": "soft_score=8.49021e-05",
+            "expected": "two",
+            "status": "failed",
+            "target": "How many flamingos are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the flamingos in front of the toy?",
+              "score": 0.1480572355728782,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.148057",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the flamingos in front of the toy?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many toys are in the image?",
+              "score": 1.1843648628825948e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.18436e-08",
+            "expected": "one",
+            "status": "failed",
+            "target": "How many toys are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the koalas metal?",
+              "score": 0.9999210191890597,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.999921",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the koalas metal?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the koalas to the left of the flamingos?",
+              "score": 0.9999997146096575,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the koalas to the left of the flamingos?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the flamingos glass?",
+              "score": 1.0,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the flamingos glass?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any flamingos in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any flamingos in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the toy purple?",
+              "score": 0.9959296477383646,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.99593",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Is the toy purple?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 10,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any toys in the image?",
+              "score": 0.9999038754535832,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999904",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any toys in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly six koalas, exactly two flamingos, and exactly one toy.",
+            "Bind material attributes correctly: all six koalas are metal; both flamingos are glass; the single toy is purple.",
+            "Place the six metal koalas as a separated group on the left side of the image, clearly to the left of the two glass flamingos.",
+            "Place the two glass flamingos in front of the single purple toy, with the toy visible behind them.",
+            "Keep all objects clearly visible and avoid occlusion that would make counting difficult."
+          ],
+          "generation_strategy": "Use a clear, simple composition with three countable object groups: six metal koalas on the left, two glass flamingos on the right/front, and one purple toy behind the flamingos. Arrange objects with spacing so each koala and each flamingo can be individually counted, while preserving the spatial relations.",
+          "initial_prompt": "Create a clear scene with exactly six metal koalas grouped on the left side of the image. To the right of the koalas, place exactly two glass flamingos. The two glass flamingos must be in front of exactly one purple toy, with the purple toy visible behind them. Make all six koalas individually visible and metallic, both flamingos individually visible and glass, and the single toy clearly purple. Avoid extra koalas, extra flamingos, extra toys, or occlusion that would make the counts or left/front spatial relationships unclear.",
+          "parsed_constraints": {
+            "attributes": {
+              "flamingos": [
+                "glass"
+              ],
+              "koalas": [
+                "metal"
+              ],
+              "toy": [
+                "purple"
+              ]
+            },
+            "counts": {
+              "flamingos": 2,
+              "koalas": 6,
+              "toy": 1
+            },
+            "objects": [
+              "koalas",
+              "flamingos",
+              "toy"
+            ],
+            "relations": [
+              "six metal koalas are to the left of two glass flamingos",
+              "two glass flamingos are in front of one purple toy"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly six koalas, exactly two flamingos, and exactly one toy.",
+            "Bind material attributes correctly: all six koalas are metal; both flamingos are glass; the single toy is purple.",
+            "Place the six metal koalas as a separated group on the left side of the image, clearly to the left of the two glass flamingos.",
+            "Place the two glass flamingos in front of the single purple toy, with the toy visible behind them.",
+            "Keep all objects clearly visible and avoid occlusion that would make counting difficult."
+          ],
+          "generation_strategy": "Use a clear, simple composition with three countable object groups: six metal koalas on the left, two glass flamingos on the right/front, and one purple toy behind the flamingos. Arrange objects with spacing so each koala and each flamingo can be individually counted, while preserving the spatial relations.",
+          "initial_prompt": "Create a clear scene with exactly six metal koalas grouped on the left side of the image. To the right of the koalas, place exactly two glass flamingos. The two glass flamingos must be in front of exactly one purple toy, with the purple toy visible behind them. Make all six koalas individually visible and metallic, both flamingos individually visible and glass, and the single toy clearly purple. Avoid extra koalas, extra flamingos, extra toys, or occlusion that would make the counts or left/front spatial relationships unclear.",
+          "parsed_constraints": {
+            "attributes": {
+              "flamingos": [
+                "glass"
+              ],
+              "koalas": [
+                "metal"
+              ],
+              "toy": [
+                "purple"
+              ]
+            },
+            "counts": {
+              "flamingos": 2,
+              "koalas": 6,
+              "toy": 1
+            },
+            "objects": [
+              "koalas",
+              "flamingos",
+              "toy"
+            ],
+            "relations": [
+              "six metal koalas are to the left of two glass flamingos",
+              "two glass flamingos are in front of one purple toy"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "prompt_used": "Create a clear scene with exactly six metal koalas grouped on the left side of the image. To the right of the koalas, place exactly two glass flamingos. The two glass flamingos must be in front of exactly one purple toy, with the purple toy visible behind them. Make all six koalas individually visible and metallic, both flamingos individually visible and glass, and the single toy clearly purple. Avoid extra koalas, extra flamingos, extra toys, or occlusion that would make the counts or left/front spatial relationships unclear.",
+        "round": 0,
+        "score": 0.5586758161079806,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many koalas are in the image?",
+                "score": 3.6540939665324e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=3.65409e-08",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many koalas are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any koalas in the image?",
+                "score": 0.0015375341798744557,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.00153753",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any koalas in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many flamingos are in the image?",
+                "score": 8.490205978019597e-05,
+                "skill": "count"
+              },
+              "detected": "soft_score=8.49021e-05",
+              "expected": "two",
+              "status": "failed",
+              "target": "How many flamingos are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the flamingos in front of the toy?",
+                "score": 0.1480572355728782,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.148057",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the flamingos in front of the toy?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many toys are in the image?",
+                "score": 1.1843648628825948e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.18436e-08",
+              "expected": "one",
+              "status": "failed",
+              "target": "How many toys are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00716_fd02b627"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many koalas are in the image?",
+          "score": 3.6540939665324e-08,
+          "skill": "count"
+        },
+        "detected": "soft_score=3.65409e-08",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many koalas are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 2,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any koalas in the image?",
+          "score": 0.0015375341798744557,
+          "skill": "object"
+        },
+        "detected": "soft_score=0.00153753",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are there any koalas in the image?",
+        "type": "missing_object"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many flamingos are in the image?",
+          "score": 8.490205978019597e-05,
+          "skill": "count"
+        },
+        "detected": "soft_score=8.49021e-05",
+        "expected": "two",
+        "status": "failed",
+        "target": "How many flamingos are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the flamingos in front of the toy?",
+          "score": 0.1480572355728782,
+          "skill": "position"
+        },
+        "detected": "soft_score=0.148057",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the flamingos in front of the toy?",
+        "type": "spatial_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many toys are in the image?",
+          "score": 1.1843648628825948e-08,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.18436e-08",
+        "expected": "one",
+        "status": "failed",
+        "target": "How many toys are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00022/samples/00003.png",
+    "best_so_far_prompt": "Create a clear scene with exactly six metal koalas grouped on the left side of the image. To the right of the koalas, place exactly two glass flamingos. The two glass flamingos must be in front of exactly one purple toy, with the purple toy visible behind them. Make all six koalas individually visible and metallic, both flamingos individually visible and glass, and the single toy clearly purple. Avoid extra koalas, extra flamingos, extra toys, or occlusion that would make the counts or left/front spatial relationships unclear.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.5586758161079806,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many koalas are in the image?",
+          "score": 3.6540939665324e-08,
+          "skill": "count"
+        },
+        "detected": "soft_score=3.65409e-08",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many koalas are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 2,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any koalas in the image?",
+          "score": 0.0015375341798744557,
+          "skill": "object"
+        },
+        "detected": "soft_score=0.00153753",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are there any koalas in the image?",
+        "type": "missing_object"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many flamingos are in the image?",
+          "score": 8.490205978019597e-05,
+          "skill": "count"
+        },
+        "detected": "soft_score=8.49021e-05",
+        "expected": "two",
+        "status": "failed",
+        "target": "How many flamingos are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the flamingos in front of the toy?",
+          "score": 0.1480572355728782,
+          "skill": "position"
+        },
+        "detected": "soft_score=0.148057",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the flamingos in front of the toy?",
+        "type": "spatial_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many toys are in the image?",
+          "score": 1.1843648628825948e-08,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.18436e-08",
+        "expected": "one",
+        "status": "failed",
+        "target": "How many toys are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly six koalas, exactly two flamingos, and exactly one toy.",
+        "Bind material attributes correctly: all six koalas are metal; both flamingos are glass; the single toy is purple.",
+        "Place the six metal koalas as a separated group on the left side of the image, clearly to the left of the two glass flamingos.",
+        "Place the two glass flamingos in front of the single purple toy, with the toy visible behind them.",
+        "Keep all objects clearly visible and avoid occlusion that would make counting difficult."
+      ],
+      "generation_strategy": "Use a clear, simple composition with three countable object groups: six metal koalas on the left, two glass flamingos on the right/front, and one purple toy behind the flamingos. Arrange objects with spacing so each koala and each flamingo can be individually counted, while preserving the spatial relations.",
+      "initial_prompt": "Create a clear scene with exactly six metal koalas grouped on the left side of the image. To the right of the koalas, place exactly two glass flamingos. The two glass flamingos must be in front of exactly one purple toy, with the purple toy visible behind them. Make all six koalas individually visible and metallic, both flamingos individually visible and glass, and the single toy clearly purple. Avoid extra koalas, extra flamingos, extra toys, or occlusion that would make the counts or left/front spatial relationships unclear.",
+      "parsed_constraints": {
+        "attributes": {
+          "flamingos": [
+            "glass"
+          ],
+          "koalas": [
+            "metal"
+          ],
+          "toy": [
+            "purple"
+          ]
+        },
+        "counts": {
+          "flamingos": 2,
+          "koalas": 6,
+          "toy": 1
+        },
+        "objects": [
+          "koalas",
+          "flamingos",
+          "toy"
+        ],
+        "relations": [
+          "six metal koalas are to the left of two glass flamingos",
+          "two glass flamingos are in front of one purple toy"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.559 failed=['How many koalas are in the image?', 'Are there any koalas in the image?', 'How many flamingos are in the image?', 'Are the flamingos in front of the toy?', 'How many toys are in the image?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_incremental/snapshot_001_worker_00/geneval2_00716_fd02b627__geneval2_00716_fd02b627_cand_03__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00716_fd02b627__geneval2_00716_fd02b627_cand_03__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00716_fd02b627",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The evaluation failed to detect the required six koalas and found count failures for koalas, flamingos, and toys. It also did not verify that the two flamingos are in front of the toy. The attributes that did pass were metal koalas, glass flamingos, purple toy, and the left-of relation between koalas and flamingos, so the retry should preserve those while making object identity, exact counts, and depth relation much more explicit.",
+    "expected_improvement": [
+      "Six koalas should be easier to detect because they are described as large, recognizable koala-shaped metal figures arranged in a visible 2-by-3 grid.",
+      "Two flamingos should be easier to count because they are separated, full-body, and clearly glass.",
+      "The single toy count should improve by emphasizing exactly one purple toy and forbidding any other toys.",
+      "The front relation should improve by placing the two glass flamingos in the foreground directly in front of the single purple toy, with the toy visibly behind them."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "missing_object",
+      "spatial_mismatch"
+    ],
+    "preserve_constraints": [
+      "All koalas must be metal.",
+      "The koala group must remain clearly to the left of the flamingos.",
+      "Both flamingos must be glass.",
+      "Flamingos must be present and visible.",
+      "The toy must be purple.",
+      "A toy must be present and visible."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt stated the correct counts and relations, but the composition did not sufficiently force recognizable, individually countable koalas or separated object instances. The phrase 'grouped' may have encouraged merged or unclear objects, and the toy-behind-flamingos relation was not staged strongly enough for the verifier to read the flamingos as in front.",
+      "error_source": "Insufficient count-enforcing layout and insufficient object-identity emphasis for koalas, plus weak foreground/background staging for flamingos and toy."
+    },
+    "regeneration_strategy": "Use a simple catalog-like layout with three clear zones: six separate metal koalas on the left in a 2-by-3 grid, two separate glass flamingos on the right foreground, and one purple toy directly behind the two flamingos. Make every required instance large, unobstructed, and visually separated, with negative constraints against extras.",
+    "regression_risks": [
+      "The generator may reduce the number of koalas or merge them unless the six are arranged in a strict 2-by-3 grid.",
+      "The generator may add extra toys or flamingos unless extras are explicitly forbidden.",
+      "The purple toy could hide the flamingos or appear beside them instead of behind them unless foreground/background placement is explicit.",
+      "Material attributes could leak or weaken if not bound to each object type."
+    ],
+    "repair_constraints": [
+      "Show exactly six koalas, all recognizable as koalas and all made of metal.",
+      "Arrange the six metal koalas as six separate full-body instances in two rows of three on the left side, with visible gaps between them and no extra koalas.",
+      "Show exactly two flamingos, both recognizable as flamingos and both made of glass.",
+      "Place the two glass flamingos as two separate full-body instances to the right of the koalas, with visible space between them and no extra flamingos.",
+      "Show exactly one toy, and make that single toy purple; do not show any other toys.",
+      "Place the two glass flamingos in the foreground directly in front of the one purple toy, with the purple toy behind them and still visible around or above them.",
+      "Keep the koalas clearly to the left of the flamingos."
+    ],
+    "retry_prompt": "Create a clear, simple scene with exactly six recognizable metal koalas on the left side of the image. Arrange the six metal koalas as six separate full-body figures in a neat 2-by-3 grid, with visible gaps between each koala, so they are easy to count; no extra koalas. To the right of the koalas, show exactly two recognizable glass flamingos, both full-body and separated from each other; no extra flamingos. Place exactly one purple toy behind the two glass flamingos, with the two glass flamingos in the foreground directly in front of the purple toy and the purple toy still visibly behind them; no extra toys. Keep the six metal koalas clearly to the left of the two glass flamingos, keep all objects unobstructed and countable, and bind the attributes clearly: koalas are metal, flamingos are glass, the single toy is purple.",
+    "skill_revision": {
+      "new_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same skill set but apply it more strongly: use quantity_counting with a 2-by-3 koala grid, object_presence with recognizable full-body animals, spatial_layout with explicit foreground/background placement, and negative_constraints to prevent extra koalas, flamingos, or toys."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "six metal koalas to the left of two glass flamingos in front of a purple toy",
+    "prompt": "six metal koalas to the left of two glass flamingos in front of a purple toy",
+    "prompt_id": "geneval2_00716_fd02b627",
+    "sampling_bucket": "object",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 3,
+      "count": 3,
+      "object": 3,
+      "position": 2
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 716,
+    "vqa_list": [
+      [
+        "How many koalas are in the image?",
+        "six"
+      ],
+      [
+        "Are the koalas metal?",
+        "Yes"
+      ],
+      [
+        "Are there any koalas in the image?",
+        "Yes"
+      ],
+      [
+        "Are the koalas to the left of the flamingos?",
+        "Yes"
+      ],
+      [
+        "How many flamingos are in the image?",
+        "two"
+      ],
+      [
+        "Are the flamingos glass?",
+        "Yes"
+      ],
+      [
+        "Are there any flamingos in the image?",
+        "Yes"
+      ],
+      [
+        "Are the flamingos in front of the toy?",
+        "Yes"
+      ],
+      [
+        "How many toys are in the image?",
+        "one"
+      ],
+      [
+        "Is the toy purple?",
+        "Yes"
+      ],
+      [
+        "Are there any toys in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00716_fd02b627"
+}

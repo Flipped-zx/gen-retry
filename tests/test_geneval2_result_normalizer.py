@@ -169,6 +169,43 @@ class GenEval2ResultNormalizerTest(unittest.TestCase):
             report = normalize_geneval2_score_list(rows)["0"]
             self.assertEqual(report.failed_constraints[0].type, "count_mismatch")
 
+    def test_official_score_lists_preserve_candidate_id_from_retry_benchmark(self) -> None:
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            scores = root / "score_lists.json"
+            bench = root / "eval_benchmark.jsonl"
+            candidate_id = "geneval2_001_cand_00"
+            scores.write_text(json.dumps([[0, 1]]), encoding="utf-8")
+            bench.write_text(
+                json.dumps(
+                    {
+                        "prompt": candidate_id,
+                        "original_prompt": "two red apples on a table",
+                        "prompt_id": "geneval2_001",
+                        "candidate_id": candidate_id,
+                        "candidate_index": 0,
+                        "source_index": 123,
+                        "vqa_list": [
+                            ["How many apples are in the image?", "two"],
+                            ["Are there apples in the image?", "Yes"],
+                        ],
+                        "skills": ["count", "object"],
+                    }
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+
+            rows = load_geneval2_score_rows(scores, benchmark_data=bench)
+            reports = normalize_geneval2_score_list(rows, aggregate_by="candidate_id")
+
+            self.assertEqual(rows[0]["candidate_id"], candidate_id)
+            self.assertEqual(rows[0]["prompt_id"], "geneval2_001")
+            self.assertEqual(rows[0]["prompt"], "two red apples on a table")
+            self.assertEqual(rows[0]["eval_prompt"], candidate_id)
+            self.assertEqual(set(reports), {candidate_id})
+            self.assertEqual(reports[candidate_id].failed_constraints[0].type, "count_mismatch")
+
     def test_adapter_reads_score_list_path(self) -> None:
         with TemporaryDirectory() as tmp:
             path = Path(tmp) / "rows.json"

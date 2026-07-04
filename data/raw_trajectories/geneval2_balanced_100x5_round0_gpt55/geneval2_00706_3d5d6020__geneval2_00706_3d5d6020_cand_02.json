@@ -1,0 +1,2947 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "color_mismatch",
+          "count_mismatch",
+          "relation_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many sheeps are in the image?",
+              "score": 7.195234478797531e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=7.19523e-09",
+            "expected": "three",
+            "status": "failed",
+            "target": "How many sheeps are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the sheeps white?",
+              "score": 0.06059134704264579,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.0605913",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the sheeps white?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the sheeps chasing the dogs?",
+              "score": 2.87984250018844e-06,
+              "skill": "verb"
+            },
+            "detected": "soft_score=2.87984e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the sheeps chasing the dogs?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many dogs are in the image?",
+              "score": 8.68608221486116e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=8.68608e-08",
+            "expected": "two",
+            "status": "failed",
+            "target": "How many dogs are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any sheeps in the image?",
+              "score": 0.9999976869075908,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999998",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any sheeps in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any dogs in the image?",
+              "score": 0.9999774433781567,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999977",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any dogs in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the dogs to the left of the raccoons?",
+              "score": 0.9859251446693804,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.985925",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the dogs to the left of the raccoons?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many raccoons are in the image?",
+              "score": 0.9923287891680346,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.992329",
+            "expected": "seven",
+            "status": "passed",
+            "target": "How many raccoons are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the raccoons striped?",
+              "score": 0.9992901955172329,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.99929",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the raccoons striped?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any raccoons in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any raccoons in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00706_3d5d6020_cand_02",
+          "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+          "rows": [
+            {
+              "answer": "three",
+              "atom_count": 10,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00706_3d5d6020_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00001/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00001/samples/00002.png",
+              "prompt": "three white sheeps chasing two dogs to the left of seven striped raccoons",
+              "prompt_id": "geneval2_00706_3d5d6020",
+              "question": "How many sheeps are in the image?",
+              "score": 7.195234478797531e-09,
+              "skill": "count",
+              "source_index": 706
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00706_3d5d6020_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00001/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00001/samples/00002.png",
+              "prompt": "three white sheeps chasing two dogs to the left of seven striped raccoons",
+              "prompt_id": "geneval2_00706_3d5d6020",
+              "question": "Are the sheeps white?",
+              "score": 0.06059134704264579,
+              "skill": "attribute",
+              "source_index": 706
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00706_3d5d6020_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00001/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00001/samples/00002.png",
+              "prompt": "three white sheeps chasing two dogs to the left of seven striped raccoons",
+              "prompt_id": "geneval2_00706_3d5d6020",
+              "question": "Are there any sheeps in the image?",
+              "score": 0.9999976869075908,
+              "skill": "object",
+              "source_index": 706
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00706_3d5d6020_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00001/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00001/samples/00002.png",
+              "prompt": "three white sheeps chasing two dogs to the left of seven striped raccoons",
+              "prompt_id": "geneval2_00706_3d5d6020",
+              "question": "Are the sheeps chasing the dogs?",
+              "score": 2.87984250018844e-06,
+              "skill": "verb",
+              "source_index": 706
+            },
+            {
+              "answer": "two",
+              "atom_count": 10,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00706_3d5d6020_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00001/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00001/samples/00002.png",
+              "prompt": "three white sheeps chasing two dogs to the left of seven striped raccoons",
+              "prompt_id": "geneval2_00706_3d5d6020",
+              "question": "How many dogs are in the image?",
+              "score": 8.68608221486116e-08,
+              "skill": "count",
+              "source_index": 706
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00706_3d5d6020_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00001/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00001/samples/00002.png",
+              "prompt": "three white sheeps chasing two dogs to the left of seven striped raccoons",
+              "prompt_id": "geneval2_00706_3d5d6020",
+              "question": "Are there any dogs in the image?",
+              "score": 0.9999774433781567,
+              "skill": "object",
+              "source_index": 706
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00706_3d5d6020_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00001/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00001/samples/00002.png",
+              "prompt": "three white sheeps chasing two dogs to the left of seven striped raccoons",
+              "prompt_id": "geneval2_00706_3d5d6020",
+              "question": "Are the dogs to the left of the raccoons?",
+              "score": 0.9859251446693804,
+              "skill": "position",
+              "source_index": 706
+            },
+            {
+              "answer": "seven",
+              "atom_count": 10,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00706_3d5d6020_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00001/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00001/samples/00002.png",
+              "prompt": "three white sheeps chasing two dogs to the left of seven striped raccoons",
+              "prompt_id": "geneval2_00706_3d5d6020",
+              "question": "How many raccoons are in the image?",
+              "score": 0.9923287891680346,
+              "skill": "count",
+              "source_index": 706
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00706_3d5d6020_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00001/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00001/samples/00002.png",
+              "prompt": "three white sheeps chasing two dogs to the left of seven striped raccoons",
+              "prompt_id": "geneval2_00706_3d5d6020",
+              "question": "Are the raccoons striped?",
+              "score": 0.9992901955172329,
+              "skill": "attribute",
+              "source_index": 706
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00706_3d5d6020_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00001/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00001/samples/00002.png",
+              "prompt": "three white sheeps chasing two dogs to the left of seven striped raccoons",
+              "prompt_id": "geneval2_00706_3d5d6020",
+              "question": "Are there any raccoons in the image?",
+              "score": 1.00000000619184,
+              "skill": "object",
+              "source_index": 706
+            }
+          ],
+          "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.6038113580581598,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 2,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00706_3d5d6020.json",
+          "manifest_prompt_index": 1,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00706_3d5d6020"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00706_3d5d6020_cand_02",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00001/samples/00002.png",
+        "prompt_used": "A clear scene with exactly three white sheep chasing exactly two dogs. The two dogs are positioned to the left of exactly seven striped raccoons. Arrange the animals in a horizontal composition: three white sheep behind and pursuing the two dogs, the two dogs ahead of the sheep and clearly left of the raccoon group, and seven striped raccoons on the right. Make every animal fully visible, distinct, separated from the others, and not occluded, so the counts are easy to verify.",
+        "seed": 1007
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly 3 sheep, exactly 2 dogs, and exactly 7 raccoons.",
+          "Bind the white color only to the 3 sheep.",
+          "Bind striped appearance to all 7 raccoons.",
+          "Make the 3 sheep visibly chasing the 2 dogs.",
+          "Place the 2 dogs to the left of the group of 7 raccoons.",
+          "Keep all animals fully visible, separated, and not occluding each other."
+        ],
+        "generation_strategy": "Use a clear horizontal layout with three groups: the three white sheep on the left or mid-left pursuing the two dogs, the two dogs ahead of the sheep and clearly to the left of the raccoons, and the seven striped raccoons grouped on the right. Keep all counts visually separable and ensure the chasing action is readable through running poses and direction of movement.",
+        "initial_prompt": "A clear scene with exactly three white sheep chasing exactly two dogs. The two dogs are positioned to the left of exactly seven striped raccoons. Arrange the animals in a horizontal composition: three white sheep behind and pursuing the two dogs, the two dogs ahead of the sheep and clearly left of the raccoon group, and seven striped raccoons on the right. Make every animal fully visible, distinct, separated from the others, and not occluded, so the counts are easy to verify.",
+        "parsed_constraints": {
+          "attributes": {
+            "raccoons": [
+              "striped"
+            ],
+            "sheep": [
+              "white"
+            ]
+          },
+          "counts": {
+            "dogs": 2,
+            "raccoons": 7,
+            "sheep": 3
+          },
+          "objects": [
+            "sheep",
+            "dogs",
+            "raccoons"
+          ],
+          "relations": [
+            "three white sheep are chasing two dogs",
+            "two dogs are to the left of seven striped raccoons"
+          ]
+        },
+        "selected_skills": [
+          "quantity_counting",
+          "object_presence",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly 3 sheep, exactly 2 dogs, and exactly 7 raccoons.",
+          "Bind the white color only to the 3 sheep.",
+          "Bind striped appearance to all 7 raccoons.",
+          "Make the 3 sheep visibly chasing the 2 dogs.",
+          "Place the 2 dogs to the left of the group of 7 raccoons.",
+          "Keep all animals fully visible, separated, and not occluding each other."
+        ],
+        "generation_strategy": "Use a clear horizontal layout with three groups: the three white sheep on the left or mid-left pursuing the two dogs, the two dogs ahead of the sheep and clearly to the left of the raccoons, and the seven striped raccoons grouped on the right. Keep all counts visually separable and ensure the chasing action is readable through running poses and direction of movement.",
+        "initial_prompt": "A clear scene with exactly three white sheep chasing exactly two dogs. The two dogs are positioned to the left of exactly seven striped raccoons. Arrange the animals in a horizontal composition: three white sheep behind and pursuing the two dogs, the two dogs ahead of the sheep and clearly left of the raccoon group, and seven striped raccoons on the right. Make every animal fully visible, distinct, separated from the others, and not occluded, so the counts are easy to verify.",
+        "parsed_constraints": {
+          "attributes": {
+            "raccoons": [
+              "striped"
+            ],
+            "sheep": [
+              "white"
+            ]
+          },
+          "counts": {
+            "dogs": 2,
+            "raccoons": 7,
+            "sheep": 3
+          },
+          "objects": [
+            "sheep",
+            "dogs",
+            "raccoons"
+          ],
+          "relations": [
+            "three white sheep are chasing two dogs",
+            "two dogs are to the left of seven striped raccoons"
+          ]
+        },
+        "selected_skills": [
+          "quantity_counting",
+          "object_presence",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many sheeps are in the image?",
+                "score": 7.195234478797531e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=7.19523e-09",
+              "expected": "three",
+              "status": "failed",
+              "target": "How many sheeps are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the sheeps white?",
+                "score": 0.06059134704264579,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.0605913",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the sheeps white?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the sheeps chasing the dogs?",
+                "score": 2.87984250018844e-06,
+                "skill": "verb"
+              },
+              "detected": "soft_score=2.87984e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the sheeps chasing the dogs?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many dogs are in the image?",
+                "score": 8.68608221486116e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=8.68608e-08",
+              "expected": "two",
+              "status": "failed",
+              "target": "How many dogs are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00001/samples/00002.png",
+          "prompt": "A clear scene with exactly three white sheep chasing exactly two dogs. The two dogs are positioned to the left of exactly seven striped raccoons. Arrange the animals in a horizontal composition: three white sheep behind and pursuing the two dogs, the two dogs ahead of the sheep and clearly left of the raccoon group, and seven striped raccoons on the right. Make every animal fully visible, distinct, separated from the others, and not occluded, so the counts are easy to verify.",
+          "round": 0,
+          "score": 0.6038113580581598
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00706_3d5d6020_cand_02",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "color_mismatch",
+            "count_mismatch",
+            "relation_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many sheeps are in the image?",
+                "score": 7.195234478797531e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=7.19523e-09",
+              "expected": "three",
+              "status": "failed",
+              "target": "How many sheeps are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the sheeps white?",
+                "score": 0.06059134704264579,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.0605913",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the sheeps white?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the sheeps chasing the dogs?",
+                "score": 2.87984250018844e-06,
+                "skill": "verb"
+              },
+              "detected": "soft_score=2.87984e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the sheeps chasing the dogs?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many dogs are in the image?",
+                "score": 8.68608221486116e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=8.68608e-08",
+              "expected": "two",
+              "status": "failed",
+              "target": "How many dogs are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any sheeps in the image?",
+                "score": 0.9999976869075908,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999998",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any sheeps in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any dogs in the image?",
+                "score": 0.9999774433781567,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999977",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any dogs in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the dogs to the left of the raccoons?",
+                "score": 0.9859251446693804,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.985925",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the dogs to the left of the raccoons?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many raccoons are in the image?",
+                "score": 0.9923287891680346,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.992329",
+              "expected": "seven",
+              "status": "passed",
+              "target": "How many raccoons are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the raccoons striped?",
+                "score": 0.9992901955172329,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.99929",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the raccoons striped?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any raccoons in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any raccoons in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.6038113580581598,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many sheeps are in the image?",
+                  "score": 7.195234478797531e-09,
+                  "skill": "count"
+                },
+                "detected": "soft_score=7.19523e-09",
+                "expected": "three",
+                "status": "failed",
+                "target": "How many sheeps are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the sheeps white?",
+                  "score": 0.06059134704264579,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.0605913",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the sheeps white?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the sheeps chasing the dogs?",
+                  "score": 2.87984250018844e-06,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=2.87984e-06",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the sheeps chasing the dogs?",
+                "type": "relation_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many dogs are in the image?",
+                  "score": 8.68608221486116e-08,
+                  "skill": "count"
+                },
+                "detected": "soft_score=8.68608e-08",
+                "expected": "two",
+                "status": "failed",
+                "target": "How many dogs are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00001/samples/00002.png",
+            "prompt": "A clear scene with exactly three white sheep chasing exactly two dogs. The two dogs are positioned to the left of exactly seven striped raccoons. Arrange the animals in a horizontal composition: three white sheep behind and pursuing the two dogs, the two dogs ahead of the sheep and clearly left of the raccoon group, and seven striped raccoons on the right. Make every animal fully visible, distinct, separated from the others, and not occluded, so the counts are easy to verify.",
+            "round": 0,
+            "score": 0.6038113580581598
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many sheeps are in the image?",
+                "score": 7.195234478797531e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=7.19523e-09",
+              "expected": "three",
+              "status": "failed",
+              "target": "How many sheeps are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the sheeps white?",
+                "score": 0.06059134704264579,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.0605913",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the sheeps white?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the sheeps chasing the dogs?",
+                "score": 2.87984250018844e-06,
+                "skill": "verb"
+              },
+              "detected": "soft_score=2.87984e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the sheeps chasing the dogs?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many dogs are in the image?",
+                "score": 8.68608221486116e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=8.68608e-08",
+              "expected": "two",
+              "status": "failed",
+              "target": "How many dogs are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "color_mismatch",
+            "count_mismatch",
+            "relation_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many sheeps are in the image?",
+                "score": 7.195234478797531e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=7.19523e-09",
+              "expected": "three",
+              "status": "failed",
+              "target": "How many sheeps are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the sheeps white?",
+                "score": 0.06059134704264579,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.0605913",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the sheeps white?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the sheeps chasing the dogs?",
+                "score": 2.87984250018844e-06,
+                "skill": "verb"
+              },
+              "detected": "soft_score=2.87984e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the sheeps chasing the dogs?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many dogs are in the image?",
+                "score": 8.68608221486116e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=8.68608e-08",
+              "expected": "two",
+              "status": "failed",
+              "target": "How many dogs are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any sheeps in the image?",
+                "score": 0.9999976869075908,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999998",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any sheeps in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any dogs in the image?",
+                "score": 0.9999774433781567,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999977",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any dogs in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the dogs to the left of the raccoons?",
+                "score": 0.9859251446693804,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.985925",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the dogs to the left of the raccoons?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many raccoons are in the image?",
+                "score": 0.9923287891680346,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.992329",
+              "expected": "seven",
+              "status": "passed",
+              "target": "How many raccoons are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the raccoons striped?",
+                "score": 0.9992901955172329,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.99929",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the raccoons striped?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any raccoons in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any raccoons in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.6038113580581598,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "three white sheeps chasing two dogs to the left of seven striped raccoons",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many sheeps are in the image?",
+              "score": 7.195234478797531e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=7.19523e-09",
+            "expected": "three",
+            "status": "failed",
+            "target": "How many sheeps are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the sheeps white?",
+              "score": 0.06059134704264579,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.0605913",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the sheeps white?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the sheeps chasing the dogs?",
+              "score": 2.87984250018844e-06,
+              "skill": "verb"
+            },
+            "detected": "soft_score=2.87984e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the sheeps chasing the dogs?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many dogs are in the image?",
+              "score": 8.68608221486116e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=8.68608e-08",
+            "expected": "two",
+            "status": "failed",
+            "target": "How many dogs are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly 3 sheep, exactly 2 dogs, and exactly 7 raccoons.",
+            "Bind the white color only to the 3 sheep.",
+            "Bind striped appearance to all 7 raccoons.",
+            "Make the 3 sheep visibly chasing the 2 dogs.",
+            "Place the 2 dogs to the left of the group of 7 raccoons.",
+            "Keep all animals fully visible, separated, and not occluding each other."
+          ],
+          "generation_strategy": "Use a clear horizontal layout with three groups: the three white sheep on the left or mid-left pursuing the two dogs, the two dogs ahead of the sheep and clearly to the left of the raccoons, and the seven striped raccoons grouped on the right. Keep all counts visually separable and ensure the chasing action is readable through running poses and direction of movement.",
+          "initial_prompt": "A clear scene with exactly three white sheep chasing exactly two dogs. The two dogs are positioned to the left of exactly seven striped raccoons. Arrange the animals in a horizontal composition: three white sheep behind and pursuing the two dogs, the two dogs ahead of the sheep and clearly left of the raccoon group, and seven striped raccoons on the right. Make every animal fully visible, distinct, separated from the others, and not occluded, so the counts are easy to verify.",
+          "parsed_constraints": {
+            "attributes": {
+              "raccoons": [
+                "striped"
+              ],
+              "sheep": [
+                "white"
+              ]
+            },
+            "counts": {
+              "dogs": 2,
+              "raccoons": 7,
+              "sheep": 3
+            },
+            "objects": [
+              "sheep",
+              "dogs",
+              "raccoons"
+            ],
+            "relations": [
+              "three white sheep are chasing two dogs",
+              "two dogs are to the left of seven striped raccoons"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "object_presence",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly 3 sheep, exactly 2 dogs, and exactly 7 raccoons.",
+            "Bind the white color only to the 3 sheep.",
+            "Bind striped appearance to all 7 raccoons.",
+            "Make the 3 sheep visibly chasing the 2 dogs.",
+            "Place the 2 dogs to the left of the group of 7 raccoons.",
+            "Keep all animals fully visible, separated, and not occluding each other."
+          ],
+          "generation_strategy": "Use a clear horizontal layout with three groups: the three white sheep on the left or mid-left pursuing the two dogs, the two dogs ahead of the sheep and clearly to the left of the raccoons, and the seven striped raccoons grouped on the right. Keep all counts visually separable and ensure the chasing action is readable through running poses and direction of movement.",
+          "initial_prompt": "A clear scene with exactly three white sheep chasing exactly two dogs. The two dogs are positioned to the left of exactly seven striped raccoons. Arrange the animals in a horizontal composition: three white sheep behind and pursuing the two dogs, the two dogs ahead of the sheep and clearly left of the raccoon group, and seven striped raccoons on the right. Make every animal fully visible, distinct, separated from the others, and not occluded, so the counts are easy to verify.",
+          "parsed_constraints": {
+            "attributes": {
+              "raccoons": [
+                "striped"
+              ],
+              "sheep": [
+                "white"
+              ]
+            },
+            "counts": {
+              "dogs": 2,
+              "raccoons": 7,
+              "sheep": 3
+            },
+            "objects": [
+              "sheep",
+              "dogs",
+              "raccoons"
+            ],
+            "relations": [
+              "three white sheep are chasing two dogs",
+              "two dogs are to the left of seven striped raccoons"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "object_presence",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion"
+          ]
+        },
+        "previous_prompt": "A clear scene with exactly three white sheep chasing exactly two dogs. The two dogs are positioned to the left of exactly seven striped raccoons. Arrange the animals in a horizontal composition: three white sheep behind and pursuing the two dogs, the two dogs ahead of the sheep and clearly left of the raccoon group, and seven striped raccoons on the right. Make every animal fully visible, distinct, separated from the others, and not occluded, so the counts are easy to verify.",
+        "previous_selected_skills": [
+          "quantity_counting",
+          "object_presence",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion"
+        ],
+        "prompt_id": "geneval2_00706_3d5d6020",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "color_mismatch",
+              "count_mismatch",
+              "relation_mismatch"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many sheeps are in the image?",
+                  "score": 7.195234478797531e-09,
+                  "skill": "count"
+                },
+                "detected": "soft_score=7.19523e-09",
+                "expected": "three",
+                "status": "failed",
+                "target": "How many sheeps are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the sheeps white?",
+                  "score": 0.06059134704264579,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.0605913",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the sheeps white?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the sheeps chasing the dogs?",
+                  "score": 2.87984250018844e-06,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=2.87984e-06",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the sheeps chasing the dogs?",
+                "type": "relation_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many dogs are in the image?",
+                  "score": 8.68608221486116e-08,
+                  "skill": "count"
+                },
+                "detected": "soft_score=8.68608e-08",
+                "expected": "two",
+                "status": "failed",
+                "target": "How many dogs are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any sheeps in the image?",
+                  "score": 0.9999976869075908,
+                  "skill": "object"
+                },
+                "detected": "soft_score=0.999998",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any sheeps in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any dogs in the image?",
+                  "score": 0.9999774433781567,
+                  "skill": "object"
+                },
+                "detected": "soft_score=0.999977",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any dogs in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the dogs to the left of the raccoons?",
+                  "score": 0.9859251446693804,
+                  "skill": "position"
+                },
+                "detected": "soft_score=0.985925",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the dogs to the left of the raccoons?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many raccoons are in the image?",
+                  "score": 0.9923287891680346,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.992329",
+                "expected": "seven",
+                "status": "passed",
+                "target": "How many raccoons are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the raccoons striped?",
+                  "score": 0.9992901955172329,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.99929",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the raccoons striped?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any raccoons in the image?",
+                  "score": 1.0,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any raccoons in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly 3 sheep, exactly 2 dogs, and exactly 7 raccoons.",
+                "Bind the white color only to the 3 sheep.",
+                "Bind striped appearance to all 7 raccoons.",
+                "Make the 3 sheep visibly chasing the 2 dogs.",
+                "Place the 2 dogs to the left of the group of 7 raccoons.",
+                "Keep all animals fully visible, separated, and not occluding each other."
+              ],
+              "generation_strategy": "Use a clear horizontal layout with three groups: the three white sheep on the left or mid-left pursuing the two dogs, the two dogs ahead of the sheep and clearly to the left of the raccoons, and the seven striped raccoons grouped on the right. Keep all counts visually separable and ensure the chasing action is readable through running poses and direction of movement.",
+              "initial_prompt": "A clear scene with exactly three white sheep chasing exactly two dogs. The two dogs are positioned to the left of exactly seven striped raccoons. Arrange the animals in a horizontal composition: three white sheep behind and pursuing the two dogs, the two dogs ahead of the sheep and clearly left of the raccoon group, and seven striped raccoons on the right. Make every animal fully visible, distinct, separated from the others, and not occluded, so the counts are easy to verify.",
+              "parsed_constraints": {
+                "attributes": {
+                  "raccoons": [
+                    "striped"
+                  ],
+                  "sheep": [
+                    "white"
+                  ]
+                },
+                "counts": {
+                  "dogs": 2,
+                  "raccoons": 7,
+                  "sheep": 3
+                },
+                "objects": [
+                  "sheep",
+                  "dogs",
+                  "raccoons"
+                ],
+                "relations": [
+                  "three white sheep are chasing two dogs",
+                  "two dogs are to the left of seven striped raccoons"
+                ]
+              },
+              "selected_skills": [
+                "quantity_counting",
+                "object_presence",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly 3 sheep, exactly 2 dogs, and exactly 7 raccoons.",
+                "Bind the white color only to the 3 sheep.",
+                "Bind striped appearance to all 7 raccoons.",
+                "Make the 3 sheep visibly chasing the 2 dogs.",
+                "Place the 2 dogs to the left of the group of 7 raccoons.",
+                "Keep all animals fully visible, separated, and not occluding each other."
+              ],
+              "generation_strategy": "Use a clear horizontal layout with three groups: the three white sheep on the left or mid-left pursuing the two dogs, the two dogs ahead of the sheep and clearly to the left of the raccoons, and the seven striped raccoons grouped on the right. Keep all counts visually separable and ensure the chasing action is readable through running poses and direction of movement.",
+              "initial_prompt": "A clear scene with exactly three white sheep chasing exactly two dogs. The two dogs are positioned to the left of exactly seven striped raccoons. Arrange the animals in a horizontal composition: three white sheep behind and pursuing the two dogs, the two dogs ahead of the sheep and clearly left of the raccoon group, and seven striped raccoons on the right. Make every animal fully visible, distinct, separated from the others, and not occluded, so the counts are easy to verify.",
+              "parsed_constraints": {
+                "attributes": {
+                  "raccoons": [
+                    "striped"
+                  ],
+                  "sheep": [
+                    "white"
+                  ]
+                },
+                "counts": {
+                  "dogs": 2,
+                  "raccoons": 7,
+                  "sheep": 3
+                },
+                "objects": [
+                  "sheep",
+                  "dogs",
+                  "raccoons"
+                ],
+                "relations": [
+                  "three white sheep are chasing two dogs",
+                  "two dogs are to the left of seven striped raccoons"
+                ]
+              },
+              "selected_skills": [
+                "quantity_counting",
+                "object_presence",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion"
+              ]
+            },
+            "prompt_used": "A clear scene with exactly three white sheep chasing exactly two dogs. The two dogs are positioned to the left of exactly seven striped raccoons. Arrange the animals in a horizontal composition: three white sheep behind and pursuing the two dogs, the two dogs ahead of the sheep and clearly left of the raccoon group, and seven striped raccoons on the right. Make every animal fully visible, distinct, separated from the others, and not occluded, so the counts are easy to verify.",
+            "round": 0,
+            "score": 0.6038113580581598,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 0,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many sheeps are in the image?",
+                    "score": 7.195234478797531e-09,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=7.19523e-09",
+                  "expected": "three",
+                  "status": "failed",
+                  "target": "How many sheeps are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 1,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the sheeps white?",
+                    "score": 0.06059134704264579,
+                    "skill": "attribute"
+                  },
+                  "detected": "soft_score=0.0605913",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the sheeps white?",
+                  "type": "color_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 3,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the sheeps chasing the dogs?",
+                    "score": 2.87984250018844e-06,
+                    "skill": "verb"
+                  },
+                  "detected": "soft_score=2.87984e-06",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the sheeps chasing the dogs?",
+                  "type": "relation_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 4,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many dogs are in the image?",
+                    "score": 8.68608221486116e-08,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=8.68608e-08",
+                  "expected": "two",
+                  "status": "failed",
+                  "target": "How many dogs are in the image?",
+                  "type": "count_mismatch"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00706_3d5d6020"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many sheeps are in the image?",
+              "score": 7.195234478797531e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=7.19523e-09",
+            "expected": "three",
+            "status": "failed",
+            "target": "How many sheeps are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the sheeps white?",
+              "score": 0.06059134704264579,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.0605913",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the sheeps white?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the sheeps chasing the dogs?",
+              "score": 2.87984250018844e-06,
+              "skill": "verb"
+            },
+            "detected": "soft_score=2.87984e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the sheeps chasing the dogs?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many dogs are in the image?",
+              "score": 8.68608221486116e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=8.68608e-08",
+            "expected": "two",
+            "status": "failed",
+            "target": "How many dogs are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00706_3d5d6020_cand_02",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly 3 sheep, exactly 2 dogs, and exactly 7 raccoons.",
+      "Bind the white color only to the 3 sheep.",
+      "Bind striped appearance to all 7 raccoons.",
+      "Make the 3 sheep visibly chasing the 2 dogs.",
+      "Place the 2 dogs to the left of the group of 7 raccoons.",
+      "Keep all animals fully visible, separated, and not occluding each other."
+    ],
+    "generation_strategy": "Use a clear horizontal layout with three groups: the three white sheep on the left or mid-left pursuing the two dogs, the two dogs ahead of the sheep and clearly to the left of the raccoons, and the seven striped raccoons grouped on the right. Keep all counts visually separable and ensure the chasing action is readable through running poses and direction of movement.",
+    "initial_prompt": "A clear scene with exactly three white sheep chasing exactly two dogs. The two dogs are positioned to the left of exactly seven striped raccoons. Arrange the animals in a horizontal composition: three white sheep behind and pursuing the two dogs, the two dogs ahead of the sheep and clearly left of the raccoon group, and seven striped raccoons on the right. Make every animal fully visible, distinct, separated from the others, and not occluded, so the counts are easy to verify.",
+    "parsed_constraints": {
+      "attributes": {
+        "raccoons": [
+          "striped"
+        ],
+        "sheep": [
+          "white"
+        ]
+      },
+      "counts": {
+        "dogs": 2,
+        "raccoons": 7,
+        "sheep": 3
+      },
+      "objects": [
+        "sheep",
+        "dogs",
+        "raccoons"
+      ],
+      "relations": [
+        "three white sheep are chasing two dogs",
+        "two dogs are to the left of seven striped raccoons"
+      ]
+    },
+    "selected_skills": [
+      "quantity_counting",
+      "object_presence",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image preserved sheep, dogs, raccoons, seven striped raccoons, and the dogs-left-of-raccoons relation, but failed the exact count of three sheep, the white color of the sheep, the exact count of two dogs, and the action relation that the sheep are chasing the dogs. The very low count scores suggest the sheep and dog groups were not visually countable or may have merged, been obscured, or been replaced by unclear animals. The chasing relation was likely too implicit because the prior prompt said behind and pursuing but did not force a readable left-to-right running sequence with sheep directly following dogs.",
+    "expected_improvement": [
+      "Exactly three sheep should be countable as three separate animals.",
+      "All three sheep should be visibly white with the white attribute bound only to the sheep.",
+      "Exactly two dogs should be countable as two separate animals.",
+      "The sheep-chasing-dogs relation should read clearly because the three sheep are immediately behind the two dogs in the same running direction.",
+      "Previously passed constraints should remain: dogs are left of the raccoons, seven raccoons are present, and the raccoons are striped."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "color_mismatch",
+      "relation_mismatch"
+    ],
+    "preserve_constraints": [
+      "Include sheep, dogs, and raccoons as visible animals.",
+      "Keep exactly seven raccoons on the right side of the image.",
+      "Make all seven raccoons clearly striped.",
+      "Place the two dogs clearly to the left of the raccoon group.",
+      "Keep all animals distinct, complete, visible, and not hidden by other animals."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt used a broad horizontal grouping but did not make the three sheep and two dogs individually isolated enough for reliable counting. It also did not emphasize unmistakably white sheep coats or a strong visual action cue for chasing, so the generator may have produced ambiguous sheep colors and a static animal lineup rather than a chase.",
+      "error_source": "Prompt under-specified count separability, attribute binding strength, and dynamic relation readability for the sheep-dog interaction."
+    },
+    "regeneration_strategy": "Use a simple left-to-right chase diagram: three separate white sheep on the far left or mid-left, each in running posture and facing right, directly following two separate dogs in front of them; the two dogs remain left of a separated row/group of exactly seven striped raccoons on the far right. Strengthen counting with separated instances and negative constraints against extra sheep, extra dogs, or merged animals, while preserving the raccoon count and dog-left-of-raccoon relation.",
+    "regression_risks": [
+      "Adding stronger chase motion could disturb the already-passed dogs-left-of-raccoons spatial relation if the dogs are placed too close to or among the raccoons.",
+      "Emphasizing sheep and dogs could cause the generator to reduce or alter the seven striped raccoons.",
+      "Large animal groups may overlap or merge, causing count errors."
+    ],
+    "repair_constraints": [
+      "Show exactly three sheep, no more and no fewer; make the three sheep separate, fully visible, and easy to count.",
+      "Bind the color white to each of the three sheep: all three sheep must have white wool.",
+      "Show exactly two dogs, no more and no fewer; make the two dogs separate, fully visible, and easy to count.",
+      "Make the three white sheep clearly chasing the two dogs: the sheep are directly behind the dogs, all facing and running in the same direction toward the dogs, with the dogs in front fleeing from the sheep.",
+      "Avoid extra sheep, extra dogs, duplicate heads or bodies, merged animals, cropped animals, or animals hidden behind others."
+    ],
+    "retry_prompt": "A clear, simple left-to-right animal chase scene. Show exactly three white sheep, no more and no fewer: three separate full-body sheep with bright white wool, clearly countable, running to the right. Directly in front of the three white sheep are exactly two dogs, no more and no fewer: two separate full-body dogs, clearly countable, also running to the right as if fleeing. The three white sheep are visibly chasing the two dogs, with the sheep immediately behind the dogs and all five animals facing the same direction. To the right of the two dogs, place exactly seven striped raccoons, no more and no fewer, arranged as seven separate full-body striped raccoons. The two dogs must be clearly to the left of the seven striped raccoons. Keep every animal fully visible, separated, unobstructed, and not overlapping; avoid extra sheep, extra dogs, extra raccoons, merged bodies, duplicate heads, or cropped animals.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints",
+        "object_presence"
+      ],
+      "previous_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion"
+      ],
+      "reason": "Add negative_constraints to explicitly prevent extra sheep or dogs and merged or duplicate animals, while retaining counting, visibility, attribute binding, and spatial layout skills."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many sheeps are in the image?",
+            "score": 7.195234478797531e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=7.19523e-09",
+          "expected": "three",
+          "status": "failed",
+          "target": "How many sheeps are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the sheeps white?",
+            "score": 0.06059134704264579,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.0605913",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the sheeps white?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the sheeps chasing the dogs?",
+            "score": 2.87984250018844e-06,
+            "skill": "verb"
+          },
+          "detected": "soft_score=2.87984e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the sheeps chasing the dogs?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many dogs are in the image?",
+            "score": 8.68608221486116e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=8.68608e-08",
+          "expected": "two",
+          "status": "failed",
+          "target": "How many dogs are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00001/samples/00002.png",
+      "prompt": "A clear scene with exactly three white sheep chasing exactly two dogs. The two dogs are positioned to the left of exactly seven striped raccoons. Arrange the animals in a horizontal composition: three white sheep behind and pursuing the two dogs, the two dogs ahead of the sheep and clearly left of the raccoon group, and seven striped raccoons on the right. Make every animal fully visible, distinct, separated from the others, and not occluded, so the counts are easy to verify.",
+      "round": 0,
+      "score": 0.6038113580581598
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00706_3d5d6020_cand_02",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "color_mismatch",
+        "count_mismatch",
+        "relation_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many sheeps are in the image?",
+            "score": 7.195234478797531e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=7.19523e-09",
+          "expected": "three",
+          "status": "failed",
+          "target": "How many sheeps are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the sheeps white?",
+            "score": 0.06059134704264579,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.0605913",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the sheeps white?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the sheeps chasing the dogs?",
+            "score": 2.87984250018844e-06,
+            "skill": "verb"
+          },
+          "detected": "soft_score=2.87984e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the sheeps chasing the dogs?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many dogs are in the image?",
+            "score": 8.68608221486116e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=8.68608e-08",
+          "expected": "two",
+          "status": "failed",
+          "target": "How many dogs are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any sheeps in the image?",
+            "score": 0.9999976869075908,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999998",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any sheeps in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any dogs in the image?",
+            "score": 0.9999774433781567,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999977",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any dogs in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the dogs to the left of the raccoons?",
+            "score": 0.9859251446693804,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.985925",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the dogs to the left of the raccoons?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many raccoons are in the image?",
+            "score": 0.9923287891680346,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.992329",
+          "expected": "seven",
+          "status": "passed",
+          "target": "How many raccoons are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the raccoons striped?",
+            "score": 0.9992901955172329,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.99929",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the raccoons striped?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any raccoons in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any raccoons in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.6038113580581598,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many sheeps are in the image?",
+              "score": 7.195234478797531e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=7.19523e-09",
+            "expected": "three",
+            "status": "failed",
+            "target": "How many sheeps are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the sheeps white?",
+              "score": 0.06059134704264579,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.0605913",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the sheeps white?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the sheeps chasing the dogs?",
+              "score": 2.87984250018844e-06,
+              "skill": "verb"
+            },
+            "detected": "soft_score=2.87984e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the sheeps chasing the dogs?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many dogs are in the image?",
+              "score": 8.68608221486116e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=8.68608e-08",
+            "expected": "two",
+            "status": "failed",
+            "target": "How many dogs are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00001/samples/00002.png",
+        "prompt": "A clear scene with exactly three white sheep chasing exactly two dogs. The two dogs are positioned to the left of exactly seven striped raccoons. Arrange the animals in a horizontal composition: three white sheep behind and pursuing the two dogs, the two dogs ahead of the sheep and clearly left of the raccoon group, and seven striped raccoons on the right. Make every animal fully visible, distinct, separated from the others, and not occluded, so the counts are easy to verify.",
+        "round": 0,
+        "score": 0.6038113580581598
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many sheeps are in the image?",
+            "score": 7.195234478797531e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=7.19523e-09",
+          "expected": "three",
+          "status": "failed",
+          "target": "How many sheeps are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the sheeps white?",
+            "score": 0.06059134704264579,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.0605913",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the sheeps white?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the sheeps chasing the dogs?",
+            "score": 2.87984250018844e-06,
+            "skill": "verb"
+          },
+          "detected": "soft_score=2.87984e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the sheeps chasing the dogs?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many dogs are in the image?",
+            "score": 8.68608221486116e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=8.68608e-08",
+          "expected": "two",
+          "status": "failed",
+          "target": "How many dogs are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "color_mismatch",
+        "count_mismatch",
+        "relation_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many sheeps are in the image?",
+            "score": 7.195234478797531e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=7.19523e-09",
+          "expected": "three",
+          "status": "failed",
+          "target": "How many sheeps are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the sheeps white?",
+            "score": 0.06059134704264579,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.0605913",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the sheeps white?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the sheeps chasing the dogs?",
+            "score": 2.87984250018844e-06,
+            "skill": "verb"
+          },
+          "detected": "soft_score=2.87984e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the sheeps chasing the dogs?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many dogs are in the image?",
+            "score": 8.68608221486116e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=8.68608e-08",
+          "expected": "two",
+          "status": "failed",
+          "target": "How many dogs are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any sheeps in the image?",
+            "score": 0.9999976869075908,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999998",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any sheeps in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any dogs in the image?",
+            "score": 0.9999774433781567,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999977",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any dogs in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the dogs to the left of the raccoons?",
+            "score": 0.9859251446693804,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.985925",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the dogs to the left of the raccoons?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many raccoons are in the image?",
+            "score": 0.9923287891680346,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.992329",
+          "expected": "seven",
+          "status": "passed",
+          "target": "How many raccoons are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the raccoons striped?",
+            "score": 0.9992901955172329,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.99929",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the raccoons striped?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any raccoons in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any raccoons in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.6038113580581598,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "three white sheeps chasing two dogs to the left of seven striped raccoons",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many sheeps are in the image?",
+          "score": 7.195234478797531e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=7.19523e-09",
+        "expected": "three",
+        "status": "failed",
+        "target": "How many sheeps are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the sheeps white?",
+          "score": 0.06059134704264579,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.0605913",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the sheeps white?",
+        "type": "color_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the sheeps chasing the dogs?",
+          "score": 2.87984250018844e-06,
+          "skill": "verb"
+        },
+        "detected": "soft_score=2.87984e-06",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the sheeps chasing the dogs?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many dogs are in the image?",
+          "score": 8.68608221486116e-08,
+          "skill": "count"
+        },
+        "detected": "soft_score=8.68608e-08",
+        "expected": "two",
+        "status": "failed",
+        "target": "How many dogs are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly 3 sheep, exactly 2 dogs, and exactly 7 raccoons.",
+        "Bind the white color only to the 3 sheep.",
+        "Bind striped appearance to all 7 raccoons.",
+        "Make the 3 sheep visibly chasing the 2 dogs.",
+        "Place the 2 dogs to the left of the group of 7 raccoons.",
+        "Keep all animals fully visible, separated, and not occluding each other."
+      ],
+      "generation_strategy": "Use a clear horizontal layout with three groups: the three white sheep on the left or mid-left pursuing the two dogs, the two dogs ahead of the sheep and clearly to the left of the raccoons, and the seven striped raccoons grouped on the right. Keep all counts visually separable and ensure the chasing action is readable through running poses and direction of movement.",
+      "initial_prompt": "A clear scene with exactly three white sheep chasing exactly two dogs. The two dogs are positioned to the left of exactly seven striped raccoons. Arrange the animals in a horizontal composition: three white sheep behind and pursuing the two dogs, the two dogs ahead of the sheep and clearly left of the raccoon group, and seven striped raccoons on the right. Make every animal fully visible, distinct, separated from the others, and not occluded, so the counts are easy to verify.",
+      "parsed_constraints": {
+        "attributes": {
+          "raccoons": [
+            "striped"
+          ],
+          "sheep": [
+            "white"
+          ]
+        },
+        "counts": {
+          "dogs": 2,
+          "raccoons": 7,
+          "sheep": 3
+        },
+        "objects": [
+          "sheep",
+          "dogs",
+          "raccoons"
+        ],
+        "relations": [
+          "three white sheep are chasing two dogs",
+          "two dogs are to the left of seven striped raccoons"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly 3 sheep, exactly 2 dogs, and exactly 7 raccoons.",
+        "Bind the white color only to the 3 sheep.",
+        "Bind striped appearance to all 7 raccoons.",
+        "Make the 3 sheep visibly chasing the 2 dogs.",
+        "Place the 2 dogs to the left of the group of 7 raccoons.",
+        "Keep all animals fully visible, separated, and not occluding each other."
+      ],
+      "generation_strategy": "Use a clear horizontal layout with three groups: the three white sheep on the left or mid-left pursuing the two dogs, the two dogs ahead of the sheep and clearly to the left of the raccoons, and the seven striped raccoons grouped on the right. Keep all counts visually separable and ensure the chasing action is readable through running poses and direction of movement.",
+      "initial_prompt": "A clear scene with exactly three white sheep chasing exactly two dogs. The two dogs are positioned to the left of exactly seven striped raccoons. Arrange the animals in a horizontal composition: three white sheep behind and pursuing the two dogs, the two dogs ahead of the sheep and clearly left of the raccoon group, and seven striped raccoons on the right. Make every animal fully visible, distinct, separated from the others, and not occluded, so the counts are easy to verify.",
+      "parsed_constraints": {
+        "attributes": {
+          "raccoons": [
+            "striped"
+          ],
+          "sheep": [
+            "white"
+          ]
+        },
+        "counts": {
+          "dogs": 2,
+          "raccoons": 7,
+          "sheep": 3
+        },
+        "objects": [
+          "sheep",
+          "dogs",
+          "raccoons"
+        ],
+        "relations": [
+          "three white sheep are chasing two dogs",
+          "two dogs are to the left of seven striped raccoons"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion"
+      ]
+    },
+    "previous_prompt": "A clear scene with exactly three white sheep chasing exactly two dogs. The two dogs are positioned to the left of exactly seven striped raccoons. Arrange the animals in a horizontal composition: three white sheep behind and pursuing the two dogs, the two dogs ahead of the sheep and clearly left of the raccoon group, and seven striped raccoons on the right. Make every animal fully visible, distinct, separated from the others, and not occluded, so the counts are easy to verify.",
+    "previous_selected_skills": [
+      "quantity_counting",
+      "object_presence",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion"
+    ],
+    "prompt_id": "geneval2_00706_3d5d6020",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "color_mismatch",
+          "count_mismatch",
+          "relation_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many sheeps are in the image?",
+              "score": 7.195234478797531e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=7.19523e-09",
+            "expected": "three",
+            "status": "failed",
+            "target": "How many sheeps are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the sheeps white?",
+              "score": 0.06059134704264579,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.0605913",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the sheeps white?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the sheeps chasing the dogs?",
+              "score": 2.87984250018844e-06,
+              "skill": "verb"
+            },
+            "detected": "soft_score=2.87984e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the sheeps chasing the dogs?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many dogs are in the image?",
+              "score": 8.68608221486116e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=8.68608e-08",
+            "expected": "two",
+            "status": "failed",
+            "target": "How many dogs are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any sheeps in the image?",
+              "score": 0.9999976869075908,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999998",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any sheeps in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any dogs in the image?",
+              "score": 0.9999774433781567,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999977",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any dogs in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the dogs to the left of the raccoons?",
+              "score": 0.9859251446693804,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.985925",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the dogs to the left of the raccoons?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many raccoons are in the image?",
+              "score": 0.9923287891680346,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.992329",
+            "expected": "seven",
+            "status": "passed",
+            "target": "How many raccoons are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the raccoons striped?",
+              "score": 0.9992901955172329,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.99929",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the raccoons striped?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any raccoons in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any raccoons in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly 3 sheep, exactly 2 dogs, and exactly 7 raccoons.",
+            "Bind the white color only to the 3 sheep.",
+            "Bind striped appearance to all 7 raccoons.",
+            "Make the 3 sheep visibly chasing the 2 dogs.",
+            "Place the 2 dogs to the left of the group of 7 raccoons.",
+            "Keep all animals fully visible, separated, and not occluding each other."
+          ],
+          "generation_strategy": "Use a clear horizontal layout with three groups: the three white sheep on the left or mid-left pursuing the two dogs, the two dogs ahead of the sheep and clearly to the left of the raccoons, and the seven striped raccoons grouped on the right. Keep all counts visually separable and ensure the chasing action is readable through running poses and direction of movement.",
+          "initial_prompt": "A clear scene with exactly three white sheep chasing exactly two dogs. The two dogs are positioned to the left of exactly seven striped raccoons. Arrange the animals in a horizontal composition: three white sheep behind and pursuing the two dogs, the two dogs ahead of the sheep and clearly left of the raccoon group, and seven striped raccoons on the right. Make every animal fully visible, distinct, separated from the others, and not occluded, so the counts are easy to verify.",
+          "parsed_constraints": {
+            "attributes": {
+              "raccoons": [
+                "striped"
+              ],
+              "sheep": [
+                "white"
+              ]
+            },
+            "counts": {
+              "dogs": 2,
+              "raccoons": 7,
+              "sheep": 3
+            },
+            "objects": [
+              "sheep",
+              "dogs",
+              "raccoons"
+            ],
+            "relations": [
+              "three white sheep are chasing two dogs",
+              "two dogs are to the left of seven striped raccoons"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "object_presence",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly 3 sheep, exactly 2 dogs, and exactly 7 raccoons.",
+            "Bind the white color only to the 3 sheep.",
+            "Bind striped appearance to all 7 raccoons.",
+            "Make the 3 sheep visibly chasing the 2 dogs.",
+            "Place the 2 dogs to the left of the group of 7 raccoons.",
+            "Keep all animals fully visible, separated, and not occluding each other."
+          ],
+          "generation_strategy": "Use a clear horizontal layout with three groups: the three white sheep on the left or mid-left pursuing the two dogs, the two dogs ahead of the sheep and clearly to the left of the raccoons, and the seven striped raccoons grouped on the right. Keep all counts visually separable and ensure the chasing action is readable through running poses and direction of movement.",
+          "initial_prompt": "A clear scene with exactly three white sheep chasing exactly two dogs. The two dogs are positioned to the left of exactly seven striped raccoons. Arrange the animals in a horizontal composition: three white sheep behind and pursuing the two dogs, the two dogs ahead of the sheep and clearly left of the raccoon group, and seven striped raccoons on the right. Make every animal fully visible, distinct, separated from the others, and not occluded, so the counts are easy to verify.",
+          "parsed_constraints": {
+            "attributes": {
+              "raccoons": [
+                "striped"
+              ],
+              "sheep": [
+                "white"
+              ]
+            },
+            "counts": {
+              "dogs": 2,
+              "raccoons": 7,
+              "sheep": 3
+            },
+            "objects": [
+              "sheep",
+              "dogs",
+              "raccoons"
+            ],
+            "relations": [
+              "three white sheep are chasing two dogs",
+              "two dogs are to the left of seven striped raccoons"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "object_presence",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion"
+          ]
+        },
+        "prompt_used": "A clear scene with exactly three white sheep chasing exactly two dogs. The two dogs are positioned to the left of exactly seven striped raccoons. Arrange the animals in a horizontal composition: three white sheep behind and pursuing the two dogs, the two dogs ahead of the sheep and clearly left of the raccoon group, and seven striped raccoons on the right. Make every animal fully visible, distinct, separated from the others, and not occluded, so the counts are easy to verify.",
+        "round": 0,
+        "score": 0.6038113580581598,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many sheeps are in the image?",
+                "score": 7.195234478797531e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=7.19523e-09",
+              "expected": "three",
+              "status": "failed",
+              "target": "How many sheeps are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the sheeps white?",
+                "score": 0.06059134704264579,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.0605913",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the sheeps white?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the sheeps chasing the dogs?",
+                "score": 2.87984250018844e-06,
+                "skill": "verb"
+              },
+              "detected": "soft_score=2.87984e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the sheeps chasing the dogs?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many dogs are in the image?",
+                "score": 8.68608221486116e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=8.68608e-08",
+              "expected": "two",
+              "status": "failed",
+              "target": "How many dogs are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00706_3d5d6020"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many sheeps are in the image?",
+          "score": 7.195234478797531e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=7.19523e-09",
+        "expected": "three",
+        "status": "failed",
+        "target": "How many sheeps are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the sheeps white?",
+          "score": 0.06059134704264579,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.0605913",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the sheeps white?",
+        "type": "color_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the sheeps chasing the dogs?",
+          "score": 2.87984250018844e-06,
+          "skill": "verb"
+        },
+        "detected": "soft_score=2.87984e-06",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the sheeps chasing the dogs?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many dogs are in the image?",
+          "score": 8.68608221486116e-08,
+          "skill": "count"
+        },
+        "detected": "soft_score=8.68608e-08",
+        "expected": "two",
+        "status": "failed",
+        "target": "How many dogs are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00001/samples/00002.png",
+    "best_so_far_prompt": "A clear scene with exactly three white sheep chasing exactly two dogs. The two dogs are positioned to the left of exactly seven striped raccoons. Arrange the animals in a horizontal composition: three white sheep behind and pursuing the two dogs, the two dogs ahead of the sheep and clearly left of the raccoon group, and seven striped raccoons on the right. Make every animal fully visible, distinct, separated from the others, and not occluded, so the counts are easy to verify.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.6038113580581598,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many sheeps are in the image?",
+          "score": 7.195234478797531e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=7.19523e-09",
+        "expected": "three",
+        "status": "failed",
+        "target": "How many sheeps are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the sheeps white?",
+          "score": 0.06059134704264579,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.0605913",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the sheeps white?",
+        "type": "color_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the sheeps chasing the dogs?",
+          "score": 2.87984250018844e-06,
+          "skill": "verb"
+        },
+        "detected": "soft_score=2.87984e-06",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the sheeps chasing the dogs?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many dogs are in the image?",
+          "score": 8.68608221486116e-08,
+          "skill": "count"
+        },
+        "detected": "soft_score=8.68608e-08",
+        "expected": "two",
+        "status": "failed",
+        "target": "How many dogs are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly 3 sheep, exactly 2 dogs, and exactly 7 raccoons.",
+        "Bind the white color only to the 3 sheep.",
+        "Bind striped appearance to all 7 raccoons.",
+        "Make the 3 sheep visibly chasing the 2 dogs.",
+        "Place the 2 dogs to the left of the group of 7 raccoons.",
+        "Keep all animals fully visible, separated, and not occluding each other."
+      ],
+      "generation_strategy": "Use a clear horizontal layout with three groups: the three white sheep on the left or mid-left pursuing the two dogs, the two dogs ahead of the sheep and clearly to the left of the raccoons, and the seven striped raccoons grouped on the right. Keep all counts visually separable and ensure the chasing action is readable through running poses and direction of movement.",
+      "initial_prompt": "A clear scene with exactly three white sheep chasing exactly two dogs. The two dogs are positioned to the left of exactly seven striped raccoons. Arrange the animals in a horizontal composition: three white sheep behind and pursuing the two dogs, the two dogs ahead of the sheep and clearly left of the raccoon group, and seven striped raccoons on the right. Make every animal fully visible, distinct, separated from the others, and not occluded, so the counts are easy to verify.",
+      "parsed_constraints": {
+        "attributes": {
+          "raccoons": [
+            "striped"
+          ],
+          "sheep": [
+            "white"
+          ]
+        },
+        "counts": {
+          "dogs": 2,
+          "raccoons": 7,
+          "sheep": 3
+        },
+        "objects": [
+          "sheep",
+          "dogs",
+          "raccoons"
+        ],
+        "relations": [
+          "three white sheep are chasing two dogs",
+          "two dogs are to the left of seven striped raccoons"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.604 failed=['How many sheeps are in the image?', 'Are the sheeps white?', 'Are the sheeps chasing the dogs?', 'How many dogs are in the image?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_incremental/snapshot_001_worker_01/geneval2_00706_3d5d6020__geneval2_00706_3d5d6020_cand_02__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00706_3d5d6020__geneval2_00706_3d5d6020_cand_02__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00706_3d5d6020",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image preserved sheep, dogs, raccoons, seven striped raccoons, and the dogs-left-of-raccoons relation, but failed the exact count of three sheep, the white color of the sheep, the exact count of two dogs, and the action relation that the sheep are chasing the dogs. The very low count scores suggest the sheep and dog groups were not visually countable or may have merged, been obscured, or been replaced by unclear animals. The chasing relation was likely too implicit because the prior prompt said behind and pursuing but did not force a readable left-to-right running sequence with sheep directly following dogs.",
+    "expected_improvement": [
+      "Exactly three sheep should be countable as three separate animals.",
+      "All three sheep should be visibly white with the white attribute bound only to the sheep.",
+      "Exactly two dogs should be countable as two separate animals.",
+      "The sheep-chasing-dogs relation should read clearly because the three sheep are immediately behind the two dogs in the same running direction.",
+      "Previously passed constraints should remain: dogs are left of the raccoons, seven raccoons are present, and the raccoons are striped."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "color_mismatch",
+      "relation_mismatch"
+    ],
+    "preserve_constraints": [
+      "Include sheep, dogs, and raccoons as visible animals.",
+      "Keep exactly seven raccoons on the right side of the image.",
+      "Make all seven raccoons clearly striped.",
+      "Place the two dogs clearly to the left of the raccoon group.",
+      "Keep all animals distinct, complete, visible, and not hidden by other animals."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt used a broad horizontal grouping but did not make the three sheep and two dogs individually isolated enough for reliable counting. It also did not emphasize unmistakably white sheep coats or a strong visual action cue for chasing, so the generator may have produced ambiguous sheep colors and a static animal lineup rather than a chase.",
+      "error_source": "Prompt under-specified count separability, attribute binding strength, and dynamic relation readability for the sheep-dog interaction."
+    },
+    "regeneration_strategy": "Use a simple left-to-right chase diagram: three separate white sheep on the far left or mid-left, each in running posture and facing right, directly following two separate dogs in front of them; the two dogs remain left of a separated row/group of exactly seven striped raccoons on the far right. Strengthen counting with separated instances and negative constraints against extra sheep, extra dogs, or merged animals, while preserving the raccoon count and dog-left-of-raccoon relation.",
+    "regression_risks": [
+      "Adding stronger chase motion could disturb the already-passed dogs-left-of-raccoons spatial relation if the dogs are placed too close to or among the raccoons.",
+      "Emphasizing sheep and dogs could cause the generator to reduce or alter the seven striped raccoons.",
+      "Large animal groups may overlap or merge, causing count errors."
+    ],
+    "repair_constraints": [
+      "Show exactly three sheep, no more and no fewer; make the three sheep separate, fully visible, and easy to count.",
+      "Bind the color white to each of the three sheep: all three sheep must have white wool.",
+      "Show exactly two dogs, no more and no fewer; make the two dogs separate, fully visible, and easy to count.",
+      "Make the three white sheep clearly chasing the two dogs: the sheep are directly behind the dogs, all facing and running in the same direction toward the dogs, with the dogs in front fleeing from the sheep.",
+      "Avoid extra sheep, extra dogs, duplicate heads or bodies, merged animals, cropped animals, or animals hidden behind others."
+    ],
+    "retry_prompt": "A clear, simple left-to-right animal chase scene. Show exactly three white sheep, no more and no fewer: three separate full-body sheep with bright white wool, clearly countable, running to the right. Directly in front of the three white sheep are exactly two dogs, no more and no fewer: two separate full-body dogs, clearly countable, also running to the right as if fleeing. The three white sheep are visibly chasing the two dogs, with the sheep immediately behind the dogs and all five animals facing the same direction. To the right of the two dogs, place exactly seven striped raccoons, no more and no fewer, arranged as seven separate full-body striped raccoons. The two dogs must be clearly to the left of the seven striped raccoons. Keep every animal fully visible, separated, unobstructed, and not overlapping; avoid extra sheep, extra dogs, extra raccoons, merged bodies, duplicate heads, or cropped animals.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints",
+        "object_presence"
+      ],
+      "previous_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion"
+      ],
+      "reason": "Add negative_constraints to explicitly prevent extra sheep or dogs and merged or duplicate animals, while retaining counting, visibility, attribute binding, and spatial layout skills."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "three white sheeps chasing two dogs to the left of seven striped raccoons",
+    "prompt": "three white sheeps chasing two dogs to the left of seven striped raccoons",
+    "prompt_id": "geneval2_00706_3d5d6020",
+    "sampling_bucket": "count",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "relation_action",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 2,
+      "count": 3,
+      "object": 3,
+      "position": 1,
+      "verb": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "verb",
+      "count",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 706,
+    "vqa_list": [
+      [
+        "How many sheeps are in the image?",
+        "three"
+      ],
+      [
+        "Are the sheeps white?",
+        "Yes"
+      ],
+      [
+        "Are there any sheeps in the image?",
+        "Yes"
+      ],
+      [
+        "Are the sheeps chasing the dogs?",
+        "Yes"
+      ],
+      [
+        "How many dogs are in the image?",
+        "two"
+      ],
+      [
+        "Are there any dogs in the image?",
+        "Yes"
+      ],
+      [
+        "Are the dogs to the left of the raccoons?",
+        "Yes"
+      ],
+      [
+        "How many raccoons are in the image?",
+        "seven"
+      ],
+      [
+        "Are the raccoons striped?",
+        "Yes"
+      ],
+      [
+        "Are there any raccoons in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00706_3d5d6020"
+}

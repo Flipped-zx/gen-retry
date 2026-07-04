@@ -1,0 +1,152 @@
+{
+  "candidate_id": "geneval2_00637_e8a14ae1_cand_00",
+  "generation": {
+    "generation_metadata": {
+      "candidate_index": 0,
+      "generation_prompt_source": "initial_plan",
+      "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00637_e8a14ae1.json",
+      "manifest_prompt_index": 70,
+      "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+      "sample_id": "geneval2_00637_e8a14ae1"
+    },
+    "generator_name": "qwen-image-2512",
+    "image_id": "geneval2_00637_e8a14ae1_cand_00",
+    "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00070/samples/00000.png",
+    "prompt_used": "A clear scene with exactly one zebra jumping over exactly two black horses. The zebra is airborne above the two black horses, clearly visible and not occluding them. The two black horses are playing with exactly four brown elephants nearby. Show all four brown elephants clearly, separated enough to count. Show only one zebra, only two horses, and only four elephants, with no extra animals. Make the black color apply to both horses and the brown color apply to all four elephants.",
+    "seed": 1350
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "eval_lookup_key": "",
+    "image_path_is_artifact_reference": true,
+    "teacher_uses_image_bytes": false
+  },
+  "previous_action": null,
+  "previous_initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly one zebra, exactly two horses, and exactly four elephants.",
+      "Bind black color only to the two horses, and brown color only to the four elephants.",
+      "Make the zebra visibly jumping over the two black horses, with the zebra above the horses and not hidden by them.",
+      "Make the two black horses visibly playing with the four brown elephants, with all animals clearly visible and separated enough to count.",
+      "Avoid extra zebras, horses, elephants, or other animals."
+    ],
+    "generation_strategy": "Use a clear multi-object composition with separated, fully visible animals. Place the two black horses together below the airborne zebra to make the jumping-over relation unambiguous. Place the four brown elephants near the horses and depict the horses and elephants interacting playfully while keeping all seven animals countable and unobstructed.",
+    "initial_prompt": "A clear scene with exactly one zebra jumping over exactly two black horses. The zebra is airborne above the two black horses, clearly visible and not occluding them. The two black horses are playing with exactly four brown elephants nearby. Show all four brown elephants clearly, separated enough to count. Show only one zebra, only two horses, and only four elephants, with no extra animals. Make the black color apply to both horses and the brown color apply to all four elephants.",
+    "parsed_constraints": {
+      "attributes": {
+        "elephants": "brown",
+        "horses": "black"
+      },
+      "counts": {
+        "elephants": 4,
+        "horses": 2,
+        "zebra": 1
+      },
+      "objects": [
+        "zebra",
+        "horses",
+        "elephants"
+      ],
+      "relations": [
+        "the zebra is jumping over the two black horses",
+        "the two black horses are playing with the four brown elephants"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "prompt_id": "geneval2_00637_e8a14ae1",
+  "retry_history": [],
+  "round": 0,
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 9,
+    "dataset": "geneval2",
+    "original_prompt": "a zebra jumping over two black horses playing with four brown elephants",
+    "prompt": "a zebra jumping over two black horses playing with four brown elephants",
+    "prompt_id": "geneval2_00637_e8a14ae1",
+    "sampling_bucket": "relation_action",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "relation_action",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 2,
+      "count": 3,
+      "object": 3,
+      "verb": 2
+    },
+    "skills": [
+      "count",
+      "object",
+      "verb",
+      "count",
+      "attribute",
+      "object",
+      "verb",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 637,
+    "vqa_list": [
+      [
+        "How many zebras are in the image?",
+        "one"
+      ],
+      [
+        "Are there any zebras in the image?",
+        "Yes"
+      ],
+      [
+        "Is the zebra jumping over the horses?",
+        "Yes"
+      ],
+      [
+        "How many horses are in the image?",
+        "two"
+      ],
+      [
+        "Are the horses black?",
+        "Yes"
+      ],
+      [
+        "Are there any horses in the image?",
+        "Yes"
+      ],
+      [
+        "Are the horses playing with the elephants?",
+        "Yes"
+      ],
+      [
+        "How many elephants are in the image?",
+        "four"
+      ],
+      [
+        "Are the elephants brown?",
+        "Yes"
+      ],
+      [
+        "Are there any elephants in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "trajectory_id": "geneval2_00637_e8a14ae1"
+}

@@ -1,0 +1,165 @@
+{
+  "candidate_id": "geneval2_00747_aa8a9646_cand_00",
+  "generation": {
+    "generation_metadata": {
+      "candidate_index": 0,
+      "generation_prompt_source": "initial_plan",
+      "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00747_aa8a9646.json",
+      "manifest_prompt_index": 7,
+      "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+      "sample_id": "geneval2_00747_aa8a9646"
+    },
+    "generator_name": "qwen-image-2512",
+    "image_id": "geneval2_00747_aa8a9646_cand_00",
+    "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00007/samples/00000.png",
+    "prompt_used": "A clear scene with exactly two spotted giraffes in the foreground, standing in front of exactly one green dog. The green dog is playing with exactly three checkered horses nearby. All six animals are fully visible, separated enough to count clearly, with no extra giraffes, no extra dogs, and no extra horses. Both giraffes are spotted, the only dog is green, and all three horses are checkered.",
+    "seed": 1035
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "eval_lookup_key": "",
+    "image_path_is_artifact_reference": true,
+    "teacher_uses_image_bytes": false
+  },
+  "previous_action": null,
+  "previous_initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly two giraffes, exactly one dog, and exactly three horses.",
+      "Bind attributes correctly: both giraffes are spotted, the single dog is green, and all three horses are checkered.",
+      "Place the two spotted giraffes clearly in front of the green dog.",
+      "Show the green dog playing with the three checkered horses.",
+      "Keep all six animals visible and separated enough to count; avoid occlusion that hides bodies or changes counts."
+    ],
+    "generation_strategy": "Use a clear multi-object composition with separated, fully visible animals. Put the two spotted giraffes in the foreground, the single green dog behind them, and the three checkered horses near the dog so the dog appears to be playing with them. Emphasize exact counts and attribute binding for each animal type.",
+    "initial_prompt": "A clear scene with exactly two spotted giraffes in the foreground, standing in front of exactly one green dog. The green dog is playing with exactly three checkered horses nearby. All six animals are fully visible, separated enough to count clearly, with no extra giraffes, no extra dogs, and no extra horses. Both giraffes are spotted, the only dog is green, and all three horses are checkered.",
+    "parsed_constraints": {
+      "attributes": {
+        "dog": [
+          "green"
+        ],
+        "giraffes": [
+          "spotted"
+        ],
+        "horses": [
+          "checkered"
+        ]
+      },
+      "counts": {
+        "dogs": 1,
+        "giraffes": 2,
+        "horses": 3
+      },
+      "objects": [
+        "giraffe",
+        "dog",
+        "horse"
+      ],
+      "relations": [
+        "two spotted giraffes are in front of the green dog",
+        "the green dog is playing with three checkered horses"
+      ]
+    },
+    "selected_skills": [
+      "quantity_counting",
+      "object_presence",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ]
+  },
+  "prompt_id": "geneval2_00747_aa8a9646",
+  "retry_history": [],
+  "round": 0,
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "two spotted giraffes in front of a green dog playing with three checkered horses",
+    "prompt": "two spotted giraffes in front of a green dog playing with three checkered horses",
+    "prompt_id": "geneval2_00747_aa8a9646",
+    "sampling_bucket": "count",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "relation_action",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 3,
+      "count": 3,
+      "object": 3,
+      "position": 1,
+      "verb": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object",
+      "verb",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 747,
+    "vqa_list": [
+      [
+        "How many giraffes are in the image?",
+        "two"
+      ],
+      [
+        "Are the giraffes spotted?",
+        "Yes"
+      ],
+      [
+        "Are there any giraffes in the image?",
+        "Yes"
+      ],
+      [
+        "Are the giraffes in front of the dog?",
+        "Yes"
+      ],
+      [
+        "How many dogs are in the image?",
+        "one"
+      ],
+      [
+        "Is the dog green?",
+        "Yes"
+      ],
+      [
+        "Are there any dogs in the image?",
+        "Yes"
+      ],
+      [
+        "Is the dog playing with the horses?",
+        "Yes"
+      ],
+      [
+        "How many horses are in the image?",
+        "three"
+      ],
+      [
+        "Are the horses checkered?",
+        "Yes"
+      ],
+      [
+        "Are there any horses in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "trajectory_id": "geneval2_00747_aa8a9646"
+}

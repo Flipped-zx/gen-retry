@@ -1,0 +1,3158 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "count_mismatch",
+          "relation_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the lions chasing the elephants?",
+              "score": 0.0011611213314179913,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.00116112",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the lions chasing the elephants?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many elephants are in the image?",
+              "score": 0.0001233887954573738,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.000123389",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many elephants are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the elephants metal?",
+              "score": 8.794687865465445e-08,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=8.79469e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the elephants metal?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the elephants playing with the penguins?",
+              "score": 1.6717791380559441e-06,
+              "skill": "verb"
+            },
+            "detected": "soft_score=1.67178e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the elephants playing with the penguins?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the penguins stone?",
+              "score": 2.610690567617091e-06,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=2.61069e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the penguins stone?",
+            "type": "attribute_mismatch"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many lions are in the image?",
+              "score": 0.9998763258696887,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.999876",
+            "expected": "four",
+            "status": "passed",
+            "target": "How many lions are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any lions in the image?",
+              "score": 0.9999999808642315,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any lions in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any elephants in the image?",
+              "score": 0.9999999571182343,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any elephants in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many penguins are in the image?",
+              "score": 0.9999252522371465,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.999925",
+            "expected": "five",
+            "status": "passed",
+            "target": "How many penguins are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any penguins in the image?",
+              "score": 0.9999999305582605,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any penguins in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00736_86b70e36_cand_03",
+          "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+          "rows": [
+            {
+              "answer": "four",
+              "atom_count": 10,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00736_86b70e36_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00072/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00072/samples/00003.png",
+              "prompt": "four lions chasing four metal elephants playing with five stone penguins",
+              "prompt_id": "geneval2_00736_86b70e36",
+              "question": "How many lions are in the image?",
+              "score": 0.9998763258696887,
+              "skill": "count",
+              "source_index": 736
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00736_86b70e36_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00072/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00072/samples/00003.png",
+              "prompt": "four lions chasing four metal elephants playing with five stone penguins",
+              "prompt_id": "geneval2_00736_86b70e36",
+              "question": "Are there any lions in the image?",
+              "score": 0.9999999808642315,
+              "skill": "object",
+              "source_index": 736
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00736_86b70e36_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00072/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00072/samples/00003.png",
+              "prompt": "four lions chasing four metal elephants playing with five stone penguins",
+              "prompt_id": "geneval2_00736_86b70e36",
+              "question": "Are the lions chasing the elephants?",
+              "score": 0.0011611213314179913,
+              "skill": "verb",
+              "source_index": 736
+            },
+            {
+              "answer": "four",
+              "atom_count": 10,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00736_86b70e36_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00072/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00072/samples/00003.png",
+              "prompt": "four lions chasing four metal elephants playing with five stone penguins",
+              "prompt_id": "geneval2_00736_86b70e36",
+              "question": "How many elephants are in the image?",
+              "score": 0.0001233887954573738,
+              "skill": "count",
+              "source_index": 736
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00736_86b70e36_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00072/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00072/samples/00003.png",
+              "prompt": "four lions chasing four metal elephants playing with five stone penguins",
+              "prompt_id": "geneval2_00736_86b70e36",
+              "question": "Are the elephants metal?",
+              "score": 8.794687865465445e-08,
+              "skill": "attribute",
+              "source_index": 736
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00736_86b70e36_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00072/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00072/samples/00003.png",
+              "prompt": "four lions chasing four metal elephants playing with five stone penguins",
+              "prompt_id": "geneval2_00736_86b70e36",
+              "question": "Are there any elephants in the image?",
+              "score": 0.9999999571182343,
+              "skill": "object",
+              "source_index": 736
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00736_86b70e36_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00072/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00072/samples/00003.png",
+              "prompt": "four lions chasing four metal elephants playing with five stone penguins",
+              "prompt_id": "geneval2_00736_86b70e36",
+              "question": "Are the elephants playing with the penguins?",
+              "score": 1.6717791380559441e-06,
+              "skill": "verb",
+              "source_index": 736
+            },
+            {
+              "answer": "five",
+              "atom_count": 10,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00736_86b70e36_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00072/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00072/samples/00003.png",
+              "prompt": "four lions chasing four metal elephants playing with five stone penguins",
+              "prompt_id": "geneval2_00736_86b70e36",
+              "question": "How many penguins are in the image?",
+              "score": 0.9999252522371465,
+              "skill": "count",
+              "source_index": 736
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00736_86b70e36_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00072/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00072/samples/00003.png",
+              "prompt": "four lions chasing four metal elephants playing with five stone penguins",
+              "prompt_id": "geneval2_00736_86b70e36",
+              "question": "Are the penguins stone?",
+              "score": 2.610690567617091e-06,
+              "skill": "attribute",
+              "source_index": 736
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00736_86b70e36_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00072/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00072/samples/00003.png",
+              "prompt": "four lions chasing four metal elephants playing with five stone penguins",
+              "prompt_id": "geneval2_00736_86b70e36",
+              "question": "Are there any penguins in the image?",
+              "score": 0.9999999305582605,
+              "skill": "object",
+              "source_index": 736
+            }
+          ],
+          "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.5001090327191021,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 3,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00736_86b70e36.json",
+          "manifest_prompt_index": 72,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00736_86b70e36"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00736_86b70e36_cand_03",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00072/samples/00003.png",
+        "prompt_used": "A clear scene with exactly four lions chasing exactly four metal elephants. The four lions are grouped behind the elephants in a running chase pose. The four elephants are visibly made of metal and are interacting playfully with exactly five stone penguins. The five penguins are visibly made of stone and are arranged near the elephants. Keep all four lions, all four metal elephants, and all five stone penguins fully visible, distinct, non-overlapping, and easy to count. No extra animals or objects.",
+        "seed": 1363
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly four lions, exactly four metal elephants, and exactly five stone penguins.",
+          "Bind the metal material only to the four elephants.",
+          "Bind the stone material only to the five penguins.",
+          "Make the four lions visibly chasing the four elephants.",
+          "Make the four metal elephants visibly playing with the five stone penguins.",
+          "Keep all animals fully visible and separated enough to count; avoid overlap or occlusion.",
+          "Do not add extra lions, elephants, penguins, or other animals."
+        ],
+        "generation_strategy": "Create a clear multi-object composition with three countable groups: four lions positioned as a chasing group behind four metal elephants, and five stone penguins positioned with the elephants so the elephants appear to be playing with them. Emphasize count separation, material attributes, and readable action relationships.",
+        "initial_prompt": "A clear scene with exactly four lions chasing exactly four metal elephants. The four lions are grouped behind the elephants in a running chase pose. The four elephants are visibly made of metal and are interacting playfully with exactly five stone penguins. The five penguins are visibly made of stone and are arranged near the elephants. Keep all four lions, all four metal elephants, and all five stone penguins fully visible, distinct, non-overlapping, and easy to count. No extra animals or objects.",
+        "parsed_constraints": {
+          "attributes": {
+            "elephants": [
+              "metal"
+            ],
+            "penguins": [
+              "stone"
+            ]
+          },
+          "counts": {
+            "elephants": 4,
+            "lions": 4,
+            "penguins": 5
+          },
+          "objects": [
+            "lions",
+            "elephants",
+            "penguins"
+          ],
+          "relations": [
+            "four lions chasing four metal elephants",
+            "four metal elephants playing with five stone penguins"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "multi_object_composition",
+          "spatial_layout",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly four lions, exactly four metal elephants, and exactly five stone penguins.",
+          "Bind the metal material only to the four elephants.",
+          "Bind the stone material only to the five penguins.",
+          "Make the four lions visibly chasing the four elephants.",
+          "Make the four metal elephants visibly playing with the five stone penguins.",
+          "Keep all animals fully visible and separated enough to count; avoid overlap or occlusion.",
+          "Do not add extra lions, elephants, penguins, or other animals."
+        ],
+        "generation_strategy": "Create a clear multi-object composition with three countable groups: four lions positioned as a chasing group behind four metal elephants, and five stone penguins positioned with the elephants so the elephants appear to be playing with them. Emphasize count separation, material attributes, and readable action relationships.",
+        "initial_prompt": "A clear scene with exactly four lions chasing exactly four metal elephants. The four lions are grouped behind the elephants in a running chase pose. The four elephants are visibly made of metal and are interacting playfully with exactly five stone penguins. The five penguins are visibly made of stone and are arranged near the elephants. Keep all four lions, all four metal elephants, and all five stone penguins fully visible, distinct, non-overlapping, and easy to count. No extra animals or objects.",
+        "parsed_constraints": {
+          "attributes": {
+            "elephants": [
+              "metal"
+            ],
+            "penguins": [
+              "stone"
+            ]
+          },
+          "counts": {
+            "elephants": 4,
+            "lions": 4,
+            "penguins": 5
+          },
+          "objects": [
+            "lions",
+            "elephants",
+            "penguins"
+          ],
+          "relations": [
+            "four lions chasing four metal elephants",
+            "four metal elephants playing with five stone penguins"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "multi_object_composition",
+          "spatial_layout",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the lions chasing the elephants?",
+                "score": 0.0011611213314179913,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.00116112",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the lions chasing the elephants?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many elephants are in the image?",
+                "score": 0.0001233887954573738,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.000123389",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many elephants are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the elephants metal?",
+                "score": 8.794687865465445e-08,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=8.79469e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the elephants metal?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the elephants playing with the penguins?",
+                "score": 1.6717791380559441e-06,
+                "skill": "verb"
+              },
+              "detected": "soft_score=1.67178e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the elephants playing with the penguins?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the penguins stone?",
+                "score": 2.610690567617091e-06,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=2.61069e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the penguins stone?",
+              "type": "attribute_mismatch"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00072/samples/00003.png",
+          "prompt": "A clear scene with exactly four lions chasing exactly four metal elephants. The four lions are grouped behind the elephants in a running chase pose. The four elephants are visibly made of metal and are interacting playfully with exactly five stone penguins. The five penguins are visibly made of stone and are arranged near the elephants. Keep all four lions, all four metal elephants, and all five stone penguins fully visible, distinct, non-overlapping, and easy to count. No extra animals or objects.",
+          "round": 0,
+          "score": 0.5001090327191021
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00736_86b70e36_cand_03",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "attribute_mismatch",
+            "count_mismatch",
+            "relation_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the lions chasing the elephants?",
+                "score": 0.0011611213314179913,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.00116112",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the lions chasing the elephants?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many elephants are in the image?",
+                "score": 0.0001233887954573738,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.000123389",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many elephants are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the elephants metal?",
+                "score": 8.794687865465445e-08,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=8.79469e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the elephants metal?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the elephants playing with the penguins?",
+                "score": 1.6717791380559441e-06,
+                "skill": "verb"
+              },
+              "detected": "soft_score=1.67178e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the elephants playing with the penguins?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the penguins stone?",
+                "score": 2.610690567617091e-06,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=2.61069e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the penguins stone?",
+              "type": "attribute_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many lions are in the image?",
+                "score": 0.9998763258696887,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.999876",
+              "expected": "four",
+              "status": "passed",
+              "target": "How many lions are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any lions in the image?",
+                "score": 0.9999999808642315,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any lions in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any elephants in the image?",
+                "score": 0.9999999571182343,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any elephants in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many penguins are in the image?",
+                "score": 0.9999252522371465,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.999925",
+              "expected": "five",
+              "status": "passed",
+              "target": "How many penguins are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any penguins in the image?",
+                "score": 0.9999999305582605,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any penguins in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.5001090327191021,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the lions chasing the elephants?",
+                  "score": 0.0011611213314179913,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=0.00116112",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the lions chasing the elephants?",
+                "type": "relation_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many elephants are in the image?",
+                  "score": 0.0001233887954573738,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.000123389",
+                "expected": "four",
+                "status": "failed",
+                "target": "How many elephants are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the elephants metal?",
+                  "score": 8.794687865465445e-08,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=8.79469e-08",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the elephants metal?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the elephants playing with the penguins?",
+                  "score": 1.6717791380559441e-06,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=1.67178e-06",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the elephants playing with the penguins?",
+                "type": "relation_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the penguins stone?",
+                  "score": 2.610690567617091e-06,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=2.61069e-06",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the penguins stone?",
+                "type": "attribute_mismatch"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00072/samples/00003.png",
+            "prompt": "A clear scene with exactly four lions chasing exactly four metal elephants. The four lions are grouped behind the elephants in a running chase pose. The four elephants are visibly made of metal and are interacting playfully with exactly five stone penguins. The five penguins are visibly made of stone and are arranged near the elephants. Keep all four lions, all four metal elephants, and all five stone penguins fully visible, distinct, non-overlapping, and easy to count. No extra animals or objects.",
+            "round": 0,
+            "score": 0.5001090327191021
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the lions chasing the elephants?",
+                "score": 0.0011611213314179913,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.00116112",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the lions chasing the elephants?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many elephants are in the image?",
+                "score": 0.0001233887954573738,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.000123389",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many elephants are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the elephants metal?",
+                "score": 8.794687865465445e-08,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=8.79469e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the elephants metal?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the elephants playing with the penguins?",
+                "score": 1.6717791380559441e-06,
+                "skill": "verb"
+              },
+              "detected": "soft_score=1.67178e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the elephants playing with the penguins?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the penguins stone?",
+                "score": 2.610690567617091e-06,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=2.61069e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the penguins stone?",
+              "type": "attribute_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "attribute_mismatch",
+            "count_mismatch",
+            "relation_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the lions chasing the elephants?",
+                "score": 0.0011611213314179913,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.00116112",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the lions chasing the elephants?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many elephants are in the image?",
+                "score": 0.0001233887954573738,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.000123389",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many elephants are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the elephants metal?",
+                "score": 8.794687865465445e-08,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=8.79469e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the elephants metal?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the elephants playing with the penguins?",
+                "score": 1.6717791380559441e-06,
+                "skill": "verb"
+              },
+              "detected": "soft_score=1.67178e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the elephants playing with the penguins?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the penguins stone?",
+                "score": 2.610690567617091e-06,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=2.61069e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the penguins stone?",
+              "type": "attribute_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many lions are in the image?",
+                "score": 0.9998763258696887,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.999876",
+              "expected": "four",
+              "status": "passed",
+              "target": "How many lions are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any lions in the image?",
+                "score": 0.9999999808642315,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any lions in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any elephants in the image?",
+                "score": 0.9999999571182343,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any elephants in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many penguins are in the image?",
+                "score": 0.9999252522371465,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.999925",
+              "expected": "five",
+              "status": "passed",
+              "target": "How many penguins are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any penguins in the image?",
+                "score": 0.9999999305582605,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any penguins in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.5001090327191021,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "four lions chasing four metal elephants playing with five stone penguins",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the lions chasing the elephants?",
+              "score": 0.0011611213314179913,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.00116112",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the lions chasing the elephants?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many elephants are in the image?",
+              "score": 0.0001233887954573738,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.000123389",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many elephants are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the elephants metal?",
+              "score": 8.794687865465445e-08,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=8.79469e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the elephants metal?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the elephants playing with the penguins?",
+              "score": 1.6717791380559441e-06,
+              "skill": "verb"
+            },
+            "detected": "soft_score=1.67178e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the elephants playing with the penguins?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the penguins stone?",
+              "score": 2.610690567617091e-06,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=2.61069e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the penguins stone?",
+            "type": "attribute_mismatch"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly four lions, exactly four metal elephants, and exactly five stone penguins.",
+            "Bind the metal material only to the four elephants.",
+            "Bind the stone material only to the five penguins.",
+            "Make the four lions visibly chasing the four elephants.",
+            "Make the four metal elephants visibly playing with the five stone penguins.",
+            "Keep all animals fully visible and separated enough to count; avoid overlap or occlusion.",
+            "Do not add extra lions, elephants, penguins, or other animals."
+          ],
+          "generation_strategy": "Create a clear multi-object composition with three countable groups: four lions positioned as a chasing group behind four metal elephants, and five stone penguins positioned with the elephants so the elephants appear to be playing with them. Emphasize count separation, material attributes, and readable action relationships.",
+          "initial_prompt": "A clear scene with exactly four lions chasing exactly four metal elephants. The four lions are grouped behind the elephants in a running chase pose. The four elephants are visibly made of metal and are interacting playfully with exactly five stone penguins. The five penguins are visibly made of stone and are arranged near the elephants. Keep all four lions, all four metal elephants, and all five stone penguins fully visible, distinct, non-overlapping, and easy to count. No extra animals or objects.",
+          "parsed_constraints": {
+            "attributes": {
+              "elephants": [
+                "metal"
+              ],
+              "penguins": [
+                "stone"
+              ]
+            },
+            "counts": {
+              "elephants": 4,
+              "lions": 4,
+              "penguins": 5
+            },
+            "objects": [
+              "lions",
+              "elephants",
+              "penguins"
+            ],
+            "relations": [
+              "four lions chasing four metal elephants",
+              "four metal elephants playing with five stone penguins"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "multi_object_composition",
+            "spatial_layout",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly four lions, exactly four metal elephants, and exactly five stone penguins.",
+            "Bind the metal material only to the four elephants.",
+            "Bind the stone material only to the five penguins.",
+            "Make the four lions visibly chasing the four elephants.",
+            "Make the four metal elephants visibly playing with the five stone penguins.",
+            "Keep all animals fully visible and separated enough to count; avoid overlap or occlusion.",
+            "Do not add extra lions, elephants, penguins, or other animals."
+          ],
+          "generation_strategy": "Create a clear multi-object composition with three countable groups: four lions positioned as a chasing group behind four metal elephants, and five stone penguins positioned with the elephants so the elephants appear to be playing with them. Emphasize count separation, material attributes, and readable action relationships.",
+          "initial_prompt": "A clear scene with exactly four lions chasing exactly four metal elephants. The four lions are grouped behind the elephants in a running chase pose. The four elephants are visibly made of metal and are interacting playfully with exactly five stone penguins. The five penguins are visibly made of stone and are arranged near the elephants. Keep all four lions, all four metal elephants, and all five stone penguins fully visible, distinct, non-overlapping, and easy to count. No extra animals or objects.",
+          "parsed_constraints": {
+            "attributes": {
+              "elephants": [
+                "metal"
+              ],
+              "penguins": [
+                "stone"
+              ]
+            },
+            "counts": {
+              "elephants": 4,
+              "lions": 4,
+              "penguins": 5
+            },
+            "objects": [
+              "lions",
+              "elephants",
+              "penguins"
+            ],
+            "relations": [
+              "four lions chasing four metal elephants",
+              "four metal elephants playing with five stone penguins"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "multi_object_composition",
+            "spatial_layout",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_prompt": "A clear scene with exactly four lions chasing exactly four metal elephants. The four lions are grouped behind the elephants in a running chase pose. The four elephants are visibly made of metal and are interacting playfully with exactly five stone penguins. The five penguins are visibly made of stone and are arranged near the elephants. Keep all four lions, all four metal elephants, and all five stone penguins fully visible, distinct, non-overlapping, and easy to count. No extra animals or objects.",
+        "previous_selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "multi_object_composition",
+          "spatial_layout",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ],
+        "prompt_id": "geneval2_00736_86b70e36",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "attribute_mismatch",
+              "count_mismatch",
+              "relation_mismatch"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the lions chasing the elephants?",
+                  "score": 0.0011611213314179913,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=0.00116112",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the lions chasing the elephants?",
+                "type": "relation_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many elephants are in the image?",
+                  "score": 0.0001233887954573738,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.000123389",
+                "expected": "four",
+                "status": "failed",
+                "target": "How many elephants are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the elephants metal?",
+                  "score": 8.794687865465445e-08,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=8.79469e-08",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the elephants metal?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the elephants playing with the penguins?",
+                  "score": 1.6717791380559441e-06,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=1.67178e-06",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the elephants playing with the penguins?",
+                "type": "relation_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the penguins stone?",
+                  "score": 2.610690567617091e-06,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=2.61069e-06",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the penguins stone?",
+                "type": "attribute_mismatch"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many lions are in the image?",
+                  "score": 0.9998763258696887,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.999876",
+                "expected": "four",
+                "status": "passed",
+                "target": "How many lions are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any lions in the image?",
+                  "score": 0.9999999808642315,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any lions in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any elephants in the image?",
+                  "score": 0.9999999571182343,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any elephants in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many penguins are in the image?",
+                  "score": 0.9999252522371465,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.999925",
+                "expected": "five",
+                "status": "passed",
+                "target": "How many penguins are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any penguins in the image?",
+                  "score": 0.9999999305582605,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any penguins in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly four lions, exactly four metal elephants, and exactly five stone penguins.",
+                "Bind the metal material only to the four elephants.",
+                "Bind the stone material only to the five penguins.",
+                "Make the four lions visibly chasing the four elephants.",
+                "Make the four metal elephants visibly playing with the five stone penguins.",
+                "Keep all animals fully visible and separated enough to count; avoid overlap or occlusion.",
+                "Do not add extra lions, elephants, penguins, or other animals."
+              ],
+              "generation_strategy": "Create a clear multi-object composition with three countable groups: four lions positioned as a chasing group behind four metal elephants, and five stone penguins positioned with the elephants so the elephants appear to be playing with them. Emphasize count separation, material attributes, and readable action relationships.",
+              "initial_prompt": "A clear scene with exactly four lions chasing exactly four metal elephants. The four lions are grouped behind the elephants in a running chase pose. The four elephants are visibly made of metal and are interacting playfully with exactly five stone penguins. The five penguins are visibly made of stone and are arranged near the elephants. Keep all four lions, all four metal elephants, and all five stone penguins fully visible, distinct, non-overlapping, and easy to count. No extra animals or objects.",
+              "parsed_constraints": {
+                "attributes": {
+                  "elephants": [
+                    "metal"
+                  ],
+                  "penguins": [
+                    "stone"
+                  ]
+                },
+                "counts": {
+                  "elephants": 4,
+                  "lions": 4,
+                  "penguins": 5
+                },
+                "objects": [
+                  "lions",
+                  "elephants",
+                  "penguins"
+                ],
+                "relations": [
+                  "four lions chasing four metal elephants",
+                  "four metal elephants playing with five stone penguins"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "multi_object_composition",
+                "spatial_layout",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly four lions, exactly four metal elephants, and exactly five stone penguins.",
+                "Bind the metal material only to the four elephants.",
+                "Bind the stone material only to the five penguins.",
+                "Make the four lions visibly chasing the four elephants.",
+                "Make the four metal elephants visibly playing with the five stone penguins.",
+                "Keep all animals fully visible and separated enough to count; avoid overlap or occlusion.",
+                "Do not add extra lions, elephants, penguins, or other animals."
+              ],
+              "generation_strategy": "Create a clear multi-object composition with three countable groups: four lions positioned as a chasing group behind four metal elephants, and five stone penguins positioned with the elephants so the elephants appear to be playing with them. Emphasize count separation, material attributes, and readable action relationships.",
+              "initial_prompt": "A clear scene with exactly four lions chasing exactly four metal elephants. The four lions are grouped behind the elephants in a running chase pose. The four elephants are visibly made of metal and are interacting playfully with exactly five stone penguins. The five penguins are visibly made of stone and are arranged near the elephants. Keep all four lions, all four metal elephants, and all five stone penguins fully visible, distinct, non-overlapping, and easy to count. No extra animals or objects.",
+              "parsed_constraints": {
+                "attributes": {
+                  "elephants": [
+                    "metal"
+                  ],
+                  "penguins": [
+                    "stone"
+                  ]
+                },
+                "counts": {
+                  "elephants": 4,
+                  "lions": 4,
+                  "penguins": 5
+                },
+                "objects": [
+                  "lions",
+                  "elephants",
+                  "penguins"
+                ],
+                "relations": [
+                  "four lions chasing four metal elephants",
+                  "four metal elephants playing with five stone penguins"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "multi_object_composition",
+                "spatial_layout",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "prompt_used": "A clear scene with exactly four lions chasing exactly four metal elephants. The four lions are grouped behind the elephants in a running chase pose. The four elephants are visibly made of metal and are interacting playfully with exactly five stone penguins. The five penguins are visibly made of stone and are arranged near the elephants. Keep all four lions, all four metal elephants, and all five stone penguins fully visible, distinct, non-overlapping, and easy to count. No extra animals or objects.",
+            "round": 0,
+            "score": 0.5001090327191021,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 2,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the lions chasing the elephants?",
+                    "score": 0.0011611213314179913,
+                    "skill": "verb"
+                  },
+                  "detected": "soft_score=0.00116112",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the lions chasing the elephants?",
+                  "type": "relation_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 3,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many elephants are in the image?",
+                    "score": 0.0001233887954573738,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=0.000123389",
+                  "expected": "four",
+                  "status": "failed",
+                  "target": "How many elephants are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 4,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the elephants metal?",
+                    "score": 8.794687865465445e-08,
+                    "skill": "attribute"
+                  },
+                  "detected": "soft_score=8.79469e-08",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the elephants metal?",
+                  "type": "attribute_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 6,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the elephants playing with the penguins?",
+                    "score": 1.6717791380559441e-06,
+                    "skill": "verb"
+                  },
+                  "detected": "soft_score=1.67178e-06",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the elephants playing with the penguins?",
+                  "type": "relation_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 8,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the penguins stone?",
+                    "score": 2.610690567617091e-06,
+                    "skill": "attribute"
+                  },
+                  "detected": "soft_score=2.61069e-06",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the penguins stone?",
+                  "type": "attribute_mismatch"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00736_86b70e36"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the lions chasing the elephants?",
+              "score": 0.0011611213314179913,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.00116112",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the lions chasing the elephants?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many elephants are in the image?",
+              "score": 0.0001233887954573738,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.000123389",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many elephants are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the elephants metal?",
+              "score": 8.794687865465445e-08,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=8.79469e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the elephants metal?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the elephants playing with the penguins?",
+              "score": 1.6717791380559441e-06,
+              "skill": "verb"
+            },
+            "detected": "soft_score=1.67178e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the elephants playing with the penguins?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the penguins stone?",
+              "score": 2.610690567617091e-06,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=2.61069e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the penguins stone?",
+            "type": "attribute_mismatch"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00736_86b70e36_cand_03",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly four lions, exactly four metal elephants, and exactly five stone penguins.",
+      "Bind the metal material only to the four elephants.",
+      "Bind the stone material only to the five penguins.",
+      "Make the four lions visibly chasing the four elephants.",
+      "Make the four metal elephants visibly playing with the five stone penguins.",
+      "Keep all animals fully visible and separated enough to count; avoid overlap or occlusion.",
+      "Do not add extra lions, elephants, penguins, or other animals."
+    ],
+    "generation_strategy": "Create a clear multi-object composition with three countable groups: four lions positioned as a chasing group behind four metal elephants, and five stone penguins positioned with the elephants so the elephants appear to be playing with them. Emphasize count separation, material attributes, and readable action relationships.",
+    "initial_prompt": "A clear scene with exactly four lions chasing exactly four metal elephants. The four lions are grouped behind the elephants in a running chase pose. The four elephants are visibly made of metal and are interacting playfully with exactly five stone penguins. The five penguins are visibly made of stone and are arranged near the elephants. Keep all four lions, all four metal elephants, and all five stone penguins fully visible, distinct, non-overlapping, and easy to count. No extra animals or objects.",
+    "parsed_constraints": {
+      "attributes": {
+        "elephants": [
+          "metal"
+        ],
+        "penguins": [
+          "stone"
+        ]
+      },
+      "counts": {
+        "elephants": 4,
+        "lions": 4,
+        "penguins": 5
+      },
+      "objects": [
+        "lions",
+        "elephants",
+        "penguins"
+      ],
+      "relations": [
+        "four lions chasing four metal elephants",
+        "four metal elephants playing with five stone penguins"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "multi_object_composition",
+      "spatial_layout",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image preserved the presence and count of four lions and five penguins, and included elephants, but it failed to make the lions clearly chasing the elephants, failed to show exactly four elephants, failed to bind metal material to the elephants, failed to show the elephants playing with the penguins, and failed to bind stone material to the penguins.",
+    "expected_improvement": [
+      "Exactly four elephants should become countable by arranging them as four separated full-body figures.",
+      "The elephants should read as metal by giving each elephant a shiny silver reflective surface.",
+      "The penguins should read as stone by giving each penguin gray carved rock texture.",
+      "The chase relation should become clearer by placing all four lions behind the elephants in running poses, with the elephants moving away in the same direction.",
+      "The play relation should become clearer by placing the penguins directly beside and in front of the elephants, with elephant trunks reaching toward the penguins in playful interaction."
+    ],
+    "failure_types": [
+      "relation_mismatch",
+      "count_mismatch",
+      "attribute_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly four lions visible and countable.",
+      "Keep lions clearly present in the image.",
+      "Keep elephants clearly present in the image.",
+      "Keep exactly five penguins visible and countable.",
+      "Keep penguins clearly present in the image."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt stated the target relations and materials but did not force a simple, verifier-readable layout. The elephant count was vulnerable because the elephants were not specified as four separated full-body instances in a row. The material attributes were described generally but not visually anchored with strong surface cues. The two relations were also too abstract: 'grouped behind' and 'interacting playfully' did not create an unmistakable chase direction or a visible play action.",
+      "error_source": "Prompt under-specified the spatial layout, material visual cues, and count separation for the failed constraints."
+    },
+    "regeneration_strategy": "Use a simple side-view composition with three separated groups: four lions on the left running toward four shiny metal elephants in the center, and five gray stone penguins on the right/front of the elephants. Make all animals full-body, separated, and countable. Use strong material cues on the target objects only: reflective silver metal elephants and carved gray stone penguins. Make relations explicit with directional running poses for the chase and elephant trunks reaching toward the penguins for playful interaction.",
+    "regression_risks": [
+      "The generator may add extra animals while trying to fill the scene.",
+      "The generator may merge elephants together, causing the elephant count to fail again.",
+      "The generator may make penguins normal black-and-white instead of stone.",
+      "The generator may make elephants normal gray skin instead of metal.",
+      "The generator may focus on play and weaken the lions-chasing-elephants relation."
+    ],
+    "repair_constraints": [
+      "Show exactly four elephants, each as a separate full-body elephant with visible gaps between them; no extra elephants and no merged elephant bodies.",
+      "Make every elephant visibly made of shiny silver metal, with reflective metallic surfaces; do not make the lions or penguins metal.",
+      "Place the four lions behind the elephants, running toward the elephants, while the elephants face and move away from the lions, so the lions are clearly chasing the elephants.",
+      "Make the four metal elephants visibly playing with the five penguins by positioning the penguins directly near the elephants and showing the elephants reaching their trunks toward the penguins in a playful interaction.",
+      "Make every penguin visibly made of gray stone, with carved rock texture; do not make the lions or elephants stone."
+    ],
+    "retry_prompt": "A simple clear side-view scene with exactly four lions, exactly four metal elephants, and exactly five stone penguins. Arrange the four lions on the left side, full body and separated, all running to the right toward the elephants. Arrange exactly four elephants in the center, full body and separated with visible gaps, all facing and moving to the right away from the lions, so the four lions are clearly chasing the four elephants. Each of the four elephants is visibly made of shiny silver metal with reflective metallic surfaces. Place exactly five penguins on the right side and near the elephants, full body and separated in a countable row. Each of the five penguins is visibly made of gray stone with carved rock texture. The four metal elephants are playing with the five stone penguins: the elephants reach their trunks toward the nearby penguins in a playful interaction. Keep all four lions, all four metal elephants, and all five stone penguins fully visible, distinct, non-overlapping, and easy to count. No extra lions, no extra elephants, no extra penguins, and no other animals or objects.",
+    "skill_revision": {
+      "new_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same allowed skills, but apply them more concretely: use quantity_counting and anti_occlusion for four separated elephants, attribute_binding for shiny metal elephants and gray stone penguins, spatial_layout for lions behind elephants chasing them, and multi_object_composition for elephants playing with nearby penguins without losing countability."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the lions chasing the elephants?",
+            "score": 0.0011611213314179913,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.00116112",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the lions chasing the elephants?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many elephants are in the image?",
+            "score": 0.0001233887954573738,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.000123389",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many elephants are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the elephants metal?",
+            "score": 8.794687865465445e-08,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=8.79469e-08",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the elephants metal?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the elephants playing with the penguins?",
+            "score": 1.6717791380559441e-06,
+            "skill": "verb"
+          },
+          "detected": "soft_score=1.67178e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the elephants playing with the penguins?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the penguins stone?",
+            "score": 2.610690567617091e-06,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=2.61069e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the penguins stone?",
+          "type": "attribute_mismatch"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00072/samples/00003.png",
+      "prompt": "A clear scene with exactly four lions chasing exactly four metal elephants. The four lions are grouped behind the elephants in a running chase pose. The four elephants are visibly made of metal and are interacting playfully with exactly five stone penguins. The five penguins are visibly made of stone and are arranged near the elephants. Keep all four lions, all four metal elephants, and all five stone penguins fully visible, distinct, non-overlapping, and easy to count. No extra animals or objects.",
+      "round": 0,
+      "score": 0.5001090327191021
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00736_86b70e36_cand_03",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "count_mismatch",
+        "relation_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the lions chasing the elephants?",
+            "score": 0.0011611213314179913,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.00116112",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the lions chasing the elephants?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many elephants are in the image?",
+            "score": 0.0001233887954573738,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.000123389",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many elephants are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the elephants metal?",
+            "score": 8.794687865465445e-08,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=8.79469e-08",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the elephants metal?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the elephants playing with the penguins?",
+            "score": 1.6717791380559441e-06,
+            "skill": "verb"
+          },
+          "detected": "soft_score=1.67178e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the elephants playing with the penguins?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the penguins stone?",
+            "score": 2.610690567617091e-06,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=2.61069e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the penguins stone?",
+          "type": "attribute_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many lions are in the image?",
+            "score": 0.9998763258696887,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.999876",
+          "expected": "four",
+          "status": "passed",
+          "target": "How many lions are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any lions in the image?",
+            "score": 0.9999999808642315,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any lions in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any elephants in the image?",
+            "score": 0.9999999571182343,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any elephants in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many penguins are in the image?",
+            "score": 0.9999252522371465,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.999925",
+          "expected": "five",
+          "status": "passed",
+          "target": "How many penguins are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any penguins in the image?",
+            "score": 0.9999999305582605,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any penguins in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.5001090327191021,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the lions chasing the elephants?",
+              "score": 0.0011611213314179913,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.00116112",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the lions chasing the elephants?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many elephants are in the image?",
+              "score": 0.0001233887954573738,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.000123389",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many elephants are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the elephants metal?",
+              "score": 8.794687865465445e-08,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=8.79469e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the elephants metal?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the elephants playing with the penguins?",
+              "score": 1.6717791380559441e-06,
+              "skill": "verb"
+            },
+            "detected": "soft_score=1.67178e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the elephants playing with the penguins?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the penguins stone?",
+              "score": 2.610690567617091e-06,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=2.61069e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the penguins stone?",
+            "type": "attribute_mismatch"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00072/samples/00003.png",
+        "prompt": "A clear scene with exactly four lions chasing exactly four metal elephants. The four lions are grouped behind the elephants in a running chase pose. The four elephants are visibly made of metal and are interacting playfully with exactly five stone penguins. The five penguins are visibly made of stone and are arranged near the elephants. Keep all four lions, all four metal elephants, and all five stone penguins fully visible, distinct, non-overlapping, and easy to count. No extra animals or objects.",
+        "round": 0,
+        "score": 0.5001090327191021
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the lions chasing the elephants?",
+            "score": 0.0011611213314179913,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.00116112",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the lions chasing the elephants?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many elephants are in the image?",
+            "score": 0.0001233887954573738,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.000123389",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many elephants are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the elephants metal?",
+            "score": 8.794687865465445e-08,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=8.79469e-08",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the elephants metal?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the elephants playing with the penguins?",
+            "score": 1.6717791380559441e-06,
+            "skill": "verb"
+          },
+          "detected": "soft_score=1.67178e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the elephants playing with the penguins?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the penguins stone?",
+            "score": 2.610690567617091e-06,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=2.61069e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the penguins stone?",
+          "type": "attribute_mismatch"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "count_mismatch",
+        "relation_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the lions chasing the elephants?",
+            "score": 0.0011611213314179913,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.00116112",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the lions chasing the elephants?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many elephants are in the image?",
+            "score": 0.0001233887954573738,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.000123389",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many elephants are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the elephants metal?",
+            "score": 8.794687865465445e-08,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=8.79469e-08",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the elephants metal?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the elephants playing with the penguins?",
+            "score": 1.6717791380559441e-06,
+            "skill": "verb"
+          },
+          "detected": "soft_score=1.67178e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the elephants playing with the penguins?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the penguins stone?",
+            "score": 2.610690567617091e-06,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=2.61069e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the penguins stone?",
+          "type": "attribute_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many lions are in the image?",
+            "score": 0.9998763258696887,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.999876",
+          "expected": "four",
+          "status": "passed",
+          "target": "How many lions are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any lions in the image?",
+            "score": 0.9999999808642315,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any lions in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any elephants in the image?",
+            "score": 0.9999999571182343,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any elephants in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many penguins are in the image?",
+            "score": 0.9999252522371465,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.999925",
+          "expected": "five",
+          "status": "passed",
+          "target": "How many penguins are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any penguins in the image?",
+            "score": 0.9999999305582605,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any penguins in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.5001090327191021,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "four lions chasing four metal elephants playing with five stone penguins",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 2,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the lions chasing the elephants?",
+          "score": 0.0011611213314179913,
+          "skill": "verb"
+        },
+        "detected": "soft_score=0.00116112",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the lions chasing the elephants?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many elephants are in the image?",
+          "score": 0.0001233887954573738,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.000123389",
+        "expected": "four",
+        "status": "failed",
+        "target": "How many elephants are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the elephants metal?",
+          "score": 8.794687865465445e-08,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=8.79469e-08",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the elephants metal?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 6,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the elephants playing with the penguins?",
+          "score": 1.6717791380559441e-06,
+          "skill": "verb"
+        },
+        "detected": "soft_score=1.67178e-06",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the elephants playing with the penguins?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the penguins stone?",
+          "score": 2.610690567617091e-06,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=2.61069e-06",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the penguins stone?",
+        "type": "attribute_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly four lions, exactly four metal elephants, and exactly five stone penguins.",
+        "Bind the metal material only to the four elephants.",
+        "Bind the stone material only to the five penguins.",
+        "Make the four lions visibly chasing the four elephants.",
+        "Make the four metal elephants visibly playing with the five stone penguins.",
+        "Keep all animals fully visible and separated enough to count; avoid overlap or occlusion.",
+        "Do not add extra lions, elephants, penguins, or other animals."
+      ],
+      "generation_strategy": "Create a clear multi-object composition with three countable groups: four lions positioned as a chasing group behind four metal elephants, and five stone penguins positioned with the elephants so the elephants appear to be playing with them. Emphasize count separation, material attributes, and readable action relationships.",
+      "initial_prompt": "A clear scene with exactly four lions chasing exactly four metal elephants. The four lions are grouped behind the elephants in a running chase pose. The four elephants are visibly made of metal and are interacting playfully with exactly five stone penguins. The five penguins are visibly made of stone and are arranged near the elephants. Keep all four lions, all four metal elephants, and all five stone penguins fully visible, distinct, non-overlapping, and easy to count. No extra animals or objects.",
+      "parsed_constraints": {
+        "attributes": {
+          "elephants": [
+            "metal"
+          ],
+          "penguins": [
+            "stone"
+          ]
+        },
+        "counts": {
+          "elephants": 4,
+          "lions": 4,
+          "penguins": 5
+        },
+        "objects": [
+          "lions",
+          "elephants",
+          "penguins"
+        ],
+        "relations": [
+          "four lions chasing four metal elephants",
+          "four metal elephants playing with five stone penguins"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly four lions, exactly four metal elephants, and exactly five stone penguins.",
+        "Bind the metal material only to the four elephants.",
+        "Bind the stone material only to the five penguins.",
+        "Make the four lions visibly chasing the four elephants.",
+        "Make the four metal elephants visibly playing with the five stone penguins.",
+        "Keep all animals fully visible and separated enough to count; avoid overlap or occlusion.",
+        "Do not add extra lions, elephants, penguins, or other animals."
+      ],
+      "generation_strategy": "Create a clear multi-object composition with three countable groups: four lions positioned as a chasing group behind four metal elephants, and five stone penguins positioned with the elephants so the elephants appear to be playing with them. Emphasize count separation, material attributes, and readable action relationships.",
+      "initial_prompt": "A clear scene with exactly four lions chasing exactly four metal elephants. The four lions are grouped behind the elephants in a running chase pose. The four elephants are visibly made of metal and are interacting playfully with exactly five stone penguins. The five penguins are visibly made of stone and are arranged near the elephants. Keep all four lions, all four metal elephants, and all five stone penguins fully visible, distinct, non-overlapping, and easy to count. No extra animals or objects.",
+      "parsed_constraints": {
+        "attributes": {
+          "elephants": [
+            "metal"
+          ],
+          "penguins": [
+            "stone"
+          ]
+        },
+        "counts": {
+          "elephants": 4,
+          "lions": 4,
+          "penguins": 5
+        },
+        "objects": [
+          "lions",
+          "elephants",
+          "penguins"
+        ],
+        "relations": [
+          "four lions chasing four metal elephants",
+          "four metal elephants playing with five stone penguins"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_prompt": "A clear scene with exactly four lions chasing exactly four metal elephants. The four lions are grouped behind the elephants in a running chase pose. The four elephants are visibly made of metal and are interacting playfully with exactly five stone penguins. The five penguins are visibly made of stone and are arranged near the elephants. Keep all four lions, all four metal elephants, and all five stone penguins fully visible, distinct, non-overlapping, and easy to count. No extra animals or objects.",
+    "previous_selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "multi_object_composition",
+      "spatial_layout",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ],
+    "prompt_id": "geneval2_00736_86b70e36",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "count_mismatch",
+          "relation_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the lions chasing the elephants?",
+              "score": 0.0011611213314179913,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.00116112",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the lions chasing the elephants?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many elephants are in the image?",
+              "score": 0.0001233887954573738,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.000123389",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many elephants are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the elephants metal?",
+              "score": 8.794687865465445e-08,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=8.79469e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the elephants metal?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the elephants playing with the penguins?",
+              "score": 1.6717791380559441e-06,
+              "skill": "verb"
+            },
+            "detected": "soft_score=1.67178e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the elephants playing with the penguins?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the penguins stone?",
+              "score": 2.610690567617091e-06,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=2.61069e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the penguins stone?",
+            "type": "attribute_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many lions are in the image?",
+              "score": 0.9998763258696887,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.999876",
+            "expected": "four",
+            "status": "passed",
+            "target": "How many lions are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any lions in the image?",
+              "score": 0.9999999808642315,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any lions in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any elephants in the image?",
+              "score": 0.9999999571182343,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any elephants in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many penguins are in the image?",
+              "score": 0.9999252522371465,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.999925",
+            "expected": "five",
+            "status": "passed",
+            "target": "How many penguins are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any penguins in the image?",
+              "score": 0.9999999305582605,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any penguins in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly four lions, exactly four metal elephants, and exactly five stone penguins.",
+            "Bind the metal material only to the four elephants.",
+            "Bind the stone material only to the five penguins.",
+            "Make the four lions visibly chasing the four elephants.",
+            "Make the four metal elephants visibly playing with the five stone penguins.",
+            "Keep all animals fully visible and separated enough to count; avoid overlap or occlusion.",
+            "Do not add extra lions, elephants, penguins, or other animals."
+          ],
+          "generation_strategy": "Create a clear multi-object composition with three countable groups: four lions positioned as a chasing group behind four metal elephants, and five stone penguins positioned with the elephants so the elephants appear to be playing with them. Emphasize count separation, material attributes, and readable action relationships.",
+          "initial_prompt": "A clear scene with exactly four lions chasing exactly four metal elephants. The four lions are grouped behind the elephants in a running chase pose. The four elephants are visibly made of metal and are interacting playfully with exactly five stone penguins. The five penguins are visibly made of stone and are arranged near the elephants. Keep all four lions, all four metal elephants, and all five stone penguins fully visible, distinct, non-overlapping, and easy to count. No extra animals or objects.",
+          "parsed_constraints": {
+            "attributes": {
+              "elephants": [
+                "metal"
+              ],
+              "penguins": [
+                "stone"
+              ]
+            },
+            "counts": {
+              "elephants": 4,
+              "lions": 4,
+              "penguins": 5
+            },
+            "objects": [
+              "lions",
+              "elephants",
+              "penguins"
+            ],
+            "relations": [
+              "four lions chasing four metal elephants",
+              "four metal elephants playing with five stone penguins"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "multi_object_composition",
+            "spatial_layout",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly four lions, exactly four metal elephants, and exactly five stone penguins.",
+            "Bind the metal material only to the four elephants.",
+            "Bind the stone material only to the five penguins.",
+            "Make the four lions visibly chasing the four elephants.",
+            "Make the four metal elephants visibly playing with the five stone penguins.",
+            "Keep all animals fully visible and separated enough to count; avoid overlap or occlusion.",
+            "Do not add extra lions, elephants, penguins, or other animals."
+          ],
+          "generation_strategy": "Create a clear multi-object composition with three countable groups: four lions positioned as a chasing group behind four metal elephants, and five stone penguins positioned with the elephants so the elephants appear to be playing with them. Emphasize count separation, material attributes, and readable action relationships.",
+          "initial_prompt": "A clear scene with exactly four lions chasing exactly four metal elephants. The four lions are grouped behind the elephants in a running chase pose. The four elephants are visibly made of metal and are interacting playfully with exactly five stone penguins. The five penguins are visibly made of stone and are arranged near the elephants. Keep all four lions, all four metal elephants, and all five stone penguins fully visible, distinct, non-overlapping, and easy to count. No extra animals or objects.",
+          "parsed_constraints": {
+            "attributes": {
+              "elephants": [
+                "metal"
+              ],
+              "penguins": [
+                "stone"
+              ]
+            },
+            "counts": {
+              "elephants": 4,
+              "lions": 4,
+              "penguins": 5
+            },
+            "objects": [
+              "lions",
+              "elephants",
+              "penguins"
+            ],
+            "relations": [
+              "four lions chasing four metal elephants",
+              "four metal elephants playing with five stone penguins"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "multi_object_composition",
+            "spatial_layout",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "prompt_used": "A clear scene with exactly four lions chasing exactly four metal elephants. The four lions are grouped behind the elephants in a running chase pose. The four elephants are visibly made of metal and are interacting playfully with exactly five stone penguins. The five penguins are visibly made of stone and are arranged near the elephants. Keep all four lions, all four metal elephants, and all five stone penguins fully visible, distinct, non-overlapping, and easy to count. No extra animals or objects.",
+        "round": 0,
+        "score": 0.5001090327191021,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the lions chasing the elephants?",
+                "score": 0.0011611213314179913,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.00116112",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the lions chasing the elephants?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many elephants are in the image?",
+                "score": 0.0001233887954573738,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.000123389",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many elephants are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the elephants metal?",
+                "score": 8.794687865465445e-08,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=8.79469e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the elephants metal?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the elephants playing with the penguins?",
+                "score": 1.6717791380559441e-06,
+                "skill": "verb"
+              },
+              "detected": "soft_score=1.67178e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the elephants playing with the penguins?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the penguins stone?",
+                "score": 2.610690567617091e-06,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=2.61069e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the penguins stone?",
+              "type": "attribute_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00736_86b70e36"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 2,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the lions chasing the elephants?",
+          "score": 0.0011611213314179913,
+          "skill": "verb"
+        },
+        "detected": "soft_score=0.00116112",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the lions chasing the elephants?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many elephants are in the image?",
+          "score": 0.0001233887954573738,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.000123389",
+        "expected": "four",
+        "status": "failed",
+        "target": "How many elephants are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the elephants metal?",
+          "score": 8.794687865465445e-08,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=8.79469e-08",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the elephants metal?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 6,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the elephants playing with the penguins?",
+          "score": 1.6717791380559441e-06,
+          "skill": "verb"
+        },
+        "detected": "soft_score=1.67178e-06",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the elephants playing with the penguins?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the penguins stone?",
+          "score": 2.610690567617091e-06,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=2.61069e-06",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the penguins stone?",
+        "type": "attribute_mismatch"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00072/samples/00003.png",
+    "best_so_far_prompt": "A clear scene with exactly four lions chasing exactly four metal elephants. The four lions are grouped behind the elephants in a running chase pose. The four elephants are visibly made of metal and are interacting playfully with exactly five stone penguins. The five penguins are visibly made of stone and are arranged near the elephants. Keep all four lions, all four metal elephants, and all five stone penguins fully visible, distinct, non-overlapping, and easy to count. No extra animals or objects.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.5001090327191021,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 2,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the lions chasing the elephants?",
+          "score": 0.0011611213314179913,
+          "skill": "verb"
+        },
+        "detected": "soft_score=0.00116112",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the lions chasing the elephants?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many elephants are in the image?",
+          "score": 0.0001233887954573738,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.000123389",
+        "expected": "four",
+        "status": "failed",
+        "target": "How many elephants are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the elephants metal?",
+          "score": 8.794687865465445e-08,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=8.79469e-08",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the elephants metal?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 6,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the elephants playing with the penguins?",
+          "score": 1.6717791380559441e-06,
+          "skill": "verb"
+        },
+        "detected": "soft_score=1.67178e-06",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the elephants playing with the penguins?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the penguins stone?",
+          "score": 2.610690567617091e-06,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=2.61069e-06",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the penguins stone?",
+        "type": "attribute_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly four lions, exactly four metal elephants, and exactly five stone penguins.",
+        "Bind the metal material only to the four elephants.",
+        "Bind the stone material only to the five penguins.",
+        "Make the four lions visibly chasing the four elephants.",
+        "Make the four metal elephants visibly playing with the five stone penguins.",
+        "Keep all animals fully visible and separated enough to count; avoid overlap or occlusion.",
+        "Do not add extra lions, elephants, penguins, or other animals."
+      ],
+      "generation_strategy": "Create a clear multi-object composition with three countable groups: four lions positioned as a chasing group behind four metal elephants, and five stone penguins positioned with the elephants so the elephants appear to be playing with them. Emphasize count separation, material attributes, and readable action relationships.",
+      "initial_prompt": "A clear scene with exactly four lions chasing exactly four metal elephants. The four lions are grouped behind the elephants in a running chase pose. The four elephants are visibly made of metal and are interacting playfully with exactly five stone penguins. The five penguins are visibly made of stone and are arranged near the elephants. Keep all four lions, all four metal elephants, and all five stone penguins fully visible, distinct, non-overlapping, and easy to count. No extra animals or objects.",
+      "parsed_constraints": {
+        "attributes": {
+          "elephants": [
+            "metal"
+          ],
+          "penguins": [
+            "stone"
+          ]
+        },
+        "counts": {
+          "elephants": 4,
+          "lions": 4,
+          "penguins": 5
+        },
+        "objects": [
+          "lions",
+          "elephants",
+          "penguins"
+        ],
+        "relations": [
+          "four lions chasing four metal elephants",
+          "four metal elephants playing with five stone penguins"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.500 failed=['Are the lions chasing the elephants?', 'How many elephants are in the image?', 'Are the elephants metal?', 'Are the elephants playing with the penguins?', 'Are the penguins stone?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_incremental/snapshot_003_worker_01/geneval2_00736_86b70e36__geneval2_00736_86b70e36_cand_03__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00736_86b70e36__geneval2_00736_86b70e36_cand_03__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00736_86b70e36",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image preserved the presence and count of four lions and five penguins, and included elephants, but it failed to make the lions clearly chasing the elephants, failed to show exactly four elephants, failed to bind metal material to the elephants, failed to show the elephants playing with the penguins, and failed to bind stone material to the penguins.",
+    "expected_improvement": [
+      "Exactly four elephants should become countable by arranging them as four separated full-body figures.",
+      "The elephants should read as metal by giving each elephant a shiny silver reflective surface.",
+      "The penguins should read as stone by giving each penguin gray carved rock texture.",
+      "The chase relation should become clearer by placing all four lions behind the elephants in running poses, with the elephants moving away in the same direction.",
+      "The play relation should become clearer by placing the penguins directly beside and in front of the elephants, with elephant trunks reaching toward the penguins in playful interaction."
+    ],
+    "failure_types": [
+      "relation_mismatch",
+      "count_mismatch",
+      "attribute_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly four lions visible and countable.",
+      "Keep lions clearly present in the image.",
+      "Keep elephants clearly present in the image.",
+      "Keep exactly five penguins visible and countable.",
+      "Keep penguins clearly present in the image."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt stated the target relations and materials but did not force a simple, verifier-readable layout. The elephant count was vulnerable because the elephants were not specified as four separated full-body instances in a row. The material attributes were described generally but not visually anchored with strong surface cues. The two relations were also too abstract: 'grouped behind' and 'interacting playfully' did not create an unmistakable chase direction or a visible play action.",
+      "error_source": "Prompt under-specified the spatial layout, material visual cues, and count separation for the failed constraints."
+    },
+    "regeneration_strategy": "Use a simple side-view composition with three separated groups: four lions on the left running toward four shiny metal elephants in the center, and five gray stone penguins on the right/front of the elephants. Make all animals full-body, separated, and countable. Use strong material cues on the target objects only: reflective silver metal elephants and carved gray stone penguins. Make relations explicit with directional running poses for the chase and elephant trunks reaching toward the penguins for playful interaction.",
+    "regression_risks": [
+      "The generator may add extra animals while trying to fill the scene.",
+      "The generator may merge elephants together, causing the elephant count to fail again.",
+      "The generator may make penguins normal black-and-white instead of stone.",
+      "The generator may make elephants normal gray skin instead of metal.",
+      "The generator may focus on play and weaken the lions-chasing-elephants relation."
+    ],
+    "repair_constraints": [
+      "Show exactly four elephants, each as a separate full-body elephant with visible gaps between them; no extra elephants and no merged elephant bodies.",
+      "Make every elephant visibly made of shiny silver metal, with reflective metallic surfaces; do not make the lions or penguins metal.",
+      "Place the four lions behind the elephants, running toward the elephants, while the elephants face and move away from the lions, so the lions are clearly chasing the elephants.",
+      "Make the four metal elephants visibly playing with the five penguins by positioning the penguins directly near the elephants and showing the elephants reaching their trunks toward the penguins in a playful interaction.",
+      "Make every penguin visibly made of gray stone, with carved rock texture; do not make the lions or elephants stone."
+    ],
+    "retry_prompt": "A simple clear side-view scene with exactly four lions, exactly four metal elephants, and exactly five stone penguins. Arrange the four lions on the left side, full body and separated, all running to the right toward the elephants. Arrange exactly four elephants in the center, full body and separated with visible gaps, all facing and moving to the right away from the lions, so the four lions are clearly chasing the four elephants. Each of the four elephants is visibly made of shiny silver metal with reflective metallic surfaces. Place exactly five penguins on the right side and near the elephants, full body and separated in a countable row. Each of the five penguins is visibly made of gray stone with carved rock texture. The four metal elephants are playing with the five stone penguins: the elephants reach their trunks toward the nearby penguins in a playful interaction. Keep all four lions, all four metal elephants, and all five stone penguins fully visible, distinct, non-overlapping, and easy to count. No extra lions, no extra elephants, no extra penguins, and no other animals or objects.",
+    "skill_revision": {
+      "new_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same allowed skills, but apply them more concretely: use quantity_counting and anti_occlusion for four separated elephants, attribute_binding for shiny metal elephants and gray stone penguins, spatial_layout for lions behind elephants chasing them, and multi_object_composition for elephants playing with nearby penguins without losing countability."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "four lions chasing four metal elephants playing with five stone penguins",
+    "prompt": "four lions chasing four metal elephants playing with five stone penguins",
+    "prompt_id": "geneval2_00736_86b70e36",
+    "sampling_bucket": "relation_action",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "relation_action",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 2,
+      "count": 3,
+      "object": 3,
+      "verb": 2
+    },
+    "skills": [
+      "count",
+      "object",
+      "verb",
+      "count",
+      "attribute",
+      "object",
+      "verb",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 736,
+    "vqa_list": [
+      [
+        "How many lions are in the image?",
+        "four"
+      ],
+      [
+        "Are there any lions in the image?",
+        "Yes"
+      ],
+      [
+        "Are the lions chasing the elephants?",
+        "Yes"
+      ],
+      [
+        "How many elephants are in the image?",
+        "four"
+      ],
+      [
+        "Are the elephants metal?",
+        "Yes"
+      ],
+      [
+        "Are there any elephants in the image?",
+        "Yes"
+      ],
+      [
+        "Are the elephants playing with the penguins?",
+        "Yes"
+      ],
+      [
+        "How many penguins are in the image?",
+        "five"
+      ],
+      [
+        "Are the penguins stone?",
+        "Yes"
+      ],
+      [
+        "Are there any penguins in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00736_86b70e36"
+}

@@ -1,0 +1,2410 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "count_mismatch",
+          "relation_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many backpacks are in the image?",
+              "score": 6.581411863065787e-12,
+              "skill": "count"
+            },
+            "detected": "soft_score=6.58141e-12",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many backpacks are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the kangaroos jumping over the rabbits?",
+              "score": 0.5629419416904966,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.562942",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the kangaroos jumping over the rabbits?",
+            "type": "relation_mismatch"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any backpacks in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any backpacks in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the backpacks to the left of the kangaroos?",
+              "score": 1.0,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the backpacks to the left of the kangaroos?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many kangaroos are in the image?",
+              "score": 0.9999997383799898,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "three",
+            "status": "passed",
+            "target": "How many kangaroos are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the kangaroos green?",
+              "score": 0.9999999457668309,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the kangaroos green?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any kangaroos in the image?",
+              "score": 0.9999785134741614,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999979",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any kangaroos in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many rabbits are in the image?",
+              "score": 1.0,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "four",
+            "status": "passed",
+            "target": "How many rabbits are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any rabbits in the image?",
+              "score": 0.9999993769961293,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999999",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any rabbits in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_002/raw_score_lists.by_candidate.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00640_de2d0828_cand_00",
+          "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_002/raw_score_lists.by_candidate.json",
+          "rows": [
+            {
+              "answer": "seven",
+              "atom_count": 9,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00640_de2d0828_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00039/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00039/samples/00000.png",
+              "prompt": "seven backpacks to the left of three green kangaroos jumping over four rabbits",
+              "prompt_id": "geneval2_00640_de2d0828",
+              "question": "How many backpacks are in the image?",
+              "score": 6.581411863065787e-12,
+              "skill": "count",
+              "source_index": 640
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00640_de2d0828_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00039/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00039/samples/00000.png",
+              "prompt": "seven backpacks to the left of three green kangaroos jumping over four rabbits",
+              "prompt_id": "geneval2_00640_de2d0828",
+              "question": "Are there any backpacks in the image?",
+              "score": 1.0000000427826308,
+              "skill": "object",
+              "source_index": 640
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00640_de2d0828_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00039/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00039/samples/00000.png",
+              "prompt": "seven backpacks to the left of three green kangaroos jumping over four rabbits",
+              "prompt_id": "geneval2_00640_de2d0828",
+              "question": "Are the backpacks to the left of the kangaroos?",
+              "score": 1.0000000290496587,
+              "skill": "position",
+              "source_index": 640
+            },
+            {
+              "answer": "three",
+              "atom_count": 9,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00640_de2d0828_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00039/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00039/samples/00000.png",
+              "prompt": "seven backpacks to the left of three green kangaroos jumping over four rabbits",
+              "prompt_id": "geneval2_00640_de2d0828",
+              "question": "How many kangaroos are in the image?",
+              "score": 0.9999997383799898,
+              "skill": "count",
+              "source_index": 640
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00640_de2d0828_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00039/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00039/samples/00000.png",
+              "prompt": "seven backpacks to the left of three green kangaroos jumping over four rabbits",
+              "prompt_id": "geneval2_00640_de2d0828",
+              "question": "Are the kangaroos green?",
+              "score": 0.9999999457668309,
+              "skill": "attribute",
+              "source_index": 640
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00640_de2d0828_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00039/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00039/samples/00000.png",
+              "prompt": "seven backpacks to the left of three green kangaroos jumping over four rabbits",
+              "prompt_id": "geneval2_00640_de2d0828",
+              "question": "Are there any kangaroos in the image?",
+              "score": 0.9999785134741614,
+              "skill": "object",
+              "source_index": 640
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00640_de2d0828_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00039/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00039/samples/00000.png",
+              "prompt": "seven backpacks to the left of three green kangaroos jumping over four rabbits",
+              "prompt_id": "geneval2_00640_de2d0828",
+              "question": "Are the kangaroos jumping over the rabbits?",
+              "score": 0.5629419416904966,
+              "skill": "verb",
+              "source_index": 640
+            },
+            {
+              "answer": "four",
+              "atom_count": 9,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00640_de2d0828_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00039/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00039/samples/00000.png",
+              "prompt": "seven backpacks to the left of three green kangaroos jumping over four rabbits",
+              "prompt_id": "geneval2_00640_de2d0828",
+              "question": "How many rabbits are in the image?",
+              "score": 1.000000041603601,
+              "skill": "count",
+              "source_index": 640
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00640_de2d0828_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00039/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00039/samples/00000.png",
+              "prompt": "seven backpacks to the left of three green kangaroos jumping over four rabbits",
+              "prompt_id": "geneval2_00640_de2d0828",
+              "question": "Are there any rabbits in the image?",
+              "score": 0.9999993769961293,
+              "skill": "object",
+              "source_index": 640
+            }
+          ],
+          "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_002/raw_score_lists.by_candidate.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.8403243907015766,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 0,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00640_de2d0828.json",
+          "manifest_prompt_index": 39,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00640_de2d0828"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00640_de2d0828_cand_00",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00039/samples/00000.png",
+        "prompt_used": "A clear wide scene showing exactly seven separate backpacks on the left side of the image. To the right of the backpacks are exactly three green kangaroos, all visibly jumping in the air over exactly four rabbits below them. The backpacks are all clearly to the left of the kangaroos. The three kangaroos are green and fully visible, separated from each other, with their bodies above the rabbits to show they are jumping over them. The four rabbits are fully visible below the kangaroos and separated enough to count. Keep every backpack, kangaroo, and rabbit unobstructed, uncropped, and easy to count.",
+        "seed": 1195
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Depict exactly seven backpacks, exactly three kangaroos, and exactly four rabbits.",
+          "Bind the green color only to the three kangaroos; do not make the backpacks or rabbits green unless unavoidable.",
+          "Place all seven backpacks as a separate group on the left side of the image, clearly to the left of the kangaroos.",
+          "Show the three green kangaroos jumping over the four rabbits, with kangaroos visibly above the rabbits and the rabbits below them.",
+          "Keep all objects fully visible and separated enough to count; avoid occlusion, cropping, or merging objects."
+        ],
+        "generation_strategy": "Use a simple wide composition with three distinct zones: seven individual backpacks arranged on the left, three green kangaroos in mid-jump toward the center/right, and four rabbits below the jumping kangaroos. Emphasize clear countability, spatial separation, and the over-under action relation.",
+        "initial_prompt": "A clear wide scene showing exactly seven separate backpacks on the left side of the image. To the right of the backpacks are exactly three green kangaroos, all visibly jumping in the air over exactly four rabbits below them. The backpacks are all clearly to the left of the kangaroos. The three kangaroos are green and fully visible, separated from each other, with their bodies above the rabbits to show they are jumping over them. The four rabbits are fully visible below the kangaroos and separated enough to count. Keep every backpack, kangaroo, and rabbit unobstructed, uncropped, and easy to count.",
+        "parsed_constraints": {
+          "attributes": {
+            "kangaroos": [
+              "green"
+            ]
+          },
+          "counts": {
+            "backpacks": 7,
+            "kangaroos": 3,
+            "rabbits": 4
+          },
+          "objects": [
+            "backpacks",
+            "kangaroos",
+            "rabbits"
+          ],
+          "relations": [
+            "seven backpacks to the left of three green kangaroos",
+            "three green kangaroos jumping over four rabbits"
+          ]
+        },
+        "selected_skills": [
+          "quantity_counting",
+          "object_presence",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Depict exactly seven backpacks, exactly three kangaroos, and exactly four rabbits.",
+          "Bind the green color only to the three kangaroos; do not make the backpacks or rabbits green unless unavoidable.",
+          "Place all seven backpacks as a separate group on the left side of the image, clearly to the left of the kangaroos.",
+          "Show the three green kangaroos jumping over the four rabbits, with kangaroos visibly above the rabbits and the rabbits below them.",
+          "Keep all objects fully visible and separated enough to count; avoid occlusion, cropping, or merging objects."
+        ],
+        "generation_strategy": "Use a simple wide composition with three distinct zones: seven individual backpacks arranged on the left, three green kangaroos in mid-jump toward the center/right, and four rabbits below the jumping kangaroos. Emphasize clear countability, spatial separation, and the over-under action relation.",
+        "initial_prompt": "A clear wide scene showing exactly seven separate backpacks on the left side of the image. To the right of the backpacks are exactly three green kangaroos, all visibly jumping in the air over exactly four rabbits below them. The backpacks are all clearly to the left of the kangaroos. The three kangaroos are green and fully visible, separated from each other, with their bodies above the rabbits to show they are jumping over them. The four rabbits are fully visible below the kangaroos and separated enough to count. Keep every backpack, kangaroo, and rabbit unobstructed, uncropped, and easy to count.",
+        "parsed_constraints": {
+          "attributes": {
+            "kangaroos": [
+              "green"
+            ]
+          },
+          "counts": {
+            "backpacks": 7,
+            "kangaroos": 3,
+            "rabbits": 4
+          },
+          "objects": [
+            "backpacks",
+            "kangaroos",
+            "rabbits"
+          ],
+          "relations": [
+            "seven backpacks to the left of three green kangaroos",
+            "three green kangaroos jumping over four rabbits"
+          ]
+        },
+        "selected_skills": [
+          "quantity_counting",
+          "object_presence",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many backpacks are in the image?",
+                "score": 6.581411863065787e-12,
+                "skill": "count"
+              },
+              "detected": "soft_score=6.58141e-12",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many backpacks are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the kangaroos jumping over the rabbits?",
+                "score": 0.5629419416904966,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.562942",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the kangaroos jumping over the rabbits?",
+              "type": "relation_mismatch"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00039/samples/00000.png",
+          "prompt": "A clear wide scene showing exactly seven separate backpacks on the left side of the image. To the right of the backpacks are exactly three green kangaroos, all visibly jumping in the air over exactly four rabbits below them. The backpacks are all clearly to the left of the kangaroos. The three kangaroos are green and fully visible, separated from each other, with their bodies above the rabbits to show they are jumping over them. The four rabbits are fully visible below the kangaroos and separated enough to count. Keep every backpack, kangaroo, and rabbit unobstructed, uncropped, and easy to count.",
+          "round": 0,
+          "score": 0.8403243907015766
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00640_de2d0828_cand_00",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "count_mismatch",
+            "relation_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many backpacks are in the image?",
+                "score": 6.581411863065787e-12,
+                "skill": "count"
+              },
+              "detected": "soft_score=6.58141e-12",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many backpacks are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the kangaroos jumping over the rabbits?",
+                "score": 0.5629419416904966,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.562942",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the kangaroos jumping over the rabbits?",
+              "type": "relation_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any backpacks in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any backpacks in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the backpacks to the left of the kangaroos?",
+                "score": 1.0,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the backpacks to the left of the kangaroos?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many kangaroos are in the image?",
+                "score": 0.9999997383799898,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "three",
+              "status": "passed",
+              "target": "How many kangaroos are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the kangaroos green?",
+                "score": 0.9999999457668309,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the kangaroos green?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any kangaroos in the image?",
+                "score": 0.9999785134741614,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999979",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any kangaroos in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many rabbits are in the image?",
+                "score": 1.0,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "four",
+              "status": "passed",
+              "target": "How many rabbits are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any rabbits in the image?",
+                "score": 0.9999993769961293,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999999",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any rabbits in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.8403243907015766,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many backpacks are in the image?",
+                  "score": 6.581411863065787e-12,
+                  "skill": "count"
+                },
+                "detected": "soft_score=6.58141e-12",
+                "expected": "seven",
+                "status": "failed",
+                "target": "How many backpacks are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the kangaroos jumping over the rabbits?",
+                  "score": 0.5629419416904966,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=0.562942",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the kangaroos jumping over the rabbits?",
+                "type": "relation_mismatch"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00039/samples/00000.png",
+            "prompt": "A clear wide scene showing exactly seven separate backpacks on the left side of the image. To the right of the backpacks are exactly three green kangaroos, all visibly jumping in the air over exactly four rabbits below them. The backpacks are all clearly to the left of the kangaroos. The three kangaroos are green and fully visible, separated from each other, with their bodies above the rabbits to show they are jumping over them. The four rabbits are fully visible below the kangaroos and separated enough to count. Keep every backpack, kangaroo, and rabbit unobstructed, uncropped, and easy to count.",
+            "round": 0,
+            "score": 0.8403243907015766
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many backpacks are in the image?",
+                "score": 6.581411863065787e-12,
+                "skill": "count"
+              },
+              "detected": "soft_score=6.58141e-12",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many backpacks are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the kangaroos jumping over the rabbits?",
+                "score": 0.5629419416904966,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.562942",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the kangaroos jumping over the rabbits?",
+              "type": "relation_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "count_mismatch",
+            "relation_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many backpacks are in the image?",
+                "score": 6.581411863065787e-12,
+                "skill": "count"
+              },
+              "detected": "soft_score=6.58141e-12",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many backpacks are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the kangaroos jumping over the rabbits?",
+                "score": 0.5629419416904966,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.562942",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the kangaroos jumping over the rabbits?",
+              "type": "relation_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any backpacks in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any backpacks in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the backpacks to the left of the kangaroos?",
+                "score": 1.0,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the backpacks to the left of the kangaroos?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many kangaroos are in the image?",
+                "score": 0.9999997383799898,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "three",
+              "status": "passed",
+              "target": "How many kangaroos are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the kangaroos green?",
+                "score": 0.9999999457668309,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the kangaroos green?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any kangaroos in the image?",
+                "score": 0.9999785134741614,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999979",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any kangaroos in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many rabbits are in the image?",
+                "score": 1.0,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "four",
+              "status": "passed",
+              "target": "How many rabbits are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any rabbits in the image?",
+                "score": 0.9999993769961293,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999999",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any rabbits in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.8403243907015766,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "seven backpacks to the left of three green kangaroos jumping over four rabbits",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many backpacks are in the image?",
+              "score": 6.581411863065787e-12,
+              "skill": "count"
+            },
+            "detected": "soft_score=6.58141e-12",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many backpacks are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the kangaroos jumping over the rabbits?",
+              "score": 0.5629419416904966,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.562942",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the kangaroos jumping over the rabbits?",
+            "type": "relation_mismatch"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly seven backpacks, exactly three kangaroos, and exactly four rabbits.",
+            "Bind the green color only to the three kangaroos; do not make the backpacks or rabbits green unless unavoidable.",
+            "Place all seven backpacks as a separate group on the left side of the image, clearly to the left of the kangaroos.",
+            "Show the three green kangaroos jumping over the four rabbits, with kangaroos visibly above the rabbits and the rabbits below them.",
+            "Keep all objects fully visible and separated enough to count; avoid occlusion, cropping, or merging objects."
+          ],
+          "generation_strategy": "Use a simple wide composition with three distinct zones: seven individual backpacks arranged on the left, three green kangaroos in mid-jump toward the center/right, and four rabbits below the jumping kangaroos. Emphasize clear countability, spatial separation, and the over-under action relation.",
+          "initial_prompt": "A clear wide scene showing exactly seven separate backpacks on the left side of the image. To the right of the backpacks are exactly three green kangaroos, all visibly jumping in the air over exactly four rabbits below them. The backpacks are all clearly to the left of the kangaroos. The three kangaroos are green and fully visible, separated from each other, with their bodies above the rabbits to show they are jumping over them. The four rabbits are fully visible below the kangaroos and separated enough to count. Keep every backpack, kangaroo, and rabbit unobstructed, uncropped, and easy to count.",
+          "parsed_constraints": {
+            "attributes": {
+              "kangaroos": [
+                "green"
+              ]
+            },
+            "counts": {
+              "backpacks": 7,
+              "kangaroos": 3,
+              "rabbits": 4
+            },
+            "objects": [
+              "backpacks",
+              "kangaroos",
+              "rabbits"
+            ],
+            "relations": [
+              "seven backpacks to the left of three green kangaroos",
+              "three green kangaroos jumping over four rabbits"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "object_presence",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly seven backpacks, exactly three kangaroos, and exactly four rabbits.",
+            "Bind the green color only to the three kangaroos; do not make the backpacks or rabbits green unless unavoidable.",
+            "Place all seven backpacks as a separate group on the left side of the image, clearly to the left of the kangaroos.",
+            "Show the three green kangaroos jumping over the four rabbits, with kangaroos visibly above the rabbits and the rabbits below them.",
+            "Keep all objects fully visible and separated enough to count; avoid occlusion, cropping, or merging objects."
+          ],
+          "generation_strategy": "Use a simple wide composition with three distinct zones: seven individual backpacks arranged on the left, three green kangaroos in mid-jump toward the center/right, and four rabbits below the jumping kangaroos. Emphasize clear countability, spatial separation, and the over-under action relation.",
+          "initial_prompt": "A clear wide scene showing exactly seven separate backpacks on the left side of the image. To the right of the backpacks are exactly three green kangaroos, all visibly jumping in the air over exactly four rabbits below them. The backpacks are all clearly to the left of the kangaroos. The three kangaroos are green and fully visible, separated from each other, with their bodies above the rabbits to show they are jumping over them. The four rabbits are fully visible below the kangaroos and separated enough to count. Keep every backpack, kangaroo, and rabbit unobstructed, uncropped, and easy to count.",
+          "parsed_constraints": {
+            "attributes": {
+              "kangaroos": [
+                "green"
+              ]
+            },
+            "counts": {
+              "backpacks": 7,
+              "kangaroos": 3,
+              "rabbits": 4
+            },
+            "objects": [
+              "backpacks",
+              "kangaroos",
+              "rabbits"
+            ],
+            "relations": [
+              "seven backpacks to the left of three green kangaroos",
+              "three green kangaroos jumping over four rabbits"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "object_presence",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility"
+          ]
+        },
+        "previous_prompt": "A clear wide scene showing exactly seven separate backpacks on the left side of the image. To the right of the backpacks are exactly three green kangaroos, all visibly jumping in the air over exactly four rabbits below them. The backpacks are all clearly to the left of the kangaroos. The three kangaroos are green and fully visible, separated from each other, with their bodies above the rabbits to show they are jumping over them. The four rabbits are fully visible below the kangaroos and separated enough to count. Keep every backpack, kangaroo, and rabbit unobstructed, uncropped, and easy to count.",
+        "previous_selected_skills": [
+          "quantity_counting",
+          "object_presence",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility"
+        ],
+        "prompt_id": "geneval2_00640_de2d0828",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "count_mismatch",
+              "relation_mismatch"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many backpacks are in the image?",
+                  "score": 6.581411863065787e-12,
+                  "skill": "count"
+                },
+                "detected": "soft_score=6.58141e-12",
+                "expected": "seven",
+                "status": "failed",
+                "target": "How many backpacks are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the kangaroos jumping over the rabbits?",
+                  "score": 0.5629419416904966,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=0.562942",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the kangaroos jumping over the rabbits?",
+                "type": "relation_mismatch"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any backpacks in the image?",
+                  "score": 1.0,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any backpacks in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the backpacks to the left of the kangaroos?",
+                  "score": 1.0,
+                  "skill": "position"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the backpacks to the left of the kangaroos?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many kangaroos are in the image?",
+                  "score": 0.9999997383799898,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1",
+                "expected": "three",
+                "status": "passed",
+                "target": "How many kangaroos are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the kangaroos green?",
+                  "score": 0.9999999457668309,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the kangaroos green?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any kangaroos in the image?",
+                  "score": 0.9999785134741614,
+                  "skill": "object"
+                },
+                "detected": "soft_score=0.999979",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any kangaroos in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many rabbits are in the image?",
+                  "score": 1.0,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1",
+                "expected": "four",
+                "status": "passed",
+                "target": "How many rabbits are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any rabbits in the image?",
+                  "score": 0.9999993769961293,
+                  "skill": "object"
+                },
+                "detected": "soft_score=0.999999",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any rabbits in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Depict exactly seven backpacks, exactly three kangaroos, and exactly four rabbits.",
+                "Bind the green color only to the three kangaroos; do not make the backpacks or rabbits green unless unavoidable.",
+                "Place all seven backpacks as a separate group on the left side of the image, clearly to the left of the kangaroos.",
+                "Show the three green kangaroos jumping over the four rabbits, with kangaroos visibly above the rabbits and the rabbits below them.",
+                "Keep all objects fully visible and separated enough to count; avoid occlusion, cropping, or merging objects."
+              ],
+              "generation_strategy": "Use a simple wide composition with three distinct zones: seven individual backpacks arranged on the left, three green kangaroos in mid-jump toward the center/right, and four rabbits below the jumping kangaroos. Emphasize clear countability, spatial separation, and the over-under action relation.",
+              "initial_prompt": "A clear wide scene showing exactly seven separate backpacks on the left side of the image. To the right of the backpacks are exactly three green kangaroos, all visibly jumping in the air over exactly four rabbits below them. The backpacks are all clearly to the left of the kangaroos. The three kangaroos are green and fully visible, separated from each other, with their bodies above the rabbits to show they are jumping over them. The four rabbits are fully visible below the kangaroos and separated enough to count. Keep every backpack, kangaroo, and rabbit unobstructed, uncropped, and easy to count.",
+              "parsed_constraints": {
+                "attributes": {
+                  "kangaroos": [
+                    "green"
+                  ]
+                },
+                "counts": {
+                  "backpacks": 7,
+                  "kangaroos": 3,
+                  "rabbits": 4
+                },
+                "objects": [
+                  "backpacks",
+                  "kangaroos",
+                  "rabbits"
+                ],
+                "relations": [
+                  "seven backpacks to the left of three green kangaroos",
+                  "three green kangaroos jumping over four rabbits"
+                ]
+              },
+              "selected_skills": [
+                "quantity_counting",
+                "object_presence",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "anti_occlusion",
+                "clarity_visibility"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Depict exactly seven backpacks, exactly three kangaroos, and exactly four rabbits.",
+                "Bind the green color only to the three kangaroos; do not make the backpacks or rabbits green unless unavoidable.",
+                "Place all seven backpacks as a separate group on the left side of the image, clearly to the left of the kangaroos.",
+                "Show the three green kangaroos jumping over the four rabbits, with kangaroos visibly above the rabbits and the rabbits below them.",
+                "Keep all objects fully visible and separated enough to count; avoid occlusion, cropping, or merging objects."
+              ],
+              "generation_strategy": "Use a simple wide composition with three distinct zones: seven individual backpacks arranged on the left, three green kangaroos in mid-jump toward the center/right, and four rabbits below the jumping kangaroos. Emphasize clear countability, spatial separation, and the over-under action relation.",
+              "initial_prompt": "A clear wide scene showing exactly seven separate backpacks on the left side of the image. To the right of the backpacks are exactly three green kangaroos, all visibly jumping in the air over exactly four rabbits below them. The backpacks are all clearly to the left of the kangaroos. The three kangaroos are green and fully visible, separated from each other, with their bodies above the rabbits to show they are jumping over them. The four rabbits are fully visible below the kangaroos and separated enough to count. Keep every backpack, kangaroo, and rabbit unobstructed, uncropped, and easy to count.",
+              "parsed_constraints": {
+                "attributes": {
+                  "kangaroos": [
+                    "green"
+                  ]
+                },
+                "counts": {
+                  "backpacks": 7,
+                  "kangaroos": 3,
+                  "rabbits": 4
+                },
+                "objects": [
+                  "backpacks",
+                  "kangaroos",
+                  "rabbits"
+                ],
+                "relations": [
+                  "seven backpacks to the left of three green kangaroos",
+                  "three green kangaroos jumping over four rabbits"
+                ]
+              },
+              "selected_skills": [
+                "quantity_counting",
+                "object_presence",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "anti_occlusion",
+                "clarity_visibility"
+              ]
+            },
+            "prompt_used": "A clear wide scene showing exactly seven separate backpacks on the left side of the image. To the right of the backpacks are exactly three green kangaroos, all visibly jumping in the air over exactly four rabbits below them. The backpacks are all clearly to the left of the kangaroos. The three kangaroos are green and fully visible, separated from each other, with their bodies above the rabbits to show they are jumping over them. The four rabbits are fully visible below the kangaroos and separated enough to count. Keep every backpack, kangaroo, and rabbit unobstructed, uncropped, and easy to count.",
+            "round": 0,
+            "score": 0.8403243907015766,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 0,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many backpacks are in the image?",
+                    "score": 6.581411863065787e-12,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=6.58141e-12",
+                  "expected": "seven",
+                  "status": "failed",
+                  "target": "How many backpacks are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 6,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the kangaroos jumping over the rabbits?",
+                    "score": 0.5629419416904966,
+                    "skill": "verb"
+                  },
+                  "detected": "soft_score=0.562942",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the kangaroos jumping over the rabbits?",
+                  "type": "relation_mismatch"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00640_de2d0828"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many backpacks are in the image?",
+              "score": 6.581411863065787e-12,
+              "skill": "count"
+            },
+            "detected": "soft_score=6.58141e-12",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many backpacks are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the kangaroos jumping over the rabbits?",
+              "score": 0.5629419416904966,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.562942",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the kangaroos jumping over the rabbits?",
+            "type": "relation_mismatch"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00640_de2d0828_cand_00",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Depict exactly seven backpacks, exactly three kangaroos, and exactly four rabbits.",
+      "Bind the green color only to the three kangaroos; do not make the backpacks or rabbits green unless unavoidable.",
+      "Place all seven backpacks as a separate group on the left side of the image, clearly to the left of the kangaroos.",
+      "Show the three green kangaroos jumping over the four rabbits, with kangaroos visibly above the rabbits and the rabbits below them.",
+      "Keep all objects fully visible and separated enough to count; avoid occlusion, cropping, or merging objects."
+    ],
+    "generation_strategy": "Use a simple wide composition with three distinct zones: seven individual backpacks arranged on the left, three green kangaroos in mid-jump toward the center/right, and four rabbits below the jumping kangaroos. Emphasize clear countability, spatial separation, and the over-under action relation.",
+    "initial_prompt": "A clear wide scene showing exactly seven separate backpacks on the left side of the image. To the right of the backpacks are exactly three green kangaroos, all visibly jumping in the air over exactly four rabbits below them. The backpacks are all clearly to the left of the kangaroos. The three kangaroos are green and fully visible, separated from each other, with their bodies above the rabbits to show they are jumping over them. The four rabbits are fully visible below the kangaroos and separated enough to count. Keep every backpack, kangaroo, and rabbit unobstructed, uncropped, and easy to count.",
+    "parsed_constraints": {
+      "attributes": {
+        "kangaroos": [
+          "green"
+        ]
+      },
+      "counts": {
+        "backpacks": 7,
+        "kangaroos": 3,
+        "rabbits": 4
+      },
+      "objects": [
+        "backpacks",
+        "kangaroos",
+        "rabbits"
+      ],
+      "relations": [
+        "seven backpacks to the left of three green kangaroos",
+        "three green kangaroos jumping over four rabbits"
+      ]
+    },
+    "selected_skills": [
+      "quantity_counting",
+      "object_presence",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The generation passed object presence, the left-of relation for backpacks versus kangaroos, the count of three kangaroos, the green kangaroo attribute, and the count of four rabbits. It failed the exact backpack count and the action relation: the seven backpacks were not reliably countable, and the kangaroos were not clearly perceived as jumping over the rabbits. Because both failures are persistent from the initial attempt, the retry should use a more structured composition: seven backpacks in a simple countable 4-over-3 arrangement on the far left, and a clearer vertical action layout with three green kangaroos suspended above four rabbits on the right.",
+    "expected_improvement": [
+      "Seven backpacks should be easier to verify because they are explicitly arranged as seven separate visible instances in two rows with no extras or merging.",
+      "The jumping-over relation should be clearer because the three green kangaroos are specified as airborne directly above the four rabbits, with visible space between kangaroos and rabbits.",
+      "Previously passed constraints should remain stable by preserving exactly three green kangaroos, exactly four rabbits, and the backpacks positioned to the left of the kangaroos."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "relation_mismatch"
+    ],
+    "preserve_constraints": [
+      "Backpacks must be present and clearly visible.",
+      "All backpacks must remain to the left of the kangaroos.",
+      "There must be exactly three kangaroos.",
+      "The three kangaroos must be green.",
+      "Kangaroos must be present and fully visible.",
+      "There must be exactly four rabbits.",
+      "Rabbits must be present and fully visible."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt asked for seven separate backpacks but did not impose a highly structured countable arrangement, so the generator may have merged, omitted, or added backpack shapes. The jumping-over relation was described generally, but the layout may not have made the kangaroos unmistakably airborne above the rabbits.",
+      "error_source": "Insufficiently constrained counting layout for seven backpacks and insufficiently explicit vertical action composition for the jumping-over relation."
+    },
+    "regeneration_strategy": "Use a simple wide composition with two clear zones. On the far left, place exactly seven backpacks in a neat 4-on-top and 3-on-bottom grid, separated by visible gaps and with no additional backpacks. On the right, place exactly four rabbits in a horizontal row at ground level and exactly three green kangaroos in midair directly above them, with bent jumping legs and clear vertical separation to show the kangaroos jumping over the rabbits. Keep all objects unobstructed, distinct, and countable.",
+    "regression_risks": [
+      "The generator may change the already-correct count of kangaroos or rabbits while focusing on the backpack count.",
+      "The green attribute could leak to rabbits or backpacks if not bound only to kangaroos.",
+      "The backpacks could drift from the left side or overlap with kangaroos if the wide layout is not emphasized.",
+      "The rabbits could be hidden under the kangaroos if vertical separation is not explicit."
+    ],
+    "repair_constraints": [
+      "Show exactly seven backpacks, not six, not eight, with each backpack fully visible and separated from the others.",
+      "Arrange the seven backpacks on the left in a countable two-row layout: four backpacks in the top row and three backpacks in the bottom row.",
+      "Do not include any extra backpacks, duplicate backpack-like objects, or merged backpack shapes.",
+      "Show the three green kangaroos clearly jumping over the four rabbits: each kangaroo must be airborne above the rabbits, with visible empty space between the kangaroo bodies and the rabbits below.",
+      "Place the four rabbits below the jumping kangaroos in a visible row, not beside or above the kangaroos."
+    ],
+    "retry_prompt": "A clear wide scene with two separate groups. On the far left, show exactly seven backpacks, all fully visible and countable, arranged as four separate backpacks in the top row and three separate backpacks in the bottom row, with visible gaps between every backpack; no extra backpacks and no merged backpack shapes. To the right of the backpacks, show exactly four rabbits in a horizontal row below. Directly above those four rabbits, show exactly three green kangaroos in midair, clearly jumping over the rabbits, with bent jumping legs and visible empty space between the kangaroos and the rabbits. The backpacks are clearly to the left of the kangaroos. Keep exactly three green kangaroos, exactly four rabbits, and exactly seven backpacks, all unobstructed, uncropped, distinct, and easy to count.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "spatial_layout",
+        "anti_occlusion",
+        "negative_constraints",
+        "clarity_visibility",
+        "object_presence",
+        "attribute_binding",
+        "multi_object_composition"
+      ],
+      "previous_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility"
+      ],
+      "reason": "Add negative_constraints to explicitly prevent extra or merged backpacks, and strengthen quantity_counting and spatial_layout with a structured 4-over-3 backpack arrangement and a clearer airborne-over-rabbits vertical layout."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many backpacks are in the image?",
+            "score": 6.581411863065787e-12,
+            "skill": "count"
+          },
+          "detected": "soft_score=6.58141e-12",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many backpacks are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the kangaroos jumping over the rabbits?",
+            "score": 0.5629419416904966,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.562942",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the kangaroos jumping over the rabbits?",
+          "type": "relation_mismatch"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00039/samples/00000.png",
+      "prompt": "A clear wide scene showing exactly seven separate backpacks on the left side of the image. To the right of the backpacks are exactly three green kangaroos, all visibly jumping in the air over exactly four rabbits below them. The backpacks are all clearly to the left of the kangaroos. The three kangaroos are green and fully visible, separated from each other, with their bodies above the rabbits to show they are jumping over them. The four rabbits are fully visible below the kangaroos and separated enough to count. Keep every backpack, kangaroo, and rabbit unobstructed, uncropped, and easy to count.",
+      "round": 0,
+      "score": 0.8403243907015766
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00640_de2d0828_cand_00",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "count_mismatch",
+        "relation_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many backpacks are in the image?",
+            "score": 6.581411863065787e-12,
+            "skill": "count"
+          },
+          "detected": "soft_score=6.58141e-12",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many backpacks are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the kangaroos jumping over the rabbits?",
+            "score": 0.5629419416904966,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.562942",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the kangaroos jumping over the rabbits?",
+          "type": "relation_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any backpacks in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any backpacks in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the backpacks to the left of the kangaroos?",
+            "score": 1.0,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the backpacks to the left of the kangaroos?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many kangaroos are in the image?",
+            "score": 0.9999997383799898,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "three",
+          "status": "passed",
+          "target": "How many kangaroos are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the kangaroos green?",
+            "score": 0.9999999457668309,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the kangaroos green?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any kangaroos in the image?",
+            "score": 0.9999785134741614,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999979",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any kangaroos in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many rabbits are in the image?",
+            "score": 1.0,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "four",
+          "status": "passed",
+          "target": "How many rabbits are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any rabbits in the image?",
+            "score": 0.9999993769961293,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999999",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any rabbits in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.8403243907015766,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many backpacks are in the image?",
+              "score": 6.581411863065787e-12,
+              "skill": "count"
+            },
+            "detected": "soft_score=6.58141e-12",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many backpacks are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the kangaroos jumping over the rabbits?",
+              "score": 0.5629419416904966,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.562942",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the kangaroos jumping over the rabbits?",
+            "type": "relation_mismatch"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00039/samples/00000.png",
+        "prompt": "A clear wide scene showing exactly seven separate backpacks on the left side of the image. To the right of the backpacks are exactly three green kangaroos, all visibly jumping in the air over exactly four rabbits below them. The backpacks are all clearly to the left of the kangaroos. The three kangaroos are green and fully visible, separated from each other, with their bodies above the rabbits to show they are jumping over them. The four rabbits are fully visible below the kangaroos and separated enough to count. Keep every backpack, kangaroo, and rabbit unobstructed, uncropped, and easy to count.",
+        "round": 0,
+        "score": 0.8403243907015766
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many backpacks are in the image?",
+            "score": 6.581411863065787e-12,
+            "skill": "count"
+          },
+          "detected": "soft_score=6.58141e-12",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many backpacks are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the kangaroos jumping over the rabbits?",
+            "score": 0.5629419416904966,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.562942",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the kangaroos jumping over the rabbits?",
+          "type": "relation_mismatch"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "count_mismatch",
+        "relation_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many backpacks are in the image?",
+            "score": 6.581411863065787e-12,
+            "skill": "count"
+          },
+          "detected": "soft_score=6.58141e-12",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many backpacks are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the kangaroos jumping over the rabbits?",
+            "score": 0.5629419416904966,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.562942",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the kangaroos jumping over the rabbits?",
+          "type": "relation_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any backpacks in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any backpacks in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the backpacks to the left of the kangaroos?",
+            "score": 1.0,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the backpacks to the left of the kangaroos?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many kangaroos are in the image?",
+            "score": 0.9999997383799898,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "three",
+          "status": "passed",
+          "target": "How many kangaroos are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the kangaroos green?",
+            "score": 0.9999999457668309,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the kangaroos green?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any kangaroos in the image?",
+            "score": 0.9999785134741614,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999979",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any kangaroos in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many rabbits are in the image?",
+            "score": 1.0,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "four",
+          "status": "passed",
+          "target": "How many rabbits are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any rabbits in the image?",
+            "score": 0.9999993769961293,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999999",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any rabbits in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.8403243907015766,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "seven backpacks to the left of three green kangaroos jumping over four rabbits",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many backpacks are in the image?",
+          "score": 6.581411863065787e-12,
+          "skill": "count"
+        },
+        "detected": "soft_score=6.58141e-12",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many backpacks are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 6,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the kangaroos jumping over the rabbits?",
+          "score": 0.5629419416904966,
+          "skill": "verb"
+        },
+        "detected": "soft_score=0.562942",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the kangaroos jumping over the rabbits?",
+        "type": "relation_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Depict exactly seven backpacks, exactly three kangaroos, and exactly four rabbits.",
+        "Bind the green color only to the three kangaroos; do not make the backpacks or rabbits green unless unavoidable.",
+        "Place all seven backpacks as a separate group on the left side of the image, clearly to the left of the kangaroos.",
+        "Show the three green kangaroos jumping over the four rabbits, with kangaroos visibly above the rabbits and the rabbits below them.",
+        "Keep all objects fully visible and separated enough to count; avoid occlusion, cropping, or merging objects."
+      ],
+      "generation_strategy": "Use a simple wide composition with three distinct zones: seven individual backpacks arranged on the left, three green kangaroos in mid-jump toward the center/right, and four rabbits below the jumping kangaroos. Emphasize clear countability, spatial separation, and the over-under action relation.",
+      "initial_prompt": "A clear wide scene showing exactly seven separate backpacks on the left side of the image. To the right of the backpacks are exactly three green kangaroos, all visibly jumping in the air over exactly four rabbits below them. The backpacks are all clearly to the left of the kangaroos. The three kangaroos are green and fully visible, separated from each other, with their bodies above the rabbits to show they are jumping over them. The four rabbits are fully visible below the kangaroos and separated enough to count. Keep every backpack, kangaroo, and rabbit unobstructed, uncropped, and easy to count.",
+      "parsed_constraints": {
+        "attributes": {
+          "kangaroos": [
+            "green"
+          ]
+        },
+        "counts": {
+          "backpacks": 7,
+          "kangaroos": 3,
+          "rabbits": 4
+        },
+        "objects": [
+          "backpacks",
+          "kangaroos",
+          "rabbits"
+        ],
+        "relations": [
+          "seven backpacks to the left of three green kangaroos",
+          "three green kangaroos jumping over four rabbits"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Depict exactly seven backpacks, exactly three kangaroos, and exactly four rabbits.",
+        "Bind the green color only to the three kangaroos; do not make the backpacks or rabbits green unless unavoidable.",
+        "Place all seven backpacks as a separate group on the left side of the image, clearly to the left of the kangaroos.",
+        "Show the three green kangaroos jumping over the four rabbits, with kangaroos visibly above the rabbits and the rabbits below them.",
+        "Keep all objects fully visible and separated enough to count; avoid occlusion, cropping, or merging objects."
+      ],
+      "generation_strategy": "Use a simple wide composition with three distinct zones: seven individual backpacks arranged on the left, three green kangaroos in mid-jump toward the center/right, and four rabbits below the jumping kangaroos. Emphasize clear countability, spatial separation, and the over-under action relation.",
+      "initial_prompt": "A clear wide scene showing exactly seven separate backpacks on the left side of the image. To the right of the backpacks are exactly three green kangaroos, all visibly jumping in the air over exactly four rabbits below them. The backpacks are all clearly to the left of the kangaroos. The three kangaroos are green and fully visible, separated from each other, with their bodies above the rabbits to show they are jumping over them. The four rabbits are fully visible below the kangaroos and separated enough to count. Keep every backpack, kangaroo, and rabbit unobstructed, uncropped, and easy to count.",
+      "parsed_constraints": {
+        "attributes": {
+          "kangaroos": [
+            "green"
+          ]
+        },
+        "counts": {
+          "backpacks": 7,
+          "kangaroos": 3,
+          "rabbits": 4
+        },
+        "objects": [
+          "backpacks",
+          "kangaroos",
+          "rabbits"
+        ],
+        "relations": [
+          "seven backpacks to the left of three green kangaroos",
+          "three green kangaroos jumping over four rabbits"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility"
+      ]
+    },
+    "previous_prompt": "A clear wide scene showing exactly seven separate backpacks on the left side of the image. To the right of the backpacks are exactly three green kangaroos, all visibly jumping in the air over exactly four rabbits below them. The backpacks are all clearly to the left of the kangaroos. The three kangaroos are green and fully visible, separated from each other, with their bodies above the rabbits to show they are jumping over them. The four rabbits are fully visible below the kangaroos and separated enough to count. Keep every backpack, kangaroo, and rabbit unobstructed, uncropped, and easy to count.",
+    "previous_selected_skills": [
+      "quantity_counting",
+      "object_presence",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility"
+    ],
+    "prompt_id": "geneval2_00640_de2d0828",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "count_mismatch",
+          "relation_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many backpacks are in the image?",
+              "score": 6.581411863065787e-12,
+              "skill": "count"
+            },
+            "detected": "soft_score=6.58141e-12",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many backpacks are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the kangaroos jumping over the rabbits?",
+              "score": 0.5629419416904966,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.562942",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the kangaroos jumping over the rabbits?",
+            "type": "relation_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any backpacks in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any backpacks in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the backpacks to the left of the kangaroos?",
+              "score": 1.0,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the backpacks to the left of the kangaroos?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many kangaroos are in the image?",
+              "score": 0.9999997383799898,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "three",
+            "status": "passed",
+            "target": "How many kangaroos are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the kangaroos green?",
+              "score": 0.9999999457668309,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the kangaroos green?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any kangaroos in the image?",
+              "score": 0.9999785134741614,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999979",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any kangaroos in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many rabbits are in the image?",
+              "score": 1.0,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "four",
+            "status": "passed",
+            "target": "How many rabbits are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any rabbits in the image?",
+              "score": 0.9999993769961293,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999999",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any rabbits in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly seven backpacks, exactly three kangaroos, and exactly four rabbits.",
+            "Bind the green color only to the three kangaroos; do not make the backpacks or rabbits green unless unavoidable.",
+            "Place all seven backpacks as a separate group on the left side of the image, clearly to the left of the kangaroos.",
+            "Show the three green kangaroos jumping over the four rabbits, with kangaroos visibly above the rabbits and the rabbits below them.",
+            "Keep all objects fully visible and separated enough to count; avoid occlusion, cropping, or merging objects."
+          ],
+          "generation_strategy": "Use a simple wide composition with three distinct zones: seven individual backpacks arranged on the left, three green kangaroos in mid-jump toward the center/right, and four rabbits below the jumping kangaroos. Emphasize clear countability, spatial separation, and the over-under action relation.",
+          "initial_prompt": "A clear wide scene showing exactly seven separate backpacks on the left side of the image. To the right of the backpacks are exactly three green kangaroos, all visibly jumping in the air over exactly four rabbits below them. The backpacks are all clearly to the left of the kangaroos. The three kangaroos are green and fully visible, separated from each other, with their bodies above the rabbits to show they are jumping over them. The four rabbits are fully visible below the kangaroos and separated enough to count. Keep every backpack, kangaroo, and rabbit unobstructed, uncropped, and easy to count.",
+          "parsed_constraints": {
+            "attributes": {
+              "kangaroos": [
+                "green"
+              ]
+            },
+            "counts": {
+              "backpacks": 7,
+              "kangaroos": 3,
+              "rabbits": 4
+            },
+            "objects": [
+              "backpacks",
+              "kangaroos",
+              "rabbits"
+            ],
+            "relations": [
+              "seven backpacks to the left of three green kangaroos",
+              "three green kangaroos jumping over four rabbits"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "object_presence",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly seven backpacks, exactly three kangaroos, and exactly four rabbits.",
+            "Bind the green color only to the three kangaroos; do not make the backpacks or rabbits green unless unavoidable.",
+            "Place all seven backpacks as a separate group on the left side of the image, clearly to the left of the kangaroos.",
+            "Show the three green kangaroos jumping over the four rabbits, with kangaroos visibly above the rabbits and the rabbits below them.",
+            "Keep all objects fully visible and separated enough to count; avoid occlusion, cropping, or merging objects."
+          ],
+          "generation_strategy": "Use a simple wide composition with three distinct zones: seven individual backpacks arranged on the left, three green kangaroos in mid-jump toward the center/right, and four rabbits below the jumping kangaroos. Emphasize clear countability, spatial separation, and the over-under action relation.",
+          "initial_prompt": "A clear wide scene showing exactly seven separate backpacks on the left side of the image. To the right of the backpacks are exactly three green kangaroos, all visibly jumping in the air over exactly four rabbits below them. The backpacks are all clearly to the left of the kangaroos. The three kangaroos are green and fully visible, separated from each other, with their bodies above the rabbits to show they are jumping over them. The four rabbits are fully visible below the kangaroos and separated enough to count. Keep every backpack, kangaroo, and rabbit unobstructed, uncropped, and easy to count.",
+          "parsed_constraints": {
+            "attributes": {
+              "kangaroos": [
+                "green"
+              ]
+            },
+            "counts": {
+              "backpacks": 7,
+              "kangaroos": 3,
+              "rabbits": 4
+            },
+            "objects": [
+              "backpacks",
+              "kangaroos",
+              "rabbits"
+            ],
+            "relations": [
+              "seven backpacks to the left of three green kangaroos",
+              "three green kangaroos jumping over four rabbits"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "object_presence",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility"
+          ]
+        },
+        "prompt_used": "A clear wide scene showing exactly seven separate backpacks on the left side of the image. To the right of the backpacks are exactly three green kangaroos, all visibly jumping in the air over exactly four rabbits below them. The backpacks are all clearly to the left of the kangaroos. The three kangaroos are green and fully visible, separated from each other, with their bodies above the rabbits to show they are jumping over them. The four rabbits are fully visible below the kangaroos and separated enough to count. Keep every backpack, kangaroo, and rabbit unobstructed, uncropped, and easy to count.",
+        "round": 0,
+        "score": 0.8403243907015766,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many backpacks are in the image?",
+                "score": 6.581411863065787e-12,
+                "skill": "count"
+              },
+              "detected": "soft_score=6.58141e-12",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many backpacks are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the kangaroos jumping over the rabbits?",
+                "score": 0.5629419416904966,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.562942",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the kangaroos jumping over the rabbits?",
+              "type": "relation_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00640_de2d0828"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many backpacks are in the image?",
+          "score": 6.581411863065787e-12,
+          "skill": "count"
+        },
+        "detected": "soft_score=6.58141e-12",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many backpacks are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 6,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the kangaroos jumping over the rabbits?",
+          "score": 0.5629419416904966,
+          "skill": "verb"
+        },
+        "detected": "soft_score=0.562942",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the kangaroos jumping over the rabbits?",
+        "type": "relation_mismatch"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00039/samples/00000.png",
+    "best_so_far_prompt": "A clear wide scene showing exactly seven separate backpacks on the left side of the image. To the right of the backpacks are exactly three green kangaroos, all visibly jumping in the air over exactly four rabbits below them. The backpacks are all clearly to the left of the kangaroos. The three kangaroos are green and fully visible, separated from each other, with their bodies above the rabbits to show they are jumping over them. The four rabbits are fully visible below the kangaroos and separated enough to count. Keep every backpack, kangaroo, and rabbit unobstructed, uncropped, and easy to count.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.8403243907015766,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many backpacks are in the image?",
+          "score": 6.581411863065787e-12,
+          "skill": "count"
+        },
+        "detected": "soft_score=6.58141e-12",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many backpacks are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 6,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the kangaroos jumping over the rabbits?",
+          "score": 0.5629419416904966,
+          "skill": "verb"
+        },
+        "detected": "soft_score=0.562942",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the kangaroos jumping over the rabbits?",
+        "type": "relation_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Depict exactly seven backpacks, exactly three kangaroos, and exactly four rabbits.",
+        "Bind the green color only to the three kangaroos; do not make the backpacks or rabbits green unless unavoidable.",
+        "Place all seven backpacks as a separate group on the left side of the image, clearly to the left of the kangaroos.",
+        "Show the three green kangaroos jumping over the four rabbits, with kangaroos visibly above the rabbits and the rabbits below them.",
+        "Keep all objects fully visible and separated enough to count; avoid occlusion, cropping, or merging objects."
+      ],
+      "generation_strategy": "Use a simple wide composition with three distinct zones: seven individual backpacks arranged on the left, three green kangaroos in mid-jump toward the center/right, and four rabbits below the jumping kangaroos. Emphasize clear countability, spatial separation, and the over-under action relation.",
+      "initial_prompt": "A clear wide scene showing exactly seven separate backpacks on the left side of the image. To the right of the backpacks are exactly three green kangaroos, all visibly jumping in the air over exactly four rabbits below them. The backpacks are all clearly to the left of the kangaroos. The three kangaroos are green and fully visible, separated from each other, with their bodies above the rabbits to show they are jumping over them. The four rabbits are fully visible below the kangaroos and separated enough to count. Keep every backpack, kangaroo, and rabbit unobstructed, uncropped, and easy to count.",
+      "parsed_constraints": {
+        "attributes": {
+          "kangaroos": [
+            "green"
+          ]
+        },
+        "counts": {
+          "backpacks": 7,
+          "kangaroos": 3,
+          "rabbits": 4
+        },
+        "objects": [
+          "backpacks",
+          "kangaroos",
+          "rabbits"
+        ],
+        "relations": [
+          "seven backpacks to the left of three green kangaroos",
+          "three green kangaroos jumping over four rabbits"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.840 failed=['How many backpacks are in the image?', 'Are the kangaroos jumping over the rabbits?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_incremental/snapshot_002_worker_00/geneval2_00640_de2d0828__geneval2_00640_de2d0828_cand_00__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00640_de2d0828__geneval2_00640_de2d0828_cand_00__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00640_de2d0828",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The generation passed object presence, the left-of relation for backpacks versus kangaroos, the count of three kangaroos, the green kangaroo attribute, and the count of four rabbits. It failed the exact backpack count and the action relation: the seven backpacks were not reliably countable, and the kangaroos were not clearly perceived as jumping over the rabbits. Because both failures are persistent from the initial attempt, the retry should use a more structured composition: seven backpacks in a simple countable 4-over-3 arrangement on the far left, and a clearer vertical action layout with three green kangaroos suspended above four rabbits on the right.",
+    "expected_improvement": [
+      "Seven backpacks should be easier to verify because they are explicitly arranged as seven separate visible instances in two rows with no extras or merging.",
+      "The jumping-over relation should be clearer because the three green kangaroos are specified as airborne directly above the four rabbits, with visible space between kangaroos and rabbits.",
+      "Previously passed constraints should remain stable by preserving exactly three green kangaroos, exactly four rabbits, and the backpacks positioned to the left of the kangaroos."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "relation_mismatch"
+    ],
+    "preserve_constraints": [
+      "Backpacks must be present and clearly visible.",
+      "All backpacks must remain to the left of the kangaroos.",
+      "There must be exactly three kangaroos.",
+      "The three kangaroos must be green.",
+      "Kangaroos must be present and fully visible.",
+      "There must be exactly four rabbits.",
+      "Rabbits must be present and fully visible."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt asked for seven separate backpacks but did not impose a highly structured countable arrangement, so the generator may have merged, omitted, or added backpack shapes. The jumping-over relation was described generally, but the layout may not have made the kangaroos unmistakably airborne above the rabbits.",
+      "error_source": "Insufficiently constrained counting layout for seven backpacks and insufficiently explicit vertical action composition for the jumping-over relation."
+    },
+    "regeneration_strategy": "Use a simple wide composition with two clear zones. On the far left, place exactly seven backpacks in a neat 4-on-top and 3-on-bottom grid, separated by visible gaps and with no additional backpacks. On the right, place exactly four rabbits in a horizontal row at ground level and exactly three green kangaroos in midair directly above them, with bent jumping legs and clear vertical separation to show the kangaroos jumping over the rabbits. Keep all objects unobstructed, distinct, and countable.",
+    "regression_risks": [
+      "The generator may change the already-correct count of kangaroos or rabbits while focusing on the backpack count.",
+      "The green attribute could leak to rabbits or backpacks if not bound only to kangaroos.",
+      "The backpacks could drift from the left side or overlap with kangaroos if the wide layout is not emphasized.",
+      "The rabbits could be hidden under the kangaroos if vertical separation is not explicit."
+    ],
+    "repair_constraints": [
+      "Show exactly seven backpacks, not six, not eight, with each backpack fully visible and separated from the others.",
+      "Arrange the seven backpacks on the left in a countable two-row layout: four backpacks in the top row and three backpacks in the bottom row.",
+      "Do not include any extra backpacks, duplicate backpack-like objects, or merged backpack shapes.",
+      "Show the three green kangaroos clearly jumping over the four rabbits: each kangaroo must be airborne above the rabbits, with visible empty space between the kangaroo bodies and the rabbits below.",
+      "Place the four rabbits below the jumping kangaroos in a visible row, not beside or above the kangaroos."
+    ],
+    "retry_prompt": "A clear wide scene with two separate groups. On the far left, show exactly seven backpacks, all fully visible and countable, arranged as four separate backpacks in the top row and three separate backpacks in the bottom row, with visible gaps between every backpack; no extra backpacks and no merged backpack shapes. To the right of the backpacks, show exactly four rabbits in a horizontal row below. Directly above those four rabbits, show exactly three green kangaroos in midair, clearly jumping over the rabbits, with bent jumping legs and visible empty space between the kangaroos and the rabbits. The backpacks are clearly to the left of the kangaroos. Keep exactly three green kangaroos, exactly four rabbits, and exactly seven backpacks, all unobstructed, uncropped, distinct, and easy to count.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "spatial_layout",
+        "anti_occlusion",
+        "negative_constraints",
+        "clarity_visibility",
+        "object_presence",
+        "attribute_binding",
+        "multi_object_composition"
+      ],
+      "previous_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility"
+      ],
+      "reason": "Add negative_constraints to explicitly prevent extra or merged backpacks, and strengthen quantity_counting and spatial_layout with a structured 4-over-3 backpack arrangement and a clearer airborne-over-rabbits vertical layout."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 9,
+    "dataset": "geneval2",
+    "original_prompt": "seven backpacks to the left of three green kangaroos jumping over four rabbits",
+    "prompt": "seven backpacks to the left of three green kangaroos jumping over four rabbits",
+    "prompt_id": "geneval2_00640_de2d0828",
+    "sampling_bucket": "color_binding",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "relation_action",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 1,
+      "count": 3,
+      "object": 3,
+      "position": 1,
+      "verb": 1
+    },
+    "skills": [
+      "count",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object",
+      "verb",
+      "count",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 640,
+    "vqa_list": [
+      [
+        "How many backpacks are in the image?",
+        "seven"
+      ],
+      [
+        "Are there any backpacks in the image?",
+        "Yes"
+      ],
+      [
+        "Are the backpacks to the left of the kangaroos?",
+        "Yes"
+      ],
+      [
+        "How many kangaroos are in the image?",
+        "three"
+      ],
+      [
+        "Are the kangaroos green?",
+        "Yes"
+      ],
+      [
+        "Are there any kangaroos in the image?",
+        "Yes"
+      ],
+      [
+        "Are the kangaroos jumping over the rabbits?",
+        "Yes"
+      ],
+      [
+        "How many rabbits are in the image?",
+        "four"
+      ],
+      [
+        "Are there any rabbits in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00640_de2d0828"
+}

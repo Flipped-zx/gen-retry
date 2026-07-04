@@ -1,0 +1,2586 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "color_mismatch",
+          "count_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many penguins are in the image?",
+              "score": 2.655473826904733e-10,
+              "skill": "count"
+            },
+            "detected": "soft_score=2.65547e-10",
+            "expected": "three",
+            "status": "failed",
+            "target": "How many penguins are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the penguins green?",
+              "score": 1.6820150248175736e-05,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1.68202e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the penguins green?",
+            "type": "color_mismatch"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many candles are in the image?",
+              "score": 0.9999996054639625,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "three",
+            "status": "passed",
+            "target": "How many candles are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the candles glass?",
+              "score": 0.9999039778049337,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.999904",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the candles glass?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any candles in the image?",
+              "score": 0.9999999709325493,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any candles in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any penguins in the image?",
+              "score": 0.9999999665997166,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any penguins in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the penguins to the right of the suitcases?",
+              "score": 0.9999999988388026,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the penguins to the right of the suitcases?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many suitcases are in the image?",
+              "score": 1.0,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "three",
+            "status": "passed",
+            "target": "How many suitcases are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the suitcases pink?",
+              "score": 0.9999999503488652,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the suitcases pink?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any suitcases in the image?",
+              "score": 0.9999999992451194,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any suitcases in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_004/raw_score_lists.by_candidate.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00755_e5fa94bb_cand_03",
+          "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_004/raw_score_lists.by_candidate.json",
+          "rows": [
+            {
+              "answer": "three",
+              "atom_count": 10,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00755_e5fa94bb_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00091/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00091/samples/00003.png",
+              "prompt": "three glass candles, and three green penguins to the right of three pink suitcases",
+              "prompt_id": "geneval2_00755_e5fa94bb",
+              "question": "How many candles are in the image?",
+              "score": 0.9999996054639625,
+              "skill": "count",
+              "source_index": 755
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00755_e5fa94bb_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00091/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00091/samples/00003.png",
+              "prompt": "three glass candles, and three green penguins to the right of three pink suitcases",
+              "prompt_id": "geneval2_00755_e5fa94bb",
+              "question": "Are the candles glass?",
+              "score": 0.9999039778049337,
+              "skill": "attribute",
+              "source_index": 755
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00755_e5fa94bb_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00091/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00091/samples/00003.png",
+              "prompt": "three glass candles, and three green penguins to the right of three pink suitcases",
+              "prompt_id": "geneval2_00755_e5fa94bb",
+              "question": "Are there any candles in the image?",
+              "score": 0.9999999709325493,
+              "skill": "object",
+              "source_index": 755
+            },
+            {
+              "answer": "three",
+              "atom_count": 10,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00755_e5fa94bb_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00091/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00091/samples/00003.png",
+              "prompt": "three glass candles, and three green penguins to the right of three pink suitcases",
+              "prompt_id": "geneval2_00755_e5fa94bb",
+              "question": "How many penguins are in the image?",
+              "score": 2.655473826904733e-10,
+              "skill": "count",
+              "source_index": 755
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00755_e5fa94bb_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00091/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00091/samples/00003.png",
+              "prompt": "three glass candles, and three green penguins to the right of three pink suitcases",
+              "prompt_id": "geneval2_00755_e5fa94bb",
+              "question": "Are the penguins green?",
+              "score": 1.6820150248175736e-05,
+              "skill": "attribute",
+              "source_index": 755
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00755_e5fa94bb_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00091/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00091/samples/00003.png",
+              "prompt": "three glass candles, and three green penguins to the right of three pink suitcases",
+              "prompt_id": "geneval2_00755_e5fa94bb",
+              "question": "Are there any penguins in the image?",
+              "score": 0.9999999665997166,
+              "skill": "object",
+              "source_index": 755
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00755_e5fa94bb_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00091/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00091/samples/00003.png",
+              "prompt": "three glass candles, and three green penguins to the right of three pink suitcases",
+              "prompt_id": "geneval2_00755_e5fa94bb",
+              "question": "Are the penguins to the right of the suitcases?",
+              "score": 0.9999999988388026,
+              "skill": "position",
+              "source_index": 755
+            },
+            {
+              "answer": "three",
+              "atom_count": 10,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00755_e5fa94bb_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00091/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00091/samples/00003.png",
+              "prompt": "three glass candles, and three green penguins to the right of three pink suitcases",
+              "prompt_id": "geneval2_00755_e5fa94bb",
+              "question": "How many suitcases are in the image?",
+              "score": 1.00000002828117,
+              "skill": "count",
+              "source_index": 755
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00755_e5fa94bb_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00091/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00091/samples/00003.png",
+              "prompt": "three glass candles, and three green penguins to the right of three pink suitcases",
+              "prompt_id": "geneval2_00755_e5fa94bb",
+              "question": "Are the suitcases pink?",
+              "score": 0.9999999503488652,
+              "skill": "attribute",
+              "source_index": 755
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00755_e5fa94bb_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00091/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00091/samples/00003.png",
+              "prompt": "three glass candles, and three green penguins to the right of three pink suitcases",
+              "prompt_id": "geneval2_00755_e5fa94bb",
+              "question": "Are there any suitcases in the image?",
+              "score": 0.9999999992451194,
+              "skill": "object",
+              "source_index": 755
+            }
+          ],
+          "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_004/raw_score_lists.by_candidate.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.7999920289649745,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 3,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00755_e5fa94bb.json",
+          "manifest_prompt_index": 91,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00755_e5fa94bb"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00755_e5fa94bb_cand_03",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00091/samples/00003.png",
+        "prompt_used": "Create an image with exactly three pink suitcases grouped on the left and exactly three green penguins grouped to the right of the suitcases. Also include exactly three glass candles, placed separately so they are clearly visible. All nine objects should be fully visible, distinct, and not overlapping or occluding each other. Do not include any additional candles, penguins, suitcases, or other prominent objects.",
+        "seed": 1458
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly three glass candles, exactly three green penguins, and exactly three pink suitcases.",
+          "Keep the three green penguins clearly to the right of the three pink suitcases.",
+          "Keep all nine objects fully visible and separated, with no object hidden behind another.",
+          "Do not add extra candles, penguins, suitcases, or other prominent objects."
+        ],
+        "generation_strategy": "Use a clear multi-object composition with three distinct groups: three pink suitcases on the left, three green penguins on the right of the suitcases, and three glass candles placed separately with all objects fully visible. Emphasize exact counts, attribute binding, and the left-right spatial relation between suitcases and penguins.",
+        "initial_prompt": "Create an image with exactly three pink suitcases grouped on the left and exactly three green penguins grouped to the right of the suitcases. Also include exactly three glass candles, placed separately so they are clearly visible. All nine objects should be fully visible, distinct, and not overlapping or occluding each other. Do not include any additional candles, penguins, suitcases, or other prominent objects.",
+        "parsed_constraints": {
+          "attributes": {
+            "candles": [
+              "glass"
+            ],
+            "penguins": [
+              "green"
+            ],
+            "suitcases": [
+              "pink"
+            ]
+          },
+          "counts": {
+            "candles": 3,
+            "penguins": 3,
+            "suitcases": 3
+          },
+          "objects": [
+            "candles",
+            "penguins",
+            "suitcases"
+          ],
+          "relations": [
+            "three green penguins are to the right of three pink suitcases"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility",
+          "negative_constraints"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly three glass candles, exactly three green penguins, and exactly three pink suitcases.",
+          "Keep the three green penguins clearly to the right of the three pink suitcases.",
+          "Keep all nine objects fully visible and separated, with no object hidden behind another.",
+          "Do not add extra candles, penguins, suitcases, or other prominent objects."
+        ],
+        "generation_strategy": "Use a clear multi-object composition with three distinct groups: three pink suitcases on the left, three green penguins on the right of the suitcases, and three glass candles placed separately with all objects fully visible. Emphasize exact counts, attribute binding, and the left-right spatial relation between suitcases and penguins.",
+        "initial_prompt": "Create an image with exactly three pink suitcases grouped on the left and exactly three green penguins grouped to the right of the suitcases. Also include exactly three glass candles, placed separately so they are clearly visible. All nine objects should be fully visible, distinct, and not overlapping or occluding each other. Do not include any additional candles, penguins, suitcases, or other prominent objects.",
+        "parsed_constraints": {
+          "attributes": {
+            "candles": [
+              "glass"
+            ],
+            "penguins": [
+              "green"
+            ],
+            "suitcases": [
+              "pink"
+            ]
+          },
+          "counts": {
+            "candles": 3,
+            "penguins": 3,
+            "suitcases": 3
+          },
+          "objects": [
+            "candles",
+            "penguins",
+            "suitcases"
+          ],
+          "relations": [
+            "three green penguins are to the right of three pink suitcases"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility",
+          "negative_constraints"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many penguins are in the image?",
+                "score": 2.655473826904733e-10,
+                "skill": "count"
+              },
+              "detected": "soft_score=2.65547e-10",
+              "expected": "three",
+              "status": "failed",
+              "target": "How many penguins are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the penguins green?",
+                "score": 1.6820150248175736e-05,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1.68202e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the penguins green?",
+              "type": "color_mismatch"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00091/samples/00003.png",
+          "prompt": "Create an image with exactly three pink suitcases grouped on the left and exactly three green penguins grouped to the right of the suitcases. Also include exactly three glass candles, placed separately so they are clearly visible. All nine objects should be fully visible, distinct, and not overlapping or occluding each other. Do not include any additional candles, penguins, suitcases, or other prominent objects.",
+          "round": 0,
+          "score": 0.7999920289649745
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00755_e5fa94bb_cand_03",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "color_mismatch",
+            "count_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many penguins are in the image?",
+                "score": 2.655473826904733e-10,
+                "skill": "count"
+              },
+              "detected": "soft_score=2.65547e-10",
+              "expected": "three",
+              "status": "failed",
+              "target": "How many penguins are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the penguins green?",
+                "score": 1.6820150248175736e-05,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1.68202e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the penguins green?",
+              "type": "color_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many candles are in the image?",
+                "score": 0.9999996054639625,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "three",
+              "status": "passed",
+              "target": "How many candles are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the candles glass?",
+                "score": 0.9999039778049337,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.999904",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the candles glass?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any candles in the image?",
+                "score": 0.9999999709325493,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any candles in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any penguins in the image?",
+                "score": 0.9999999665997166,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any penguins in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the penguins to the right of the suitcases?",
+                "score": 0.9999999988388026,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the penguins to the right of the suitcases?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many suitcases are in the image?",
+                "score": 1.0,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "three",
+              "status": "passed",
+              "target": "How many suitcases are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the suitcases pink?",
+                "score": 0.9999999503488652,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the suitcases pink?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any suitcases in the image?",
+                "score": 0.9999999992451194,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any suitcases in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.7999920289649745,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many penguins are in the image?",
+                  "score": 2.655473826904733e-10,
+                  "skill": "count"
+                },
+                "detected": "soft_score=2.65547e-10",
+                "expected": "three",
+                "status": "failed",
+                "target": "How many penguins are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the penguins green?",
+                  "score": 1.6820150248175736e-05,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1.68202e-05",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the penguins green?",
+                "type": "color_mismatch"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00091/samples/00003.png",
+            "prompt": "Create an image with exactly three pink suitcases grouped on the left and exactly three green penguins grouped to the right of the suitcases. Also include exactly three glass candles, placed separately so they are clearly visible. All nine objects should be fully visible, distinct, and not overlapping or occluding each other. Do not include any additional candles, penguins, suitcases, or other prominent objects.",
+            "round": 0,
+            "score": 0.7999920289649745
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many penguins are in the image?",
+                "score": 2.655473826904733e-10,
+                "skill": "count"
+              },
+              "detected": "soft_score=2.65547e-10",
+              "expected": "three",
+              "status": "failed",
+              "target": "How many penguins are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the penguins green?",
+                "score": 1.6820150248175736e-05,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1.68202e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the penguins green?",
+              "type": "color_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "color_mismatch",
+            "count_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many penguins are in the image?",
+                "score": 2.655473826904733e-10,
+                "skill": "count"
+              },
+              "detected": "soft_score=2.65547e-10",
+              "expected": "three",
+              "status": "failed",
+              "target": "How many penguins are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the penguins green?",
+                "score": 1.6820150248175736e-05,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1.68202e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the penguins green?",
+              "type": "color_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many candles are in the image?",
+                "score": 0.9999996054639625,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "three",
+              "status": "passed",
+              "target": "How many candles are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the candles glass?",
+                "score": 0.9999039778049337,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.999904",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the candles glass?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any candles in the image?",
+                "score": 0.9999999709325493,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any candles in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any penguins in the image?",
+                "score": 0.9999999665997166,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any penguins in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the penguins to the right of the suitcases?",
+                "score": 0.9999999988388026,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the penguins to the right of the suitcases?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many suitcases are in the image?",
+                "score": 1.0,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "three",
+              "status": "passed",
+              "target": "How many suitcases are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the suitcases pink?",
+                "score": 0.9999999503488652,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the suitcases pink?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any suitcases in the image?",
+                "score": 0.9999999992451194,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any suitcases in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.7999920289649745,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "three glass candles, and three green penguins to the right of three pink suitcases",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many penguins are in the image?",
+              "score": 2.655473826904733e-10,
+              "skill": "count"
+            },
+            "detected": "soft_score=2.65547e-10",
+            "expected": "three",
+            "status": "failed",
+            "target": "How many penguins are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the penguins green?",
+              "score": 1.6820150248175736e-05,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1.68202e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the penguins green?",
+            "type": "color_mismatch"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly three glass candles, exactly three green penguins, and exactly three pink suitcases.",
+            "Keep the three green penguins clearly to the right of the three pink suitcases.",
+            "Keep all nine objects fully visible and separated, with no object hidden behind another.",
+            "Do not add extra candles, penguins, suitcases, or other prominent objects."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with three distinct groups: three pink suitcases on the left, three green penguins on the right of the suitcases, and three glass candles placed separately with all objects fully visible. Emphasize exact counts, attribute binding, and the left-right spatial relation between suitcases and penguins.",
+          "initial_prompt": "Create an image with exactly three pink suitcases grouped on the left and exactly three green penguins grouped to the right of the suitcases. Also include exactly three glass candles, placed separately so they are clearly visible. All nine objects should be fully visible, distinct, and not overlapping or occluding each other. Do not include any additional candles, penguins, suitcases, or other prominent objects.",
+          "parsed_constraints": {
+            "attributes": {
+              "candles": [
+                "glass"
+              ],
+              "penguins": [
+                "green"
+              ],
+              "suitcases": [
+                "pink"
+              ]
+            },
+            "counts": {
+              "candles": 3,
+              "penguins": 3,
+              "suitcases": 3
+            },
+            "objects": [
+              "candles",
+              "penguins",
+              "suitcases"
+            ],
+            "relations": [
+              "three green penguins are to the right of three pink suitcases"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly three glass candles, exactly three green penguins, and exactly three pink suitcases.",
+            "Keep the three green penguins clearly to the right of the three pink suitcases.",
+            "Keep all nine objects fully visible and separated, with no object hidden behind another.",
+            "Do not add extra candles, penguins, suitcases, or other prominent objects."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with three distinct groups: three pink suitcases on the left, three green penguins on the right of the suitcases, and three glass candles placed separately with all objects fully visible. Emphasize exact counts, attribute binding, and the left-right spatial relation between suitcases and penguins.",
+          "initial_prompt": "Create an image with exactly three pink suitcases grouped on the left and exactly three green penguins grouped to the right of the suitcases. Also include exactly three glass candles, placed separately so they are clearly visible. All nine objects should be fully visible, distinct, and not overlapping or occluding each other. Do not include any additional candles, penguins, suitcases, or other prominent objects.",
+          "parsed_constraints": {
+            "attributes": {
+              "candles": [
+                "glass"
+              ],
+              "penguins": [
+                "green"
+              ],
+              "suitcases": [
+                "pink"
+              ]
+            },
+            "counts": {
+              "candles": 3,
+              "penguins": 3,
+              "suitcases": 3
+            },
+            "objects": [
+              "candles",
+              "penguins",
+              "suitcases"
+            ],
+            "relations": [
+              "three green penguins are to the right of three pink suitcases"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "previous_prompt": "Create an image with exactly three pink suitcases grouped on the left and exactly three green penguins grouped to the right of the suitcases. Also include exactly three glass candles, placed separately so they are clearly visible. All nine objects should be fully visible, distinct, and not overlapping or occluding each other. Do not include any additional candles, penguins, suitcases, or other prominent objects.",
+        "previous_selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility",
+          "negative_constraints"
+        ],
+        "prompt_id": "geneval2_00755_e5fa94bb",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "color_mismatch",
+              "count_mismatch"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many penguins are in the image?",
+                  "score": 2.655473826904733e-10,
+                  "skill": "count"
+                },
+                "detected": "soft_score=2.65547e-10",
+                "expected": "three",
+                "status": "failed",
+                "target": "How many penguins are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the penguins green?",
+                  "score": 1.6820150248175736e-05,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1.68202e-05",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the penguins green?",
+                "type": "color_mismatch"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many candles are in the image?",
+                  "score": 0.9999996054639625,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1",
+                "expected": "three",
+                "status": "passed",
+                "target": "How many candles are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the candles glass?",
+                  "score": 0.9999039778049337,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.999904",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the candles glass?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any candles in the image?",
+                  "score": 0.9999999709325493,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any candles in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any penguins in the image?",
+                  "score": 0.9999999665997166,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any penguins in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the penguins to the right of the suitcases?",
+                  "score": 0.9999999988388026,
+                  "skill": "position"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the penguins to the right of the suitcases?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many suitcases are in the image?",
+                  "score": 1.0,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1",
+                "expected": "three",
+                "status": "passed",
+                "target": "How many suitcases are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the suitcases pink?",
+                  "score": 0.9999999503488652,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the suitcases pink?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any suitcases in the image?",
+                  "score": 0.9999999992451194,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any suitcases in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly three glass candles, exactly three green penguins, and exactly three pink suitcases.",
+                "Keep the three green penguins clearly to the right of the three pink suitcases.",
+                "Keep all nine objects fully visible and separated, with no object hidden behind another.",
+                "Do not add extra candles, penguins, suitcases, or other prominent objects."
+              ],
+              "generation_strategy": "Use a clear multi-object composition with three distinct groups: three pink suitcases on the left, three green penguins on the right of the suitcases, and three glass candles placed separately with all objects fully visible. Emphasize exact counts, attribute binding, and the left-right spatial relation between suitcases and penguins.",
+              "initial_prompt": "Create an image with exactly three pink suitcases grouped on the left and exactly three green penguins grouped to the right of the suitcases. Also include exactly three glass candles, placed separately so they are clearly visible. All nine objects should be fully visible, distinct, and not overlapping or occluding each other. Do not include any additional candles, penguins, suitcases, or other prominent objects.",
+              "parsed_constraints": {
+                "attributes": {
+                  "candles": [
+                    "glass"
+                  ],
+                  "penguins": [
+                    "green"
+                  ],
+                  "suitcases": [
+                    "pink"
+                  ]
+                },
+                "counts": {
+                  "candles": 3,
+                  "penguins": 3,
+                  "suitcases": 3
+                },
+                "objects": [
+                  "candles",
+                  "penguins",
+                  "suitcases"
+                ],
+                "relations": [
+                  "three green penguins are to the right of three pink suitcases"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "anti_occlusion",
+                "clarity_visibility",
+                "negative_constraints"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly three glass candles, exactly three green penguins, and exactly three pink suitcases.",
+                "Keep the three green penguins clearly to the right of the three pink suitcases.",
+                "Keep all nine objects fully visible and separated, with no object hidden behind another.",
+                "Do not add extra candles, penguins, suitcases, or other prominent objects."
+              ],
+              "generation_strategy": "Use a clear multi-object composition with three distinct groups: three pink suitcases on the left, three green penguins on the right of the suitcases, and three glass candles placed separately with all objects fully visible. Emphasize exact counts, attribute binding, and the left-right spatial relation between suitcases and penguins.",
+              "initial_prompt": "Create an image with exactly three pink suitcases grouped on the left and exactly three green penguins grouped to the right of the suitcases. Also include exactly three glass candles, placed separately so they are clearly visible. All nine objects should be fully visible, distinct, and not overlapping or occluding each other. Do not include any additional candles, penguins, suitcases, or other prominent objects.",
+              "parsed_constraints": {
+                "attributes": {
+                  "candles": [
+                    "glass"
+                  ],
+                  "penguins": [
+                    "green"
+                  ],
+                  "suitcases": [
+                    "pink"
+                  ]
+                },
+                "counts": {
+                  "candles": 3,
+                  "penguins": 3,
+                  "suitcases": 3
+                },
+                "objects": [
+                  "candles",
+                  "penguins",
+                  "suitcases"
+                ],
+                "relations": [
+                  "three green penguins are to the right of three pink suitcases"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "anti_occlusion",
+                "clarity_visibility",
+                "negative_constraints"
+              ]
+            },
+            "prompt_used": "Create an image with exactly three pink suitcases grouped on the left and exactly three green penguins grouped to the right of the suitcases. Also include exactly three glass candles, placed separately so they are clearly visible. All nine objects should be fully visible, distinct, and not overlapping or occluding each other. Do not include any additional candles, penguins, suitcases, or other prominent objects.",
+            "round": 0,
+            "score": 0.7999920289649745,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 3,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many penguins are in the image?",
+                    "score": 2.655473826904733e-10,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=2.65547e-10",
+                  "expected": "three",
+                  "status": "failed",
+                  "target": "How many penguins are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 4,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the penguins green?",
+                    "score": 1.6820150248175736e-05,
+                    "skill": "attribute"
+                  },
+                  "detected": "soft_score=1.68202e-05",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the penguins green?",
+                  "type": "color_mismatch"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00755_e5fa94bb"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many penguins are in the image?",
+              "score": 2.655473826904733e-10,
+              "skill": "count"
+            },
+            "detected": "soft_score=2.65547e-10",
+            "expected": "three",
+            "status": "failed",
+            "target": "How many penguins are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the penguins green?",
+              "score": 1.6820150248175736e-05,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1.68202e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the penguins green?",
+            "type": "color_mismatch"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00755_e5fa94bb_cand_03",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly three glass candles, exactly three green penguins, and exactly three pink suitcases.",
+      "Keep the three green penguins clearly to the right of the three pink suitcases.",
+      "Keep all nine objects fully visible and separated, with no object hidden behind another.",
+      "Do not add extra candles, penguins, suitcases, or other prominent objects."
+    ],
+    "generation_strategy": "Use a clear multi-object composition with three distinct groups: three pink suitcases on the left, three green penguins on the right of the suitcases, and three glass candles placed separately with all objects fully visible. Emphasize exact counts, attribute binding, and the left-right spatial relation between suitcases and penguins.",
+    "initial_prompt": "Create an image with exactly three pink suitcases grouped on the left and exactly three green penguins grouped to the right of the suitcases. Also include exactly three glass candles, placed separately so they are clearly visible. All nine objects should be fully visible, distinct, and not overlapping or occluding each other. Do not include any additional candles, penguins, suitcases, or other prominent objects.",
+    "parsed_constraints": {
+      "attributes": {
+        "candles": [
+          "glass"
+        ],
+        "penguins": [
+          "green"
+        ],
+        "suitcases": [
+          "pink"
+        ]
+      },
+      "counts": {
+        "candles": 3,
+        "penguins": 3,
+        "suitcases": 3
+      },
+      "objects": [
+        "candles",
+        "penguins",
+        "suitcases"
+      ],
+      "relations": [
+        "three green penguins are to the right of three pink suitcases"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image passed the candle count and glass attribute, suitcase count and pink attribute, object presence, and the relation that penguins are to the right of suitcases. It failed specifically on the penguins: the evaluator did not verify exactly three penguins and did not verify that the penguins are green.",
+    "expected_improvement": [
+      "Exactly three penguins should be visible and countable.",
+      "Each penguin should be clearly green.",
+      "The previously passing three glass candles, three pink suitcases, and penguins-to-the-right-of-suitcases relation should remain intact."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "color_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly three glass candles visible and separate.",
+      "Keep the candles clearly glass.",
+      "Keep exactly three pink suitcases visible and separate.",
+      "Keep the suitcases clearly pink.",
+      "Keep the penguins positioned to the right of the suitcases.",
+      "Keep all required objects fully visible, distinct, and unobstructed."
+    ],
+    "previous_plan_error": {
+      "details": "The prior prompt named three green penguins, but it did not force the penguins to be large, separated, and individually countable enough; the green color may also have been too weak or not bound to each penguin's body.",
+      "error_source": "Insufficiently strong quantity_counting and attribute_binding for the penguins."
+    },
+    "regeneration_strategy": "Use a simpler, more countable composition: three pink suitcases on the left, then three large green penguins on the right in a clearly separated row, with the three glass candles also separated. Emphasize that each penguin is a distinct full green penguin and prohibit extra or duplicate penguins.",
+    "regression_risks": [
+      "The generator may add extra penguins or merge penguins together.",
+      "The generator may make penguins natural black-and-white instead of green.",
+      "The generator may accidentally change the already-correct counts or colors of candles and suitcases.",
+      "The left-right relation between suitcases and penguins could regress if the scene becomes cluttered."
+    ],
+    "repair_constraints": [
+      "Show exactly three penguins, no more and no fewer.",
+      "Make the three penguins visually separate, full-body, unobstructed, and easy to count.",
+      "Bind green to each penguin: all three penguins must be clearly green penguins.",
+      "Do not include any extra penguins or partial duplicate penguins."
+    ],
+    "retry_prompt": "Create a clear image containing exactly three pink suitcases on the left and exactly three green penguins to the right of the suitcases. The penguins must be three separate, full-body, clearly green penguins, arranged side by side with visible gaps so they are easy to count; no extra penguins and no partially hidden duplicate penguins. Also include exactly three glass candles, each separate and clearly visible. Keep all nine objects fully visible, distinct, and not overlapping or occluding each other. Do not include any additional candles, penguins, suitcases, or other prominent objects.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints",
+        "object_presence"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ],
+      "reason": "Retain the same skill set but apply quantity_counting and attribute_binding more strongly to the penguins by requiring exactly three separated full-body green penguins and explicitly forbidding extras or duplicates."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many penguins are in the image?",
+            "score": 2.655473826904733e-10,
+            "skill": "count"
+          },
+          "detected": "soft_score=2.65547e-10",
+          "expected": "three",
+          "status": "failed",
+          "target": "How many penguins are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the penguins green?",
+            "score": 1.6820150248175736e-05,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1.68202e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the penguins green?",
+          "type": "color_mismatch"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00091/samples/00003.png",
+      "prompt": "Create an image with exactly three pink suitcases grouped on the left and exactly three green penguins grouped to the right of the suitcases. Also include exactly three glass candles, placed separately so they are clearly visible. All nine objects should be fully visible, distinct, and not overlapping or occluding each other. Do not include any additional candles, penguins, suitcases, or other prominent objects.",
+      "round": 0,
+      "score": 0.7999920289649745
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00755_e5fa94bb_cand_03",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "color_mismatch",
+        "count_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many penguins are in the image?",
+            "score": 2.655473826904733e-10,
+            "skill": "count"
+          },
+          "detected": "soft_score=2.65547e-10",
+          "expected": "three",
+          "status": "failed",
+          "target": "How many penguins are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the penguins green?",
+            "score": 1.6820150248175736e-05,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1.68202e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the penguins green?",
+          "type": "color_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many candles are in the image?",
+            "score": 0.9999996054639625,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "three",
+          "status": "passed",
+          "target": "How many candles are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the candles glass?",
+            "score": 0.9999039778049337,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.999904",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the candles glass?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any candles in the image?",
+            "score": 0.9999999709325493,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any candles in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any penguins in the image?",
+            "score": 0.9999999665997166,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any penguins in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the penguins to the right of the suitcases?",
+            "score": 0.9999999988388026,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the penguins to the right of the suitcases?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many suitcases are in the image?",
+            "score": 1.0,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "three",
+          "status": "passed",
+          "target": "How many suitcases are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the suitcases pink?",
+            "score": 0.9999999503488652,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the suitcases pink?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any suitcases in the image?",
+            "score": 0.9999999992451194,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any suitcases in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.7999920289649745,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many penguins are in the image?",
+              "score": 2.655473826904733e-10,
+              "skill": "count"
+            },
+            "detected": "soft_score=2.65547e-10",
+            "expected": "three",
+            "status": "failed",
+            "target": "How many penguins are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the penguins green?",
+              "score": 1.6820150248175736e-05,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1.68202e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the penguins green?",
+            "type": "color_mismatch"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00091/samples/00003.png",
+        "prompt": "Create an image with exactly three pink suitcases grouped on the left and exactly three green penguins grouped to the right of the suitcases. Also include exactly three glass candles, placed separately so they are clearly visible. All nine objects should be fully visible, distinct, and not overlapping or occluding each other. Do not include any additional candles, penguins, suitcases, or other prominent objects.",
+        "round": 0,
+        "score": 0.7999920289649745
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many penguins are in the image?",
+            "score": 2.655473826904733e-10,
+            "skill": "count"
+          },
+          "detected": "soft_score=2.65547e-10",
+          "expected": "three",
+          "status": "failed",
+          "target": "How many penguins are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the penguins green?",
+            "score": 1.6820150248175736e-05,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1.68202e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the penguins green?",
+          "type": "color_mismatch"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "color_mismatch",
+        "count_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many penguins are in the image?",
+            "score": 2.655473826904733e-10,
+            "skill": "count"
+          },
+          "detected": "soft_score=2.65547e-10",
+          "expected": "three",
+          "status": "failed",
+          "target": "How many penguins are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the penguins green?",
+            "score": 1.6820150248175736e-05,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1.68202e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the penguins green?",
+          "type": "color_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many candles are in the image?",
+            "score": 0.9999996054639625,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "three",
+          "status": "passed",
+          "target": "How many candles are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the candles glass?",
+            "score": 0.9999039778049337,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.999904",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the candles glass?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any candles in the image?",
+            "score": 0.9999999709325493,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any candles in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any penguins in the image?",
+            "score": 0.9999999665997166,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any penguins in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the penguins to the right of the suitcases?",
+            "score": 0.9999999988388026,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the penguins to the right of the suitcases?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many suitcases are in the image?",
+            "score": 1.0,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "three",
+          "status": "passed",
+          "target": "How many suitcases are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the suitcases pink?",
+            "score": 0.9999999503488652,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the suitcases pink?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any suitcases in the image?",
+            "score": 0.9999999992451194,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any suitcases in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.7999920289649745,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "three glass candles, and three green penguins to the right of three pink suitcases",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many penguins are in the image?",
+          "score": 2.655473826904733e-10,
+          "skill": "count"
+        },
+        "detected": "soft_score=2.65547e-10",
+        "expected": "three",
+        "status": "failed",
+        "target": "How many penguins are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the penguins green?",
+          "score": 1.6820150248175736e-05,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=1.68202e-05",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the penguins green?",
+        "type": "color_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly three glass candles, exactly three green penguins, and exactly three pink suitcases.",
+        "Keep the three green penguins clearly to the right of the three pink suitcases.",
+        "Keep all nine objects fully visible and separated, with no object hidden behind another.",
+        "Do not add extra candles, penguins, suitcases, or other prominent objects."
+      ],
+      "generation_strategy": "Use a clear multi-object composition with three distinct groups: three pink suitcases on the left, three green penguins on the right of the suitcases, and three glass candles placed separately with all objects fully visible. Emphasize exact counts, attribute binding, and the left-right spatial relation between suitcases and penguins.",
+      "initial_prompt": "Create an image with exactly three pink suitcases grouped on the left and exactly three green penguins grouped to the right of the suitcases. Also include exactly three glass candles, placed separately so they are clearly visible. All nine objects should be fully visible, distinct, and not overlapping or occluding each other. Do not include any additional candles, penguins, suitcases, or other prominent objects.",
+      "parsed_constraints": {
+        "attributes": {
+          "candles": [
+            "glass"
+          ],
+          "penguins": [
+            "green"
+          ],
+          "suitcases": [
+            "pink"
+          ]
+        },
+        "counts": {
+          "candles": 3,
+          "penguins": 3,
+          "suitcases": 3
+        },
+        "objects": [
+          "candles",
+          "penguins",
+          "suitcases"
+        ],
+        "relations": [
+          "three green penguins are to the right of three pink suitcases"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly three glass candles, exactly three green penguins, and exactly three pink suitcases.",
+        "Keep the three green penguins clearly to the right of the three pink suitcases.",
+        "Keep all nine objects fully visible and separated, with no object hidden behind another.",
+        "Do not add extra candles, penguins, suitcases, or other prominent objects."
+      ],
+      "generation_strategy": "Use a clear multi-object composition with three distinct groups: three pink suitcases on the left, three green penguins on the right of the suitcases, and three glass candles placed separately with all objects fully visible. Emphasize exact counts, attribute binding, and the left-right spatial relation between suitcases and penguins.",
+      "initial_prompt": "Create an image with exactly three pink suitcases grouped on the left and exactly three green penguins grouped to the right of the suitcases. Also include exactly three glass candles, placed separately so they are clearly visible. All nine objects should be fully visible, distinct, and not overlapping or occluding each other. Do not include any additional candles, penguins, suitcases, or other prominent objects.",
+      "parsed_constraints": {
+        "attributes": {
+          "candles": [
+            "glass"
+          ],
+          "penguins": [
+            "green"
+          ],
+          "suitcases": [
+            "pink"
+          ]
+        },
+        "counts": {
+          "candles": 3,
+          "penguins": 3,
+          "suitcases": 3
+        },
+        "objects": [
+          "candles",
+          "penguins",
+          "suitcases"
+        ],
+        "relations": [
+          "three green penguins are to the right of three pink suitcases"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ]
+    },
+    "previous_prompt": "Create an image with exactly three pink suitcases grouped on the left and exactly three green penguins grouped to the right of the suitcases. Also include exactly three glass candles, placed separately so they are clearly visible. All nine objects should be fully visible, distinct, and not overlapping or occluding each other. Do not include any additional candles, penguins, suitcases, or other prominent objects.",
+    "previous_selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ],
+    "prompt_id": "geneval2_00755_e5fa94bb",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "color_mismatch",
+          "count_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many penguins are in the image?",
+              "score": 2.655473826904733e-10,
+              "skill": "count"
+            },
+            "detected": "soft_score=2.65547e-10",
+            "expected": "three",
+            "status": "failed",
+            "target": "How many penguins are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the penguins green?",
+              "score": 1.6820150248175736e-05,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1.68202e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the penguins green?",
+            "type": "color_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many candles are in the image?",
+              "score": 0.9999996054639625,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "three",
+            "status": "passed",
+            "target": "How many candles are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the candles glass?",
+              "score": 0.9999039778049337,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.999904",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the candles glass?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any candles in the image?",
+              "score": 0.9999999709325493,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any candles in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any penguins in the image?",
+              "score": 0.9999999665997166,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any penguins in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the penguins to the right of the suitcases?",
+              "score": 0.9999999988388026,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the penguins to the right of the suitcases?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many suitcases are in the image?",
+              "score": 1.0,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "three",
+            "status": "passed",
+            "target": "How many suitcases are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the suitcases pink?",
+              "score": 0.9999999503488652,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the suitcases pink?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any suitcases in the image?",
+              "score": 0.9999999992451194,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any suitcases in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly three glass candles, exactly three green penguins, and exactly three pink suitcases.",
+            "Keep the three green penguins clearly to the right of the three pink suitcases.",
+            "Keep all nine objects fully visible and separated, with no object hidden behind another.",
+            "Do not add extra candles, penguins, suitcases, or other prominent objects."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with three distinct groups: three pink suitcases on the left, three green penguins on the right of the suitcases, and three glass candles placed separately with all objects fully visible. Emphasize exact counts, attribute binding, and the left-right spatial relation between suitcases and penguins.",
+          "initial_prompt": "Create an image with exactly three pink suitcases grouped on the left and exactly three green penguins grouped to the right of the suitcases. Also include exactly three glass candles, placed separately so they are clearly visible. All nine objects should be fully visible, distinct, and not overlapping or occluding each other. Do not include any additional candles, penguins, suitcases, or other prominent objects.",
+          "parsed_constraints": {
+            "attributes": {
+              "candles": [
+                "glass"
+              ],
+              "penguins": [
+                "green"
+              ],
+              "suitcases": [
+                "pink"
+              ]
+            },
+            "counts": {
+              "candles": 3,
+              "penguins": 3,
+              "suitcases": 3
+            },
+            "objects": [
+              "candles",
+              "penguins",
+              "suitcases"
+            ],
+            "relations": [
+              "three green penguins are to the right of three pink suitcases"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly three glass candles, exactly three green penguins, and exactly three pink suitcases.",
+            "Keep the three green penguins clearly to the right of the three pink suitcases.",
+            "Keep all nine objects fully visible and separated, with no object hidden behind another.",
+            "Do not add extra candles, penguins, suitcases, or other prominent objects."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with three distinct groups: three pink suitcases on the left, three green penguins on the right of the suitcases, and three glass candles placed separately with all objects fully visible. Emphasize exact counts, attribute binding, and the left-right spatial relation between suitcases and penguins.",
+          "initial_prompt": "Create an image with exactly three pink suitcases grouped on the left and exactly three green penguins grouped to the right of the suitcases. Also include exactly three glass candles, placed separately so they are clearly visible. All nine objects should be fully visible, distinct, and not overlapping or occluding each other. Do not include any additional candles, penguins, suitcases, or other prominent objects.",
+          "parsed_constraints": {
+            "attributes": {
+              "candles": [
+                "glass"
+              ],
+              "penguins": [
+                "green"
+              ],
+              "suitcases": [
+                "pink"
+              ]
+            },
+            "counts": {
+              "candles": 3,
+              "penguins": 3,
+              "suitcases": 3
+            },
+            "objects": [
+              "candles",
+              "penguins",
+              "suitcases"
+            ],
+            "relations": [
+              "three green penguins are to the right of three pink suitcases"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "prompt_used": "Create an image with exactly three pink suitcases grouped on the left and exactly three green penguins grouped to the right of the suitcases. Also include exactly three glass candles, placed separately so they are clearly visible. All nine objects should be fully visible, distinct, and not overlapping or occluding each other. Do not include any additional candles, penguins, suitcases, or other prominent objects.",
+        "round": 0,
+        "score": 0.7999920289649745,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many penguins are in the image?",
+                "score": 2.655473826904733e-10,
+                "skill": "count"
+              },
+              "detected": "soft_score=2.65547e-10",
+              "expected": "three",
+              "status": "failed",
+              "target": "How many penguins are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the penguins green?",
+                "score": 1.6820150248175736e-05,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1.68202e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the penguins green?",
+              "type": "color_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00755_e5fa94bb"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many penguins are in the image?",
+          "score": 2.655473826904733e-10,
+          "skill": "count"
+        },
+        "detected": "soft_score=2.65547e-10",
+        "expected": "three",
+        "status": "failed",
+        "target": "How many penguins are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the penguins green?",
+          "score": 1.6820150248175736e-05,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=1.68202e-05",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the penguins green?",
+        "type": "color_mismatch"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00091/samples/00003.png",
+    "best_so_far_prompt": "Create an image with exactly three pink suitcases grouped on the left and exactly three green penguins grouped to the right of the suitcases. Also include exactly three glass candles, placed separately so they are clearly visible. All nine objects should be fully visible, distinct, and not overlapping or occluding each other. Do not include any additional candles, penguins, suitcases, or other prominent objects.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.7999920289649745,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many penguins are in the image?",
+          "score": 2.655473826904733e-10,
+          "skill": "count"
+        },
+        "detected": "soft_score=2.65547e-10",
+        "expected": "three",
+        "status": "failed",
+        "target": "How many penguins are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the penguins green?",
+          "score": 1.6820150248175736e-05,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=1.68202e-05",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the penguins green?",
+        "type": "color_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly three glass candles, exactly three green penguins, and exactly three pink suitcases.",
+        "Keep the three green penguins clearly to the right of the three pink suitcases.",
+        "Keep all nine objects fully visible and separated, with no object hidden behind another.",
+        "Do not add extra candles, penguins, suitcases, or other prominent objects."
+      ],
+      "generation_strategy": "Use a clear multi-object composition with three distinct groups: three pink suitcases on the left, three green penguins on the right of the suitcases, and three glass candles placed separately with all objects fully visible. Emphasize exact counts, attribute binding, and the left-right spatial relation between suitcases and penguins.",
+      "initial_prompt": "Create an image with exactly three pink suitcases grouped on the left and exactly three green penguins grouped to the right of the suitcases. Also include exactly three glass candles, placed separately so they are clearly visible. All nine objects should be fully visible, distinct, and not overlapping or occluding each other. Do not include any additional candles, penguins, suitcases, or other prominent objects.",
+      "parsed_constraints": {
+        "attributes": {
+          "candles": [
+            "glass"
+          ],
+          "penguins": [
+            "green"
+          ],
+          "suitcases": [
+            "pink"
+          ]
+        },
+        "counts": {
+          "candles": 3,
+          "penguins": 3,
+          "suitcases": 3
+        },
+        "objects": [
+          "candles",
+          "penguins",
+          "suitcases"
+        ],
+        "relations": [
+          "three green penguins are to the right of three pink suitcases"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.800 failed=['How many penguins are in the image?', 'Are the penguins green?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_incremental/snapshot_004_worker_01/geneval2_00755_e5fa94bb__geneval2_00755_e5fa94bb_cand_03__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00755_e5fa94bb__geneval2_00755_e5fa94bb_cand_03__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00755_e5fa94bb",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image passed the candle count and glass attribute, suitcase count and pink attribute, object presence, and the relation that penguins are to the right of suitcases. It failed specifically on the penguins: the evaluator did not verify exactly three penguins and did not verify that the penguins are green.",
+    "expected_improvement": [
+      "Exactly three penguins should be visible and countable.",
+      "Each penguin should be clearly green.",
+      "The previously passing three glass candles, three pink suitcases, and penguins-to-the-right-of-suitcases relation should remain intact."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "color_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly three glass candles visible and separate.",
+      "Keep the candles clearly glass.",
+      "Keep exactly three pink suitcases visible and separate.",
+      "Keep the suitcases clearly pink.",
+      "Keep the penguins positioned to the right of the suitcases.",
+      "Keep all required objects fully visible, distinct, and unobstructed."
+    ],
+    "previous_plan_error": {
+      "details": "The prior prompt named three green penguins, but it did not force the penguins to be large, separated, and individually countable enough; the green color may also have been too weak or not bound to each penguin's body.",
+      "error_source": "Insufficiently strong quantity_counting and attribute_binding for the penguins."
+    },
+    "regeneration_strategy": "Use a simpler, more countable composition: three pink suitcases on the left, then three large green penguins on the right in a clearly separated row, with the three glass candles also separated. Emphasize that each penguin is a distinct full green penguin and prohibit extra or duplicate penguins.",
+    "regression_risks": [
+      "The generator may add extra penguins or merge penguins together.",
+      "The generator may make penguins natural black-and-white instead of green.",
+      "The generator may accidentally change the already-correct counts or colors of candles and suitcases.",
+      "The left-right relation between suitcases and penguins could regress if the scene becomes cluttered."
+    ],
+    "repair_constraints": [
+      "Show exactly three penguins, no more and no fewer.",
+      "Make the three penguins visually separate, full-body, unobstructed, and easy to count.",
+      "Bind green to each penguin: all three penguins must be clearly green penguins.",
+      "Do not include any extra penguins or partial duplicate penguins."
+    ],
+    "retry_prompt": "Create a clear image containing exactly three pink suitcases on the left and exactly three green penguins to the right of the suitcases. The penguins must be three separate, full-body, clearly green penguins, arranged side by side with visible gaps so they are easy to count; no extra penguins and no partially hidden duplicate penguins. Also include exactly three glass candles, each separate and clearly visible. Keep all nine objects fully visible, distinct, and not overlapping or occluding each other. Do not include any additional candles, penguins, suitcases, or other prominent objects.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints",
+        "object_presence"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ],
+      "reason": "Retain the same skill set but apply quantity_counting and attribute_binding more strongly to the penguins by requiring exactly three separated full-body green penguins and explicitly forbidding extras or duplicates."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "three glass candles, and three green penguins to the right of three pink suitcases",
+    "prompt": "three glass candles, and three green penguins to the right of three pink suitcases",
+    "prompt_id": "geneval2_00755_e5fa94bb",
+    "sampling_bucket": "high_atom_count",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 3,
+      "count": 3,
+      "object": 3,
+      "position": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 755,
+    "vqa_list": [
+      [
+        "How many candles are in the image?",
+        "three"
+      ],
+      [
+        "Are the candles glass?",
+        "Yes"
+      ],
+      [
+        "Are there any candles in the image?",
+        "Yes"
+      ],
+      [
+        "How many penguins are in the image?",
+        "three"
+      ],
+      [
+        "Are the penguins green?",
+        "Yes"
+      ],
+      [
+        "Are there any penguins in the image?",
+        "Yes"
+      ],
+      [
+        "Are the penguins to the right of the suitcases?",
+        "Yes"
+      ],
+      [
+        "How many suitcases are in the image?",
+        "three"
+      ],
+      [
+        "Are the suitcases pink?",
+        "Yes"
+      ],
+      [
+        "Are there any suitcases in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00755_e5fa94bb"
+}

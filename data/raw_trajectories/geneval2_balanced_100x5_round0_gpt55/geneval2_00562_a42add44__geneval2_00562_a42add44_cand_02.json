@@ -1,0 +1,2602 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "color_mismatch",
+          "count_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the lion white?",
+              "score": 9.01713112788638e-08,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=9.01713e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the lion white?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many sheeps are in the image?",
+              "score": 1.3779492534881102e-10,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.37795e-10",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many sheeps are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many suitcases are in the image?",
+              "score": 1.0,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "one",
+            "status": "passed",
+            "target": "How many suitcases are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the suitcase checkered?",
+              "score": 1.0,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Is the suitcase checkered?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any suitcases in the image?",
+              "score": 0.999999971593752,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any suitcases in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the suitcase to the right of the lion?",
+              "score": 0.99999100482637,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.999991",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Is the suitcase to the right of the lion?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many lions are in the image?",
+              "score": 1.0,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "one",
+            "status": "passed",
+            "target": "How many lions are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any lions in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any lions in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the lion jumping over the sheeps?",
+              "score": 0.9998619693634936,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.999862",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Is the lion jumping over the sheeps?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any sheeps in the image?",
+              "score": 0.9999997990234988,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any sheeps in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00562_a42add44_cand_02",
+          "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+          "rows": [
+            {
+              "answer": "one",
+              "atom_count": 8,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00562_a42add44_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00066/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00066/samples/00002.png",
+              "prompt": "a checkered suitcase to the right of a white lion jumping over six sheeps",
+              "prompt_id": "geneval2_00562_a42add44",
+              "question": "How many suitcases are in the image?",
+              "score": 1.0000000150656638,
+              "skill": "count",
+              "source_index": 562
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 8,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00562_a42add44_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00066/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00066/samples/00002.png",
+              "prompt": "a checkered suitcase to the right of a white lion jumping over six sheeps",
+              "prompt_id": "geneval2_00562_a42add44",
+              "question": "Is the suitcase checkered?",
+              "score": 1.0000000216787157,
+              "skill": "attribute",
+              "source_index": 562
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 8,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00562_a42add44_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00066/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00066/samples/00002.png",
+              "prompt": "a checkered suitcase to the right of a white lion jumping over six sheeps",
+              "prompt_id": "geneval2_00562_a42add44",
+              "question": "Are there any suitcases in the image?",
+              "score": 0.999999971593752,
+              "skill": "object",
+              "source_index": 562
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 8,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00562_a42add44_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00066/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00066/samples/00002.png",
+              "prompt": "a checkered suitcase to the right of a white lion jumping over six sheeps",
+              "prompt_id": "geneval2_00562_a42add44",
+              "question": "Is the suitcase to the right of the lion?",
+              "score": 0.99999100482637,
+              "skill": "position",
+              "source_index": 562
+            },
+            {
+              "answer": "one",
+              "atom_count": 8,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00562_a42add44_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00066/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00066/samples/00002.png",
+              "prompt": "a checkered suitcase to the right of a white lion jumping over six sheeps",
+              "prompt_id": "geneval2_00562_a42add44",
+              "question": "How many lions are in the image?",
+              "score": 1.0000000002358602,
+              "skill": "count",
+              "source_index": 562
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 8,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00562_a42add44_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00066/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00066/samples/00002.png",
+              "prompt": "a checkered suitcase to the right of a white lion jumping over six sheeps",
+              "prompt_id": "geneval2_00562_a42add44",
+              "question": "Is the lion white?",
+              "score": 9.01713112788638e-08,
+              "skill": "attribute",
+              "source_index": 562
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 8,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00562_a42add44_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00066/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00066/samples/00002.png",
+              "prompt": "a checkered suitcase to the right of a white lion jumping over six sheeps",
+              "prompt_id": "geneval2_00562_a42add44",
+              "question": "Are there any lions in the image?",
+              "score": 1.0000000260479283,
+              "skill": "object",
+              "source_index": 562
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 8,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00562_a42add44_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00066/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00066/samples/00002.png",
+              "prompt": "a checkered suitcase to the right of a white lion jumping over six sheeps",
+              "prompt_id": "geneval2_00562_a42add44",
+              "question": "Is the lion jumping over the sheeps?",
+              "score": 0.9998619693634936,
+              "skill": "verb",
+              "source_index": 562
+            },
+            {
+              "answer": "six",
+              "atom_count": 8,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00562_a42add44_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00066/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00066/samples/00002.png",
+              "prompt": "a checkered suitcase to the right of a white lion jumping over six sheeps",
+              "prompt_id": "geneval2_00562_a42add44",
+              "question": "How many sheeps are in the image?",
+              "score": 1.3779492534881102e-10,
+              "skill": "count",
+              "source_index": 562
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 8,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00562_a42add44_cand_02",
+              "candidate_index": 2,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00066/samples/00002.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00066/samples/00002.png",
+              "prompt": "a checkered suitcase to the right of a white lion jumping over six sheeps",
+              "prompt_id": "geneval2_00562_a42add44",
+              "question": "Are there any sheeps in the image?",
+              "score": 0.9999997990234988,
+              "skill": "object",
+              "source_index": 562
+            }
+          ],
+          "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.799985283511622,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 2,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00562_a42add44.json",
+          "manifest_prompt_index": 66,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00562_a42add44"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00562_a42add44_cand_02",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00066/samples/00002.png",
+        "prompt_used": "A clear side-view scene with exactly six sheep visible and countable in a row or small group on the ground. Exactly one white lion is airborne above the six sheep, clearly jumping over them. Exactly one checkered suitcase is placed to the right of the white lion. Keep the suitcase separate from the lion and sheep, fully visible, with a clear checkered pattern. Keep all six sheep unobstructed and individually distinguishable. No extra lions, no extra suitcases, no extra sheep.",
+        "seed": 1332
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Depict exactly one suitcase, exactly one lion, and exactly six sheep.",
+          "Bind the checkered pattern only to the suitcase.",
+          "Bind the white color only to the lion.",
+          "Place the suitcase clearly to the right of the lion.",
+          "Show the white lion in mid-jump over the six sheep.",
+          "Keep all six sheep visible and countable, separated enough to distinguish each one.",
+          "Avoid occlusion between the lion, the suitcase, and the six sheep."
+        ],
+        "generation_strategy": "Use a clear side-view composition with the six sheep grouped below, the single white lion airborne above them to show jumping over them, and the single checkered suitcase positioned on the right side of the lion. Maintain separation and full visibility for accurate counting and spatial relation recognition.",
+        "initial_prompt": "A clear side-view scene with exactly six sheep visible and countable in a row or small group on the ground. Exactly one white lion is airborne above the six sheep, clearly jumping over them. Exactly one checkered suitcase is placed to the right of the white lion. Keep the suitcase separate from the lion and sheep, fully visible, with a clear checkered pattern. Keep all six sheep unobstructed and individually distinguishable. No extra lions, no extra suitcases, no extra sheep.",
+        "parsed_constraints": {
+          "attributes": {
+            "lion": [
+              "white"
+            ],
+            "suitcase": [
+              "checkered"
+            ]
+          },
+          "counts": {
+            "lion": 1,
+            "sheep": 6,
+            "suitcase": 1
+          },
+          "objects": [
+            "suitcase",
+            "lion",
+            "sheep"
+          ],
+          "relations": [
+            "the checkered suitcase is to the right of the white lion",
+            "the white lion is jumping over the six sheep"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Depict exactly one suitcase, exactly one lion, and exactly six sheep.",
+          "Bind the checkered pattern only to the suitcase.",
+          "Bind the white color only to the lion.",
+          "Place the suitcase clearly to the right of the lion.",
+          "Show the white lion in mid-jump over the six sheep.",
+          "Keep all six sheep visible and countable, separated enough to distinguish each one.",
+          "Avoid occlusion between the lion, the suitcase, and the six sheep."
+        ],
+        "generation_strategy": "Use a clear side-view composition with the six sheep grouped below, the single white lion airborne above them to show jumping over them, and the single checkered suitcase positioned on the right side of the lion. Maintain separation and full visibility for accurate counting and spatial relation recognition.",
+        "initial_prompt": "A clear side-view scene with exactly six sheep visible and countable in a row or small group on the ground. Exactly one white lion is airborne above the six sheep, clearly jumping over them. Exactly one checkered suitcase is placed to the right of the white lion. Keep the suitcase separate from the lion and sheep, fully visible, with a clear checkered pattern. Keep all six sheep unobstructed and individually distinguishable. No extra lions, no extra suitcases, no extra sheep.",
+        "parsed_constraints": {
+          "attributes": {
+            "lion": [
+              "white"
+            ],
+            "suitcase": [
+              "checkered"
+            ]
+          },
+          "counts": {
+            "lion": 1,
+            "sheep": 6,
+            "suitcase": 1
+          },
+          "objects": [
+            "suitcase",
+            "lion",
+            "sheep"
+          ],
+          "relations": [
+            "the checkered suitcase is to the right of the white lion",
+            "the white lion is jumping over the six sheep"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the lion white?",
+                "score": 9.01713112788638e-08,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=9.01713e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the lion white?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many sheeps are in the image?",
+                "score": 1.3779492534881102e-10,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.37795e-10",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many sheeps are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00066/samples/00002.png",
+          "prompt": "A clear side-view scene with exactly six sheep visible and countable in a row or small group on the ground. Exactly one white lion is airborne above the six sheep, clearly jumping over them. Exactly one checkered suitcase is placed to the right of the white lion. Keep the suitcase separate from the lion and sheep, fully visible, with a clear checkered pattern. Keep all six sheep unobstructed and individually distinguishable. No extra lions, no extra suitcases, no extra sheep.",
+          "round": 0,
+          "score": 0.799985283511622
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00562_a42add44_cand_02",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "color_mismatch",
+            "count_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the lion white?",
+                "score": 9.01713112788638e-08,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=9.01713e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the lion white?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many sheeps are in the image?",
+                "score": 1.3779492534881102e-10,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.37795e-10",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many sheeps are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many suitcases are in the image?",
+                "score": 1.0,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "one",
+              "status": "passed",
+              "target": "How many suitcases are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the suitcase checkered?",
+                "score": 1.0,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Is the suitcase checkered?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any suitcases in the image?",
+                "score": 0.999999971593752,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any suitcases in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the suitcase to the right of the lion?",
+                "score": 0.99999100482637,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.999991",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Is the suitcase to the right of the lion?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many lions are in the image?",
+                "score": 1.0,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "one",
+              "status": "passed",
+              "target": "How many lions are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any lions in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any lions in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the lion jumping over the sheeps?",
+                "score": 0.9998619693634936,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.999862",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Is the lion jumping over the sheeps?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any sheeps in the image?",
+                "score": 0.9999997990234988,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any sheeps in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.799985283511622,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Is the lion white?",
+                  "score": 9.01713112788638e-08,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=9.01713e-08",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Is the lion white?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many sheeps are in the image?",
+                  "score": 1.3779492534881102e-10,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1.37795e-10",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many sheeps are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00066/samples/00002.png",
+            "prompt": "A clear side-view scene with exactly six sheep visible and countable in a row or small group on the ground. Exactly one white lion is airborne above the six sheep, clearly jumping over them. Exactly one checkered suitcase is placed to the right of the white lion. Keep the suitcase separate from the lion and sheep, fully visible, with a clear checkered pattern. Keep all six sheep unobstructed and individually distinguishable. No extra lions, no extra suitcases, no extra sheep.",
+            "round": 0,
+            "score": 0.799985283511622
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the lion white?",
+                "score": 9.01713112788638e-08,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=9.01713e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the lion white?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many sheeps are in the image?",
+                "score": 1.3779492534881102e-10,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.37795e-10",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many sheeps are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "color_mismatch",
+            "count_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the lion white?",
+                "score": 9.01713112788638e-08,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=9.01713e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the lion white?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many sheeps are in the image?",
+                "score": 1.3779492534881102e-10,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.37795e-10",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many sheeps are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many suitcases are in the image?",
+                "score": 1.0,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "one",
+              "status": "passed",
+              "target": "How many suitcases are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the suitcase checkered?",
+                "score": 1.0,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Is the suitcase checkered?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any suitcases in the image?",
+                "score": 0.999999971593752,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any suitcases in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the suitcase to the right of the lion?",
+                "score": 0.99999100482637,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.999991",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Is the suitcase to the right of the lion?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many lions are in the image?",
+                "score": 1.0,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "one",
+              "status": "passed",
+              "target": "How many lions are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any lions in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any lions in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the lion jumping over the sheeps?",
+                "score": 0.9998619693634936,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.999862",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Is the lion jumping over the sheeps?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any sheeps in the image?",
+                "score": 0.9999997990234988,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any sheeps in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.799985283511622,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "a checkered suitcase to the right of a white lion jumping over six sheeps",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the lion white?",
+              "score": 9.01713112788638e-08,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=9.01713e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the lion white?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many sheeps are in the image?",
+              "score": 1.3779492534881102e-10,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.37795e-10",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many sheeps are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly one suitcase, exactly one lion, and exactly six sheep.",
+            "Bind the checkered pattern only to the suitcase.",
+            "Bind the white color only to the lion.",
+            "Place the suitcase clearly to the right of the lion.",
+            "Show the white lion in mid-jump over the six sheep.",
+            "Keep all six sheep visible and countable, separated enough to distinguish each one.",
+            "Avoid occlusion between the lion, the suitcase, and the six sheep."
+          ],
+          "generation_strategy": "Use a clear side-view composition with the six sheep grouped below, the single white lion airborne above them to show jumping over them, and the single checkered suitcase positioned on the right side of the lion. Maintain separation and full visibility for accurate counting and spatial relation recognition.",
+          "initial_prompt": "A clear side-view scene with exactly six sheep visible and countable in a row or small group on the ground. Exactly one white lion is airborne above the six sheep, clearly jumping over them. Exactly one checkered suitcase is placed to the right of the white lion. Keep the suitcase separate from the lion and sheep, fully visible, with a clear checkered pattern. Keep all six sheep unobstructed and individually distinguishable. No extra lions, no extra suitcases, no extra sheep.",
+          "parsed_constraints": {
+            "attributes": {
+              "lion": [
+                "white"
+              ],
+              "suitcase": [
+                "checkered"
+              ]
+            },
+            "counts": {
+              "lion": 1,
+              "sheep": 6,
+              "suitcase": 1
+            },
+            "objects": [
+              "suitcase",
+              "lion",
+              "sheep"
+            ],
+            "relations": [
+              "the checkered suitcase is to the right of the white lion",
+              "the white lion is jumping over the six sheep"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly one suitcase, exactly one lion, and exactly six sheep.",
+            "Bind the checkered pattern only to the suitcase.",
+            "Bind the white color only to the lion.",
+            "Place the suitcase clearly to the right of the lion.",
+            "Show the white lion in mid-jump over the six sheep.",
+            "Keep all six sheep visible and countable, separated enough to distinguish each one.",
+            "Avoid occlusion between the lion, the suitcase, and the six sheep."
+          ],
+          "generation_strategy": "Use a clear side-view composition with the six sheep grouped below, the single white lion airborne above them to show jumping over them, and the single checkered suitcase positioned on the right side of the lion. Maintain separation and full visibility for accurate counting and spatial relation recognition.",
+          "initial_prompt": "A clear side-view scene with exactly six sheep visible and countable in a row or small group on the ground. Exactly one white lion is airborne above the six sheep, clearly jumping over them. Exactly one checkered suitcase is placed to the right of the white lion. Keep the suitcase separate from the lion and sheep, fully visible, with a clear checkered pattern. Keep all six sheep unobstructed and individually distinguishable. No extra lions, no extra suitcases, no extra sheep.",
+          "parsed_constraints": {
+            "attributes": {
+              "lion": [
+                "white"
+              ],
+              "suitcase": [
+                "checkered"
+              ]
+            },
+            "counts": {
+              "lion": 1,
+              "sheep": 6,
+              "suitcase": 1
+            },
+            "objects": [
+              "suitcase",
+              "lion",
+              "sheep"
+            ],
+            "relations": [
+              "the checkered suitcase is to the right of the white lion",
+              "the white lion is jumping over the six sheep"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_prompt": "A clear side-view scene with exactly six sheep visible and countable in a row or small group on the ground. Exactly one white lion is airborne above the six sheep, clearly jumping over them. Exactly one checkered suitcase is placed to the right of the white lion. Keep the suitcase separate from the lion and sheep, fully visible, with a clear checkered pattern. Keep all six sheep unobstructed and individually distinguishable. No extra lions, no extra suitcases, no extra sheep.",
+        "previous_selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ],
+        "prompt_id": "geneval2_00562_a42add44",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "color_mismatch",
+              "count_mismatch"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Is the lion white?",
+                  "score": 9.01713112788638e-08,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=9.01713e-08",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Is the lion white?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many sheeps are in the image?",
+                  "score": 1.3779492534881102e-10,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1.37795e-10",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many sheeps are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many suitcases are in the image?",
+                  "score": 1.0,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1",
+                "expected": "one",
+                "status": "passed",
+                "target": "How many suitcases are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Is the suitcase checkered?",
+                  "score": 1.0,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Is the suitcase checkered?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any suitcases in the image?",
+                  "score": 0.999999971593752,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any suitcases in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Is the suitcase to the right of the lion?",
+                  "score": 0.99999100482637,
+                  "skill": "position"
+                },
+                "detected": "soft_score=0.999991",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Is the suitcase to the right of the lion?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many lions are in the image?",
+                  "score": 1.0,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1",
+                "expected": "one",
+                "status": "passed",
+                "target": "How many lions are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any lions in the image?",
+                  "score": 1.0,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any lions in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Is the lion jumping over the sheeps?",
+                  "score": 0.9998619693634936,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=0.999862",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Is the lion jumping over the sheeps?",
+                "type": "relation_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any sheeps in the image?",
+                  "score": 0.9999997990234988,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any sheeps in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Depict exactly one suitcase, exactly one lion, and exactly six sheep.",
+                "Bind the checkered pattern only to the suitcase.",
+                "Bind the white color only to the lion.",
+                "Place the suitcase clearly to the right of the lion.",
+                "Show the white lion in mid-jump over the six sheep.",
+                "Keep all six sheep visible and countable, separated enough to distinguish each one.",
+                "Avoid occlusion between the lion, the suitcase, and the six sheep."
+              ],
+              "generation_strategy": "Use a clear side-view composition with the six sheep grouped below, the single white lion airborne above them to show jumping over them, and the single checkered suitcase positioned on the right side of the lion. Maintain separation and full visibility for accurate counting and spatial relation recognition.",
+              "initial_prompt": "A clear side-view scene with exactly six sheep visible and countable in a row or small group on the ground. Exactly one white lion is airborne above the six sheep, clearly jumping over them. Exactly one checkered suitcase is placed to the right of the white lion. Keep the suitcase separate from the lion and sheep, fully visible, with a clear checkered pattern. Keep all six sheep unobstructed and individually distinguishable. No extra lions, no extra suitcases, no extra sheep.",
+              "parsed_constraints": {
+                "attributes": {
+                  "lion": [
+                    "white"
+                  ],
+                  "suitcase": [
+                    "checkered"
+                  ]
+                },
+                "counts": {
+                  "lion": 1,
+                  "sheep": 6,
+                  "suitcase": 1
+                },
+                "objects": [
+                  "suitcase",
+                  "lion",
+                  "sheep"
+                ],
+                "relations": [
+                  "the checkered suitcase is to the right of the white lion",
+                  "the white lion is jumping over the six sheep"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Depict exactly one suitcase, exactly one lion, and exactly six sheep.",
+                "Bind the checkered pattern only to the suitcase.",
+                "Bind the white color only to the lion.",
+                "Place the suitcase clearly to the right of the lion.",
+                "Show the white lion in mid-jump over the six sheep.",
+                "Keep all six sheep visible and countable, separated enough to distinguish each one.",
+                "Avoid occlusion between the lion, the suitcase, and the six sheep."
+              ],
+              "generation_strategy": "Use a clear side-view composition with the six sheep grouped below, the single white lion airborne above them to show jumping over them, and the single checkered suitcase positioned on the right side of the lion. Maintain separation and full visibility for accurate counting and spatial relation recognition.",
+              "initial_prompt": "A clear side-view scene with exactly six sheep visible and countable in a row or small group on the ground. Exactly one white lion is airborne above the six sheep, clearly jumping over them. Exactly one checkered suitcase is placed to the right of the white lion. Keep the suitcase separate from the lion and sheep, fully visible, with a clear checkered pattern. Keep all six sheep unobstructed and individually distinguishable. No extra lions, no extra suitcases, no extra sheep.",
+              "parsed_constraints": {
+                "attributes": {
+                  "lion": [
+                    "white"
+                  ],
+                  "suitcase": [
+                    "checkered"
+                  ]
+                },
+                "counts": {
+                  "lion": 1,
+                  "sheep": 6,
+                  "suitcase": 1
+                },
+                "objects": [
+                  "suitcase",
+                  "lion",
+                  "sheep"
+                ],
+                "relations": [
+                  "the checkered suitcase is to the right of the white lion",
+                  "the white lion is jumping over the six sheep"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "prompt_used": "A clear side-view scene with exactly six sheep visible and countable in a row or small group on the ground. Exactly one white lion is airborne above the six sheep, clearly jumping over them. Exactly one checkered suitcase is placed to the right of the white lion. Keep the suitcase separate from the lion and sheep, fully visible, with a clear checkered pattern. Keep all six sheep unobstructed and individually distinguishable. No extra lions, no extra suitcases, no extra sheep.",
+            "round": 0,
+            "score": 0.799985283511622,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 5,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Is the lion white?",
+                    "score": 9.01713112788638e-08,
+                    "skill": "attribute"
+                  },
+                  "detected": "soft_score=9.01713e-08",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Is the lion white?",
+                  "type": "color_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 8,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many sheeps are in the image?",
+                    "score": 1.3779492534881102e-10,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=1.37795e-10",
+                  "expected": "six",
+                  "status": "failed",
+                  "target": "How many sheeps are in the image?",
+                  "type": "count_mismatch"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00562_a42add44"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the lion white?",
+              "score": 9.01713112788638e-08,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=9.01713e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the lion white?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many sheeps are in the image?",
+              "score": 1.3779492534881102e-10,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.37795e-10",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many sheeps are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00562_a42add44_cand_02",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Depict exactly one suitcase, exactly one lion, and exactly six sheep.",
+      "Bind the checkered pattern only to the suitcase.",
+      "Bind the white color only to the lion.",
+      "Place the suitcase clearly to the right of the lion.",
+      "Show the white lion in mid-jump over the six sheep.",
+      "Keep all six sheep visible and countable, separated enough to distinguish each one.",
+      "Avoid occlusion between the lion, the suitcase, and the six sheep."
+    ],
+    "generation_strategy": "Use a clear side-view composition with the six sheep grouped below, the single white lion airborne above them to show jumping over them, and the single checkered suitcase positioned on the right side of the lion. Maintain separation and full visibility for accurate counting and spatial relation recognition.",
+    "initial_prompt": "A clear side-view scene with exactly six sheep visible and countable in a row or small group on the ground. Exactly one white lion is airborne above the six sheep, clearly jumping over them. Exactly one checkered suitcase is placed to the right of the white lion. Keep the suitcase separate from the lion and sheep, fully visible, with a clear checkered pattern. Keep all six sheep unobstructed and individually distinguishable. No extra lions, no extra suitcases, no extra sheep.",
+    "parsed_constraints": {
+      "attributes": {
+        "lion": [
+          "white"
+        ],
+        "suitcase": [
+          "checkered"
+        ]
+      },
+      "counts": {
+        "lion": 1,
+        "sheep": 6,
+        "suitcase": 1
+      },
+      "objects": [
+        "suitcase",
+        "lion",
+        "sheep"
+      ],
+      "relations": [
+        "the checkered suitcase is to the right of the white lion",
+        "the white lion is jumping over the six sheep"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image passed object presence, one suitcase, checkered suitcase, suitcase to the right of the lion, one lion, and the lion jumping over the sheep, but failed two required constraints: the lion was not recognized as white, and the sheep count was not recognized as exactly six. These are persistent failures from the initial attempt, so the next prompt should make the lion's white coloration unmistakable and make the six sheep individually countable rather than clustered or merged.",
+    "expected_improvement": [
+      "The lion should be recognized as white by binding bright white fur directly to the single lion and avoiding non-white lion coloration.",
+      "The sheep count should improve by arranging exactly six sheep as separated, full-body, individually visible animals in a simple row under the jumping lion.",
+      "Previously passed constraints should remain stable by explicitly preserving one checkered suitcase to the right of the lion, exactly one lion, and the lion jumping over the sheep."
+    ],
+    "failure_types": [
+      "color_mismatch",
+      "count_mismatch"
+    ],
+    "preserve_constraints": [
+      "Exactly one suitcase is visible.",
+      "The single suitcase has a clear checkered pattern.",
+      "The checkered suitcase is positioned to the right of the lion.",
+      "Exactly one lion is visible.",
+      "The lion is jumping over the sheep.",
+      "Sheep are present and visible."
+    ],
+    "previous_plan_error": {
+      "details": "The initial prompt requested a white lion and exactly six sheep, but it allowed the sheep to appear as a small group, which can cause merging or undercounting. The phrase 'white lion' may not have been visually reinforced strongly enough, allowing the generator to produce a normal tan lion while still satisfying the jumping relation.",
+      "error_source": "Insufficient attribute emphasis for the lion's white color and insufficiently structured counting layout for six separate sheep."
+    },
+    "regeneration_strategy": "Use a simplified side-view composition with a horizontal lineup of exactly six separated sheep below, each full-body and countable with small gaps between them. Place exactly one bright white lion with white fur airborne above the lineup, jumping over the sheep. Keep exactly one checkered suitcase clearly to the right of the lion and separate from all animals. Add negative constraints against tan or brown lion coloring and against extra, hidden, overlapping, merged, or duplicate sheep.",
+    "regression_risks": [
+      "The generator may revert to a tan or golden lion unless the white fur is strongly bound to the lion only.",
+      "Six sheep may be merged, hidden by the lion, or cropped unless they are arranged in a separated row.",
+      "The suitcase-to-the-right relation could regress if the suitcase is placed near the sheep instead of clearly to the right of the lion.",
+      "Extra animals or suitcase-like objects could cause count failures."
+    ],
+    "repair_constraints": [
+      "Make the single lion bright white, with white fur covering the lion's body and mane; do not depict the lion as tan, brown, golden, or orange.",
+      "Show exactly six sheep, not five or fewer and not seven or more.",
+      "Arrange the six sheep as six separate full-body animals in one horizontal row below the jumping lion, with visible gaps between each sheep so each can be counted.",
+      "Keep all six sheep unobstructed, not overlapping, not merged into a flock, and not cropped.",
+      "Do not add extra sheep, duplicate sheep, extra lions, or extra suitcases."
+    ],
+    "retry_prompt": "A clear side-view scene with exactly six sheep arranged as six separate full-body animals in one horizontal row on the ground, with small visible gaps between every sheep so all six are easy to count. Exactly one lion is airborne above the row, clearly jumping over the six sheep; the lion has unmistakably bright white fur on its entire body and mane, not tan, not brown, not golden, and not orange. Exactly one checkered suitcase is fully visible to the right of the white lion, separate from the lion and the sheep, with a clear checkered pattern. Preserve the layout: suitcase to the right of the lion, lion jumping over the sheep. No extra sheep, no hidden sheep, no merged sheep, no extra lions, no extra suitcases.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "anti_occlusion",
+        "negative_constraints",
+        "clarity_visibility",
+        "object_presence",
+        "multi_object_composition"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same skill set but prioritize quantity_counting and attribute_binding first because the persistent failures are exact sheep count and the lion's white color; use spatial_layout and anti_occlusion to make the six sheep separable and countable."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the lion white?",
+            "score": 9.01713112788638e-08,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=9.01713e-08",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the lion white?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many sheeps are in the image?",
+            "score": 1.3779492534881102e-10,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.37795e-10",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many sheeps are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00066/samples/00002.png",
+      "prompt": "A clear side-view scene with exactly six sheep visible and countable in a row or small group on the ground. Exactly one white lion is airborne above the six sheep, clearly jumping over them. Exactly one checkered suitcase is placed to the right of the white lion. Keep the suitcase separate from the lion and sheep, fully visible, with a clear checkered pattern. Keep all six sheep unobstructed and individually distinguishable. No extra lions, no extra suitcases, no extra sheep.",
+      "round": 0,
+      "score": 0.799985283511622
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00562_a42add44_cand_02",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "color_mismatch",
+        "count_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the lion white?",
+            "score": 9.01713112788638e-08,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=9.01713e-08",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the lion white?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many sheeps are in the image?",
+            "score": 1.3779492534881102e-10,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.37795e-10",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many sheeps are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many suitcases are in the image?",
+            "score": 1.0,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "one",
+          "status": "passed",
+          "target": "How many suitcases are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the suitcase checkered?",
+            "score": 1.0,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the suitcase checkered?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any suitcases in the image?",
+            "score": 0.999999971593752,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any suitcases in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the suitcase to the right of the lion?",
+            "score": 0.99999100482637,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.999991",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the suitcase to the right of the lion?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many lions are in the image?",
+            "score": 1.0,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "one",
+          "status": "passed",
+          "target": "How many lions are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any lions in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any lions in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the lion jumping over the sheeps?",
+            "score": 0.9998619693634936,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.999862",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the lion jumping over the sheeps?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any sheeps in the image?",
+            "score": 0.9999997990234988,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any sheeps in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.799985283511622,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the lion white?",
+              "score": 9.01713112788638e-08,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=9.01713e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the lion white?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many sheeps are in the image?",
+              "score": 1.3779492534881102e-10,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.37795e-10",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many sheeps are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00066/samples/00002.png",
+        "prompt": "A clear side-view scene with exactly six sheep visible and countable in a row or small group on the ground. Exactly one white lion is airborne above the six sheep, clearly jumping over them. Exactly one checkered suitcase is placed to the right of the white lion. Keep the suitcase separate from the lion and sheep, fully visible, with a clear checkered pattern. Keep all six sheep unobstructed and individually distinguishable. No extra lions, no extra suitcases, no extra sheep.",
+        "round": 0,
+        "score": 0.799985283511622
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the lion white?",
+            "score": 9.01713112788638e-08,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=9.01713e-08",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the lion white?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many sheeps are in the image?",
+            "score": 1.3779492534881102e-10,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.37795e-10",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many sheeps are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "color_mismatch",
+        "count_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the lion white?",
+            "score": 9.01713112788638e-08,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=9.01713e-08",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the lion white?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many sheeps are in the image?",
+            "score": 1.3779492534881102e-10,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.37795e-10",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many sheeps are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many suitcases are in the image?",
+            "score": 1.0,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "one",
+          "status": "passed",
+          "target": "How many suitcases are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the suitcase checkered?",
+            "score": 1.0,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the suitcase checkered?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any suitcases in the image?",
+            "score": 0.999999971593752,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any suitcases in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the suitcase to the right of the lion?",
+            "score": 0.99999100482637,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.999991",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the suitcase to the right of the lion?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many lions are in the image?",
+            "score": 1.0,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "one",
+          "status": "passed",
+          "target": "How many lions are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any lions in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any lions in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the lion jumping over the sheeps?",
+            "score": 0.9998619693634936,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.999862",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the lion jumping over the sheeps?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any sheeps in the image?",
+            "score": 0.9999997990234988,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any sheeps in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.799985283511622,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "a checkered suitcase to the right of a white lion jumping over six sheeps",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the lion white?",
+          "score": 9.01713112788638e-08,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=9.01713e-08",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Is the lion white?",
+        "type": "color_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many sheeps are in the image?",
+          "score": 1.3779492534881102e-10,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.37795e-10",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many sheeps are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Depict exactly one suitcase, exactly one lion, and exactly six sheep.",
+        "Bind the checkered pattern only to the suitcase.",
+        "Bind the white color only to the lion.",
+        "Place the suitcase clearly to the right of the lion.",
+        "Show the white lion in mid-jump over the six sheep.",
+        "Keep all six sheep visible and countable, separated enough to distinguish each one.",
+        "Avoid occlusion between the lion, the suitcase, and the six sheep."
+      ],
+      "generation_strategy": "Use a clear side-view composition with the six sheep grouped below, the single white lion airborne above them to show jumping over them, and the single checkered suitcase positioned on the right side of the lion. Maintain separation and full visibility for accurate counting and spatial relation recognition.",
+      "initial_prompt": "A clear side-view scene with exactly six sheep visible and countable in a row or small group on the ground. Exactly one white lion is airborne above the six sheep, clearly jumping over them. Exactly one checkered suitcase is placed to the right of the white lion. Keep the suitcase separate from the lion and sheep, fully visible, with a clear checkered pattern. Keep all six sheep unobstructed and individually distinguishable. No extra lions, no extra suitcases, no extra sheep.",
+      "parsed_constraints": {
+        "attributes": {
+          "lion": [
+            "white"
+          ],
+          "suitcase": [
+            "checkered"
+          ]
+        },
+        "counts": {
+          "lion": 1,
+          "sheep": 6,
+          "suitcase": 1
+        },
+        "objects": [
+          "suitcase",
+          "lion",
+          "sheep"
+        ],
+        "relations": [
+          "the checkered suitcase is to the right of the white lion",
+          "the white lion is jumping over the six sheep"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Depict exactly one suitcase, exactly one lion, and exactly six sheep.",
+        "Bind the checkered pattern only to the suitcase.",
+        "Bind the white color only to the lion.",
+        "Place the suitcase clearly to the right of the lion.",
+        "Show the white lion in mid-jump over the six sheep.",
+        "Keep all six sheep visible and countable, separated enough to distinguish each one.",
+        "Avoid occlusion between the lion, the suitcase, and the six sheep."
+      ],
+      "generation_strategy": "Use a clear side-view composition with the six sheep grouped below, the single white lion airborne above them to show jumping over them, and the single checkered suitcase positioned on the right side of the lion. Maintain separation and full visibility for accurate counting and spatial relation recognition.",
+      "initial_prompt": "A clear side-view scene with exactly six sheep visible and countable in a row or small group on the ground. Exactly one white lion is airborne above the six sheep, clearly jumping over them. Exactly one checkered suitcase is placed to the right of the white lion. Keep the suitcase separate from the lion and sheep, fully visible, with a clear checkered pattern. Keep all six sheep unobstructed and individually distinguishable. No extra lions, no extra suitcases, no extra sheep.",
+      "parsed_constraints": {
+        "attributes": {
+          "lion": [
+            "white"
+          ],
+          "suitcase": [
+            "checkered"
+          ]
+        },
+        "counts": {
+          "lion": 1,
+          "sheep": 6,
+          "suitcase": 1
+        },
+        "objects": [
+          "suitcase",
+          "lion",
+          "sheep"
+        ],
+        "relations": [
+          "the checkered suitcase is to the right of the white lion",
+          "the white lion is jumping over the six sheep"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_prompt": "A clear side-view scene with exactly six sheep visible and countable in a row or small group on the ground. Exactly one white lion is airborne above the six sheep, clearly jumping over them. Exactly one checkered suitcase is placed to the right of the white lion. Keep the suitcase separate from the lion and sheep, fully visible, with a clear checkered pattern. Keep all six sheep unobstructed and individually distinguishable. No extra lions, no extra suitcases, no extra sheep.",
+    "previous_selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ],
+    "prompt_id": "geneval2_00562_a42add44",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "color_mismatch",
+          "count_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the lion white?",
+              "score": 9.01713112788638e-08,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=9.01713e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the lion white?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many sheeps are in the image?",
+              "score": 1.3779492534881102e-10,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.37795e-10",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many sheeps are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many suitcases are in the image?",
+              "score": 1.0,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "one",
+            "status": "passed",
+            "target": "How many suitcases are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the suitcase checkered?",
+              "score": 1.0,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Is the suitcase checkered?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any suitcases in the image?",
+              "score": 0.999999971593752,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any suitcases in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the suitcase to the right of the lion?",
+              "score": 0.99999100482637,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.999991",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Is the suitcase to the right of the lion?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many lions are in the image?",
+              "score": 1.0,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "one",
+            "status": "passed",
+            "target": "How many lions are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any lions in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any lions in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the lion jumping over the sheeps?",
+              "score": 0.9998619693634936,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.999862",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Is the lion jumping over the sheeps?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any sheeps in the image?",
+              "score": 0.9999997990234988,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any sheeps in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly one suitcase, exactly one lion, and exactly six sheep.",
+            "Bind the checkered pattern only to the suitcase.",
+            "Bind the white color only to the lion.",
+            "Place the suitcase clearly to the right of the lion.",
+            "Show the white lion in mid-jump over the six sheep.",
+            "Keep all six sheep visible and countable, separated enough to distinguish each one.",
+            "Avoid occlusion between the lion, the suitcase, and the six sheep."
+          ],
+          "generation_strategy": "Use a clear side-view composition with the six sheep grouped below, the single white lion airborne above them to show jumping over them, and the single checkered suitcase positioned on the right side of the lion. Maintain separation and full visibility for accurate counting and spatial relation recognition.",
+          "initial_prompt": "A clear side-view scene with exactly six sheep visible and countable in a row or small group on the ground. Exactly one white lion is airborne above the six sheep, clearly jumping over them. Exactly one checkered suitcase is placed to the right of the white lion. Keep the suitcase separate from the lion and sheep, fully visible, with a clear checkered pattern. Keep all six sheep unobstructed and individually distinguishable. No extra lions, no extra suitcases, no extra sheep.",
+          "parsed_constraints": {
+            "attributes": {
+              "lion": [
+                "white"
+              ],
+              "suitcase": [
+                "checkered"
+              ]
+            },
+            "counts": {
+              "lion": 1,
+              "sheep": 6,
+              "suitcase": 1
+            },
+            "objects": [
+              "suitcase",
+              "lion",
+              "sheep"
+            ],
+            "relations": [
+              "the checkered suitcase is to the right of the white lion",
+              "the white lion is jumping over the six sheep"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly one suitcase, exactly one lion, and exactly six sheep.",
+            "Bind the checkered pattern only to the suitcase.",
+            "Bind the white color only to the lion.",
+            "Place the suitcase clearly to the right of the lion.",
+            "Show the white lion in mid-jump over the six sheep.",
+            "Keep all six sheep visible and countable, separated enough to distinguish each one.",
+            "Avoid occlusion between the lion, the suitcase, and the six sheep."
+          ],
+          "generation_strategy": "Use a clear side-view composition with the six sheep grouped below, the single white lion airborne above them to show jumping over them, and the single checkered suitcase positioned on the right side of the lion. Maintain separation and full visibility for accurate counting and spatial relation recognition.",
+          "initial_prompt": "A clear side-view scene with exactly six sheep visible and countable in a row or small group on the ground. Exactly one white lion is airborne above the six sheep, clearly jumping over them. Exactly one checkered suitcase is placed to the right of the white lion. Keep the suitcase separate from the lion and sheep, fully visible, with a clear checkered pattern. Keep all six sheep unobstructed and individually distinguishable. No extra lions, no extra suitcases, no extra sheep.",
+          "parsed_constraints": {
+            "attributes": {
+              "lion": [
+                "white"
+              ],
+              "suitcase": [
+                "checkered"
+              ]
+            },
+            "counts": {
+              "lion": 1,
+              "sheep": 6,
+              "suitcase": 1
+            },
+            "objects": [
+              "suitcase",
+              "lion",
+              "sheep"
+            ],
+            "relations": [
+              "the checkered suitcase is to the right of the white lion",
+              "the white lion is jumping over the six sheep"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "prompt_used": "A clear side-view scene with exactly six sheep visible and countable in a row or small group on the ground. Exactly one white lion is airborne above the six sheep, clearly jumping over them. Exactly one checkered suitcase is placed to the right of the white lion. Keep the suitcase separate from the lion and sheep, fully visible, with a clear checkered pattern. Keep all six sheep unobstructed and individually distinguishable. No extra lions, no extra suitcases, no extra sheep.",
+        "round": 0,
+        "score": 0.799985283511622,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the lion white?",
+                "score": 9.01713112788638e-08,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=9.01713e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the lion white?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many sheeps are in the image?",
+                "score": 1.3779492534881102e-10,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.37795e-10",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many sheeps are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00562_a42add44"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the lion white?",
+          "score": 9.01713112788638e-08,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=9.01713e-08",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Is the lion white?",
+        "type": "color_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many sheeps are in the image?",
+          "score": 1.3779492534881102e-10,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.37795e-10",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many sheeps are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00066/samples/00002.png",
+    "best_so_far_prompt": "A clear side-view scene with exactly six sheep visible and countable in a row or small group on the ground. Exactly one white lion is airborne above the six sheep, clearly jumping over them. Exactly one checkered suitcase is placed to the right of the white lion. Keep the suitcase separate from the lion and sheep, fully visible, with a clear checkered pattern. Keep all six sheep unobstructed and individually distinguishable. No extra lions, no extra suitcases, no extra sheep.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.799985283511622,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the lion white?",
+          "score": 9.01713112788638e-08,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=9.01713e-08",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Is the lion white?",
+        "type": "color_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many sheeps are in the image?",
+          "score": 1.3779492534881102e-10,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.37795e-10",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many sheeps are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Depict exactly one suitcase, exactly one lion, and exactly six sheep.",
+        "Bind the checkered pattern only to the suitcase.",
+        "Bind the white color only to the lion.",
+        "Place the suitcase clearly to the right of the lion.",
+        "Show the white lion in mid-jump over the six sheep.",
+        "Keep all six sheep visible and countable, separated enough to distinguish each one.",
+        "Avoid occlusion between the lion, the suitcase, and the six sheep."
+      ],
+      "generation_strategy": "Use a clear side-view composition with the six sheep grouped below, the single white lion airborne above them to show jumping over them, and the single checkered suitcase positioned on the right side of the lion. Maintain separation and full visibility for accurate counting and spatial relation recognition.",
+      "initial_prompt": "A clear side-view scene with exactly six sheep visible and countable in a row or small group on the ground. Exactly one white lion is airborne above the six sheep, clearly jumping over them. Exactly one checkered suitcase is placed to the right of the white lion. Keep the suitcase separate from the lion and sheep, fully visible, with a clear checkered pattern. Keep all six sheep unobstructed and individually distinguishable. No extra lions, no extra suitcases, no extra sheep.",
+      "parsed_constraints": {
+        "attributes": {
+          "lion": [
+            "white"
+          ],
+          "suitcase": [
+            "checkered"
+          ]
+        },
+        "counts": {
+          "lion": 1,
+          "sheep": 6,
+          "suitcase": 1
+        },
+        "objects": [
+          "suitcase",
+          "lion",
+          "sheep"
+        ],
+        "relations": [
+          "the checkered suitcase is to the right of the white lion",
+          "the white lion is jumping over the six sheep"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.800 failed=['Is the lion white?', 'How many sheeps are in the image?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_incremental/snapshot_003_worker_00/geneval2_00562_a42add44__geneval2_00562_a42add44_cand_02__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00562_a42add44__geneval2_00562_a42add44_cand_02__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00562_a42add44",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image passed object presence, one suitcase, checkered suitcase, suitcase to the right of the lion, one lion, and the lion jumping over the sheep, but failed two required constraints: the lion was not recognized as white, and the sheep count was not recognized as exactly six. These are persistent failures from the initial attempt, so the next prompt should make the lion's white coloration unmistakable and make the six sheep individually countable rather than clustered or merged.",
+    "expected_improvement": [
+      "The lion should be recognized as white by binding bright white fur directly to the single lion and avoiding non-white lion coloration.",
+      "The sheep count should improve by arranging exactly six sheep as separated, full-body, individually visible animals in a simple row under the jumping lion.",
+      "Previously passed constraints should remain stable by explicitly preserving one checkered suitcase to the right of the lion, exactly one lion, and the lion jumping over the sheep."
+    ],
+    "failure_types": [
+      "color_mismatch",
+      "count_mismatch"
+    ],
+    "preserve_constraints": [
+      "Exactly one suitcase is visible.",
+      "The single suitcase has a clear checkered pattern.",
+      "The checkered suitcase is positioned to the right of the lion.",
+      "Exactly one lion is visible.",
+      "The lion is jumping over the sheep.",
+      "Sheep are present and visible."
+    ],
+    "previous_plan_error": {
+      "details": "The initial prompt requested a white lion and exactly six sheep, but it allowed the sheep to appear as a small group, which can cause merging or undercounting. The phrase 'white lion' may not have been visually reinforced strongly enough, allowing the generator to produce a normal tan lion while still satisfying the jumping relation.",
+      "error_source": "Insufficient attribute emphasis for the lion's white color and insufficiently structured counting layout for six separate sheep."
+    },
+    "regeneration_strategy": "Use a simplified side-view composition with a horizontal lineup of exactly six separated sheep below, each full-body and countable with small gaps between them. Place exactly one bright white lion with white fur airborne above the lineup, jumping over the sheep. Keep exactly one checkered suitcase clearly to the right of the lion and separate from all animals. Add negative constraints against tan or brown lion coloring and against extra, hidden, overlapping, merged, or duplicate sheep.",
+    "regression_risks": [
+      "The generator may revert to a tan or golden lion unless the white fur is strongly bound to the lion only.",
+      "Six sheep may be merged, hidden by the lion, or cropped unless they are arranged in a separated row.",
+      "The suitcase-to-the-right relation could regress if the suitcase is placed near the sheep instead of clearly to the right of the lion.",
+      "Extra animals or suitcase-like objects could cause count failures."
+    ],
+    "repair_constraints": [
+      "Make the single lion bright white, with white fur covering the lion's body and mane; do not depict the lion as tan, brown, golden, or orange.",
+      "Show exactly six sheep, not five or fewer and not seven or more.",
+      "Arrange the six sheep as six separate full-body animals in one horizontal row below the jumping lion, with visible gaps between each sheep so each can be counted.",
+      "Keep all six sheep unobstructed, not overlapping, not merged into a flock, and not cropped.",
+      "Do not add extra sheep, duplicate sheep, extra lions, or extra suitcases."
+    ],
+    "retry_prompt": "A clear side-view scene with exactly six sheep arranged as six separate full-body animals in one horizontal row on the ground, with small visible gaps between every sheep so all six are easy to count. Exactly one lion is airborne above the row, clearly jumping over the six sheep; the lion has unmistakably bright white fur on its entire body and mane, not tan, not brown, not golden, and not orange. Exactly one checkered suitcase is fully visible to the right of the white lion, separate from the lion and the sheep, with a clear checkered pattern. Preserve the layout: suitcase to the right of the lion, lion jumping over the sheep. No extra sheep, no hidden sheep, no merged sheep, no extra lions, no extra suitcases.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "anti_occlusion",
+        "negative_constraints",
+        "clarity_visibility",
+        "object_presence",
+        "multi_object_composition"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same skill set but prioritize quantity_counting and attribute_binding first because the persistent failures are exact sheep count and the lion's white color; use spatial_layout and anti_occlusion to make the six sheep separable and countable."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 8,
+    "dataset": "geneval2",
+    "original_prompt": "a checkered suitcase to the right of a white lion jumping over six sheeps",
+    "prompt": "a checkered suitcase to the right of a white lion jumping over six sheeps",
+    "prompt_id": "geneval2_00562_a42add44",
+    "sampling_bucket": "relation_action",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "relation_action",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 2,
+      "count": 3,
+      "object": 3,
+      "position": 1,
+      "verb": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object",
+      "verb",
+      "count",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 562,
+    "vqa_list": [
+      [
+        "How many suitcases are in the image?",
+        "one"
+      ],
+      [
+        "Is the suitcase checkered?",
+        "Yes"
+      ],
+      [
+        "Are there any suitcases in the image?",
+        "Yes"
+      ],
+      [
+        "Is the suitcase to the right of the lion?",
+        "Yes"
+      ],
+      [
+        "How many lions are in the image?",
+        "one"
+      ],
+      [
+        "Is the lion white?",
+        "Yes"
+      ],
+      [
+        "Are there any lions in the image?",
+        "Yes"
+      ],
+      [
+        "Is the lion jumping over the sheeps?",
+        "Yes"
+      ],
+      [
+        "How many sheeps are in the image?",
+        "six"
+      ],
+      [
+        "Are there any sheeps in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00562_a42add44"
+}

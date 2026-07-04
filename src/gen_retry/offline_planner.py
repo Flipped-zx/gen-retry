@@ -72,7 +72,11 @@ def process_generation_package(
     eval_config = eval_config or EvalConfig()
     package_source = Path(package_path)
     package = read_json(package_source)
-    errors = validate_generation_package(package, base_dir=package_source.parent)
+    errors = validate_generation_package(
+        package,
+        base_dir=package_source.parent,
+        require_image_path_exists=_requires_local_image(package, eval_config),
+    )
     if errors:
         raise ValueError(f"{package_path} is not a valid generation package: {errors}")
 
@@ -105,6 +109,7 @@ def process_generation_package(
         config=stop_config,
     )
     teacher_action: dict[str, Any] | None = None
+    teacher_request: dict[str, Any] | None = None
     teacher_error = ""
     if not stop["should_stop"]:
         state = build_teacher_state(
@@ -116,6 +121,7 @@ def process_generation_package(
             memory=memory,
             stop_config=stop_config,
         )
+        teacher_request = state
         try:
             action = teacher.retry_replan(state)
             teacher_action = action.to_dict()
@@ -127,13 +133,23 @@ def process_generation_package(
                 "details": teacher_error,
             }
 
-    current_attempt["planner_action"] = teacher_action or {}
+    current_attempt["teacher_request"] = teacher_request or {}
     trajectory["attempts"] = attempts
     trajectory["memory"] = memory["trajectory_memory"]
     trajectory["latest_round"] = current_round
     trajectory["stop"] = stop
     if teacher_action:
         trajectory["latest_teacher_action"] = teacher_action
+    if teacher_request:
+        trajectory["latest_teacher_request"] = teacher_request
+    status = trajectory_status(
+        stop=stop,
+        teacher_action=teacher_action,
+        teacher_error=teacher_error,
+        current_round=current_round,
+    )
+    trajectory["status"] = status
+    trajectory["retry_ready_action"] = teacher_action or {}
     trajectory.setdefault("metadata", {})["last_input_package_path"] = str(package_source)
     trajectory.setdefault("metadata", {})["last_output_package_path"] = str(
         retry_action_file_path(package, output_dir=output_dir)
@@ -147,7 +163,9 @@ def process_generation_package(
         memory=memory,
         stop=stop,
         teacher_action=teacher_action,
+        teacher_request=teacher_request,
         teacher_error=teacher_error,
+        status=status,
         trajectory_path=trajectory_path,
     )
     output_path = retry_action_file_path(package, output_dir=output_dir)
@@ -278,9 +296,9 @@ def build_attempt_from_package(
             "image_path": str(generation.get("image_path", "")),
             "generation_metadata": dict(generation.get("generation_metadata") or {}),
         },
-        "previous_action": dict(package.get("previous_action") or {}),
+        "previous_action": _planner_action_for_generation(package),
         "evaluation": evaluation_payload(report, raw_eval_path=raw_eval_path),
-        "planner_action": {},
+        "planner_action": _planner_action_for_generation(package),
         "transition": {},
     }
 
@@ -381,7 +399,7 @@ def build_memory(
     )
     current["transition"] = dict(transition)
     score_delta_from_previous = (
-        current_report.score - previous_report.score if previous_report is not None else 0.0
+        current_report.score - previous_report.score if previous_report is not None else None
     )
     score_delta_from_best = (
         current_report.score - _attempt_report(best_before).score if best_before else 0.0
@@ -390,7 +408,9 @@ def build_memory(
     transition["score_delta_from_best"] = score_delta_from_best
     best_report = _attempt_report(best_after)
     best_generation = dict(best_after.get("generation") or {})
+    previous_action = dict(current.get("previous_action") or current.get("planner_action") or {})
     memory = {
+        "current_round": current_round,
         "best_so_far_round": int(best_after.get("round", 0)),
         "best_so_far_score": best_report.score,
         "best_so_far_image_path": str(best_generation.get("image_path", "")),
@@ -398,6 +418,7 @@ def build_memory(
         "best_so_far_failed_constraints": [
             _constraint_public(item) for item in best_report.failed_constraints
         ],
+        "previous_action": previous_action,
         "fixed_constraints": transition["fixed_constraints"],
         "persistent_failures": transition["persistent_failures"],
         "new_failures": transition["new_failures"],
@@ -430,12 +451,13 @@ def compute_transition(
     pass_threshold: float,
 ) -> dict[str, Any]:
     if previous_report is None:
+        failed = [_constraint_public(item) for item in current_report.failed_constraints]
         return {
-            "score_delta_from_previous": 0.0,
+            "score_delta_from_previous": None,
             "score_delta_from_best": 0.0,
             "fixed_constraints": [],
-            "persistent_failures": [],
-            "new_failures": [_constraint_public(item) for item in current_report.failed_constraints],
+            "persistent_failures": failed,
+            "new_failures": [],
             "regressed_constraints": [],
             "transition_type": "initial",
         }
@@ -492,7 +514,8 @@ def apply_stop_rules(
         return {"should_stop": True, "reason": "passed"}
     if current_round >= config.max_retry:
         return {"should_stop": True, "reason": "max_retry"}
-    delta = float(memory["trajectory_memory"].get("score_delta_from_previous", 0.0))
+    raw_delta = memory["trajectory_memory"].get("score_delta_from_previous", 0.0)
+    delta = float(raw_delta) if raw_delta is not None else 0.0
     if (
         current_round > 0
         and not config.allow_retry_after_regression
@@ -538,7 +561,7 @@ def build_teacher_state(
         "previous_prompt": str(current_generation.get("prompt_used", "")),
         "previous_selected_skills": selected_skills,
         "current_round": current_round,
-        "retry_round": current_round,
+        "retry_round": current_round + 1,
         "retry_budget_left": max(0, stop_config.max_retry - current_round),
         "normalized_eval_report": _report_public(report),
         "current_eval_report": _report_public(report),
@@ -565,6 +588,24 @@ def build_teacher_state(
     }
 
 
+def trajectory_status(
+    *,
+    stop: dict[str, Any],
+    teacher_action: dict[str, Any] | None,
+    teacher_error: str,
+    current_round: int,
+) -> str:
+    if teacher_error:
+        return "error"
+    if teacher_action:
+        return "retry_ready"
+    if stop.get("should_stop") is True and stop.get("reason") == "passed" and current_round == 0:
+        return "initial_success"
+    if stop.get("should_stop") is True:
+        return "error"
+    return "error"
+
+
 def build_retry_action_package(
     package: dict[str, Any],
     *,
@@ -574,7 +615,9 @@ def build_retry_action_package(
     stop: dict[str, Any],
     teacher_action: dict[str, Any] | None,
     teacher_error: str,
+    status: str,
     trajectory_path: str | Path,
+    teacher_request: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     return {
         "schema_version": CONTRACT_SCHEMA_VERSION,
@@ -585,8 +628,11 @@ def build_retry_action_package(
         "evaluation": evaluation_payload(report, raw_eval_path=raw_eval_path),
         "memory": dict(memory["trajectory_memory"]),
         "stop": dict(stop),
+        "teacher_request": teacher_request,
         "teacher_action": teacher_action,
+        "retry_ready_action": teacher_action or {},
         "teacher_error": teacher_error,
+        "status": status,
         "trajectory_path": str(trajectory_path),
     }
 
@@ -635,12 +681,28 @@ def compact_retry_history(attempts: list[dict[str, Any]]) -> list[dict[str, Any]
     return history
 
 
+def _planner_action_for_generation(package: dict[str, Any]) -> dict[str, Any]:
+    previous_action = package.get("previous_action")
+    if isinstance(previous_action, dict) and previous_action:
+        return dict(previous_action)
+    if int(package.get("round", 0)) == 0:
+        selected_skills = previous_selected_skills({}, package)
+        return _previous_initial_plan(package, {}, selected_skills)
+    return {}
+
+
 def previous_selected_skills(previous_action: dict[str, Any], package: dict[str, Any]) -> list[str]:
     if previous_action.get("action_type") == "retry_replan":
         skills = previous_action.get("skill_revision", {}).get("new_skills", [])
         return _valid_skills(skills)
     if previous_action.get("action_type") == "initial_plan":
         return _valid_skills(previous_action.get("selected_skills", []))
+    previous_initial_plan = package.get("previous_initial_plan")
+    if isinstance(previous_initial_plan, dict):
+        skills = previous_initial_plan.get("selected_skills", [])
+        selected = _valid_skills(skills)
+        if selected:
+            return selected
     source_skills = _nested_get(package, ("source", "skills"))
     mapped = [_map_source_skill(str(item)) for item in source_skills or []]
     return _valid_skills(mapped)
@@ -652,7 +714,12 @@ def is_passed(report: NormalizedEvalReport, pass_threshold: float = 0.95) -> boo
     return report.score >= pass_threshold and not report.critical_failure_types
 
 
-def validate_generation_package(data: dict[str, Any], *, base_dir: str | Path) -> list[str]:
+def validate_generation_package(
+    data: dict[str, Any],
+    *,
+    base_dir: str | Path,
+    require_image_path_exists: bool = True,
+) -> list[str]:
     errors: list[str] = []
     _require_keys(data, ("schema_version", "trajectory_id", "prompt_id", "candidate_id", "round", "source", "generation"), errors)
     if data.get("schema_version") != CONTRACT_SCHEMA_VERSION:
@@ -663,7 +730,7 @@ def validate_generation_package(data: dict[str, Any], *, base_dir: str | Path) -
         return errors
     _require_keys(generation, ("generator_name", "prompt_used", "image_path"), errors, prefix="generation.")
     image_path = str(generation.get("image_path", ""))
-    if image_path and not _resolve_path(image_path, base_dir).exists():
+    if require_image_path_exists and image_path and not _resolve_path(image_path, base_dir).exists():
         errors.append(f"generation.image_path does not exist: {image_path}")
     if data.get("previous_action") not in (None, {}) and not isinstance(data.get("previous_action"), dict):
         errors.append("previous_action must be null or an object")
@@ -705,11 +772,13 @@ def validate_retry_action_package(data: dict[str, Any]) -> list[str]:
                     errors.append("teacher_action.retry_prompt is required when stop.should_stop is false")
     memory = data.get("memory")
     required_memory = (
+        "current_round",
         "best_so_far_round",
         "best_so_far_score",
         "best_so_far_image_path",
         "best_so_far_prompt",
         "best_so_far_failed_constraints",
+        "previous_action",
         "fixed_constraints",
         "persistent_failures",
         "new_failures",
@@ -724,7 +793,13 @@ def validate_retry_action_package(data: dict[str, Any]) -> list[str]:
     return errors
 
 
-def validate_raw_trajectory(data: dict[str, Any], *, base_dir: str | Path, pass_threshold: float = 0.95) -> list[str]:
+def validate_raw_trajectory(
+    data: dict[str, Any],
+    *,
+    base_dir: str | Path,
+    pass_threshold: float = 0.95,
+    require_image_path_exists: bool = True,
+) -> list[str]:
     errors: list[str] = []
     _require_keys(data, ("schema_version", "trajectory_id", "prompt_id", "candidate_id", "attempts", "memory"), errors)
     attempts = data.get("attempts")
@@ -744,7 +819,7 @@ def validate_raw_trajectory(data: dict[str, Any], *, base_dir: str | Path, pass_
         generation = attempt.get("generation")
         if isinstance(generation, dict):
             image_path = str(generation.get("image_path", ""))
-            if image_path and not _resolve_path(image_path, base_dir).exists():
+            if require_image_path_exists and image_path and not _resolve_path(image_path, base_dir).exists():
                 errors.append(f"attempts[{index}].generation.image_path does not exist: {image_path}")
         evaluation = attempt.get("evaluation")
         if isinstance(evaluation, dict):
@@ -766,6 +841,7 @@ def validate_raw_trajectory(data: dict[str, Any], *, base_dir: str | Path, pass_
     for key in (
         "best_so_far_round",
         "best_so_far_score",
+        "previous_action",
         "fixed_constraints",
         "persistent_failures",
         "new_failures",
@@ -776,13 +852,26 @@ def validate_raw_trajectory(data: dict[str, Any], *, base_dir: str | Path, pass_
     return errors
 
 
-def validate_offline_object(data: dict[str, Any], *, base_dir: str | Path = ".") -> list[str]:
+def validate_offline_object(
+    data: dict[str, Any],
+    *,
+    base_dir: str | Path = ".",
+    require_image_path_exists: bool = True,
+) -> list[str]:
     if "attempts" in data:
-        return validate_raw_trajectory(data, base_dir=base_dir)
+        return validate_raw_trajectory(
+            data,
+            base_dir=base_dir,
+            require_image_path_exists=require_image_path_exists,
+        )
     if "stop" in data and "evaluation" in data:
         return validate_retry_action_package(data)
     if "generation" in data and "source" in data:
-        return validate_generation_package(data, base_dir=base_dir)
+        return validate_generation_package(
+            data,
+            base_dir=base_dir,
+            require_image_path_exists=require_image_path_exists,
+        )
     return ["unknown offline contract object type"]
 
 
@@ -931,6 +1020,28 @@ def _looks_like_normalized_report(data: dict[str, Any]) -> bool:
     )
 
 
+def _has_evaluation_source(package: dict[str, Any], eval_config: EvalConfig) -> bool:
+    if eval_config.eval_result_path:
+        return True
+    raw_eval_path = _first_nonempty(
+        _nested_get(package, ("evaluation", "raw_eval_path")),
+        _nested_get(package, ("generation", "raw_eval_path")),
+        _nested_get(package, ("generation", "geneval2_result_path")),
+        package.get("raw_eval_path"),
+        package.get("geneval2_result_path"),
+    )
+    if raw_eval_path:
+        return True
+    embedded_eval = package.get("evaluation") or package.get("normalized_eval_report")
+    return isinstance(embedded_eval, dict) and _looks_like_normalized_report(embedded_eval)
+
+
+def _requires_local_image(package: dict[str, Any], eval_config: EvalConfig) -> bool:
+    """Only require local image bytes when Machine B must run GenEval2 itself."""
+
+    return bool(eval_config.geneval2_command_template and not _has_evaluation_source(package, eval_config))
+
+
 def _original_prompt(package: dict[str, Any]) -> str:
     return str(
         _nested_get(package, ("source", "original_prompt"))
@@ -958,7 +1069,14 @@ def _first_nonempty(*values: Any) -> Any:
 
 def _resolve_path(path: str | Path, base_dir: str | Path) -> Path:
     value = Path(path)
-    return value if value.is_absolute() else Path(base_dir) / value
+    if value.is_absolute():
+        return value
+    base_candidate = Path(base_dir) / value
+    if base_candidate.exists():
+        return base_candidate
+    if value.exists():
+        return value
+    return base_candidate
 
 
 def _require_keys(data: dict[str, Any], keys: tuple[str, ...], errors: list[str], *, prefix: str = "") -> None:

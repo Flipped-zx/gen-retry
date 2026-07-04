@@ -1,0 +1,158 @@
+{
+  "candidate_id": "geneval2_00713_e6e6f898_cand_00",
+  "generation": {
+    "generation_metadata": {
+      "candidate_index": 0,
+      "generation_prompt_source": "initial_plan",
+      "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00713_e6e6f898.json",
+      "manifest_prompt_index": 21,
+      "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+      "sample_id": "geneval2_00713_e6e6f898"
+    },
+    "generator_name": "qwen-image-2512",
+    "image_id": "geneval2_00713_e6e6f898_cand_00",
+    "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00021/samples/00000.png",
+    "prompt_used": "A clear scene with exactly five sparkling clocks arranged in a visible back row, all behind exactly five stone raccoons arranged in a front row. The five raccoons are made of stone and are playing with exactly two birds positioned near them. Keep all five clocks, all five stone raccoons, and both birds fully visible, separated enough to count, with the clocks clearly behind the raccoons. Do not include any extra clocks, raccoons, birds, or other animals.",
+    "seed": 1105
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "eval_lookup_key": "",
+    "image_path_is_artifact_reference": true,
+    "teacher_uses_image_bytes": false
+  },
+  "previous_action": null,
+  "previous_initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly five clocks, exactly five raccoons, and exactly two birds.",
+      "Bind sparkling only to the five clocks.",
+      "Bind stone material only to the five raccoons.",
+      "Place all five clocks behind the five raccoons.",
+      "Show the five stone raccoons playing with the two birds.",
+      "Keep every clock, raccoon, and bird clearly visible and countable; avoid heavy overlap or occlusion.",
+      "Do not add extra clocks, raccoons, birds, or other animals."
+    ],
+    "generation_strategy": "Create a clear multi-object composition with two depth layers: five sparkling clocks in the back row and five stone raccoons in the front row. Place the two birds near the raccoons so the raccoons appear to be playing with them. Use spacing and visibility safeguards so all objects remain individually countable.",
+    "initial_prompt": "A clear scene with exactly five sparkling clocks arranged in a visible back row, all behind exactly five stone raccoons arranged in a front row. The five raccoons are made of stone and are playing with exactly two birds positioned near them. Keep all five clocks, all five stone raccoons, and both birds fully visible, separated enough to count, with the clocks clearly behind the raccoons. Do not include any extra clocks, raccoons, birds, or other animals.",
+    "parsed_constraints": {
+      "attributes": {
+        "clocks": [
+          "sparkling"
+        ],
+        "raccoons": [
+          "stone"
+        ]
+      },
+      "counts": {
+        "birds": 2,
+        "clocks": 5,
+        "raccoons": 5
+      },
+      "objects": [
+        "clocks",
+        "raccoons",
+        "birds"
+      ],
+      "relations": [
+        "five sparkling clocks are behind five stone raccoons",
+        "five stone raccoons are playing with two birds"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ]
+  },
+  "prompt_id": "geneval2_00713_e6e6f898",
+  "retry_history": [],
+  "round": 0,
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "five sparkling clocks behind five stone raccoons playing with two birds",
+    "prompt": "five sparkling clocks behind five stone raccoons playing with two birds",
+    "prompt_id": "geneval2_00713_e6e6f898",
+    "sampling_bucket": "object",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "position_spatial",
+      "relation_action",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 2,
+      "count": 3,
+      "object": 3,
+      "position": 1,
+      "verb": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object",
+      "verb",
+      "count",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 713,
+    "vqa_list": [
+      [
+        "How many clocks are in the image?",
+        "five"
+      ],
+      [
+        "Are the clocks sparkling?",
+        "Yes"
+      ],
+      [
+        "Are there any clocks in the image?",
+        "Yes"
+      ],
+      [
+        "Are the clocks behind the raccoons?",
+        "Yes"
+      ],
+      [
+        "How many raccoons are in the image?",
+        "five"
+      ],
+      [
+        "Are the raccoons stone?",
+        "Yes"
+      ],
+      [
+        "Are there any raccoons in the image?",
+        "Yes"
+      ],
+      [
+        "Are the raccoons playing with the birds?",
+        "Yes"
+      ],
+      [
+        "How many birds are in the image?",
+        "two"
+      ],
+      [
+        "Are there any birds in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "trajectory_id": "geneval2_00713_e6e6f898"
+}

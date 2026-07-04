@@ -12,6 +12,10 @@ from typing import Any
 
 from gen_retry.prompts.initial_plan_prompt import build_initial_plan_messages
 from gen_retry.prompts.retry_replan_prompt import build_retry_replan_messages
+from gen_retry.quality.retry_action_quality import (
+    critical_retry_action_issues,
+    format_retry_action_quality_feedback,
+)
 from gen_retry.schemas.actions import (
     ActionValidationError,
     InitialPlanAction,
@@ -92,34 +96,41 @@ class GPT55TeacherAdapter(BaseTeacher):
             regressed_constraints=list(
                 state.get("regressed_constraints") or memory.get("regressed_constraints") or []
             ),
-            score_delta_from_previous=float(
+            score_delta_from_previous=_optional_float(
                 state.get(
                     "score_delta_from_previous",
                     memory.get("score_delta_from_previous", 0.0),
                 )
             ),
-            score_delta_from_best=float(
+            score_delta_from_best=_optional_float(
                 state.get("score_delta_from_best", memory.get("score_delta_from_best", 0.0))
             ),
             branch_source=str(state.get("branch_source", "latest")),
             branch_source_round=int(state.get("branch_source_round", 0)),
             available_skills=state.get("available_skills"),
         )
-        text = self._call_json(messages, call_type="retry_replan")
+        text = self._call_json(messages, call_type="retry_replan", quality_state=state)
         return parse_retry_replan_json(text)
 
     def act(self, state: dict[str, Any]) -> TeacherAction:
         raise NotImplementedError("GPT55TeacherAdapter uses initial_plan/retry_replan, not legacy act()")
 
-    def _call_json(self, messages: list[dict[str, str]], *, call_type: str) -> str:
+    def _call_json(
+        self,
+        messages: list[dict[str, str]],
+        *,
+        call_type: str,
+        quality_state: dict[str, Any] | None = None,
+    ) -> str:
         if not self.base_url:
             raise ValueError(f"{ENV_TEACHER_BASE_URL} is required")
         if not self.api_key:
             raise ValueError(f"{ENV_TEACHER_API_KEY} is required")
         last_text = ""
+        last_feedback = ""
         for attempt in range(self.max_parse_retries + 1):
             if attempt:
-                messages = _add_repair_instruction(messages, last_text)
+                messages = _add_repair_instruction(messages, last_text, last_feedback)
             response = self._post_chat(messages)
             self._log_raw_response(call_type, response)
             last_text = _extract_content(response)
@@ -127,9 +138,18 @@ class GPT55TeacherAdapter(BaseTeacher):
                 if call_type == "initial_plan":
                     parse_initial_plan_json(last_text)
                 else:
-                    parse_retry_replan_json(last_text)
+                    action = parse_retry_replan_json(last_text)
+                    if quality_state is not None:
+                        issues = critical_retry_action_issues(action, quality_state)
+                        if issues:
+                            last_feedback = format_retry_action_quality_feedback(issues)
+                            if attempt >= self.max_parse_retries:
+                                raise ValueError(last_feedback)
+                            continue
                 return last_text
-            except (json.JSONDecodeError, ActionValidationError, ValueError):
+            except (json.JSONDecodeError, ActionValidationError, ValueError) as exc:
+                if not last_feedback:
+                    last_feedback = str(exc)
                 if attempt >= self.max_parse_retries:
                     raise
         return last_text
@@ -213,14 +233,19 @@ def _extract_content(response: dict[str, Any]) -> str:
     return json.dumps(content, ensure_ascii=False)
 
 
-def _add_repair_instruction(messages: list[dict[str, str]], previous_text: str) -> list[dict[str, str]]:
+def _add_repair_instruction(
+    messages: list[dict[str, str]],
+    previous_text: str,
+    feedback: str = "",
+) -> list[dict[str, str]]:
     repaired = list(messages)
+    issue_text = feedback or "The previous response was not valid JSON for the requested schema."
     repaired.append(
         {
             "role": "user",
             "content": (
-                "The previous response was not valid JSON for the requested schema. "
-                "Return only one corrected JSON object. Previous response: "
+                issue_text
+                + "\nReturn only one corrected JSON object. Previous response: "
                 + previous_text[:2000]
             ),
         }
@@ -232,6 +257,12 @@ def _env_float(name: str, default: float) -> float:
     value = os.environ.get(name)
     if not value:
         return default
+    return float(value)
+
+
+def _optional_float(value: Any) -> float | None:
+    if value is None:
+        return None
     return float(value)
 
 

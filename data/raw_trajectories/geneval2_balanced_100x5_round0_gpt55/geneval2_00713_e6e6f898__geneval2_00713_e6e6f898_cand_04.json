@@ -1,0 +1,2599 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "relation_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the raccoons stone?",
+              "score": 2.699611166434579e-05,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=2.69961e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the raccoons stone?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the raccoons playing with the birds?",
+              "score": 2.8100395202555663e-06,
+              "skill": "verb"
+            },
+            "detected": "soft_score=2.81004e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the raccoons playing with the birds?",
+            "type": "relation_mismatch"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many clocks are in the image?",
+              "score": 0.9999980631352935,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.999998",
+            "expected": "five",
+            "status": "passed",
+            "target": "How many clocks are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the clocks sparkling?",
+              "score": 0.999999938881956,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the clocks sparkling?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any clocks in the image?",
+              "score": 0.9999999656847649,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any clocks in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the clocks behind the raccoons?",
+              "score": 0.9999978154005476,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.999998",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the clocks behind the raccoons?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many raccoons are in the image?",
+              "score": 0.9999982197281312,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.999998",
+            "expected": "five",
+            "status": "passed",
+            "target": "How many raccoons are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any raccoons in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any raccoons in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many birds are in the image?",
+              "score": 0.9999999550461076,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "two",
+            "status": "passed",
+            "target": "How many birds are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any birds in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any birds in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00713_e6e6f898_cand_04",
+          "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+          "rows": [
+            {
+              "answer": "five",
+              "atom_count": 10,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00713_e6e6f898_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00021/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00021/samples/00004.png",
+              "prompt": "five sparkling clocks behind five stone raccoons playing with two birds",
+              "prompt_id": "geneval2_00713_e6e6f898",
+              "question": "How many clocks are in the image?",
+              "score": 0.9999980631352935,
+              "skill": "count",
+              "source_index": 713
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00713_e6e6f898_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00021/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00021/samples/00004.png",
+              "prompt": "five sparkling clocks behind five stone raccoons playing with two birds",
+              "prompt_id": "geneval2_00713_e6e6f898",
+              "question": "Are the clocks sparkling?",
+              "score": 0.999999938881956,
+              "skill": "attribute",
+              "source_index": 713
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00713_e6e6f898_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00021/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00021/samples/00004.png",
+              "prompt": "five sparkling clocks behind five stone raccoons playing with two birds",
+              "prompt_id": "geneval2_00713_e6e6f898",
+              "question": "Are there any clocks in the image?",
+              "score": 0.9999999656847649,
+              "skill": "object",
+              "source_index": 713
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00713_e6e6f898_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00021/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00021/samples/00004.png",
+              "prompt": "five sparkling clocks behind five stone raccoons playing with two birds",
+              "prompt_id": "geneval2_00713_e6e6f898",
+              "question": "Are the clocks behind the raccoons?",
+              "score": 0.9999978154005476,
+              "skill": "position",
+              "source_index": 713
+            },
+            {
+              "answer": "five",
+              "atom_count": 10,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00713_e6e6f898_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00021/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00021/samples/00004.png",
+              "prompt": "five sparkling clocks behind five stone raccoons playing with two birds",
+              "prompt_id": "geneval2_00713_e6e6f898",
+              "question": "How many raccoons are in the image?",
+              "score": 0.9999982197281312,
+              "skill": "count",
+              "source_index": 713
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00713_e6e6f898_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00021/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00021/samples/00004.png",
+              "prompt": "five sparkling clocks behind five stone raccoons playing with two birds",
+              "prompt_id": "geneval2_00713_e6e6f898",
+              "question": "Are the raccoons stone?",
+              "score": 2.699611166434579e-05,
+              "skill": "attribute",
+              "source_index": 713
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00713_e6e6f898_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00021/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00021/samples/00004.png",
+              "prompt": "five sparkling clocks behind five stone raccoons playing with two birds",
+              "prompt_id": "geneval2_00713_e6e6f898",
+              "question": "Are there any raccoons in the image?",
+              "score": 1.0000000183972588,
+              "skill": "object",
+              "source_index": 713
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00713_e6e6f898_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00021/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00021/samples/00004.png",
+              "prompt": "five sparkling clocks behind five stone raccoons playing with two birds",
+              "prompt_id": "geneval2_00713_e6e6f898",
+              "question": "Are the raccoons playing with the birds?",
+              "score": 2.8100395202555663e-06,
+              "skill": "verb",
+              "source_index": 713
+            },
+            {
+              "answer": "two",
+              "atom_count": 10,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00713_e6e6f898_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00021/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00021/samples/00004.png",
+              "prompt": "five sparkling clocks behind five stone raccoons playing with two birds",
+              "prompt_id": "geneval2_00713_e6e6f898",
+              "question": "How many birds are in the image?",
+              "score": 0.9999999550461076,
+              "skill": "count",
+              "source_index": 713
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00713_e6e6f898_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00021/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00021/samples/00004.png",
+              "prompt": "five sparkling clocks behind five stone raccoons playing with two birds",
+              "prompt_id": "geneval2_00713_e6e6f898",
+              "question": "Are there any birds in the image?",
+              "score": 1.0000000255568011,
+              "skill": "object",
+              "source_index": 713
+            }
+          ],
+          "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.8000023764027986,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 4,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00713_e6e6f898.json",
+          "manifest_prompt_index": 21,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00713_e6e6f898"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00713_e6e6f898_cand_04",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00021/samples/00004.png",
+        "prompt_used": "A clear scene with exactly five sparkling clocks arranged in a visible back row, all behind exactly five stone raccoons arranged in a front row. The five raccoons are made of stone and are playing with exactly two birds positioned near them. Keep all five clocks, all five stone raccoons, and both birds fully visible, separated enough to count, with the clocks clearly behind the raccoons. Do not include any extra clocks, raccoons, birds, or other animals.",
+        "seed": 1109
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly five clocks, exactly five raccoons, and exactly two birds.",
+          "Bind sparkling only to the five clocks.",
+          "Bind stone material only to the five raccoons.",
+          "Place all five clocks behind the five raccoons.",
+          "Show the five stone raccoons playing with the two birds.",
+          "Keep every clock, raccoon, and bird clearly visible and countable; avoid heavy overlap or occlusion.",
+          "Do not add extra clocks, raccoons, birds, or other animals."
+        ],
+        "generation_strategy": "Create a clear multi-object composition with two depth layers: five sparkling clocks in the back row and five stone raccoons in the front row. Place the two birds near the raccoons so the raccoons appear to be playing with them. Use spacing and visibility safeguards so all objects remain individually countable.",
+        "initial_prompt": "A clear scene with exactly five sparkling clocks arranged in a visible back row, all behind exactly five stone raccoons arranged in a front row. The five raccoons are made of stone and are playing with exactly two birds positioned near them. Keep all five clocks, all five stone raccoons, and both birds fully visible, separated enough to count, with the clocks clearly behind the raccoons. Do not include any extra clocks, raccoons, birds, or other animals.",
+        "parsed_constraints": {
+          "attributes": {
+            "clocks": [
+              "sparkling"
+            ],
+            "raccoons": [
+              "stone"
+            ]
+          },
+          "counts": {
+            "birds": 2,
+            "clocks": 5,
+            "raccoons": 5
+          },
+          "objects": [
+            "clocks",
+            "raccoons",
+            "birds"
+          ],
+          "relations": [
+            "five sparkling clocks are behind five stone raccoons",
+            "five stone raccoons are playing with two birds"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility",
+          "negative_constraints"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly five clocks, exactly five raccoons, and exactly two birds.",
+          "Bind sparkling only to the five clocks.",
+          "Bind stone material only to the five raccoons.",
+          "Place all five clocks behind the five raccoons.",
+          "Show the five stone raccoons playing with the two birds.",
+          "Keep every clock, raccoon, and bird clearly visible and countable; avoid heavy overlap or occlusion.",
+          "Do not add extra clocks, raccoons, birds, or other animals."
+        ],
+        "generation_strategy": "Create a clear multi-object composition with two depth layers: five sparkling clocks in the back row and five stone raccoons in the front row. Place the two birds near the raccoons so the raccoons appear to be playing with them. Use spacing and visibility safeguards so all objects remain individually countable.",
+        "initial_prompt": "A clear scene with exactly five sparkling clocks arranged in a visible back row, all behind exactly five stone raccoons arranged in a front row. The five raccoons are made of stone and are playing with exactly two birds positioned near them. Keep all five clocks, all five stone raccoons, and both birds fully visible, separated enough to count, with the clocks clearly behind the raccoons. Do not include any extra clocks, raccoons, birds, or other animals.",
+        "parsed_constraints": {
+          "attributes": {
+            "clocks": [
+              "sparkling"
+            ],
+            "raccoons": [
+              "stone"
+            ]
+          },
+          "counts": {
+            "birds": 2,
+            "clocks": 5,
+            "raccoons": 5
+          },
+          "objects": [
+            "clocks",
+            "raccoons",
+            "birds"
+          ],
+          "relations": [
+            "five sparkling clocks are behind five stone raccoons",
+            "five stone raccoons are playing with two birds"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility",
+          "negative_constraints"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the raccoons stone?",
+                "score": 2.699611166434579e-05,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=2.69961e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the raccoons stone?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the raccoons playing with the birds?",
+                "score": 2.8100395202555663e-06,
+                "skill": "verb"
+              },
+              "detected": "soft_score=2.81004e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the raccoons playing with the birds?",
+              "type": "relation_mismatch"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00021/samples/00004.png",
+          "prompt": "A clear scene with exactly five sparkling clocks arranged in a visible back row, all behind exactly five stone raccoons arranged in a front row. The five raccoons are made of stone and are playing with exactly two birds positioned near them. Keep all five clocks, all five stone raccoons, and both birds fully visible, separated enough to count, with the clocks clearly behind the raccoons. Do not include any extra clocks, raccoons, birds, or other animals.",
+          "round": 0,
+          "score": 0.8000023764027986
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00713_e6e6f898_cand_04",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "attribute_mismatch",
+            "relation_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the raccoons stone?",
+                "score": 2.699611166434579e-05,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=2.69961e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the raccoons stone?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the raccoons playing with the birds?",
+                "score": 2.8100395202555663e-06,
+                "skill": "verb"
+              },
+              "detected": "soft_score=2.81004e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the raccoons playing with the birds?",
+              "type": "relation_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many clocks are in the image?",
+                "score": 0.9999980631352935,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.999998",
+              "expected": "five",
+              "status": "passed",
+              "target": "How many clocks are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the clocks sparkling?",
+                "score": 0.999999938881956,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the clocks sparkling?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any clocks in the image?",
+                "score": 0.9999999656847649,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any clocks in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the clocks behind the raccoons?",
+                "score": 0.9999978154005476,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.999998",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the clocks behind the raccoons?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many raccoons are in the image?",
+                "score": 0.9999982197281312,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.999998",
+              "expected": "five",
+              "status": "passed",
+              "target": "How many raccoons are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any raccoons in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any raccoons in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many birds are in the image?",
+                "score": 0.9999999550461076,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "two",
+              "status": "passed",
+              "target": "How many birds are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any birds in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any birds in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.8000023764027986,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the raccoons stone?",
+                  "score": 2.699611166434579e-05,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=2.69961e-05",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the raccoons stone?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the raccoons playing with the birds?",
+                  "score": 2.8100395202555663e-06,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=2.81004e-06",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the raccoons playing with the birds?",
+                "type": "relation_mismatch"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00021/samples/00004.png",
+            "prompt": "A clear scene with exactly five sparkling clocks arranged in a visible back row, all behind exactly five stone raccoons arranged in a front row. The five raccoons are made of stone and are playing with exactly two birds positioned near them. Keep all five clocks, all five stone raccoons, and both birds fully visible, separated enough to count, with the clocks clearly behind the raccoons. Do not include any extra clocks, raccoons, birds, or other animals.",
+            "round": 0,
+            "score": 0.8000023764027986
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the raccoons stone?",
+                "score": 2.699611166434579e-05,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=2.69961e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the raccoons stone?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the raccoons playing with the birds?",
+                "score": 2.8100395202555663e-06,
+                "skill": "verb"
+              },
+              "detected": "soft_score=2.81004e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the raccoons playing with the birds?",
+              "type": "relation_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "attribute_mismatch",
+            "relation_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the raccoons stone?",
+                "score": 2.699611166434579e-05,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=2.69961e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the raccoons stone?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the raccoons playing with the birds?",
+                "score": 2.8100395202555663e-06,
+                "skill": "verb"
+              },
+              "detected": "soft_score=2.81004e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the raccoons playing with the birds?",
+              "type": "relation_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many clocks are in the image?",
+                "score": 0.9999980631352935,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.999998",
+              "expected": "five",
+              "status": "passed",
+              "target": "How many clocks are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the clocks sparkling?",
+                "score": 0.999999938881956,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the clocks sparkling?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any clocks in the image?",
+                "score": 0.9999999656847649,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any clocks in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the clocks behind the raccoons?",
+                "score": 0.9999978154005476,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.999998",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the clocks behind the raccoons?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many raccoons are in the image?",
+                "score": 0.9999982197281312,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.999998",
+              "expected": "five",
+              "status": "passed",
+              "target": "How many raccoons are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any raccoons in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any raccoons in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many birds are in the image?",
+                "score": 0.9999999550461076,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "two",
+              "status": "passed",
+              "target": "How many birds are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any birds in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any birds in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.8000023764027986,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "five sparkling clocks behind five stone raccoons playing with two birds",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the raccoons stone?",
+              "score": 2.699611166434579e-05,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=2.69961e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the raccoons stone?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the raccoons playing with the birds?",
+              "score": 2.8100395202555663e-06,
+              "skill": "verb"
+            },
+            "detected": "soft_score=2.81004e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the raccoons playing with the birds?",
+            "type": "relation_mismatch"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly five clocks, exactly five raccoons, and exactly two birds.",
+            "Bind sparkling only to the five clocks.",
+            "Bind stone material only to the five raccoons.",
+            "Place all five clocks behind the five raccoons.",
+            "Show the five stone raccoons playing with the two birds.",
+            "Keep every clock, raccoon, and bird clearly visible and countable; avoid heavy overlap or occlusion.",
+            "Do not add extra clocks, raccoons, birds, or other animals."
+          ],
+          "generation_strategy": "Create a clear multi-object composition with two depth layers: five sparkling clocks in the back row and five stone raccoons in the front row. Place the two birds near the raccoons so the raccoons appear to be playing with them. Use spacing and visibility safeguards so all objects remain individually countable.",
+          "initial_prompt": "A clear scene with exactly five sparkling clocks arranged in a visible back row, all behind exactly five stone raccoons arranged in a front row. The five raccoons are made of stone and are playing with exactly two birds positioned near them. Keep all five clocks, all five stone raccoons, and both birds fully visible, separated enough to count, with the clocks clearly behind the raccoons. Do not include any extra clocks, raccoons, birds, or other animals.",
+          "parsed_constraints": {
+            "attributes": {
+              "clocks": [
+                "sparkling"
+              ],
+              "raccoons": [
+                "stone"
+              ]
+            },
+            "counts": {
+              "birds": 2,
+              "clocks": 5,
+              "raccoons": 5
+            },
+            "objects": [
+              "clocks",
+              "raccoons",
+              "birds"
+            ],
+            "relations": [
+              "five sparkling clocks are behind five stone raccoons",
+              "five stone raccoons are playing with two birds"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly five clocks, exactly five raccoons, and exactly two birds.",
+            "Bind sparkling only to the five clocks.",
+            "Bind stone material only to the five raccoons.",
+            "Place all five clocks behind the five raccoons.",
+            "Show the five stone raccoons playing with the two birds.",
+            "Keep every clock, raccoon, and bird clearly visible and countable; avoid heavy overlap or occlusion.",
+            "Do not add extra clocks, raccoons, birds, or other animals."
+          ],
+          "generation_strategy": "Create a clear multi-object composition with two depth layers: five sparkling clocks in the back row and five stone raccoons in the front row. Place the two birds near the raccoons so the raccoons appear to be playing with them. Use spacing and visibility safeguards so all objects remain individually countable.",
+          "initial_prompt": "A clear scene with exactly five sparkling clocks arranged in a visible back row, all behind exactly five stone raccoons arranged in a front row. The five raccoons are made of stone and are playing with exactly two birds positioned near them. Keep all five clocks, all five stone raccoons, and both birds fully visible, separated enough to count, with the clocks clearly behind the raccoons. Do not include any extra clocks, raccoons, birds, or other animals.",
+          "parsed_constraints": {
+            "attributes": {
+              "clocks": [
+                "sparkling"
+              ],
+              "raccoons": [
+                "stone"
+              ]
+            },
+            "counts": {
+              "birds": 2,
+              "clocks": 5,
+              "raccoons": 5
+            },
+            "objects": [
+              "clocks",
+              "raccoons",
+              "birds"
+            ],
+            "relations": [
+              "five sparkling clocks are behind five stone raccoons",
+              "five stone raccoons are playing with two birds"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "previous_prompt": "A clear scene with exactly five sparkling clocks arranged in a visible back row, all behind exactly five stone raccoons arranged in a front row. The five raccoons are made of stone and are playing with exactly two birds positioned near them. Keep all five clocks, all five stone raccoons, and both birds fully visible, separated enough to count, with the clocks clearly behind the raccoons. Do not include any extra clocks, raccoons, birds, or other animals.",
+        "previous_selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility",
+          "negative_constraints"
+        ],
+        "prompt_id": "geneval2_00713_e6e6f898",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "attribute_mismatch",
+              "relation_mismatch"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the raccoons stone?",
+                  "score": 2.699611166434579e-05,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=2.69961e-05",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the raccoons stone?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the raccoons playing with the birds?",
+                  "score": 2.8100395202555663e-06,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=2.81004e-06",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the raccoons playing with the birds?",
+                "type": "relation_mismatch"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many clocks are in the image?",
+                  "score": 0.9999980631352935,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.999998",
+                "expected": "five",
+                "status": "passed",
+                "target": "How many clocks are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the clocks sparkling?",
+                  "score": 0.999999938881956,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the clocks sparkling?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any clocks in the image?",
+                  "score": 0.9999999656847649,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any clocks in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the clocks behind the raccoons?",
+                  "score": 0.9999978154005476,
+                  "skill": "position"
+                },
+                "detected": "soft_score=0.999998",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the clocks behind the raccoons?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many raccoons are in the image?",
+                  "score": 0.9999982197281312,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.999998",
+                "expected": "five",
+                "status": "passed",
+                "target": "How many raccoons are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any raccoons in the image?",
+                  "score": 1.0,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any raccoons in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many birds are in the image?",
+                  "score": 0.9999999550461076,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1",
+                "expected": "two",
+                "status": "passed",
+                "target": "How many birds are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any birds in the image?",
+                  "score": 1.0,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any birds in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly five clocks, exactly five raccoons, and exactly two birds.",
+                "Bind sparkling only to the five clocks.",
+                "Bind stone material only to the five raccoons.",
+                "Place all five clocks behind the five raccoons.",
+                "Show the five stone raccoons playing with the two birds.",
+                "Keep every clock, raccoon, and bird clearly visible and countable; avoid heavy overlap or occlusion.",
+                "Do not add extra clocks, raccoons, birds, or other animals."
+              ],
+              "generation_strategy": "Create a clear multi-object composition with two depth layers: five sparkling clocks in the back row and five stone raccoons in the front row. Place the two birds near the raccoons so the raccoons appear to be playing with them. Use spacing and visibility safeguards so all objects remain individually countable.",
+              "initial_prompt": "A clear scene with exactly five sparkling clocks arranged in a visible back row, all behind exactly five stone raccoons arranged in a front row. The five raccoons are made of stone and are playing with exactly two birds positioned near them. Keep all five clocks, all five stone raccoons, and both birds fully visible, separated enough to count, with the clocks clearly behind the raccoons. Do not include any extra clocks, raccoons, birds, or other animals.",
+              "parsed_constraints": {
+                "attributes": {
+                  "clocks": [
+                    "sparkling"
+                  ],
+                  "raccoons": [
+                    "stone"
+                  ]
+                },
+                "counts": {
+                  "birds": 2,
+                  "clocks": 5,
+                  "raccoons": 5
+                },
+                "objects": [
+                  "clocks",
+                  "raccoons",
+                  "birds"
+                ],
+                "relations": [
+                  "five sparkling clocks are behind five stone raccoons",
+                  "five stone raccoons are playing with two birds"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "anti_occlusion",
+                "clarity_visibility",
+                "negative_constraints"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly five clocks, exactly five raccoons, and exactly two birds.",
+                "Bind sparkling only to the five clocks.",
+                "Bind stone material only to the five raccoons.",
+                "Place all five clocks behind the five raccoons.",
+                "Show the five stone raccoons playing with the two birds.",
+                "Keep every clock, raccoon, and bird clearly visible and countable; avoid heavy overlap or occlusion.",
+                "Do not add extra clocks, raccoons, birds, or other animals."
+              ],
+              "generation_strategy": "Create a clear multi-object composition with two depth layers: five sparkling clocks in the back row and five stone raccoons in the front row. Place the two birds near the raccoons so the raccoons appear to be playing with them. Use spacing and visibility safeguards so all objects remain individually countable.",
+              "initial_prompt": "A clear scene with exactly five sparkling clocks arranged in a visible back row, all behind exactly five stone raccoons arranged in a front row. The five raccoons are made of stone and are playing with exactly two birds positioned near them. Keep all five clocks, all five stone raccoons, and both birds fully visible, separated enough to count, with the clocks clearly behind the raccoons. Do not include any extra clocks, raccoons, birds, or other animals.",
+              "parsed_constraints": {
+                "attributes": {
+                  "clocks": [
+                    "sparkling"
+                  ],
+                  "raccoons": [
+                    "stone"
+                  ]
+                },
+                "counts": {
+                  "birds": 2,
+                  "clocks": 5,
+                  "raccoons": 5
+                },
+                "objects": [
+                  "clocks",
+                  "raccoons",
+                  "birds"
+                ],
+                "relations": [
+                  "five sparkling clocks are behind five stone raccoons",
+                  "five stone raccoons are playing with two birds"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "anti_occlusion",
+                "clarity_visibility",
+                "negative_constraints"
+              ]
+            },
+            "prompt_used": "A clear scene with exactly five sparkling clocks arranged in a visible back row, all behind exactly five stone raccoons arranged in a front row. The five raccoons are made of stone and are playing with exactly two birds positioned near them. Keep all five clocks, all five stone raccoons, and both birds fully visible, separated enough to count, with the clocks clearly behind the raccoons. Do not include any extra clocks, raccoons, birds, or other animals.",
+            "round": 0,
+            "score": 0.8000023764027986,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 5,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the raccoons stone?",
+                    "score": 2.699611166434579e-05,
+                    "skill": "attribute"
+                  },
+                  "detected": "soft_score=2.69961e-05",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the raccoons stone?",
+                  "type": "attribute_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 7,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the raccoons playing with the birds?",
+                    "score": 2.8100395202555663e-06,
+                    "skill": "verb"
+                  },
+                  "detected": "soft_score=2.81004e-06",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the raccoons playing with the birds?",
+                  "type": "relation_mismatch"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00713_e6e6f898"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the raccoons stone?",
+              "score": 2.699611166434579e-05,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=2.69961e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the raccoons stone?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the raccoons playing with the birds?",
+              "score": 2.8100395202555663e-06,
+              "skill": "verb"
+            },
+            "detected": "soft_score=2.81004e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the raccoons playing with the birds?",
+            "type": "relation_mismatch"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00713_e6e6f898_cand_04",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly five clocks, exactly five raccoons, and exactly two birds.",
+      "Bind sparkling only to the five clocks.",
+      "Bind stone material only to the five raccoons.",
+      "Place all five clocks behind the five raccoons.",
+      "Show the five stone raccoons playing with the two birds.",
+      "Keep every clock, raccoon, and bird clearly visible and countable; avoid heavy overlap or occlusion.",
+      "Do not add extra clocks, raccoons, birds, or other animals."
+    ],
+    "generation_strategy": "Create a clear multi-object composition with two depth layers: five sparkling clocks in the back row and five stone raccoons in the front row. Place the two birds near the raccoons so the raccoons appear to be playing with them. Use spacing and visibility safeguards so all objects remain individually countable.",
+    "initial_prompt": "A clear scene with exactly five sparkling clocks arranged in a visible back row, all behind exactly five stone raccoons arranged in a front row. The five raccoons are made of stone and are playing with exactly two birds positioned near them. Keep all five clocks, all five stone raccoons, and both birds fully visible, separated enough to count, with the clocks clearly behind the raccoons. Do not include any extra clocks, raccoons, birds, or other animals.",
+    "parsed_constraints": {
+      "attributes": {
+        "clocks": [
+          "sparkling"
+        ],
+        "raccoons": [
+          "stone"
+        ]
+      },
+      "counts": {
+        "birds": 2,
+        "clocks": 5,
+        "raccoons": 5
+      },
+      "objects": [
+        "clocks",
+        "raccoons",
+        "birds"
+      ],
+      "relations": [
+        "five sparkling clocks are behind five stone raccoons",
+        "five stone raccoons are playing with two birds"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image satisfied the counts, sparkling clocks, clocks behind raccoons, and bird presence, but the raccoons were not recognized as stone and the raccoons were not recognized as playing with the birds. The persistent failures are attribute binding for the raccoons and the action relation between raccoons and birds.",
+    "expected_improvement": [
+      "Raccoons should be clearly perceived as stone raccoons by describing them as carved stone raccoon sculptures with visible rock texture and no fur.",
+      "The raccoons should be clearly perceived as playing with the birds by placing the birds directly among the raccoons and posing the raccoons facing and reaching toward the birds in an active play interaction.",
+      "Previously passed constraints should remain stable: exactly five sparkling clocks, exactly five raccoons, exactly two birds, and all clocks behind the raccoons."
+    ],
+    "failure_types": [
+      "attribute_mismatch",
+      "relation_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly five clocks, all clearly visible and countable.",
+      "Bind the sparkling attribute specifically to the five clocks.",
+      "Keep the five sparkling clocks behind the raccoons in a visible back row.",
+      "Keep exactly five raccoons, all clearly visible and countable.",
+      "Keep exactly two birds, both clearly visible and countable.",
+      "Do not add extra clocks, raccoons, birds, or other animals."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt mentioned stone raccoons and playing with birds, but it did not make the stone material visually unmistakable or define the play interaction strongly enough. The birds were only described as positioned near the raccoons, which may have appeared as proximity rather than playing.",
+      "error_source": "Weak attribute binding and underspecified action relation in the prompt."
+    },
+    "regeneration_strategy": "Use a simple staged composition with five sparkling clocks in the back row and five carved stone raccoon sculptures in the front row. Make the raccoons visibly stone through carved rock texture and sculpture-like surfaces, and show the two birds directly among the raccoons while the raccoons face and reach toward them to communicate playing. Preserve exact counts and separation for verification.",
+    "regression_risks": [
+      "Adding strong stone-sculpture language could make the raccoons look less animal-like, so the prompt must still call them raccoons repeatedly.",
+      "Emphasizing the play interaction could cause extra birds or extra animals, so the prompt must state exactly two birds and no extras.",
+      "Crowding the birds among five raccoons could obscure counts, so all objects must remain separated and fully visible.",
+      "Changing the layout could weaken the already-passed behind relation, so the clocks must remain clearly behind the raccoons."
+    ],
+    "repair_constraints": [
+      "Make all five raccoons unmistakably stone: carved stone raccoon sculptures with visible hard rock texture, not furry or living-looking.",
+      "Show the five stone raccoons actively playing with the two birds: raccoons face the birds and extend their paws toward the two birds in a clear playful interaction.",
+      "Place the two birds directly among or immediately in front of the raccoons so the play relation is visually unambiguous.",
+      "Keep the exact count of five raccoons and two birds, with each instance visually separate and no duplicates or extras."
+    ],
+    "retry_prompt": "A clear, countable scene with exactly five sparkling clocks in a back row, all behind exactly five stone raccoons in a front row. The five raccoons must be unmistakably made of stone: carved stone raccoon sculptures with visible hard rock texture, sculpted details, and no furry or living-looking surfaces. Exactly two birds are directly among the raccoons, and the five stone raccoons are clearly playing with the two birds: the raccoons face the birds and extend their paws toward the birds in an active playful interaction. Keep all five sparkling clocks, all five stone raccoons, and both birds fully visible, separated enough to count, with the clocks clearly behind the raccoons. Do not include any extra clocks, raccoons, birds, or other animals.",
+    "skill_revision": {
+      "new_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same skill set, but apply attribute_binding more strongly to the raccoons as carved stone raccoon sculptures and apply spatial_layout plus multi_object_composition more concretely to make the raccoon-bird play relation visible."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the raccoons stone?",
+            "score": 2.699611166434579e-05,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=2.69961e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the raccoons stone?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the raccoons playing with the birds?",
+            "score": 2.8100395202555663e-06,
+            "skill": "verb"
+          },
+          "detected": "soft_score=2.81004e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the raccoons playing with the birds?",
+          "type": "relation_mismatch"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00021/samples/00004.png",
+      "prompt": "A clear scene with exactly five sparkling clocks arranged in a visible back row, all behind exactly five stone raccoons arranged in a front row. The five raccoons are made of stone and are playing with exactly two birds positioned near them. Keep all five clocks, all five stone raccoons, and both birds fully visible, separated enough to count, with the clocks clearly behind the raccoons. Do not include any extra clocks, raccoons, birds, or other animals.",
+      "round": 0,
+      "score": 0.8000023764027986
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00713_e6e6f898_cand_04",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "relation_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the raccoons stone?",
+            "score": 2.699611166434579e-05,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=2.69961e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the raccoons stone?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the raccoons playing with the birds?",
+            "score": 2.8100395202555663e-06,
+            "skill": "verb"
+          },
+          "detected": "soft_score=2.81004e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the raccoons playing with the birds?",
+          "type": "relation_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many clocks are in the image?",
+            "score": 0.9999980631352935,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.999998",
+          "expected": "five",
+          "status": "passed",
+          "target": "How many clocks are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the clocks sparkling?",
+            "score": 0.999999938881956,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the clocks sparkling?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any clocks in the image?",
+            "score": 0.9999999656847649,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any clocks in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the clocks behind the raccoons?",
+            "score": 0.9999978154005476,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.999998",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the clocks behind the raccoons?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many raccoons are in the image?",
+            "score": 0.9999982197281312,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.999998",
+          "expected": "five",
+          "status": "passed",
+          "target": "How many raccoons are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any raccoons in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any raccoons in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many birds are in the image?",
+            "score": 0.9999999550461076,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "two",
+          "status": "passed",
+          "target": "How many birds are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any birds in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any birds in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.8000023764027986,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the raccoons stone?",
+              "score": 2.699611166434579e-05,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=2.69961e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the raccoons stone?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the raccoons playing with the birds?",
+              "score": 2.8100395202555663e-06,
+              "skill": "verb"
+            },
+            "detected": "soft_score=2.81004e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the raccoons playing with the birds?",
+            "type": "relation_mismatch"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00021/samples/00004.png",
+        "prompt": "A clear scene with exactly five sparkling clocks arranged in a visible back row, all behind exactly five stone raccoons arranged in a front row. The five raccoons are made of stone and are playing with exactly two birds positioned near them. Keep all five clocks, all five stone raccoons, and both birds fully visible, separated enough to count, with the clocks clearly behind the raccoons. Do not include any extra clocks, raccoons, birds, or other animals.",
+        "round": 0,
+        "score": 0.8000023764027986
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the raccoons stone?",
+            "score": 2.699611166434579e-05,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=2.69961e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the raccoons stone?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the raccoons playing with the birds?",
+            "score": 2.8100395202555663e-06,
+            "skill": "verb"
+          },
+          "detected": "soft_score=2.81004e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the raccoons playing with the birds?",
+          "type": "relation_mismatch"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "relation_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the raccoons stone?",
+            "score": 2.699611166434579e-05,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=2.69961e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the raccoons stone?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the raccoons playing with the birds?",
+            "score": 2.8100395202555663e-06,
+            "skill": "verb"
+          },
+          "detected": "soft_score=2.81004e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the raccoons playing with the birds?",
+          "type": "relation_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many clocks are in the image?",
+            "score": 0.9999980631352935,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.999998",
+          "expected": "five",
+          "status": "passed",
+          "target": "How many clocks are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the clocks sparkling?",
+            "score": 0.999999938881956,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the clocks sparkling?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any clocks in the image?",
+            "score": 0.9999999656847649,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any clocks in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the clocks behind the raccoons?",
+            "score": 0.9999978154005476,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.999998",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the clocks behind the raccoons?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many raccoons are in the image?",
+            "score": 0.9999982197281312,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.999998",
+          "expected": "five",
+          "status": "passed",
+          "target": "How many raccoons are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any raccoons in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any raccoons in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many birds are in the image?",
+            "score": 0.9999999550461076,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "two",
+          "status": "passed",
+          "target": "How many birds are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any birds in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any birds in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.8000023764027986,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "five sparkling clocks behind five stone raccoons playing with two birds",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the raccoons stone?",
+          "score": 2.699611166434579e-05,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=2.69961e-05",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the raccoons stone?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the raccoons playing with the birds?",
+          "score": 2.8100395202555663e-06,
+          "skill": "verb"
+        },
+        "detected": "soft_score=2.81004e-06",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the raccoons playing with the birds?",
+        "type": "relation_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly five clocks, exactly five raccoons, and exactly two birds.",
+        "Bind sparkling only to the five clocks.",
+        "Bind stone material only to the five raccoons.",
+        "Place all five clocks behind the five raccoons.",
+        "Show the five stone raccoons playing with the two birds.",
+        "Keep every clock, raccoon, and bird clearly visible and countable; avoid heavy overlap or occlusion.",
+        "Do not add extra clocks, raccoons, birds, or other animals."
+      ],
+      "generation_strategy": "Create a clear multi-object composition with two depth layers: five sparkling clocks in the back row and five stone raccoons in the front row. Place the two birds near the raccoons so the raccoons appear to be playing with them. Use spacing and visibility safeguards so all objects remain individually countable.",
+      "initial_prompt": "A clear scene with exactly five sparkling clocks arranged in a visible back row, all behind exactly five stone raccoons arranged in a front row. The five raccoons are made of stone and are playing with exactly two birds positioned near them. Keep all five clocks, all five stone raccoons, and both birds fully visible, separated enough to count, with the clocks clearly behind the raccoons. Do not include any extra clocks, raccoons, birds, or other animals.",
+      "parsed_constraints": {
+        "attributes": {
+          "clocks": [
+            "sparkling"
+          ],
+          "raccoons": [
+            "stone"
+          ]
+        },
+        "counts": {
+          "birds": 2,
+          "clocks": 5,
+          "raccoons": 5
+        },
+        "objects": [
+          "clocks",
+          "raccoons",
+          "birds"
+        ],
+        "relations": [
+          "five sparkling clocks are behind five stone raccoons",
+          "five stone raccoons are playing with two birds"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly five clocks, exactly five raccoons, and exactly two birds.",
+        "Bind sparkling only to the five clocks.",
+        "Bind stone material only to the five raccoons.",
+        "Place all five clocks behind the five raccoons.",
+        "Show the five stone raccoons playing with the two birds.",
+        "Keep every clock, raccoon, and bird clearly visible and countable; avoid heavy overlap or occlusion.",
+        "Do not add extra clocks, raccoons, birds, or other animals."
+      ],
+      "generation_strategy": "Create a clear multi-object composition with two depth layers: five sparkling clocks in the back row and five stone raccoons in the front row. Place the two birds near the raccoons so the raccoons appear to be playing with them. Use spacing and visibility safeguards so all objects remain individually countable.",
+      "initial_prompt": "A clear scene with exactly five sparkling clocks arranged in a visible back row, all behind exactly five stone raccoons arranged in a front row. The five raccoons are made of stone and are playing with exactly two birds positioned near them. Keep all five clocks, all five stone raccoons, and both birds fully visible, separated enough to count, with the clocks clearly behind the raccoons. Do not include any extra clocks, raccoons, birds, or other animals.",
+      "parsed_constraints": {
+        "attributes": {
+          "clocks": [
+            "sparkling"
+          ],
+          "raccoons": [
+            "stone"
+          ]
+        },
+        "counts": {
+          "birds": 2,
+          "clocks": 5,
+          "raccoons": 5
+        },
+        "objects": [
+          "clocks",
+          "raccoons",
+          "birds"
+        ],
+        "relations": [
+          "five sparkling clocks are behind five stone raccoons",
+          "five stone raccoons are playing with two birds"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ]
+    },
+    "previous_prompt": "A clear scene with exactly five sparkling clocks arranged in a visible back row, all behind exactly five stone raccoons arranged in a front row. The five raccoons are made of stone and are playing with exactly two birds positioned near them. Keep all five clocks, all five stone raccoons, and both birds fully visible, separated enough to count, with the clocks clearly behind the raccoons. Do not include any extra clocks, raccoons, birds, or other animals.",
+    "previous_selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ],
+    "prompt_id": "geneval2_00713_e6e6f898",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "relation_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the raccoons stone?",
+              "score": 2.699611166434579e-05,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=2.69961e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the raccoons stone?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the raccoons playing with the birds?",
+              "score": 2.8100395202555663e-06,
+              "skill": "verb"
+            },
+            "detected": "soft_score=2.81004e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the raccoons playing with the birds?",
+            "type": "relation_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many clocks are in the image?",
+              "score": 0.9999980631352935,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.999998",
+            "expected": "five",
+            "status": "passed",
+            "target": "How many clocks are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the clocks sparkling?",
+              "score": 0.999999938881956,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the clocks sparkling?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any clocks in the image?",
+              "score": 0.9999999656847649,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any clocks in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the clocks behind the raccoons?",
+              "score": 0.9999978154005476,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.999998",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the clocks behind the raccoons?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many raccoons are in the image?",
+              "score": 0.9999982197281312,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.999998",
+            "expected": "five",
+            "status": "passed",
+            "target": "How many raccoons are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any raccoons in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any raccoons in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many birds are in the image?",
+              "score": 0.9999999550461076,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "two",
+            "status": "passed",
+            "target": "How many birds are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any birds in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any birds in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly five clocks, exactly five raccoons, and exactly two birds.",
+            "Bind sparkling only to the five clocks.",
+            "Bind stone material only to the five raccoons.",
+            "Place all five clocks behind the five raccoons.",
+            "Show the five stone raccoons playing with the two birds.",
+            "Keep every clock, raccoon, and bird clearly visible and countable; avoid heavy overlap or occlusion.",
+            "Do not add extra clocks, raccoons, birds, or other animals."
+          ],
+          "generation_strategy": "Create a clear multi-object composition with two depth layers: five sparkling clocks in the back row and five stone raccoons in the front row. Place the two birds near the raccoons so the raccoons appear to be playing with them. Use spacing and visibility safeguards so all objects remain individually countable.",
+          "initial_prompt": "A clear scene with exactly five sparkling clocks arranged in a visible back row, all behind exactly five stone raccoons arranged in a front row. The five raccoons are made of stone and are playing with exactly two birds positioned near them. Keep all five clocks, all five stone raccoons, and both birds fully visible, separated enough to count, with the clocks clearly behind the raccoons. Do not include any extra clocks, raccoons, birds, or other animals.",
+          "parsed_constraints": {
+            "attributes": {
+              "clocks": [
+                "sparkling"
+              ],
+              "raccoons": [
+                "stone"
+              ]
+            },
+            "counts": {
+              "birds": 2,
+              "clocks": 5,
+              "raccoons": 5
+            },
+            "objects": [
+              "clocks",
+              "raccoons",
+              "birds"
+            ],
+            "relations": [
+              "five sparkling clocks are behind five stone raccoons",
+              "five stone raccoons are playing with two birds"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly five clocks, exactly five raccoons, and exactly two birds.",
+            "Bind sparkling only to the five clocks.",
+            "Bind stone material only to the five raccoons.",
+            "Place all five clocks behind the five raccoons.",
+            "Show the five stone raccoons playing with the two birds.",
+            "Keep every clock, raccoon, and bird clearly visible and countable; avoid heavy overlap or occlusion.",
+            "Do not add extra clocks, raccoons, birds, or other animals."
+          ],
+          "generation_strategy": "Create a clear multi-object composition with two depth layers: five sparkling clocks in the back row and five stone raccoons in the front row. Place the two birds near the raccoons so the raccoons appear to be playing with them. Use spacing and visibility safeguards so all objects remain individually countable.",
+          "initial_prompt": "A clear scene with exactly five sparkling clocks arranged in a visible back row, all behind exactly five stone raccoons arranged in a front row. The five raccoons are made of stone and are playing with exactly two birds positioned near them. Keep all five clocks, all five stone raccoons, and both birds fully visible, separated enough to count, with the clocks clearly behind the raccoons. Do not include any extra clocks, raccoons, birds, or other animals.",
+          "parsed_constraints": {
+            "attributes": {
+              "clocks": [
+                "sparkling"
+              ],
+              "raccoons": [
+                "stone"
+              ]
+            },
+            "counts": {
+              "birds": 2,
+              "clocks": 5,
+              "raccoons": 5
+            },
+            "objects": [
+              "clocks",
+              "raccoons",
+              "birds"
+            ],
+            "relations": [
+              "five sparkling clocks are behind five stone raccoons",
+              "five stone raccoons are playing with two birds"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "prompt_used": "A clear scene with exactly five sparkling clocks arranged in a visible back row, all behind exactly five stone raccoons arranged in a front row. The five raccoons are made of stone and are playing with exactly two birds positioned near them. Keep all five clocks, all five stone raccoons, and both birds fully visible, separated enough to count, with the clocks clearly behind the raccoons. Do not include any extra clocks, raccoons, birds, or other animals.",
+        "round": 0,
+        "score": 0.8000023764027986,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the raccoons stone?",
+                "score": 2.699611166434579e-05,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=2.69961e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the raccoons stone?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the raccoons playing with the birds?",
+                "score": 2.8100395202555663e-06,
+                "skill": "verb"
+              },
+              "detected": "soft_score=2.81004e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the raccoons playing with the birds?",
+              "type": "relation_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00713_e6e6f898"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the raccoons stone?",
+          "score": 2.699611166434579e-05,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=2.69961e-05",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the raccoons stone?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the raccoons playing with the birds?",
+          "score": 2.8100395202555663e-06,
+          "skill": "verb"
+        },
+        "detected": "soft_score=2.81004e-06",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the raccoons playing with the birds?",
+        "type": "relation_mismatch"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00021/samples/00004.png",
+    "best_so_far_prompt": "A clear scene with exactly five sparkling clocks arranged in a visible back row, all behind exactly five stone raccoons arranged in a front row. The five raccoons are made of stone and are playing with exactly two birds positioned near them. Keep all five clocks, all five stone raccoons, and both birds fully visible, separated enough to count, with the clocks clearly behind the raccoons. Do not include any extra clocks, raccoons, birds, or other animals.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.8000023764027986,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the raccoons stone?",
+          "score": 2.699611166434579e-05,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=2.69961e-05",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the raccoons stone?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the raccoons playing with the birds?",
+          "score": 2.8100395202555663e-06,
+          "skill": "verb"
+        },
+        "detected": "soft_score=2.81004e-06",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the raccoons playing with the birds?",
+        "type": "relation_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly five clocks, exactly five raccoons, and exactly two birds.",
+        "Bind sparkling only to the five clocks.",
+        "Bind stone material only to the five raccoons.",
+        "Place all five clocks behind the five raccoons.",
+        "Show the five stone raccoons playing with the two birds.",
+        "Keep every clock, raccoon, and bird clearly visible and countable; avoid heavy overlap or occlusion.",
+        "Do not add extra clocks, raccoons, birds, or other animals."
+      ],
+      "generation_strategy": "Create a clear multi-object composition with two depth layers: five sparkling clocks in the back row and five stone raccoons in the front row. Place the two birds near the raccoons so the raccoons appear to be playing with them. Use spacing and visibility safeguards so all objects remain individually countable.",
+      "initial_prompt": "A clear scene with exactly five sparkling clocks arranged in a visible back row, all behind exactly five stone raccoons arranged in a front row. The five raccoons are made of stone and are playing with exactly two birds positioned near them. Keep all five clocks, all five stone raccoons, and both birds fully visible, separated enough to count, with the clocks clearly behind the raccoons. Do not include any extra clocks, raccoons, birds, or other animals.",
+      "parsed_constraints": {
+        "attributes": {
+          "clocks": [
+            "sparkling"
+          ],
+          "raccoons": [
+            "stone"
+          ]
+        },
+        "counts": {
+          "birds": 2,
+          "clocks": 5,
+          "raccoons": 5
+        },
+        "objects": [
+          "clocks",
+          "raccoons",
+          "birds"
+        ],
+        "relations": [
+          "five sparkling clocks are behind five stone raccoons",
+          "five stone raccoons are playing with two birds"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.800 failed=['Are the raccoons stone?', 'Are the raccoons playing with the birds?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_incremental/snapshot_001_worker_00/geneval2_00713_e6e6f898__geneval2_00713_e6e6f898_cand_04__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00713_e6e6f898__geneval2_00713_e6e6f898_cand_04__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00713_e6e6f898",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image satisfied the counts, sparkling clocks, clocks behind raccoons, and bird presence, but the raccoons were not recognized as stone and the raccoons were not recognized as playing with the birds. The persistent failures are attribute binding for the raccoons and the action relation between raccoons and birds.",
+    "expected_improvement": [
+      "Raccoons should be clearly perceived as stone raccoons by describing them as carved stone raccoon sculptures with visible rock texture and no fur.",
+      "The raccoons should be clearly perceived as playing with the birds by placing the birds directly among the raccoons and posing the raccoons facing and reaching toward the birds in an active play interaction.",
+      "Previously passed constraints should remain stable: exactly five sparkling clocks, exactly five raccoons, exactly two birds, and all clocks behind the raccoons."
+    ],
+    "failure_types": [
+      "attribute_mismatch",
+      "relation_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly five clocks, all clearly visible and countable.",
+      "Bind the sparkling attribute specifically to the five clocks.",
+      "Keep the five sparkling clocks behind the raccoons in a visible back row.",
+      "Keep exactly five raccoons, all clearly visible and countable.",
+      "Keep exactly two birds, both clearly visible and countable.",
+      "Do not add extra clocks, raccoons, birds, or other animals."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt mentioned stone raccoons and playing with birds, but it did not make the stone material visually unmistakable or define the play interaction strongly enough. The birds were only described as positioned near the raccoons, which may have appeared as proximity rather than playing.",
+      "error_source": "Weak attribute binding and underspecified action relation in the prompt."
+    },
+    "regeneration_strategy": "Use a simple staged composition with five sparkling clocks in the back row and five carved stone raccoon sculptures in the front row. Make the raccoons visibly stone through carved rock texture and sculpture-like surfaces, and show the two birds directly among the raccoons while the raccoons face and reach toward them to communicate playing. Preserve exact counts and separation for verification.",
+    "regression_risks": [
+      "Adding strong stone-sculpture language could make the raccoons look less animal-like, so the prompt must still call them raccoons repeatedly.",
+      "Emphasizing the play interaction could cause extra birds or extra animals, so the prompt must state exactly two birds and no extras.",
+      "Crowding the birds among five raccoons could obscure counts, so all objects must remain separated and fully visible.",
+      "Changing the layout could weaken the already-passed behind relation, so the clocks must remain clearly behind the raccoons."
+    ],
+    "repair_constraints": [
+      "Make all five raccoons unmistakably stone: carved stone raccoon sculptures with visible hard rock texture, not furry or living-looking.",
+      "Show the five stone raccoons actively playing with the two birds: raccoons face the birds and extend their paws toward the two birds in a clear playful interaction.",
+      "Place the two birds directly among or immediately in front of the raccoons so the play relation is visually unambiguous.",
+      "Keep the exact count of five raccoons and two birds, with each instance visually separate and no duplicates or extras."
+    ],
+    "retry_prompt": "A clear, countable scene with exactly five sparkling clocks in a back row, all behind exactly five stone raccoons in a front row. The five raccoons must be unmistakably made of stone: carved stone raccoon sculptures with visible hard rock texture, sculpted details, and no furry or living-looking surfaces. Exactly two birds are directly among the raccoons, and the five stone raccoons are clearly playing with the two birds: the raccoons face the birds and extend their paws toward the birds in an active playful interaction. Keep all five sparkling clocks, all five stone raccoons, and both birds fully visible, separated enough to count, with the clocks clearly behind the raccoons. Do not include any extra clocks, raccoons, birds, or other animals.",
+    "skill_revision": {
+      "new_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same skill set, but apply attribute_binding more strongly to the raccoons as carved stone raccoon sculptures and apply spatial_layout plus multi_object_composition more concretely to make the raccoon-bird play relation visible."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "five sparkling clocks behind five stone raccoons playing with two birds",
+    "prompt": "five sparkling clocks behind five stone raccoons playing with two birds",
+    "prompt_id": "geneval2_00713_e6e6f898",
+    "sampling_bucket": "object",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "position_spatial",
+      "relation_action",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 2,
+      "count": 3,
+      "object": 3,
+      "position": 1,
+      "verb": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object",
+      "verb",
+      "count",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 713,
+    "vqa_list": [
+      [
+        "How many clocks are in the image?",
+        "five"
+      ],
+      [
+        "Are the clocks sparkling?",
+        "Yes"
+      ],
+      [
+        "Are there any clocks in the image?",
+        "Yes"
+      ],
+      [
+        "Are the clocks behind the raccoons?",
+        "Yes"
+      ],
+      [
+        "How many raccoons are in the image?",
+        "five"
+      ],
+      [
+        "Are the raccoons stone?",
+        "Yes"
+      ],
+      [
+        "Are there any raccoons in the image?",
+        "Yes"
+      ],
+      [
+        "Are the raccoons playing with the birds?",
+        "Yes"
+      ],
+      [
+        "How many birds are in the image?",
+        "two"
+      ],
+      [
+        "Are there any birds in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00713_e6e6f898"
+}

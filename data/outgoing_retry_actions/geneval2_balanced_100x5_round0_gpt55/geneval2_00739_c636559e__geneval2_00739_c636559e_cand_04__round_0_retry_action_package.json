@@ -1,0 +1,2050 @@
+{
+  "candidate_id": "geneval2_00739_c636559e_cand_04",
+  "evaluation": {
+    "critical_failure_types": [
+      "attribute_mismatch",
+      "color_mismatch",
+      "count_mismatch",
+      "missing_object",
+      "relation_mismatch",
+      "spatial_mismatch"
+    ],
+    "failed_constraints": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many giraffes are in the image?",
+          "score": 0.3774336798636658,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.377434",
+        "expected": "four",
+        "status": "failed",
+        "target": "How many giraffes are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the giraffes checkered?",
+          "score": 0.005890970982477484,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.00589097",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the giraffes checkered?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the giraffes playing with the koalas?",
+          "score": 6.2776675789569404e-09,
+          "skill": "verb"
+        },
+        "detected": "soft_score=6.27767e-09",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the giraffes playing with the koalas?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many koalas are in the image?",
+          "score": 7.279860698545125e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=7.27986e-09",
+        "expected": "three",
+        "status": "failed",
+        "target": "How many koalas are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the koalas black?",
+          "score": 0.002967663953313604,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.00296766",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the koalas black?",
+        "type": "color_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 6,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any koalas in the image?",
+          "score": 3.590306009307667e-10,
+          "skill": "object"
+        },
+        "detected": "soft_score=3.59031e-10",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are there any koalas in the image?",
+        "type": "missing_object"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the koalas in front of the horses?",
+          "score": 0.00015838146663755062,
+          "skill": "position"
+        },
+        "detected": "soft_score=0.000158381",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the koalas in front of the horses?",
+        "type": "spatial_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many horses are in the image?",
+          "score": 0.0011710445075088544,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.00117104",
+        "expected": "four",
+        "status": "failed",
+        "target": "How many horses are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "passed": false,
+    "passed_constraints": [
+      {
+        "details": {
+          "atom_index": 2,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any giraffes in the image?",
+          "score": 0.999999939909685,
+          "skill": "object"
+        },
+        "detected": "soft_score=1",
+        "expected": "Yes",
+        "status": "passed",
+        "target": "Are there any giraffes in the image?",
+        "type": "missing_object"
+      },
+      {
+        "details": {
+          "atom_index": 9,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any horses in the image?",
+          "score": 0.9999997468439688,
+          "skill": "object"
+        },
+        "detected": "soft_score=1",
+        "expected": "Yes",
+        "status": "passed",
+        "target": "Are there any horses in the image?",
+        "type": "missing_object"
+      }
+    ],
+    "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+    "raw_report": {
+      "diagnostic_atom_threshold": 0.9,
+      "group_id": "geneval2_00739_c636559e_cand_04",
+      "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+      "rows": [
+        {
+          "answer": "four",
+          "atom_count": 10,
+          "atom_index": 0,
+          "candidate_id": "geneval2_00739_c636559e_cand_04",
+          "candidate_index": 4,
+          "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00005/samples/00004.png",
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00005/samples/00004.png",
+          "prompt": "four checkered giraffes playing with three black koalas in front of four horses",
+          "prompt_id": "geneval2_00739_c636559e",
+          "question": "How many giraffes are in the image?",
+          "score": 0.3774336798636658,
+          "skill": "count",
+          "source_index": 739
+        },
+        {
+          "answer": "Yes",
+          "atom_count": 10,
+          "atom_index": 1,
+          "candidate_id": "geneval2_00739_c636559e_cand_04",
+          "candidate_index": 4,
+          "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00005/samples/00004.png",
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00005/samples/00004.png",
+          "prompt": "four checkered giraffes playing with three black koalas in front of four horses",
+          "prompt_id": "geneval2_00739_c636559e",
+          "question": "Are the giraffes checkered?",
+          "score": 0.005890970982477484,
+          "skill": "attribute",
+          "source_index": 739
+        },
+        {
+          "answer": "Yes",
+          "atom_count": 10,
+          "atom_index": 2,
+          "candidate_id": "geneval2_00739_c636559e_cand_04",
+          "candidate_index": 4,
+          "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00005/samples/00004.png",
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00005/samples/00004.png",
+          "prompt": "four checkered giraffes playing with three black koalas in front of four horses",
+          "prompt_id": "geneval2_00739_c636559e",
+          "question": "Are there any giraffes in the image?",
+          "score": 0.999999939909685,
+          "skill": "object",
+          "source_index": 739
+        },
+        {
+          "answer": "Yes",
+          "atom_count": 10,
+          "atom_index": 3,
+          "candidate_id": "geneval2_00739_c636559e_cand_04",
+          "candidate_index": 4,
+          "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00005/samples/00004.png",
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00005/samples/00004.png",
+          "prompt": "four checkered giraffes playing with three black koalas in front of four horses",
+          "prompt_id": "geneval2_00739_c636559e",
+          "question": "Are the giraffes playing with the koalas?",
+          "score": 6.2776675789569404e-09,
+          "skill": "verb",
+          "source_index": 739
+        },
+        {
+          "answer": "three",
+          "atom_count": 10,
+          "atom_index": 4,
+          "candidate_id": "geneval2_00739_c636559e_cand_04",
+          "candidate_index": 4,
+          "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00005/samples/00004.png",
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00005/samples/00004.png",
+          "prompt": "four checkered giraffes playing with three black koalas in front of four horses",
+          "prompt_id": "geneval2_00739_c636559e",
+          "question": "How many koalas are in the image?",
+          "score": 7.279860698545125e-09,
+          "skill": "count",
+          "source_index": 739
+        },
+        {
+          "answer": "Yes",
+          "atom_count": 10,
+          "atom_index": 5,
+          "candidate_id": "geneval2_00739_c636559e_cand_04",
+          "candidate_index": 4,
+          "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00005/samples/00004.png",
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00005/samples/00004.png",
+          "prompt": "four checkered giraffes playing with three black koalas in front of four horses",
+          "prompt_id": "geneval2_00739_c636559e",
+          "question": "Are the koalas black?",
+          "score": 0.002967663953313604,
+          "skill": "attribute",
+          "source_index": 739
+        },
+        {
+          "answer": "Yes",
+          "atom_count": 10,
+          "atom_index": 6,
+          "candidate_id": "geneval2_00739_c636559e_cand_04",
+          "candidate_index": 4,
+          "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00005/samples/00004.png",
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00005/samples/00004.png",
+          "prompt": "four checkered giraffes playing with three black koalas in front of four horses",
+          "prompt_id": "geneval2_00739_c636559e",
+          "question": "Are there any koalas in the image?",
+          "score": 3.590306009307667e-10,
+          "skill": "object",
+          "source_index": 739
+        },
+        {
+          "answer": "Yes",
+          "atom_count": 10,
+          "atom_index": 7,
+          "candidate_id": "geneval2_00739_c636559e_cand_04",
+          "candidate_index": 4,
+          "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00005/samples/00004.png",
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00005/samples/00004.png",
+          "prompt": "four checkered giraffes playing with three black koalas in front of four horses",
+          "prompt_id": "geneval2_00739_c636559e",
+          "question": "Are the koalas in front of the horses?",
+          "score": 0.00015838146663755062,
+          "skill": "position",
+          "source_index": 739
+        },
+        {
+          "answer": "four",
+          "atom_count": 10,
+          "atom_index": 8,
+          "candidate_id": "geneval2_00739_c636559e_cand_04",
+          "candidate_index": 4,
+          "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00005/samples/00004.png",
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00005/samples/00004.png",
+          "prompt": "four checkered giraffes playing with three black koalas in front of four horses",
+          "prompt_id": "geneval2_00739_c636559e",
+          "question": "How many horses are in the image?",
+          "score": 0.0011710445075088544,
+          "skill": "count",
+          "source_index": 739
+        },
+        {
+          "answer": "Yes",
+          "atom_count": 10,
+          "atom_index": 9,
+          "candidate_id": "geneval2_00739_c636559e_cand_04",
+          "candidate_index": 4,
+          "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00005/samples/00004.png",
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00005/samples/00004.png",
+          "prompt": "four checkered giraffes playing with three black koalas in front of four horses",
+          "prompt_id": "geneval2_00739_c636559e",
+          "question": "Are there any horses in the image?",
+          "score": 0.9999997468439688,
+          "skill": "object",
+          "source_index": 739
+        }
+      ],
+      "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+      "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+    },
+    "score": 0.2387621441443816,
+    "uncertain_constraints": []
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many giraffes are in the image?",
+          "score": 0.3774336798636658,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.377434",
+        "expected": "four",
+        "status": "failed",
+        "target": "How many giraffes are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the giraffes checkered?",
+          "score": 0.005890970982477484,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.00589097",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the giraffes checkered?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the giraffes playing with the koalas?",
+          "score": 6.2776675789569404e-09,
+          "skill": "verb"
+        },
+        "detected": "soft_score=6.27767e-09",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the giraffes playing with the koalas?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many koalas are in the image?",
+          "score": 7.279860698545125e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=7.27986e-09",
+        "expected": "three",
+        "status": "failed",
+        "target": "How many koalas are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the koalas black?",
+          "score": 0.002967663953313604,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.00296766",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the koalas black?",
+        "type": "color_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 6,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any koalas in the image?",
+          "score": 3.590306009307667e-10,
+          "skill": "object"
+        },
+        "detected": "soft_score=3.59031e-10",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are there any koalas in the image?",
+        "type": "missing_object"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the koalas in front of the horses?",
+          "score": 0.00015838146663755062,
+          "skill": "position"
+        },
+        "detected": "soft_score=0.000158381",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the koalas in front of the horses?",
+        "type": "spatial_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many horses are in the image?",
+          "score": 0.0011710445075088544,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.00117104",
+        "expected": "four",
+        "status": "failed",
+        "target": "How many horses are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00005/samples/00004.png",
+    "best_so_far_prompt": "A clear scene with exactly four checkered giraffes playing with exactly three black koalas. The three koalas are black and are positioned in front of exactly four horses. The four horses stand behind the giraffes and koalas. All four giraffes, all three koalas, and all four horses are fully visible, separated enough to count, with no animals occluding each other. The checkered pattern appears on the giraffes only, and the black color applies to the koalas only.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.2387621441443816,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many giraffes are in the image?",
+          "score": 0.3774336798636658,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.377434",
+        "expected": "four",
+        "status": "failed",
+        "target": "How many giraffes are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the giraffes checkered?",
+          "score": 0.005890970982477484,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.00589097",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the giraffes checkered?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the giraffes playing with the koalas?",
+          "score": 6.2776675789569404e-09,
+          "skill": "verb"
+        },
+        "detected": "soft_score=6.27767e-09",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the giraffes playing with the koalas?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many koalas are in the image?",
+          "score": 7.279860698545125e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=7.27986e-09",
+        "expected": "three",
+        "status": "failed",
+        "target": "How many koalas are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the koalas black?",
+          "score": 0.002967663953313604,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.00296766",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the koalas black?",
+        "type": "color_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 6,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any koalas in the image?",
+          "score": 3.590306009307667e-10,
+          "skill": "object"
+        },
+        "detected": "soft_score=3.59031e-10",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are there any koalas in the image?",
+        "type": "missing_object"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the koalas in front of the horses?",
+          "score": 0.00015838146663755062,
+          "skill": "position"
+        },
+        "detected": "soft_score=0.000158381",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the koalas in front of the horses?",
+        "type": "spatial_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many horses are in the image?",
+          "score": 0.0011710445075088544,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.00117104",
+        "expected": "four",
+        "status": "failed",
+        "target": "How many horses are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly four giraffes, exactly three koalas, and exactly four horses.",
+        "Bind the checkered pattern only to the four giraffes.",
+        "Bind the black color only to the three koalas.",
+        "Place the giraffes and koalas together in the foreground or middle foreground, clearly playing with each other.",
+        "Place all four horses behind the giraffes and koalas, so the koalas are in front of the horses.",
+        "Keep all animals clearly visible and separated enough to count; avoid hiding animals behind each other."
+      ],
+      "generation_strategy": "Use a clear multi-object composition with three separated groups: four checkered giraffes and three black koalas interacting in front, and four horses arranged behind them. Prioritize count accuracy, attribute binding, and unobstructed visibility of every animal.",
+      "initial_prompt": "A clear scene with exactly four checkered giraffes playing with exactly three black koalas. The three koalas are black and are positioned in front of exactly four horses. The four horses stand behind the giraffes and koalas. All four giraffes, all three koalas, and all four horses are fully visible, separated enough to count, with no animals occluding each other. The checkered pattern appears on the giraffes only, and the black color applies to the koalas only.",
+      "parsed_constraints": {
+        "attributes": {
+          "giraffes": [
+            "checkered"
+          ],
+          "koalas": [
+            "black"
+          ]
+        },
+        "counts": {
+          "giraffes": 4,
+          "horses": 4,
+          "koalas": 3
+        },
+        "objects": [
+          "giraffes",
+          "koalas",
+          "horses"
+        ],
+        "relations": [
+          "four checkered giraffes playing with three black koalas",
+          "three black koalas in front of four horses"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "anti_occlusion",
+        "clarity_visibility"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.239 failed=['How many giraffes are in the image?', 'Are the giraffes checkered?', 'Are the giraffes playing with the koalas?', 'How many koalas are in the image?', 'Are the koalas black?', 'Are there any koalas in the image?', 'Are the koalas in front of the horses?', 'How many horses are in the image?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "prompt_id": "geneval2_00739_c636559e",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image preserved object presence for giraffes and horses, but failed nearly all detailed constraints: exact counts for giraffes, koalas, and horses; visible koala presence; black color on koalas; checkered pattern on giraffes; giraffes playing with koalas; and koalas positioned in front of horses. The weakest issues are likely that the prompt asked for many animals in a single natural scene without a strict countable layout, and the small koalas were easy to omit or hide. The relation 'playing with' was also too abstract, and the checkered pattern was not emphasized enough as a bold body-wide attribute.",
+    "expected_improvement": [
+      "Exact four giraffes should be easier to verify by arranging them as four separate full-body instances with visible gaps.",
+      "Exact three koalas should be easier to verify by making them large, black, centered, and in the front row.",
+      "Exact four horses should be easier to verify by placing them as four separated full-body horses in a back row.",
+      "Checkered giraffes should be clearer by specifying bold high-contrast checkerboard pattern covering each giraffe body.",
+      "The playing relation should be clearer by showing giraffes leaning toward and interacting playfully with the koalas as one grouped interaction.",
+      "The spatial relation should be clearer by placing all three koalas in the front row directly in front of the four horses in the back row."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "attribute_mismatch",
+      "relation_mismatch",
+      "color_mismatch",
+      "missing_object",
+      "spatial_mismatch"
+    ],
+    "preserve_constraints": [
+      "Giraffes must remain present and clearly visible.",
+      "Horses must remain present and clearly visible."
+    ],
+    "previous_plan_error": {
+      "details": "The prior prompt stated the correct objects and counts but did not impose a strong enough visual counting structure. It relied on a general scene where eleven animals could overlap, merge, or be omitted. It also used 'playing with' without concrete visual interaction cues, and the checkered giraffe attribute was not made visually dominant enough.",
+      "error_source": "Prompt composition and skill emphasis were too general for high-count multi-object verification."
+    },
+    "regeneration_strategy": "Use a simple wide, countable, staged composition with separated animals in clear depth layers: four horses in a back row, three black koalas in a front row directly in front of the horses, and four checkered giraffes visibly grouped around the koalas in playful interaction. Emphasize full-body visibility, gaps between all animals, bold attribute binding, and no extra animals.",
+    "regression_risks": [
+      "Giraffe or horse presence could regress if the prompt over-focuses on koalas.",
+      "The model may add extra animals when asked for a busy scene.",
+      "Koalas may become too small or hidden behind giraffes unless placed large in the front row.",
+      "The checkered pattern could leak to horses or koalas unless bound only to giraffes."
+    ],
+    "repair_constraints": [
+      "Show exactly four giraffes, no more and no fewer, each as a separate full-body animal with visible space between them.",
+      "Make all four giraffes checkered, with a bold checkerboard pattern covering the giraffes only.",
+      "Show the four checkered giraffes playing with the three koalas by having the giraffes face, lean toward, and interact playfully with the koalas as a single group.",
+      "Show exactly three koalas, no more and no fewer, each clearly visible and separated.",
+      "Make all three koalas black, with the black color bound only to the koalas.",
+      "Place all three black koalas in front of the horses, in the foreground row.",
+      "Show exactly four horses, no more and no fewer, each clearly visible and separated in the back row behind the koalas.",
+      "Avoid extra giraffes, extra koalas, extra horses, duplicate animal heads, cropped animals, merged bodies, or hidden animals."
+    ],
+    "retry_prompt": "Create a clear wide scene with exactly four checkered giraffes, exactly three black koalas, and exactly four horses. Arrange the animals in a simple countable layout: four full-body horses stand separated in the back row; directly in front of those horses are three large full-body black koalas in the front row; four full-body checkered giraffes are grouped around the koalas, facing and leaning toward them in playful interaction, so the giraffes are clearly playing with the koalas. Each giraffe has a bold high-contrast checkerboard pattern covering its body, and only the giraffes are checkered. Each koala is black, and only the koalas are black. Keep every animal complete, unobstructed, separated by visible gaps, and easy to count. No extra animals, no missing animals, no duplicates, no cropped bodies, and no animals hidden behind other animals.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "anti_occlusion",
+        "clarity_visibility"
+      ],
+      "reason": "Add negative_constraints to explicitly prevent extra or duplicate animals while strengthening countable layout, attribute binding, and unobstructed visibility for all required animals."
+    }
+  },
+  "round": 0,
+  "schema_version": "v1",
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image preserved object presence for giraffes and horses, but failed nearly all detailed constraints: exact counts for giraffes, koalas, and horses; visible koala presence; black color on koalas; checkered pattern on giraffes; giraffes playing with koalas; and koalas positioned in front of horses. The weakest issues are likely that the prompt asked for many animals in a single natural scene without a strict countable layout, and the small koalas were easy to omit or hide. The relation 'playing with' was also too abstract, and the checkered pattern was not emphasized enough as a bold body-wide attribute.",
+    "expected_improvement": [
+      "Exact four giraffes should be easier to verify by arranging them as four separate full-body instances with visible gaps.",
+      "Exact three koalas should be easier to verify by making them large, black, centered, and in the front row.",
+      "Exact four horses should be easier to verify by placing them as four separated full-body horses in a back row.",
+      "Checkered giraffes should be clearer by specifying bold high-contrast checkerboard pattern covering each giraffe body.",
+      "The playing relation should be clearer by showing giraffes leaning toward and interacting playfully with the koalas as one grouped interaction.",
+      "The spatial relation should be clearer by placing all three koalas in the front row directly in front of the four horses in the back row."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "attribute_mismatch",
+      "relation_mismatch",
+      "color_mismatch",
+      "missing_object",
+      "spatial_mismatch"
+    ],
+    "preserve_constraints": [
+      "Giraffes must remain present and clearly visible.",
+      "Horses must remain present and clearly visible."
+    ],
+    "previous_plan_error": {
+      "details": "The prior prompt stated the correct objects and counts but did not impose a strong enough visual counting structure. It relied on a general scene where eleven animals could overlap, merge, or be omitted. It also used 'playing with' without concrete visual interaction cues, and the checkered giraffe attribute was not made visually dominant enough.",
+      "error_source": "Prompt composition and skill emphasis were too general for high-count multi-object verification."
+    },
+    "regeneration_strategy": "Use a simple wide, countable, staged composition with separated animals in clear depth layers: four horses in a back row, three black koalas in a front row directly in front of the horses, and four checkered giraffes visibly grouped around the koalas in playful interaction. Emphasize full-body visibility, gaps between all animals, bold attribute binding, and no extra animals.",
+    "regression_risks": [
+      "Giraffe or horse presence could regress if the prompt over-focuses on koalas.",
+      "The model may add extra animals when asked for a busy scene.",
+      "Koalas may become too small or hidden behind giraffes unless placed large in the front row.",
+      "The checkered pattern could leak to horses or koalas unless bound only to giraffes."
+    ],
+    "repair_constraints": [
+      "Show exactly four giraffes, no more and no fewer, each as a separate full-body animal with visible space between them.",
+      "Make all four giraffes checkered, with a bold checkerboard pattern covering the giraffes only.",
+      "Show the four checkered giraffes playing with the three koalas by having the giraffes face, lean toward, and interact playfully with the koalas as a single group.",
+      "Show exactly three koalas, no more and no fewer, each clearly visible and separated.",
+      "Make all three koalas black, with the black color bound only to the koalas.",
+      "Place all three black koalas in front of the horses, in the foreground row.",
+      "Show exactly four horses, no more and no fewer, each clearly visible and separated in the back row behind the koalas.",
+      "Avoid extra giraffes, extra koalas, extra horses, duplicate animal heads, cropped animals, merged bodies, or hidden animals."
+    ],
+    "retry_prompt": "Create a clear wide scene with exactly four checkered giraffes, exactly three black koalas, and exactly four horses. Arrange the animals in a simple countable layout: four full-body horses stand separated in the back row; directly in front of those horses are three large full-body black koalas in the front row; four full-body checkered giraffes are grouped around the koalas, facing and leaning toward them in playful interaction, so the giraffes are clearly playing with the koalas. Each giraffe has a bold high-contrast checkerboard pattern covering its body, and only the giraffes are checkered. Each koala is black, and only the koalas are black. Keep every animal complete, unobstructed, separated by visible gaps, and easy to count. No extra animals, no missing animals, no duplicates, no cropped bodies, and no animals hidden behind other animals.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "anti_occlusion",
+        "clarity_visibility"
+      ],
+      "reason": "Add negative_constraints to explicitly prevent extra or duplicate animals while strengthening countable layout, attribute binding, and unobstructed visibility for all required animals."
+    }
+  },
+  "teacher_error": "",
+  "teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many giraffes are in the image?",
+            "score": 0.3774336798636658,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.377434",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many giraffes are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the giraffes checkered?",
+            "score": 0.005890970982477484,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.00589097",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the giraffes checkered?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the giraffes playing with the koalas?",
+            "score": 6.2776675789569404e-09,
+            "skill": "verb"
+          },
+          "detected": "soft_score=6.27767e-09",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the giraffes playing with the koalas?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many koalas are in the image?",
+            "score": 7.279860698545125e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=7.27986e-09",
+          "expected": "three",
+          "status": "failed",
+          "target": "How many koalas are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the koalas black?",
+            "score": 0.002967663953313604,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.00296766",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the koalas black?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any koalas in the image?",
+            "score": 3.590306009307667e-10,
+            "skill": "object"
+          },
+          "detected": "soft_score=3.59031e-10",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any koalas in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the koalas in front of the horses?",
+            "score": 0.00015838146663755062,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.000158381",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the koalas in front of the horses?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many horses are in the image?",
+            "score": 0.0011710445075088544,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.00117104",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many horses are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00005/samples/00004.png",
+      "prompt": "A clear scene with exactly four checkered giraffes playing with exactly three black koalas. The three koalas are black and are positioned in front of exactly four horses. The four horses stand behind the giraffes and koalas. All four giraffes, all three koalas, and all four horses are fully visible, separated enough to count, with no animals occluding each other. The checkered pattern appears on the giraffes only, and the black color applies to the koalas only.",
+      "round": 0,
+      "score": 0.2387621441443816
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00739_c636559e_cand_04",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "color_mismatch",
+        "count_mismatch",
+        "missing_object",
+        "relation_mismatch",
+        "spatial_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many giraffes are in the image?",
+            "score": 0.3774336798636658,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.377434",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many giraffes are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the giraffes checkered?",
+            "score": 0.005890970982477484,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.00589097",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the giraffes checkered?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the giraffes playing with the koalas?",
+            "score": 6.2776675789569404e-09,
+            "skill": "verb"
+          },
+          "detected": "soft_score=6.27767e-09",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the giraffes playing with the koalas?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many koalas are in the image?",
+            "score": 7.279860698545125e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=7.27986e-09",
+          "expected": "three",
+          "status": "failed",
+          "target": "How many koalas are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the koalas black?",
+            "score": 0.002967663953313604,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.00296766",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the koalas black?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any koalas in the image?",
+            "score": 3.590306009307667e-10,
+            "skill": "object"
+          },
+          "detected": "soft_score=3.59031e-10",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any koalas in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the koalas in front of the horses?",
+            "score": 0.00015838146663755062,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.000158381",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the koalas in front of the horses?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many horses are in the image?",
+            "score": 0.0011710445075088544,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.00117104",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many horses are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any giraffes in the image?",
+            "score": 0.999999939909685,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any giraffes in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any horses in the image?",
+            "score": 0.9999997468439688,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any horses in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.2387621441443816,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many giraffes are in the image?",
+              "score": 0.3774336798636658,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.377434",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many giraffes are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the giraffes checkered?",
+              "score": 0.005890970982477484,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.00589097",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the giraffes checkered?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the giraffes playing with the koalas?",
+              "score": 6.2776675789569404e-09,
+              "skill": "verb"
+            },
+            "detected": "soft_score=6.27767e-09",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the giraffes playing with the koalas?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many koalas are in the image?",
+              "score": 7.279860698545125e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=7.27986e-09",
+            "expected": "three",
+            "status": "failed",
+            "target": "How many koalas are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the koalas black?",
+              "score": 0.002967663953313604,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.00296766",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the koalas black?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any koalas in the image?",
+              "score": 3.590306009307667e-10,
+              "skill": "object"
+            },
+            "detected": "soft_score=3.59031e-10",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any koalas in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the koalas in front of the horses?",
+              "score": 0.00015838146663755062,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.000158381",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the koalas in front of the horses?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many horses are in the image?",
+              "score": 0.0011710445075088544,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.00117104",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many horses are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00005/samples/00004.png",
+        "prompt": "A clear scene with exactly four checkered giraffes playing with exactly three black koalas. The three koalas are black and are positioned in front of exactly four horses. The four horses stand behind the giraffes and koalas. All four giraffes, all three koalas, and all four horses are fully visible, separated enough to count, with no animals occluding each other. The checkered pattern appears on the giraffes only, and the black color applies to the koalas only.",
+        "round": 0,
+        "score": 0.2387621441443816
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many giraffes are in the image?",
+            "score": 0.3774336798636658,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.377434",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many giraffes are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the giraffes checkered?",
+            "score": 0.005890970982477484,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.00589097",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the giraffes checkered?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the giraffes playing with the koalas?",
+            "score": 6.2776675789569404e-09,
+            "skill": "verb"
+          },
+          "detected": "soft_score=6.27767e-09",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the giraffes playing with the koalas?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many koalas are in the image?",
+            "score": 7.279860698545125e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=7.27986e-09",
+          "expected": "three",
+          "status": "failed",
+          "target": "How many koalas are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the koalas black?",
+            "score": 0.002967663953313604,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.00296766",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the koalas black?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any koalas in the image?",
+            "score": 3.590306009307667e-10,
+            "skill": "object"
+          },
+          "detected": "soft_score=3.59031e-10",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any koalas in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the koalas in front of the horses?",
+            "score": 0.00015838146663755062,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.000158381",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the koalas in front of the horses?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many horses are in the image?",
+            "score": 0.0011710445075088544,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.00117104",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many horses are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "color_mismatch",
+        "count_mismatch",
+        "missing_object",
+        "relation_mismatch",
+        "spatial_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many giraffes are in the image?",
+            "score": 0.3774336798636658,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.377434",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many giraffes are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the giraffes checkered?",
+            "score": 0.005890970982477484,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.00589097",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the giraffes checkered?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the giraffes playing with the koalas?",
+            "score": 6.2776675789569404e-09,
+            "skill": "verb"
+          },
+          "detected": "soft_score=6.27767e-09",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the giraffes playing with the koalas?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many koalas are in the image?",
+            "score": 7.279860698545125e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=7.27986e-09",
+          "expected": "three",
+          "status": "failed",
+          "target": "How many koalas are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the koalas black?",
+            "score": 0.002967663953313604,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.00296766",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the koalas black?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any koalas in the image?",
+            "score": 3.590306009307667e-10,
+            "skill": "object"
+          },
+          "detected": "soft_score=3.59031e-10",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any koalas in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the koalas in front of the horses?",
+            "score": 0.00015838146663755062,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.000158381",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the koalas in front of the horses?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many horses are in the image?",
+            "score": 0.0011710445075088544,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.00117104",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many horses are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any giraffes in the image?",
+            "score": 0.999999939909685,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any giraffes in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any horses in the image?",
+            "score": 0.9999997468439688,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any horses in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.2387621441443816,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "four checkered giraffes playing with three black koalas in front of four horses",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many giraffes are in the image?",
+          "score": 0.3774336798636658,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.377434",
+        "expected": "four",
+        "status": "failed",
+        "target": "How many giraffes are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the giraffes checkered?",
+          "score": 0.005890970982477484,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.00589097",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the giraffes checkered?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the giraffes playing with the koalas?",
+          "score": 6.2776675789569404e-09,
+          "skill": "verb"
+        },
+        "detected": "soft_score=6.27767e-09",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the giraffes playing with the koalas?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many koalas are in the image?",
+          "score": 7.279860698545125e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=7.27986e-09",
+        "expected": "three",
+        "status": "failed",
+        "target": "How many koalas are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the koalas black?",
+          "score": 0.002967663953313604,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.00296766",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the koalas black?",
+        "type": "color_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 6,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any koalas in the image?",
+          "score": 3.590306009307667e-10,
+          "skill": "object"
+        },
+        "detected": "soft_score=3.59031e-10",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are there any koalas in the image?",
+        "type": "missing_object"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the koalas in front of the horses?",
+          "score": 0.00015838146663755062,
+          "skill": "position"
+        },
+        "detected": "soft_score=0.000158381",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the koalas in front of the horses?",
+        "type": "spatial_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many horses are in the image?",
+          "score": 0.0011710445075088544,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.00117104",
+        "expected": "four",
+        "status": "failed",
+        "target": "How many horses are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly four giraffes, exactly three koalas, and exactly four horses.",
+        "Bind the checkered pattern only to the four giraffes.",
+        "Bind the black color only to the three koalas.",
+        "Place the giraffes and koalas together in the foreground or middle foreground, clearly playing with each other.",
+        "Place all four horses behind the giraffes and koalas, so the koalas are in front of the horses.",
+        "Keep all animals clearly visible and separated enough to count; avoid hiding animals behind each other."
+      ],
+      "generation_strategy": "Use a clear multi-object composition with three separated groups: four checkered giraffes and three black koalas interacting in front, and four horses arranged behind them. Prioritize count accuracy, attribute binding, and unobstructed visibility of every animal.",
+      "initial_prompt": "A clear scene with exactly four checkered giraffes playing with exactly three black koalas. The three koalas are black and are positioned in front of exactly four horses. The four horses stand behind the giraffes and koalas. All four giraffes, all three koalas, and all four horses are fully visible, separated enough to count, with no animals occluding each other. The checkered pattern appears on the giraffes only, and the black color applies to the koalas only.",
+      "parsed_constraints": {
+        "attributes": {
+          "giraffes": [
+            "checkered"
+          ],
+          "koalas": [
+            "black"
+          ]
+        },
+        "counts": {
+          "giraffes": 4,
+          "horses": 4,
+          "koalas": 3
+        },
+        "objects": [
+          "giraffes",
+          "koalas",
+          "horses"
+        ],
+        "relations": [
+          "four checkered giraffes playing with three black koalas",
+          "three black koalas in front of four horses"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "anti_occlusion",
+        "clarity_visibility"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly four giraffes, exactly three koalas, and exactly four horses.",
+        "Bind the checkered pattern only to the four giraffes.",
+        "Bind the black color only to the three koalas.",
+        "Place the giraffes and koalas together in the foreground or middle foreground, clearly playing with each other.",
+        "Place all four horses behind the giraffes and koalas, so the koalas are in front of the horses.",
+        "Keep all animals clearly visible and separated enough to count; avoid hiding animals behind each other."
+      ],
+      "generation_strategy": "Use a clear multi-object composition with three separated groups: four checkered giraffes and three black koalas interacting in front, and four horses arranged behind them. Prioritize count accuracy, attribute binding, and unobstructed visibility of every animal.",
+      "initial_prompt": "A clear scene with exactly four checkered giraffes playing with exactly three black koalas. The three koalas are black and are positioned in front of exactly four horses. The four horses stand behind the giraffes and koalas. All four giraffes, all three koalas, and all four horses are fully visible, separated enough to count, with no animals occluding each other. The checkered pattern appears on the giraffes only, and the black color applies to the koalas only.",
+      "parsed_constraints": {
+        "attributes": {
+          "giraffes": [
+            "checkered"
+          ],
+          "koalas": [
+            "black"
+          ]
+        },
+        "counts": {
+          "giraffes": 4,
+          "horses": 4,
+          "koalas": 3
+        },
+        "objects": [
+          "giraffes",
+          "koalas",
+          "horses"
+        ],
+        "relations": [
+          "four checkered giraffes playing with three black koalas",
+          "three black koalas in front of four horses"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "multi_object_composition",
+        "spatial_layout",
+        "anti_occlusion",
+        "clarity_visibility"
+      ]
+    },
+    "previous_prompt": "A clear scene with exactly four checkered giraffes playing with exactly three black koalas. The three koalas are black and are positioned in front of exactly four horses. The four horses stand behind the giraffes and koalas. All four giraffes, all three koalas, and all four horses are fully visible, separated enough to count, with no animals occluding each other. The checkered pattern appears on the giraffes only, and the black color applies to the koalas only.",
+    "previous_selected_skills": [
+      "quantity_counting",
+      "object_presence",
+      "attribute_binding",
+      "multi_object_composition",
+      "spatial_layout",
+      "anti_occlusion",
+      "clarity_visibility"
+    ],
+    "prompt_id": "geneval2_00739_c636559e",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "color_mismatch",
+          "count_mismatch",
+          "missing_object",
+          "relation_mismatch",
+          "spatial_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many giraffes are in the image?",
+              "score": 0.3774336798636658,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.377434",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many giraffes are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the giraffes checkered?",
+              "score": 0.005890970982477484,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.00589097",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the giraffes checkered?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the giraffes playing with the koalas?",
+              "score": 6.2776675789569404e-09,
+              "skill": "verb"
+            },
+            "detected": "soft_score=6.27767e-09",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the giraffes playing with the koalas?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many koalas are in the image?",
+              "score": 7.279860698545125e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=7.27986e-09",
+            "expected": "three",
+            "status": "failed",
+            "target": "How many koalas are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the koalas black?",
+              "score": 0.002967663953313604,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.00296766",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the koalas black?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any koalas in the image?",
+              "score": 3.590306009307667e-10,
+              "skill": "object"
+            },
+            "detected": "soft_score=3.59031e-10",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any koalas in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the koalas in front of the horses?",
+              "score": 0.00015838146663755062,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.000158381",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the koalas in front of the horses?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many horses are in the image?",
+              "score": 0.0011710445075088544,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.00117104",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many horses are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any giraffes in the image?",
+              "score": 0.999999939909685,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any giraffes in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any horses in the image?",
+              "score": 0.9999997468439688,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any horses in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly four giraffes, exactly three koalas, and exactly four horses.",
+            "Bind the checkered pattern only to the four giraffes.",
+            "Bind the black color only to the three koalas.",
+            "Place the giraffes and koalas together in the foreground or middle foreground, clearly playing with each other.",
+            "Place all four horses behind the giraffes and koalas, so the koalas are in front of the horses.",
+            "Keep all animals clearly visible and separated enough to count; avoid hiding animals behind each other."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with three separated groups: four checkered giraffes and three black koalas interacting in front, and four horses arranged behind them. Prioritize count accuracy, attribute binding, and unobstructed visibility of every animal.",
+          "initial_prompt": "A clear scene with exactly four checkered giraffes playing with exactly three black koalas. The three koalas are black and are positioned in front of exactly four horses. The four horses stand behind the giraffes and koalas. All four giraffes, all three koalas, and all four horses are fully visible, separated enough to count, with no animals occluding each other. The checkered pattern appears on the giraffes only, and the black color applies to the koalas only.",
+          "parsed_constraints": {
+            "attributes": {
+              "giraffes": [
+                "checkered"
+              ],
+              "koalas": [
+                "black"
+              ]
+            },
+            "counts": {
+              "giraffes": 4,
+              "horses": 4,
+              "koalas": 3
+            },
+            "objects": [
+              "giraffes",
+              "koalas",
+              "horses"
+            ],
+            "relations": [
+              "four checkered giraffes playing with three black koalas",
+              "three black koalas in front of four horses"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "object_presence",
+            "attribute_binding",
+            "multi_object_composition",
+            "spatial_layout",
+            "anti_occlusion",
+            "clarity_visibility"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly four giraffes, exactly three koalas, and exactly four horses.",
+            "Bind the checkered pattern only to the four giraffes.",
+            "Bind the black color only to the three koalas.",
+            "Place the giraffes and koalas together in the foreground or middle foreground, clearly playing with each other.",
+            "Place all four horses behind the giraffes and koalas, so the koalas are in front of the horses.",
+            "Keep all animals clearly visible and separated enough to count; avoid hiding animals behind each other."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with three separated groups: four checkered giraffes and three black koalas interacting in front, and four horses arranged behind them. Prioritize count accuracy, attribute binding, and unobstructed visibility of every animal.",
+          "initial_prompt": "A clear scene with exactly four checkered giraffes playing with exactly three black koalas. The three koalas are black and are positioned in front of exactly four horses. The four horses stand behind the giraffes and koalas. All four giraffes, all three koalas, and all four horses are fully visible, separated enough to count, with no animals occluding each other. The checkered pattern appears on the giraffes only, and the black color applies to the koalas only.",
+          "parsed_constraints": {
+            "attributes": {
+              "giraffes": [
+                "checkered"
+              ],
+              "koalas": [
+                "black"
+              ]
+            },
+            "counts": {
+              "giraffes": 4,
+              "horses": 4,
+              "koalas": 3
+            },
+            "objects": [
+              "giraffes",
+              "koalas",
+              "horses"
+            ],
+            "relations": [
+              "four checkered giraffes playing with three black koalas",
+              "three black koalas in front of four horses"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "object_presence",
+            "attribute_binding",
+            "multi_object_composition",
+            "spatial_layout",
+            "anti_occlusion",
+            "clarity_visibility"
+          ]
+        },
+        "prompt_used": "A clear scene with exactly four checkered giraffes playing with exactly three black koalas. The three koalas are black and are positioned in front of exactly four horses. The four horses stand behind the giraffes and koalas. All four giraffes, all three koalas, and all four horses are fully visible, separated enough to count, with no animals occluding each other. The checkered pattern appears on the giraffes only, and the black color applies to the koalas only.",
+        "round": 0,
+        "score": 0.2387621441443816,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many giraffes are in the image?",
+                "score": 0.3774336798636658,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.377434",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many giraffes are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the giraffes checkered?",
+                "score": 0.005890970982477484,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.00589097",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the giraffes checkered?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the giraffes playing with the koalas?",
+                "score": 6.2776675789569404e-09,
+                "skill": "verb"
+              },
+              "detected": "soft_score=6.27767e-09",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the giraffes playing with the koalas?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many koalas are in the image?",
+                "score": 7.279860698545125e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=7.27986e-09",
+              "expected": "three",
+              "status": "failed",
+              "target": "How many koalas are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the koalas black?",
+                "score": 0.002967663953313604,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.00296766",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the koalas black?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any koalas in the image?",
+                "score": 3.590306009307667e-10,
+                "skill": "object"
+              },
+              "detected": "soft_score=3.59031e-10",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any koalas in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the koalas in front of the horses?",
+                "score": 0.00015838146663755062,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.000158381",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the koalas in front of the horses?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many horses are in the image?",
+                "score": 0.0011710445075088544,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.00117104",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many horses are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00739_c636559e"
+  },
+  "trajectory_id": "geneval2_00739_c636559e",
+  "trajectory_path": "data/raw_trajectories/geneval2_balanced_100x5_round0_gpt55/geneval2_00739_c636559e__geneval2_00739_c636559e_cand_04.json"
+}

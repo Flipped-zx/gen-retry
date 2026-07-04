@@ -1,0 +1,3213 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "count_mismatch",
+          "missing_object",
+          "relation_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cows are in the image?",
+              "score": 1.0706481036682278e-06,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.07065e-06",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many cows are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows plastic?",
+              "score": 6.665590490118056e-07,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=6.66559e-07",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cows plastic?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows chasing the raccoon?",
+              "score": 0.1409259024567291,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.140926",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cows chasing the raccoon?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the raccoon glass?",
+              "score": 3.008130136941678e-06,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=3.00813e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the raccoon glass?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 10,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any raccoons in the image?",
+              "score": 0.8518840710166842,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.851884",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any raccoons in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many elephants are in the image?",
+              "score": 0.999999965891512,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "two",
+            "status": "passed",
+            "target": "How many elephants are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the elephants spotted?",
+              "score": 0.989013416495709,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.989013",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the elephants spotted?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any elephants in the image?",
+              "score": 0.9999999204519554,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any elephants in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the elephants behind the cows?",
+              "score": 0.9993734759045765,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.999373",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the elephants behind the cows?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any cows in the image?",
+              "score": 0.9999993604578776,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999999",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any cows in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many raccoons are in the image?",
+              "score": 0.9999862363383242,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.999986",
+            "expected": "one",
+            "status": "passed",
+            "target": "How many raccoons are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00712_7d4355ee_cand_03",
+          "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+          "rows": [
+            {
+              "answer": "two",
+              "atom_count": 10,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00712_7d4355ee_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00003/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00003/samples/00003.png",
+              "prompt": "two spotted elephants behind six plastic cows chasing a glass raccoon",
+              "prompt_id": "geneval2_00712_7d4355ee",
+              "question": "How many elephants are in the image?",
+              "score": 0.999999965891512,
+              "skill": "count",
+              "source_index": 712
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00712_7d4355ee_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00003/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00003/samples/00003.png",
+              "prompt": "two spotted elephants behind six plastic cows chasing a glass raccoon",
+              "prompt_id": "geneval2_00712_7d4355ee",
+              "question": "Are the elephants spotted?",
+              "score": 0.989013416495709,
+              "skill": "attribute",
+              "source_index": 712
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00712_7d4355ee_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00003/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00003/samples/00003.png",
+              "prompt": "two spotted elephants behind six plastic cows chasing a glass raccoon",
+              "prompt_id": "geneval2_00712_7d4355ee",
+              "question": "Are there any elephants in the image?",
+              "score": 0.9999999204519554,
+              "skill": "object",
+              "source_index": 712
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00712_7d4355ee_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00003/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00003/samples/00003.png",
+              "prompt": "two spotted elephants behind six plastic cows chasing a glass raccoon",
+              "prompt_id": "geneval2_00712_7d4355ee",
+              "question": "Are the elephants behind the cows?",
+              "score": 0.9993734759045765,
+              "skill": "position",
+              "source_index": 712
+            },
+            {
+              "answer": "six",
+              "atom_count": 10,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00712_7d4355ee_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00003/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00003/samples/00003.png",
+              "prompt": "two spotted elephants behind six plastic cows chasing a glass raccoon",
+              "prompt_id": "geneval2_00712_7d4355ee",
+              "question": "How many cows are in the image?",
+              "score": 1.0706481036682278e-06,
+              "skill": "count",
+              "source_index": 712
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00712_7d4355ee_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00003/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00003/samples/00003.png",
+              "prompt": "two spotted elephants behind six plastic cows chasing a glass raccoon",
+              "prompt_id": "geneval2_00712_7d4355ee",
+              "question": "Are the cows plastic?",
+              "score": 6.665590490118056e-07,
+              "skill": "attribute",
+              "source_index": 712
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00712_7d4355ee_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00003/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00003/samples/00003.png",
+              "prompt": "two spotted elephants behind six plastic cows chasing a glass raccoon",
+              "prompt_id": "geneval2_00712_7d4355ee",
+              "question": "Are there any cows in the image?",
+              "score": 0.9999993604578776,
+              "skill": "object",
+              "source_index": 712
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00712_7d4355ee_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00003/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00003/samples/00003.png",
+              "prompt": "two spotted elephants behind six plastic cows chasing a glass raccoon",
+              "prompt_id": "geneval2_00712_7d4355ee",
+              "question": "Are the cows chasing the raccoon?",
+              "score": 0.1409259024567291,
+              "skill": "verb",
+              "source_index": 712
+            },
+            {
+              "answer": "one",
+              "atom_count": 10,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00712_7d4355ee_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00003/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00003/samples/00003.png",
+              "prompt": "two spotted elephants behind six plastic cows chasing a glass raccoon",
+              "prompt_id": "geneval2_00712_7d4355ee",
+              "question": "How many raccoons are in the image?",
+              "score": 0.9999862363383242,
+              "skill": "count",
+              "source_index": 712
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00712_7d4355ee_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00003/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00003/samples/00003.png",
+              "prompt": "two spotted elephants behind six plastic cows chasing a glass raccoon",
+              "prompt_id": "geneval2_00712_7d4355ee",
+              "question": "Is the raccoon glass?",
+              "score": 3.008130136941678e-06,
+              "skill": "attribute",
+              "source_index": 712
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 10,
+              "candidate_id": "geneval2_00712_7d4355ee_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00003/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00003/samples/00003.png",
+              "prompt": "two spotted elephants behind six plastic cows chasing a glass raccoon",
+              "prompt_id": "geneval2_00712_7d4355ee",
+              "question": "Are there any raccoons in the image?",
+              "score": 0.8518840710166842,
+              "skill": "object",
+              "source_index": 712
+            }
+          ],
+          "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.6346533722136961,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 3,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00712_7d4355ee.json",
+          "manifest_prompt_index": 3,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00712_7d4355ee"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00712_7d4355ee_cand_03",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00003/samples/00003.png",
+        "prompt_used": "A clear scene showing exactly two spotted elephants behind exactly six plastic cows, and the six plastic cows are chasing exactly one glass raccoon. Arrange the two spotted elephants in the back, the six plastic cows in the middle, and the single glass raccoon in front of the cows. All animals should be fully visible, separated, and easy to count, with no extra elephants, cows, raccoons, or other animals. The cows should be oriented toward and moving after the glass raccoon to show they are chasing it.",
+        "seed": 1018
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly two elephants, exactly six cows, and exactly one raccoon; do not add extra animals.",
+          "Keep all animals fully visible and separated enough to count clearly.",
+          "Bind attributes correctly: only the two elephants are spotted, all six cows are plastic, and the single raccoon is glass.",
+          "Arrange depth clearly: the two elephants are behind the six cows, and the six cows are chasing the glass raccoon."
+        ],
+        "generation_strategy": "Create a clear multi-object scene with three separated depth layers: back layer with two spotted elephants, middle layer with six plastic cows, front layer with one glass raccoon. Use spacing and unobstructed views so the counts and attributes are easy to verify, with the cows oriented toward the raccoon to show chasing.",
+        "initial_prompt": "A clear scene showing exactly two spotted elephants behind exactly six plastic cows, and the six plastic cows are chasing exactly one glass raccoon. Arrange the two spotted elephants in the back, the six plastic cows in the middle, and the single glass raccoon in front of the cows. All animals should be fully visible, separated, and easy to count, with no extra elephants, cows, raccoons, or other animals. The cows should be oriented toward and moving after the glass raccoon to show they are chasing it.",
+        "parsed_constraints": {
+          "attributes": {
+            "cows": "plastic",
+            "elephants": "spotted",
+            "raccoon": "glass"
+          },
+          "counts": {
+            "cows": 6,
+            "elephants": 2,
+            "raccoon": 1
+          },
+          "objects": [
+            "elephants",
+            "cows",
+            "raccoon"
+          ],
+          "relations": [
+            "two spotted elephants behind six plastic cows",
+            "six plastic cows chasing one glass raccoon"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly two elephants, exactly six cows, and exactly one raccoon; do not add extra animals.",
+          "Keep all animals fully visible and separated enough to count clearly.",
+          "Bind attributes correctly: only the two elephants are spotted, all six cows are plastic, and the single raccoon is glass.",
+          "Arrange depth clearly: the two elephants are behind the six cows, and the six cows are chasing the glass raccoon."
+        ],
+        "generation_strategy": "Create a clear multi-object scene with three separated depth layers: back layer with two spotted elephants, middle layer with six plastic cows, front layer with one glass raccoon. Use spacing and unobstructed views so the counts and attributes are easy to verify, with the cows oriented toward the raccoon to show chasing.",
+        "initial_prompt": "A clear scene showing exactly two spotted elephants behind exactly six plastic cows, and the six plastic cows are chasing exactly one glass raccoon. Arrange the two spotted elephants in the back, the six plastic cows in the middle, and the single glass raccoon in front of the cows. All animals should be fully visible, separated, and easy to count, with no extra elephants, cows, raccoons, or other animals. The cows should be oriented toward and moving after the glass raccoon to show they are chasing it.",
+        "parsed_constraints": {
+          "attributes": {
+            "cows": "plastic",
+            "elephants": "spotted",
+            "raccoon": "glass"
+          },
+          "counts": {
+            "cows": 6,
+            "elephants": 2,
+            "raccoon": 1
+          },
+          "objects": [
+            "elephants",
+            "cows",
+            "raccoon"
+          ],
+          "relations": [
+            "two spotted elephants behind six plastic cows",
+            "six plastic cows chasing one glass raccoon"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cows are in the image?",
+                "score": 1.0706481036682278e-06,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.07065e-06",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many cows are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows plastic?",
+                "score": 6.665590490118056e-07,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=6.66559e-07",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cows plastic?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows chasing the raccoon?",
+                "score": 0.1409259024567291,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.140926",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cows chasing the raccoon?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the raccoon glass?",
+                "score": 3.008130136941678e-06,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=3.00813e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the raccoon glass?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 10,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any raccoons in the image?",
+                "score": 0.8518840710166842,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.851884",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any raccoons in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00003/samples/00003.png",
+          "prompt": "A clear scene showing exactly two spotted elephants behind exactly six plastic cows, and the six plastic cows are chasing exactly one glass raccoon. Arrange the two spotted elephants in the back, the six plastic cows in the middle, and the single glass raccoon in front of the cows. All animals should be fully visible, separated, and easy to count, with no extra elephants, cows, raccoons, or other animals. The cows should be oriented toward and moving after the glass raccoon to show they are chasing it.",
+          "round": 0,
+          "score": 0.6346533722136961
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00712_7d4355ee_cand_03",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "attribute_mismatch",
+            "count_mismatch",
+            "missing_object",
+            "relation_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cows are in the image?",
+                "score": 1.0706481036682278e-06,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.07065e-06",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many cows are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows plastic?",
+                "score": 6.665590490118056e-07,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=6.66559e-07",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cows plastic?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows chasing the raccoon?",
+                "score": 0.1409259024567291,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.140926",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cows chasing the raccoon?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the raccoon glass?",
+                "score": 3.008130136941678e-06,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=3.00813e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the raccoon glass?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 10,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any raccoons in the image?",
+                "score": 0.8518840710166842,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.851884",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any raccoons in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many elephants are in the image?",
+                "score": 0.999999965891512,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "two",
+              "status": "passed",
+              "target": "How many elephants are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the elephants spotted?",
+                "score": 0.989013416495709,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.989013",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the elephants spotted?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any elephants in the image?",
+                "score": 0.9999999204519554,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any elephants in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the elephants behind the cows?",
+                "score": 0.9993734759045765,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.999373",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the elephants behind the cows?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any cows in the image?",
+                "score": 0.9999993604578776,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999999",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any cows in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many raccoons are in the image?",
+                "score": 0.9999862363383242,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.999986",
+              "expected": "one",
+              "status": "passed",
+              "target": "How many raccoons are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "score": 0.6346533722136961,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many cows are in the image?",
+                  "score": 1.0706481036682278e-06,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1.07065e-06",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many cows are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the cows plastic?",
+                  "score": 6.665590490118056e-07,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=6.66559e-07",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the cows plastic?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the cows chasing the raccoon?",
+                  "score": 0.1409259024567291,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=0.140926",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the cows chasing the raccoon?",
+                "type": "relation_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Is the raccoon glass?",
+                  "score": 3.008130136941678e-06,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=3.00813e-06",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Is the raccoon glass?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 10,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any raccoons in the image?",
+                  "score": 0.8518840710166842,
+                  "skill": "object"
+                },
+                "detected": "soft_score=0.851884",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are there any raccoons in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00003/samples/00003.png",
+            "prompt": "A clear scene showing exactly two spotted elephants behind exactly six plastic cows, and the six plastic cows are chasing exactly one glass raccoon. Arrange the two spotted elephants in the back, the six plastic cows in the middle, and the single glass raccoon in front of the cows. All animals should be fully visible, separated, and easy to count, with no extra elephants, cows, raccoons, or other animals. The cows should be oriented toward and moving after the glass raccoon to show they are chasing it.",
+            "round": 0,
+            "score": 0.6346533722136961
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cows are in the image?",
+                "score": 1.0706481036682278e-06,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.07065e-06",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many cows are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows plastic?",
+                "score": 6.665590490118056e-07,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=6.66559e-07",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cows plastic?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows chasing the raccoon?",
+                "score": 0.1409259024567291,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.140926",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cows chasing the raccoon?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the raccoon glass?",
+                "score": 3.008130136941678e-06,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=3.00813e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the raccoon glass?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 10,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any raccoons in the image?",
+                "score": 0.8518840710166842,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.851884",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any raccoons in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "attribute_mismatch",
+            "count_mismatch",
+            "missing_object",
+            "relation_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cows are in the image?",
+                "score": 1.0706481036682278e-06,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.07065e-06",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many cows are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows plastic?",
+                "score": 6.665590490118056e-07,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=6.66559e-07",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cows plastic?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows chasing the raccoon?",
+                "score": 0.1409259024567291,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.140926",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cows chasing the raccoon?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the raccoon glass?",
+                "score": 3.008130136941678e-06,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=3.00813e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the raccoon glass?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 10,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any raccoons in the image?",
+                "score": 0.8518840710166842,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.851884",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any raccoons in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many elephants are in the image?",
+                "score": 0.999999965891512,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "two",
+              "status": "passed",
+              "target": "How many elephants are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the elephants spotted?",
+                "score": 0.989013416495709,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.989013",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the elephants spotted?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any elephants in the image?",
+                "score": 0.9999999204519554,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any elephants in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the elephants behind the cows?",
+                "score": 0.9993734759045765,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.999373",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the elephants behind the cows?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any cows in the image?",
+                "score": 0.9999993604578776,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999999",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any cows in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many raccoons are in the image?",
+                "score": 0.9999862363383242,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.999986",
+              "expected": "one",
+              "status": "passed",
+              "target": "How many raccoons are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "score": 0.6346533722136961,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "two spotted elephants behind six plastic cows chasing a glass raccoon",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cows are in the image?",
+              "score": 1.0706481036682278e-06,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.07065e-06",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many cows are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows plastic?",
+              "score": 6.665590490118056e-07,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=6.66559e-07",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cows plastic?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows chasing the raccoon?",
+              "score": 0.1409259024567291,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.140926",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cows chasing the raccoon?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the raccoon glass?",
+              "score": 3.008130136941678e-06,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=3.00813e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the raccoon glass?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 10,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any raccoons in the image?",
+              "score": 0.8518840710166842,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.851884",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any raccoons in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly two elephants, exactly six cows, and exactly one raccoon; do not add extra animals.",
+            "Keep all animals fully visible and separated enough to count clearly.",
+            "Bind attributes correctly: only the two elephants are spotted, all six cows are plastic, and the single raccoon is glass.",
+            "Arrange depth clearly: the two elephants are behind the six cows, and the six cows are chasing the glass raccoon."
+          ],
+          "generation_strategy": "Create a clear multi-object scene with three separated depth layers: back layer with two spotted elephants, middle layer with six plastic cows, front layer with one glass raccoon. Use spacing and unobstructed views so the counts and attributes are easy to verify, with the cows oriented toward the raccoon to show chasing.",
+          "initial_prompt": "A clear scene showing exactly two spotted elephants behind exactly six plastic cows, and the six plastic cows are chasing exactly one glass raccoon. Arrange the two spotted elephants in the back, the six plastic cows in the middle, and the single glass raccoon in front of the cows. All animals should be fully visible, separated, and easy to count, with no extra elephants, cows, raccoons, or other animals. The cows should be oriented toward and moving after the glass raccoon to show they are chasing it.",
+          "parsed_constraints": {
+            "attributes": {
+              "cows": "plastic",
+              "elephants": "spotted",
+              "raccoon": "glass"
+            },
+            "counts": {
+              "cows": 6,
+              "elephants": 2,
+              "raccoon": 1
+            },
+            "objects": [
+              "elephants",
+              "cows",
+              "raccoon"
+            ],
+            "relations": [
+              "two spotted elephants behind six plastic cows",
+              "six plastic cows chasing one glass raccoon"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly two elephants, exactly six cows, and exactly one raccoon; do not add extra animals.",
+            "Keep all animals fully visible and separated enough to count clearly.",
+            "Bind attributes correctly: only the two elephants are spotted, all six cows are plastic, and the single raccoon is glass.",
+            "Arrange depth clearly: the two elephants are behind the six cows, and the six cows are chasing the glass raccoon."
+          ],
+          "generation_strategy": "Create a clear multi-object scene with three separated depth layers: back layer with two spotted elephants, middle layer with six plastic cows, front layer with one glass raccoon. Use spacing and unobstructed views so the counts and attributes are easy to verify, with the cows oriented toward the raccoon to show chasing.",
+          "initial_prompt": "A clear scene showing exactly two spotted elephants behind exactly six plastic cows, and the six plastic cows are chasing exactly one glass raccoon. Arrange the two spotted elephants in the back, the six plastic cows in the middle, and the single glass raccoon in front of the cows. All animals should be fully visible, separated, and easy to count, with no extra elephants, cows, raccoons, or other animals. The cows should be oriented toward and moving after the glass raccoon to show they are chasing it.",
+          "parsed_constraints": {
+            "attributes": {
+              "cows": "plastic",
+              "elephants": "spotted",
+              "raccoon": "glass"
+            },
+            "counts": {
+              "cows": 6,
+              "elephants": 2,
+              "raccoon": 1
+            },
+            "objects": [
+              "elephants",
+              "cows",
+              "raccoon"
+            ],
+            "relations": [
+              "two spotted elephants behind six plastic cows",
+              "six plastic cows chasing one glass raccoon"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_prompt": "A clear scene showing exactly two spotted elephants behind exactly six plastic cows, and the six plastic cows are chasing exactly one glass raccoon. Arrange the two spotted elephants in the back, the six plastic cows in the middle, and the single glass raccoon in front of the cows. All animals should be fully visible, separated, and easy to count, with no extra elephants, cows, raccoons, or other animals. The cows should be oriented toward and moving after the glass raccoon to show they are chasing it.",
+        "previous_selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ],
+        "prompt_id": "geneval2_00712_7d4355ee",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "attribute_mismatch",
+              "count_mismatch",
+              "missing_object",
+              "relation_mismatch"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many cows are in the image?",
+                  "score": 1.0706481036682278e-06,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1.07065e-06",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many cows are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the cows plastic?",
+                  "score": 6.665590490118056e-07,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=6.66559e-07",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the cows plastic?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the cows chasing the raccoon?",
+                  "score": 0.1409259024567291,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=0.140926",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the cows chasing the raccoon?",
+                "type": "relation_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Is the raccoon glass?",
+                  "score": 3.008130136941678e-06,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=3.00813e-06",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Is the raccoon glass?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 10,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any raccoons in the image?",
+                  "score": 0.8518840710166842,
+                  "skill": "object"
+                },
+                "detected": "soft_score=0.851884",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are there any raccoons in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many elephants are in the image?",
+                  "score": 0.999999965891512,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1",
+                "expected": "two",
+                "status": "passed",
+                "target": "How many elephants are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the elephants spotted?",
+                  "score": 0.989013416495709,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.989013",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the elephants spotted?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any elephants in the image?",
+                  "score": 0.9999999204519554,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any elephants in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the elephants behind the cows?",
+                  "score": 0.9993734759045765,
+                  "skill": "position"
+                },
+                "detected": "soft_score=0.999373",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the elephants behind the cows?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any cows in the image?",
+                  "score": 0.9999993604578776,
+                  "skill": "object"
+                },
+                "detected": "soft_score=0.999999",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any cows in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many raccoons are in the image?",
+                  "score": 0.9999862363383242,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.999986",
+                "expected": "one",
+                "status": "passed",
+                "target": "How many raccoons are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly two elephants, exactly six cows, and exactly one raccoon; do not add extra animals.",
+                "Keep all animals fully visible and separated enough to count clearly.",
+                "Bind attributes correctly: only the two elephants are spotted, all six cows are plastic, and the single raccoon is glass.",
+                "Arrange depth clearly: the two elephants are behind the six cows, and the six cows are chasing the glass raccoon."
+              ],
+              "generation_strategy": "Create a clear multi-object scene with three separated depth layers: back layer with two spotted elephants, middle layer with six plastic cows, front layer with one glass raccoon. Use spacing and unobstructed views so the counts and attributes are easy to verify, with the cows oriented toward the raccoon to show chasing.",
+              "initial_prompt": "A clear scene showing exactly two spotted elephants behind exactly six plastic cows, and the six plastic cows are chasing exactly one glass raccoon. Arrange the two spotted elephants in the back, the six plastic cows in the middle, and the single glass raccoon in front of the cows. All animals should be fully visible, separated, and easy to count, with no extra elephants, cows, raccoons, or other animals. The cows should be oriented toward and moving after the glass raccoon to show they are chasing it.",
+              "parsed_constraints": {
+                "attributes": {
+                  "cows": "plastic",
+                  "elephants": "spotted",
+                  "raccoon": "glass"
+                },
+                "counts": {
+                  "cows": 6,
+                  "elephants": 2,
+                  "raccoon": 1
+                },
+                "objects": [
+                  "elephants",
+                  "cows",
+                  "raccoon"
+                ],
+                "relations": [
+                  "two spotted elephants behind six plastic cows",
+                  "six plastic cows chasing one glass raccoon"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly two elephants, exactly six cows, and exactly one raccoon; do not add extra animals.",
+                "Keep all animals fully visible and separated enough to count clearly.",
+                "Bind attributes correctly: only the two elephants are spotted, all six cows are plastic, and the single raccoon is glass.",
+                "Arrange depth clearly: the two elephants are behind the six cows, and the six cows are chasing the glass raccoon."
+              ],
+              "generation_strategy": "Create a clear multi-object scene with three separated depth layers: back layer with two spotted elephants, middle layer with six plastic cows, front layer with one glass raccoon. Use spacing and unobstructed views so the counts and attributes are easy to verify, with the cows oriented toward the raccoon to show chasing.",
+              "initial_prompt": "A clear scene showing exactly two spotted elephants behind exactly six plastic cows, and the six plastic cows are chasing exactly one glass raccoon. Arrange the two spotted elephants in the back, the six plastic cows in the middle, and the single glass raccoon in front of the cows. All animals should be fully visible, separated, and easy to count, with no extra elephants, cows, raccoons, or other animals. The cows should be oriented toward and moving after the glass raccoon to show they are chasing it.",
+              "parsed_constraints": {
+                "attributes": {
+                  "cows": "plastic",
+                  "elephants": "spotted",
+                  "raccoon": "glass"
+                },
+                "counts": {
+                  "cows": 6,
+                  "elephants": 2,
+                  "raccoon": 1
+                },
+                "objects": [
+                  "elephants",
+                  "cows",
+                  "raccoon"
+                ],
+                "relations": [
+                  "two spotted elephants behind six plastic cows",
+                  "six plastic cows chasing one glass raccoon"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "prompt_used": "A clear scene showing exactly two spotted elephants behind exactly six plastic cows, and the six plastic cows are chasing exactly one glass raccoon. Arrange the two spotted elephants in the back, the six plastic cows in the middle, and the single glass raccoon in front of the cows. All animals should be fully visible, separated, and easy to count, with no extra elephants, cows, raccoons, or other animals. The cows should be oriented toward and moving after the glass raccoon to show they are chasing it.",
+            "round": 0,
+            "score": 0.6346533722136961,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 4,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many cows are in the image?",
+                    "score": 1.0706481036682278e-06,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=1.07065e-06",
+                  "expected": "six",
+                  "status": "failed",
+                  "target": "How many cows are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 5,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the cows plastic?",
+                    "score": 6.665590490118056e-07,
+                    "skill": "attribute"
+                  },
+                  "detected": "soft_score=6.66559e-07",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the cows plastic?",
+                  "type": "attribute_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 7,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the cows chasing the raccoon?",
+                    "score": 0.1409259024567291,
+                    "skill": "verb"
+                  },
+                  "detected": "soft_score=0.140926",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the cows chasing the raccoon?",
+                  "type": "relation_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 9,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Is the raccoon glass?",
+                    "score": 3.008130136941678e-06,
+                    "skill": "attribute"
+                  },
+                  "detected": "soft_score=3.00813e-06",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Is the raccoon glass?",
+                  "type": "attribute_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 10,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are there any raccoons in the image?",
+                    "score": 0.8518840710166842,
+                    "skill": "object"
+                  },
+                  "detected": "soft_score=0.851884",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are there any raccoons in the image?",
+                  "type": "missing_object"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00712_7d4355ee"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cows are in the image?",
+              "score": 1.0706481036682278e-06,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.07065e-06",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many cows are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows plastic?",
+              "score": 6.665590490118056e-07,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=6.66559e-07",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cows plastic?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows chasing the raccoon?",
+              "score": 0.1409259024567291,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.140926",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cows chasing the raccoon?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the raccoon glass?",
+              "score": 3.008130136941678e-06,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=3.00813e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the raccoon glass?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 10,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any raccoons in the image?",
+              "score": 0.8518840710166842,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.851884",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any raccoons in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00712_7d4355ee_cand_03",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly two elephants, exactly six cows, and exactly one raccoon; do not add extra animals.",
+      "Keep all animals fully visible and separated enough to count clearly.",
+      "Bind attributes correctly: only the two elephants are spotted, all six cows are plastic, and the single raccoon is glass.",
+      "Arrange depth clearly: the two elephants are behind the six cows, and the six cows are chasing the glass raccoon."
+    ],
+    "generation_strategy": "Create a clear multi-object scene with three separated depth layers: back layer with two spotted elephants, middle layer with six plastic cows, front layer with one glass raccoon. Use spacing and unobstructed views so the counts and attributes are easy to verify, with the cows oriented toward the raccoon to show chasing.",
+    "initial_prompt": "A clear scene showing exactly two spotted elephants behind exactly six plastic cows, and the six plastic cows are chasing exactly one glass raccoon. Arrange the two spotted elephants in the back, the six plastic cows in the middle, and the single glass raccoon in front of the cows. All animals should be fully visible, separated, and easy to count, with no extra elephants, cows, raccoons, or other animals. The cows should be oriented toward and moving after the glass raccoon to show they are chasing it.",
+    "parsed_constraints": {
+      "attributes": {
+        "cows": "plastic",
+        "elephants": "spotted",
+        "raccoon": "glass"
+      },
+      "counts": {
+        "cows": 6,
+        "elephants": 2,
+        "raccoon": 1
+      },
+      "objects": [
+        "elephants",
+        "cows",
+        "raccoon"
+      ],
+      "relations": [
+        "two spotted elephants behind six plastic cows",
+        "six plastic cows chasing one glass raccoon"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The evaluation passed the two spotted elephants, elephant presence, elephants behind cows, cow presence, and exactly one raccoon count, but failed the exact cow count, plastic material on cows, clear cow-chasing-raccoon action, glass material on the raccoon, and raccoon presence confidence. The next generation should make the six cows individually countable and visibly plastic, make the single raccoon large and unmistakably visible as glass, and use a clear left-to-right chase layout with all six cows facing and running toward the raccoon.",
+    "expected_improvement": [
+      "The cow count should improve by arranging exactly six separated cows in two rows of three with no overlaps or extras.",
+      "The cow material attribute should improve by describing each cow as a glossy molded plastic cow figure.",
+      "The chase relation should improve by placing the raccoon ahead of the cows and all six cows oriented toward it in a pursuit formation.",
+      "The raccoon presence and glass attribute should improve by making one unmistakable raccoon figure in front, transparent and shiny like glass.",
+      "Previously passed elephant count, spotted elephant attribute, and elephants-behind-cows relation should be preserved by keeping exactly two spotted elephants clearly in the back layer."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "attribute_mismatch",
+      "relation_mismatch",
+      "missing_object"
+    ],
+    "preserve_constraints": [
+      "Keep exactly two elephants visible.",
+      "Keep both elephants spotted.",
+      "Keep the two spotted elephants behind the cows.",
+      "Keep cows present and clearly visible.",
+      "Keep exactly one raccoon, not multiple raccoons."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt used a depth-layer composition, but it did not force the six cows into a simple countable arrangement, did not strongly bind plastic material to every cow, and did not make the raccoon large and unmistakably visible. The chasing relation was described generally rather than as a clear directional layout with the cows behind and moving toward the raccoon.",
+      "error_source": "prompt_under_specification_for_countable_layout_material_binding_and_action_visibility"
+    },
+    "regeneration_strategy": "Use a simple side-view composition with three clear groups: two spotted elephants in the far back, exactly six separated glossy plastic cows in the middle arranged as two rows of three, and exactly one transparent glass raccoon in front of the cows. Emphasize that every cow is facing and running toward the raccoon, with no occlusion and no extra animals.",
+    "regression_risks": [
+      "The generator may reduce or merge the six cows unless each cow is separately visible and countable.",
+      "The material attributes may be lost unless plastic is bound to every cow and glass is bound only to the raccoon.",
+      "The raccoon may become too small or hidden unless it is placed prominently in front of the cows.",
+      "The two spotted elephants may regress if the prompt over-focuses on fixing cows and raccoon."
+    ],
+    "repair_constraints": [
+      "Show exactly six cows, each as a separate visible individual, arranged in two rows of three, with no seventh cow and no merged cow shapes.",
+      "Bind the plastic attribute to all six cows: each cow must look like a glossy molded plastic cow.",
+      "Show exactly one raccoon clearly and prominently in front of the cows.",
+      "Bind the glass attribute to the single raccoon: the raccoon must look transparent, shiny, and made of glass.",
+      "Make the six plastic cows chasing the glass raccoon: the raccoon is ahead, the cows are behind it, and all six cows face and run toward the raccoon."
+    ],
+    "retry_prompt": "A clear side-view scene with exactly two spotted elephants behind exactly six plastic cows, and the six plastic cows chasing exactly one glass raccoon. Put the two spotted elephants in the back layer, fully visible and spotted. Put the six cows in the middle layer as six separate glossy molded plastic cows, arranged in two neat rows of three so each cow is easy to count and none overlap or merge. Put one single raccoon in front of the cows, clearly visible and larger enough to recognize, transparent and shiny like glass. The glass raccoon is ahead of the cows, and all six plastic cows are behind it, facing toward it and running after it to clearly show they are chasing the raccoon. No extra elephants, no extra cows, no extra raccoons, and no other animals. Keep every required animal complete, unobstructed, and easy to verify.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "object_presence",
+        "spatial_layout",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints",
+        "multi_object_composition"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "Use the same allowed skill set but change emphasis: prioritize quantity_counting with a two-rows-of-three cow layout, attribute_binding for plastic cows and glass raccoon, object_presence and clarity_visibility for the raccoon, and spatial_layout for an unmistakable chase direction."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cows are in the image?",
+            "score": 1.0706481036682278e-06,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.07065e-06",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many cows are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cows plastic?",
+            "score": 6.665590490118056e-07,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=6.66559e-07",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the cows plastic?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cows chasing the raccoon?",
+            "score": 0.1409259024567291,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.140926",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the cows chasing the raccoon?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the raccoon glass?",
+            "score": 3.008130136941678e-06,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=3.00813e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the raccoon glass?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 10,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any raccoons in the image?",
+            "score": 0.8518840710166842,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.851884",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any raccoons in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00003/samples/00003.png",
+      "prompt": "A clear scene showing exactly two spotted elephants behind exactly six plastic cows, and the six plastic cows are chasing exactly one glass raccoon. Arrange the two spotted elephants in the back, the six plastic cows in the middle, and the single glass raccoon in front of the cows. All animals should be fully visible, separated, and easy to count, with no extra elephants, cows, raccoons, or other animals. The cows should be oriented toward and moving after the glass raccoon to show they are chasing it.",
+      "round": 0,
+      "score": 0.6346533722136961
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00712_7d4355ee_cand_03",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "count_mismatch",
+        "missing_object",
+        "relation_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cows are in the image?",
+            "score": 1.0706481036682278e-06,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.07065e-06",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many cows are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cows plastic?",
+            "score": 6.665590490118056e-07,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=6.66559e-07",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the cows plastic?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cows chasing the raccoon?",
+            "score": 0.1409259024567291,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.140926",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the cows chasing the raccoon?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the raccoon glass?",
+            "score": 3.008130136941678e-06,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=3.00813e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the raccoon glass?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 10,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any raccoons in the image?",
+            "score": 0.8518840710166842,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.851884",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any raccoons in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many elephants are in the image?",
+            "score": 0.999999965891512,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "two",
+          "status": "passed",
+          "target": "How many elephants are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the elephants spotted?",
+            "score": 0.989013416495709,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.989013",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the elephants spotted?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any elephants in the image?",
+            "score": 0.9999999204519554,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any elephants in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the elephants behind the cows?",
+            "score": 0.9993734759045765,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.999373",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the elephants behind the cows?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any cows in the image?",
+            "score": 0.9999993604578776,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999999",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any cows in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many raccoons are in the image?",
+            "score": 0.9999862363383242,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.999986",
+          "expected": "one",
+          "status": "passed",
+          "target": "How many raccoons are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "score": 0.6346533722136961,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cows are in the image?",
+              "score": 1.0706481036682278e-06,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.07065e-06",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many cows are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows plastic?",
+              "score": 6.665590490118056e-07,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=6.66559e-07",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cows plastic?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows chasing the raccoon?",
+              "score": 0.1409259024567291,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.140926",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cows chasing the raccoon?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the raccoon glass?",
+              "score": 3.008130136941678e-06,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=3.00813e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the raccoon glass?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 10,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any raccoons in the image?",
+              "score": 0.8518840710166842,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.851884",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any raccoons in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00003/samples/00003.png",
+        "prompt": "A clear scene showing exactly two spotted elephants behind exactly six plastic cows, and the six plastic cows are chasing exactly one glass raccoon. Arrange the two spotted elephants in the back, the six plastic cows in the middle, and the single glass raccoon in front of the cows. All animals should be fully visible, separated, and easy to count, with no extra elephants, cows, raccoons, or other animals. The cows should be oriented toward and moving after the glass raccoon to show they are chasing it.",
+        "round": 0,
+        "score": 0.6346533722136961
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cows are in the image?",
+            "score": 1.0706481036682278e-06,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.07065e-06",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many cows are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cows plastic?",
+            "score": 6.665590490118056e-07,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=6.66559e-07",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the cows plastic?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cows chasing the raccoon?",
+            "score": 0.1409259024567291,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.140926",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the cows chasing the raccoon?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the raccoon glass?",
+            "score": 3.008130136941678e-06,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=3.00813e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the raccoon glass?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 10,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any raccoons in the image?",
+            "score": 0.8518840710166842,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.851884",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any raccoons in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "count_mismatch",
+        "missing_object",
+        "relation_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cows are in the image?",
+            "score": 1.0706481036682278e-06,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.07065e-06",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many cows are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cows plastic?",
+            "score": 6.665590490118056e-07,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=6.66559e-07",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the cows plastic?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cows chasing the raccoon?",
+            "score": 0.1409259024567291,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.140926",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the cows chasing the raccoon?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the raccoon glass?",
+            "score": 3.008130136941678e-06,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=3.00813e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the raccoon glass?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 10,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any raccoons in the image?",
+            "score": 0.8518840710166842,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.851884",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any raccoons in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many elephants are in the image?",
+            "score": 0.999999965891512,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "two",
+          "status": "passed",
+          "target": "How many elephants are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the elephants spotted?",
+            "score": 0.989013416495709,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.989013",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the elephants spotted?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any elephants in the image?",
+            "score": 0.9999999204519554,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any elephants in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the elephants behind the cows?",
+            "score": 0.9993734759045765,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.999373",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the elephants behind the cows?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any cows in the image?",
+            "score": 0.9999993604578776,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999999",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any cows in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many raccoons are in the image?",
+            "score": 0.9999862363383242,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.999986",
+          "expected": "one",
+          "status": "passed",
+          "target": "How many raccoons are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "score": 0.6346533722136961,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "two spotted elephants behind six plastic cows chasing a glass raccoon",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cows are in the image?",
+          "score": 1.0706481036682278e-06,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.07065e-06",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many cows are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the cows plastic?",
+          "score": 6.665590490118056e-07,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=6.66559e-07",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the cows plastic?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the cows chasing the raccoon?",
+          "score": 0.1409259024567291,
+          "skill": "verb"
+        },
+        "detected": "soft_score=0.140926",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the cows chasing the raccoon?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 9,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the raccoon glass?",
+          "score": 3.008130136941678e-06,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=3.00813e-06",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Is the raccoon glass?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 10,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any raccoons in the image?",
+          "score": 0.8518840710166842,
+          "skill": "object"
+        },
+        "detected": "soft_score=0.851884",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are there any raccoons in the image?",
+        "type": "missing_object"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly two elephants, exactly six cows, and exactly one raccoon; do not add extra animals.",
+        "Keep all animals fully visible and separated enough to count clearly.",
+        "Bind attributes correctly: only the two elephants are spotted, all six cows are plastic, and the single raccoon is glass.",
+        "Arrange depth clearly: the two elephants are behind the six cows, and the six cows are chasing the glass raccoon."
+      ],
+      "generation_strategy": "Create a clear multi-object scene with three separated depth layers: back layer with two spotted elephants, middle layer with six plastic cows, front layer with one glass raccoon. Use spacing and unobstructed views so the counts and attributes are easy to verify, with the cows oriented toward the raccoon to show chasing.",
+      "initial_prompt": "A clear scene showing exactly two spotted elephants behind exactly six plastic cows, and the six plastic cows are chasing exactly one glass raccoon. Arrange the two spotted elephants in the back, the six plastic cows in the middle, and the single glass raccoon in front of the cows. All animals should be fully visible, separated, and easy to count, with no extra elephants, cows, raccoons, or other animals. The cows should be oriented toward and moving after the glass raccoon to show they are chasing it.",
+      "parsed_constraints": {
+        "attributes": {
+          "cows": "plastic",
+          "elephants": "spotted",
+          "raccoon": "glass"
+        },
+        "counts": {
+          "cows": 6,
+          "elephants": 2,
+          "raccoon": 1
+        },
+        "objects": [
+          "elephants",
+          "cows",
+          "raccoon"
+        ],
+        "relations": [
+          "two spotted elephants behind six plastic cows",
+          "six plastic cows chasing one glass raccoon"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly two elephants, exactly six cows, and exactly one raccoon; do not add extra animals.",
+        "Keep all animals fully visible and separated enough to count clearly.",
+        "Bind attributes correctly: only the two elephants are spotted, all six cows are plastic, and the single raccoon is glass.",
+        "Arrange depth clearly: the two elephants are behind the six cows, and the six cows are chasing the glass raccoon."
+      ],
+      "generation_strategy": "Create a clear multi-object scene with three separated depth layers: back layer with two spotted elephants, middle layer with six plastic cows, front layer with one glass raccoon. Use spacing and unobstructed views so the counts and attributes are easy to verify, with the cows oriented toward the raccoon to show chasing.",
+      "initial_prompt": "A clear scene showing exactly two spotted elephants behind exactly six plastic cows, and the six plastic cows are chasing exactly one glass raccoon. Arrange the two spotted elephants in the back, the six plastic cows in the middle, and the single glass raccoon in front of the cows. All animals should be fully visible, separated, and easy to count, with no extra elephants, cows, raccoons, or other animals. The cows should be oriented toward and moving after the glass raccoon to show they are chasing it.",
+      "parsed_constraints": {
+        "attributes": {
+          "cows": "plastic",
+          "elephants": "spotted",
+          "raccoon": "glass"
+        },
+        "counts": {
+          "cows": 6,
+          "elephants": 2,
+          "raccoon": 1
+        },
+        "objects": [
+          "elephants",
+          "cows",
+          "raccoon"
+        ],
+        "relations": [
+          "two spotted elephants behind six plastic cows",
+          "six plastic cows chasing one glass raccoon"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_prompt": "A clear scene showing exactly two spotted elephants behind exactly six plastic cows, and the six plastic cows are chasing exactly one glass raccoon. Arrange the two spotted elephants in the back, the six plastic cows in the middle, and the single glass raccoon in front of the cows. All animals should be fully visible, separated, and easy to count, with no extra elephants, cows, raccoons, or other animals. The cows should be oriented toward and moving after the glass raccoon to show they are chasing it.",
+    "previous_selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ],
+    "prompt_id": "geneval2_00712_7d4355ee",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "count_mismatch",
+          "missing_object",
+          "relation_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cows are in the image?",
+              "score": 1.0706481036682278e-06,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.07065e-06",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many cows are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows plastic?",
+              "score": 6.665590490118056e-07,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=6.66559e-07",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cows plastic?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows chasing the raccoon?",
+              "score": 0.1409259024567291,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.140926",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cows chasing the raccoon?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the raccoon glass?",
+              "score": 3.008130136941678e-06,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=3.00813e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the raccoon glass?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 10,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any raccoons in the image?",
+              "score": 0.8518840710166842,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.851884",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any raccoons in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many elephants are in the image?",
+              "score": 0.999999965891512,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "two",
+            "status": "passed",
+            "target": "How many elephants are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the elephants spotted?",
+              "score": 0.989013416495709,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.989013",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the elephants spotted?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any elephants in the image?",
+              "score": 0.9999999204519554,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any elephants in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the elephants behind the cows?",
+              "score": 0.9993734759045765,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.999373",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the elephants behind the cows?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any cows in the image?",
+              "score": 0.9999993604578776,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999999",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any cows in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many raccoons are in the image?",
+              "score": 0.9999862363383242,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.999986",
+            "expected": "one",
+            "status": "passed",
+            "target": "How many raccoons are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly two elephants, exactly six cows, and exactly one raccoon; do not add extra animals.",
+            "Keep all animals fully visible and separated enough to count clearly.",
+            "Bind attributes correctly: only the two elephants are spotted, all six cows are plastic, and the single raccoon is glass.",
+            "Arrange depth clearly: the two elephants are behind the six cows, and the six cows are chasing the glass raccoon."
+          ],
+          "generation_strategy": "Create a clear multi-object scene with three separated depth layers: back layer with two spotted elephants, middle layer with six plastic cows, front layer with one glass raccoon. Use spacing and unobstructed views so the counts and attributes are easy to verify, with the cows oriented toward the raccoon to show chasing.",
+          "initial_prompt": "A clear scene showing exactly two spotted elephants behind exactly six plastic cows, and the six plastic cows are chasing exactly one glass raccoon. Arrange the two spotted elephants in the back, the six plastic cows in the middle, and the single glass raccoon in front of the cows. All animals should be fully visible, separated, and easy to count, with no extra elephants, cows, raccoons, or other animals. The cows should be oriented toward and moving after the glass raccoon to show they are chasing it.",
+          "parsed_constraints": {
+            "attributes": {
+              "cows": "plastic",
+              "elephants": "spotted",
+              "raccoon": "glass"
+            },
+            "counts": {
+              "cows": 6,
+              "elephants": 2,
+              "raccoon": 1
+            },
+            "objects": [
+              "elephants",
+              "cows",
+              "raccoon"
+            ],
+            "relations": [
+              "two spotted elephants behind six plastic cows",
+              "six plastic cows chasing one glass raccoon"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly two elephants, exactly six cows, and exactly one raccoon; do not add extra animals.",
+            "Keep all animals fully visible and separated enough to count clearly.",
+            "Bind attributes correctly: only the two elephants are spotted, all six cows are plastic, and the single raccoon is glass.",
+            "Arrange depth clearly: the two elephants are behind the six cows, and the six cows are chasing the glass raccoon."
+          ],
+          "generation_strategy": "Create a clear multi-object scene with three separated depth layers: back layer with two spotted elephants, middle layer with six plastic cows, front layer with one glass raccoon. Use spacing and unobstructed views so the counts and attributes are easy to verify, with the cows oriented toward the raccoon to show chasing.",
+          "initial_prompt": "A clear scene showing exactly two spotted elephants behind exactly six plastic cows, and the six plastic cows are chasing exactly one glass raccoon. Arrange the two spotted elephants in the back, the six plastic cows in the middle, and the single glass raccoon in front of the cows. All animals should be fully visible, separated, and easy to count, with no extra elephants, cows, raccoons, or other animals. The cows should be oriented toward and moving after the glass raccoon to show they are chasing it.",
+          "parsed_constraints": {
+            "attributes": {
+              "cows": "plastic",
+              "elephants": "spotted",
+              "raccoon": "glass"
+            },
+            "counts": {
+              "cows": 6,
+              "elephants": 2,
+              "raccoon": 1
+            },
+            "objects": [
+              "elephants",
+              "cows",
+              "raccoon"
+            ],
+            "relations": [
+              "two spotted elephants behind six plastic cows",
+              "six plastic cows chasing one glass raccoon"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "prompt_used": "A clear scene showing exactly two spotted elephants behind exactly six plastic cows, and the six plastic cows are chasing exactly one glass raccoon. Arrange the two spotted elephants in the back, the six plastic cows in the middle, and the single glass raccoon in front of the cows. All animals should be fully visible, separated, and easy to count, with no extra elephants, cows, raccoons, or other animals. The cows should be oriented toward and moving after the glass raccoon to show they are chasing it.",
+        "round": 0,
+        "score": 0.6346533722136961,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cows are in the image?",
+                "score": 1.0706481036682278e-06,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.07065e-06",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many cows are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows plastic?",
+                "score": 6.665590490118056e-07,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=6.66559e-07",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cows plastic?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows chasing the raccoon?",
+                "score": 0.1409259024567291,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.140926",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cows chasing the raccoon?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the raccoon glass?",
+                "score": 3.008130136941678e-06,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=3.00813e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the raccoon glass?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 10,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any raccoons in the image?",
+                "score": 0.8518840710166842,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.851884",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any raccoons in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00712_7d4355ee"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cows are in the image?",
+          "score": 1.0706481036682278e-06,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.07065e-06",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many cows are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the cows plastic?",
+          "score": 6.665590490118056e-07,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=6.66559e-07",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the cows plastic?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the cows chasing the raccoon?",
+          "score": 0.1409259024567291,
+          "skill": "verb"
+        },
+        "detected": "soft_score=0.140926",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the cows chasing the raccoon?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 9,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the raccoon glass?",
+          "score": 3.008130136941678e-06,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=3.00813e-06",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Is the raccoon glass?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 10,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any raccoons in the image?",
+          "score": 0.8518840710166842,
+          "skill": "object"
+        },
+        "detected": "soft_score=0.851884",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are there any raccoons in the image?",
+        "type": "missing_object"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00003/samples/00003.png",
+    "best_so_far_prompt": "A clear scene showing exactly two spotted elephants behind exactly six plastic cows, and the six plastic cows are chasing exactly one glass raccoon. Arrange the two spotted elephants in the back, the six plastic cows in the middle, and the single glass raccoon in front of the cows. All animals should be fully visible, separated, and easy to count, with no extra elephants, cows, raccoons, or other animals. The cows should be oriented toward and moving after the glass raccoon to show they are chasing it.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.6346533722136961,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cows are in the image?",
+          "score": 1.0706481036682278e-06,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.07065e-06",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many cows are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the cows plastic?",
+          "score": 6.665590490118056e-07,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=6.66559e-07",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the cows plastic?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the cows chasing the raccoon?",
+          "score": 0.1409259024567291,
+          "skill": "verb"
+        },
+        "detected": "soft_score=0.140926",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the cows chasing the raccoon?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 9,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the raccoon glass?",
+          "score": 3.008130136941678e-06,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=3.00813e-06",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Is the raccoon glass?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 10,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any raccoons in the image?",
+          "score": 0.8518840710166842,
+          "skill": "object"
+        },
+        "detected": "soft_score=0.851884",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are there any raccoons in the image?",
+        "type": "missing_object"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly two elephants, exactly six cows, and exactly one raccoon; do not add extra animals.",
+        "Keep all animals fully visible and separated enough to count clearly.",
+        "Bind attributes correctly: only the two elephants are spotted, all six cows are plastic, and the single raccoon is glass.",
+        "Arrange depth clearly: the two elephants are behind the six cows, and the six cows are chasing the glass raccoon."
+      ],
+      "generation_strategy": "Create a clear multi-object scene with three separated depth layers: back layer with two spotted elephants, middle layer with six plastic cows, front layer with one glass raccoon. Use spacing and unobstructed views so the counts and attributes are easy to verify, with the cows oriented toward the raccoon to show chasing.",
+      "initial_prompt": "A clear scene showing exactly two spotted elephants behind exactly six plastic cows, and the six plastic cows are chasing exactly one glass raccoon. Arrange the two spotted elephants in the back, the six plastic cows in the middle, and the single glass raccoon in front of the cows. All animals should be fully visible, separated, and easy to count, with no extra elephants, cows, raccoons, or other animals. The cows should be oriented toward and moving after the glass raccoon to show they are chasing it.",
+      "parsed_constraints": {
+        "attributes": {
+          "cows": "plastic",
+          "elephants": "spotted",
+          "raccoon": "glass"
+        },
+        "counts": {
+          "cows": 6,
+          "elephants": 2,
+          "raccoon": 1
+        },
+        "objects": [
+          "elephants",
+          "cows",
+          "raccoon"
+        ],
+        "relations": [
+          "two spotted elephants behind six plastic cows",
+          "six plastic cows chasing one glass raccoon"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.635 failed=['How many cows are in the image?', 'Are the cows plastic?', 'Are the cows chasing the raccoon?', 'Is the raccoon glass?', 'Are there any raccoons in the image?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_incremental/snapshot_001_worker_02/geneval2_00712_7d4355ee__geneval2_00712_7d4355ee_cand_03__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00712_7d4355ee__geneval2_00712_7d4355ee_cand_03__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00712_7d4355ee",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The evaluation passed the two spotted elephants, elephant presence, elephants behind cows, cow presence, and exactly one raccoon count, but failed the exact cow count, plastic material on cows, clear cow-chasing-raccoon action, glass material on the raccoon, and raccoon presence confidence. The next generation should make the six cows individually countable and visibly plastic, make the single raccoon large and unmistakably visible as glass, and use a clear left-to-right chase layout with all six cows facing and running toward the raccoon.",
+    "expected_improvement": [
+      "The cow count should improve by arranging exactly six separated cows in two rows of three with no overlaps or extras.",
+      "The cow material attribute should improve by describing each cow as a glossy molded plastic cow figure.",
+      "The chase relation should improve by placing the raccoon ahead of the cows and all six cows oriented toward it in a pursuit formation.",
+      "The raccoon presence and glass attribute should improve by making one unmistakable raccoon figure in front, transparent and shiny like glass.",
+      "Previously passed elephant count, spotted elephant attribute, and elephants-behind-cows relation should be preserved by keeping exactly two spotted elephants clearly in the back layer."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "attribute_mismatch",
+      "relation_mismatch",
+      "missing_object"
+    ],
+    "preserve_constraints": [
+      "Keep exactly two elephants visible.",
+      "Keep both elephants spotted.",
+      "Keep the two spotted elephants behind the cows.",
+      "Keep cows present and clearly visible.",
+      "Keep exactly one raccoon, not multiple raccoons."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt used a depth-layer composition, but it did not force the six cows into a simple countable arrangement, did not strongly bind plastic material to every cow, and did not make the raccoon large and unmistakably visible. The chasing relation was described generally rather than as a clear directional layout with the cows behind and moving toward the raccoon.",
+      "error_source": "prompt_under_specification_for_countable_layout_material_binding_and_action_visibility"
+    },
+    "regeneration_strategy": "Use a simple side-view composition with three clear groups: two spotted elephants in the far back, exactly six separated glossy plastic cows in the middle arranged as two rows of three, and exactly one transparent glass raccoon in front of the cows. Emphasize that every cow is facing and running toward the raccoon, with no occlusion and no extra animals.",
+    "regression_risks": [
+      "The generator may reduce or merge the six cows unless each cow is separately visible and countable.",
+      "The material attributes may be lost unless plastic is bound to every cow and glass is bound only to the raccoon.",
+      "The raccoon may become too small or hidden unless it is placed prominently in front of the cows.",
+      "The two spotted elephants may regress if the prompt over-focuses on fixing cows and raccoon."
+    ],
+    "repair_constraints": [
+      "Show exactly six cows, each as a separate visible individual, arranged in two rows of three, with no seventh cow and no merged cow shapes.",
+      "Bind the plastic attribute to all six cows: each cow must look like a glossy molded plastic cow.",
+      "Show exactly one raccoon clearly and prominently in front of the cows.",
+      "Bind the glass attribute to the single raccoon: the raccoon must look transparent, shiny, and made of glass.",
+      "Make the six plastic cows chasing the glass raccoon: the raccoon is ahead, the cows are behind it, and all six cows face and run toward the raccoon."
+    ],
+    "retry_prompt": "A clear side-view scene with exactly two spotted elephants behind exactly six plastic cows, and the six plastic cows chasing exactly one glass raccoon. Put the two spotted elephants in the back layer, fully visible and spotted. Put the six cows in the middle layer as six separate glossy molded plastic cows, arranged in two neat rows of three so each cow is easy to count and none overlap or merge. Put one single raccoon in front of the cows, clearly visible and larger enough to recognize, transparent and shiny like glass. The glass raccoon is ahead of the cows, and all six plastic cows are behind it, facing toward it and running after it to clearly show they are chasing the raccoon. No extra elephants, no extra cows, no extra raccoons, and no other animals. Keep every required animal complete, unobstructed, and easy to verify.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "object_presence",
+        "spatial_layout",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints",
+        "multi_object_composition"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "Use the same allowed skill set but change emphasis: prioritize quantity_counting with a two-rows-of-three cow layout, attribute_binding for plastic cows and glass raccoon, object_presence and clarity_visibility for the raccoon, and spatial_layout for an unmistakable chase direction."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "two spotted elephants behind six plastic cows chasing a glass raccoon",
+    "prompt": "two spotted elephants behind six plastic cows chasing a glass raccoon",
+    "prompt_id": "geneval2_00712_7d4355ee",
+    "sampling_bucket": "count",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "position_spatial",
+      "relation_action",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 3,
+      "count": 3,
+      "object": 3,
+      "position": 1,
+      "verb": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object",
+      "verb",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 712,
+    "vqa_list": [
+      [
+        "How many elephants are in the image?",
+        "two"
+      ],
+      [
+        "Are the elephants spotted?",
+        "Yes"
+      ],
+      [
+        "Are there any elephants in the image?",
+        "Yes"
+      ],
+      [
+        "Are the elephants behind the cows?",
+        "Yes"
+      ],
+      [
+        "How many cows are in the image?",
+        "six"
+      ],
+      [
+        "Are the cows plastic?",
+        "Yes"
+      ],
+      [
+        "Are there any cows in the image?",
+        "Yes"
+      ],
+      [
+        "Are the cows chasing the raccoon?",
+        "Yes"
+      ],
+      [
+        "How many raccoons are in the image?",
+        "one"
+      ],
+      [
+        "Is the raccoon glass?",
+        "Yes"
+      ],
+      [
+        "Are there any raccoons in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00712_7d4355ee"
+}

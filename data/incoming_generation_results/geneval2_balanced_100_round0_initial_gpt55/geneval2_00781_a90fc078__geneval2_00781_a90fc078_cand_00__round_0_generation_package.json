@@ -1,0 +1,166 @@
+{
+  "candidate_id": "geneval2_00781_a90fc078_cand_00",
+  "generation": {
+    "generation_metadata": {
+      "candidate_index": 0,
+      "generation_prompt_source": "initial_plan",
+      "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00781_a90fc078.json",
+      "manifest_prompt_index": 11,
+      "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+      "sample_id": "geneval2_00781_a90fc078"
+    },
+    "generator_name": "qwen-image-2512",
+    "image_id": "geneval2_00781_a90fc078_cand_00",
+    "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00011/samples/00000.png",
+    "prompt_used": "A clear scene showing exactly four wooden cows on the left, each cow visibly made of wood and jumping over exactly one red bird below them. To the right of the four wooden cows, show exactly three separate red backpacks. The three backpacks are all red and clearly to the right of the cows. The single bird is red and fully visible underneath the jumping cows. Keep all four cows, all three backpacks, and the one bird distinct, unobstructed, and easy to count. No extra cows, backpacks, or birds.",
+    "seed": 1055
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "eval_lookup_key": "",
+    "image_path_is_artifact_reference": true,
+    "teacher_uses_image_bytes": false
+  },
+  "previous_action": null,
+  "previous_initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly three backpacks, exactly four cows, and exactly one bird.",
+      "Bind red color only to the three backpacks and the single bird; bind wooden material to all four cows.",
+      "Place the group of three red backpacks clearly to the right of the group of four wooden cows.",
+      "Show all four wooden cows jumping over the single red bird, with the bird below the cows and visible.",
+      "Keep all objects separated and fully visible; avoid overlap or occlusion that would make counting difficult.",
+      "Do not add extra backpacks, cows, birds, or other prominent objects."
+    ],
+    "generation_strategy": "Create a clear, count-focused composition with three distinct red backpacks grouped on the right side, four distinct wooden cows grouped to their left, and one red bird positioned underneath the jumping cows. Use separation and visibility so the counts, attributes, action, and left-right spatial relation are unambiguous.",
+    "initial_prompt": "A clear scene showing exactly four wooden cows on the left, each cow visibly made of wood and jumping over exactly one red bird below them. To the right of the four wooden cows, show exactly three separate red backpacks. The three backpacks are all red and clearly to the right of the cows. The single bird is red and fully visible underneath the jumping cows. Keep all four cows, all three backpacks, and the one bird distinct, unobstructed, and easy to count. No extra cows, backpacks, or birds.",
+    "parsed_constraints": {
+      "attributes": {
+        "backpacks": {
+          "color": "red"
+        },
+        "bird": {
+          "color": "red"
+        },
+        "cows": {
+          "material": "wooden"
+        }
+      },
+      "counts": {
+        "backpacks": 3,
+        "bird": 1,
+        "cows": 4
+      },
+      "objects": [
+        "backpacks",
+        "cows",
+        "bird"
+      ],
+      "relations": [
+        "three red backpacks are to the right of four wooden cows",
+        "four wooden cows are jumping over one red bird"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "prompt_id": "geneval2_00781_a90fc078",
+  "retry_history": [],
+  "round": 0,
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "three red backpacks to the right of four wooden cows jumping over a red bird",
+    "prompt": "three red backpacks to the right of four wooden cows jumping over a red bird",
+    "prompt_id": "geneval2_00781_a90fc078",
+    "sampling_bucket": "count",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "relation_action",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 3,
+      "count": 3,
+      "object": 3,
+      "position": 1,
+      "verb": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object",
+      "verb",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 781,
+    "vqa_list": [
+      [
+        "How many backpacks are in the image?",
+        "three"
+      ],
+      [
+        "Are the backpacks red?",
+        "Yes"
+      ],
+      [
+        "Are there any backpacks in the image?",
+        "Yes"
+      ],
+      [
+        "Are the backpacks to the right of the cows?",
+        "Yes"
+      ],
+      [
+        "How many cows are in the image?",
+        "four"
+      ],
+      [
+        "Are the cows wooden?",
+        "Yes"
+      ],
+      [
+        "Are there any cows in the image?",
+        "Yes"
+      ],
+      [
+        "Are the cows jumping over the bird?",
+        "Yes"
+      ],
+      [
+        "How many birds are in the image?",
+        "one"
+      ],
+      [
+        "Is the bird red?",
+        "Yes"
+      ],
+      [
+        "Are there any birds in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "trajectory_id": "geneval2_00781_a90fc078"
+}

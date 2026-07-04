@@ -1,0 +1,2950 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "count_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the flamingos spotted?",
+              "score": 3.071496498373988e-07,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=3.0715e-07",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the flamingos spotted?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many turtles are in the image?",
+              "score": 4.929014405816478e-12,
+              "skill": "count"
+            },
+            "detected": "soft_score=4.92901e-12",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many turtles are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the turtles glass?",
+              "score": 1.2712342971177293e-05,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1.27123e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the turtles glass?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many bicycles are in the image?",
+              "score": 1.5711257917912433e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.57113e-09",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many bicycles are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many flamingos are in the image?",
+              "score": 0.9999999671275014,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "three",
+            "status": "passed",
+            "target": "How many flamingos are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any flamingos in the image?",
+              "score": 0.9999999370702426,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any flamingos in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any turtles in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any turtles in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the turtles under the bicycles?",
+              "score": 0.9999882506108406,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.999988",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the turtles under the bicycles?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the bicycles black?",
+              "score": 1.0,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the bicycles black?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any bicycles in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any bicycles in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/balanced100_all_candidates_shards4/shard_3/raw_score_lists.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00797_b6fee0ed_cand_04",
+          "raw_eval_path": "data/geneval2_jobs/balanced100_all_candidates_shards4/shard_3/raw_score_lists.json",
+          "rows": [
+            {
+              "answer": "three",
+              "atom_count": 10,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00797_b6fee0ed_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00099/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00099/samples/00004.png",
+              "prompt": "three spotted flamingos, and seven glass turtles under seven black bicycles",
+              "prompt_id": "geneval2_00797_b6fee0ed",
+              "question": "How many flamingos are in the image?",
+              "score": 0.9999999671275014,
+              "skill": "count",
+              "source_index": 797
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00797_b6fee0ed_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00099/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00099/samples/00004.png",
+              "prompt": "three spotted flamingos, and seven glass turtles under seven black bicycles",
+              "prompt_id": "geneval2_00797_b6fee0ed",
+              "question": "Are the flamingos spotted?",
+              "score": 3.071496498373988e-07,
+              "skill": "attribute",
+              "source_index": 797
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00797_b6fee0ed_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00099/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00099/samples/00004.png",
+              "prompt": "three spotted flamingos, and seven glass turtles under seven black bicycles",
+              "prompt_id": "geneval2_00797_b6fee0ed",
+              "question": "Are there any flamingos in the image?",
+              "score": 0.9999999370702426,
+              "skill": "object",
+              "source_index": 797
+            },
+            {
+              "answer": "seven",
+              "atom_count": 10,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00797_b6fee0ed_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00099/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00099/samples/00004.png",
+              "prompt": "three spotted flamingos, and seven glass turtles under seven black bicycles",
+              "prompt_id": "geneval2_00797_b6fee0ed",
+              "question": "How many turtles are in the image?",
+              "score": 4.929014405816478e-12,
+              "skill": "count",
+              "source_index": 797
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00797_b6fee0ed_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00099/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00099/samples/00004.png",
+              "prompt": "three spotted flamingos, and seven glass turtles under seven black bicycles",
+              "prompt_id": "geneval2_00797_b6fee0ed",
+              "question": "Are the turtles glass?",
+              "score": 1.2712342971177293e-05,
+              "skill": "attribute",
+              "source_index": 797
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00797_b6fee0ed_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00099/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00099/samples/00004.png",
+              "prompt": "three spotted flamingos, and seven glass turtles under seven black bicycles",
+              "prompt_id": "geneval2_00797_b6fee0ed",
+              "question": "Are there any turtles in the image?",
+              "score": 1.0000000111831469,
+              "skill": "object",
+              "source_index": 797
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00797_b6fee0ed_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00099/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00099/samples/00004.png",
+              "prompt": "three spotted flamingos, and seven glass turtles under seven black bicycles",
+              "prompt_id": "geneval2_00797_b6fee0ed",
+              "question": "Are the turtles under the bicycles?",
+              "score": 0.9999882506108406,
+              "skill": "position",
+              "source_index": 797
+            },
+            {
+              "answer": "seven",
+              "atom_count": 10,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00797_b6fee0ed_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00099/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00099/samples/00004.png",
+              "prompt": "three spotted flamingos, and seven glass turtles under seven black bicycles",
+              "prompt_id": "geneval2_00797_b6fee0ed",
+              "question": "How many bicycles are in the image?",
+              "score": 1.5711257917912433e-09,
+              "skill": "count",
+              "source_index": 797
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00797_b6fee0ed_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00099/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00099/samples/00004.png",
+              "prompt": "three spotted flamingos, and seven glass turtles under seven black bicycles",
+              "prompt_id": "geneval2_00797_b6fee0ed",
+              "question": "Are the bicycles black?",
+              "score": 1.0000000005675247,
+              "skill": "attribute",
+              "source_index": 797
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00797_b6fee0ed_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00099/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00099/samples/00004.png",
+              "prompt": "three spotted flamingos, and seven glass turtles under seven black bicycles",
+              "prompt_id": "geneval2_00797_b6fee0ed",
+              "question": "Are there any bicycles in the image?",
+              "score": 1.000000026858288,
+              "skill": "object",
+              "source_index": 797
+            }
+          ],
+          "source_path": "data/geneval2_jobs/balanced100_all_candidates_shards4/shard_3/raw_score_lists.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.6000001175877261,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 4,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00797_b6fee0ed.json",
+          "manifest_prompt_index": 99,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00797_b6fee0ed"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00797_b6fee0ed_cand_04",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00099/samples/00004.png",
+        "prompt_used": "A clear scene showing exactly three spotted flamingos and exactly seven glass turtles under exactly seven black bicycles. The seven black bicycles are arranged in a visible row, and the seven glass turtles are directly underneath the bicycles, one turtle clearly visible under each bicycle. The three spotted flamingos are separate and fully visible. All objects are distinct, countable, and not occluding each other.",
+        "seed": 1499
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly three flamingos, exactly seven turtles, and exactly seven bicycles.",
+          "Bind spotted pattern only to the three flamingos.",
+          "Bind glass material only to the seven turtles.",
+          "Bind black color only to the seven bicycles.",
+          "Place all seven glass turtles spatially under the seven black bicycles.",
+          "Keep every animal and bicycle clearly visible with minimal overlap or occlusion."
+        ],
+        "generation_strategy": "Compose a clear scene with three spotted flamingos separated from a group of seven black bicycles, and seven glass turtles positioned below the bicycles. Use a simple layout so each object can be counted individually, with the turtles visibly underneath the bicycles and all objects unobstructed.",
+        "initial_prompt": "A clear scene showing exactly three spotted flamingos and exactly seven glass turtles under exactly seven black bicycles. The seven black bicycles are arranged in a visible row, and the seven glass turtles are directly underneath the bicycles, one turtle clearly visible under each bicycle. The three spotted flamingos are separate and fully visible. All objects are distinct, countable, and not occluding each other.",
+        "parsed_constraints": {
+          "attributes": {
+            "bicycles": [
+              "black"
+            ],
+            "flamingos": [
+              "spotted"
+            ],
+            "turtles": [
+              "glass"
+            ]
+          },
+          "counts": {
+            "bicycles": 7,
+            "flamingos": 3,
+            "turtles": 7
+          },
+          "objects": [
+            "flamingos",
+            "turtles",
+            "bicycles"
+          ],
+          "relations": [
+            "seven glass turtles are under seven black bicycles"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly three flamingos, exactly seven turtles, and exactly seven bicycles.",
+          "Bind spotted pattern only to the three flamingos.",
+          "Bind glass material only to the seven turtles.",
+          "Bind black color only to the seven bicycles.",
+          "Place all seven glass turtles spatially under the seven black bicycles.",
+          "Keep every animal and bicycle clearly visible with minimal overlap or occlusion."
+        ],
+        "generation_strategy": "Compose a clear scene with three spotted flamingos separated from a group of seven black bicycles, and seven glass turtles positioned below the bicycles. Use a simple layout so each object can be counted individually, with the turtles visibly underneath the bicycles and all objects unobstructed.",
+        "initial_prompt": "A clear scene showing exactly three spotted flamingos and exactly seven glass turtles under exactly seven black bicycles. The seven black bicycles are arranged in a visible row, and the seven glass turtles are directly underneath the bicycles, one turtle clearly visible under each bicycle. The three spotted flamingos are separate and fully visible. All objects are distinct, countable, and not occluding each other.",
+        "parsed_constraints": {
+          "attributes": {
+            "bicycles": [
+              "black"
+            ],
+            "flamingos": [
+              "spotted"
+            ],
+            "turtles": [
+              "glass"
+            ]
+          },
+          "counts": {
+            "bicycles": 7,
+            "flamingos": 3,
+            "turtles": 7
+          },
+          "objects": [
+            "flamingos",
+            "turtles",
+            "bicycles"
+          ],
+          "relations": [
+            "seven glass turtles are under seven black bicycles"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the flamingos spotted?",
+                "score": 3.071496498373988e-07,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=3.0715e-07",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the flamingos spotted?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many turtles are in the image?",
+                "score": 4.929014405816478e-12,
+                "skill": "count"
+              },
+              "detected": "soft_score=4.92901e-12",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many turtles are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the turtles glass?",
+                "score": 1.2712342971177293e-05,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1.27123e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the turtles glass?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many bicycles are in the image?",
+                "score": 1.5711257917912433e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.57113e-09",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many bicycles are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00099/samples/00004.png",
+          "prompt": "A clear scene showing exactly three spotted flamingos and exactly seven glass turtles under exactly seven black bicycles. The seven black bicycles are arranged in a visible row, and the seven glass turtles are directly underneath the bicycles, one turtle clearly visible under each bicycle. The three spotted flamingos are separate and fully visible. All objects are distinct, countable, and not occluding each other.",
+          "round": 0,
+          "score": 0.6000001175877261
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00797_b6fee0ed_cand_04",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "attribute_mismatch",
+            "count_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the flamingos spotted?",
+                "score": 3.071496498373988e-07,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=3.0715e-07",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the flamingos spotted?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many turtles are in the image?",
+                "score": 4.929014405816478e-12,
+                "skill": "count"
+              },
+              "detected": "soft_score=4.92901e-12",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many turtles are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the turtles glass?",
+                "score": 1.2712342971177293e-05,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1.27123e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the turtles glass?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many bicycles are in the image?",
+                "score": 1.5711257917912433e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.57113e-09",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many bicycles are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many flamingos are in the image?",
+                "score": 0.9999999671275014,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "three",
+              "status": "passed",
+              "target": "How many flamingos are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any flamingos in the image?",
+                "score": 0.9999999370702426,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any flamingos in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any turtles in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any turtles in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the turtles under the bicycles?",
+                "score": 0.9999882506108406,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.999988",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the turtles under the bicycles?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the bicycles black?",
+                "score": 1.0,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the bicycles black?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any bicycles in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any bicycles in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.6000001175877261,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the flamingos spotted?",
+                  "score": 3.071496498373988e-07,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=3.0715e-07",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the flamingos spotted?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many turtles are in the image?",
+                  "score": 4.929014405816478e-12,
+                  "skill": "count"
+                },
+                "detected": "soft_score=4.92901e-12",
+                "expected": "seven",
+                "status": "failed",
+                "target": "How many turtles are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the turtles glass?",
+                  "score": 1.2712342971177293e-05,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1.27123e-05",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the turtles glass?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many bicycles are in the image?",
+                  "score": 1.5711257917912433e-09,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1.57113e-09",
+                "expected": "seven",
+                "status": "failed",
+                "target": "How many bicycles are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00099/samples/00004.png",
+            "prompt": "A clear scene showing exactly three spotted flamingos and exactly seven glass turtles under exactly seven black bicycles. The seven black bicycles are arranged in a visible row, and the seven glass turtles are directly underneath the bicycles, one turtle clearly visible under each bicycle. The three spotted flamingos are separate and fully visible. All objects are distinct, countable, and not occluding each other.",
+            "round": 0,
+            "score": 0.6000001175877261
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the flamingos spotted?",
+                "score": 3.071496498373988e-07,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=3.0715e-07",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the flamingos spotted?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many turtles are in the image?",
+                "score": 4.929014405816478e-12,
+                "skill": "count"
+              },
+              "detected": "soft_score=4.92901e-12",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many turtles are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the turtles glass?",
+                "score": 1.2712342971177293e-05,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1.27123e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the turtles glass?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many bicycles are in the image?",
+                "score": 1.5711257917912433e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.57113e-09",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many bicycles are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "attribute_mismatch",
+            "count_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the flamingos spotted?",
+                "score": 3.071496498373988e-07,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=3.0715e-07",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the flamingos spotted?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many turtles are in the image?",
+                "score": 4.929014405816478e-12,
+                "skill": "count"
+              },
+              "detected": "soft_score=4.92901e-12",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many turtles are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the turtles glass?",
+                "score": 1.2712342971177293e-05,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1.27123e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the turtles glass?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many bicycles are in the image?",
+                "score": 1.5711257917912433e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.57113e-09",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many bicycles are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many flamingos are in the image?",
+                "score": 0.9999999671275014,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "three",
+              "status": "passed",
+              "target": "How many flamingos are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any flamingos in the image?",
+                "score": 0.9999999370702426,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any flamingos in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any turtles in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any turtles in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the turtles under the bicycles?",
+                "score": 0.9999882506108406,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.999988",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the turtles under the bicycles?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the bicycles black?",
+                "score": 1.0,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the bicycles black?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any bicycles in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any bicycles in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.6000001175877261,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "three spotted flamingos, and seven glass turtles under seven black bicycles",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the flamingos spotted?",
+              "score": 3.071496498373988e-07,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=3.0715e-07",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the flamingos spotted?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many turtles are in the image?",
+              "score": 4.929014405816478e-12,
+              "skill": "count"
+            },
+            "detected": "soft_score=4.92901e-12",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many turtles are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the turtles glass?",
+              "score": 1.2712342971177293e-05,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1.27123e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the turtles glass?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many bicycles are in the image?",
+              "score": 1.5711257917912433e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.57113e-09",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many bicycles are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly three flamingos, exactly seven turtles, and exactly seven bicycles.",
+            "Bind spotted pattern only to the three flamingos.",
+            "Bind glass material only to the seven turtles.",
+            "Bind black color only to the seven bicycles.",
+            "Place all seven glass turtles spatially under the seven black bicycles.",
+            "Keep every animal and bicycle clearly visible with minimal overlap or occlusion."
+          ],
+          "generation_strategy": "Compose a clear scene with three spotted flamingos separated from a group of seven black bicycles, and seven glass turtles positioned below the bicycles. Use a simple layout so each object can be counted individually, with the turtles visibly underneath the bicycles and all objects unobstructed.",
+          "initial_prompt": "A clear scene showing exactly three spotted flamingos and exactly seven glass turtles under exactly seven black bicycles. The seven black bicycles are arranged in a visible row, and the seven glass turtles are directly underneath the bicycles, one turtle clearly visible under each bicycle. The three spotted flamingos are separate and fully visible. All objects are distinct, countable, and not occluding each other.",
+          "parsed_constraints": {
+            "attributes": {
+              "bicycles": [
+                "black"
+              ],
+              "flamingos": [
+                "spotted"
+              ],
+              "turtles": [
+                "glass"
+              ]
+            },
+            "counts": {
+              "bicycles": 7,
+              "flamingos": 3,
+              "turtles": 7
+            },
+            "objects": [
+              "flamingos",
+              "turtles",
+              "bicycles"
+            ],
+            "relations": [
+              "seven glass turtles are under seven black bicycles"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly three flamingos, exactly seven turtles, and exactly seven bicycles.",
+            "Bind spotted pattern only to the three flamingos.",
+            "Bind glass material only to the seven turtles.",
+            "Bind black color only to the seven bicycles.",
+            "Place all seven glass turtles spatially under the seven black bicycles.",
+            "Keep every animal and bicycle clearly visible with minimal overlap or occlusion."
+          ],
+          "generation_strategy": "Compose a clear scene with three spotted flamingos separated from a group of seven black bicycles, and seven glass turtles positioned below the bicycles. Use a simple layout so each object can be counted individually, with the turtles visibly underneath the bicycles and all objects unobstructed.",
+          "initial_prompt": "A clear scene showing exactly three spotted flamingos and exactly seven glass turtles under exactly seven black bicycles. The seven black bicycles are arranged in a visible row, and the seven glass turtles are directly underneath the bicycles, one turtle clearly visible under each bicycle. The three spotted flamingos are separate and fully visible. All objects are distinct, countable, and not occluding each other.",
+          "parsed_constraints": {
+            "attributes": {
+              "bicycles": [
+                "black"
+              ],
+              "flamingos": [
+                "spotted"
+              ],
+              "turtles": [
+                "glass"
+              ]
+            },
+            "counts": {
+              "bicycles": 7,
+              "flamingos": 3,
+              "turtles": 7
+            },
+            "objects": [
+              "flamingos",
+              "turtles",
+              "bicycles"
+            ],
+            "relations": [
+              "seven glass turtles are under seven black bicycles"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion"
+          ]
+        },
+        "previous_prompt": "A clear scene showing exactly three spotted flamingos and exactly seven glass turtles under exactly seven black bicycles. The seven black bicycles are arranged in a visible row, and the seven glass turtles are directly underneath the bicycles, one turtle clearly visible under each bicycle. The three spotted flamingos are separate and fully visible. All objects are distinct, countable, and not occluding each other.",
+        "previous_selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion"
+        ],
+        "prompt_id": "geneval2_00797_b6fee0ed",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "attribute_mismatch",
+              "count_mismatch"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the flamingos spotted?",
+                  "score": 3.071496498373988e-07,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=3.0715e-07",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the flamingos spotted?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many turtles are in the image?",
+                  "score": 4.929014405816478e-12,
+                  "skill": "count"
+                },
+                "detected": "soft_score=4.92901e-12",
+                "expected": "seven",
+                "status": "failed",
+                "target": "How many turtles are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the turtles glass?",
+                  "score": 1.2712342971177293e-05,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1.27123e-05",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the turtles glass?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many bicycles are in the image?",
+                  "score": 1.5711257917912433e-09,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1.57113e-09",
+                "expected": "seven",
+                "status": "failed",
+                "target": "How many bicycles are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many flamingos are in the image?",
+                  "score": 0.9999999671275014,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1",
+                "expected": "three",
+                "status": "passed",
+                "target": "How many flamingos are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any flamingos in the image?",
+                  "score": 0.9999999370702426,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any flamingos in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any turtles in the image?",
+                  "score": 1.0,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any turtles in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the turtles under the bicycles?",
+                  "score": 0.9999882506108406,
+                  "skill": "position"
+                },
+                "detected": "soft_score=0.999988",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the turtles under the bicycles?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the bicycles black?",
+                  "score": 1.0,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the bicycles black?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any bicycles in the image?",
+                  "score": 1.0,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any bicycles in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly three flamingos, exactly seven turtles, and exactly seven bicycles.",
+                "Bind spotted pattern only to the three flamingos.",
+                "Bind glass material only to the seven turtles.",
+                "Bind black color only to the seven bicycles.",
+                "Place all seven glass turtles spatially under the seven black bicycles.",
+                "Keep every animal and bicycle clearly visible with minimal overlap or occlusion."
+              ],
+              "generation_strategy": "Compose a clear scene with three spotted flamingos separated from a group of seven black bicycles, and seven glass turtles positioned below the bicycles. Use a simple layout so each object can be counted individually, with the turtles visibly underneath the bicycles and all objects unobstructed.",
+              "initial_prompt": "A clear scene showing exactly three spotted flamingos and exactly seven glass turtles under exactly seven black bicycles. The seven black bicycles are arranged in a visible row, and the seven glass turtles are directly underneath the bicycles, one turtle clearly visible under each bicycle. The three spotted flamingos are separate and fully visible. All objects are distinct, countable, and not occluding each other.",
+              "parsed_constraints": {
+                "attributes": {
+                  "bicycles": [
+                    "black"
+                  ],
+                  "flamingos": [
+                    "spotted"
+                  ],
+                  "turtles": [
+                    "glass"
+                  ]
+                },
+                "counts": {
+                  "bicycles": 7,
+                  "flamingos": 3,
+                  "turtles": 7
+                },
+                "objects": [
+                  "flamingos",
+                  "turtles",
+                  "bicycles"
+                ],
+                "relations": [
+                  "seven glass turtles are under seven black bicycles"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly three flamingos, exactly seven turtles, and exactly seven bicycles.",
+                "Bind spotted pattern only to the three flamingos.",
+                "Bind glass material only to the seven turtles.",
+                "Bind black color only to the seven bicycles.",
+                "Place all seven glass turtles spatially under the seven black bicycles.",
+                "Keep every animal and bicycle clearly visible with minimal overlap or occlusion."
+              ],
+              "generation_strategy": "Compose a clear scene with three spotted flamingos separated from a group of seven black bicycles, and seven glass turtles positioned below the bicycles. Use a simple layout so each object can be counted individually, with the turtles visibly underneath the bicycles and all objects unobstructed.",
+              "initial_prompt": "A clear scene showing exactly three spotted flamingos and exactly seven glass turtles under exactly seven black bicycles. The seven black bicycles are arranged in a visible row, and the seven glass turtles are directly underneath the bicycles, one turtle clearly visible under each bicycle. The three spotted flamingos are separate and fully visible. All objects are distinct, countable, and not occluding each other.",
+              "parsed_constraints": {
+                "attributes": {
+                  "bicycles": [
+                    "black"
+                  ],
+                  "flamingos": [
+                    "spotted"
+                  ],
+                  "turtles": [
+                    "glass"
+                  ]
+                },
+                "counts": {
+                  "bicycles": 7,
+                  "flamingos": 3,
+                  "turtles": 7
+                },
+                "objects": [
+                  "flamingos",
+                  "turtles",
+                  "bicycles"
+                ],
+                "relations": [
+                  "seven glass turtles are under seven black bicycles"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion"
+              ]
+            },
+            "prompt_used": "A clear scene showing exactly three spotted flamingos and exactly seven glass turtles under exactly seven black bicycles. The seven black bicycles are arranged in a visible row, and the seven glass turtles are directly underneath the bicycles, one turtle clearly visible under each bicycle. The three spotted flamingos are separate and fully visible. All objects are distinct, countable, and not occluding each other.",
+            "round": 0,
+            "score": 0.6000001175877261,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 1,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the flamingos spotted?",
+                    "score": 3.071496498373988e-07,
+                    "skill": "attribute"
+                  },
+                  "detected": "soft_score=3.0715e-07",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the flamingos spotted?",
+                  "type": "attribute_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 3,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many turtles are in the image?",
+                    "score": 4.929014405816478e-12,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=4.92901e-12",
+                  "expected": "seven",
+                  "status": "failed",
+                  "target": "How many turtles are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 4,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the turtles glass?",
+                    "score": 1.2712342971177293e-05,
+                    "skill": "attribute"
+                  },
+                  "detected": "soft_score=1.27123e-05",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the turtles glass?",
+                  "type": "attribute_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 7,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many bicycles are in the image?",
+                    "score": 1.5711257917912433e-09,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=1.57113e-09",
+                  "expected": "seven",
+                  "status": "failed",
+                  "target": "How many bicycles are in the image?",
+                  "type": "count_mismatch"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00797_b6fee0ed"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the flamingos spotted?",
+              "score": 3.071496498373988e-07,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=3.0715e-07",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the flamingos spotted?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many turtles are in the image?",
+              "score": 4.929014405816478e-12,
+              "skill": "count"
+            },
+            "detected": "soft_score=4.92901e-12",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many turtles are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the turtles glass?",
+              "score": 1.2712342971177293e-05,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1.27123e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the turtles glass?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many bicycles are in the image?",
+              "score": 1.5711257917912433e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.57113e-09",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many bicycles are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00797_b6fee0ed_cand_04",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly three flamingos, exactly seven turtles, and exactly seven bicycles.",
+      "Bind spotted pattern only to the three flamingos.",
+      "Bind glass material only to the seven turtles.",
+      "Bind black color only to the seven bicycles.",
+      "Place all seven glass turtles spatially under the seven black bicycles.",
+      "Keep every animal and bicycle clearly visible with minimal overlap or occlusion."
+    ],
+    "generation_strategy": "Compose a clear scene with three spotted flamingos separated from a group of seven black bicycles, and seven glass turtles positioned below the bicycles. Use a simple layout so each object can be counted individually, with the turtles visibly underneath the bicycles and all objects unobstructed.",
+    "initial_prompt": "A clear scene showing exactly three spotted flamingos and exactly seven glass turtles under exactly seven black bicycles. The seven black bicycles are arranged in a visible row, and the seven glass turtles are directly underneath the bicycles, one turtle clearly visible under each bicycle. The three spotted flamingos are separate and fully visible. All objects are distinct, countable, and not occluding each other.",
+    "parsed_constraints": {
+      "attributes": {
+        "bicycles": [
+          "black"
+        ],
+        "flamingos": [
+          "spotted"
+        ],
+        "turtles": [
+          "glass"
+        ]
+      },
+      "counts": {
+        "bicycles": 7,
+        "flamingos": 3,
+        "turtles": 7
+      },
+      "objects": [
+        "flamingos",
+        "turtles",
+        "bicycles"
+      ],
+      "relations": [
+        "seven glass turtles are under seven black bicycles"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The initial prompt preserved object presence and the under/below relation, but it was too dense and let the model compress the seven bicycles and seven turtles into an indistinct group while also dropping the spotted and glass attributes. The plan relied on a single row and generic visibility language instead of forcing seven clearly separated bicycle-turtle pairs and explicitly binding spotted only to flamingos and glass only to turtles. Persistent failures on both counts and attributes require a stronger composition strategy with pairwise layout, exact-count emphasis, and negative clauses against extras or merged instances.",
+    "expected_improvement": [
+      "Increase recognizability of exactly seven bicycles by making seven separate black bicycles individually visible and countable.",
+      "Increase recognizability of exactly seven turtles by making seven separate glass turtles individually visible and countable.",
+      "Improve attribute binding so the flamingos are visibly spotted.",
+      "Improve attribute binding so the turtles are visibly glass while keeping bicycles black.",
+      "Preserve the already-correct relation that each turtle is under a bicycle and preserve exactly three flamingos."
+    ],
+    "failure_types": [
+      "attribute_mismatch",
+      "count_mismatch"
+    ],
+    "preserve_constraints": [
+      "Exactly three flamingos are present.",
+      "Flamingos remain fully visible and separate.",
+      "Turtles are under the bicycles.",
+      "Bicycles are black.",
+      "Bicycles and turtles are present."
+    ],
+    "previous_plan_error": {
+      "details": "The previous plan used a broad scene-level sentence with many objects in one row, which likely caused crowding and weak attribute cues. It did not specify a stronger count-friendly structure such as seven one-to-one bicycle-turtle pairs, and it did not reinforce visible material/pattern cues for glass turtles and spotted flamingos strongly enough.",
+      "error_source": "prompt_and_skill_usage"
+    },
+    "regeneration_strategy": "Switch to a simple, verifier-friendly composition: seven clearly separated black bicycle and glass turtle pairs arranged in a single horizontal line, with one turtle directly below each bicycle, plus three separate spotted flamingos placed apart from that line so they stay countable. Use explicit exact-count language, pairwise mapping, strong attribute binding, and negative constraints against extra bicycles, extra turtles, extra flamingos, duplicates, or merged shapes.",
+    "regression_risks": [
+      "Strengthening the seven bicycle-turtle pairs could crowd the frame and risk hiding some objects if separation is not explicit.",
+      "Emphasizing spotted flamingos could accidentally spread patterning to other objects unless attribute binding stays object-specific.",
+      "Making turtles visibly glass could reduce turtle recognizability unless they remain clear turtle shapes."
+    ],
+    "repair_constraints": [
+      "Show exactly seven black bicycles, each as a separate fully visible bicycle, with no extra bicycles.",
+      "Show exactly seven glass turtles, each as a separate fully visible turtle, with no extra turtles.",
+      "Place each of the seven glass turtles directly under one of the seven black bicycles, one turtle per bicycle.",
+      "Show exactly three spotted flamingos, each separate and fully visible, with no extra flamingos.",
+      "Bind the spotted pattern only to the flamingos.",
+      "Bind the glass material only to the turtles.",
+      "Keep all seventeen objects distinct, countable, and not merged or heavily overlapping."
+    ],
+    "retry_prompt": "A clear simple scene with exactly seven separate black bicycles arranged in a horizontal line across the image. Directly under each bicycle is exactly one separate glass turtle, so there are exactly seven glass turtles total and each turtle is clearly visible below its own bicycle. Off to the side of the bicycle-turtle line are exactly three separate spotted flamingos, fully visible and easy to count. The flamingos have visible spotted patterning on their bodies. The turtles are clearly made of glass with transparent shiny glass material, while still unmistakably turtle-shaped. The bicycles are black. Keep every object complete, distinct, and unobstructed, with wide spacing so all seven bicycles, all seven turtles, and all three flamingos are individually countable. No extra bicycles, no extra turtles, no extra flamingos, no duplicates, no merged objects.",
+    "skill_revision": {
+      "new_skills": [
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion"
+      ],
+      "reason": "Persistent count and attribute failures need stronger use of negative constraints to suppress extras or merged instances, alongside a revised counting/layout strategy that enforces seven one-to-one bicycle-turtle pairs and explicit attribute binding."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the flamingos spotted?",
+            "score": 3.071496498373988e-07,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=3.0715e-07",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the flamingos spotted?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many turtles are in the image?",
+            "score": 4.929014405816478e-12,
+            "skill": "count"
+          },
+          "detected": "soft_score=4.92901e-12",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many turtles are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the turtles glass?",
+            "score": 1.2712342971177293e-05,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1.27123e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the turtles glass?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many bicycles are in the image?",
+            "score": 1.5711257917912433e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.57113e-09",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many bicycles are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00099/samples/00004.png",
+      "prompt": "A clear scene showing exactly three spotted flamingos and exactly seven glass turtles under exactly seven black bicycles. The seven black bicycles are arranged in a visible row, and the seven glass turtles are directly underneath the bicycles, one turtle clearly visible under each bicycle. The three spotted flamingos are separate and fully visible. All objects are distinct, countable, and not occluding each other.",
+      "round": 0,
+      "score": 0.6000001175877261
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00797_b6fee0ed_cand_04",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "count_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the flamingos spotted?",
+            "score": 3.071496498373988e-07,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=3.0715e-07",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the flamingos spotted?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many turtles are in the image?",
+            "score": 4.929014405816478e-12,
+            "skill": "count"
+          },
+          "detected": "soft_score=4.92901e-12",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many turtles are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the turtles glass?",
+            "score": 1.2712342971177293e-05,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1.27123e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the turtles glass?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many bicycles are in the image?",
+            "score": 1.5711257917912433e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.57113e-09",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many bicycles are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many flamingos are in the image?",
+            "score": 0.9999999671275014,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "three",
+          "status": "passed",
+          "target": "How many flamingos are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any flamingos in the image?",
+            "score": 0.9999999370702426,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any flamingos in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any turtles in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any turtles in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the turtles under the bicycles?",
+            "score": 0.9999882506108406,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.999988",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the turtles under the bicycles?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the bicycles black?",
+            "score": 1.0,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the bicycles black?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any bicycles in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any bicycles in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.6000001175877261,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the flamingos spotted?",
+              "score": 3.071496498373988e-07,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=3.0715e-07",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the flamingos spotted?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many turtles are in the image?",
+              "score": 4.929014405816478e-12,
+              "skill": "count"
+            },
+            "detected": "soft_score=4.92901e-12",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many turtles are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the turtles glass?",
+              "score": 1.2712342971177293e-05,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1.27123e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the turtles glass?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many bicycles are in the image?",
+              "score": 1.5711257917912433e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.57113e-09",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many bicycles are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00099/samples/00004.png",
+        "prompt": "A clear scene showing exactly three spotted flamingos and exactly seven glass turtles under exactly seven black bicycles. The seven black bicycles are arranged in a visible row, and the seven glass turtles are directly underneath the bicycles, one turtle clearly visible under each bicycle. The three spotted flamingos are separate and fully visible. All objects are distinct, countable, and not occluding each other.",
+        "round": 0,
+        "score": 0.6000001175877261
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the flamingos spotted?",
+            "score": 3.071496498373988e-07,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=3.0715e-07",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the flamingos spotted?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many turtles are in the image?",
+            "score": 4.929014405816478e-12,
+            "skill": "count"
+          },
+          "detected": "soft_score=4.92901e-12",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many turtles are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the turtles glass?",
+            "score": 1.2712342971177293e-05,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1.27123e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the turtles glass?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many bicycles are in the image?",
+            "score": 1.5711257917912433e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.57113e-09",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many bicycles are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "count_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the flamingos spotted?",
+            "score": 3.071496498373988e-07,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=3.0715e-07",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the flamingos spotted?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many turtles are in the image?",
+            "score": 4.929014405816478e-12,
+            "skill": "count"
+          },
+          "detected": "soft_score=4.92901e-12",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many turtles are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the turtles glass?",
+            "score": 1.2712342971177293e-05,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1.27123e-05",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the turtles glass?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many bicycles are in the image?",
+            "score": 1.5711257917912433e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.57113e-09",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many bicycles are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many flamingos are in the image?",
+            "score": 0.9999999671275014,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "three",
+          "status": "passed",
+          "target": "How many flamingos are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any flamingos in the image?",
+            "score": 0.9999999370702426,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any flamingos in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any turtles in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any turtles in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the turtles under the bicycles?",
+            "score": 0.9999882506108406,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.999988",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the turtles under the bicycles?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the bicycles black?",
+            "score": 1.0,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the bicycles black?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any bicycles in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any bicycles in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.6000001175877261,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "three spotted flamingos, and seven glass turtles under seven black bicycles",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the flamingos spotted?",
+          "score": 3.071496498373988e-07,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=3.0715e-07",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the flamingos spotted?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many turtles are in the image?",
+          "score": 4.929014405816478e-12,
+          "skill": "count"
+        },
+        "detected": "soft_score=4.92901e-12",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many turtles are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the turtles glass?",
+          "score": 1.2712342971177293e-05,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=1.27123e-05",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the turtles glass?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many bicycles are in the image?",
+          "score": 1.5711257917912433e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.57113e-09",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many bicycles are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly three flamingos, exactly seven turtles, and exactly seven bicycles.",
+        "Bind spotted pattern only to the three flamingos.",
+        "Bind glass material only to the seven turtles.",
+        "Bind black color only to the seven bicycles.",
+        "Place all seven glass turtles spatially under the seven black bicycles.",
+        "Keep every animal and bicycle clearly visible with minimal overlap or occlusion."
+      ],
+      "generation_strategy": "Compose a clear scene with three spotted flamingos separated from a group of seven black bicycles, and seven glass turtles positioned below the bicycles. Use a simple layout so each object can be counted individually, with the turtles visibly underneath the bicycles and all objects unobstructed.",
+      "initial_prompt": "A clear scene showing exactly three spotted flamingos and exactly seven glass turtles under exactly seven black bicycles. The seven black bicycles are arranged in a visible row, and the seven glass turtles are directly underneath the bicycles, one turtle clearly visible under each bicycle. The three spotted flamingos are separate and fully visible. All objects are distinct, countable, and not occluding each other.",
+      "parsed_constraints": {
+        "attributes": {
+          "bicycles": [
+            "black"
+          ],
+          "flamingos": [
+            "spotted"
+          ],
+          "turtles": [
+            "glass"
+          ]
+        },
+        "counts": {
+          "bicycles": 7,
+          "flamingos": 3,
+          "turtles": 7
+        },
+        "objects": [
+          "flamingos",
+          "turtles",
+          "bicycles"
+        ],
+        "relations": [
+          "seven glass turtles are under seven black bicycles"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly three flamingos, exactly seven turtles, and exactly seven bicycles.",
+        "Bind spotted pattern only to the three flamingos.",
+        "Bind glass material only to the seven turtles.",
+        "Bind black color only to the seven bicycles.",
+        "Place all seven glass turtles spatially under the seven black bicycles.",
+        "Keep every animal and bicycle clearly visible with minimal overlap or occlusion."
+      ],
+      "generation_strategy": "Compose a clear scene with three spotted flamingos separated from a group of seven black bicycles, and seven glass turtles positioned below the bicycles. Use a simple layout so each object can be counted individually, with the turtles visibly underneath the bicycles and all objects unobstructed.",
+      "initial_prompt": "A clear scene showing exactly three spotted flamingos and exactly seven glass turtles under exactly seven black bicycles. The seven black bicycles are arranged in a visible row, and the seven glass turtles are directly underneath the bicycles, one turtle clearly visible under each bicycle. The three spotted flamingos are separate and fully visible. All objects are distinct, countable, and not occluding each other.",
+      "parsed_constraints": {
+        "attributes": {
+          "bicycles": [
+            "black"
+          ],
+          "flamingos": [
+            "spotted"
+          ],
+          "turtles": [
+            "glass"
+          ]
+        },
+        "counts": {
+          "bicycles": 7,
+          "flamingos": 3,
+          "turtles": 7
+        },
+        "objects": [
+          "flamingos",
+          "turtles",
+          "bicycles"
+        ],
+        "relations": [
+          "seven glass turtles are under seven black bicycles"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion"
+      ]
+    },
+    "previous_prompt": "A clear scene showing exactly three spotted flamingos and exactly seven glass turtles under exactly seven black bicycles. The seven black bicycles are arranged in a visible row, and the seven glass turtles are directly underneath the bicycles, one turtle clearly visible under each bicycle. The three spotted flamingos are separate and fully visible. All objects are distinct, countable, and not occluding each other.",
+    "previous_selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion"
+    ],
+    "prompt_id": "geneval2_00797_b6fee0ed",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "count_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the flamingos spotted?",
+              "score": 3.071496498373988e-07,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=3.0715e-07",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the flamingos spotted?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many turtles are in the image?",
+              "score": 4.929014405816478e-12,
+              "skill": "count"
+            },
+            "detected": "soft_score=4.92901e-12",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many turtles are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the turtles glass?",
+              "score": 1.2712342971177293e-05,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1.27123e-05",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the turtles glass?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many bicycles are in the image?",
+              "score": 1.5711257917912433e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.57113e-09",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many bicycles are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many flamingos are in the image?",
+              "score": 0.9999999671275014,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "three",
+            "status": "passed",
+            "target": "How many flamingos are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any flamingos in the image?",
+              "score": 0.9999999370702426,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any flamingos in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any turtles in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any turtles in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the turtles under the bicycles?",
+              "score": 0.9999882506108406,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.999988",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the turtles under the bicycles?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the bicycles black?",
+              "score": 1.0,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the bicycles black?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any bicycles in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any bicycles in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly three flamingos, exactly seven turtles, and exactly seven bicycles.",
+            "Bind spotted pattern only to the three flamingos.",
+            "Bind glass material only to the seven turtles.",
+            "Bind black color only to the seven bicycles.",
+            "Place all seven glass turtles spatially under the seven black bicycles.",
+            "Keep every animal and bicycle clearly visible with minimal overlap or occlusion."
+          ],
+          "generation_strategy": "Compose a clear scene with three spotted flamingos separated from a group of seven black bicycles, and seven glass turtles positioned below the bicycles. Use a simple layout so each object can be counted individually, with the turtles visibly underneath the bicycles and all objects unobstructed.",
+          "initial_prompt": "A clear scene showing exactly three spotted flamingos and exactly seven glass turtles under exactly seven black bicycles. The seven black bicycles are arranged in a visible row, and the seven glass turtles are directly underneath the bicycles, one turtle clearly visible under each bicycle. The three spotted flamingos are separate and fully visible. All objects are distinct, countable, and not occluding each other.",
+          "parsed_constraints": {
+            "attributes": {
+              "bicycles": [
+                "black"
+              ],
+              "flamingos": [
+                "spotted"
+              ],
+              "turtles": [
+                "glass"
+              ]
+            },
+            "counts": {
+              "bicycles": 7,
+              "flamingos": 3,
+              "turtles": 7
+            },
+            "objects": [
+              "flamingos",
+              "turtles",
+              "bicycles"
+            ],
+            "relations": [
+              "seven glass turtles are under seven black bicycles"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly three flamingos, exactly seven turtles, and exactly seven bicycles.",
+            "Bind spotted pattern only to the three flamingos.",
+            "Bind glass material only to the seven turtles.",
+            "Bind black color only to the seven bicycles.",
+            "Place all seven glass turtles spatially under the seven black bicycles.",
+            "Keep every animal and bicycle clearly visible with minimal overlap or occlusion."
+          ],
+          "generation_strategy": "Compose a clear scene with three spotted flamingos separated from a group of seven black bicycles, and seven glass turtles positioned below the bicycles. Use a simple layout so each object can be counted individually, with the turtles visibly underneath the bicycles and all objects unobstructed.",
+          "initial_prompt": "A clear scene showing exactly three spotted flamingos and exactly seven glass turtles under exactly seven black bicycles. The seven black bicycles are arranged in a visible row, and the seven glass turtles are directly underneath the bicycles, one turtle clearly visible under each bicycle. The three spotted flamingos are separate and fully visible. All objects are distinct, countable, and not occluding each other.",
+          "parsed_constraints": {
+            "attributes": {
+              "bicycles": [
+                "black"
+              ],
+              "flamingos": [
+                "spotted"
+              ],
+              "turtles": [
+                "glass"
+              ]
+            },
+            "counts": {
+              "bicycles": 7,
+              "flamingos": 3,
+              "turtles": 7
+            },
+            "objects": [
+              "flamingos",
+              "turtles",
+              "bicycles"
+            ],
+            "relations": [
+              "seven glass turtles are under seven black bicycles"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion"
+          ]
+        },
+        "prompt_used": "A clear scene showing exactly three spotted flamingos and exactly seven glass turtles under exactly seven black bicycles. The seven black bicycles are arranged in a visible row, and the seven glass turtles are directly underneath the bicycles, one turtle clearly visible under each bicycle. The three spotted flamingos are separate and fully visible. All objects are distinct, countable, and not occluding each other.",
+        "round": 0,
+        "score": 0.6000001175877261,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the flamingos spotted?",
+                "score": 3.071496498373988e-07,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=3.0715e-07",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the flamingos spotted?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many turtles are in the image?",
+                "score": 4.929014405816478e-12,
+                "skill": "count"
+              },
+              "detected": "soft_score=4.92901e-12",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many turtles are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the turtles glass?",
+                "score": 1.2712342971177293e-05,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1.27123e-05",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the turtles glass?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many bicycles are in the image?",
+                "score": 1.5711257917912433e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.57113e-09",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many bicycles are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00797_b6fee0ed"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the flamingos spotted?",
+          "score": 3.071496498373988e-07,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=3.0715e-07",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the flamingos spotted?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many turtles are in the image?",
+          "score": 4.929014405816478e-12,
+          "skill": "count"
+        },
+        "detected": "soft_score=4.92901e-12",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many turtles are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the turtles glass?",
+          "score": 1.2712342971177293e-05,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=1.27123e-05",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the turtles glass?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many bicycles are in the image?",
+          "score": 1.5711257917912433e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.57113e-09",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many bicycles are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00099/samples/00004.png",
+    "best_so_far_prompt": "A clear scene showing exactly three spotted flamingos and exactly seven glass turtles under exactly seven black bicycles. The seven black bicycles are arranged in a visible row, and the seven glass turtles are directly underneath the bicycles, one turtle clearly visible under each bicycle. The three spotted flamingos are separate and fully visible. All objects are distinct, countable, and not occluding each other.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.6000001175877261,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the flamingos spotted?",
+          "score": 3.071496498373988e-07,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=3.0715e-07",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the flamingos spotted?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many turtles are in the image?",
+          "score": 4.929014405816478e-12,
+          "skill": "count"
+        },
+        "detected": "soft_score=4.92901e-12",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many turtles are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the turtles glass?",
+          "score": 1.2712342971177293e-05,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=1.27123e-05",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the turtles glass?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many bicycles are in the image?",
+          "score": 1.5711257917912433e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.57113e-09",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many bicycles are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly three flamingos, exactly seven turtles, and exactly seven bicycles.",
+        "Bind spotted pattern only to the three flamingos.",
+        "Bind glass material only to the seven turtles.",
+        "Bind black color only to the seven bicycles.",
+        "Place all seven glass turtles spatially under the seven black bicycles.",
+        "Keep every animal and bicycle clearly visible with minimal overlap or occlusion."
+      ],
+      "generation_strategy": "Compose a clear scene with three spotted flamingos separated from a group of seven black bicycles, and seven glass turtles positioned below the bicycles. Use a simple layout so each object can be counted individually, with the turtles visibly underneath the bicycles and all objects unobstructed.",
+      "initial_prompt": "A clear scene showing exactly three spotted flamingos and exactly seven glass turtles under exactly seven black bicycles. The seven black bicycles are arranged in a visible row, and the seven glass turtles are directly underneath the bicycles, one turtle clearly visible under each bicycle. The three spotted flamingos are separate and fully visible. All objects are distinct, countable, and not occluding each other.",
+      "parsed_constraints": {
+        "attributes": {
+          "bicycles": [
+            "black"
+          ],
+          "flamingos": [
+            "spotted"
+          ],
+          "turtles": [
+            "glass"
+          ]
+        },
+        "counts": {
+          "bicycles": 7,
+          "flamingos": 3,
+          "turtles": 7
+        },
+        "objects": [
+          "flamingos",
+          "turtles",
+          "bicycles"
+        ],
+        "relations": [
+          "seven glass turtles are under seven black bicycles"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.600 failed=['Are the flamingos spotted?', 'How many turtles are in the image?', 'Are the turtles glass?', 'How many bicycles are in the image?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_error_retry_001_worker_01/geneval2_00797_b6fee0ed__geneval2_00797_b6fee0ed_cand_04__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00797_b6fee0ed__geneval2_00797_b6fee0ed_cand_04__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00797_b6fee0ed",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The initial prompt preserved object presence and the under/below relation, but it was too dense and let the model compress the seven bicycles and seven turtles into an indistinct group while also dropping the spotted and glass attributes. The plan relied on a single row and generic visibility language instead of forcing seven clearly separated bicycle-turtle pairs and explicitly binding spotted only to flamingos and glass only to turtles. Persistent failures on both counts and attributes require a stronger composition strategy with pairwise layout, exact-count emphasis, and negative clauses against extras or merged instances.",
+    "expected_improvement": [
+      "Increase recognizability of exactly seven bicycles by making seven separate black bicycles individually visible and countable.",
+      "Increase recognizability of exactly seven turtles by making seven separate glass turtles individually visible and countable.",
+      "Improve attribute binding so the flamingos are visibly spotted.",
+      "Improve attribute binding so the turtles are visibly glass while keeping bicycles black.",
+      "Preserve the already-correct relation that each turtle is under a bicycle and preserve exactly three flamingos."
+    ],
+    "failure_types": [
+      "attribute_mismatch",
+      "count_mismatch"
+    ],
+    "preserve_constraints": [
+      "Exactly three flamingos are present.",
+      "Flamingos remain fully visible and separate.",
+      "Turtles are under the bicycles.",
+      "Bicycles are black.",
+      "Bicycles and turtles are present."
+    ],
+    "previous_plan_error": {
+      "details": "The previous plan used a broad scene-level sentence with many objects in one row, which likely caused crowding and weak attribute cues. It did not specify a stronger count-friendly structure such as seven one-to-one bicycle-turtle pairs, and it did not reinforce visible material/pattern cues for glass turtles and spotted flamingos strongly enough.",
+      "error_source": "prompt_and_skill_usage"
+    },
+    "regeneration_strategy": "Switch to a simple, verifier-friendly composition: seven clearly separated black bicycle and glass turtle pairs arranged in a single horizontal line, with one turtle directly below each bicycle, plus three separate spotted flamingos placed apart from that line so they stay countable. Use explicit exact-count language, pairwise mapping, strong attribute binding, and negative constraints against extra bicycles, extra turtles, extra flamingos, duplicates, or merged shapes.",
+    "regression_risks": [
+      "Strengthening the seven bicycle-turtle pairs could crowd the frame and risk hiding some objects if separation is not explicit.",
+      "Emphasizing spotted flamingos could accidentally spread patterning to other objects unless attribute binding stays object-specific.",
+      "Making turtles visibly glass could reduce turtle recognizability unless they remain clear turtle shapes."
+    ],
+    "repair_constraints": [
+      "Show exactly seven black bicycles, each as a separate fully visible bicycle, with no extra bicycles.",
+      "Show exactly seven glass turtles, each as a separate fully visible turtle, with no extra turtles.",
+      "Place each of the seven glass turtles directly under one of the seven black bicycles, one turtle per bicycle.",
+      "Show exactly three spotted flamingos, each separate and fully visible, with no extra flamingos.",
+      "Bind the spotted pattern only to the flamingos.",
+      "Bind the glass material only to the turtles.",
+      "Keep all seventeen objects distinct, countable, and not merged or heavily overlapping."
+    ],
+    "retry_prompt": "A clear simple scene with exactly seven separate black bicycles arranged in a horizontal line across the image. Directly under each bicycle is exactly one separate glass turtle, so there are exactly seven glass turtles total and each turtle is clearly visible below its own bicycle. Off to the side of the bicycle-turtle line are exactly three separate spotted flamingos, fully visible and easy to count. The flamingos have visible spotted patterning on their bodies. The turtles are clearly made of glass with transparent shiny glass material, while still unmistakably turtle-shaped. The bicycles are black. Keep every object complete, distinct, and unobstructed, with wide spacing so all seven bicycles, all seven turtles, and all three flamingos are individually countable. No extra bicycles, no extra turtles, no extra flamingos, no duplicates, no merged objects.",
+    "skill_revision": {
+      "new_skills": [
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion"
+      ],
+      "reason": "Persistent count and attribute failures need stronger use of negative constraints to suppress extras or merged instances, alongside a revised counting/layout strategy that enforces seven one-to-one bicycle-turtle pairs and explicit attribute binding."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "three spotted flamingos, and seven glass turtles under seven black bicycles",
+    "prompt": "three spotted flamingos, and seven glass turtles under seven black bicycles",
+    "prompt_id": "geneval2_00797_b6fee0ed",
+    "sampling_bucket": "high_atom_count",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 3,
+      "count": 3,
+      "object": 3,
+      "position": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 797,
+    "vqa_list": [
+      [
+        "How many flamingos are in the image?",
+        "three"
+      ],
+      [
+        "Are the flamingos spotted?",
+        "Yes"
+      ],
+      [
+        "Are there any flamingos in the image?",
+        "Yes"
+      ],
+      [
+        "How many turtles are in the image?",
+        "seven"
+      ],
+      [
+        "Are the turtles glass?",
+        "Yes"
+      ],
+      [
+        "Are there any turtles in the image?",
+        "Yes"
+      ],
+      [
+        "Are the turtles under the bicycles?",
+        "Yes"
+      ],
+      [
+        "How many bicycles are in the image?",
+        "seven"
+      ],
+      [
+        "Are the bicycles black?",
+        "Yes"
+      ],
+      [
+        "Are there any bicycles in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00797_b6fee0ed"
+}

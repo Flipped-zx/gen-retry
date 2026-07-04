@@ -1,0 +1,2407 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "count_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many dogs are in the image?",
+              "score": 0.047241943222599315,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.0472419",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many dogs are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the dogs sparkling?",
+              "score": 0.9999986722468748,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.999999",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the dogs sparkling?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any dogs in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any dogs in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the dogs to the left of the koalas?",
+              "score": 0.9999999491342777,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the dogs to the left of the koalas?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many koalas are in the image?",
+              "score": 0.9999999283398757,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "three",
+            "status": "passed",
+            "target": "How many koalas are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any koalas in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any koalas in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the koalas in front of the trucks?",
+              "score": 0.9913595448015258,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.99136",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the koalas in front of the trucks?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many trucks are in the image?",
+              "score": 0.999998845492289,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.999999",
+            "expected": "three",
+            "status": "passed",
+            "target": "How many trucks are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the trucks green?",
+              "score": 1.0,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the trucks green?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any trucks in the image?",
+              "score": 0.9999999583333192,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any trucks in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00735_9a243e4c_cand_01",
+          "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+          "rows": [
+            {
+              "answer": "seven",
+              "atom_count": 10,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00735_9a243e4c_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00057/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00057/samples/00001.png",
+              "prompt": "seven sparkling dogs to the left of three koalas in front of three green trucks",
+              "prompt_id": "geneval2_00735_9a243e4c",
+              "question": "How many dogs are in the image?",
+              "score": 0.047241943222599315,
+              "skill": "count",
+              "source_index": 735
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00735_9a243e4c_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00057/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00057/samples/00001.png",
+              "prompt": "seven sparkling dogs to the left of three koalas in front of three green trucks",
+              "prompt_id": "geneval2_00735_9a243e4c",
+              "question": "Are the dogs sparkling?",
+              "score": 0.9999986722468748,
+              "skill": "attribute",
+              "source_index": 735
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00735_9a243e4c_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00057/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00057/samples/00001.png",
+              "prompt": "seven sparkling dogs to the left of three koalas in front of three green trucks",
+              "prompt_id": "geneval2_00735_9a243e4c",
+              "question": "Are there any dogs in the image?",
+              "score": 1.0000000221862138,
+              "skill": "object",
+              "source_index": 735
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00735_9a243e4c_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00057/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00057/samples/00001.png",
+              "prompt": "seven sparkling dogs to the left of three koalas in front of three green trucks",
+              "prompt_id": "geneval2_00735_9a243e4c",
+              "question": "Are the dogs to the left of the koalas?",
+              "score": 0.9999999491342777,
+              "skill": "position",
+              "source_index": 735
+            },
+            {
+              "answer": "three",
+              "atom_count": 10,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00735_9a243e4c_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00057/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00057/samples/00001.png",
+              "prompt": "seven sparkling dogs to the left of three koalas in front of three green trucks",
+              "prompt_id": "geneval2_00735_9a243e4c",
+              "question": "How many koalas are in the image?",
+              "score": 0.9999999283398757,
+              "skill": "count",
+              "source_index": 735
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00735_9a243e4c_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00057/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00057/samples/00001.png",
+              "prompt": "seven sparkling dogs to the left of three koalas in front of three green trucks",
+              "prompt_id": "geneval2_00735_9a243e4c",
+              "question": "Are there any koalas in the image?",
+              "score": 1.0000000664695108,
+              "skill": "object",
+              "source_index": 735
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00735_9a243e4c_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00057/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00057/samples/00001.png",
+              "prompt": "seven sparkling dogs to the left of three koalas in front of three green trucks",
+              "prompt_id": "geneval2_00735_9a243e4c",
+              "question": "Are the koalas in front of the trucks?",
+              "score": 0.9913595448015258,
+              "skill": "position",
+              "source_index": 735
+            },
+            {
+              "answer": "three",
+              "atom_count": 10,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00735_9a243e4c_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00057/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00057/samples/00001.png",
+              "prompt": "seven sparkling dogs to the left of three koalas in front of three green trucks",
+              "prompt_id": "geneval2_00735_9a243e4c",
+              "question": "How many trucks are in the image?",
+              "score": 0.999998845492289,
+              "skill": "count",
+              "source_index": 735
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00735_9a243e4c_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00057/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00057/samples/00001.png",
+              "prompt": "seven sparkling dogs to the left of three koalas in front of three green trucks",
+              "prompt_id": "geneval2_00735_9a243e4c",
+              "question": "Are the trucks green?",
+              "score": 1.0000000534928404,
+              "skill": "attribute",
+              "source_index": 735
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00735_9a243e4c_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00057/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00057/samples/00001.png",
+              "prompt": "seven sparkling dogs to the left of three koalas in front of three green trucks",
+              "prompt_id": "geneval2_00735_9a243e4c",
+              "question": "Are there any trucks in the image?",
+              "score": 0.9999999583333192,
+              "skill": "object",
+              "source_index": 735
+            }
+          ],
+          "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.9038598841570762,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 1,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00735_9a243e4c.json",
+          "manifest_prompt_index": 57,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00735_9a243e4c"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00735_9a243e4c_cand_01",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00057/samples/00001.png",
+        "prompt_used": "A clear wide image showing exactly seven sparkling dogs grouped on the left side, all seven dogs fully visible and countable. To the right of the dogs are exactly three koalas, fully visible and countable. Behind the three koalas are exactly three green trucks, fully visible enough to count, with the koalas clearly in front of the trucks. Keep the seven sparkling dogs entirely to the left of the three koalas. Avoid occlusion, keep all objects separated with small gaps, and include no extra dogs, koalas, trucks, animals, or vehicles.",
+        "seed": 1286
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Depict exactly seven dogs, exactly three koalas, and exactly three trucks.",
+          "Bind sparkling appearance only to the seven dogs.",
+          "Bind green color only to the three trucks.",
+          "Place all seven dogs as a separate group to the left of the three koalas.",
+          "Place the three koalas clearly in front of the three green trucks.",
+          "Keep every dog, koala, and truck visible and countable; avoid heavy overlap or occlusion.",
+          "Do not add extra dogs, koalas, trucks, or other prominent animals or vehicles."
+        ],
+        "generation_strategy": "Use a clear wide composition with three separated countable groups: seven sparkling dogs on the left, three koalas in the middle/right foreground, and three green trucks behind the koalas. Arrange objects with small gaps so counts and spatial relations are unambiguous, with the koalas visibly in front of the trucks and the dogs entirely to the left of the koala group.",
+        "initial_prompt": "A clear wide image showing exactly seven sparkling dogs grouped on the left side, all seven dogs fully visible and countable. To the right of the dogs are exactly three koalas, fully visible and countable. Behind the three koalas are exactly three green trucks, fully visible enough to count, with the koalas clearly in front of the trucks. Keep the seven sparkling dogs entirely to the left of the three koalas. Avoid occlusion, keep all objects separated with small gaps, and include no extra dogs, koalas, trucks, animals, or vehicles.",
+        "parsed_constraints": {
+          "attributes": {
+            "dogs": [
+              "sparkling"
+            ],
+            "trucks": [
+              "green"
+            ]
+          },
+          "counts": {
+            "dogs": 7,
+            "koalas": 3,
+            "trucks": 3
+          },
+          "objects": [
+            "dogs",
+            "koalas",
+            "trucks"
+          ],
+          "relations": [
+            "seven sparkling dogs are to the left of three koalas",
+            "three koalas are in front of three green trucks"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Depict exactly seven dogs, exactly three koalas, and exactly three trucks.",
+          "Bind sparkling appearance only to the seven dogs.",
+          "Bind green color only to the three trucks.",
+          "Place all seven dogs as a separate group to the left of the three koalas.",
+          "Place the three koalas clearly in front of the three green trucks.",
+          "Keep every dog, koala, and truck visible and countable; avoid heavy overlap or occlusion.",
+          "Do not add extra dogs, koalas, trucks, or other prominent animals or vehicles."
+        ],
+        "generation_strategy": "Use a clear wide composition with three separated countable groups: seven sparkling dogs on the left, three koalas in the middle/right foreground, and three green trucks behind the koalas. Arrange objects with small gaps so counts and spatial relations are unambiguous, with the koalas visibly in front of the trucks and the dogs entirely to the left of the koala group.",
+        "initial_prompt": "A clear wide image showing exactly seven sparkling dogs grouped on the left side, all seven dogs fully visible and countable. To the right of the dogs are exactly three koalas, fully visible and countable. Behind the three koalas are exactly three green trucks, fully visible enough to count, with the koalas clearly in front of the trucks. Keep the seven sparkling dogs entirely to the left of the three koalas. Avoid occlusion, keep all objects separated with small gaps, and include no extra dogs, koalas, trucks, animals, or vehicles.",
+        "parsed_constraints": {
+          "attributes": {
+            "dogs": [
+              "sparkling"
+            ],
+            "trucks": [
+              "green"
+            ]
+          },
+          "counts": {
+            "dogs": 7,
+            "koalas": 3,
+            "trucks": 3
+          },
+          "objects": [
+            "dogs",
+            "koalas",
+            "trucks"
+          ],
+          "relations": [
+            "seven sparkling dogs are to the left of three koalas",
+            "three koalas are in front of three green trucks"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many dogs are in the image?",
+                "score": 0.047241943222599315,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.0472419",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many dogs are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00057/samples/00001.png",
+          "prompt": "A clear wide image showing exactly seven sparkling dogs grouped on the left side, all seven dogs fully visible and countable. To the right of the dogs are exactly three koalas, fully visible and countable. Behind the three koalas are exactly three green trucks, fully visible enough to count, with the koalas clearly in front of the trucks. Keep the seven sparkling dogs entirely to the left of the three koalas. Avoid occlusion, keep all objects separated with small gaps, and include no extra dogs, koalas, trucks, animals, or vehicles.",
+          "round": 0,
+          "score": 0.9038598841570762
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00735_9a243e4c_cand_01",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "count_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many dogs are in the image?",
+                "score": 0.047241943222599315,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.0472419",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many dogs are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the dogs sparkling?",
+                "score": 0.9999986722468748,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.999999",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the dogs sparkling?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any dogs in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any dogs in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the dogs to the left of the koalas?",
+                "score": 0.9999999491342777,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the dogs to the left of the koalas?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many koalas are in the image?",
+                "score": 0.9999999283398757,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "three",
+              "status": "passed",
+              "target": "How many koalas are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any koalas in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any koalas in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the koalas in front of the trucks?",
+                "score": 0.9913595448015258,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.99136",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the koalas in front of the trucks?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many trucks are in the image?",
+                "score": 0.999998845492289,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.999999",
+              "expected": "three",
+              "status": "passed",
+              "target": "How many trucks are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the trucks green?",
+                "score": 1.0,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the trucks green?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any trucks in the image?",
+                "score": 0.9999999583333192,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any trucks in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.9038598841570762,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many dogs are in the image?",
+                  "score": 0.047241943222599315,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.0472419",
+                "expected": "seven",
+                "status": "failed",
+                "target": "How many dogs are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00057/samples/00001.png",
+            "prompt": "A clear wide image showing exactly seven sparkling dogs grouped on the left side, all seven dogs fully visible and countable. To the right of the dogs are exactly three koalas, fully visible and countable. Behind the three koalas are exactly three green trucks, fully visible enough to count, with the koalas clearly in front of the trucks. Keep the seven sparkling dogs entirely to the left of the three koalas. Avoid occlusion, keep all objects separated with small gaps, and include no extra dogs, koalas, trucks, animals, or vehicles.",
+            "round": 0,
+            "score": 0.9038598841570762
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many dogs are in the image?",
+                "score": 0.047241943222599315,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.0472419",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many dogs are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "count_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many dogs are in the image?",
+                "score": 0.047241943222599315,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.0472419",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many dogs are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the dogs sparkling?",
+                "score": 0.9999986722468748,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.999999",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the dogs sparkling?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any dogs in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any dogs in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the dogs to the left of the koalas?",
+                "score": 0.9999999491342777,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the dogs to the left of the koalas?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many koalas are in the image?",
+                "score": 0.9999999283398757,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "three",
+              "status": "passed",
+              "target": "How many koalas are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any koalas in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any koalas in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the koalas in front of the trucks?",
+                "score": 0.9913595448015258,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.99136",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the koalas in front of the trucks?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many trucks are in the image?",
+                "score": 0.999998845492289,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.999999",
+              "expected": "three",
+              "status": "passed",
+              "target": "How many trucks are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the trucks green?",
+                "score": 1.0,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the trucks green?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any trucks in the image?",
+                "score": 0.9999999583333192,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any trucks in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.9038598841570762,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "seven sparkling dogs to the left of three koalas in front of three green trucks",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many dogs are in the image?",
+              "score": 0.047241943222599315,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.0472419",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many dogs are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly seven dogs, exactly three koalas, and exactly three trucks.",
+            "Bind sparkling appearance only to the seven dogs.",
+            "Bind green color only to the three trucks.",
+            "Place all seven dogs as a separate group to the left of the three koalas.",
+            "Place the three koalas clearly in front of the three green trucks.",
+            "Keep every dog, koala, and truck visible and countable; avoid heavy overlap or occlusion.",
+            "Do not add extra dogs, koalas, trucks, or other prominent animals or vehicles."
+          ],
+          "generation_strategy": "Use a clear wide composition with three separated countable groups: seven sparkling dogs on the left, three koalas in the middle/right foreground, and three green trucks behind the koalas. Arrange objects with small gaps so counts and spatial relations are unambiguous, with the koalas visibly in front of the trucks and the dogs entirely to the left of the koala group.",
+          "initial_prompt": "A clear wide image showing exactly seven sparkling dogs grouped on the left side, all seven dogs fully visible and countable. To the right of the dogs are exactly three koalas, fully visible and countable. Behind the three koalas are exactly three green trucks, fully visible enough to count, with the koalas clearly in front of the trucks. Keep the seven sparkling dogs entirely to the left of the three koalas. Avoid occlusion, keep all objects separated with small gaps, and include no extra dogs, koalas, trucks, animals, or vehicles.",
+          "parsed_constraints": {
+            "attributes": {
+              "dogs": [
+                "sparkling"
+              ],
+              "trucks": [
+                "green"
+              ]
+            },
+            "counts": {
+              "dogs": 7,
+              "koalas": 3,
+              "trucks": 3
+            },
+            "objects": [
+              "dogs",
+              "koalas",
+              "trucks"
+            ],
+            "relations": [
+              "seven sparkling dogs are to the left of three koalas",
+              "three koalas are in front of three green trucks"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly seven dogs, exactly three koalas, and exactly three trucks.",
+            "Bind sparkling appearance only to the seven dogs.",
+            "Bind green color only to the three trucks.",
+            "Place all seven dogs as a separate group to the left of the three koalas.",
+            "Place the three koalas clearly in front of the three green trucks.",
+            "Keep every dog, koala, and truck visible and countable; avoid heavy overlap or occlusion.",
+            "Do not add extra dogs, koalas, trucks, or other prominent animals or vehicles."
+          ],
+          "generation_strategy": "Use a clear wide composition with three separated countable groups: seven sparkling dogs on the left, three koalas in the middle/right foreground, and three green trucks behind the koalas. Arrange objects with small gaps so counts and spatial relations are unambiguous, with the koalas visibly in front of the trucks and the dogs entirely to the left of the koala group.",
+          "initial_prompt": "A clear wide image showing exactly seven sparkling dogs grouped on the left side, all seven dogs fully visible and countable. To the right of the dogs are exactly three koalas, fully visible and countable. Behind the three koalas are exactly three green trucks, fully visible enough to count, with the koalas clearly in front of the trucks. Keep the seven sparkling dogs entirely to the left of the three koalas. Avoid occlusion, keep all objects separated with small gaps, and include no extra dogs, koalas, trucks, animals, or vehicles.",
+          "parsed_constraints": {
+            "attributes": {
+              "dogs": [
+                "sparkling"
+              ],
+              "trucks": [
+                "green"
+              ]
+            },
+            "counts": {
+              "dogs": 7,
+              "koalas": 3,
+              "trucks": 3
+            },
+            "objects": [
+              "dogs",
+              "koalas",
+              "trucks"
+            ],
+            "relations": [
+              "seven sparkling dogs are to the left of three koalas",
+              "three koalas are in front of three green trucks"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_prompt": "A clear wide image showing exactly seven sparkling dogs grouped on the left side, all seven dogs fully visible and countable. To the right of the dogs are exactly three koalas, fully visible and countable. Behind the three koalas are exactly three green trucks, fully visible enough to count, with the koalas clearly in front of the trucks. Keep the seven sparkling dogs entirely to the left of the three koalas. Avoid occlusion, keep all objects separated with small gaps, and include no extra dogs, koalas, trucks, animals, or vehicles.",
+        "previous_selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ],
+        "prompt_id": "geneval2_00735_9a243e4c",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "count_mismatch"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many dogs are in the image?",
+                  "score": 0.047241943222599315,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.0472419",
+                "expected": "seven",
+                "status": "failed",
+                "target": "How many dogs are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the dogs sparkling?",
+                  "score": 0.9999986722468748,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.999999",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the dogs sparkling?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any dogs in the image?",
+                  "score": 1.0,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any dogs in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the dogs to the left of the koalas?",
+                  "score": 0.9999999491342777,
+                  "skill": "position"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the dogs to the left of the koalas?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many koalas are in the image?",
+                  "score": 0.9999999283398757,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1",
+                "expected": "three",
+                "status": "passed",
+                "target": "How many koalas are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any koalas in the image?",
+                  "score": 1.0,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any koalas in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the koalas in front of the trucks?",
+                  "score": 0.9913595448015258,
+                  "skill": "position"
+                },
+                "detected": "soft_score=0.99136",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the koalas in front of the trucks?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many trucks are in the image?",
+                  "score": 0.999998845492289,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.999999",
+                "expected": "three",
+                "status": "passed",
+                "target": "How many trucks are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the trucks green?",
+                  "score": 1.0,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the trucks green?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any trucks in the image?",
+                  "score": 0.9999999583333192,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any trucks in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Depict exactly seven dogs, exactly three koalas, and exactly three trucks.",
+                "Bind sparkling appearance only to the seven dogs.",
+                "Bind green color only to the three trucks.",
+                "Place all seven dogs as a separate group to the left of the three koalas.",
+                "Place the three koalas clearly in front of the three green trucks.",
+                "Keep every dog, koala, and truck visible and countable; avoid heavy overlap or occlusion.",
+                "Do not add extra dogs, koalas, trucks, or other prominent animals or vehicles."
+              ],
+              "generation_strategy": "Use a clear wide composition with three separated countable groups: seven sparkling dogs on the left, three koalas in the middle/right foreground, and three green trucks behind the koalas. Arrange objects with small gaps so counts and spatial relations are unambiguous, with the koalas visibly in front of the trucks and the dogs entirely to the left of the koala group.",
+              "initial_prompt": "A clear wide image showing exactly seven sparkling dogs grouped on the left side, all seven dogs fully visible and countable. To the right of the dogs are exactly three koalas, fully visible and countable. Behind the three koalas are exactly three green trucks, fully visible enough to count, with the koalas clearly in front of the trucks. Keep the seven sparkling dogs entirely to the left of the three koalas. Avoid occlusion, keep all objects separated with small gaps, and include no extra dogs, koalas, trucks, animals, or vehicles.",
+              "parsed_constraints": {
+                "attributes": {
+                  "dogs": [
+                    "sparkling"
+                  ],
+                  "trucks": [
+                    "green"
+                  ]
+                },
+                "counts": {
+                  "dogs": 7,
+                  "koalas": 3,
+                  "trucks": 3
+                },
+                "objects": [
+                  "dogs",
+                  "koalas",
+                  "trucks"
+                ],
+                "relations": [
+                  "seven sparkling dogs are to the left of three koalas",
+                  "three koalas are in front of three green trucks"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Depict exactly seven dogs, exactly three koalas, and exactly three trucks.",
+                "Bind sparkling appearance only to the seven dogs.",
+                "Bind green color only to the three trucks.",
+                "Place all seven dogs as a separate group to the left of the three koalas.",
+                "Place the three koalas clearly in front of the three green trucks.",
+                "Keep every dog, koala, and truck visible and countable; avoid heavy overlap or occlusion.",
+                "Do not add extra dogs, koalas, trucks, or other prominent animals or vehicles."
+              ],
+              "generation_strategy": "Use a clear wide composition with three separated countable groups: seven sparkling dogs on the left, three koalas in the middle/right foreground, and three green trucks behind the koalas. Arrange objects with small gaps so counts and spatial relations are unambiguous, with the koalas visibly in front of the trucks and the dogs entirely to the left of the koala group.",
+              "initial_prompt": "A clear wide image showing exactly seven sparkling dogs grouped on the left side, all seven dogs fully visible and countable. To the right of the dogs are exactly three koalas, fully visible and countable. Behind the three koalas are exactly three green trucks, fully visible enough to count, with the koalas clearly in front of the trucks. Keep the seven sparkling dogs entirely to the left of the three koalas. Avoid occlusion, keep all objects separated with small gaps, and include no extra dogs, koalas, trucks, animals, or vehicles.",
+              "parsed_constraints": {
+                "attributes": {
+                  "dogs": [
+                    "sparkling"
+                  ],
+                  "trucks": [
+                    "green"
+                  ]
+                },
+                "counts": {
+                  "dogs": 7,
+                  "koalas": 3,
+                  "trucks": 3
+                },
+                "objects": [
+                  "dogs",
+                  "koalas",
+                  "trucks"
+                ],
+                "relations": [
+                  "seven sparkling dogs are to the left of three koalas",
+                  "three koalas are in front of three green trucks"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "prompt_used": "A clear wide image showing exactly seven sparkling dogs grouped on the left side, all seven dogs fully visible and countable. To the right of the dogs are exactly three koalas, fully visible and countable. Behind the three koalas are exactly three green trucks, fully visible enough to count, with the koalas clearly in front of the trucks. Keep the seven sparkling dogs entirely to the left of the three koalas. Avoid occlusion, keep all objects separated with small gaps, and include no extra dogs, koalas, trucks, animals, or vehicles.",
+            "round": 0,
+            "score": 0.9038598841570762,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 0,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many dogs are in the image?",
+                    "score": 0.047241943222599315,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=0.0472419",
+                  "expected": "seven",
+                  "status": "failed",
+                  "target": "How many dogs are in the image?",
+                  "type": "count_mismatch"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00735_9a243e4c"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many dogs are in the image?",
+              "score": 0.047241943222599315,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.0472419",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many dogs are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00735_9a243e4c_cand_01",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Depict exactly seven dogs, exactly three koalas, and exactly three trucks.",
+      "Bind sparkling appearance only to the seven dogs.",
+      "Bind green color only to the three trucks.",
+      "Place all seven dogs as a separate group to the left of the three koalas.",
+      "Place the three koalas clearly in front of the three green trucks.",
+      "Keep every dog, koala, and truck visible and countable; avoid heavy overlap or occlusion.",
+      "Do not add extra dogs, koalas, trucks, or other prominent animals or vehicles."
+    ],
+    "generation_strategy": "Use a clear wide composition with three separated countable groups: seven sparkling dogs on the left, three koalas in the middle/right foreground, and three green trucks behind the koalas. Arrange objects with small gaps so counts and spatial relations are unambiguous, with the koalas visibly in front of the trucks and the dogs entirely to the left of the koala group.",
+    "initial_prompt": "A clear wide image showing exactly seven sparkling dogs grouped on the left side, all seven dogs fully visible and countable. To the right of the dogs are exactly three koalas, fully visible and countable. Behind the three koalas are exactly three green trucks, fully visible enough to count, with the koalas clearly in front of the trucks. Keep the seven sparkling dogs entirely to the left of the three koalas. Avoid occlusion, keep all objects separated with small gaps, and include no extra dogs, koalas, trucks, animals, or vehicles.",
+    "parsed_constraints": {
+      "attributes": {
+        "dogs": [
+          "sparkling"
+        ],
+        "trucks": [
+          "green"
+        ]
+      },
+      "counts": {
+        "dogs": 7,
+        "koalas": 3,
+        "trucks": 3
+      },
+      "objects": [
+        "dogs",
+        "koalas",
+        "trucks"
+      ],
+      "relations": [
+        "seven sparkling dogs are to the left of three koalas",
+        "three koalas are in front of three green trucks"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The only failed constraint is the dog count: the image must contain exactly seven dogs, but the evaluator did not recognize seven. All other constraints passed: the dogs are sparkling, dogs are present, the dogs are to the left of the koalas, there are exactly three koalas, the koalas are in front of the trucks, there are exactly three trucks, and the trucks are green.",
+    "expected_improvement": [
+      "Increase dog count reliability by arranging the seven dogs as two clearly separated rows on the left: four dogs in the back row and three dogs in the front row.",
+      "Keep each dog fully visible with gaps so the verifier can count seven distinct dog bodies.",
+      "Preserve the already successful three koalas, three green trucks, dog-left-of-koalas relation, and koalas-in-front-of-trucks relation."
+    ],
+    "failure_types": [
+      "count_mismatch"
+    ],
+    "preserve_constraints": [
+      "All dogs must be sparkling.",
+      "Dogs must be present and must remain entirely to the left of the koalas.",
+      "There must be exactly three koalas, fully visible and countable.",
+      "The three koalas must be in front of the trucks.",
+      "There must be exactly three trucks, fully visible and countable.",
+      "The three trucks must be green."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt grouped seven dogs on the left but did not impose a strong enough countable layout. A dense group of seven dogs can merge visually, overlap, or be interpreted as fewer dogs, causing the dog count to fail even though other objects and relations passed.",
+      "error_source": "Insufficient quantity-counting layout for seven visually separable dogs."
+    },
+    "regeneration_strategy": "Use a structured, count-focused composition. Put the seven sparkling dogs on the left in a clear two-row arrangement with four separate dogs in the upper row and three separate dogs in the lower row, each dog fully visible with space between them. Keep the three koalas to the right of the dog group in the foreground, and place exactly three green trucks behind the koalas. Use a wide, uncluttered scene and negative constraints against extra or merged dogs.",
+    "regression_risks": [
+      "The generator may accidentally create fewer than seven distinct dogs if the dog group overlaps or merges.",
+      "The generator may add extra dogs or animal-like shapes while trying to fill the left side.",
+      "The sparkling attribute could weaken if the dog count is emphasized too much.",
+      "The koalas-in-front-of-trucks relation could become ambiguous if the trucks overlap the koalas too heavily."
+    ],
+    "repair_constraints": [
+      "Depict exactly seven dogs, not six or fewer and not eight or more.",
+      "Make the seven dogs visually separable and countable: four distinct sparkling dogs in one row and three distinct sparkling dogs in a second row on the left side.",
+      "Each of the seven dogs must be fully visible, with clear gaps between dog bodies and no merged dogs or duplicate partial dogs.",
+      "Do not include any extra dogs beyond the seven."
+    ],
+    "retry_prompt": "A clear wide image with exactly seven sparkling dogs on the left side, arranged for easy counting as four separate sparkling dogs in the back row and three separate sparkling dogs in the front row. Each of the seven dogs is fully visible, distinct, and separated by small gaps; no dog is merged, hidden, cropped, duplicated, or extra. To the right of the seven sparkling dogs are exactly three koalas, fully visible and countable. Behind the three koalas are exactly three green trucks, fully visible enough to count, with the koalas clearly in front of the trucks. Keep all seven sparkling dogs entirely to the left of the three koalas. Keep exactly three koalas and exactly three green trucks. Do not include any extra dogs, koalas, trucks, animals, or vehicles.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints",
+        "spatial_layout",
+        "attribute_binding",
+        "object_presence",
+        "multi_object_composition"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same skill set but prioritize quantity_counting, anti_occlusion, and clarity_visibility for the persistent dog-count failure by changing from a generic group to a structured four-plus-three dog layout."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many dogs are in the image?",
+            "score": 0.047241943222599315,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.0472419",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many dogs are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00057/samples/00001.png",
+      "prompt": "A clear wide image showing exactly seven sparkling dogs grouped on the left side, all seven dogs fully visible and countable. To the right of the dogs are exactly three koalas, fully visible and countable. Behind the three koalas are exactly three green trucks, fully visible enough to count, with the koalas clearly in front of the trucks. Keep the seven sparkling dogs entirely to the left of the three koalas. Avoid occlusion, keep all objects separated with small gaps, and include no extra dogs, koalas, trucks, animals, or vehicles.",
+      "round": 0,
+      "score": 0.9038598841570762
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00735_9a243e4c_cand_01",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "count_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many dogs are in the image?",
+            "score": 0.047241943222599315,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.0472419",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many dogs are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the dogs sparkling?",
+            "score": 0.9999986722468748,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.999999",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the dogs sparkling?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any dogs in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any dogs in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the dogs to the left of the koalas?",
+            "score": 0.9999999491342777,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the dogs to the left of the koalas?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many koalas are in the image?",
+            "score": 0.9999999283398757,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "three",
+          "status": "passed",
+          "target": "How many koalas are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any koalas in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any koalas in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the koalas in front of the trucks?",
+            "score": 0.9913595448015258,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.99136",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the koalas in front of the trucks?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many trucks are in the image?",
+            "score": 0.999998845492289,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.999999",
+          "expected": "three",
+          "status": "passed",
+          "target": "How many trucks are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the trucks green?",
+            "score": 1.0,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the trucks green?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any trucks in the image?",
+            "score": 0.9999999583333192,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any trucks in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.9038598841570762,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many dogs are in the image?",
+              "score": 0.047241943222599315,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.0472419",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many dogs are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00057/samples/00001.png",
+        "prompt": "A clear wide image showing exactly seven sparkling dogs grouped on the left side, all seven dogs fully visible and countable. To the right of the dogs are exactly three koalas, fully visible and countable. Behind the three koalas are exactly three green trucks, fully visible enough to count, with the koalas clearly in front of the trucks. Keep the seven sparkling dogs entirely to the left of the three koalas. Avoid occlusion, keep all objects separated with small gaps, and include no extra dogs, koalas, trucks, animals, or vehicles.",
+        "round": 0,
+        "score": 0.9038598841570762
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many dogs are in the image?",
+            "score": 0.047241943222599315,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.0472419",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many dogs are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "count_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many dogs are in the image?",
+            "score": 0.047241943222599315,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.0472419",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many dogs are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the dogs sparkling?",
+            "score": 0.9999986722468748,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.999999",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the dogs sparkling?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any dogs in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any dogs in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the dogs to the left of the koalas?",
+            "score": 0.9999999491342777,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the dogs to the left of the koalas?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many koalas are in the image?",
+            "score": 0.9999999283398757,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "three",
+          "status": "passed",
+          "target": "How many koalas are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any koalas in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any koalas in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the koalas in front of the trucks?",
+            "score": 0.9913595448015258,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.99136",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the koalas in front of the trucks?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many trucks are in the image?",
+            "score": 0.999998845492289,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.999999",
+          "expected": "three",
+          "status": "passed",
+          "target": "How many trucks are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the trucks green?",
+            "score": 1.0,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the trucks green?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any trucks in the image?",
+            "score": 0.9999999583333192,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any trucks in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.9038598841570762,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "seven sparkling dogs to the left of three koalas in front of three green trucks",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many dogs are in the image?",
+          "score": 0.047241943222599315,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.0472419",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many dogs are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Depict exactly seven dogs, exactly three koalas, and exactly three trucks.",
+        "Bind sparkling appearance only to the seven dogs.",
+        "Bind green color only to the three trucks.",
+        "Place all seven dogs as a separate group to the left of the three koalas.",
+        "Place the three koalas clearly in front of the three green trucks.",
+        "Keep every dog, koala, and truck visible and countable; avoid heavy overlap or occlusion.",
+        "Do not add extra dogs, koalas, trucks, or other prominent animals or vehicles."
+      ],
+      "generation_strategy": "Use a clear wide composition with three separated countable groups: seven sparkling dogs on the left, three koalas in the middle/right foreground, and three green trucks behind the koalas. Arrange objects with small gaps so counts and spatial relations are unambiguous, with the koalas visibly in front of the trucks and the dogs entirely to the left of the koala group.",
+      "initial_prompt": "A clear wide image showing exactly seven sparkling dogs grouped on the left side, all seven dogs fully visible and countable. To the right of the dogs are exactly three koalas, fully visible and countable. Behind the three koalas are exactly three green trucks, fully visible enough to count, with the koalas clearly in front of the trucks. Keep the seven sparkling dogs entirely to the left of the three koalas. Avoid occlusion, keep all objects separated with small gaps, and include no extra dogs, koalas, trucks, animals, or vehicles.",
+      "parsed_constraints": {
+        "attributes": {
+          "dogs": [
+            "sparkling"
+          ],
+          "trucks": [
+            "green"
+          ]
+        },
+        "counts": {
+          "dogs": 7,
+          "koalas": 3,
+          "trucks": 3
+        },
+        "objects": [
+          "dogs",
+          "koalas",
+          "trucks"
+        ],
+        "relations": [
+          "seven sparkling dogs are to the left of three koalas",
+          "three koalas are in front of three green trucks"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Depict exactly seven dogs, exactly three koalas, and exactly three trucks.",
+        "Bind sparkling appearance only to the seven dogs.",
+        "Bind green color only to the three trucks.",
+        "Place all seven dogs as a separate group to the left of the three koalas.",
+        "Place the three koalas clearly in front of the three green trucks.",
+        "Keep every dog, koala, and truck visible and countable; avoid heavy overlap or occlusion.",
+        "Do not add extra dogs, koalas, trucks, or other prominent animals or vehicles."
+      ],
+      "generation_strategy": "Use a clear wide composition with three separated countable groups: seven sparkling dogs on the left, three koalas in the middle/right foreground, and three green trucks behind the koalas. Arrange objects with small gaps so counts and spatial relations are unambiguous, with the koalas visibly in front of the trucks and the dogs entirely to the left of the koala group.",
+      "initial_prompt": "A clear wide image showing exactly seven sparkling dogs grouped on the left side, all seven dogs fully visible and countable. To the right of the dogs are exactly three koalas, fully visible and countable. Behind the three koalas are exactly three green trucks, fully visible enough to count, with the koalas clearly in front of the trucks. Keep the seven sparkling dogs entirely to the left of the three koalas. Avoid occlusion, keep all objects separated with small gaps, and include no extra dogs, koalas, trucks, animals, or vehicles.",
+      "parsed_constraints": {
+        "attributes": {
+          "dogs": [
+            "sparkling"
+          ],
+          "trucks": [
+            "green"
+          ]
+        },
+        "counts": {
+          "dogs": 7,
+          "koalas": 3,
+          "trucks": 3
+        },
+        "objects": [
+          "dogs",
+          "koalas",
+          "trucks"
+        ],
+        "relations": [
+          "seven sparkling dogs are to the left of three koalas",
+          "three koalas are in front of three green trucks"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_prompt": "A clear wide image showing exactly seven sparkling dogs grouped on the left side, all seven dogs fully visible and countable. To the right of the dogs are exactly three koalas, fully visible and countable. Behind the three koalas are exactly three green trucks, fully visible enough to count, with the koalas clearly in front of the trucks. Keep the seven sparkling dogs entirely to the left of the three koalas. Avoid occlusion, keep all objects separated with small gaps, and include no extra dogs, koalas, trucks, animals, or vehicles.",
+    "previous_selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ],
+    "prompt_id": "geneval2_00735_9a243e4c",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "count_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many dogs are in the image?",
+              "score": 0.047241943222599315,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.0472419",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many dogs are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the dogs sparkling?",
+              "score": 0.9999986722468748,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.999999",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the dogs sparkling?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any dogs in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any dogs in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the dogs to the left of the koalas?",
+              "score": 0.9999999491342777,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the dogs to the left of the koalas?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many koalas are in the image?",
+              "score": 0.9999999283398757,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "three",
+            "status": "passed",
+            "target": "How many koalas are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any koalas in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any koalas in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the koalas in front of the trucks?",
+              "score": 0.9913595448015258,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.99136",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the koalas in front of the trucks?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many trucks are in the image?",
+              "score": 0.999998845492289,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.999999",
+            "expected": "three",
+            "status": "passed",
+            "target": "How many trucks are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the trucks green?",
+              "score": 1.0,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the trucks green?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any trucks in the image?",
+              "score": 0.9999999583333192,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any trucks in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly seven dogs, exactly three koalas, and exactly three trucks.",
+            "Bind sparkling appearance only to the seven dogs.",
+            "Bind green color only to the three trucks.",
+            "Place all seven dogs as a separate group to the left of the three koalas.",
+            "Place the three koalas clearly in front of the three green trucks.",
+            "Keep every dog, koala, and truck visible and countable; avoid heavy overlap or occlusion.",
+            "Do not add extra dogs, koalas, trucks, or other prominent animals or vehicles."
+          ],
+          "generation_strategy": "Use a clear wide composition with three separated countable groups: seven sparkling dogs on the left, three koalas in the middle/right foreground, and three green trucks behind the koalas. Arrange objects with small gaps so counts and spatial relations are unambiguous, with the koalas visibly in front of the trucks and the dogs entirely to the left of the koala group.",
+          "initial_prompt": "A clear wide image showing exactly seven sparkling dogs grouped on the left side, all seven dogs fully visible and countable. To the right of the dogs are exactly three koalas, fully visible and countable. Behind the three koalas are exactly three green trucks, fully visible enough to count, with the koalas clearly in front of the trucks. Keep the seven sparkling dogs entirely to the left of the three koalas. Avoid occlusion, keep all objects separated with small gaps, and include no extra dogs, koalas, trucks, animals, or vehicles.",
+          "parsed_constraints": {
+            "attributes": {
+              "dogs": [
+                "sparkling"
+              ],
+              "trucks": [
+                "green"
+              ]
+            },
+            "counts": {
+              "dogs": 7,
+              "koalas": 3,
+              "trucks": 3
+            },
+            "objects": [
+              "dogs",
+              "koalas",
+              "trucks"
+            ],
+            "relations": [
+              "seven sparkling dogs are to the left of three koalas",
+              "three koalas are in front of three green trucks"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly seven dogs, exactly three koalas, and exactly three trucks.",
+            "Bind sparkling appearance only to the seven dogs.",
+            "Bind green color only to the three trucks.",
+            "Place all seven dogs as a separate group to the left of the three koalas.",
+            "Place the three koalas clearly in front of the three green trucks.",
+            "Keep every dog, koala, and truck visible and countable; avoid heavy overlap or occlusion.",
+            "Do not add extra dogs, koalas, trucks, or other prominent animals or vehicles."
+          ],
+          "generation_strategy": "Use a clear wide composition with three separated countable groups: seven sparkling dogs on the left, three koalas in the middle/right foreground, and three green trucks behind the koalas. Arrange objects with small gaps so counts and spatial relations are unambiguous, with the koalas visibly in front of the trucks and the dogs entirely to the left of the koala group.",
+          "initial_prompt": "A clear wide image showing exactly seven sparkling dogs grouped on the left side, all seven dogs fully visible and countable. To the right of the dogs are exactly three koalas, fully visible and countable. Behind the three koalas are exactly three green trucks, fully visible enough to count, with the koalas clearly in front of the trucks. Keep the seven sparkling dogs entirely to the left of the three koalas. Avoid occlusion, keep all objects separated with small gaps, and include no extra dogs, koalas, trucks, animals, or vehicles.",
+          "parsed_constraints": {
+            "attributes": {
+              "dogs": [
+                "sparkling"
+              ],
+              "trucks": [
+                "green"
+              ]
+            },
+            "counts": {
+              "dogs": 7,
+              "koalas": 3,
+              "trucks": 3
+            },
+            "objects": [
+              "dogs",
+              "koalas",
+              "trucks"
+            ],
+            "relations": [
+              "seven sparkling dogs are to the left of three koalas",
+              "three koalas are in front of three green trucks"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "prompt_used": "A clear wide image showing exactly seven sparkling dogs grouped on the left side, all seven dogs fully visible and countable. To the right of the dogs are exactly three koalas, fully visible and countable. Behind the three koalas are exactly three green trucks, fully visible enough to count, with the koalas clearly in front of the trucks. Keep the seven sparkling dogs entirely to the left of the three koalas. Avoid occlusion, keep all objects separated with small gaps, and include no extra dogs, koalas, trucks, animals, or vehicles.",
+        "round": 0,
+        "score": 0.9038598841570762,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many dogs are in the image?",
+                "score": 0.047241943222599315,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.0472419",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many dogs are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00735_9a243e4c"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many dogs are in the image?",
+          "score": 0.047241943222599315,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.0472419",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many dogs are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00057/samples/00001.png",
+    "best_so_far_prompt": "A clear wide image showing exactly seven sparkling dogs grouped on the left side, all seven dogs fully visible and countable. To the right of the dogs are exactly three koalas, fully visible and countable. Behind the three koalas are exactly three green trucks, fully visible enough to count, with the koalas clearly in front of the trucks. Keep the seven sparkling dogs entirely to the left of the three koalas. Avoid occlusion, keep all objects separated with small gaps, and include no extra dogs, koalas, trucks, animals, or vehicles.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.9038598841570762,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many dogs are in the image?",
+          "score": 0.047241943222599315,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.0472419",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many dogs are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Depict exactly seven dogs, exactly three koalas, and exactly three trucks.",
+        "Bind sparkling appearance only to the seven dogs.",
+        "Bind green color only to the three trucks.",
+        "Place all seven dogs as a separate group to the left of the three koalas.",
+        "Place the three koalas clearly in front of the three green trucks.",
+        "Keep every dog, koala, and truck visible and countable; avoid heavy overlap or occlusion.",
+        "Do not add extra dogs, koalas, trucks, or other prominent animals or vehicles."
+      ],
+      "generation_strategy": "Use a clear wide composition with three separated countable groups: seven sparkling dogs on the left, three koalas in the middle/right foreground, and three green trucks behind the koalas. Arrange objects with small gaps so counts and spatial relations are unambiguous, with the koalas visibly in front of the trucks and the dogs entirely to the left of the koala group.",
+      "initial_prompt": "A clear wide image showing exactly seven sparkling dogs grouped on the left side, all seven dogs fully visible and countable. To the right of the dogs are exactly three koalas, fully visible and countable. Behind the three koalas are exactly three green trucks, fully visible enough to count, with the koalas clearly in front of the trucks. Keep the seven sparkling dogs entirely to the left of the three koalas. Avoid occlusion, keep all objects separated with small gaps, and include no extra dogs, koalas, trucks, animals, or vehicles.",
+      "parsed_constraints": {
+        "attributes": {
+          "dogs": [
+            "sparkling"
+          ],
+          "trucks": [
+            "green"
+          ]
+        },
+        "counts": {
+          "dogs": 7,
+          "koalas": 3,
+          "trucks": 3
+        },
+        "objects": [
+          "dogs",
+          "koalas",
+          "trucks"
+        ],
+        "relations": [
+          "seven sparkling dogs are to the left of three koalas",
+          "three koalas are in front of three green trucks"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.904 failed=['How many dogs are in the image?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_incremental/snapshot_003_worker_02/geneval2_00735_9a243e4c__geneval2_00735_9a243e4c_cand_01__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00735_9a243e4c__geneval2_00735_9a243e4c_cand_01__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00735_9a243e4c",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The only failed constraint is the dog count: the image must contain exactly seven dogs, but the evaluator did not recognize seven. All other constraints passed: the dogs are sparkling, dogs are present, the dogs are to the left of the koalas, there are exactly three koalas, the koalas are in front of the trucks, there are exactly three trucks, and the trucks are green.",
+    "expected_improvement": [
+      "Increase dog count reliability by arranging the seven dogs as two clearly separated rows on the left: four dogs in the back row and three dogs in the front row.",
+      "Keep each dog fully visible with gaps so the verifier can count seven distinct dog bodies.",
+      "Preserve the already successful three koalas, three green trucks, dog-left-of-koalas relation, and koalas-in-front-of-trucks relation."
+    ],
+    "failure_types": [
+      "count_mismatch"
+    ],
+    "preserve_constraints": [
+      "All dogs must be sparkling.",
+      "Dogs must be present and must remain entirely to the left of the koalas.",
+      "There must be exactly three koalas, fully visible and countable.",
+      "The three koalas must be in front of the trucks.",
+      "There must be exactly three trucks, fully visible and countable.",
+      "The three trucks must be green."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt grouped seven dogs on the left but did not impose a strong enough countable layout. A dense group of seven dogs can merge visually, overlap, or be interpreted as fewer dogs, causing the dog count to fail even though other objects and relations passed.",
+      "error_source": "Insufficient quantity-counting layout for seven visually separable dogs."
+    },
+    "regeneration_strategy": "Use a structured, count-focused composition. Put the seven sparkling dogs on the left in a clear two-row arrangement with four separate dogs in the upper row and three separate dogs in the lower row, each dog fully visible with space between them. Keep the three koalas to the right of the dog group in the foreground, and place exactly three green trucks behind the koalas. Use a wide, uncluttered scene and negative constraints against extra or merged dogs.",
+    "regression_risks": [
+      "The generator may accidentally create fewer than seven distinct dogs if the dog group overlaps or merges.",
+      "The generator may add extra dogs or animal-like shapes while trying to fill the left side.",
+      "The sparkling attribute could weaken if the dog count is emphasized too much.",
+      "The koalas-in-front-of-trucks relation could become ambiguous if the trucks overlap the koalas too heavily."
+    ],
+    "repair_constraints": [
+      "Depict exactly seven dogs, not six or fewer and not eight or more.",
+      "Make the seven dogs visually separable and countable: four distinct sparkling dogs in one row and three distinct sparkling dogs in a second row on the left side.",
+      "Each of the seven dogs must be fully visible, with clear gaps between dog bodies and no merged dogs or duplicate partial dogs.",
+      "Do not include any extra dogs beyond the seven."
+    ],
+    "retry_prompt": "A clear wide image with exactly seven sparkling dogs on the left side, arranged for easy counting as four separate sparkling dogs in the back row and three separate sparkling dogs in the front row. Each of the seven dogs is fully visible, distinct, and separated by small gaps; no dog is merged, hidden, cropped, duplicated, or extra. To the right of the seven sparkling dogs are exactly three koalas, fully visible and countable. Behind the three koalas are exactly three green trucks, fully visible enough to count, with the koalas clearly in front of the trucks. Keep all seven sparkling dogs entirely to the left of the three koalas. Keep exactly three koalas and exactly three green trucks. Do not include any extra dogs, koalas, trucks, animals, or vehicles.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints",
+        "spatial_layout",
+        "attribute_binding",
+        "object_presence",
+        "multi_object_composition"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same skill set but prioritize quantity_counting, anti_occlusion, and clarity_visibility for the persistent dog-count failure by changing from a generic group to a structured four-plus-three dog layout."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "seven sparkling dogs to the left of three koalas in front of three green trucks",
+    "prompt": "seven sparkling dogs to the left of three koalas in front of three green trucks",
+    "prompt_id": "geneval2_00735_9a243e4c",
+    "sampling_bucket": "position_spatial",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 2,
+      "count": 3,
+      "object": 3,
+      "position": 2
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 735,
+    "vqa_list": [
+      [
+        "How many dogs are in the image?",
+        "seven"
+      ],
+      [
+        "Are the dogs sparkling?",
+        "Yes"
+      ],
+      [
+        "Are there any dogs in the image?",
+        "Yes"
+      ],
+      [
+        "Are the dogs to the left of the koalas?",
+        "Yes"
+      ],
+      [
+        "How many koalas are in the image?",
+        "three"
+      ],
+      [
+        "Are there any koalas in the image?",
+        "Yes"
+      ],
+      [
+        "Are the koalas in front of the trucks?",
+        "Yes"
+      ],
+      [
+        "How many trucks are in the image?",
+        "three"
+      ],
+      [
+        "Are the trucks green?",
+        "Yes"
+      ],
+      [
+        "Are there any trucks in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00735_9a243e4c"
+}

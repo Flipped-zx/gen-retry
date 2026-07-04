@@ -1,0 +1,3084 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "color_mismatch",
+          "count_mismatch",
+          "missing_object"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many pigs are in the image?",
+              "score": 1.4760345971114726e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.47603e-09",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many pigs are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the pigs glass?",
+              "score": 9.096657904543448e-08,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=9.09666e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the pigs glass?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cows are in the image?",
+              "score": 3.576257111415972e-11,
+              "skill": "count"
+            },
+            "detected": "soft_score=3.57626e-11",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many cows are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows white?",
+              "score": 0.008700022576022093,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.00870002",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cows white?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any cows in the image?",
+              "score": 1.0614841587305857e-08,
+              "skill": "object"
+            },
+            "detected": "soft_score=1.06148e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any cows in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many trucks are in the image?",
+              "score": 1.0,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "four",
+            "status": "passed",
+            "target": "How many trucks are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the trucks wooden?",
+              "score": 0.9889930434219423,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.988993",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the trucks wooden?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any trucks in the image?",
+              "score": 0.9999999564697646,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any trucks in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the trucks behind the pigs?",
+              "score": 0.9999996164167442,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the trucks behind the pigs?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any pigs in the image?",
+              "score": 0.9999999947613105,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any pigs in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/balanced100_all_candidates_shards4/shard_3/raw_score_lists.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00784_41a44b6a_cand_03",
+          "raw_eval_path": "data/geneval2_jobs/balanced100_all_candidates_shards4/shard_3/raw_score_lists.json",
+          "rows": [
+            {
+              "answer": "four",
+              "atom_count": 10,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00784_41a44b6a_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00096/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00096/samples/00003.png",
+              "prompt": "four wooden trucks behind four glass pigs, and six white cows",
+              "prompt_id": "geneval2_00784_41a44b6a",
+              "question": "How many trucks are in the image?",
+              "score": 1.0000000295534444,
+              "skill": "count",
+              "source_index": 784
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00784_41a44b6a_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00096/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00096/samples/00003.png",
+              "prompt": "four wooden trucks behind four glass pigs, and six white cows",
+              "prompt_id": "geneval2_00784_41a44b6a",
+              "question": "Are the trucks wooden?",
+              "score": 0.9889930434219423,
+              "skill": "attribute",
+              "source_index": 784
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00784_41a44b6a_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00096/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00096/samples/00003.png",
+              "prompt": "four wooden trucks behind four glass pigs, and six white cows",
+              "prompt_id": "geneval2_00784_41a44b6a",
+              "question": "Are there any trucks in the image?",
+              "score": 0.9999999564697646,
+              "skill": "object",
+              "source_index": 784
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00784_41a44b6a_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00096/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00096/samples/00003.png",
+              "prompt": "four wooden trucks behind four glass pigs, and six white cows",
+              "prompt_id": "geneval2_00784_41a44b6a",
+              "question": "Are the trucks behind the pigs?",
+              "score": 0.9999996164167442,
+              "skill": "position",
+              "source_index": 784
+            },
+            {
+              "answer": "four",
+              "atom_count": 10,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00784_41a44b6a_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00096/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00096/samples/00003.png",
+              "prompt": "four wooden trucks behind four glass pigs, and six white cows",
+              "prompt_id": "geneval2_00784_41a44b6a",
+              "question": "How many pigs are in the image?",
+              "score": 1.4760345971114726e-09,
+              "skill": "count",
+              "source_index": 784
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00784_41a44b6a_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00096/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00096/samples/00003.png",
+              "prompt": "four wooden trucks behind four glass pigs, and six white cows",
+              "prompt_id": "geneval2_00784_41a44b6a",
+              "question": "Are the pigs glass?",
+              "score": 9.096657904543448e-08,
+              "skill": "attribute",
+              "source_index": 784
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00784_41a44b6a_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00096/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00096/samples/00003.png",
+              "prompt": "four wooden trucks behind four glass pigs, and six white cows",
+              "prompt_id": "geneval2_00784_41a44b6a",
+              "question": "Are there any pigs in the image?",
+              "score": 0.9999999947613105,
+              "skill": "object",
+              "source_index": 784
+            },
+            {
+              "answer": "six",
+              "atom_count": 10,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00784_41a44b6a_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00096/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00096/samples/00003.png",
+              "prompt": "four wooden trucks behind four glass pigs, and six white cows",
+              "prompt_id": "geneval2_00784_41a44b6a",
+              "question": "How many cows are in the image?",
+              "score": 3.576257111415972e-11,
+              "skill": "count",
+              "source_index": 784
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00784_41a44b6a_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00096/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00096/samples/00003.png",
+              "prompt": "four wooden trucks behind four glass pigs, and six white cows",
+              "prompt_id": "geneval2_00784_41a44b6a",
+              "question": "Are the cows white?",
+              "score": 0.008700022576022093,
+              "skill": "attribute",
+              "source_index": 784
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00784_41a44b6a_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00096/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00096/samples/00003.png",
+              "prompt": "four wooden trucks behind four glass pigs, and six white cows",
+              "prompt_id": "geneval2_00784_41a44b6a",
+              "question": "Are there any cows in the image?",
+              "score": 1.0614841587305857e-08,
+              "skill": "object",
+              "source_index": 784
+            }
+          ],
+          "source_path": "data/geneval2_jobs/balanced100_all_candidates_shards4/shard_3/raw_score_lists.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.49976927367390017,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 3,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00784_41a44b6a.json",
+          "manifest_prompt_index": 96,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00784_41a44b6a"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00784_41a44b6a_cand_03",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00096/samples/00003.png",
+        "prompt_used": "Create a clear image with exactly four wooden trucks behind exactly four glass pigs, and exactly six white cows. Arrange the four glass pigs in a visible front row, with the four wooden trucks clearly positioned behind the pigs. Place the six white cows as a separate clearly visible group. Keep every truck, pig, and cow fully visible, separated, and easy to count, with no occlusion. Do not include any extra trucks, pigs, cows, or other prominent objects.",
+        "seed": 1483
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Depict exactly four trucks, exactly four pigs, and exactly six cows.",
+          "Bind attributes correctly: all trucks are wooden, all pigs are glass, all cows are white.",
+          "Place the four wooden trucks behind the four glass pigs.",
+          "Keep all fourteen animals/vehicles fully visible and separated enough to count; avoid overlap or occlusion.",
+          "Do not add extra trucks, pigs, cows, or other prominent objects."
+        ],
+        "generation_strategy": "Use a clear multi-object composition with countable separated groups: four glass pigs in a front row, four wooden trucks aligned behind them, and six white cows in a separate visible group. Emphasize attribute binding and visibility for accurate counting.",
+        "initial_prompt": "Create a clear image with exactly four wooden trucks behind exactly four glass pigs, and exactly six white cows. Arrange the four glass pigs in a visible front row, with the four wooden trucks clearly positioned behind the pigs. Place the six white cows as a separate clearly visible group. Keep every truck, pig, and cow fully visible, separated, and easy to count, with no occlusion. Do not include any extra trucks, pigs, cows, or other prominent objects.",
+        "parsed_constraints": {
+          "attributes": {
+            "cows": "white",
+            "pigs": "glass",
+            "trucks": "wooden"
+          },
+          "counts": {
+            "cows": 6,
+            "pigs": 4,
+            "trucks": 4
+          },
+          "objects": [
+            "trucks",
+            "pigs",
+            "cows"
+          ],
+          "relations": [
+            "four wooden trucks behind four glass pigs"
+          ]
+        },
+        "selected_skills": [
+          "quantity_counting",
+          "attribute_binding",
+          "object_presence",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility",
+          "negative_constraints"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Depict exactly four trucks, exactly four pigs, and exactly six cows.",
+          "Bind attributes correctly: all trucks are wooden, all pigs are glass, all cows are white.",
+          "Place the four wooden trucks behind the four glass pigs.",
+          "Keep all fourteen animals/vehicles fully visible and separated enough to count; avoid overlap or occlusion.",
+          "Do not add extra trucks, pigs, cows, or other prominent objects."
+        ],
+        "generation_strategy": "Use a clear multi-object composition with countable separated groups: four glass pigs in a front row, four wooden trucks aligned behind them, and six white cows in a separate visible group. Emphasize attribute binding and visibility for accurate counting.",
+        "initial_prompt": "Create a clear image with exactly four wooden trucks behind exactly four glass pigs, and exactly six white cows. Arrange the four glass pigs in a visible front row, with the four wooden trucks clearly positioned behind the pigs. Place the six white cows as a separate clearly visible group. Keep every truck, pig, and cow fully visible, separated, and easy to count, with no occlusion. Do not include any extra trucks, pigs, cows, or other prominent objects.",
+        "parsed_constraints": {
+          "attributes": {
+            "cows": "white",
+            "pigs": "glass",
+            "trucks": "wooden"
+          },
+          "counts": {
+            "cows": 6,
+            "pigs": 4,
+            "trucks": 4
+          },
+          "objects": [
+            "trucks",
+            "pigs",
+            "cows"
+          ],
+          "relations": [
+            "four wooden trucks behind four glass pigs"
+          ]
+        },
+        "selected_skills": [
+          "quantity_counting",
+          "attribute_binding",
+          "object_presence",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility",
+          "negative_constraints"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many pigs are in the image?",
+                "score": 1.4760345971114726e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.47603e-09",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many pigs are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the pigs glass?",
+                "score": 9.096657904543448e-08,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=9.09666e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the pigs glass?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cows are in the image?",
+                "score": 3.576257111415972e-11,
+                "skill": "count"
+              },
+              "detected": "soft_score=3.57626e-11",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many cows are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows white?",
+                "score": 0.008700022576022093,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.00870002",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cows white?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any cows in the image?",
+                "score": 1.0614841587305857e-08,
+                "skill": "object"
+              },
+              "detected": "soft_score=1.06148e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any cows in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00096/samples/00003.png",
+          "prompt": "Create a clear image with exactly four wooden trucks behind exactly four glass pigs, and exactly six white cows. Arrange the four glass pigs in a visible front row, with the four wooden trucks clearly positioned behind the pigs. Place the six white cows as a separate clearly visible group. Keep every truck, pig, and cow fully visible, separated, and easy to count, with no occlusion. Do not include any extra trucks, pigs, cows, or other prominent objects.",
+          "round": 0,
+          "score": 0.49976927367390017
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00784_41a44b6a_cand_03",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "attribute_mismatch",
+            "color_mismatch",
+            "count_mismatch",
+            "missing_object"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many pigs are in the image?",
+                "score": 1.4760345971114726e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.47603e-09",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many pigs are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the pigs glass?",
+                "score": 9.096657904543448e-08,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=9.09666e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the pigs glass?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cows are in the image?",
+                "score": 3.576257111415972e-11,
+                "skill": "count"
+              },
+              "detected": "soft_score=3.57626e-11",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many cows are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows white?",
+                "score": 0.008700022576022093,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.00870002",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cows white?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any cows in the image?",
+                "score": 1.0614841587305857e-08,
+                "skill": "object"
+              },
+              "detected": "soft_score=1.06148e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any cows in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many trucks are in the image?",
+                "score": 1.0,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "four",
+              "status": "passed",
+              "target": "How many trucks are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the trucks wooden?",
+                "score": 0.9889930434219423,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.988993",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the trucks wooden?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any trucks in the image?",
+                "score": 0.9999999564697646,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any trucks in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the trucks behind the pigs?",
+                "score": 0.9999996164167442,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the trucks behind the pigs?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any pigs in the image?",
+                "score": 0.9999999947613105,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any pigs in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.49976927367390017,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many pigs are in the image?",
+                  "score": 1.4760345971114726e-09,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1.47603e-09",
+                "expected": "four",
+                "status": "failed",
+                "target": "How many pigs are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the pigs glass?",
+                  "score": 9.096657904543448e-08,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=9.09666e-08",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the pigs glass?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many cows are in the image?",
+                  "score": 3.576257111415972e-11,
+                  "skill": "count"
+                },
+                "detected": "soft_score=3.57626e-11",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many cows are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the cows white?",
+                  "score": 0.008700022576022093,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.00870002",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the cows white?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any cows in the image?",
+                  "score": 1.0614841587305857e-08,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1.06148e-08",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are there any cows in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00096/samples/00003.png",
+            "prompt": "Create a clear image with exactly four wooden trucks behind exactly four glass pigs, and exactly six white cows. Arrange the four glass pigs in a visible front row, with the four wooden trucks clearly positioned behind the pigs. Place the six white cows as a separate clearly visible group. Keep every truck, pig, and cow fully visible, separated, and easy to count, with no occlusion. Do not include any extra trucks, pigs, cows, or other prominent objects.",
+            "round": 0,
+            "score": 0.49976927367390017
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many pigs are in the image?",
+                "score": 1.4760345971114726e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.47603e-09",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many pigs are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the pigs glass?",
+                "score": 9.096657904543448e-08,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=9.09666e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the pigs glass?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cows are in the image?",
+                "score": 3.576257111415972e-11,
+                "skill": "count"
+              },
+              "detected": "soft_score=3.57626e-11",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many cows are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows white?",
+                "score": 0.008700022576022093,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.00870002",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cows white?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any cows in the image?",
+                "score": 1.0614841587305857e-08,
+                "skill": "object"
+              },
+              "detected": "soft_score=1.06148e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any cows in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "attribute_mismatch",
+            "color_mismatch",
+            "count_mismatch",
+            "missing_object"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many pigs are in the image?",
+                "score": 1.4760345971114726e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.47603e-09",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many pigs are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the pigs glass?",
+                "score": 9.096657904543448e-08,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=9.09666e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the pigs glass?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cows are in the image?",
+                "score": 3.576257111415972e-11,
+                "skill": "count"
+              },
+              "detected": "soft_score=3.57626e-11",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many cows are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows white?",
+                "score": 0.008700022576022093,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.00870002",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cows white?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any cows in the image?",
+                "score": 1.0614841587305857e-08,
+                "skill": "object"
+              },
+              "detected": "soft_score=1.06148e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any cows in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many trucks are in the image?",
+                "score": 1.0,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "four",
+              "status": "passed",
+              "target": "How many trucks are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the trucks wooden?",
+                "score": 0.9889930434219423,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.988993",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the trucks wooden?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any trucks in the image?",
+                "score": 0.9999999564697646,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any trucks in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the trucks behind the pigs?",
+                "score": 0.9999996164167442,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the trucks behind the pigs?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any pigs in the image?",
+                "score": 0.9999999947613105,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any pigs in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.49976927367390017,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "four wooden trucks behind four glass pigs, and six white cows",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many pigs are in the image?",
+              "score": 1.4760345971114726e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.47603e-09",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many pigs are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the pigs glass?",
+              "score": 9.096657904543448e-08,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=9.09666e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the pigs glass?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cows are in the image?",
+              "score": 3.576257111415972e-11,
+              "skill": "count"
+            },
+            "detected": "soft_score=3.57626e-11",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many cows are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows white?",
+              "score": 0.008700022576022093,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.00870002",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cows white?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any cows in the image?",
+              "score": 1.0614841587305857e-08,
+              "skill": "object"
+            },
+            "detected": "soft_score=1.06148e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any cows in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly four trucks, exactly four pigs, and exactly six cows.",
+            "Bind attributes correctly: all trucks are wooden, all pigs are glass, all cows are white.",
+            "Place the four wooden trucks behind the four glass pigs.",
+            "Keep all fourteen animals/vehicles fully visible and separated enough to count; avoid overlap or occlusion.",
+            "Do not add extra trucks, pigs, cows, or other prominent objects."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with countable separated groups: four glass pigs in a front row, four wooden trucks aligned behind them, and six white cows in a separate visible group. Emphasize attribute binding and visibility for accurate counting.",
+          "initial_prompt": "Create a clear image with exactly four wooden trucks behind exactly four glass pigs, and exactly six white cows. Arrange the four glass pigs in a visible front row, with the four wooden trucks clearly positioned behind the pigs. Place the six white cows as a separate clearly visible group. Keep every truck, pig, and cow fully visible, separated, and easy to count, with no occlusion. Do not include any extra trucks, pigs, cows, or other prominent objects.",
+          "parsed_constraints": {
+            "attributes": {
+              "cows": "white",
+              "pigs": "glass",
+              "trucks": "wooden"
+            },
+            "counts": {
+              "cows": 6,
+              "pigs": 4,
+              "trucks": 4
+            },
+            "objects": [
+              "trucks",
+              "pigs",
+              "cows"
+            ],
+            "relations": [
+              "four wooden trucks behind four glass pigs"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "attribute_binding",
+            "object_presence",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly four trucks, exactly four pigs, and exactly six cows.",
+            "Bind attributes correctly: all trucks are wooden, all pigs are glass, all cows are white.",
+            "Place the four wooden trucks behind the four glass pigs.",
+            "Keep all fourteen animals/vehicles fully visible and separated enough to count; avoid overlap or occlusion.",
+            "Do not add extra trucks, pigs, cows, or other prominent objects."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with countable separated groups: four glass pigs in a front row, four wooden trucks aligned behind them, and six white cows in a separate visible group. Emphasize attribute binding and visibility for accurate counting.",
+          "initial_prompt": "Create a clear image with exactly four wooden trucks behind exactly four glass pigs, and exactly six white cows. Arrange the four glass pigs in a visible front row, with the four wooden trucks clearly positioned behind the pigs. Place the six white cows as a separate clearly visible group. Keep every truck, pig, and cow fully visible, separated, and easy to count, with no occlusion. Do not include any extra trucks, pigs, cows, or other prominent objects.",
+          "parsed_constraints": {
+            "attributes": {
+              "cows": "white",
+              "pigs": "glass",
+              "trucks": "wooden"
+            },
+            "counts": {
+              "cows": 6,
+              "pigs": 4,
+              "trucks": 4
+            },
+            "objects": [
+              "trucks",
+              "pigs",
+              "cows"
+            ],
+            "relations": [
+              "four wooden trucks behind four glass pigs"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "attribute_binding",
+            "object_presence",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "previous_prompt": "Create a clear image with exactly four wooden trucks behind exactly four glass pigs, and exactly six white cows. Arrange the four glass pigs in a visible front row, with the four wooden trucks clearly positioned behind the pigs. Place the six white cows as a separate clearly visible group. Keep every truck, pig, and cow fully visible, separated, and easy to count, with no occlusion. Do not include any extra trucks, pigs, cows, or other prominent objects.",
+        "previous_selected_skills": [
+          "quantity_counting",
+          "attribute_binding",
+          "object_presence",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility",
+          "negative_constraints"
+        ],
+        "prompt_id": "geneval2_00784_41a44b6a",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "attribute_mismatch",
+              "color_mismatch",
+              "count_mismatch",
+              "missing_object"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many pigs are in the image?",
+                  "score": 1.4760345971114726e-09,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1.47603e-09",
+                "expected": "four",
+                "status": "failed",
+                "target": "How many pigs are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the pigs glass?",
+                  "score": 9.096657904543448e-08,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=9.09666e-08",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the pigs glass?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many cows are in the image?",
+                  "score": 3.576257111415972e-11,
+                  "skill": "count"
+                },
+                "detected": "soft_score=3.57626e-11",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many cows are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the cows white?",
+                  "score": 0.008700022576022093,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.00870002",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the cows white?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any cows in the image?",
+                  "score": 1.0614841587305857e-08,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1.06148e-08",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are there any cows in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many trucks are in the image?",
+                  "score": 1.0,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1",
+                "expected": "four",
+                "status": "passed",
+                "target": "How many trucks are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the trucks wooden?",
+                  "score": 0.9889930434219423,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.988993",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the trucks wooden?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any trucks in the image?",
+                  "score": 0.9999999564697646,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any trucks in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the trucks behind the pigs?",
+                  "score": 0.9999996164167442,
+                  "skill": "position"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the trucks behind the pigs?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any pigs in the image?",
+                  "score": 0.9999999947613105,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any pigs in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Depict exactly four trucks, exactly four pigs, and exactly six cows.",
+                "Bind attributes correctly: all trucks are wooden, all pigs are glass, all cows are white.",
+                "Place the four wooden trucks behind the four glass pigs.",
+                "Keep all fourteen animals/vehicles fully visible and separated enough to count; avoid overlap or occlusion.",
+                "Do not add extra trucks, pigs, cows, or other prominent objects."
+              ],
+              "generation_strategy": "Use a clear multi-object composition with countable separated groups: four glass pigs in a front row, four wooden trucks aligned behind them, and six white cows in a separate visible group. Emphasize attribute binding and visibility for accurate counting.",
+              "initial_prompt": "Create a clear image with exactly four wooden trucks behind exactly four glass pigs, and exactly six white cows. Arrange the four glass pigs in a visible front row, with the four wooden trucks clearly positioned behind the pigs. Place the six white cows as a separate clearly visible group. Keep every truck, pig, and cow fully visible, separated, and easy to count, with no occlusion. Do not include any extra trucks, pigs, cows, or other prominent objects.",
+              "parsed_constraints": {
+                "attributes": {
+                  "cows": "white",
+                  "pigs": "glass",
+                  "trucks": "wooden"
+                },
+                "counts": {
+                  "cows": 6,
+                  "pigs": 4,
+                  "trucks": 4
+                },
+                "objects": [
+                  "trucks",
+                  "pigs",
+                  "cows"
+                ],
+                "relations": [
+                  "four wooden trucks behind four glass pigs"
+                ]
+              },
+              "selected_skills": [
+                "quantity_counting",
+                "attribute_binding",
+                "object_presence",
+                "spatial_layout",
+                "multi_object_composition",
+                "anti_occlusion",
+                "clarity_visibility",
+                "negative_constraints"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Depict exactly four trucks, exactly four pigs, and exactly six cows.",
+                "Bind attributes correctly: all trucks are wooden, all pigs are glass, all cows are white.",
+                "Place the four wooden trucks behind the four glass pigs.",
+                "Keep all fourteen animals/vehicles fully visible and separated enough to count; avoid overlap or occlusion.",
+                "Do not add extra trucks, pigs, cows, or other prominent objects."
+              ],
+              "generation_strategy": "Use a clear multi-object composition with countable separated groups: four glass pigs in a front row, four wooden trucks aligned behind them, and six white cows in a separate visible group. Emphasize attribute binding and visibility for accurate counting.",
+              "initial_prompt": "Create a clear image with exactly four wooden trucks behind exactly four glass pigs, and exactly six white cows. Arrange the four glass pigs in a visible front row, with the four wooden trucks clearly positioned behind the pigs. Place the six white cows as a separate clearly visible group. Keep every truck, pig, and cow fully visible, separated, and easy to count, with no occlusion. Do not include any extra trucks, pigs, cows, or other prominent objects.",
+              "parsed_constraints": {
+                "attributes": {
+                  "cows": "white",
+                  "pigs": "glass",
+                  "trucks": "wooden"
+                },
+                "counts": {
+                  "cows": 6,
+                  "pigs": 4,
+                  "trucks": 4
+                },
+                "objects": [
+                  "trucks",
+                  "pigs",
+                  "cows"
+                ],
+                "relations": [
+                  "four wooden trucks behind four glass pigs"
+                ]
+              },
+              "selected_skills": [
+                "quantity_counting",
+                "attribute_binding",
+                "object_presence",
+                "spatial_layout",
+                "multi_object_composition",
+                "anti_occlusion",
+                "clarity_visibility",
+                "negative_constraints"
+              ]
+            },
+            "prompt_used": "Create a clear image with exactly four wooden trucks behind exactly four glass pigs, and exactly six white cows. Arrange the four glass pigs in a visible front row, with the four wooden trucks clearly positioned behind the pigs. Place the six white cows as a separate clearly visible group. Keep every truck, pig, and cow fully visible, separated, and easy to count, with no occlusion. Do not include any extra trucks, pigs, cows, or other prominent objects.",
+            "round": 0,
+            "score": 0.49976927367390017,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 4,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many pigs are in the image?",
+                    "score": 1.4760345971114726e-09,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=1.47603e-09",
+                  "expected": "four",
+                  "status": "failed",
+                  "target": "How many pigs are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 5,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the pigs glass?",
+                    "score": 9.096657904543448e-08,
+                    "skill": "attribute"
+                  },
+                  "detected": "soft_score=9.09666e-08",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the pigs glass?",
+                  "type": "attribute_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 7,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many cows are in the image?",
+                    "score": 3.576257111415972e-11,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=3.57626e-11",
+                  "expected": "six",
+                  "status": "failed",
+                  "target": "How many cows are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 8,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the cows white?",
+                    "score": 0.008700022576022093,
+                    "skill": "attribute"
+                  },
+                  "detected": "soft_score=0.00870002",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the cows white?",
+                  "type": "color_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 9,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are there any cows in the image?",
+                    "score": 1.0614841587305857e-08,
+                    "skill": "object"
+                  },
+                  "detected": "soft_score=1.06148e-08",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are there any cows in the image?",
+                  "type": "missing_object"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00784_41a44b6a"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many pigs are in the image?",
+              "score": 1.4760345971114726e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.47603e-09",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many pigs are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the pigs glass?",
+              "score": 9.096657904543448e-08,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=9.09666e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the pigs glass?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cows are in the image?",
+              "score": 3.576257111415972e-11,
+              "skill": "count"
+            },
+            "detected": "soft_score=3.57626e-11",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many cows are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows white?",
+              "score": 0.008700022576022093,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.00870002",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cows white?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any cows in the image?",
+              "score": 1.0614841587305857e-08,
+              "skill": "object"
+            },
+            "detected": "soft_score=1.06148e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any cows in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00784_41a44b6a_cand_03",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Depict exactly four trucks, exactly four pigs, and exactly six cows.",
+      "Bind attributes correctly: all trucks are wooden, all pigs are glass, all cows are white.",
+      "Place the four wooden trucks behind the four glass pigs.",
+      "Keep all fourteen animals/vehicles fully visible and separated enough to count; avoid overlap or occlusion.",
+      "Do not add extra trucks, pigs, cows, or other prominent objects."
+    ],
+    "generation_strategy": "Use a clear multi-object composition with countable separated groups: four glass pigs in a front row, four wooden trucks aligned behind them, and six white cows in a separate visible group. Emphasize attribute binding and visibility for accurate counting.",
+    "initial_prompt": "Create a clear image with exactly four wooden trucks behind exactly four glass pigs, and exactly six white cows. Arrange the four glass pigs in a visible front row, with the four wooden trucks clearly positioned behind the pigs. Place the six white cows as a separate clearly visible group. Keep every truck, pig, and cow fully visible, separated, and easy to count, with no occlusion. Do not include any extra trucks, pigs, cows, or other prominent objects.",
+    "parsed_constraints": {
+      "attributes": {
+        "cows": "white",
+        "pigs": "glass",
+        "trucks": "wooden"
+      },
+      "counts": {
+        "cows": 6,
+        "pigs": 4,
+        "trucks": 4
+      },
+      "objects": [
+        "trucks",
+        "pigs",
+        "cows"
+      ],
+      "relations": [
+        "four wooden trucks behind four glass pigs"
+      ]
+    },
+    "selected_skills": [
+      "quantity_counting",
+      "attribute_binding",
+      "object_presence",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The previous prompt preserved the truck count and truck-behind-pigs relation, but it under-specified how to keep the pigs and cows visually distinct and reliably recognizable. The phrase 'separate clearly visible group' was too weak for the six white cows, and the prompt did not force a simple countable layout for the pigs and cows. The generator likely deprioritized the cow group or merged animals, and the glass attribute on pigs was not bound strongly enough to each pig instance.",
+    "expected_improvement": [
+      "Increase cow presence by explicitly placing six white cows in a dedicated visible row.",
+      "Improve pig count and glass recognition by making four pigs large, separate, and uniformly transparent glass.",
+      "Maintain the already-correct truck count, wooden material, and behind-the-pigs relation while reducing regression risk."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "attribute_mismatch",
+      "color_mismatch",
+      "missing_object"
+    ],
+    "preserve_constraints": [
+      "Exactly four trucks are present.",
+      "All four trucks are wooden.",
+      "The four wooden trucks are behind the pigs.",
+      "Pigs are present in the image."
+    ],
+    "previous_plan_error": {
+      "details": "The prior plan relied on a generic multi-object scene with grouped objects, but did not simplify the composition enough for three categories totaling fourteen items. It failed to give the pigs and cows a rigid row structure, strong per-object attribute binding, and enough salience for the cow group.",
+      "error_source": "previous_plan"
+    },
+    "regeneration_strategy": "Switch to a stricter, grid-like composition with three clearly separated horizontal rows: four glass pigs in the front row, four wooden trucks directly behind them in the middle row, and six white cows in a third separate row. Make every instance fully visible, evenly spaced, and large enough to verify. Bind materials and colors directly to each object class and add explicit negatives against extra or merged instances.",
+    "regression_risks": [
+      "Adding six cows may cause crowding that could break truck count visibility or the behind relation.",
+      "Emphasizing glass pigs may cause the model to render pigs too faint or decorative unless visibility is explicitly required.",
+      "A busy scene may introduce extra animals or duplicate-looking instances if exact-count negatives are not explicit."
+    ],
+    "repair_constraints": [
+      "Show exactly four pigs, each a transparent glass pig, in one front row. Make the four pigs separate, fully visible, and easy to count. Do not show fewer or more than four pigs.",
+      "Show exactly six cows, all white cows, in one separate row. Make all six cows fully visible, distinct, and easy to count. Do not omit cows and do not show fewer or more than six cows.",
+      "Keep exactly four wooden trucks, fully visible, in a row directly behind the four glass pigs.",
+      "Use clear spacing between all objects so no pig, truck, or cow overlaps, merges, or hides another object.",
+      "Do not include any extra trucks, pigs, cows, or other prominent objects."
+    ],
+    "retry_prompt": "Create a simple clear scene with three separated rows of objects. In the front row, show exactly four pigs, and each pig is made of transparent glass. Make the four glass pigs large, fully visible, evenly spaced, distinct from one another, and easy to count. Directly behind the pigs, in a second row, show exactly four wooden trucks, one behind each pig. Make all four wooden trucks fully visible, evenly spaced, and clearly behind the pigs. In a third separate row, show exactly six cows, and all six cows are white. Make the six white cows fully visible, evenly spaced, distinct from one another, and easy to count. Keep every truck, pig, and cow unobstructed and not touching. Do not include extra trucks, extra pigs, extra cows, or other prominent objects.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "object_presence",
+        "spatial_layout",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "object_presence",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ],
+      "reason": "Keep the counting, attribute, presence, layout, visibility, occlusion, and negative-control skills, but drop multi_object_composition emphasis in favor of a simpler rigid row layout because the previous broader composition strategy did not reliably preserve pig and cow counts and attributes."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many pigs are in the image?",
+            "score": 1.4760345971114726e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.47603e-09",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many pigs are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the pigs glass?",
+            "score": 9.096657904543448e-08,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=9.09666e-08",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the pigs glass?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cows are in the image?",
+            "score": 3.576257111415972e-11,
+            "skill": "count"
+          },
+          "detected": "soft_score=3.57626e-11",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many cows are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cows white?",
+            "score": 0.008700022576022093,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.00870002",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the cows white?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any cows in the image?",
+            "score": 1.0614841587305857e-08,
+            "skill": "object"
+          },
+          "detected": "soft_score=1.06148e-08",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any cows in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00096/samples/00003.png",
+      "prompt": "Create a clear image with exactly four wooden trucks behind exactly four glass pigs, and exactly six white cows. Arrange the four glass pigs in a visible front row, with the four wooden trucks clearly positioned behind the pigs. Place the six white cows as a separate clearly visible group. Keep every truck, pig, and cow fully visible, separated, and easy to count, with no occlusion. Do not include any extra trucks, pigs, cows, or other prominent objects.",
+      "round": 0,
+      "score": 0.49976927367390017
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00784_41a44b6a_cand_03",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "color_mismatch",
+        "count_mismatch",
+        "missing_object"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many pigs are in the image?",
+            "score": 1.4760345971114726e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.47603e-09",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many pigs are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the pigs glass?",
+            "score": 9.096657904543448e-08,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=9.09666e-08",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the pigs glass?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cows are in the image?",
+            "score": 3.576257111415972e-11,
+            "skill": "count"
+          },
+          "detected": "soft_score=3.57626e-11",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many cows are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cows white?",
+            "score": 0.008700022576022093,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.00870002",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the cows white?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any cows in the image?",
+            "score": 1.0614841587305857e-08,
+            "skill": "object"
+          },
+          "detected": "soft_score=1.06148e-08",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any cows in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many trucks are in the image?",
+            "score": 1.0,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "four",
+          "status": "passed",
+          "target": "How many trucks are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the trucks wooden?",
+            "score": 0.9889930434219423,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.988993",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the trucks wooden?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any trucks in the image?",
+            "score": 0.9999999564697646,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any trucks in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the trucks behind the pigs?",
+            "score": 0.9999996164167442,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the trucks behind the pigs?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any pigs in the image?",
+            "score": 0.9999999947613105,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any pigs in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.49976927367390017,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many pigs are in the image?",
+              "score": 1.4760345971114726e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.47603e-09",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many pigs are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the pigs glass?",
+              "score": 9.096657904543448e-08,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=9.09666e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the pigs glass?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cows are in the image?",
+              "score": 3.576257111415972e-11,
+              "skill": "count"
+            },
+            "detected": "soft_score=3.57626e-11",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many cows are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows white?",
+              "score": 0.008700022576022093,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.00870002",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cows white?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any cows in the image?",
+              "score": 1.0614841587305857e-08,
+              "skill": "object"
+            },
+            "detected": "soft_score=1.06148e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any cows in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00096/samples/00003.png",
+        "prompt": "Create a clear image with exactly four wooden trucks behind exactly four glass pigs, and exactly six white cows. Arrange the four glass pigs in a visible front row, with the four wooden trucks clearly positioned behind the pigs. Place the six white cows as a separate clearly visible group. Keep every truck, pig, and cow fully visible, separated, and easy to count, with no occlusion. Do not include any extra trucks, pigs, cows, or other prominent objects.",
+        "round": 0,
+        "score": 0.49976927367390017
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many pigs are in the image?",
+            "score": 1.4760345971114726e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.47603e-09",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many pigs are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the pigs glass?",
+            "score": 9.096657904543448e-08,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=9.09666e-08",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the pigs glass?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cows are in the image?",
+            "score": 3.576257111415972e-11,
+            "skill": "count"
+          },
+          "detected": "soft_score=3.57626e-11",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many cows are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cows white?",
+            "score": 0.008700022576022093,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.00870002",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the cows white?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any cows in the image?",
+            "score": 1.0614841587305857e-08,
+            "skill": "object"
+          },
+          "detected": "soft_score=1.06148e-08",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any cows in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "color_mismatch",
+        "count_mismatch",
+        "missing_object"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many pigs are in the image?",
+            "score": 1.4760345971114726e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.47603e-09",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many pigs are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the pigs glass?",
+            "score": 9.096657904543448e-08,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=9.09666e-08",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the pigs glass?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cows are in the image?",
+            "score": 3.576257111415972e-11,
+            "skill": "count"
+          },
+          "detected": "soft_score=3.57626e-11",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many cows are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cows white?",
+            "score": 0.008700022576022093,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.00870002",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the cows white?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any cows in the image?",
+            "score": 1.0614841587305857e-08,
+            "skill": "object"
+          },
+          "detected": "soft_score=1.06148e-08",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are there any cows in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many trucks are in the image?",
+            "score": 1.0,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "four",
+          "status": "passed",
+          "target": "How many trucks are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the trucks wooden?",
+            "score": 0.9889930434219423,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.988993",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the trucks wooden?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any trucks in the image?",
+            "score": 0.9999999564697646,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any trucks in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the trucks behind the pigs?",
+            "score": 0.9999996164167442,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the trucks behind the pigs?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any pigs in the image?",
+            "score": 0.9999999947613105,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any pigs in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.49976927367390017,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "four wooden trucks behind four glass pigs, and six white cows",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many pigs are in the image?",
+          "score": 1.4760345971114726e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.47603e-09",
+        "expected": "four",
+        "status": "failed",
+        "target": "How many pigs are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the pigs glass?",
+          "score": 9.096657904543448e-08,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=9.09666e-08",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the pigs glass?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cows are in the image?",
+          "score": 3.576257111415972e-11,
+          "skill": "count"
+        },
+        "detected": "soft_score=3.57626e-11",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many cows are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the cows white?",
+          "score": 0.008700022576022093,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.00870002",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the cows white?",
+        "type": "color_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 9,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any cows in the image?",
+          "score": 1.0614841587305857e-08,
+          "skill": "object"
+        },
+        "detected": "soft_score=1.06148e-08",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are there any cows in the image?",
+        "type": "missing_object"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Depict exactly four trucks, exactly four pigs, and exactly six cows.",
+        "Bind attributes correctly: all trucks are wooden, all pigs are glass, all cows are white.",
+        "Place the four wooden trucks behind the four glass pigs.",
+        "Keep all fourteen animals/vehicles fully visible and separated enough to count; avoid overlap or occlusion.",
+        "Do not add extra trucks, pigs, cows, or other prominent objects."
+      ],
+      "generation_strategy": "Use a clear multi-object composition with countable separated groups: four glass pigs in a front row, four wooden trucks aligned behind them, and six white cows in a separate visible group. Emphasize attribute binding and visibility for accurate counting.",
+      "initial_prompt": "Create a clear image with exactly four wooden trucks behind exactly four glass pigs, and exactly six white cows. Arrange the four glass pigs in a visible front row, with the four wooden trucks clearly positioned behind the pigs. Place the six white cows as a separate clearly visible group. Keep every truck, pig, and cow fully visible, separated, and easy to count, with no occlusion. Do not include any extra trucks, pigs, cows, or other prominent objects.",
+      "parsed_constraints": {
+        "attributes": {
+          "cows": "white",
+          "pigs": "glass",
+          "trucks": "wooden"
+        },
+        "counts": {
+          "cows": 6,
+          "pigs": 4,
+          "trucks": 4
+        },
+        "objects": [
+          "trucks",
+          "pigs",
+          "cows"
+        ],
+        "relations": [
+          "four wooden trucks behind four glass pigs"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "object_presence",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Depict exactly four trucks, exactly four pigs, and exactly six cows.",
+        "Bind attributes correctly: all trucks are wooden, all pigs are glass, all cows are white.",
+        "Place the four wooden trucks behind the four glass pigs.",
+        "Keep all fourteen animals/vehicles fully visible and separated enough to count; avoid overlap or occlusion.",
+        "Do not add extra trucks, pigs, cows, or other prominent objects."
+      ],
+      "generation_strategy": "Use a clear multi-object composition with countable separated groups: four glass pigs in a front row, four wooden trucks aligned behind them, and six white cows in a separate visible group. Emphasize attribute binding and visibility for accurate counting.",
+      "initial_prompt": "Create a clear image with exactly four wooden trucks behind exactly four glass pigs, and exactly six white cows. Arrange the four glass pigs in a visible front row, with the four wooden trucks clearly positioned behind the pigs. Place the six white cows as a separate clearly visible group. Keep every truck, pig, and cow fully visible, separated, and easy to count, with no occlusion. Do not include any extra trucks, pigs, cows, or other prominent objects.",
+      "parsed_constraints": {
+        "attributes": {
+          "cows": "white",
+          "pigs": "glass",
+          "trucks": "wooden"
+        },
+        "counts": {
+          "cows": 6,
+          "pigs": 4,
+          "trucks": 4
+        },
+        "objects": [
+          "trucks",
+          "pigs",
+          "cows"
+        ],
+        "relations": [
+          "four wooden trucks behind four glass pigs"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "object_presence",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ]
+    },
+    "previous_prompt": "Create a clear image with exactly four wooden trucks behind exactly four glass pigs, and exactly six white cows. Arrange the four glass pigs in a visible front row, with the four wooden trucks clearly positioned behind the pigs. Place the six white cows as a separate clearly visible group. Keep every truck, pig, and cow fully visible, separated, and easy to count, with no occlusion. Do not include any extra trucks, pigs, cows, or other prominent objects.",
+    "previous_selected_skills": [
+      "quantity_counting",
+      "attribute_binding",
+      "object_presence",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility",
+      "negative_constraints"
+    ],
+    "prompt_id": "geneval2_00784_41a44b6a",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "color_mismatch",
+          "count_mismatch",
+          "missing_object"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many pigs are in the image?",
+              "score": 1.4760345971114726e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.47603e-09",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many pigs are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the pigs glass?",
+              "score": 9.096657904543448e-08,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=9.09666e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the pigs glass?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cows are in the image?",
+              "score": 3.576257111415972e-11,
+              "skill": "count"
+            },
+            "detected": "soft_score=3.57626e-11",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many cows are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows white?",
+              "score": 0.008700022576022093,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.00870002",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cows white?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any cows in the image?",
+              "score": 1.0614841587305857e-08,
+              "skill": "object"
+            },
+            "detected": "soft_score=1.06148e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are there any cows in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many trucks are in the image?",
+              "score": 1.0,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "four",
+            "status": "passed",
+            "target": "How many trucks are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the trucks wooden?",
+              "score": 0.9889930434219423,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.988993",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the trucks wooden?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any trucks in the image?",
+              "score": 0.9999999564697646,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any trucks in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the trucks behind the pigs?",
+              "score": 0.9999996164167442,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the trucks behind the pigs?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any pigs in the image?",
+              "score": 0.9999999947613105,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any pigs in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly four trucks, exactly four pigs, and exactly six cows.",
+            "Bind attributes correctly: all trucks are wooden, all pigs are glass, all cows are white.",
+            "Place the four wooden trucks behind the four glass pigs.",
+            "Keep all fourteen animals/vehicles fully visible and separated enough to count; avoid overlap or occlusion.",
+            "Do not add extra trucks, pigs, cows, or other prominent objects."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with countable separated groups: four glass pigs in a front row, four wooden trucks aligned behind them, and six white cows in a separate visible group. Emphasize attribute binding and visibility for accurate counting.",
+          "initial_prompt": "Create a clear image with exactly four wooden trucks behind exactly four glass pigs, and exactly six white cows. Arrange the four glass pigs in a visible front row, with the four wooden trucks clearly positioned behind the pigs. Place the six white cows as a separate clearly visible group. Keep every truck, pig, and cow fully visible, separated, and easy to count, with no occlusion. Do not include any extra trucks, pigs, cows, or other prominent objects.",
+          "parsed_constraints": {
+            "attributes": {
+              "cows": "white",
+              "pigs": "glass",
+              "trucks": "wooden"
+            },
+            "counts": {
+              "cows": 6,
+              "pigs": 4,
+              "trucks": 4
+            },
+            "objects": [
+              "trucks",
+              "pigs",
+              "cows"
+            ],
+            "relations": [
+              "four wooden trucks behind four glass pigs"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "attribute_binding",
+            "object_presence",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly four trucks, exactly four pigs, and exactly six cows.",
+            "Bind attributes correctly: all trucks are wooden, all pigs are glass, all cows are white.",
+            "Place the four wooden trucks behind the four glass pigs.",
+            "Keep all fourteen animals/vehicles fully visible and separated enough to count; avoid overlap or occlusion.",
+            "Do not add extra trucks, pigs, cows, or other prominent objects."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with countable separated groups: four glass pigs in a front row, four wooden trucks aligned behind them, and six white cows in a separate visible group. Emphasize attribute binding and visibility for accurate counting.",
+          "initial_prompt": "Create a clear image with exactly four wooden trucks behind exactly four glass pigs, and exactly six white cows. Arrange the four glass pigs in a visible front row, with the four wooden trucks clearly positioned behind the pigs. Place the six white cows as a separate clearly visible group. Keep every truck, pig, and cow fully visible, separated, and easy to count, with no occlusion. Do not include any extra trucks, pigs, cows, or other prominent objects.",
+          "parsed_constraints": {
+            "attributes": {
+              "cows": "white",
+              "pigs": "glass",
+              "trucks": "wooden"
+            },
+            "counts": {
+              "cows": 6,
+              "pigs": 4,
+              "trucks": 4
+            },
+            "objects": [
+              "trucks",
+              "pigs",
+              "cows"
+            ],
+            "relations": [
+              "four wooden trucks behind four glass pigs"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "attribute_binding",
+            "object_presence",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility",
+            "negative_constraints"
+          ]
+        },
+        "prompt_used": "Create a clear image with exactly four wooden trucks behind exactly four glass pigs, and exactly six white cows. Arrange the four glass pigs in a visible front row, with the four wooden trucks clearly positioned behind the pigs. Place the six white cows as a separate clearly visible group. Keep every truck, pig, and cow fully visible, separated, and easy to count, with no occlusion. Do not include any extra trucks, pigs, cows, or other prominent objects.",
+        "round": 0,
+        "score": 0.49976927367390017,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many pigs are in the image?",
+                "score": 1.4760345971114726e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.47603e-09",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many pigs are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the pigs glass?",
+                "score": 9.096657904543448e-08,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=9.09666e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the pigs glass?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cows are in the image?",
+                "score": 3.576257111415972e-11,
+                "skill": "count"
+              },
+              "detected": "soft_score=3.57626e-11",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many cows are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows white?",
+                "score": 0.008700022576022093,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.00870002",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cows white?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any cows in the image?",
+                "score": 1.0614841587305857e-08,
+                "skill": "object"
+              },
+              "detected": "soft_score=1.06148e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are there any cows in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00784_41a44b6a"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many pigs are in the image?",
+          "score": 1.4760345971114726e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.47603e-09",
+        "expected": "four",
+        "status": "failed",
+        "target": "How many pigs are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the pigs glass?",
+          "score": 9.096657904543448e-08,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=9.09666e-08",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the pigs glass?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cows are in the image?",
+          "score": 3.576257111415972e-11,
+          "skill": "count"
+        },
+        "detected": "soft_score=3.57626e-11",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many cows are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the cows white?",
+          "score": 0.008700022576022093,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.00870002",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the cows white?",
+        "type": "color_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 9,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any cows in the image?",
+          "score": 1.0614841587305857e-08,
+          "skill": "object"
+        },
+        "detected": "soft_score=1.06148e-08",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are there any cows in the image?",
+        "type": "missing_object"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00096/samples/00003.png",
+    "best_so_far_prompt": "Create a clear image with exactly four wooden trucks behind exactly four glass pigs, and exactly six white cows. Arrange the four glass pigs in a visible front row, with the four wooden trucks clearly positioned behind the pigs. Place the six white cows as a separate clearly visible group. Keep every truck, pig, and cow fully visible, separated, and easy to count, with no occlusion. Do not include any extra trucks, pigs, cows, or other prominent objects.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.49976927367390017,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many pigs are in the image?",
+          "score": 1.4760345971114726e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.47603e-09",
+        "expected": "four",
+        "status": "failed",
+        "target": "How many pigs are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the pigs glass?",
+          "score": 9.096657904543448e-08,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=9.09666e-08",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the pigs glass?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cows are in the image?",
+          "score": 3.576257111415972e-11,
+          "skill": "count"
+        },
+        "detected": "soft_score=3.57626e-11",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many cows are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the cows white?",
+          "score": 0.008700022576022093,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.00870002",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the cows white?",
+        "type": "color_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 9,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are there any cows in the image?",
+          "score": 1.0614841587305857e-08,
+          "skill": "object"
+        },
+        "detected": "soft_score=1.06148e-08",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are there any cows in the image?",
+        "type": "missing_object"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Depict exactly four trucks, exactly four pigs, and exactly six cows.",
+        "Bind attributes correctly: all trucks are wooden, all pigs are glass, all cows are white.",
+        "Place the four wooden trucks behind the four glass pigs.",
+        "Keep all fourteen animals/vehicles fully visible and separated enough to count; avoid overlap or occlusion.",
+        "Do not add extra trucks, pigs, cows, or other prominent objects."
+      ],
+      "generation_strategy": "Use a clear multi-object composition with countable separated groups: four glass pigs in a front row, four wooden trucks aligned behind them, and six white cows in a separate visible group. Emphasize attribute binding and visibility for accurate counting.",
+      "initial_prompt": "Create a clear image with exactly four wooden trucks behind exactly four glass pigs, and exactly six white cows. Arrange the four glass pigs in a visible front row, with the four wooden trucks clearly positioned behind the pigs. Place the six white cows as a separate clearly visible group. Keep every truck, pig, and cow fully visible, separated, and easy to count, with no occlusion. Do not include any extra trucks, pigs, cows, or other prominent objects.",
+      "parsed_constraints": {
+        "attributes": {
+          "cows": "white",
+          "pigs": "glass",
+          "trucks": "wooden"
+        },
+        "counts": {
+          "cows": 6,
+          "pigs": 4,
+          "trucks": 4
+        },
+        "objects": [
+          "trucks",
+          "pigs",
+          "cows"
+        ],
+        "relations": [
+          "four wooden trucks behind four glass pigs"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "object_presence",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.500 failed=['How many pigs are in the image?', 'Are the pigs glass?', 'How many cows are in the image?', 'Are the cows white?', 'Are there any cows in the image?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_error_retry_001_worker_01/geneval2_00784_41a44b6a__geneval2_00784_41a44b6a_cand_03__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00784_41a44b6a__geneval2_00784_41a44b6a_cand_03__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00784_41a44b6a",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The previous prompt preserved the truck count and truck-behind-pigs relation, but it under-specified how to keep the pigs and cows visually distinct and reliably recognizable. The phrase 'separate clearly visible group' was too weak for the six white cows, and the prompt did not force a simple countable layout for the pigs and cows. The generator likely deprioritized the cow group or merged animals, and the glass attribute on pigs was not bound strongly enough to each pig instance.",
+    "expected_improvement": [
+      "Increase cow presence by explicitly placing six white cows in a dedicated visible row.",
+      "Improve pig count and glass recognition by making four pigs large, separate, and uniformly transparent glass.",
+      "Maintain the already-correct truck count, wooden material, and behind-the-pigs relation while reducing regression risk."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "attribute_mismatch",
+      "color_mismatch",
+      "missing_object"
+    ],
+    "preserve_constraints": [
+      "Exactly four trucks are present.",
+      "All four trucks are wooden.",
+      "The four wooden trucks are behind the pigs.",
+      "Pigs are present in the image."
+    ],
+    "previous_plan_error": {
+      "details": "The prior plan relied on a generic multi-object scene with grouped objects, but did not simplify the composition enough for three categories totaling fourteen items. It failed to give the pigs and cows a rigid row structure, strong per-object attribute binding, and enough salience for the cow group.",
+      "error_source": "previous_plan"
+    },
+    "regeneration_strategy": "Switch to a stricter, grid-like composition with three clearly separated horizontal rows: four glass pigs in the front row, four wooden trucks directly behind them in the middle row, and six white cows in a third separate row. Make every instance fully visible, evenly spaced, and large enough to verify. Bind materials and colors directly to each object class and add explicit negatives against extra or merged instances.",
+    "regression_risks": [
+      "Adding six cows may cause crowding that could break truck count visibility or the behind relation.",
+      "Emphasizing glass pigs may cause the model to render pigs too faint or decorative unless visibility is explicitly required.",
+      "A busy scene may introduce extra animals or duplicate-looking instances if exact-count negatives are not explicit."
+    ],
+    "repair_constraints": [
+      "Show exactly four pigs, each a transparent glass pig, in one front row. Make the four pigs separate, fully visible, and easy to count. Do not show fewer or more than four pigs.",
+      "Show exactly six cows, all white cows, in one separate row. Make all six cows fully visible, distinct, and easy to count. Do not omit cows and do not show fewer or more than six cows.",
+      "Keep exactly four wooden trucks, fully visible, in a row directly behind the four glass pigs.",
+      "Use clear spacing between all objects so no pig, truck, or cow overlaps, merges, or hides another object.",
+      "Do not include any extra trucks, pigs, cows, or other prominent objects."
+    ],
+    "retry_prompt": "Create a simple clear scene with three separated rows of objects. In the front row, show exactly four pigs, and each pig is made of transparent glass. Make the four glass pigs large, fully visible, evenly spaced, distinct from one another, and easy to count. Directly behind the pigs, in a second row, show exactly four wooden trucks, one behind each pig. Make all four wooden trucks fully visible, evenly spaced, and clearly behind the pigs. In a third separate row, show exactly six cows, and all six cows are white. Make the six white cows fully visible, evenly spaced, distinct from one another, and easy to count. Keep every truck, pig, and cow unobstructed and not touching. Do not include extra trucks, extra pigs, extra cows, or other prominent objects.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "object_presence",
+        "spatial_layout",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "object_presence",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ],
+      "reason": "Keep the counting, attribute, presence, layout, visibility, occlusion, and negative-control skills, but drop multi_object_composition emphasis in favor of a simpler rigid row layout because the previous broader composition strategy did not reliably preserve pig and cow counts and attributes."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "four wooden trucks behind four glass pigs, and six white cows",
+    "prompt": "four wooden trucks behind four glass pigs, and six white cows",
+    "prompt_id": "geneval2_00784_41a44b6a",
+    "sampling_bucket": "high_atom_count",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 3,
+      "count": 3,
+      "object": 3,
+      "position": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 784,
+    "vqa_list": [
+      [
+        "How many trucks are in the image?",
+        "four"
+      ],
+      [
+        "Are the trucks wooden?",
+        "Yes"
+      ],
+      [
+        "Are there any trucks in the image?",
+        "Yes"
+      ],
+      [
+        "Are the trucks behind the pigs?",
+        "Yes"
+      ],
+      [
+        "How many pigs are in the image?",
+        "four"
+      ],
+      [
+        "Are the pigs glass?",
+        "Yes"
+      ],
+      [
+        "Are there any pigs in the image?",
+        "Yes"
+      ],
+      [
+        "How many cows are in the image?",
+        "six"
+      ],
+      [
+        "Are the cows white?",
+        "Yes"
+      ],
+      [
+        "Are there any cows in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00784_41a44b6a"
+}

@@ -66,11 +66,25 @@ class OfflinePlannerTest(unittest.TestCase):
                 eval_config=EvalConfig(),
             )
             out0 = result0["output_package"]
+            trajectory0 = result0["trajectory"]
             self.assertEqual(validate_retry_action_package(out0), [])
             self.assertFalse(out0["stop"]["should_stop"])
+            self.assertEqual(out0["status"], "retry_ready")
             self.assertEqual(out0["teacher_action"]["action_type"], "retry_replan")
+            self.assertEqual(out0["retry_ready_action"]["action_type"], "retry_replan")
             self.assertEqual(out0["teacher_action"]["branch_source"], "latest")
             self.assertTrue(out0["teacher_action"]["retry_prompt"])
+            self.assertIsNone(out0["memory"]["score_delta_from_previous"])
+            self.assertEqual(out0["memory"]["score_delta_from_best"], 0.0)
+            self.assertEqual(out0["memory"]["current_round"], 0)
+            self.assertEqual(out0["memory"]["previous_action"]["action_type"], "initial_plan")
+            self.assertEqual(out0["memory"]["persistent_failures"][0]["target"], "dog")
+            self.assertEqual(out0["memory"]["new_failures"], [])
+            self.assertEqual(out0["teacher_request"]["retry_round"], 1)
+            self.assertEqual(out0["teacher_request"]["previous_action"]["action_type"], "initial_plan")
+            self.assertEqual(trajectory0["status"], "retry_ready")
+            self.assertEqual(trajectory0["retry_ready_action"]["action_type"], "retry_replan")
+            self.assertEqual(trajectory0["attempts"][0]["planner_action"]["action_type"], "initial_plan")
 
             package1 = _package(
                 image_path=image1,
@@ -109,6 +123,7 @@ class OfflinePlannerTest(unittest.TestCase):
             self.assertIsNone(out1["teacher_action"])
             self.assertEqual(out1["memory"]["best_so_far_round"], 1)
             self.assertEqual(out1["memory"]["fixed_constraints"][0]["target"], "dog")
+            self.assertEqual(trajectory["attempts"][1]["planner_action"]["action_type"], "retry_replan")
             self.assertEqual(trajectory["attempts"][1]["transition"]["transition_type"], "passed_after_retry")
             self.assertEqual(validate_raw_trajectory(trajectory, base_dir=root), [])
 

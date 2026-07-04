@@ -1,0 +1,2763 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "count_mismatch",
+          "relation_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the monkeys wooden?",
+              "score": 3.950532766368309e-09,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=3.95053e-09",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the monkeys wooden?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the monkeys playing with the sheeps?",
+              "score": 5.015512485787028e-07,
+              "skill": "verb"
+            },
+            "detected": "soft_score=5.01551e-07",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the monkeys playing with the sheeps?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many sheeps are in the image?",
+              "score": 0.037348262112713256,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.0373483",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many sheeps are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many monkeys are in the image?",
+              "score": 0.9999999665714382,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "three",
+            "status": "passed",
+            "target": "How many monkeys are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any monkeys in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any monkeys in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the sheeps brown?",
+              "score": 0.9999996662372723,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the sheeps brown?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any sheeps in the image?",
+              "score": 0.9999999793799361,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any sheeps in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the sheeps behind the donut?",
+              "score": 0.9995947426123166,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.999595",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the sheeps behind the donut?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many donuts are in the image?",
+              "score": 1.0,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "one",
+            "status": "passed",
+            "target": "How many donuts are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any donuts in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any donuts in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00633_dec79ed1_cand_00",
+          "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+          "rows": [
+            {
+              "answer": "three",
+              "atom_count": 9,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00633_dec79ed1_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00015/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00015/samples/00000.png",
+              "prompt": "three wooden monkeys playing with six brown sheeps behind a donut",
+              "prompt_id": "geneval2_00633_dec79ed1",
+              "question": "How many monkeys are in the image?",
+              "score": 0.9999999665714382,
+              "skill": "count",
+              "source_index": 633
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00633_dec79ed1_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00015/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00015/samples/00000.png",
+              "prompt": "three wooden monkeys playing with six brown sheeps behind a donut",
+              "prompt_id": "geneval2_00633_dec79ed1",
+              "question": "Are the monkeys wooden?",
+              "score": 3.950532766368309e-09,
+              "skill": "attribute",
+              "source_index": 633
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00633_dec79ed1_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00015/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00015/samples/00000.png",
+              "prompt": "three wooden monkeys playing with six brown sheeps behind a donut",
+              "prompt_id": "geneval2_00633_dec79ed1",
+              "question": "Are there any monkeys in the image?",
+              "score": 1.0000000032159733,
+              "skill": "object",
+              "source_index": 633
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00633_dec79ed1_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00015/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00015/samples/00000.png",
+              "prompt": "three wooden monkeys playing with six brown sheeps behind a donut",
+              "prompt_id": "geneval2_00633_dec79ed1",
+              "question": "Are the monkeys playing with the sheeps?",
+              "score": 5.015512485787028e-07,
+              "skill": "verb",
+              "source_index": 633
+            },
+            {
+              "answer": "six",
+              "atom_count": 9,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00633_dec79ed1_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00015/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00015/samples/00000.png",
+              "prompt": "three wooden monkeys playing with six brown sheeps behind a donut",
+              "prompt_id": "geneval2_00633_dec79ed1",
+              "question": "How many sheeps are in the image?",
+              "score": 0.037348262112713256,
+              "skill": "count",
+              "source_index": 633
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00633_dec79ed1_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00015/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00015/samples/00000.png",
+              "prompt": "three wooden monkeys playing with six brown sheeps behind a donut",
+              "prompt_id": "geneval2_00633_dec79ed1",
+              "question": "Are the sheeps brown?",
+              "score": 0.9999996662372723,
+              "skill": "attribute",
+              "source_index": 633
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00633_dec79ed1_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00015/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00015/samples/00000.png",
+              "prompt": "three wooden monkeys playing with six brown sheeps behind a donut",
+              "prompt_id": "geneval2_00633_dec79ed1",
+              "question": "Are there any sheeps in the image?",
+              "score": 0.9999999793799361,
+              "skill": "object",
+              "source_index": 633
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00633_dec79ed1_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00015/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00015/samples/00000.png",
+              "prompt": "three wooden monkeys playing with six brown sheeps behind a donut",
+              "prompt_id": "geneval2_00633_dec79ed1",
+              "question": "Are the sheeps behind the donut?",
+              "score": 0.9995947426123166,
+              "skill": "position",
+              "source_index": 633
+            },
+            {
+              "answer": "one",
+              "atom_count": 9,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00633_dec79ed1_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00015/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00015/samples/00000.png",
+              "prompt": "three wooden monkeys playing with six brown sheeps behind a donut",
+              "prompt_id": "geneval2_00633_dec79ed1",
+              "question": "How many donuts are in the image?",
+              "score": 1.0000000163161926,
+              "skill": "count",
+              "source_index": 633
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00633_dec79ed1_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00015/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00015/samples/00000.png",
+              "prompt": "three wooden monkeys playing with six brown sheeps behind a donut",
+              "prompt_id": "geneval2_00633_dec79ed1",
+              "question": "Are there any donuts in the image?",
+              "score": 1.0000000064337655,
+              "skill": "object",
+              "source_index": 633
+            }
+          ],
+          "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.7036943122415458,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 0,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00633_dec79ed1.json",
+          "manifest_prompt_index": 15,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00633_dec79ed1"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00633_dec79ed1_cand_00",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00015/samples/00000.png",
+        "prompt_used": "An image with exactly one donut in the foreground. Behind the donut are exactly six separate brown sheep, all visible and countable. Exactly three wooden monkeys are playing with the six brown sheep. The three monkeys should clearly look wooden, and the six sheep should clearly be brown. Arrange the objects so the donut is in front of the sheep, while all three monkeys and all six sheep remain individually visible with minimal occlusion.",
+        "seed": 1075
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly three monkeys, exactly six sheep, and exactly one donut.",
+          "Bind the wooden material to all three monkeys only.",
+          "Bind the brown color to all six sheep only.",
+          "Place all six brown sheep behind the single donut.",
+          "Depict the three wooden monkeys playing with the six brown sheep.",
+          "Keep every monkey and every sheep individually visible and countable; avoid heavy occlusion by the donut or by other animals."
+        ],
+        "generation_strategy": "Create a clear multi-object composition with the single donut in the foreground, six separate brown sheep positioned behind it, and three separate wooden monkeys interacting playfully with the sheep. Use spacing and visibility to make the counts unambiguous while preserving the behind-the-donut relation for the sheep.",
+        "initial_prompt": "An image with exactly one donut in the foreground. Behind the donut are exactly six separate brown sheep, all visible and countable. Exactly three wooden monkeys are playing with the six brown sheep. The three monkeys should clearly look wooden, and the six sheep should clearly be brown. Arrange the objects so the donut is in front of the sheep, while all three monkeys and all six sheep remain individually visible with minimal occlusion.",
+        "parsed_constraints": {
+          "attributes": {
+            "monkeys": [
+              "wooden"
+            ],
+            "sheep": [
+              "brown"
+            ]
+          },
+          "counts": {
+            "donut": 1,
+            "monkeys": 3,
+            "sheep": 6
+          },
+          "objects": [
+            "monkeys",
+            "sheep",
+            "donut"
+          ],
+          "relations": [
+            "the three wooden monkeys are playing with the six brown sheep",
+            "the six brown sheep are behind the donut"
+          ]
+        },
+        "selected_skills": [
+          "quantity_counting",
+          "object_presence",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly three monkeys, exactly six sheep, and exactly one donut.",
+          "Bind the wooden material to all three monkeys only.",
+          "Bind the brown color to all six sheep only.",
+          "Place all six brown sheep behind the single donut.",
+          "Depict the three wooden monkeys playing with the six brown sheep.",
+          "Keep every monkey and every sheep individually visible and countable; avoid heavy occlusion by the donut or by other animals."
+        ],
+        "generation_strategy": "Create a clear multi-object composition with the single donut in the foreground, six separate brown sheep positioned behind it, and three separate wooden monkeys interacting playfully with the sheep. Use spacing and visibility to make the counts unambiguous while preserving the behind-the-donut relation for the sheep.",
+        "initial_prompt": "An image with exactly one donut in the foreground. Behind the donut are exactly six separate brown sheep, all visible and countable. Exactly three wooden monkeys are playing with the six brown sheep. The three monkeys should clearly look wooden, and the six sheep should clearly be brown. Arrange the objects so the donut is in front of the sheep, while all three monkeys and all six sheep remain individually visible with minimal occlusion.",
+        "parsed_constraints": {
+          "attributes": {
+            "monkeys": [
+              "wooden"
+            ],
+            "sheep": [
+              "brown"
+            ]
+          },
+          "counts": {
+            "donut": 1,
+            "monkeys": 3,
+            "sheep": 6
+          },
+          "objects": [
+            "monkeys",
+            "sheep",
+            "donut"
+          ],
+          "relations": [
+            "the three wooden monkeys are playing with the six brown sheep",
+            "the six brown sheep are behind the donut"
+          ]
+        },
+        "selected_skills": [
+          "quantity_counting",
+          "object_presence",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the monkeys wooden?",
+                "score": 3.950532766368309e-09,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=3.95053e-09",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the monkeys wooden?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the monkeys playing with the sheeps?",
+                "score": 5.015512485787028e-07,
+                "skill": "verb"
+              },
+              "detected": "soft_score=5.01551e-07",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the monkeys playing with the sheeps?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many sheeps are in the image?",
+                "score": 0.037348262112713256,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.0373483",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many sheeps are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00015/samples/00000.png",
+          "prompt": "An image with exactly one donut in the foreground. Behind the donut are exactly six separate brown sheep, all visible and countable. Exactly three wooden monkeys are playing with the six brown sheep. The three monkeys should clearly look wooden, and the six sheep should clearly be brown. Arrange the objects so the donut is in front of the sheep, while all three monkeys and all six sheep remain individually visible with minimal occlusion.",
+          "round": 0,
+          "score": 0.7036943122415458
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00633_dec79ed1_cand_00",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "attribute_mismatch",
+            "count_mismatch",
+            "relation_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the monkeys wooden?",
+                "score": 3.950532766368309e-09,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=3.95053e-09",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the monkeys wooden?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the monkeys playing with the sheeps?",
+                "score": 5.015512485787028e-07,
+                "skill": "verb"
+              },
+              "detected": "soft_score=5.01551e-07",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the monkeys playing with the sheeps?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many sheeps are in the image?",
+                "score": 0.037348262112713256,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.0373483",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many sheeps are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many monkeys are in the image?",
+                "score": 0.9999999665714382,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "three",
+              "status": "passed",
+              "target": "How many monkeys are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any monkeys in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any monkeys in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the sheeps brown?",
+                "score": 0.9999996662372723,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the sheeps brown?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any sheeps in the image?",
+                "score": 0.9999999793799361,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any sheeps in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the sheeps behind the donut?",
+                "score": 0.9995947426123166,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.999595",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the sheeps behind the donut?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many donuts are in the image?",
+                "score": 1.0,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "one",
+              "status": "passed",
+              "target": "How many donuts are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any donuts in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any donuts in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.7036943122415458,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the monkeys wooden?",
+                  "score": 3.950532766368309e-09,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=3.95053e-09",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the monkeys wooden?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the monkeys playing with the sheeps?",
+                  "score": 5.015512485787028e-07,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=5.01551e-07",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the monkeys playing with the sheeps?",
+                "type": "relation_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many sheeps are in the image?",
+                  "score": 0.037348262112713256,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.0373483",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many sheeps are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00015/samples/00000.png",
+            "prompt": "An image with exactly one donut in the foreground. Behind the donut are exactly six separate brown sheep, all visible and countable. Exactly three wooden monkeys are playing with the six brown sheep. The three monkeys should clearly look wooden, and the six sheep should clearly be brown. Arrange the objects so the donut is in front of the sheep, while all three monkeys and all six sheep remain individually visible with minimal occlusion.",
+            "round": 0,
+            "score": 0.7036943122415458
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the monkeys wooden?",
+                "score": 3.950532766368309e-09,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=3.95053e-09",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the monkeys wooden?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the monkeys playing with the sheeps?",
+                "score": 5.015512485787028e-07,
+                "skill": "verb"
+              },
+              "detected": "soft_score=5.01551e-07",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the monkeys playing with the sheeps?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many sheeps are in the image?",
+                "score": 0.037348262112713256,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.0373483",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many sheeps are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "attribute_mismatch",
+            "count_mismatch",
+            "relation_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the monkeys wooden?",
+                "score": 3.950532766368309e-09,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=3.95053e-09",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the monkeys wooden?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the monkeys playing with the sheeps?",
+                "score": 5.015512485787028e-07,
+                "skill": "verb"
+              },
+              "detected": "soft_score=5.01551e-07",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the monkeys playing with the sheeps?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many sheeps are in the image?",
+                "score": 0.037348262112713256,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.0373483",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many sheeps are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many monkeys are in the image?",
+                "score": 0.9999999665714382,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "three",
+              "status": "passed",
+              "target": "How many monkeys are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any monkeys in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any monkeys in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the sheeps brown?",
+                "score": 0.9999996662372723,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the sheeps brown?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any sheeps in the image?",
+                "score": 0.9999999793799361,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any sheeps in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the sheeps behind the donut?",
+                "score": 0.9995947426123166,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.999595",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the sheeps behind the donut?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many donuts are in the image?",
+                "score": 1.0,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "one",
+              "status": "passed",
+              "target": "How many donuts are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any donuts in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any donuts in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.7036943122415458,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "three wooden monkeys playing with six brown sheeps behind a donut",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the monkeys wooden?",
+              "score": 3.950532766368309e-09,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=3.95053e-09",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the monkeys wooden?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the monkeys playing with the sheeps?",
+              "score": 5.015512485787028e-07,
+              "skill": "verb"
+            },
+            "detected": "soft_score=5.01551e-07",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the monkeys playing with the sheeps?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many sheeps are in the image?",
+              "score": 0.037348262112713256,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.0373483",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many sheeps are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly three monkeys, exactly six sheep, and exactly one donut.",
+            "Bind the wooden material to all three monkeys only.",
+            "Bind the brown color to all six sheep only.",
+            "Place all six brown sheep behind the single donut.",
+            "Depict the three wooden monkeys playing with the six brown sheep.",
+            "Keep every monkey and every sheep individually visible and countable; avoid heavy occlusion by the donut or by other animals."
+          ],
+          "generation_strategy": "Create a clear multi-object composition with the single donut in the foreground, six separate brown sheep positioned behind it, and three separate wooden monkeys interacting playfully with the sheep. Use spacing and visibility to make the counts unambiguous while preserving the behind-the-donut relation for the sheep.",
+          "initial_prompt": "An image with exactly one donut in the foreground. Behind the donut are exactly six separate brown sheep, all visible and countable. Exactly three wooden monkeys are playing with the six brown sheep. The three monkeys should clearly look wooden, and the six sheep should clearly be brown. Arrange the objects so the donut is in front of the sheep, while all three monkeys and all six sheep remain individually visible with minimal occlusion.",
+          "parsed_constraints": {
+            "attributes": {
+              "monkeys": [
+                "wooden"
+              ],
+              "sheep": [
+                "brown"
+              ]
+            },
+            "counts": {
+              "donut": 1,
+              "monkeys": 3,
+              "sheep": 6
+            },
+            "objects": [
+              "monkeys",
+              "sheep",
+              "donut"
+            ],
+            "relations": [
+              "the three wooden monkeys are playing with the six brown sheep",
+              "the six brown sheep are behind the donut"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "object_presence",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly three monkeys, exactly six sheep, and exactly one donut.",
+            "Bind the wooden material to all three monkeys only.",
+            "Bind the brown color to all six sheep only.",
+            "Place all six brown sheep behind the single donut.",
+            "Depict the three wooden monkeys playing with the six brown sheep.",
+            "Keep every monkey and every sheep individually visible and countable; avoid heavy occlusion by the donut or by other animals."
+          ],
+          "generation_strategy": "Create a clear multi-object composition with the single donut in the foreground, six separate brown sheep positioned behind it, and three separate wooden monkeys interacting playfully with the sheep. Use spacing and visibility to make the counts unambiguous while preserving the behind-the-donut relation for the sheep.",
+          "initial_prompt": "An image with exactly one donut in the foreground. Behind the donut are exactly six separate brown sheep, all visible and countable. Exactly three wooden monkeys are playing with the six brown sheep. The three monkeys should clearly look wooden, and the six sheep should clearly be brown. Arrange the objects so the donut is in front of the sheep, while all three monkeys and all six sheep remain individually visible with minimal occlusion.",
+          "parsed_constraints": {
+            "attributes": {
+              "monkeys": [
+                "wooden"
+              ],
+              "sheep": [
+                "brown"
+              ]
+            },
+            "counts": {
+              "donut": 1,
+              "monkeys": 3,
+              "sheep": 6
+            },
+            "objects": [
+              "monkeys",
+              "sheep",
+              "donut"
+            ],
+            "relations": [
+              "the three wooden monkeys are playing with the six brown sheep",
+              "the six brown sheep are behind the donut"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "object_presence",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility"
+          ]
+        },
+        "previous_prompt": "An image with exactly one donut in the foreground. Behind the donut are exactly six separate brown sheep, all visible and countable. Exactly three wooden monkeys are playing with the six brown sheep. The three monkeys should clearly look wooden, and the six sheep should clearly be brown. Arrange the objects so the donut is in front of the sheep, while all three monkeys and all six sheep remain individually visible with minimal occlusion.",
+        "previous_selected_skills": [
+          "quantity_counting",
+          "object_presence",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "anti_occlusion",
+          "clarity_visibility"
+        ],
+        "prompt_id": "geneval2_00633_dec79ed1",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "attribute_mismatch",
+              "count_mismatch",
+              "relation_mismatch"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the monkeys wooden?",
+                  "score": 3.950532766368309e-09,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=3.95053e-09",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the monkeys wooden?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the monkeys playing with the sheeps?",
+                  "score": 5.015512485787028e-07,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=5.01551e-07",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the monkeys playing with the sheeps?",
+                "type": "relation_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many sheeps are in the image?",
+                  "score": 0.037348262112713256,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.0373483",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many sheeps are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many monkeys are in the image?",
+                  "score": 0.9999999665714382,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1",
+                "expected": "three",
+                "status": "passed",
+                "target": "How many monkeys are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any monkeys in the image?",
+                  "score": 1.0,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any monkeys in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the sheeps brown?",
+                  "score": 0.9999996662372723,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the sheeps brown?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any sheeps in the image?",
+                  "score": 0.9999999793799361,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any sheeps in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the sheeps behind the donut?",
+                  "score": 0.9995947426123166,
+                  "skill": "position"
+                },
+                "detected": "soft_score=0.999595",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the sheeps behind the donut?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many donuts are in the image?",
+                  "score": 1.0,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1",
+                "expected": "one",
+                "status": "passed",
+                "target": "How many donuts are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any donuts in the image?",
+                  "score": 1.0,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any donuts in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly three monkeys, exactly six sheep, and exactly one donut.",
+                "Bind the wooden material to all three monkeys only.",
+                "Bind the brown color to all six sheep only.",
+                "Place all six brown sheep behind the single donut.",
+                "Depict the three wooden monkeys playing with the six brown sheep.",
+                "Keep every monkey and every sheep individually visible and countable; avoid heavy occlusion by the donut or by other animals."
+              ],
+              "generation_strategy": "Create a clear multi-object composition with the single donut in the foreground, six separate brown sheep positioned behind it, and three separate wooden monkeys interacting playfully with the sheep. Use spacing and visibility to make the counts unambiguous while preserving the behind-the-donut relation for the sheep.",
+              "initial_prompt": "An image with exactly one donut in the foreground. Behind the donut are exactly six separate brown sheep, all visible and countable. Exactly three wooden monkeys are playing with the six brown sheep. The three monkeys should clearly look wooden, and the six sheep should clearly be brown. Arrange the objects so the donut is in front of the sheep, while all three monkeys and all six sheep remain individually visible with minimal occlusion.",
+              "parsed_constraints": {
+                "attributes": {
+                  "monkeys": [
+                    "wooden"
+                  ],
+                  "sheep": [
+                    "brown"
+                  ]
+                },
+                "counts": {
+                  "donut": 1,
+                  "monkeys": 3,
+                  "sheep": 6
+                },
+                "objects": [
+                  "monkeys",
+                  "sheep",
+                  "donut"
+                ],
+                "relations": [
+                  "the three wooden monkeys are playing with the six brown sheep",
+                  "the six brown sheep are behind the donut"
+                ]
+              },
+              "selected_skills": [
+                "quantity_counting",
+                "object_presence",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "anti_occlusion",
+                "clarity_visibility"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly three monkeys, exactly six sheep, and exactly one donut.",
+                "Bind the wooden material to all three monkeys only.",
+                "Bind the brown color to all six sheep only.",
+                "Place all six brown sheep behind the single donut.",
+                "Depict the three wooden monkeys playing with the six brown sheep.",
+                "Keep every monkey and every sheep individually visible and countable; avoid heavy occlusion by the donut or by other animals."
+              ],
+              "generation_strategy": "Create a clear multi-object composition with the single donut in the foreground, six separate brown sheep positioned behind it, and three separate wooden monkeys interacting playfully with the sheep. Use spacing and visibility to make the counts unambiguous while preserving the behind-the-donut relation for the sheep.",
+              "initial_prompt": "An image with exactly one donut in the foreground. Behind the donut are exactly six separate brown sheep, all visible and countable. Exactly three wooden monkeys are playing with the six brown sheep. The three monkeys should clearly look wooden, and the six sheep should clearly be brown. Arrange the objects so the donut is in front of the sheep, while all three monkeys and all six sheep remain individually visible with minimal occlusion.",
+              "parsed_constraints": {
+                "attributes": {
+                  "monkeys": [
+                    "wooden"
+                  ],
+                  "sheep": [
+                    "brown"
+                  ]
+                },
+                "counts": {
+                  "donut": 1,
+                  "monkeys": 3,
+                  "sheep": 6
+                },
+                "objects": [
+                  "monkeys",
+                  "sheep",
+                  "donut"
+                ],
+                "relations": [
+                  "the three wooden monkeys are playing with the six brown sheep",
+                  "the six brown sheep are behind the donut"
+                ]
+              },
+              "selected_skills": [
+                "quantity_counting",
+                "object_presence",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "anti_occlusion",
+                "clarity_visibility"
+              ]
+            },
+            "prompt_used": "An image with exactly one donut in the foreground. Behind the donut are exactly six separate brown sheep, all visible and countable. Exactly three wooden monkeys are playing with the six brown sheep. The three monkeys should clearly look wooden, and the six sheep should clearly be brown. Arrange the objects so the donut is in front of the sheep, while all three monkeys and all six sheep remain individually visible with minimal occlusion.",
+            "round": 0,
+            "score": 0.7036943122415458,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 1,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the monkeys wooden?",
+                    "score": 3.950532766368309e-09,
+                    "skill": "attribute"
+                  },
+                  "detected": "soft_score=3.95053e-09",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the monkeys wooden?",
+                  "type": "attribute_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 3,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the monkeys playing with the sheeps?",
+                    "score": 5.015512485787028e-07,
+                    "skill": "verb"
+                  },
+                  "detected": "soft_score=5.01551e-07",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the monkeys playing with the sheeps?",
+                  "type": "relation_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 4,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many sheeps are in the image?",
+                    "score": 0.037348262112713256,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=0.0373483",
+                  "expected": "six",
+                  "status": "failed",
+                  "target": "How many sheeps are in the image?",
+                  "type": "count_mismatch"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00633_dec79ed1"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the monkeys wooden?",
+              "score": 3.950532766368309e-09,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=3.95053e-09",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the monkeys wooden?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the monkeys playing with the sheeps?",
+              "score": 5.015512485787028e-07,
+              "skill": "verb"
+            },
+            "detected": "soft_score=5.01551e-07",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the monkeys playing with the sheeps?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many sheeps are in the image?",
+              "score": 0.037348262112713256,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.0373483",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many sheeps are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00633_dec79ed1_cand_00",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly three monkeys, exactly six sheep, and exactly one donut.",
+      "Bind the wooden material to all three monkeys only.",
+      "Bind the brown color to all six sheep only.",
+      "Place all six brown sheep behind the single donut.",
+      "Depict the three wooden monkeys playing with the six brown sheep.",
+      "Keep every monkey and every sheep individually visible and countable; avoid heavy occlusion by the donut or by other animals."
+    ],
+    "generation_strategy": "Create a clear multi-object composition with the single donut in the foreground, six separate brown sheep positioned behind it, and three separate wooden monkeys interacting playfully with the sheep. Use spacing and visibility to make the counts unambiguous while preserving the behind-the-donut relation for the sheep.",
+    "initial_prompt": "An image with exactly one donut in the foreground. Behind the donut are exactly six separate brown sheep, all visible and countable. Exactly three wooden monkeys are playing with the six brown sheep. The three monkeys should clearly look wooden, and the six sheep should clearly be brown. Arrange the objects so the donut is in front of the sheep, while all three monkeys and all six sheep remain individually visible with minimal occlusion.",
+    "parsed_constraints": {
+      "attributes": {
+        "monkeys": [
+          "wooden"
+        ],
+        "sheep": [
+          "brown"
+        ]
+      },
+      "counts": {
+        "donut": 1,
+        "monkeys": 3,
+        "sheep": 6
+      },
+      "objects": [
+        "monkeys",
+        "sheep",
+        "donut"
+      ],
+      "relations": [
+        "the three wooden monkeys are playing with the six brown sheep",
+        "the six brown sheep are behind the donut"
+      ]
+    },
+    "selected_skills": [
+      "quantity_counting",
+      "object_presence",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image passed the presence and count of three monkeys, presence and brown color of sheep, one donut, and the sheep-behind-donut spatial relation, but failed to show the monkeys as wooden, failed to make the monkeys visibly playing with the sheep, and failed the exact count of six sheep. The next prompt must make the monkeys unmistakably carved wood, make the sheep count simple and separable, and make the play relation visually direct between the monkeys and sheep.",
+    "expected_improvement": [
+      "Wooden material will be bound directly to each of the three monkeys with visible carved wood texture and grain.",
+      "Exactly six sheep will be arranged as six separate, fully visible brown sheep with no merged bodies or extra sheep.",
+      "The monkeys will be placed among and facing the sheep so the playing-with relation is visually clear.",
+      "Previously passed constraints will be preserved: exactly three monkeys, exactly one donut, brown sheep, sheep behind the donut, and all required objects visible."
+    ],
+    "failure_types": [
+      "attribute_mismatch",
+      "relation_mismatch",
+      "count_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly three monkeys visible.",
+      "Keep exactly one donut visible in the foreground.",
+      "Keep all sheep brown.",
+      "Keep the sheep behind the donut.",
+      "Keep monkeys, sheep, and donut present and clearly visible."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt stated wooden monkeys and six sheep, but did not force a strongly recognizable carved-wood appearance or a simple countable sheep layout. It also described playing abstractly without specifying a clear visual interaction between the monkeys and sheep.",
+      "error_source": "Insufficient attribute binding for wooden monkeys, insufficient quantity-counting structure for six sheep, and vague relation depiction for playing with the sheep."
+    },
+    "regeneration_strategy": "Use a simple staged composition: one donut in the foreground, exactly six separate brown sheep in a clear two-row group behind it, and exactly three carved wooden monkeys positioned close to and facing the sheep so they are visibly playing together. Add strict negative constraints against extra sheep, extra monkeys, and extra donuts, and emphasize unobstructed visibility.",
+    "regression_risks": [
+      "The donut in the foreground could occlude sheep and make the six-sheep count fail.",
+      "The generator could render ordinary living monkeys instead of wooden monkeys.",
+      "The generator could add extra sheep while filling the background.",
+      "The monkeys could appear near the sheep but not clearly playing with them."
+    ],
+    "repair_constraints": [
+      "Show exactly six brown sheep, each separate and fully visible, arranged behind the donut; no extra sheep and no merged sheep.",
+      "Show exactly three monkeys as carved wooden monkeys with visible wood grain and solid wooden texture; no ordinary fur-covered monkeys.",
+      "Make the three wooden monkeys visibly playing with the six brown sheep by placing the monkeys among or next to the sheep, facing the sheep, with clear playful interaction between them.",
+      "Keep the single donut in front of the sheep while not hiding the six sheep."
+    ],
+    "retry_prompt": "A clear scene with exactly one donut in the foreground. Behind the donut are exactly six separate brown sheep, arranged in two neat rows of three so all six sheep are fully visible and countable; no extra sheep and no merged sheep. Exactly three monkeys are also visible, and each monkey is unmistakably a carved wooden monkey with visible wood grain and a solid wooden surface, not a fur-covered animal. The three wooden monkeys are visibly playing with the six brown sheep: place the monkeys close to the sheep, facing the sheep, with clear playful interaction between the monkeys and the sheep. Keep the six brown sheep behind the single donut, but make sure the donut does not block the sheep. Show only one donut, exactly three wooden monkeys, and exactly six brown sheep, all distinct and unobstructed.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility"
+      ],
+      "reason": "Add negative_constraints to prevent extra or merged sheep and ordinary non-wooden monkeys, while strengthening quantity_counting, attribute_binding, and spatial_layout for the persistent failures."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the monkeys wooden?",
+            "score": 3.950532766368309e-09,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=3.95053e-09",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the monkeys wooden?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the monkeys playing with the sheeps?",
+            "score": 5.015512485787028e-07,
+            "skill": "verb"
+          },
+          "detected": "soft_score=5.01551e-07",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the monkeys playing with the sheeps?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many sheeps are in the image?",
+            "score": 0.037348262112713256,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.0373483",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many sheeps are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00015/samples/00000.png",
+      "prompt": "An image with exactly one donut in the foreground. Behind the donut are exactly six separate brown sheep, all visible and countable. Exactly three wooden monkeys are playing with the six brown sheep. The three monkeys should clearly look wooden, and the six sheep should clearly be brown. Arrange the objects so the donut is in front of the sheep, while all three monkeys and all six sheep remain individually visible with minimal occlusion.",
+      "round": 0,
+      "score": 0.7036943122415458
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00633_dec79ed1_cand_00",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "count_mismatch",
+        "relation_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the monkeys wooden?",
+            "score": 3.950532766368309e-09,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=3.95053e-09",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the monkeys wooden?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the monkeys playing with the sheeps?",
+            "score": 5.015512485787028e-07,
+            "skill": "verb"
+          },
+          "detected": "soft_score=5.01551e-07",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the monkeys playing with the sheeps?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many sheeps are in the image?",
+            "score": 0.037348262112713256,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.0373483",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many sheeps are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many monkeys are in the image?",
+            "score": 0.9999999665714382,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "three",
+          "status": "passed",
+          "target": "How many monkeys are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any monkeys in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any monkeys in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the sheeps brown?",
+            "score": 0.9999996662372723,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the sheeps brown?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any sheeps in the image?",
+            "score": 0.9999999793799361,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any sheeps in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the sheeps behind the donut?",
+            "score": 0.9995947426123166,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.999595",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the sheeps behind the donut?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many donuts are in the image?",
+            "score": 1.0,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "one",
+          "status": "passed",
+          "target": "How many donuts are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any donuts in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any donuts in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.7036943122415458,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the monkeys wooden?",
+              "score": 3.950532766368309e-09,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=3.95053e-09",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the monkeys wooden?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the monkeys playing with the sheeps?",
+              "score": 5.015512485787028e-07,
+              "skill": "verb"
+            },
+            "detected": "soft_score=5.01551e-07",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the monkeys playing with the sheeps?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many sheeps are in the image?",
+              "score": 0.037348262112713256,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.0373483",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many sheeps are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00015/samples/00000.png",
+        "prompt": "An image with exactly one donut in the foreground. Behind the donut are exactly six separate brown sheep, all visible and countable. Exactly three wooden monkeys are playing with the six brown sheep. The three monkeys should clearly look wooden, and the six sheep should clearly be brown. Arrange the objects so the donut is in front of the sheep, while all three monkeys and all six sheep remain individually visible with minimal occlusion.",
+        "round": 0,
+        "score": 0.7036943122415458
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the monkeys wooden?",
+            "score": 3.950532766368309e-09,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=3.95053e-09",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the monkeys wooden?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the monkeys playing with the sheeps?",
+            "score": 5.015512485787028e-07,
+            "skill": "verb"
+          },
+          "detected": "soft_score=5.01551e-07",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the monkeys playing with the sheeps?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many sheeps are in the image?",
+            "score": 0.037348262112713256,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.0373483",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many sheeps are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "count_mismatch",
+        "relation_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the monkeys wooden?",
+            "score": 3.950532766368309e-09,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=3.95053e-09",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the monkeys wooden?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the monkeys playing with the sheeps?",
+            "score": 5.015512485787028e-07,
+            "skill": "verb"
+          },
+          "detected": "soft_score=5.01551e-07",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the monkeys playing with the sheeps?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many sheeps are in the image?",
+            "score": 0.037348262112713256,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.0373483",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many sheeps are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many monkeys are in the image?",
+            "score": 0.9999999665714382,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "three",
+          "status": "passed",
+          "target": "How many monkeys are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any monkeys in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any monkeys in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the sheeps brown?",
+            "score": 0.9999996662372723,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the sheeps brown?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any sheeps in the image?",
+            "score": 0.9999999793799361,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any sheeps in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the sheeps behind the donut?",
+            "score": 0.9995947426123166,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.999595",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the sheeps behind the donut?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many donuts are in the image?",
+            "score": 1.0,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "one",
+          "status": "passed",
+          "target": "How many donuts are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any donuts in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any donuts in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.7036943122415458,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "three wooden monkeys playing with six brown sheeps behind a donut",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the monkeys wooden?",
+          "score": 3.950532766368309e-09,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=3.95053e-09",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the monkeys wooden?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the monkeys playing with the sheeps?",
+          "score": 5.015512485787028e-07,
+          "skill": "verb"
+        },
+        "detected": "soft_score=5.01551e-07",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the monkeys playing with the sheeps?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many sheeps are in the image?",
+          "score": 0.037348262112713256,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.0373483",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many sheeps are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly three monkeys, exactly six sheep, and exactly one donut.",
+        "Bind the wooden material to all three monkeys only.",
+        "Bind the brown color to all six sheep only.",
+        "Place all six brown sheep behind the single donut.",
+        "Depict the three wooden monkeys playing with the six brown sheep.",
+        "Keep every monkey and every sheep individually visible and countable; avoid heavy occlusion by the donut or by other animals."
+      ],
+      "generation_strategy": "Create a clear multi-object composition with the single donut in the foreground, six separate brown sheep positioned behind it, and three separate wooden monkeys interacting playfully with the sheep. Use spacing and visibility to make the counts unambiguous while preserving the behind-the-donut relation for the sheep.",
+      "initial_prompt": "An image with exactly one donut in the foreground. Behind the donut are exactly six separate brown sheep, all visible and countable. Exactly three wooden monkeys are playing with the six brown sheep. The three monkeys should clearly look wooden, and the six sheep should clearly be brown. Arrange the objects so the donut is in front of the sheep, while all three monkeys and all six sheep remain individually visible with minimal occlusion.",
+      "parsed_constraints": {
+        "attributes": {
+          "monkeys": [
+            "wooden"
+          ],
+          "sheep": [
+            "brown"
+          ]
+        },
+        "counts": {
+          "donut": 1,
+          "monkeys": 3,
+          "sheep": 6
+        },
+        "objects": [
+          "monkeys",
+          "sheep",
+          "donut"
+        ],
+        "relations": [
+          "the three wooden monkeys are playing with the six brown sheep",
+          "the six brown sheep are behind the donut"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly three monkeys, exactly six sheep, and exactly one donut.",
+        "Bind the wooden material to all three monkeys only.",
+        "Bind the brown color to all six sheep only.",
+        "Place all six brown sheep behind the single donut.",
+        "Depict the three wooden monkeys playing with the six brown sheep.",
+        "Keep every monkey and every sheep individually visible and countable; avoid heavy occlusion by the donut or by other animals."
+      ],
+      "generation_strategy": "Create a clear multi-object composition with the single donut in the foreground, six separate brown sheep positioned behind it, and three separate wooden monkeys interacting playfully with the sheep. Use spacing and visibility to make the counts unambiguous while preserving the behind-the-donut relation for the sheep.",
+      "initial_prompt": "An image with exactly one donut in the foreground. Behind the donut are exactly six separate brown sheep, all visible and countable. Exactly three wooden monkeys are playing with the six brown sheep. The three monkeys should clearly look wooden, and the six sheep should clearly be brown. Arrange the objects so the donut is in front of the sheep, while all three monkeys and all six sheep remain individually visible with minimal occlusion.",
+      "parsed_constraints": {
+        "attributes": {
+          "monkeys": [
+            "wooden"
+          ],
+          "sheep": [
+            "brown"
+          ]
+        },
+        "counts": {
+          "donut": 1,
+          "monkeys": 3,
+          "sheep": 6
+        },
+        "objects": [
+          "monkeys",
+          "sheep",
+          "donut"
+        ],
+        "relations": [
+          "the three wooden monkeys are playing with the six brown sheep",
+          "the six brown sheep are behind the donut"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility"
+      ]
+    },
+    "previous_prompt": "An image with exactly one donut in the foreground. Behind the donut are exactly six separate brown sheep, all visible and countable. Exactly three wooden monkeys are playing with the six brown sheep. The three monkeys should clearly look wooden, and the six sheep should clearly be brown. Arrange the objects so the donut is in front of the sheep, while all three monkeys and all six sheep remain individually visible with minimal occlusion.",
+    "previous_selected_skills": [
+      "quantity_counting",
+      "object_presence",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "anti_occlusion",
+      "clarity_visibility"
+    ],
+    "prompt_id": "geneval2_00633_dec79ed1",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "count_mismatch",
+          "relation_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the monkeys wooden?",
+              "score": 3.950532766368309e-09,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=3.95053e-09",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the monkeys wooden?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the monkeys playing with the sheeps?",
+              "score": 5.015512485787028e-07,
+              "skill": "verb"
+            },
+            "detected": "soft_score=5.01551e-07",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the monkeys playing with the sheeps?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many sheeps are in the image?",
+              "score": 0.037348262112713256,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.0373483",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many sheeps are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many monkeys are in the image?",
+              "score": 0.9999999665714382,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "three",
+            "status": "passed",
+            "target": "How many monkeys are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any monkeys in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any monkeys in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the sheeps brown?",
+              "score": 0.9999996662372723,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the sheeps brown?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any sheeps in the image?",
+              "score": 0.9999999793799361,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any sheeps in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the sheeps behind the donut?",
+              "score": 0.9995947426123166,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.999595",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the sheeps behind the donut?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many donuts are in the image?",
+              "score": 1.0,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "one",
+            "status": "passed",
+            "target": "How many donuts are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any donuts in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any donuts in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly three monkeys, exactly six sheep, and exactly one donut.",
+            "Bind the wooden material to all three monkeys only.",
+            "Bind the brown color to all six sheep only.",
+            "Place all six brown sheep behind the single donut.",
+            "Depict the three wooden monkeys playing with the six brown sheep.",
+            "Keep every monkey and every sheep individually visible and countable; avoid heavy occlusion by the donut or by other animals."
+          ],
+          "generation_strategy": "Create a clear multi-object composition with the single donut in the foreground, six separate brown sheep positioned behind it, and three separate wooden monkeys interacting playfully with the sheep. Use spacing and visibility to make the counts unambiguous while preserving the behind-the-donut relation for the sheep.",
+          "initial_prompt": "An image with exactly one donut in the foreground. Behind the donut are exactly six separate brown sheep, all visible and countable. Exactly three wooden monkeys are playing with the six brown sheep. The three monkeys should clearly look wooden, and the six sheep should clearly be brown. Arrange the objects so the donut is in front of the sheep, while all three monkeys and all six sheep remain individually visible with minimal occlusion.",
+          "parsed_constraints": {
+            "attributes": {
+              "monkeys": [
+                "wooden"
+              ],
+              "sheep": [
+                "brown"
+              ]
+            },
+            "counts": {
+              "donut": 1,
+              "monkeys": 3,
+              "sheep": 6
+            },
+            "objects": [
+              "monkeys",
+              "sheep",
+              "donut"
+            ],
+            "relations": [
+              "the three wooden monkeys are playing with the six brown sheep",
+              "the six brown sheep are behind the donut"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "object_presence",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly three monkeys, exactly six sheep, and exactly one donut.",
+            "Bind the wooden material to all three monkeys only.",
+            "Bind the brown color to all six sheep only.",
+            "Place all six brown sheep behind the single donut.",
+            "Depict the three wooden monkeys playing with the six brown sheep.",
+            "Keep every monkey and every sheep individually visible and countable; avoid heavy occlusion by the donut or by other animals."
+          ],
+          "generation_strategy": "Create a clear multi-object composition with the single donut in the foreground, six separate brown sheep positioned behind it, and three separate wooden monkeys interacting playfully with the sheep. Use spacing and visibility to make the counts unambiguous while preserving the behind-the-donut relation for the sheep.",
+          "initial_prompt": "An image with exactly one donut in the foreground. Behind the donut are exactly six separate brown sheep, all visible and countable. Exactly three wooden monkeys are playing with the six brown sheep. The three monkeys should clearly look wooden, and the six sheep should clearly be brown. Arrange the objects so the donut is in front of the sheep, while all three monkeys and all six sheep remain individually visible with minimal occlusion.",
+          "parsed_constraints": {
+            "attributes": {
+              "monkeys": [
+                "wooden"
+              ],
+              "sheep": [
+                "brown"
+              ]
+            },
+            "counts": {
+              "donut": 1,
+              "monkeys": 3,
+              "sheep": 6
+            },
+            "objects": [
+              "monkeys",
+              "sheep",
+              "donut"
+            ],
+            "relations": [
+              "the three wooden monkeys are playing with the six brown sheep",
+              "the six brown sheep are behind the donut"
+            ]
+          },
+          "selected_skills": [
+            "quantity_counting",
+            "object_presence",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "anti_occlusion",
+            "clarity_visibility"
+          ]
+        },
+        "prompt_used": "An image with exactly one donut in the foreground. Behind the donut are exactly six separate brown sheep, all visible and countable. Exactly three wooden monkeys are playing with the six brown sheep. The three monkeys should clearly look wooden, and the six sheep should clearly be brown. Arrange the objects so the donut is in front of the sheep, while all three monkeys and all six sheep remain individually visible with minimal occlusion.",
+        "round": 0,
+        "score": 0.7036943122415458,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the monkeys wooden?",
+                "score": 3.950532766368309e-09,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=3.95053e-09",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the monkeys wooden?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the monkeys playing with the sheeps?",
+                "score": 5.015512485787028e-07,
+                "skill": "verb"
+              },
+              "detected": "soft_score=5.01551e-07",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the monkeys playing with the sheeps?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many sheeps are in the image?",
+                "score": 0.037348262112713256,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.0373483",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many sheeps are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00633_dec79ed1"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the monkeys wooden?",
+          "score": 3.950532766368309e-09,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=3.95053e-09",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the monkeys wooden?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the monkeys playing with the sheeps?",
+          "score": 5.015512485787028e-07,
+          "skill": "verb"
+        },
+        "detected": "soft_score=5.01551e-07",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the monkeys playing with the sheeps?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many sheeps are in the image?",
+          "score": 0.037348262112713256,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.0373483",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many sheeps are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00015/samples/00000.png",
+    "best_so_far_prompt": "An image with exactly one donut in the foreground. Behind the donut are exactly six separate brown sheep, all visible and countable. Exactly three wooden monkeys are playing with the six brown sheep. The three monkeys should clearly look wooden, and the six sheep should clearly be brown. Arrange the objects so the donut is in front of the sheep, while all three monkeys and all six sheep remain individually visible with minimal occlusion.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.7036943122415458,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the monkeys wooden?",
+          "score": 3.950532766368309e-09,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=3.95053e-09",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the monkeys wooden?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the monkeys playing with the sheeps?",
+          "score": 5.015512485787028e-07,
+          "skill": "verb"
+        },
+        "detected": "soft_score=5.01551e-07",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the monkeys playing with the sheeps?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many sheeps are in the image?",
+          "score": 0.037348262112713256,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.0373483",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many sheeps are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly three monkeys, exactly six sheep, and exactly one donut.",
+        "Bind the wooden material to all three monkeys only.",
+        "Bind the brown color to all six sheep only.",
+        "Place all six brown sheep behind the single donut.",
+        "Depict the three wooden monkeys playing with the six brown sheep.",
+        "Keep every monkey and every sheep individually visible and countable; avoid heavy occlusion by the donut or by other animals."
+      ],
+      "generation_strategy": "Create a clear multi-object composition with the single donut in the foreground, six separate brown sheep positioned behind it, and three separate wooden monkeys interacting playfully with the sheep. Use spacing and visibility to make the counts unambiguous while preserving the behind-the-donut relation for the sheep.",
+      "initial_prompt": "An image with exactly one donut in the foreground. Behind the donut are exactly six separate brown sheep, all visible and countable. Exactly three wooden monkeys are playing with the six brown sheep. The three monkeys should clearly look wooden, and the six sheep should clearly be brown. Arrange the objects so the donut is in front of the sheep, while all three monkeys and all six sheep remain individually visible with minimal occlusion.",
+      "parsed_constraints": {
+        "attributes": {
+          "monkeys": [
+            "wooden"
+          ],
+          "sheep": [
+            "brown"
+          ]
+        },
+        "counts": {
+          "donut": 1,
+          "monkeys": 3,
+          "sheep": 6
+        },
+        "objects": [
+          "monkeys",
+          "sheep",
+          "donut"
+        ],
+        "relations": [
+          "the three wooden monkeys are playing with the six brown sheep",
+          "the six brown sheep are behind the donut"
+        ]
+      },
+      "selected_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.704 failed=['Are the monkeys wooden?', 'Are the monkeys playing with the sheeps?', 'How many sheeps are in the image?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_incremental/snapshot_001_worker_02/geneval2_00633_dec79ed1__geneval2_00633_dec79ed1_cand_00__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00633_dec79ed1__geneval2_00633_dec79ed1_cand_00__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00633_dec79ed1",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image passed the presence and count of three monkeys, presence and brown color of sheep, one donut, and the sheep-behind-donut spatial relation, but failed to show the monkeys as wooden, failed to make the monkeys visibly playing with the sheep, and failed the exact count of six sheep. The next prompt must make the monkeys unmistakably carved wood, make the sheep count simple and separable, and make the play relation visually direct between the monkeys and sheep.",
+    "expected_improvement": [
+      "Wooden material will be bound directly to each of the three monkeys with visible carved wood texture and grain.",
+      "Exactly six sheep will be arranged as six separate, fully visible brown sheep with no merged bodies or extra sheep.",
+      "The monkeys will be placed among and facing the sheep so the playing-with relation is visually clear.",
+      "Previously passed constraints will be preserved: exactly three monkeys, exactly one donut, brown sheep, sheep behind the donut, and all required objects visible."
+    ],
+    "failure_types": [
+      "attribute_mismatch",
+      "relation_mismatch",
+      "count_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly three monkeys visible.",
+      "Keep exactly one donut visible in the foreground.",
+      "Keep all sheep brown.",
+      "Keep the sheep behind the donut.",
+      "Keep monkeys, sheep, and donut present and clearly visible."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt stated wooden monkeys and six sheep, but did not force a strongly recognizable carved-wood appearance or a simple countable sheep layout. It also described playing abstractly without specifying a clear visual interaction between the monkeys and sheep.",
+      "error_source": "Insufficient attribute binding for wooden monkeys, insufficient quantity-counting structure for six sheep, and vague relation depiction for playing with the sheep."
+    },
+    "regeneration_strategy": "Use a simple staged composition: one donut in the foreground, exactly six separate brown sheep in a clear two-row group behind it, and exactly three carved wooden monkeys positioned close to and facing the sheep so they are visibly playing together. Add strict negative constraints against extra sheep, extra monkeys, and extra donuts, and emphasize unobstructed visibility.",
+    "regression_risks": [
+      "The donut in the foreground could occlude sheep and make the six-sheep count fail.",
+      "The generator could render ordinary living monkeys instead of wooden monkeys.",
+      "The generator could add extra sheep while filling the background.",
+      "The monkeys could appear near the sheep but not clearly playing with them."
+    ],
+    "repair_constraints": [
+      "Show exactly six brown sheep, each separate and fully visible, arranged behind the donut; no extra sheep and no merged sheep.",
+      "Show exactly three monkeys as carved wooden monkeys with visible wood grain and solid wooden texture; no ordinary fur-covered monkeys.",
+      "Make the three wooden monkeys visibly playing with the six brown sheep by placing the monkeys among or next to the sheep, facing the sheep, with clear playful interaction between them.",
+      "Keep the single donut in front of the sheep while not hiding the six sheep."
+    ],
+    "retry_prompt": "A clear scene with exactly one donut in the foreground. Behind the donut are exactly six separate brown sheep, arranged in two neat rows of three so all six sheep are fully visible and countable; no extra sheep and no merged sheep. Exactly three monkeys are also visible, and each monkey is unmistakably a carved wooden monkey with visible wood grain and a solid wooden surface, not a fur-covered animal. The three wooden monkeys are visibly playing with the six brown sheep: place the monkeys close to the sheep, facing the sheep, with clear playful interaction between the monkeys and the sheep. Keep the six brown sheep behind the single donut, but make sure the donut does not block the sheep. Show only one donut, exactly three wooden monkeys, and exactly six brown sheep, all distinct and unobstructed.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "quantity_counting",
+        "object_presence",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "anti_occlusion",
+        "clarity_visibility"
+      ],
+      "reason": "Add negative_constraints to prevent extra or merged sheep and ordinary non-wooden monkeys, while strengthening quantity_counting, attribute_binding, and spatial_layout for the persistent failures."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 9,
+    "dataset": "geneval2",
+    "original_prompt": "three wooden monkeys playing with six brown sheeps behind a donut",
+    "prompt": "three wooden monkeys playing with six brown sheeps behind a donut",
+    "prompt_id": "geneval2_00633_dec79ed1",
+    "sampling_bucket": "object",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "relation_action",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 2,
+      "count": 3,
+      "object": 3,
+      "position": 1,
+      "verb": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "verb",
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 633,
+    "vqa_list": [
+      [
+        "How many monkeys are in the image?",
+        "three"
+      ],
+      [
+        "Are the monkeys wooden?",
+        "Yes"
+      ],
+      [
+        "Are there any monkeys in the image?",
+        "Yes"
+      ],
+      [
+        "Are the monkeys playing with the sheeps?",
+        "Yes"
+      ],
+      [
+        "How many sheeps are in the image?",
+        "six"
+      ],
+      [
+        "Are the sheeps brown?",
+        "Yes"
+      ],
+      [
+        "Are there any sheeps in the image?",
+        "Yes"
+      ],
+      [
+        "Are the sheeps behind the donut?",
+        "Yes"
+      ],
+      [
+        "How many donuts are in the image?",
+        "one"
+      ],
+      [
+        "Are there any donuts in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00633_dec79ed1"
+}

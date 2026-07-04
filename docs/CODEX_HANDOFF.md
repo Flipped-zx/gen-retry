@@ -1,4 +1,252 @@
 # Codex Handoff
+## Latest Balanced-100 Retry Trajectory Contract Update
+
+- Active request file was read from `/root/.codex/attachments/12c51780-6103-4d9e-8a5d-ab9c1460edc7/pasted-text-1.txt`.
+- Current data audit:
+  - `data/prompts/geneval2_balanced_100.jsonl`: 100 prompt rows.
+  - `data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/generation_manifest.jsonl`: 500 rows, 100 unique prompt ids, all 500 referenced images exist locally.
+  - Candidate-0 selection: 100 rows/images.
+  - `data/plans/initial/geneval2_balanced_100_gpt55/`: 100 initial plan JSON files.
+  - `data/incoming_generation_results/geneval2_balanced_100_round0_initial_gpt55/`: 100 generation packages plus `package_manifest.jsonl`; all 100 have initial plans and existing local image paths; none have eval reports.
+  - `data/geneval2_jobs/balanced100_candidate0/`: 100 diagnostic jobs and eval input maps; no `normalized_reports.jsonl` and no `raw_score_lists.json`.
+  - No current 100-batch `data/outgoing_retry_actions/.../retry_action_manifest.jsonl`.
+  - No current 100-batch `data/raw_trajectories/geneval2_balanced_100_round0_gpt55/`.
+- New Chinese report:
+  - `docs/GENEVAL2_BALANCED100_RETRY_TRAJECTORY_REPORT.md`
+  - It reports current data availability, identifiers, candidate-level mapping, available coverage stats, and explicitly marks pass/fail/failure-type stats as unavailable until GenEval2 diagnostics exist.
+- `src/gen_retry/offline_planner.py` now follows the requested round-0 trajectory contract:
+  - round-0 `attempts[].planner_action` is the `initial_plan` that produced the first image.
+  - teacher `retry_replan` for the next image is stored as top-level `retry_ready_action` / `latest_teacher_action`.
+  - round-0 memory has `persistent_failures = failed_constraints`, `new_failures = []`, `score_delta_from_previous = null`, `score_delta_from_best = 0.0`.
+  - memory includes `current_round` and `previous_action`.
+  - failed round-0 teacher requests use `retry_round = 1`.
+  - retry action packages include `status` and `retry_ready_action`.
+- `src/gen_retry/prompts/retry_replan_prompt.py` and `src/gen_retry/teachers/gpt55_teacher_adapter.py` tolerate `score_delta_from_previous = null` for round 0.
+- New offline trajectory SFT exporter:
+  - `src/gen_retry/export/export_offline_sft.py`
+  - `scripts/export_offline_retry_sft.py`
+  - Default export removes `image_path`, `image_id`, `raw_eval_path`, `raw_report`, and raw image/upload fields from the SFT user context.
+- New tests:
+  - `tests/test_export_offline_sft.py`
+  - `tests/test_offline_planner.py` extended for round-0 memory/action semantics.
+- Documentation updated:
+  - `docs/OFFLINE_GENEVAL2_RETRY_PIPELINE.md`
+  - `docs/SFT_EXPORT_FORMATS.md`
+
+Validation commands from this checkpoint:
+
+- `python3 -m unittest tests.test_offline_planner tests.test_export_offline_sft tests.test_teacher_request_preview tests.test_retry_plan_batch`
+- `python3 -m compileall src/gen_retry/offline_planner.py src/gen_retry/prompts/retry_replan_prompt.py src/gen_retry/teachers/gpt55_teacher_adapter.py src/gen_retry/export/export_offline_sft.py scripts/export_offline_retry_sft.py tests/test_export_offline_sft.py`
+- `python3 -m unittest tests.test_gpt55_teacher_adapter tests.test_retry_plan_quality tests.test_export_offline_sft tests.test_offline_planner tests.test_retry_plan_batch tests.test_teacher_request_preview`
+- `python3 -m compileall src scripts tests`
+- `python3 -m unittest discover tests`
+- `python3 scripts/safe_check.py`
+- `python3 -m json.tool data/geneval2_jobs/balanced100_candidate0/geneval2_batch_plan.json`
+- `python3 -m json.tool data/geneval2_jobs/balanced100_candidate0/eval_image_paths.json`
+- `python3 scripts/export_offline_retry_sft.py --help`
+- `python3 scripts/check_geneval2_retry_inputs.py --package-manifest data/incoming_generation_results/geneval2_balanced_100_round0_initial_gpt55/package_manifest.jsonl --diagnostic-jobs data/geneval2_jobs/balanced100_candidate0/diagnostic_jobs.jsonl --expected-count 100 --output data/geneval2_jobs/balanced100_candidate0/retry_input_preflight_no_eval.json`
+- `git diff --check`
+
+All passed. The fresh no-eval preflight has `package_count=100`, `diagnostic_job_count=100`, `critical_count=0`.
+
+Next exact flow after diagnostics arrive:
+
+```bash
+python3 scripts/prepare_geneval2_retry_inputs.py \
+  --manifest data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/generation_manifest.jsonl \
+  --package-dir data/incoming_generation_results/geneval2_balanced_100_round0_with_eval \
+  --initial-plan-dir data/plans/initial/geneval2_balanced_100_gpt55 \
+  --diagnostic-jobs data/geneval2_jobs/balanced100_candidate0/diagnostic_jobs.jsonl \
+  --eval-results data/geneval2_jobs/balanced100_candidate0/normalized_reports.jsonl \
+  --candidate-index 0 \
+  --limit 100
+```
+
+```bash
+python3 scripts/preview_geneval2_teacher_requests.py \
+  --package-dir data/incoming_generation_results/geneval2_balanced_100_round0_with_eval \
+  --output data/geneval2_jobs/balanced100_candidate0/teacher_requests_preview.jsonl \
+  --summary-output data/geneval2_jobs/balanced100_candidate0/teacher_requests_preview_summary.json
+```
+
+```bash
+python3 scripts/build_geneval2_retry_plans.py \
+  --package-dir data/incoming_generation_results/geneval2_balanced_100_round0_with_eval \
+  --output-dir data/outgoing_retry_actions/geneval2_balanced_100_round0_gpt55 \
+  --trajectory-dir data/raw_trajectories/geneval2_balanced_100_round0_gpt55 \
+  --eval-results data/geneval2_jobs/balanced100_candidate0/normalized_reports.jsonl \
+  --diagnostic-jobs data/geneval2_jobs/balanced100_candidate0/diagnostic_jobs.jsonl \
+  --limit 100 \
+  --teacher gpt55 \
+  --max-retry 3
+```
+
+```bash
+python3 scripts/export_offline_retry_sft.py \
+  --trajectories-dir data/raw_trajectories/geneval2_balanced_100_round0_gpt55 \
+  --output data/sft/geneval2_balanced_100_round0_retry_replan_sft.jsonl \
+  --rejected-output data/rejected/geneval2_balanced_100_round0_retry_replan_rejected.jsonl
+```
+
+Blockers:
+
+- Real GenEval2 diagnostics are still missing for the 100 candidate-0 images.
+- GPT teacher retry calls were not run because no eval reports are present.
+- Pass/fail rate, failure type distribution, `initial_success` count, `retry_ready` count, and valid teacher plan count remain unknown/zero for this current 100-batch until diagnostics and teacher outputs exist.
+
+## Latest Geneval2 Balanced-100 Retry Package Update
+
+- Added manifest-to-offline-package builder:
+  - `src/gen_retry/offline_package_builder.py`
+  - `scripts/build_geneval2_retry_packages.py`
+- Added eval-report-to-retry-plan batch runner:
+  - `src/gen_retry/retry_plan_batch.py`
+  - `scripts/build_geneval2_retry_plans.py`
+- Added retry-plan quality audit:
+  - `src/gen_retry/quality/retry_plan_quality.py`
+  - `scripts/check_retry_plan_quality.py`
+  - `build_geneval2_retry_plans.py` writes `retry_plan_quality_report.json` automatically.
+- Added GenEval2 retry-input preflight:
+  - `src/gen_retry/quality/geneval2_retry_inputs.py`
+  - `scripts/check_geneval2_retry_inputs.py`
+  - `build_geneval2_retry_plans.py` writes `retry_input_preflight.json` automatically and stops before teacher API calls if package/job/eval candidate coverage is incomplete or invalid.
+- Added no-API diagnostic-return prepare entry point:
+  - `src/gen_retry/geneval2_retry_prepare.py`
+  - `scripts/prepare_geneval2_retry_inputs.py`
+  - It normalizes returned raw score lists when needed, rebuilds with-eval packages, writes `prepare_summary.json`, and runs preflight before any teacher API call.
+- Added no-API teacher request preview:
+  - `src/gen_retry/teacher_request_preview.py`
+  - `scripts/preview_geneval2_teacher_requests.py`
+  - It exports the exact retry teacher JSON context for manual review and checks for raw image upload keys before GPT calls.
+- Built 100 round-0 packages from `data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/generation_manifest.jsonl`.
+  - Output dir: `data/incoming_generation_results/geneval2_balanced_100_round0_initial_gpt55/`
+  - Package manifest: `data/incoming_generation_results/geneval2_balanced_100_round0_initial_gpt55/package_manifest.jsonl`
+  - Selection: `candidate_index=0`, `limit=100`
+  - Initial plans: all 100 paired from `data/plans/initial/geneval2_balanced_100_gpt55/`
+- The local 100x5 image directory contains 500 PNG files. The packaged checkpoint uses one first-pass image per prompt.
+- Added `--candidate-index` support to `scripts/run_geneval2_batch.py` so the 500-row manifest can be filtered to the 100 candidate-0 first-pass images.
+- Generated candidate-0 GenEval2 diagnostic job inputs:
+  - `data/geneval2_jobs/balanced100_candidate0/diagnostic_jobs.jsonl`
+  - `data/geneval2_jobs/balanced100_candidate0/eval_benchmark.jsonl`
+  - `data/geneval2_jobs/balanced100_candidate0/eval_image_paths.json`
+  - `data/geneval2_jobs/balanced100_candidate0/geneval2_batch_plan.json`
+  - The plan-only command reported `planned GenEval2 jobs=100 missing=0`.
+- These 100 packages currently do not include GenEval2 diagnostics. They are valid generation packages, not ready for teacher retry API execution until evaluation is attached or supplied.
+- Teacher retry planning does not require raw image upload by default. The teacher input is JSON context:
+  - `original_prompt`
+  - `previous_initial_plan`
+  - `previous_prompt`
+  - `normalized_eval_report`
+  - `retry_history`
+  - memory diff fields
+  - available skills
+- `image_path` remains an artifact reference for audit, reproduction, and local GenEval2 evaluation.
+- `src/gen_retry/offline_planner.py` now only requires local image bytes when Machine B must run GenEval2 itself. If normalized evaluation is embedded or supplied, missing image files can be allowed.
+- Retry action packages and raw trajectories now persist `teacher_request`, so the exact teacher API input can be audited and converted into SFT input later.
+- `src/gen_retry/prompts/retry_replan_prompt.py` now has a stricter quality bar for exact counts, attribute/color binding, spatial/relation clauses, persistent failures, and preservation of passed constraints.
+- `src/gen_retry/teachers/gpt55_teacher_adapter.py` now validates schema-valid `retry_replan` responses against the current diagnostic state. If a response omits failed constraint types, preserve constraints, or required skill routing, the adapter sends one repair prompt before accepting the action.
+- `scripts/validate_offline_retry_package.py` supports `--allow-missing-images`.
+- Current no-eval preflight passed for the 100 package manifest and 100 candidate-0 diagnostic jobs:
+  - output: `data/geneval2_jobs/balanced100_candidate0/retry_input_preflight_no_eval.json`
+  - `package_count=100`, `diagnostic_job_count=100`, `critical_count=0`
+
+Commands already run:
+
+- `python3 scripts/build_geneval2_retry_packages.py --manifest data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/generation_manifest.jsonl --output-dir data/incoming_generation_results/geneval2_balanced_100_round0_initial_gpt55 --initial-plan-dir data/plans/initial/geneval2_balanced_100_gpt55 --candidate-index 0 --limit 100 --require-initial-plan`
+- `python3 scripts/run_geneval2_batch.py --manifest data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/generation_manifest.jsonl --output-dir data/geneval2_jobs/balanced100_candidate0 --candidate-index 0 --limit 100 --n-samples 5 --plan-only --keep-eval-inputs`
+- `python3 -m json.tool data/geneval2_jobs/balanced100_candidate0/geneval2_batch_plan.json`
+- `python3 -m json.tool data/geneval2_jobs/balanced100_candidate0/eval_image_paths.json`
+- `python3 scripts/build_geneval2_retry_plans.py --help`
+- `python3 scripts/check_retry_plan_quality.py --help`
+- `python3 scripts/check_geneval2_retry_inputs.py --help >/dev/null`
+- `python3 scripts/prepare_geneval2_retry_inputs.py --help >/dev/null`
+- `python3 scripts/preview_geneval2_teacher_requests.py --help >/dev/null`
+- `python3 scripts/check_geneval2_retry_inputs.py --package-manifest data/incoming_generation_results/geneval2_balanced_100_round0_initial_gpt55/package_manifest.jsonl --diagnostic-jobs data/geneval2_jobs/balanced100_candidate0/diagnostic_jobs.jsonl --expected-count 100 --output data/geneval2_jobs/balanced100_candidate0/retry_input_preflight_no_eval.json`
+- `python3 scripts/validate_offline_retry_package.py data/incoming_generation_results/geneval2_balanced_100_round0_initial_gpt55/*.json`
+- `python3 -m compileall src scripts tests`
+- `python3 -m unittest discover tests`
+- `python3 scripts/safe_check.py`
+
+Run real GenEval2 later by removing `--plan-only` from the job command. Expected normalized output:
+
+```text
+data/geneval2_jobs/balanced100_candidate0/normalized_reports.jsonl
+```
+
+If the verifier machine returns official score lists, normalize them on this machine before preflight:
+
+```bash
+python3 scripts/normalize_geneval2_results.py \
+  --input data/geneval2_jobs/balanced100_candidate0/raw_score_lists.json \
+  --benchmark-data data/geneval2_jobs/balanced100_candidate0/eval_benchmark.jsonl \
+  --aggregate-by candidate_id \
+  --atom-threshold 0.9 \
+  --output data/geneval2_jobs/balanced100_candidate0/normalized_reports.jsonl
+```
+
+Preferred single no-API prepare command after score lists return:
+
+```bash
+python3 scripts/prepare_geneval2_retry_inputs.py \
+  --manifest data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/generation_manifest.jsonl \
+  --package-dir data/incoming_generation_results/geneval2_balanced_100_round0_with_eval \
+  --initial-plan-dir data/plans/initial/geneval2_balanced_100_gpt55 \
+  --diagnostic-jobs data/geneval2_jobs/balanced100_candidate0/diagnostic_jobs.jsonl \
+  --raw-score-lists data/geneval2_jobs/balanced100_candidate0/raw_score_lists.json \
+  --benchmark-data data/geneval2_jobs/balanced100_candidate0/eval_benchmark.jsonl \
+  --candidate-index 0 \
+  --limit 100
+```
+
+Preview the teacher API payloads before running GPT:
+
+```bash
+python3 scripts/preview_geneval2_teacher_requests.py \
+  --package-dir data/incoming_generation_results/geneval2_balanced_100_round0_with_eval \
+  --output data/geneval2_jobs/balanced100_candidate0/teacher_requests_preview.jsonl \
+  --summary-output data/geneval2_jobs/balanced100_candidate0/teacher_requests_preview_summary.json
+```
+
+Preflight the returned diagnostics before any real teacher API call:
+
+```bash
+python3 scripts/check_geneval2_retry_inputs.py \
+  --package-manifest data/incoming_generation_results/geneval2_balanced_100_round0_initial_gpt55/package_manifest.jsonl \
+  --diagnostic-jobs data/geneval2_jobs/balanced100_candidate0/diagnostic_jobs.jsonl \
+  --eval-results data/geneval2_jobs/balanced100_candidate0/normalized_reports.jsonl \
+  --expected-count 100 \
+  --output data/geneval2_jobs/balanced100_candidate0/retry_input_preflight.json
+```
+
+Next exact command after GenEval2 diagnostics are available:
+
+```bash
+python3 scripts/build_geneval2_retry_plans.py \
+  --manifest data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/generation_manifest.jsonl \
+  --package-dir data/incoming_generation_results/geneval2_balanced_100_round0_with_eval \
+  --output-dir data/outgoing_retry_actions/geneval2_balanced_100_round0_gpt55 \
+  --trajectory-dir data/raw_trajectories/geneval2_balanced_100_round0_gpt55 \
+  --initial-plan-dir data/plans/initial/geneval2_balanced_100_gpt55 \
+  --eval-results data/geneval2_jobs/balanced100_candidate0/normalized_reports.jsonl \
+  --diagnostic-jobs data/geneval2_jobs/balanced100_candidate0/diagnostic_jobs.jsonl \
+  --aggregate-by candidate_id \
+  --candidate-index 0 \
+  --limit 100 \
+  --teacher gpt55 \
+  --max-retry 3
+```
+
+Use `--teacher mock` first for a no-API structural dry run if desired.
+
+After a teacher batch, inspect:
+
+```text
+data/outgoing_retry_actions/geneval2_balanced_100_round0_gpt55/retry_action_manifest.jsonl
+data/outgoing_retry_actions/geneval2_balanced_100_round0_gpt55/batch_summary.json
+data/outgoing_retry_actions/geneval2_balanced_100_round0_gpt55/retry_input_preflight.json
+data/outgoing_retry_actions/geneval2_balanced_100_round0_gpt55/retry_plan_quality_report.json
+```
+
 ## Latest Remaining-Prompt Initial Plan Update
 
 - The correct "remaining prompts" scope is now canonicalized as unique GenEval2 prompts not already in `data/prompts/geneval2_balanced_100.jsonl`.
@@ -768,3 +1016,67 @@ Current gen-retry pilot recommendation:
   - `python3 scripts/generate_qwen_geneval_images.py --help` passed.
   - `git check-ignore -v --no-index ...png` matched the new `.gitignore` rules.
   - `git ls-files 'data/**/*.png' 'data/**/*.jpg' 'data/**/*.jpeg' 'data/**/*.webp' 'data/**/*.gif' | wc -l` returned 0.
+
+## Latest GenEval2 Balanced-100 x5 Retry Trajectory Build
+
+Completed the candidate-level diagnosis and one-shot teacher retry planning stage for all existing initial images.
+
+Final counts:
+
+- Prompts: 100
+- Initial images / candidates: 500
+- GenEval2 normalized reports: 500
+- Initial pass before retry: 29
+- Failed before retry: 471
+- Raw trajectories: 500
+- `initial_success`: 29
+- `retry_ready`: 471
+- `error`: 0
+- Retry SFT rows: 471
+
+Main outputs:
+
+- Merged diagnostics: `data/geneval2_jobs/balanced100_all_candidates/`
+- Package manifest: `data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval/package_manifest.jsonl`
+- Retry actions: `data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/`
+- Raw trajectories: `data/raw_trajectories/geneval2_balanced_100x5_round0_gpt55/`
+- SFT JSONL: `data/sft/geneval2_balanced_100x5_round0_retry_replan_sft.jsonl`
+- Rejected SFT audit: `data/rejected/geneval2_balanced_100x5_round0_retry_replan_rejected.jsonl`
+- Report: `docs/GENEVAL2_BALANCED100_RETRY_TRAJECTORY_REPORT.md`
+- Summary: `data/analysis/geneval2_balanced100_retry_stage_summary.json`
+
+Implementation notes:
+
+- GenEval2 was run in 4 shards under `data/geneval2_jobs/balanced100_all_candidates_shards4/`, then merged with `scripts/merge_geneval2_shards.py`.
+- Teacher calls were pipelined while GenEval2 was still running by snapshotting completed shard checkpoints with `scripts/snapshot_partial_geneval2_retry_inputs.py`.
+- Because parallel workers overwrite batch-level manifests, the final manifest and quality report were rebuilt from package files with `scripts/rebuild_retry_action_manifest.py`.
+- `gpt-5.5` completed the main teacher pass. Near the final tail batch, `gpt-5.5` returned HTTP 503 for 32 candidates while `/models` still worked. A minimal `gpt-5.5` chat request also returned 503. Those 32 candidates were completed using the same relay with `gpt-5.4`; document this if the exact teacher model matters for training provenance.
+
+Useful verification commands:
+
+```bash
+python3 scripts/rebuild_retry_action_manifest.py \
+  --output-dir data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55 \
+  --expected-count 500
+
+python3 scripts/export_offline_retry_sft.py \
+  --trajectories-dir data/raw_trajectories/geneval2_balanced_100x5_round0_gpt55 \
+  --output data/sft/geneval2_balanced_100x5_round0_retry_replan_sft.jsonl \
+  --rejected-output data/rejected/geneval2_balanced_100x5_round0_retry_replan_rejected.jsonl
+
+python3 scripts/report_geneval2_retry_stage.py \
+  --package-manifest data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval/package_manifest.jsonl \
+  --diagnostic-jobs data/geneval2_jobs/balanced100_all_candidates/diagnostic_jobs.jsonl \
+  --eval-results data/geneval2_jobs/balanced100_all_candidates/normalized_reports.jsonl \
+  --retry-manifest data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/retry_action_manifest.jsonl \
+  --trajectory-dir data/raw_trajectories/geneval2_balanced_100x5_round0_gpt55 \
+  --sft-output data/sft/geneval2_balanced_100x5_round0_retry_replan_sft.jsonl \
+  --markdown-output docs/GENEVAL2_BALANCED100_RETRY_TRAJECTORY_REPORT.md \
+  --summary-output data/analysis/geneval2_balanced100_retry_stage_summary.json \
+  --all-candidates \
+  --limit 500
+```
+
+Next practical step:
+
+- Review/filter the 471 retry SFT rows, or proceed to next-stage retry image generation using the saved `retry_ready_action.retry_prompt` values. Do not regenerate retry images as part of this completed stage unless explicitly requested.

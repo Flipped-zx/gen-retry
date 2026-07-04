@@ -1,0 +1,157 @@
+{
+  "candidate_id": "geneval2_00757_4435aa93_cand_00",
+  "generation": {
+    "generation_metadata": {
+      "candidate_index": 0,
+      "generation_prompt_source": "initial_plan",
+      "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00757_4435aa93.json",
+      "manifest_prompt_index": 35,
+      "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+      "sample_id": "geneval2_00757_4435aa93"
+    },
+    "generator_name": "qwen-image-2512",
+    "image_id": "geneval2_00757_4435aa93_cand_00",
+    "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00035/samples/00000.png",
+    "prompt_used": "A clear scene with exactly one black croissant on the far left, exactly six stone cows in the middle to the right of the croissant, and exactly six purple clocks on the far right to the right of all the cows. Arrange the objects in a clean left-to-right row or grouped layout: 1 black croissant, then 6 separate stone cows, then 6 separate purple clocks. Make every cow and every clock fully visible, distinct, and easy to count, with no overlapping or occlusion. Do not include any extra croissants, cows, clocks, or other prominent objects.",
+    "seed": 1175
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "eval_lookup_key": "",
+    "image_path_is_artifact_reference": true,
+    "teacher_uses_image_bytes": false
+  },
+  "previous_action": null,
+  "previous_initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly one croissant, exactly six cows, and exactly six clocks.",
+      "Bind attributes correctly: the single croissant is black, all six cows are stone, and all six clocks are purple.",
+      "Maintain left-to-right spatial order: croissant on the far left, six stone cows in the middle, six purple clocks on the far right.",
+      "Keep all objects fully visible and separated so they can be counted; avoid overlap or occlusion.",
+      "Do not add extra croissants, cows, clocks, or other prominent objects."
+    ],
+    "generation_strategy": "Use a clear horizontal composition with three separated groups arranged from left to right. Place the one black croissant alone on the left, the six stone cows grouped in the center, and the six purple clocks grouped on the right. Ensure every individual item is visible, distinct, and countable, with correct attribute binding and no occlusion.",
+    "initial_prompt": "A clear scene with exactly one black croissant on the far left, exactly six stone cows in the middle to the right of the croissant, and exactly six purple clocks on the far right to the right of all the cows. Arrange the objects in a clean left-to-right row or grouped layout: 1 black croissant, then 6 separate stone cows, then 6 separate purple clocks. Make every cow and every clock fully visible, distinct, and easy to count, with no overlapping or occlusion. Do not include any extra croissants, cows, clocks, or other prominent objects.",
+    "parsed_constraints": {
+      "attributes": {
+        "clocks": "purple",
+        "cows": "stone",
+        "croissant": "black"
+      },
+      "counts": {
+        "clocks": 6,
+        "cows": 6,
+        "croissant": 1
+      },
+      "objects": [
+        "croissant",
+        "cows",
+        "clocks"
+      ],
+      "relations": [
+        "the black croissant is to the left of the six stone cows",
+        "the six stone cows are to the left of the six purple clocks"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "prompt_id": "geneval2_00757_4435aa93",
+  "retry_history": [],
+  "round": 0,
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "a black croissant to the left of six stone cows to the left of six purple clocks",
+    "prompt": "a black croissant to the left of six stone cows to the left of six purple clocks",
+    "prompt_id": "geneval2_00757_4435aa93",
+    "sampling_bucket": "attribute",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 3,
+      "count": 3,
+      "object": 3,
+      "position": 2
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 757,
+    "vqa_list": [
+      [
+        "How many croissants are in the image?",
+        "one"
+      ],
+      [
+        "Is the croissant black?",
+        "Yes"
+      ],
+      [
+        "Are there any croissants in the image?",
+        "Yes"
+      ],
+      [
+        "Is the croissant to the left of the cows?",
+        "Yes"
+      ],
+      [
+        "How many cows are in the image?",
+        "six"
+      ],
+      [
+        "Are the cows stone?",
+        "Yes"
+      ],
+      [
+        "Are there any cows in the image?",
+        "Yes"
+      ],
+      [
+        "Are the cows to the left of the clocks?",
+        "Yes"
+      ],
+      [
+        "How many clocks are in the image?",
+        "six"
+      ],
+      [
+        "Are the clocks purple?",
+        "Yes"
+      ],
+      [
+        "Are there any clocks in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "trajectory_id": "geneval2_00757_4435aa93"
+}

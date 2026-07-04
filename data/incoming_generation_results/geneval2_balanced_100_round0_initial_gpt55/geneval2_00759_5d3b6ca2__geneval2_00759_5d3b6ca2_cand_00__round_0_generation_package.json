@@ -1,0 +1,165 @@
+{
+  "candidate_id": "geneval2_00759_5d3b6ca2_cand_00",
+  "generation": {
+    "generation_metadata": {
+      "candidate_index": 0,
+      "generation_prompt_source": "initial_plan",
+      "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00759_5d3b6ca2.json",
+      "manifest_prompt_index": 36,
+      "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+      "sample_id": "geneval2_00759_5d3b6ca2"
+    },
+    "generator_name": "qwen-image-2512",
+    "image_id": "geneval2_00759_5d3b6ca2_cand_00",
+    "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00036/samples/00000.png",
+    "prompt_used": "Create an image with exactly one yellow penguin on the left. To the right of the yellow penguin, place exactly seven glass birds, clearly visible and individually countable. Behind the seven glass birds, place exactly seven checkered trumpets, also clearly visible and individually countable, with the trumpets positioned farther back than the birds. The birds must be to the right of the penguin, and the trumpets must be behind the birds. Avoid occlusion that hides any object. Do not include any extra penguins, birds, or trumpets.",
+    "seed": 1180
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "eval_lookup_key": "",
+    "image_path_is_artifact_reference": true,
+    "teacher_uses_image_bytes": false
+  },
+  "previous_action": null,
+  "previous_initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly seven trumpets, exactly seven glass birds, and exactly one penguin.",
+      "Bind the checkered pattern only to the seven trumpets.",
+      "Bind the glass material only to the seven birds.",
+      "Bind the yellow color only to the single penguin.",
+      "Place all seven glass birds to the right of the yellow penguin.",
+      "Place all seven checkered trumpets behind the seven glass birds while keeping the trumpets visibly identifiable.",
+      "Avoid adding extra trumpets, birds, penguins, or unrelated objects."
+    ],
+    "generation_strategy": "Use a clear multi-object composition with the single yellow penguin on the left, seven glass birds grouped to its right in the foreground, and seven checkered trumpets positioned behind the birds. Keep every object separated enough to count, with minimal overlap so the behind relationship is clear while all seven trumpets remain visible.",
+    "initial_prompt": "Create an image with exactly one yellow penguin on the left. To the right of the yellow penguin, place exactly seven glass birds, clearly visible and individually countable. Behind the seven glass birds, place exactly seven checkered trumpets, also clearly visible and individually countable, with the trumpets positioned farther back than the birds. The birds must be to the right of the penguin, and the trumpets must be behind the birds. Avoid occlusion that hides any object. Do not include any extra penguins, birds, or trumpets.",
+    "parsed_constraints": {
+      "attributes": {
+        "birds": [
+          "glass"
+        ],
+        "penguin": [
+          "yellow"
+        ],
+        "trumpets": [
+          "checkered"
+        ]
+      },
+      "counts": {
+        "birds": 7,
+        "penguin": 1,
+        "trumpets": 7
+      },
+      "objects": [
+        "trumpets",
+        "birds",
+        "penguin"
+      ],
+      "relations": [
+        "seven checkered trumpets behind seven glass birds",
+        "seven glass birds to the right of one yellow penguin"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "prompt_id": "geneval2_00759_5d3b6ca2",
+  "retry_history": [],
+  "round": 0,
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "seven checkered trumpets behind seven glass birds to the right of a yellow penguin",
+    "prompt": "seven checkered trumpets behind seven glass birds to the right of a yellow penguin",
+    "prompt_id": "geneval2_00759_5d3b6ca2",
+    "sampling_bucket": "attribute",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 3,
+      "count": 3,
+      "object": 3,
+      "position": 2
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 759,
+    "vqa_list": [
+      [
+        "How many trumpets are in the image?",
+        "seven"
+      ],
+      [
+        "Are the trumpets checkered?",
+        "Yes"
+      ],
+      [
+        "Are there any trumpets in the image?",
+        "Yes"
+      ],
+      [
+        "Are the trumpets behind the birds?",
+        "Yes"
+      ],
+      [
+        "How many birds are in the image?",
+        "seven"
+      ],
+      [
+        "Are the birds glass?",
+        "Yes"
+      ],
+      [
+        "Are there any birds in the image?",
+        "Yes"
+      ],
+      [
+        "Are the birds to the right of the penguin?",
+        "Yes"
+      ],
+      [
+        "How many penguins are in the image?",
+        "one"
+      ],
+      [
+        "Is the penguin yellow?",
+        "Yes"
+      ],
+      [
+        "Are there any penguins in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "trajectory_id": "geneval2_00759_5d3b6ca2"
+}

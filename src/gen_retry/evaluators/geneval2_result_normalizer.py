@@ -166,6 +166,10 @@ def _rows_from_official_score_lists(
         bench = benchmark_rows[prompt_index] if prompt_index < len(benchmark_rows) else {}
         vqa_list = bench.get("vqa_list") if isinstance(bench, dict) else None
         skills = bench.get("skills") if isinstance(bench, dict) else None
+        candidate_id = _benchmark_value(bench, "candidate_id")
+        prompt_id = _benchmark_value(bench, "prompt_id") or str(prompt_index)
+        eval_prompt = _benchmark_value(bench, "prompt")
+        original_prompt = _benchmark_value(bench, "original_prompt") or eval_prompt
         for atom_index, score in enumerate(atom_scores):
             question = ""
             answer = ""
@@ -179,8 +183,12 @@ def _rows_from_official_score_lists(
                 skill = str(skills[atom_index])
             rows.append(
                 {
-                    "prompt_id": str(prompt_index),
-                    "prompt": bench.get("prompt", "") if isinstance(bench, dict) else "",
+                    "candidate_id": candidate_id,
+                    "prompt_id": prompt_id,
+                    "source_index": bench.get("source_index") if isinstance(bench, dict) else None,
+                    "candidate_index": bench.get("candidate_index") if isinstance(bench, dict) else None,
+                    "prompt": original_prompt,
+                    "eval_prompt": eval_prompt,
                     "atom_count": bench.get("atom_count") if isinstance(bench, dict) else None,
                     "atom_index": atom_index,
                     "question": question,
@@ -190,6 +198,13 @@ def _rows_from_official_score_lists(
                 }
             )
     return rows
+
+
+def _benchmark_value(bench: dict[str, Any], key: str) -> str:
+    if not isinstance(bench, dict):
+        return ""
+    value = bench.get(key)
+    return "" if value in (None, "") else str(value)
 
 
 def _load_benchmark_rows(path: str | Path | None) -> list[dict[str, Any]]:

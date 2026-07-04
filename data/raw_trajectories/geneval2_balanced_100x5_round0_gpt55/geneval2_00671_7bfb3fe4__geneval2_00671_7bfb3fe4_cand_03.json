@@ -1,0 +1,3098 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "count_mismatch",
+          "spatial_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cows are in the image?",
+              "score": 0.8163906263384885,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.816391",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many cows are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows checkered?",
+              "score": 0.024255445864582725,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.0242554",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cows checkered?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows under the cars?",
+              "score": 0.28117786725852056,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.281178",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cows under the cars?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cars are in the image?",
+              "score": 1.524608532744141e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.52461e-08",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many cars are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cars wooden?",
+              "score": 0.7769095901894616,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.77691",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cars wooden?",
+            "type": "attribute_mismatch"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many sheeps are in the image?",
+              "score": 0.9999999611236139,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "one",
+            "status": "passed",
+            "target": "How many sheeps are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any sheeps in the image?",
+              "score": 0.9999968687334331,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999997",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any sheeps in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the sheep jumping over the cows?",
+              "score": 0.9999863915964138,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.999986",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Is the sheep jumping over the cows?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any cows in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any cows in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any cars in the image?",
+              "score": 0.9999999244810169,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any cars in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00671_7bfb3fe4_cand_03",
+          "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+          "rows": [
+            {
+              "answer": "one",
+              "atom_count": 9,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00671_7bfb3fe4_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00071/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00071/samples/00003.png",
+              "prompt": "a sheep jumping over four checkered cows under six wooden cars",
+              "prompt_id": "geneval2_00671_7bfb3fe4",
+              "question": "How many sheeps are in the image?",
+              "score": 0.9999999611236139,
+              "skill": "count",
+              "source_index": 671
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00671_7bfb3fe4_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00071/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00071/samples/00003.png",
+              "prompt": "a sheep jumping over four checkered cows under six wooden cars",
+              "prompt_id": "geneval2_00671_7bfb3fe4",
+              "question": "Are there any sheeps in the image?",
+              "score": 0.9999968687334331,
+              "skill": "object",
+              "source_index": 671
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00671_7bfb3fe4_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00071/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00071/samples/00003.png",
+              "prompt": "a sheep jumping over four checkered cows under six wooden cars",
+              "prompt_id": "geneval2_00671_7bfb3fe4",
+              "question": "Is the sheep jumping over the cows?",
+              "score": 0.9999863915964138,
+              "skill": "verb",
+              "source_index": 671
+            },
+            {
+              "answer": "four",
+              "atom_count": 9,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00671_7bfb3fe4_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00071/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00071/samples/00003.png",
+              "prompt": "a sheep jumping over four checkered cows under six wooden cars",
+              "prompt_id": "geneval2_00671_7bfb3fe4",
+              "question": "How many cows are in the image?",
+              "score": 0.8163906263384885,
+              "skill": "count",
+              "source_index": 671
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00671_7bfb3fe4_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00071/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00071/samples/00003.png",
+              "prompt": "a sheep jumping over four checkered cows under six wooden cars",
+              "prompt_id": "geneval2_00671_7bfb3fe4",
+              "question": "Are the cows checkered?",
+              "score": 0.024255445864582725,
+              "skill": "attribute",
+              "source_index": 671
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00671_7bfb3fe4_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00071/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00071/samples/00003.png",
+              "prompt": "a sheep jumping over four checkered cows under six wooden cars",
+              "prompt_id": "geneval2_00671_7bfb3fe4",
+              "question": "Are there any cows in the image?",
+              "score": 1.00000002987872,
+              "skill": "object",
+              "source_index": 671
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00671_7bfb3fe4_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00071/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00071/samples/00003.png",
+              "prompt": "a sheep jumping over four checkered cows under six wooden cars",
+              "prompt_id": "geneval2_00671_7bfb3fe4",
+              "question": "Are the cows under the cars?",
+              "score": 0.28117786725852056,
+              "skill": "position",
+              "source_index": 671
+            },
+            {
+              "answer": "six",
+              "atom_count": 9,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00671_7bfb3fe4_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00071/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00071/samples/00003.png",
+              "prompt": "a sheep jumping over four checkered cows under six wooden cars",
+              "prompt_id": "geneval2_00671_7bfb3fe4",
+              "question": "How many cars are in the image?",
+              "score": 1.524608532744141e-08,
+              "skill": "count",
+              "source_index": 671
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00671_7bfb3fe4_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00071/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00071/samples/00003.png",
+              "prompt": "a sheep jumping over four checkered cows under six wooden cars",
+              "prompt_id": "geneval2_00671_7bfb3fe4",
+              "question": "Are the cars wooden?",
+              "score": 0.7769095901894616,
+              "skill": "attribute",
+              "source_index": 671
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00671_7bfb3fe4_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00071/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00071/samples/00003.png",
+              "prompt": "a sheep jumping over four checkered cows under six wooden cars",
+              "prompt_id": "geneval2_00671_7bfb3fe4",
+              "question": "Are there any cars in the image?",
+              "score": 0.9999999244810169,
+              "skill": "object",
+              "source_index": 671
+            }
+          ],
+          "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.6898716690831617,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 3,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00671_7bfb3fe4.json",
+          "manifest_prompt_index": 71,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00671_7bfb3fe4"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00671_7bfb3fe4_cand_03",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00071/samples/00003.png",
+        "prompt_used": "A clear scene with exactly one sheep jumping over exactly four checkered cows. The four cows are all visibly checkered and arranged together below the jumping sheep. Exactly six wooden cars are positioned above the cows, so the four checkered cows are under the six wooden cars. Keep every sheep, cow, and car fully visible, separated, and easy to count, with no extra sheep, cows, or cars.",
+        "seed": 1358
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly one sheep, exactly four cows, and exactly six cars.",
+          "Bind the checkered pattern to all four cows only.",
+          "Bind the wooden material/appearance to all six cars only.",
+          "Arrange the scene vertically so the single sheep is jumping above the four cows, and the four cows are below the sheep.",
+          "Place the six wooden cars above the four cows so the cows are under the cars.",
+          "Keep all objects clearly visible and separated enough for counting; avoid occlusion between the sheep, cows, and cars."
+        ],
+        "generation_strategy": "Use a clear multi-object composition with separated counts: one sheep in a jumping pose above a row/group of four checkered cows, with six wooden cars positioned above the cows. Emphasize visibility, countability, correct attribute binding, and the required over/under spatial relations.",
+        "initial_prompt": "A clear scene with exactly one sheep jumping over exactly four checkered cows. The four cows are all visibly checkered and arranged together below the jumping sheep. Exactly six wooden cars are positioned above the cows, so the four checkered cows are under the six wooden cars. Keep every sheep, cow, and car fully visible, separated, and easy to count, with no extra sheep, cows, or cars.",
+        "parsed_constraints": {
+          "attributes": {
+            "cars": "wooden",
+            "cows": "checkered"
+          },
+          "counts": {
+            "cars": 6,
+            "cows": 4,
+            "sheep": 1
+          },
+          "objects": [
+            "sheep",
+            "cows",
+            "cars"
+          ],
+          "relations": [
+            "the sheep is jumping over the four cows",
+            "the four cows are under the six wooden cars"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly one sheep, exactly four cows, and exactly six cars.",
+          "Bind the checkered pattern to all four cows only.",
+          "Bind the wooden material/appearance to all six cars only.",
+          "Arrange the scene vertically so the single sheep is jumping above the four cows, and the four cows are below the sheep.",
+          "Place the six wooden cars above the four cows so the cows are under the cars.",
+          "Keep all objects clearly visible and separated enough for counting; avoid occlusion between the sheep, cows, and cars."
+        ],
+        "generation_strategy": "Use a clear multi-object composition with separated counts: one sheep in a jumping pose above a row/group of four checkered cows, with six wooden cars positioned above the cows. Emphasize visibility, countability, correct attribute binding, and the required over/under spatial relations.",
+        "initial_prompt": "A clear scene with exactly one sheep jumping over exactly four checkered cows. The four cows are all visibly checkered and arranged together below the jumping sheep. Exactly six wooden cars are positioned above the cows, so the four checkered cows are under the six wooden cars. Keep every sheep, cow, and car fully visible, separated, and easy to count, with no extra sheep, cows, or cars.",
+        "parsed_constraints": {
+          "attributes": {
+            "cars": "wooden",
+            "cows": "checkered"
+          },
+          "counts": {
+            "cars": 6,
+            "cows": 4,
+            "sheep": 1
+          },
+          "objects": [
+            "sheep",
+            "cows",
+            "cars"
+          ],
+          "relations": [
+            "the sheep is jumping over the four cows",
+            "the four cows are under the six wooden cars"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cows are in the image?",
+                "score": 0.8163906263384885,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.816391",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many cows are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows checkered?",
+                "score": 0.024255445864582725,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.0242554",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cows checkered?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows under the cars?",
+                "score": 0.28117786725852056,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.281178",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cows under the cars?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cars are in the image?",
+                "score": 1.524608532744141e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.52461e-08",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many cars are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cars wooden?",
+                "score": 0.7769095901894616,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.77691",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cars wooden?",
+              "type": "attribute_mismatch"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00071/samples/00003.png",
+          "prompt": "A clear scene with exactly one sheep jumping over exactly four checkered cows. The four cows are all visibly checkered and arranged together below the jumping sheep. Exactly six wooden cars are positioned above the cows, so the four checkered cows are under the six wooden cars. Keep every sheep, cow, and car fully visible, separated, and easy to count, with no extra sheep, cows, or cars.",
+          "round": 0,
+          "score": 0.6898716690831617
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00671_7bfb3fe4_cand_03",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "attribute_mismatch",
+            "count_mismatch",
+            "spatial_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cows are in the image?",
+                "score": 0.8163906263384885,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.816391",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many cows are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows checkered?",
+                "score": 0.024255445864582725,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.0242554",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cows checkered?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows under the cars?",
+                "score": 0.28117786725852056,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.281178",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cows under the cars?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cars are in the image?",
+                "score": 1.524608532744141e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.52461e-08",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many cars are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cars wooden?",
+                "score": 0.7769095901894616,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.77691",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cars wooden?",
+              "type": "attribute_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many sheeps are in the image?",
+                "score": 0.9999999611236139,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "one",
+              "status": "passed",
+              "target": "How many sheeps are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any sheeps in the image?",
+                "score": 0.9999968687334331,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999997",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any sheeps in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the sheep jumping over the cows?",
+                "score": 0.9999863915964138,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.999986",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Is the sheep jumping over the cows?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any cows in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any cows in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any cars in the image?",
+                "score": 0.9999999244810169,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any cars in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.6898716690831617,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many cows are in the image?",
+                  "score": 0.8163906263384885,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.816391",
+                "expected": "four",
+                "status": "failed",
+                "target": "How many cows are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the cows checkered?",
+                  "score": 0.024255445864582725,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.0242554",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the cows checkered?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the cows under the cars?",
+                  "score": 0.28117786725852056,
+                  "skill": "position"
+                },
+                "detected": "soft_score=0.281178",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the cows under the cars?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many cars are in the image?",
+                  "score": 1.524608532744141e-08,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1.52461e-08",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many cars are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the cars wooden?",
+                  "score": 0.7769095901894616,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.77691",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the cars wooden?",
+                "type": "attribute_mismatch"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00071/samples/00003.png",
+            "prompt": "A clear scene with exactly one sheep jumping over exactly four checkered cows. The four cows are all visibly checkered and arranged together below the jumping sheep. Exactly six wooden cars are positioned above the cows, so the four checkered cows are under the six wooden cars. Keep every sheep, cow, and car fully visible, separated, and easy to count, with no extra sheep, cows, or cars.",
+            "round": 0,
+            "score": 0.6898716690831617
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cows are in the image?",
+                "score": 0.8163906263384885,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.816391",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many cows are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows checkered?",
+                "score": 0.024255445864582725,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.0242554",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cows checkered?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows under the cars?",
+                "score": 0.28117786725852056,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.281178",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cows under the cars?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cars are in the image?",
+                "score": 1.524608532744141e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.52461e-08",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many cars are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cars wooden?",
+                "score": 0.7769095901894616,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.77691",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cars wooden?",
+              "type": "attribute_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "attribute_mismatch",
+            "count_mismatch",
+            "spatial_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cows are in the image?",
+                "score": 0.8163906263384885,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.816391",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many cows are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows checkered?",
+                "score": 0.024255445864582725,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.0242554",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cows checkered?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows under the cars?",
+                "score": 0.28117786725852056,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.281178",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cows under the cars?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cars are in the image?",
+                "score": 1.524608532744141e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.52461e-08",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many cars are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cars wooden?",
+                "score": 0.7769095901894616,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.77691",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cars wooden?",
+              "type": "attribute_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many sheeps are in the image?",
+                "score": 0.9999999611236139,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "one",
+              "status": "passed",
+              "target": "How many sheeps are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any sheeps in the image?",
+                "score": 0.9999968687334331,
+                "skill": "object"
+              },
+              "detected": "soft_score=0.999997",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any sheeps in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the sheep jumping over the cows?",
+                "score": 0.9999863915964138,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.999986",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Is the sheep jumping over the cows?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any cows in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any cows in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any cars in the image?",
+                "score": 0.9999999244810169,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any cars in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.6898716690831617,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "a sheep jumping over four checkered cows under six wooden cars",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cows are in the image?",
+              "score": 0.8163906263384885,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.816391",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many cows are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows checkered?",
+              "score": 0.024255445864582725,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.0242554",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cows checkered?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows under the cars?",
+              "score": 0.28117786725852056,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.281178",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cows under the cars?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cars are in the image?",
+              "score": 1.524608532744141e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.52461e-08",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many cars are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cars wooden?",
+              "score": 0.7769095901894616,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.77691",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cars wooden?",
+            "type": "attribute_mismatch"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly one sheep, exactly four cows, and exactly six cars.",
+            "Bind the checkered pattern to all four cows only.",
+            "Bind the wooden material/appearance to all six cars only.",
+            "Arrange the scene vertically so the single sheep is jumping above the four cows, and the four cows are below the sheep.",
+            "Place the six wooden cars above the four cows so the cows are under the cars.",
+            "Keep all objects clearly visible and separated enough for counting; avoid occlusion between the sheep, cows, and cars."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with separated counts: one sheep in a jumping pose above a row/group of four checkered cows, with six wooden cars positioned above the cows. Emphasize visibility, countability, correct attribute binding, and the required over/under spatial relations.",
+          "initial_prompt": "A clear scene with exactly one sheep jumping over exactly four checkered cows. The four cows are all visibly checkered and arranged together below the jumping sheep. Exactly six wooden cars are positioned above the cows, so the four checkered cows are under the six wooden cars. Keep every sheep, cow, and car fully visible, separated, and easy to count, with no extra sheep, cows, or cars.",
+          "parsed_constraints": {
+            "attributes": {
+              "cars": "wooden",
+              "cows": "checkered"
+            },
+            "counts": {
+              "cars": 6,
+              "cows": 4,
+              "sheep": 1
+            },
+            "objects": [
+              "sheep",
+              "cows",
+              "cars"
+            ],
+            "relations": [
+              "the sheep is jumping over the four cows",
+              "the four cows are under the six wooden cars"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly one sheep, exactly four cows, and exactly six cars.",
+            "Bind the checkered pattern to all four cows only.",
+            "Bind the wooden material/appearance to all six cars only.",
+            "Arrange the scene vertically so the single sheep is jumping above the four cows, and the four cows are below the sheep.",
+            "Place the six wooden cars above the four cows so the cows are under the cars.",
+            "Keep all objects clearly visible and separated enough for counting; avoid occlusion between the sheep, cows, and cars."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with separated counts: one sheep in a jumping pose above a row/group of four checkered cows, with six wooden cars positioned above the cows. Emphasize visibility, countability, correct attribute binding, and the required over/under spatial relations.",
+          "initial_prompt": "A clear scene with exactly one sheep jumping over exactly four checkered cows. The four cows are all visibly checkered and arranged together below the jumping sheep. Exactly six wooden cars are positioned above the cows, so the four checkered cows are under the six wooden cars. Keep every sheep, cow, and car fully visible, separated, and easy to count, with no extra sheep, cows, or cars.",
+          "parsed_constraints": {
+            "attributes": {
+              "cars": "wooden",
+              "cows": "checkered"
+            },
+            "counts": {
+              "cars": 6,
+              "cows": 4,
+              "sheep": 1
+            },
+            "objects": [
+              "sheep",
+              "cows",
+              "cars"
+            ],
+            "relations": [
+              "the sheep is jumping over the four cows",
+              "the four cows are under the six wooden cars"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_prompt": "A clear scene with exactly one sheep jumping over exactly four checkered cows. The four cows are all visibly checkered and arranged together below the jumping sheep. Exactly six wooden cars are positioned above the cows, so the four checkered cows are under the six wooden cars. Keep every sheep, cow, and car fully visible, separated, and easy to count, with no extra sheep, cows, or cars.",
+        "previous_selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ],
+        "prompt_id": "geneval2_00671_7bfb3fe4",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "attribute_mismatch",
+              "count_mismatch",
+              "spatial_mismatch"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many cows are in the image?",
+                  "score": 0.8163906263384885,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.816391",
+                "expected": "four",
+                "status": "failed",
+                "target": "How many cows are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the cows checkered?",
+                  "score": 0.024255445864582725,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.0242554",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the cows checkered?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the cows under the cars?",
+                  "score": 0.28117786725852056,
+                  "skill": "position"
+                },
+                "detected": "soft_score=0.281178",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the cows under the cars?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many cars are in the image?",
+                  "score": 1.524608532744141e-08,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1.52461e-08",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many cars are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the cars wooden?",
+                  "score": 0.7769095901894616,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.77691",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the cars wooden?",
+                "type": "attribute_mismatch"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many sheeps are in the image?",
+                  "score": 0.9999999611236139,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1",
+                "expected": "one",
+                "status": "passed",
+                "target": "How many sheeps are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any sheeps in the image?",
+                  "score": 0.9999968687334331,
+                  "skill": "object"
+                },
+                "detected": "soft_score=0.999997",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any sheeps in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Is the sheep jumping over the cows?",
+                  "score": 0.9999863915964138,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=0.999986",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Is the sheep jumping over the cows?",
+                "type": "relation_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any cows in the image?",
+                  "score": 1.0,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any cows in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any cars in the image?",
+                  "score": 0.9999999244810169,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any cars in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly one sheep, exactly four cows, and exactly six cars.",
+                "Bind the checkered pattern to all four cows only.",
+                "Bind the wooden material/appearance to all six cars only.",
+                "Arrange the scene vertically so the single sheep is jumping above the four cows, and the four cows are below the sheep.",
+                "Place the six wooden cars above the four cows so the cows are under the cars.",
+                "Keep all objects clearly visible and separated enough for counting; avoid occlusion between the sheep, cows, and cars."
+              ],
+              "generation_strategy": "Use a clear multi-object composition with separated counts: one sheep in a jumping pose above a row/group of four checkered cows, with six wooden cars positioned above the cows. Emphasize visibility, countability, correct attribute binding, and the required over/under spatial relations.",
+              "initial_prompt": "A clear scene with exactly one sheep jumping over exactly four checkered cows. The four cows are all visibly checkered and arranged together below the jumping sheep. Exactly six wooden cars are positioned above the cows, so the four checkered cows are under the six wooden cars. Keep every sheep, cow, and car fully visible, separated, and easy to count, with no extra sheep, cows, or cars.",
+              "parsed_constraints": {
+                "attributes": {
+                  "cars": "wooden",
+                  "cows": "checkered"
+                },
+                "counts": {
+                  "cars": 6,
+                  "cows": 4,
+                  "sheep": 1
+                },
+                "objects": [
+                  "sheep",
+                  "cows",
+                  "cars"
+                ],
+                "relations": [
+                  "the sheep is jumping over the four cows",
+                  "the four cows are under the six wooden cars"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly one sheep, exactly four cows, and exactly six cars.",
+                "Bind the checkered pattern to all four cows only.",
+                "Bind the wooden material/appearance to all six cars only.",
+                "Arrange the scene vertically so the single sheep is jumping above the four cows, and the four cows are below the sheep.",
+                "Place the six wooden cars above the four cows so the cows are under the cars.",
+                "Keep all objects clearly visible and separated enough for counting; avoid occlusion between the sheep, cows, and cars."
+              ],
+              "generation_strategy": "Use a clear multi-object composition with separated counts: one sheep in a jumping pose above a row/group of four checkered cows, with six wooden cars positioned above the cows. Emphasize visibility, countability, correct attribute binding, and the required over/under spatial relations.",
+              "initial_prompt": "A clear scene with exactly one sheep jumping over exactly four checkered cows. The four cows are all visibly checkered and arranged together below the jumping sheep. Exactly six wooden cars are positioned above the cows, so the four checkered cows are under the six wooden cars. Keep every sheep, cow, and car fully visible, separated, and easy to count, with no extra sheep, cows, or cars.",
+              "parsed_constraints": {
+                "attributes": {
+                  "cars": "wooden",
+                  "cows": "checkered"
+                },
+                "counts": {
+                  "cars": 6,
+                  "cows": 4,
+                  "sheep": 1
+                },
+                "objects": [
+                  "sheep",
+                  "cows",
+                  "cars"
+                ],
+                "relations": [
+                  "the sheep is jumping over the four cows",
+                  "the four cows are under the six wooden cars"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "prompt_used": "A clear scene with exactly one sheep jumping over exactly four checkered cows. The four cows are all visibly checkered and arranged together below the jumping sheep. Exactly six wooden cars are positioned above the cows, so the four checkered cows are under the six wooden cars. Keep every sheep, cow, and car fully visible, separated, and easy to count, with no extra sheep, cows, or cars.",
+            "round": 0,
+            "score": 0.6898716690831617,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 3,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many cows are in the image?",
+                    "score": 0.8163906263384885,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=0.816391",
+                  "expected": "four",
+                  "status": "failed",
+                  "target": "How many cows are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 4,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the cows checkered?",
+                    "score": 0.024255445864582725,
+                    "skill": "attribute"
+                  },
+                  "detected": "soft_score=0.0242554",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the cows checkered?",
+                  "type": "attribute_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 6,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the cows under the cars?",
+                    "score": 0.28117786725852056,
+                    "skill": "position"
+                  },
+                  "detected": "soft_score=0.281178",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the cows under the cars?",
+                  "type": "spatial_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 7,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many cars are in the image?",
+                    "score": 1.524608532744141e-08,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=1.52461e-08",
+                  "expected": "six",
+                  "status": "failed",
+                  "target": "How many cars are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 8,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the cars wooden?",
+                    "score": 0.7769095901894616,
+                    "skill": "attribute"
+                  },
+                  "detected": "soft_score=0.77691",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the cars wooden?",
+                  "type": "attribute_mismatch"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00671_7bfb3fe4"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cows are in the image?",
+              "score": 0.8163906263384885,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.816391",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many cows are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows checkered?",
+              "score": 0.024255445864582725,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.0242554",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cows checkered?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows under the cars?",
+              "score": 0.28117786725852056,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.281178",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cows under the cars?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cars are in the image?",
+              "score": 1.524608532744141e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.52461e-08",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many cars are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cars wooden?",
+              "score": 0.7769095901894616,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.77691",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cars wooden?",
+            "type": "attribute_mismatch"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00671_7bfb3fe4_cand_03",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly one sheep, exactly four cows, and exactly six cars.",
+      "Bind the checkered pattern to all four cows only.",
+      "Bind the wooden material/appearance to all six cars only.",
+      "Arrange the scene vertically so the single sheep is jumping above the four cows, and the four cows are below the sheep.",
+      "Place the six wooden cars above the four cows so the cows are under the cars.",
+      "Keep all objects clearly visible and separated enough for counting; avoid occlusion between the sheep, cows, and cars."
+    ],
+    "generation_strategy": "Use a clear multi-object composition with separated counts: one sheep in a jumping pose above a row/group of four checkered cows, with six wooden cars positioned above the cows. Emphasize visibility, countability, correct attribute binding, and the required over/under spatial relations.",
+    "initial_prompt": "A clear scene with exactly one sheep jumping over exactly four checkered cows. The four cows are all visibly checkered and arranged together below the jumping sheep. Exactly six wooden cars are positioned above the cows, so the four checkered cows are under the six wooden cars. Keep every sheep, cow, and car fully visible, separated, and easy to count, with no extra sheep, cows, or cars.",
+    "parsed_constraints": {
+      "attributes": {
+        "cars": "wooden",
+        "cows": "checkered"
+      },
+      "counts": {
+        "cars": 6,
+        "cows": 4,
+        "sheep": 1
+      },
+      "objects": [
+        "sheep",
+        "cows",
+        "cars"
+      ],
+      "relations": [
+        "the sheep is jumping over the four cows",
+        "the four cows are under the six wooden cars"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The initial generation preserved the sheep count, sheep presence, cow presence, car presence, and the sheep jumping over the cows, but it did not reliably show exactly four cows, did not make the cows visibly checkered, did not place the cows clearly under the cars, did not show exactly six cars, and did not make the cars clearly wooden. These are persistent count, attribute-binding, and spatial-layout failures from the first attempt.",
+    "expected_improvement": [
+      "Exactly four cows should be easier to verify because they are requested as four separate full-body cows in one horizontal row with no overlaps or extras.",
+      "The checkered cow attribute should improve because every cow is explicitly described as covered in a large high-contrast checkerboard pattern.",
+      "The under relation should improve because the scene is reorganized into a simple vertical layout with six cars in the top row and the four cows directly below that row.",
+      "Exactly six cars should be easier to verify because they are requested as six separate wooden cars in one horizontal row with no overlaps or extras.",
+      "The wooden car attribute should improve because every car is explicitly described as made of visible wood with wood grain."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "attribute_mismatch",
+      "spatial_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly one sheep in the image.",
+      "Keep the sheep clearly visible and not cropped out.",
+      "Keep the sheep in a jumping pose over the cows.",
+      "Keep cows present and clearly recognizable as cows.",
+      "Keep cars present and clearly recognizable as cars."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt stated the required objects and relations but used a crowded scene description where six cars, four cows, and a jumping sheep could be merged, hidden, or arranged ambiguously. It did not force a simple countable row layout, and the checkered and wooden attributes were not emphasized strongly enough on each individual target object.",
+      "error_source": "layout ambiguity, weak count separation, and insufficient attribute binding"
+    },
+    "regeneration_strategy": "Use a simple poster-like vertical composition with three clear bands: six separate wooden cars across the top, one jumping sheep in the middle above the cows, and four separate checkered cows in a row at the bottom directly under the cars. Emphasize full visibility, non-overlap, exact counts, and no extra sheep, cows, or cars.",
+    "regression_risks": [
+      "Adding six cars may distract from the sheep jumping over the cows, so keep the sheep centered and visibly airborne above the cow row.",
+      "The cow count may regress if cows overlap or merge, so require four separate full-body cows with space between them.",
+      "The car count may regress if cars overlap or are partially cropped, so require six complete separate cars in one row.",
+      "The wooden attribute may be missed if cars look like ordinary painted cars, so require visible wood grain on every car."
+    ],
+    "repair_constraints": [
+      "Show exactly four cows: four separate, full-body, countable cows, with no fifth cow and no duplicated cow parts.",
+      "Make all four cows checkered: each cow must have a clear large checkerboard pattern on its body, and the checkered pattern applies to the cows only.",
+      "Place the four cows under the six cars: arrange the six cars in a top horizontal row and the four cows in a lower horizontal row directly beneath the cars.",
+      "Show exactly six cars: six separate, complete, countable cars, with no seventh car and no duplicated car parts.",
+      "Make all six cars wooden: each car must visibly look made of wood with wood grain, and the wooden material applies to the cars only."
+    ],
+    "retry_prompt": "Create a clear simple scene with exactly one sheep, exactly four checkered cows, and exactly six wooden cars. Use a vertical layout: at the top, place exactly six separate complete wooden cars in one horizontal row, each car visibly made of wood with wood grain. Directly below the cars, place exactly four separate full-body cows in one horizontal row, so all four cows are clearly under the six cars. Every cow must be covered with a large visible checkerboard pattern. In the middle above the cow row, show the single sheep clearly jumping over the four cows. Keep all objects fully visible, separated, unobstructed, and easy to count. No extra sheep, no extra cows, no extra cars, no overlapping or merged animals or vehicles.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints",
+        "object_presence"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same skill set but apply it more strictly: switch from a general scene description to a row-based vertical composition, stronger exact-count wording, stronger target-specific attribute binding, and explicit no-extra/no-overlap constraints."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cows are in the image?",
+            "score": 0.8163906263384885,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.816391",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many cows are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cows checkered?",
+            "score": 0.024255445864582725,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.0242554",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the cows checkered?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cows under the cars?",
+            "score": 0.28117786725852056,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.281178",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the cows under the cars?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cars are in the image?",
+            "score": 1.524608532744141e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.52461e-08",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many cars are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cars wooden?",
+            "score": 0.7769095901894616,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.77691",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the cars wooden?",
+          "type": "attribute_mismatch"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00071/samples/00003.png",
+      "prompt": "A clear scene with exactly one sheep jumping over exactly four checkered cows. The four cows are all visibly checkered and arranged together below the jumping sheep. Exactly six wooden cars are positioned above the cows, so the four checkered cows are under the six wooden cars. Keep every sheep, cow, and car fully visible, separated, and easy to count, with no extra sheep, cows, or cars.",
+      "round": 0,
+      "score": 0.6898716690831617
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00671_7bfb3fe4_cand_03",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "count_mismatch",
+        "spatial_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cows are in the image?",
+            "score": 0.8163906263384885,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.816391",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many cows are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cows checkered?",
+            "score": 0.024255445864582725,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.0242554",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the cows checkered?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cows under the cars?",
+            "score": 0.28117786725852056,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.281178",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the cows under the cars?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cars are in the image?",
+            "score": 1.524608532744141e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.52461e-08",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many cars are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cars wooden?",
+            "score": 0.7769095901894616,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.77691",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the cars wooden?",
+          "type": "attribute_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many sheeps are in the image?",
+            "score": 0.9999999611236139,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "one",
+          "status": "passed",
+          "target": "How many sheeps are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any sheeps in the image?",
+            "score": 0.9999968687334331,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999997",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any sheeps in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the sheep jumping over the cows?",
+            "score": 0.9999863915964138,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.999986",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the sheep jumping over the cows?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any cows in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any cows in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any cars in the image?",
+            "score": 0.9999999244810169,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any cars in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.6898716690831617,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cows are in the image?",
+              "score": 0.8163906263384885,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.816391",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many cows are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows checkered?",
+              "score": 0.024255445864582725,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.0242554",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cows checkered?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows under the cars?",
+              "score": 0.28117786725852056,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.281178",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cows under the cars?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cars are in the image?",
+              "score": 1.524608532744141e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.52461e-08",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many cars are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cars wooden?",
+              "score": 0.7769095901894616,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.77691",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cars wooden?",
+            "type": "attribute_mismatch"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00071/samples/00003.png",
+        "prompt": "A clear scene with exactly one sheep jumping over exactly four checkered cows. The four cows are all visibly checkered and arranged together below the jumping sheep. Exactly six wooden cars are positioned above the cows, so the four checkered cows are under the six wooden cars. Keep every sheep, cow, and car fully visible, separated, and easy to count, with no extra sheep, cows, or cars.",
+        "round": 0,
+        "score": 0.6898716690831617
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cows are in the image?",
+            "score": 0.8163906263384885,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.816391",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many cows are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cows checkered?",
+            "score": 0.024255445864582725,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.0242554",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the cows checkered?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cows under the cars?",
+            "score": 0.28117786725852056,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.281178",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the cows under the cars?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cars are in the image?",
+            "score": 1.524608532744141e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.52461e-08",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many cars are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cars wooden?",
+            "score": 0.7769095901894616,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.77691",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the cars wooden?",
+          "type": "attribute_mismatch"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "count_mismatch",
+        "spatial_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cows are in the image?",
+            "score": 0.8163906263384885,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.816391",
+          "expected": "four",
+          "status": "failed",
+          "target": "How many cows are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cows checkered?",
+            "score": 0.024255445864582725,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.0242554",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the cows checkered?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cows under the cars?",
+            "score": 0.28117786725852056,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.281178",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the cows under the cars?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cars are in the image?",
+            "score": 1.524608532744141e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.52461e-08",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many cars are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cars wooden?",
+            "score": 0.7769095901894616,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.77691",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the cars wooden?",
+          "type": "attribute_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many sheeps are in the image?",
+            "score": 0.9999999611236139,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "one",
+          "status": "passed",
+          "target": "How many sheeps are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any sheeps in the image?",
+            "score": 0.9999968687334331,
+            "skill": "object"
+          },
+          "detected": "soft_score=0.999997",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any sheeps in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the sheep jumping over the cows?",
+            "score": 0.9999863915964138,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.999986",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the sheep jumping over the cows?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any cows in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any cows in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any cars in the image?",
+            "score": 0.9999999244810169,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any cars in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.6898716690831617,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "a sheep jumping over four checkered cows under six wooden cars",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cows are in the image?",
+          "score": 0.8163906263384885,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.816391",
+        "expected": "four",
+        "status": "failed",
+        "target": "How many cows are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the cows checkered?",
+          "score": 0.024255445864582725,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.0242554",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the cows checkered?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 6,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the cows under the cars?",
+          "score": 0.28117786725852056,
+          "skill": "position"
+        },
+        "detected": "soft_score=0.281178",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the cows under the cars?",
+        "type": "spatial_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cars are in the image?",
+          "score": 1.524608532744141e-08,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.52461e-08",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many cars are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the cars wooden?",
+          "score": 0.7769095901894616,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.77691",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the cars wooden?",
+        "type": "attribute_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly one sheep, exactly four cows, and exactly six cars.",
+        "Bind the checkered pattern to all four cows only.",
+        "Bind the wooden material/appearance to all six cars only.",
+        "Arrange the scene vertically so the single sheep is jumping above the four cows, and the four cows are below the sheep.",
+        "Place the six wooden cars above the four cows so the cows are under the cars.",
+        "Keep all objects clearly visible and separated enough for counting; avoid occlusion between the sheep, cows, and cars."
+      ],
+      "generation_strategy": "Use a clear multi-object composition with separated counts: one sheep in a jumping pose above a row/group of four checkered cows, with six wooden cars positioned above the cows. Emphasize visibility, countability, correct attribute binding, and the required over/under spatial relations.",
+      "initial_prompt": "A clear scene with exactly one sheep jumping over exactly four checkered cows. The four cows are all visibly checkered and arranged together below the jumping sheep. Exactly six wooden cars are positioned above the cows, so the four checkered cows are under the six wooden cars. Keep every sheep, cow, and car fully visible, separated, and easy to count, with no extra sheep, cows, or cars.",
+      "parsed_constraints": {
+        "attributes": {
+          "cars": "wooden",
+          "cows": "checkered"
+        },
+        "counts": {
+          "cars": 6,
+          "cows": 4,
+          "sheep": 1
+        },
+        "objects": [
+          "sheep",
+          "cows",
+          "cars"
+        ],
+        "relations": [
+          "the sheep is jumping over the four cows",
+          "the four cows are under the six wooden cars"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly one sheep, exactly four cows, and exactly six cars.",
+        "Bind the checkered pattern to all four cows only.",
+        "Bind the wooden material/appearance to all six cars only.",
+        "Arrange the scene vertically so the single sheep is jumping above the four cows, and the four cows are below the sheep.",
+        "Place the six wooden cars above the four cows so the cows are under the cars.",
+        "Keep all objects clearly visible and separated enough for counting; avoid occlusion between the sheep, cows, and cars."
+      ],
+      "generation_strategy": "Use a clear multi-object composition with separated counts: one sheep in a jumping pose above a row/group of four checkered cows, with six wooden cars positioned above the cows. Emphasize visibility, countability, correct attribute binding, and the required over/under spatial relations.",
+      "initial_prompt": "A clear scene with exactly one sheep jumping over exactly four checkered cows. The four cows are all visibly checkered and arranged together below the jumping sheep. Exactly six wooden cars are positioned above the cows, so the four checkered cows are under the six wooden cars. Keep every sheep, cow, and car fully visible, separated, and easy to count, with no extra sheep, cows, or cars.",
+      "parsed_constraints": {
+        "attributes": {
+          "cars": "wooden",
+          "cows": "checkered"
+        },
+        "counts": {
+          "cars": 6,
+          "cows": 4,
+          "sheep": 1
+        },
+        "objects": [
+          "sheep",
+          "cows",
+          "cars"
+        ],
+        "relations": [
+          "the sheep is jumping over the four cows",
+          "the four cows are under the six wooden cars"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_prompt": "A clear scene with exactly one sheep jumping over exactly four checkered cows. The four cows are all visibly checkered and arranged together below the jumping sheep. Exactly six wooden cars are positioned above the cows, so the four checkered cows are under the six wooden cars. Keep every sheep, cow, and car fully visible, separated, and easy to count, with no extra sheep, cows, or cars.",
+    "previous_selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ],
+    "prompt_id": "geneval2_00671_7bfb3fe4",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "count_mismatch",
+          "spatial_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cows are in the image?",
+              "score": 0.8163906263384885,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.816391",
+            "expected": "four",
+            "status": "failed",
+            "target": "How many cows are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows checkered?",
+              "score": 0.024255445864582725,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.0242554",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cows checkered?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cows under the cars?",
+              "score": 0.28117786725852056,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.281178",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cows under the cars?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cars are in the image?",
+              "score": 1.524608532744141e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.52461e-08",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many cars are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cars wooden?",
+              "score": 0.7769095901894616,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.77691",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cars wooden?",
+            "type": "attribute_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many sheeps are in the image?",
+              "score": 0.9999999611236139,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "one",
+            "status": "passed",
+            "target": "How many sheeps are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any sheeps in the image?",
+              "score": 0.9999968687334331,
+              "skill": "object"
+            },
+            "detected": "soft_score=0.999997",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any sheeps in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the sheep jumping over the cows?",
+              "score": 0.9999863915964138,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.999986",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Is the sheep jumping over the cows?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any cows in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any cows in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any cars in the image?",
+              "score": 0.9999999244810169,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any cars in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly one sheep, exactly four cows, and exactly six cars.",
+            "Bind the checkered pattern to all four cows only.",
+            "Bind the wooden material/appearance to all six cars only.",
+            "Arrange the scene vertically so the single sheep is jumping above the four cows, and the four cows are below the sheep.",
+            "Place the six wooden cars above the four cows so the cows are under the cars.",
+            "Keep all objects clearly visible and separated enough for counting; avoid occlusion between the sheep, cows, and cars."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with separated counts: one sheep in a jumping pose above a row/group of four checkered cows, with six wooden cars positioned above the cows. Emphasize visibility, countability, correct attribute binding, and the required over/under spatial relations.",
+          "initial_prompt": "A clear scene with exactly one sheep jumping over exactly four checkered cows. The four cows are all visibly checkered and arranged together below the jumping sheep. Exactly six wooden cars are positioned above the cows, so the four checkered cows are under the six wooden cars. Keep every sheep, cow, and car fully visible, separated, and easy to count, with no extra sheep, cows, or cars.",
+          "parsed_constraints": {
+            "attributes": {
+              "cars": "wooden",
+              "cows": "checkered"
+            },
+            "counts": {
+              "cars": 6,
+              "cows": 4,
+              "sheep": 1
+            },
+            "objects": [
+              "sheep",
+              "cows",
+              "cars"
+            ],
+            "relations": [
+              "the sheep is jumping over the four cows",
+              "the four cows are under the six wooden cars"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly one sheep, exactly four cows, and exactly six cars.",
+            "Bind the checkered pattern to all four cows only.",
+            "Bind the wooden material/appearance to all six cars only.",
+            "Arrange the scene vertically so the single sheep is jumping above the four cows, and the four cows are below the sheep.",
+            "Place the six wooden cars above the four cows so the cows are under the cars.",
+            "Keep all objects clearly visible and separated enough for counting; avoid occlusion between the sheep, cows, and cars."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with separated counts: one sheep in a jumping pose above a row/group of four checkered cows, with six wooden cars positioned above the cows. Emphasize visibility, countability, correct attribute binding, and the required over/under spatial relations.",
+          "initial_prompt": "A clear scene with exactly one sheep jumping over exactly four checkered cows. The four cows are all visibly checkered and arranged together below the jumping sheep. Exactly six wooden cars are positioned above the cows, so the four checkered cows are under the six wooden cars. Keep every sheep, cow, and car fully visible, separated, and easy to count, with no extra sheep, cows, or cars.",
+          "parsed_constraints": {
+            "attributes": {
+              "cars": "wooden",
+              "cows": "checkered"
+            },
+            "counts": {
+              "cars": 6,
+              "cows": 4,
+              "sheep": 1
+            },
+            "objects": [
+              "sheep",
+              "cows",
+              "cars"
+            ],
+            "relations": [
+              "the sheep is jumping over the four cows",
+              "the four cows are under the six wooden cars"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "prompt_used": "A clear scene with exactly one sheep jumping over exactly four checkered cows. The four cows are all visibly checkered and arranged together below the jumping sheep. Exactly six wooden cars are positioned above the cows, so the four checkered cows are under the six wooden cars. Keep every sheep, cow, and car fully visible, separated, and easy to count, with no extra sheep, cows, or cars.",
+        "round": 0,
+        "score": 0.6898716690831617,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cows are in the image?",
+                "score": 0.8163906263384885,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.816391",
+              "expected": "four",
+              "status": "failed",
+              "target": "How many cows are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows checkered?",
+                "score": 0.024255445864582725,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.0242554",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cows checkered?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cows under the cars?",
+                "score": 0.28117786725852056,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.281178",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cows under the cars?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cars are in the image?",
+                "score": 1.524608532744141e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.52461e-08",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many cars are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cars wooden?",
+                "score": 0.7769095901894616,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.77691",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cars wooden?",
+              "type": "attribute_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00671_7bfb3fe4"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cows are in the image?",
+          "score": 0.8163906263384885,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.816391",
+        "expected": "four",
+        "status": "failed",
+        "target": "How many cows are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the cows checkered?",
+          "score": 0.024255445864582725,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.0242554",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the cows checkered?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 6,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the cows under the cars?",
+          "score": 0.28117786725852056,
+          "skill": "position"
+        },
+        "detected": "soft_score=0.281178",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the cows under the cars?",
+        "type": "spatial_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cars are in the image?",
+          "score": 1.524608532744141e-08,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.52461e-08",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many cars are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the cars wooden?",
+          "score": 0.7769095901894616,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.77691",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the cars wooden?",
+        "type": "attribute_mismatch"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00071/samples/00003.png",
+    "best_so_far_prompt": "A clear scene with exactly one sheep jumping over exactly four checkered cows. The four cows are all visibly checkered and arranged together below the jumping sheep. Exactly six wooden cars are positioned above the cows, so the four checkered cows are under the six wooden cars. Keep every sheep, cow, and car fully visible, separated, and easy to count, with no extra sheep, cows, or cars.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.6898716690831617,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cows are in the image?",
+          "score": 0.8163906263384885,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.816391",
+        "expected": "four",
+        "status": "failed",
+        "target": "How many cows are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 4,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the cows checkered?",
+          "score": 0.024255445864582725,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.0242554",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the cows checkered?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 6,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the cows under the cars?",
+          "score": 0.28117786725852056,
+          "skill": "position"
+        },
+        "detected": "soft_score=0.281178",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the cows under the cars?",
+        "type": "spatial_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cars are in the image?",
+          "score": 1.524608532744141e-08,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.52461e-08",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many cars are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the cars wooden?",
+          "score": 0.7769095901894616,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.77691",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the cars wooden?",
+        "type": "attribute_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly one sheep, exactly four cows, and exactly six cars.",
+        "Bind the checkered pattern to all four cows only.",
+        "Bind the wooden material/appearance to all six cars only.",
+        "Arrange the scene vertically so the single sheep is jumping above the four cows, and the four cows are below the sheep.",
+        "Place the six wooden cars above the four cows so the cows are under the cars.",
+        "Keep all objects clearly visible and separated enough for counting; avoid occlusion between the sheep, cows, and cars."
+      ],
+      "generation_strategy": "Use a clear multi-object composition with separated counts: one sheep in a jumping pose above a row/group of four checkered cows, with six wooden cars positioned above the cows. Emphasize visibility, countability, correct attribute binding, and the required over/under spatial relations.",
+      "initial_prompt": "A clear scene with exactly one sheep jumping over exactly four checkered cows. The four cows are all visibly checkered and arranged together below the jumping sheep. Exactly six wooden cars are positioned above the cows, so the four checkered cows are under the six wooden cars. Keep every sheep, cow, and car fully visible, separated, and easy to count, with no extra sheep, cows, or cars.",
+      "parsed_constraints": {
+        "attributes": {
+          "cars": "wooden",
+          "cows": "checkered"
+        },
+        "counts": {
+          "cars": 6,
+          "cows": 4,
+          "sheep": 1
+        },
+        "objects": [
+          "sheep",
+          "cows",
+          "cars"
+        ],
+        "relations": [
+          "the sheep is jumping over the four cows",
+          "the four cows are under the six wooden cars"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.690 failed=['How many cows are in the image?', 'Are the cows checkered?', 'Are the cows under the cars?', 'How many cars are in the image?', 'Are the cars wooden?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_incremental/snapshot_003_worker_02/geneval2_00671_7bfb3fe4__geneval2_00671_7bfb3fe4_cand_03__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00671_7bfb3fe4__geneval2_00671_7bfb3fe4_cand_03__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00671_7bfb3fe4",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The initial generation preserved the sheep count, sheep presence, cow presence, car presence, and the sheep jumping over the cows, but it did not reliably show exactly four cows, did not make the cows visibly checkered, did not place the cows clearly under the cars, did not show exactly six cars, and did not make the cars clearly wooden. These are persistent count, attribute-binding, and spatial-layout failures from the first attempt.",
+    "expected_improvement": [
+      "Exactly four cows should be easier to verify because they are requested as four separate full-body cows in one horizontal row with no overlaps or extras.",
+      "The checkered cow attribute should improve because every cow is explicitly described as covered in a large high-contrast checkerboard pattern.",
+      "The under relation should improve because the scene is reorganized into a simple vertical layout with six cars in the top row and the four cows directly below that row.",
+      "Exactly six cars should be easier to verify because they are requested as six separate wooden cars in one horizontal row with no overlaps or extras.",
+      "The wooden car attribute should improve because every car is explicitly described as made of visible wood with wood grain."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "attribute_mismatch",
+      "spatial_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly one sheep in the image.",
+      "Keep the sheep clearly visible and not cropped out.",
+      "Keep the sheep in a jumping pose over the cows.",
+      "Keep cows present and clearly recognizable as cows.",
+      "Keep cars present and clearly recognizable as cars."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt stated the required objects and relations but used a crowded scene description where six cars, four cows, and a jumping sheep could be merged, hidden, or arranged ambiguously. It did not force a simple countable row layout, and the checkered and wooden attributes were not emphasized strongly enough on each individual target object.",
+      "error_source": "layout ambiguity, weak count separation, and insufficient attribute binding"
+    },
+    "regeneration_strategy": "Use a simple poster-like vertical composition with three clear bands: six separate wooden cars across the top, one jumping sheep in the middle above the cows, and four separate checkered cows in a row at the bottom directly under the cars. Emphasize full visibility, non-overlap, exact counts, and no extra sheep, cows, or cars.",
+    "regression_risks": [
+      "Adding six cars may distract from the sheep jumping over the cows, so keep the sheep centered and visibly airborne above the cow row.",
+      "The cow count may regress if cows overlap or merge, so require four separate full-body cows with space between them.",
+      "The car count may regress if cars overlap or are partially cropped, so require six complete separate cars in one row.",
+      "The wooden attribute may be missed if cars look like ordinary painted cars, so require visible wood grain on every car."
+    ],
+    "repair_constraints": [
+      "Show exactly four cows: four separate, full-body, countable cows, with no fifth cow and no duplicated cow parts.",
+      "Make all four cows checkered: each cow must have a clear large checkerboard pattern on its body, and the checkered pattern applies to the cows only.",
+      "Place the four cows under the six cars: arrange the six cars in a top horizontal row and the four cows in a lower horizontal row directly beneath the cars.",
+      "Show exactly six cars: six separate, complete, countable cars, with no seventh car and no duplicated car parts.",
+      "Make all six cars wooden: each car must visibly look made of wood with wood grain, and the wooden material applies to the cars only."
+    ],
+    "retry_prompt": "Create a clear simple scene with exactly one sheep, exactly four checkered cows, and exactly six wooden cars. Use a vertical layout: at the top, place exactly six separate complete wooden cars in one horizontal row, each car visibly made of wood with wood grain. Directly below the cars, place exactly four separate full-body cows in one horizontal row, so all four cows are clearly under the six cars. Every cow must be covered with a large visible checkerboard pattern. In the middle above the cow row, show the single sheep clearly jumping over the four cows. Keep all objects fully visible, separated, unobstructed, and easy to count. No extra sheep, no extra cows, no extra cars, no overlapping or merged animals or vehicles.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints",
+        "object_presence"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same skill set but apply it more strictly: switch from a general scene description to a row-based vertical composition, stronger exact-count wording, stronger target-specific attribute binding, and explicit no-extra/no-overlap constraints."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 9,
+    "dataset": "geneval2",
+    "original_prompt": "a sheep jumping over four checkered cows under six wooden cars",
+    "prompt": "a sheep jumping over four checkered cows under six wooden cars",
+    "prompt_id": "geneval2_00671_7bfb3fe4",
+    "sampling_bucket": "relation_action",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "position_spatial",
+      "relation_action",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 2,
+      "count": 3,
+      "object": 3,
+      "position": 1,
+      "verb": 1
+    },
+    "skills": [
+      "count",
+      "object",
+      "verb",
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 671,
+    "vqa_list": [
+      [
+        "How many sheeps are in the image?",
+        "one"
+      ],
+      [
+        "Are there any sheeps in the image?",
+        "Yes"
+      ],
+      [
+        "Is the sheep jumping over the cows?",
+        "Yes"
+      ],
+      [
+        "How many cows are in the image?",
+        "four"
+      ],
+      [
+        "Are the cows checkered?",
+        "Yes"
+      ],
+      [
+        "Are there any cows in the image?",
+        "Yes"
+      ],
+      [
+        "Are the cows under the cars?",
+        "Yes"
+      ],
+      [
+        "How many cars are in the image?",
+        "six"
+      ],
+      [
+        "Are the cars wooden?",
+        "Yes"
+      ],
+      [
+        "Are there any cars in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00671_7bfb3fe4"
+}

@@ -1,0 +1,2588 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "color_mismatch",
+          "count_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the sheeps white?",
+              "score": 0.004745402908156393,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.0047454",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the sheeps white?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many bicycles are in the image?",
+              "score": 0.5001377600981024,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.500138",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many bicycles are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many sheeps are in the image?",
+              "score": 0.9998251466192329,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.999825",
+            "expected": "five",
+            "status": "passed",
+            "target": "How many sheeps are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any sheeps in the image?",
+              "score": 0.9999997064733179,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any sheeps in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the sheeps to the left of the rabbits?",
+              "score": 0.9999999471823457,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the sheeps to the left of the rabbits?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many rabbits are in the image?",
+              "score": 1.0,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "two",
+            "status": "passed",
+            "target": "How many rabbits are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any rabbits in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any rabbits in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the rabbits in front of the bicycles?",
+              "score": 0.9983985608560033,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.998399",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the rabbits in front of the bicycles?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the bicycles striped?",
+              "score": 1.0,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the bicycles striped?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any bicycles in the image?",
+              "score": 0.999999969793862,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any bicycles in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00746_6eaa040c_cand_00",
+          "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+          "rows": [
+            {
+              "answer": "five",
+              "atom_count": 10,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00746_6eaa040c_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00058/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00058/samples/00000.png",
+              "prompt": "five white sheeps to the left of two rabbits in front of seven striped bicycles",
+              "prompt_id": "geneval2_00746_6eaa040c",
+              "question": "How many sheeps are in the image?",
+              "score": 0.9998251466192329,
+              "skill": "count",
+              "source_index": 746
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00746_6eaa040c_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00058/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00058/samples/00000.png",
+              "prompt": "five white sheeps to the left of two rabbits in front of seven striped bicycles",
+              "prompt_id": "geneval2_00746_6eaa040c",
+              "question": "Are the sheeps white?",
+              "score": 0.004745402908156393,
+              "skill": "attribute",
+              "source_index": 746
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00746_6eaa040c_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00058/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00058/samples/00000.png",
+              "prompt": "five white sheeps to the left of two rabbits in front of seven striped bicycles",
+              "prompt_id": "geneval2_00746_6eaa040c",
+              "question": "Are there any sheeps in the image?",
+              "score": 0.9999997064733179,
+              "skill": "object",
+              "source_index": 746
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00746_6eaa040c_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00058/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00058/samples/00000.png",
+              "prompt": "five white sheeps to the left of two rabbits in front of seven striped bicycles",
+              "prompt_id": "geneval2_00746_6eaa040c",
+              "question": "Are the sheeps to the left of the rabbits?",
+              "score": 0.9999999471823457,
+              "skill": "position",
+              "source_index": 746
+            },
+            {
+              "answer": "two",
+              "atom_count": 10,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00746_6eaa040c_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00058/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00058/samples/00000.png",
+              "prompt": "five white sheeps to the left of two rabbits in front of seven striped bicycles",
+              "prompt_id": "geneval2_00746_6eaa040c",
+              "question": "How many rabbits are in the image?",
+              "score": 1.0000000361469517,
+              "skill": "count",
+              "source_index": 746
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00746_6eaa040c_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00058/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00058/samples/00000.png",
+              "prompt": "five white sheeps to the left of two rabbits in front of seven striped bicycles",
+              "prompt_id": "geneval2_00746_6eaa040c",
+              "question": "Are there any rabbits in the image?",
+              "score": 1.000000033309334,
+              "skill": "object",
+              "source_index": 746
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00746_6eaa040c_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00058/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00058/samples/00000.png",
+              "prompt": "five white sheeps to the left of two rabbits in front of seven striped bicycles",
+              "prompt_id": "geneval2_00746_6eaa040c",
+              "question": "Are the rabbits in front of the bicycles?",
+              "score": 0.9983985608560033,
+              "skill": "position",
+              "source_index": 746
+            },
+            {
+              "answer": "seven",
+              "atom_count": 10,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00746_6eaa040c_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00058/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00058/samples/00000.png",
+              "prompt": "five white sheeps to the left of two rabbits in front of seven striped bicycles",
+              "prompt_id": "geneval2_00746_6eaa040c",
+              "question": "How many bicycles are in the image?",
+              "score": 0.5001377600981024,
+              "skill": "count",
+              "source_index": 746
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00746_6eaa040c_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00058/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00058/samples/00000.png",
+              "prompt": "five white sheeps to the left of two rabbits in front of seven striped bicycles",
+              "prompt_id": "geneval2_00746_6eaa040c",
+              "question": "Are the bicycles striped?",
+              "score": 1.0000000069112502,
+              "skill": "attribute",
+              "source_index": 746
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00746_6eaa040c_cand_00",
+              "candidate_index": 0,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00058/samples/00000.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00058/samples/00000.png",
+              "prompt": "five white sheeps to the left of two rabbits in front of seven striped bicycles",
+              "prompt_id": "geneval2_00746_6eaa040c",
+              "question": "Are there any bicycles in the image?",
+              "score": 0.999999969793862,
+              "skill": "object",
+              "source_index": 746
+            }
+          ],
+          "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.8503106493931021,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 0,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00746_6eaa040c.json",
+          "manifest_prompt_index": 58,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00746_6eaa040c"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00746_6eaa040c_cand_00",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00058/samples/00000.png",
+        "prompt_used": "A clear wide scene showing exactly five white sheep grouped on the left side of the image, all five fully visible and separate enough to count. To the right of the sheep are exactly two rabbits, fully visible and separate enough to count. Behind the two rabbits are exactly seven striped bicycles, with the rabbits positioned in front of the bicycles; all seven bicycles should remain visible and countable despite being behind the rabbits. The five white sheep are to the left of the two rabbits. The two rabbits are in front of the seven striped bicycles. Avoid extra sheep, extra rabbits, extra bicycles, hidden objects, merged objects, or confusing overlap.",
+        "seed": 1290
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Depict exactly five sheep, exactly two rabbits, and exactly seven bicycles.",
+          "Bind the color white only to the five sheep.",
+          "Bind the striped pattern only to the seven bicycles.",
+          "Place all five sheep as a separate group to the left of the two rabbits.",
+          "Place the two rabbits in front of the seven bicycles, with the bicycles behind them but still clearly visible.",
+          "Keep all objects separated enough to count; avoid heavy overlap or occlusion."
+        ],
+        "generation_strategy": "Use a clear wide composition with three countable groups: five white sheep on the left, two rabbits to their right in the foreground, and seven striped bicycles arranged behind the rabbits. Maintain object separation, attribute binding, and visibility for accurate counting and spatial relation evaluation.",
+        "initial_prompt": "A clear wide scene showing exactly five white sheep grouped on the left side of the image, all five fully visible and separate enough to count. To the right of the sheep are exactly two rabbits, fully visible and separate enough to count. Behind the two rabbits are exactly seven striped bicycles, with the rabbits positioned in front of the bicycles; all seven bicycles should remain visible and countable despite being behind the rabbits. The five white sheep are to the left of the two rabbits. The two rabbits are in front of the seven striped bicycles. Avoid extra sheep, extra rabbits, extra bicycles, hidden objects, merged objects, or confusing overlap.",
+        "parsed_constraints": {
+          "attributes": {
+            "bicycles": [
+              "striped"
+            ],
+            "sheep": [
+              "white"
+            ]
+          },
+          "counts": {
+            "bicycles": 7,
+            "rabbits": 2,
+            "sheep": 5
+          },
+          "objects": [
+            "sheep",
+            "rabbits",
+            "bicycles"
+          ],
+          "relations": [
+            "five white sheep to the left of two rabbits",
+            "two rabbits in front of seven striped bicycles"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Depict exactly five sheep, exactly two rabbits, and exactly seven bicycles.",
+          "Bind the color white only to the five sheep.",
+          "Bind the striped pattern only to the seven bicycles.",
+          "Place all five sheep as a separate group to the left of the two rabbits.",
+          "Place the two rabbits in front of the seven bicycles, with the bicycles behind them but still clearly visible.",
+          "Keep all objects separated enough to count; avoid heavy overlap or occlusion."
+        ],
+        "generation_strategy": "Use a clear wide composition with three countable groups: five white sheep on the left, two rabbits to their right in the foreground, and seven striped bicycles arranged behind the rabbits. Maintain object separation, attribute binding, and visibility for accurate counting and spatial relation evaluation.",
+        "initial_prompt": "A clear wide scene showing exactly five white sheep grouped on the left side of the image, all five fully visible and separate enough to count. To the right of the sheep are exactly two rabbits, fully visible and separate enough to count. Behind the two rabbits are exactly seven striped bicycles, with the rabbits positioned in front of the bicycles; all seven bicycles should remain visible and countable despite being behind the rabbits. The five white sheep are to the left of the two rabbits. The two rabbits are in front of the seven striped bicycles. Avoid extra sheep, extra rabbits, extra bicycles, hidden objects, merged objects, or confusing overlap.",
+        "parsed_constraints": {
+          "attributes": {
+            "bicycles": [
+              "striped"
+            ],
+            "sheep": [
+              "white"
+            ]
+          },
+          "counts": {
+            "bicycles": 7,
+            "rabbits": 2,
+            "sheep": 5
+          },
+          "objects": [
+            "sheep",
+            "rabbits",
+            "bicycles"
+          ],
+          "relations": [
+            "five white sheep to the left of two rabbits",
+            "two rabbits in front of seven striped bicycles"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the sheeps white?",
+                "score": 0.004745402908156393,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.0047454",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the sheeps white?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many bicycles are in the image?",
+                "score": 0.5001377600981024,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.500138",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many bicycles are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00058/samples/00000.png",
+          "prompt": "A clear wide scene showing exactly five white sheep grouped on the left side of the image, all five fully visible and separate enough to count. To the right of the sheep are exactly two rabbits, fully visible and separate enough to count. Behind the two rabbits are exactly seven striped bicycles, with the rabbits positioned in front of the bicycles; all seven bicycles should remain visible and countable despite being behind the rabbits. The five white sheep are to the left of the two rabbits. The two rabbits are in front of the seven striped bicycles. Avoid extra sheep, extra rabbits, extra bicycles, hidden objects, merged objects, or confusing overlap.",
+          "round": 0,
+          "score": 0.8503106493931021
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00746_6eaa040c_cand_00",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "color_mismatch",
+            "count_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the sheeps white?",
+                "score": 0.004745402908156393,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.0047454",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the sheeps white?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many bicycles are in the image?",
+                "score": 0.5001377600981024,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.500138",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many bicycles are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many sheeps are in the image?",
+                "score": 0.9998251466192329,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.999825",
+              "expected": "five",
+              "status": "passed",
+              "target": "How many sheeps are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any sheeps in the image?",
+                "score": 0.9999997064733179,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any sheeps in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the sheeps to the left of the rabbits?",
+                "score": 0.9999999471823457,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the sheeps to the left of the rabbits?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many rabbits are in the image?",
+                "score": 1.0,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "two",
+              "status": "passed",
+              "target": "How many rabbits are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any rabbits in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any rabbits in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the rabbits in front of the bicycles?",
+                "score": 0.9983985608560033,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.998399",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the rabbits in front of the bicycles?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the bicycles striped?",
+                "score": 1.0,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the bicycles striped?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any bicycles in the image?",
+                "score": 0.999999969793862,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any bicycles in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.8503106493931021,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the sheeps white?",
+                  "score": 0.004745402908156393,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.0047454",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the sheeps white?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many bicycles are in the image?",
+                  "score": 0.5001377600981024,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.500138",
+                "expected": "seven",
+                "status": "failed",
+                "target": "How many bicycles are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00058/samples/00000.png",
+            "prompt": "A clear wide scene showing exactly five white sheep grouped on the left side of the image, all five fully visible and separate enough to count. To the right of the sheep are exactly two rabbits, fully visible and separate enough to count. Behind the two rabbits are exactly seven striped bicycles, with the rabbits positioned in front of the bicycles; all seven bicycles should remain visible and countable despite being behind the rabbits. The five white sheep are to the left of the two rabbits. The two rabbits are in front of the seven striped bicycles. Avoid extra sheep, extra rabbits, extra bicycles, hidden objects, merged objects, or confusing overlap.",
+            "round": 0,
+            "score": 0.8503106493931021
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the sheeps white?",
+                "score": 0.004745402908156393,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.0047454",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the sheeps white?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many bicycles are in the image?",
+                "score": 0.5001377600981024,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.500138",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many bicycles are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "color_mismatch",
+            "count_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the sheeps white?",
+                "score": 0.004745402908156393,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.0047454",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the sheeps white?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many bicycles are in the image?",
+                "score": 0.5001377600981024,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.500138",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many bicycles are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many sheeps are in the image?",
+                "score": 0.9998251466192329,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.999825",
+              "expected": "five",
+              "status": "passed",
+              "target": "How many sheeps are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any sheeps in the image?",
+                "score": 0.9999997064733179,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any sheeps in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the sheeps to the left of the rabbits?",
+                "score": 0.9999999471823457,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the sheeps to the left of the rabbits?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many rabbits are in the image?",
+                "score": 1.0,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "two",
+              "status": "passed",
+              "target": "How many rabbits are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any rabbits in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any rabbits in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the rabbits in front of the bicycles?",
+                "score": 0.9983985608560033,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.998399",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the rabbits in front of the bicycles?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the bicycles striped?",
+                "score": 1.0,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the bicycles striped?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any bicycles in the image?",
+                "score": 0.999999969793862,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any bicycles in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.8503106493931021,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "five white sheeps to the left of two rabbits in front of seven striped bicycles",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the sheeps white?",
+              "score": 0.004745402908156393,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.0047454",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the sheeps white?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many bicycles are in the image?",
+              "score": 0.5001377600981024,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.500138",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many bicycles are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly five sheep, exactly two rabbits, and exactly seven bicycles.",
+            "Bind the color white only to the five sheep.",
+            "Bind the striped pattern only to the seven bicycles.",
+            "Place all five sheep as a separate group to the left of the two rabbits.",
+            "Place the two rabbits in front of the seven bicycles, with the bicycles behind them but still clearly visible.",
+            "Keep all objects separated enough to count; avoid heavy overlap or occlusion."
+          ],
+          "generation_strategy": "Use a clear wide composition with three countable groups: five white sheep on the left, two rabbits to their right in the foreground, and seven striped bicycles arranged behind the rabbits. Maintain object separation, attribute binding, and visibility for accurate counting and spatial relation evaluation.",
+          "initial_prompt": "A clear wide scene showing exactly five white sheep grouped on the left side of the image, all five fully visible and separate enough to count. To the right of the sheep are exactly two rabbits, fully visible and separate enough to count. Behind the two rabbits are exactly seven striped bicycles, with the rabbits positioned in front of the bicycles; all seven bicycles should remain visible and countable despite being behind the rabbits. The five white sheep are to the left of the two rabbits. The two rabbits are in front of the seven striped bicycles. Avoid extra sheep, extra rabbits, extra bicycles, hidden objects, merged objects, or confusing overlap.",
+          "parsed_constraints": {
+            "attributes": {
+              "bicycles": [
+                "striped"
+              ],
+              "sheep": [
+                "white"
+              ]
+            },
+            "counts": {
+              "bicycles": 7,
+              "rabbits": 2,
+              "sheep": 5
+            },
+            "objects": [
+              "sheep",
+              "rabbits",
+              "bicycles"
+            ],
+            "relations": [
+              "five white sheep to the left of two rabbits",
+              "two rabbits in front of seven striped bicycles"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly five sheep, exactly two rabbits, and exactly seven bicycles.",
+            "Bind the color white only to the five sheep.",
+            "Bind the striped pattern only to the seven bicycles.",
+            "Place all five sheep as a separate group to the left of the two rabbits.",
+            "Place the two rabbits in front of the seven bicycles, with the bicycles behind them but still clearly visible.",
+            "Keep all objects separated enough to count; avoid heavy overlap or occlusion."
+          ],
+          "generation_strategy": "Use a clear wide composition with three countable groups: five white sheep on the left, two rabbits to their right in the foreground, and seven striped bicycles arranged behind the rabbits. Maintain object separation, attribute binding, and visibility for accurate counting and spatial relation evaluation.",
+          "initial_prompt": "A clear wide scene showing exactly five white sheep grouped on the left side of the image, all five fully visible and separate enough to count. To the right of the sheep are exactly two rabbits, fully visible and separate enough to count. Behind the two rabbits are exactly seven striped bicycles, with the rabbits positioned in front of the bicycles; all seven bicycles should remain visible and countable despite being behind the rabbits. The five white sheep are to the left of the two rabbits. The two rabbits are in front of the seven striped bicycles. Avoid extra sheep, extra rabbits, extra bicycles, hidden objects, merged objects, or confusing overlap.",
+          "parsed_constraints": {
+            "attributes": {
+              "bicycles": [
+                "striped"
+              ],
+              "sheep": [
+                "white"
+              ]
+            },
+            "counts": {
+              "bicycles": 7,
+              "rabbits": 2,
+              "sheep": 5
+            },
+            "objects": [
+              "sheep",
+              "rabbits",
+              "bicycles"
+            ],
+            "relations": [
+              "five white sheep to the left of two rabbits",
+              "two rabbits in front of seven striped bicycles"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_prompt": "A clear wide scene showing exactly five white sheep grouped on the left side of the image, all five fully visible and separate enough to count. To the right of the sheep are exactly two rabbits, fully visible and separate enough to count. Behind the two rabbits are exactly seven striped bicycles, with the rabbits positioned in front of the bicycles; all seven bicycles should remain visible and countable despite being behind the rabbits. The five white sheep are to the left of the two rabbits. The two rabbits are in front of the seven striped bicycles. Avoid extra sheep, extra rabbits, extra bicycles, hidden objects, merged objects, or confusing overlap.",
+        "previous_selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ],
+        "prompt_id": "geneval2_00746_6eaa040c",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "color_mismatch",
+              "count_mismatch"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the sheeps white?",
+                  "score": 0.004745402908156393,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.0047454",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the sheeps white?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many bicycles are in the image?",
+                  "score": 0.5001377600981024,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.500138",
+                "expected": "seven",
+                "status": "failed",
+                "target": "How many bicycles are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many sheeps are in the image?",
+                  "score": 0.9998251466192329,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.999825",
+                "expected": "five",
+                "status": "passed",
+                "target": "How many sheeps are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any sheeps in the image?",
+                  "score": 0.9999997064733179,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any sheeps in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the sheeps to the left of the rabbits?",
+                  "score": 0.9999999471823457,
+                  "skill": "position"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the sheeps to the left of the rabbits?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many rabbits are in the image?",
+                  "score": 1.0,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1",
+                "expected": "two",
+                "status": "passed",
+                "target": "How many rabbits are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any rabbits in the image?",
+                  "score": 1.0,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any rabbits in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the rabbits in front of the bicycles?",
+                  "score": 0.9983985608560033,
+                  "skill": "position"
+                },
+                "detected": "soft_score=0.998399",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the rabbits in front of the bicycles?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the bicycles striped?",
+                  "score": 1.0,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the bicycles striped?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any bicycles in the image?",
+                  "score": 0.999999969793862,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any bicycles in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Depict exactly five sheep, exactly two rabbits, and exactly seven bicycles.",
+                "Bind the color white only to the five sheep.",
+                "Bind the striped pattern only to the seven bicycles.",
+                "Place all five sheep as a separate group to the left of the two rabbits.",
+                "Place the two rabbits in front of the seven bicycles, with the bicycles behind them but still clearly visible.",
+                "Keep all objects separated enough to count; avoid heavy overlap or occlusion."
+              ],
+              "generation_strategy": "Use a clear wide composition with three countable groups: five white sheep on the left, two rabbits to their right in the foreground, and seven striped bicycles arranged behind the rabbits. Maintain object separation, attribute binding, and visibility for accurate counting and spatial relation evaluation.",
+              "initial_prompt": "A clear wide scene showing exactly five white sheep grouped on the left side of the image, all five fully visible and separate enough to count. To the right of the sheep are exactly two rabbits, fully visible and separate enough to count. Behind the two rabbits are exactly seven striped bicycles, with the rabbits positioned in front of the bicycles; all seven bicycles should remain visible and countable despite being behind the rabbits. The five white sheep are to the left of the two rabbits. The two rabbits are in front of the seven striped bicycles. Avoid extra sheep, extra rabbits, extra bicycles, hidden objects, merged objects, or confusing overlap.",
+              "parsed_constraints": {
+                "attributes": {
+                  "bicycles": [
+                    "striped"
+                  ],
+                  "sheep": [
+                    "white"
+                  ]
+                },
+                "counts": {
+                  "bicycles": 7,
+                  "rabbits": 2,
+                  "sheep": 5
+                },
+                "objects": [
+                  "sheep",
+                  "rabbits",
+                  "bicycles"
+                ],
+                "relations": [
+                  "five white sheep to the left of two rabbits",
+                  "two rabbits in front of seven striped bicycles"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Depict exactly five sheep, exactly two rabbits, and exactly seven bicycles.",
+                "Bind the color white only to the five sheep.",
+                "Bind the striped pattern only to the seven bicycles.",
+                "Place all five sheep as a separate group to the left of the two rabbits.",
+                "Place the two rabbits in front of the seven bicycles, with the bicycles behind them but still clearly visible.",
+                "Keep all objects separated enough to count; avoid heavy overlap or occlusion."
+              ],
+              "generation_strategy": "Use a clear wide composition with three countable groups: five white sheep on the left, two rabbits to their right in the foreground, and seven striped bicycles arranged behind the rabbits. Maintain object separation, attribute binding, and visibility for accurate counting and spatial relation evaluation.",
+              "initial_prompt": "A clear wide scene showing exactly five white sheep grouped on the left side of the image, all five fully visible and separate enough to count. To the right of the sheep are exactly two rabbits, fully visible and separate enough to count. Behind the two rabbits are exactly seven striped bicycles, with the rabbits positioned in front of the bicycles; all seven bicycles should remain visible and countable despite being behind the rabbits. The five white sheep are to the left of the two rabbits. The two rabbits are in front of the seven striped bicycles. Avoid extra sheep, extra rabbits, extra bicycles, hidden objects, merged objects, or confusing overlap.",
+              "parsed_constraints": {
+                "attributes": {
+                  "bicycles": [
+                    "striped"
+                  ],
+                  "sheep": [
+                    "white"
+                  ]
+                },
+                "counts": {
+                  "bicycles": 7,
+                  "rabbits": 2,
+                  "sheep": 5
+                },
+                "objects": [
+                  "sheep",
+                  "rabbits",
+                  "bicycles"
+                ],
+                "relations": [
+                  "five white sheep to the left of two rabbits",
+                  "two rabbits in front of seven striped bicycles"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "prompt_used": "A clear wide scene showing exactly five white sheep grouped on the left side of the image, all five fully visible and separate enough to count. To the right of the sheep are exactly two rabbits, fully visible and separate enough to count. Behind the two rabbits are exactly seven striped bicycles, with the rabbits positioned in front of the bicycles; all seven bicycles should remain visible and countable despite being behind the rabbits. The five white sheep are to the left of the two rabbits. The two rabbits are in front of the seven striped bicycles. Avoid extra sheep, extra rabbits, extra bicycles, hidden objects, merged objects, or confusing overlap.",
+            "round": 0,
+            "score": 0.8503106493931021,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 1,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the sheeps white?",
+                    "score": 0.004745402908156393,
+                    "skill": "attribute"
+                  },
+                  "detected": "soft_score=0.0047454",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the sheeps white?",
+                  "type": "color_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 7,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many bicycles are in the image?",
+                    "score": 0.5001377600981024,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=0.500138",
+                  "expected": "seven",
+                  "status": "failed",
+                  "target": "How many bicycles are in the image?",
+                  "type": "count_mismatch"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00746_6eaa040c"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the sheeps white?",
+              "score": 0.004745402908156393,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.0047454",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the sheeps white?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many bicycles are in the image?",
+              "score": 0.5001377600981024,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.500138",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many bicycles are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00746_6eaa040c_cand_00",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Depict exactly five sheep, exactly two rabbits, and exactly seven bicycles.",
+      "Bind the color white only to the five sheep.",
+      "Bind the striped pattern only to the seven bicycles.",
+      "Place all five sheep as a separate group to the left of the two rabbits.",
+      "Place the two rabbits in front of the seven bicycles, with the bicycles behind them but still clearly visible.",
+      "Keep all objects separated enough to count; avoid heavy overlap or occlusion."
+    ],
+    "generation_strategy": "Use a clear wide composition with three countable groups: five white sheep on the left, two rabbits to their right in the foreground, and seven striped bicycles arranged behind the rabbits. Maintain object separation, attribute binding, and visibility for accurate counting and spatial relation evaluation.",
+    "initial_prompt": "A clear wide scene showing exactly five white sheep grouped on the left side of the image, all five fully visible and separate enough to count. To the right of the sheep are exactly two rabbits, fully visible and separate enough to count. Behind the two rabbits are exactly seven striped bicycles, with the rabbits positioned in front of the bicycles; all seven bicycles should remain visible and countable despite being behind the rabbits. The five white sheep are to the left of the two rabbits. The two rabbits are in front of the seven striped bicycles. Avoid extra sheep, extra rabbits, extra bicycles, hidden objects, merged objects, or confusing overlap.",
+    "parsed_constraints": {
+      "attributes": {
+        "bicycles": [
+          "striped"
+        ],
+        "sheep": [
+          "white"
+        ]
+      },
+      "counts": {
+        "bicycles": 7,
+        "rabbits": 2,
+        "sheep": 5
+      },
+      "objects": [
+        "sheep",
+        "rabbits",
+        "bicycles"
+      ],
+      "relations": [
+        "five white sheep to the left of two rabbits",
+        "two rabbits in front of seven striped bicycles"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image failed the required white color attribute for the five sheep and failed the exact count of seven bicycles. The sheep count, sheep presence, sheep-left-of-rabbits relation, rabbit count and presence, rabbits-in-front-of-bicycles relation, striped bicycle attribute, and bicycle presence all passed and should be explicitly preserved. The bicycle count likely failed because the bicycles behind the rabbits were not separated or visible enough to count as seven distinct bicycles, and the sheep color was not visually emphasized strongly enough.",
+    "expected_improvement": [
+      "All five sheep should be clearly recognized as white by making each sheep bright white with visible white wool and no non-white sheep.",
+      "The bicycle count should improve by arranging exactly seven striped bicycles as seven separate, fully visible, countable instances behind the rabbits with minimal overlap.",
+      "Previously passed counts and spatial relations should remain stable by keeping five sheep on the left, two rabbits to their right, and the rabbits in front of the bicycles."
+    ],
+    "failure_types": [
+      "color_mismatch",
+      "count_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly five sheep visible and countable.",
+      "Keep all sheep to the left of the rabbits.",
+      "Keep exactly two rabbits visible and countable.",
+      "Keep the two rabbits in front of the bicycles.",
+      "Keep the bicycles striped.",
+      "Keep bicycles present and clearly identifiable."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt stated white sheep and seven striped bicycles, but it did not make the sheep whiteness visually dominant enough, and it placed seven bicycles behind rabbits without a strong layout that makes all seven separate bicycle frames and wheels countable. The rabbits may have occluded or visually merged some bicycles, reducing the detected count.",
+      "error_source": "Insufficient attribute emphasis for sheep color and insufficient count-focused separation/visibility for seven bicycles behind foreground rabbits."
+    },
+    "regeneration_strategy": "Use a more structured wide layout: five bright white sheep as a left-side group, two rabbits in the middle foreground, and exactly seven striped bicycles in a single separated row behind the rabbits. Make the rabbits small enough and positioned low enough that all seven bicycles remain visible and countable. Bind white only to the sheep and striped only to the bicycles, with negative constraints against extra or merged objects.",
+    "regression_risks": [
+      "The model may add extra sheep, rabbits, or bicycles when emphasizing countable groups.",
+      "The rabbits could occlude bicycles and cause the bicycle count to fail again.",
+      "The striped attribute could distract from bicycle separability if patterns merge adjacent bicycles.",
+      "The sheep could lose the white attribute if the scene lighting or shading makes them appear gray or brown."
+    ],
+    "repair_constraints": [
+      "Make every one of the exactly five sheep bright white, with clearly white wool; no dark, brown, gray, or colored sheep.",
+      "Show exactly seven bicycles, not fewer and not more.",
+      "Arrange the seven striped bicycles as seven separate, non-overlapping, fully visible bicycles behind the two rabbits, preferably in one horizontal row with visible gaps between bicycles.",
+      "Keep the rabbits in front of the bicycles while ensuring the rabbits do not hide any bicycle so much that it cannot be counted.",
+      "Avoid extra bicycles, partial duplicate bicycles, merged bicycle frames, or confusing wheel fragments."
+    ],
+    "retry_prompt": "A clear wide scene with exactly five bright white woolly sheep on the left side of the image; every sheep is white, fully visible, separate, and easy to count, with no non-white sheep. To the right of the sheep are exactly two rabbits, fully visible and separate. Behind the two rabbits is a single row of exactly seven striped bicycles, each bicycle separate from the others, fully visible, with clear gaps between all seven bicycles and no merged frames or duplicate partial bicycles. The two rabbits are in front of the seven bicycles, but the rabbits are small and low enough that all seven bicycles remain visible and countable behind them. The five white sheep are to the left of the two rabbits. The bicycles are striped. Avoid extra sheep, extra rabbits, extra bicycles, hidden objects, cropped objects, heavy overlap, or confusing merged objects.",
+    "skill_revision": {
+      "new_skills": [
+        "attribute_binding",
+        "quantity_counting",
+        "spatial_layout",
+        "anti_occlusion",
+        "negative_constraints",
+        "clarity_visibility",
+        "multi_object_composition",
+        "object_presence"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same skill set but apply quantity_counting and anti_occlusion more aggressively for the seven bicycles, and apply attribute_binding more explicitly so the white color is bound to each sheep."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the sheeps white?",
+            "score": 0.004745402908156393,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.0047454",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the sheeps white?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many bicycles are in the image?",
+            "score": 0.5001377600981024,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.500138",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many bicycles are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00058/samples/00000.png",
+      "prompt": "A clear wide scene showing exactly five white sheep grouped on the left side of the image, all five fully visible and separate enough to count. To the right of the sheep are exactly two rabbits, fully visible and separate enough to count. Behind the two rabbits are exactly seven striped bicycles, with the rabbits positioned in front of the bicycles; all seven bicycles should remain visible and countable despite being behind the rabbits. The five white sheep are to the left of the two rabbits. The two rabbits are in front of the seven striped bicycles. Avoid extra sheep, extra rabbits, extra bicycles, hidden objects, merged objects, or confusing overlap.",
+      "round": 0,
+      "score": 0.8503106493931021
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00746_6eaa040c_cand_00",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "color_mismatch",
+        "count_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the sheeps white?",
+            "score": 0.004745402908156393,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.0047454",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the sheeps white?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many bicycles are in the image?",
+            "score": 0.5001377600981024,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.500138",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many bicycles are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many sheeps are in the image?",
+            "score": 0.9998251466192329,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.999825",
+          "expected": "five",
+          "status": "passed",
+          "target": "How many sheeps are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any sheeps in the image?",
+            "score": 0.9999997064733179,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any sheeps in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the sheeps to the left of the rabbits?",
+            "score": 0.9999999471823457,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the sheeps to the left of the rabbits?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many rabbits are in the image?",
+            "score": 1.0,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "two",
+          "status": "passed",
+          "target": "How many rabbits are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any rabbits in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any rabbits in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the rabbits in front of the bicycles?",
+            "score": 0.9983985608560033,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.998399",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the rabbits in front of the bicycles?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the bicycles striped?",
+            "score": 1.0,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the bicycles striped?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any bicycles in the image?",
+            "score": 0.999999969793862,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any bicycles in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.8503106493931021,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the sheeps white?",
+              "score": 0.004745402908156393,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.0047454",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the sheeps white?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many bicycles are in the image?",
+              "score": 0.5001377600981024,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.500138",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many bicycles are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00058/samples/00000.png",
+        "prompt": "A clear wide scene showing exactly five white sheep grouped on the left side of the image, all five fully visible and separate enough to count. To the right of the sheep are exactly two rabbits, fully visible and separate enough to count. Behind the two rabbits are exactly seven striped bicycles, with the rabbits positioned in front of the bicycles; all seven bicycles should remain visible and countable despite being behind the rabbits. The five white sheep are to the left of the two rabbits. The two rabbits are in front of the seven striped bicycles. Avoid extra sheep, extra rabbits, extra bicycles, hidden objects, merged objects, or confusing overlap.",
+        "round": 0,
+        "score": 0.8503106493931021
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the sheeps white?",
+            "score": 0.004745402908156393,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.0047454",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the sheeps white?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many bicycles are in the image?",
+            "score": 0.5001377600981024,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.500138",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many bicycles are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "color_mismatch",
+        "count_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the sheeps white?",
+            "score": 0.004745402908156393,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.0047454",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the sheeps white?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many bicycles are in the image?",
+            "score": 0.5001377600981024,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.500138",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many bicycles are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many sheeps are in the image?",
+            "score": 0.9998251466192329,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.999825",
+          "expected": "five",
+          "status": "passed",
+          "target": "How many sheeps are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any sheeps in the image?",
+            "score": 0.9999997064733179,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any sheeps in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the sheeps to the left of the rabbits?",
+            "score": 0.9999999471823457,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the sheeps to the left of the rabbits?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many rabbits are in the image?",
+            "score": 1.0,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "two",
+          "status": "passed",
+          "target": "How many rabbits are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any rabbits in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any rabbits in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the rabbits in front of the bicycles?",
+            "score": 0.9983985608560033,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.998399",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the rabbits in front of the bicycles?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the bicycles striped?",
+            "score": 1.0,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the bicycles striped?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any bicycles in the image?",
+            "score": 0.999999969793862,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any bicycles in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.8503106493931021,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "five white sheeps to the left of two rabbits in front of seven striped bicycles",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the sheeps white?",
+          "score": 0.004745402908156393,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.0047454",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the sheeps white?",
+        "type": "color_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many bicycles are in the image?",
+          "score": 0.5001377600981024,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.500138",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many bicycles are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Depict exactly five sheep, exactly two rabbits, and exactly seven bicycles.",
+        "Bind the color white only to the five sheep.",
+        "Bind the striped pattern only to the seven bicycles.",
+        "Place all five sheep as a separate group to the left of the two rabbits.",
+        "Place the two rabbits in front of the seven bicycles, with the bicycles behind them but still clearly visible.",
+        "Keep all objects separated enough to count; avoid heavy overlap or occlusion."
+      ],
+      "generation_strategy": "Use a clear wide composition with three countable groups: five white sheep on the left, two rabbits to their right in the foreground, and seven striped bicycles arranged behind the rabbits. Maintain object separation, attribute binding, and visibility for accurate counting and spatial relation evaluation.",
+      "initial_prompt": "A clear wide scene showing exactly five white sheep grouped on the left side of the image, all five fully visible and separate enough to count. To the right of the sheep are exactly two rabbits, fully visible and separate enough to count. Behind the two rabbits are exactly seven striped bicycles, with the rabbits positioned in front of the bicycles; all seven bicycles should remain visible and countable despite being behind the rabbits. The five white sheep are to the left of the two rabbits. The two rabbits are in front of the seven striped bicycles. Avoid extra sheep, extra rabbits, extra bicycles, hidden objects, merged objects, or confusing overlap.",
+      "parsed_constraints": {
+        "attributes": {
+          "bicycles": [
+            "striped"
+          ],
+          "sheep": [
+            "white"
+          ]
+        },
+        "counts": {
+          "bicycles": 7,
+          "rabbits": 2,
+          "sheep": 5
+        },
+        "objects": [
+          "sheep",
+          "rabbits",
+          "bicycles"
+        ],
+        "relations": [
+          "five white sheep to the left of two rabbits",
+          "two rabbits in front of seven striped bicycles"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Depict exactly five sheep, exactly two rabbits, and exactly seven bicycles.",
+        "Bind the color white only to the five sheep.",
+        "Bind the striped pattern only to the seven bicycles.",
+        "Place all five sheep as a separate group to the left of the two rabbits.",
+        "Place the two rabbits in front of the seven bicycles, with the bicycles behind them but still clearly visible.",
+        "Keep all objects separated enough to count; avoid heavy overlap or occlusion."
+      ],
+      "generation_strategy": "Use a clear wide composition with three countable groups: five white sheep on the left, two rabbits to their right in the foreground, and seven striped bicycles arranged behind the rabbits. Maintain object separation, attribute binding, and visibility for accurate counting and spatial relation evaluation.",
+      "initial_prompt": "A clear wide scene showing exactly five white sheep grouped on the left side of the image, all five fully visible and separate enough to count. To the right of the sheep are exactly two rabbits, fully visible and separate enough to count. Behind the two rabbits are exactly seven striped bicycles, with the rabbits positioned in front of the bicycles; all seven bicycles should remain visible and countable despite being behind the rabbits. The five white sheep are to the left of the two rabbits. The two rabbits are in front of the seven striped bicycles. Avoid extra sheep, extra rabbits, extra bicycles, hidden objects, merged objects, or confusing overlap.",
+      "parsed_constraints": {
+        "attributes": {
+          "bicycles": [
+            "striped"
+          ],
+          "sheep": [
+            "white"
+          ]
+        },
+        "counts": {
+          "bicycles": 7,
+          "rabbits": 2,
+          "sheep": 5
+        },
+        "objects": [
+          "sheep",
+          "rabbits",
+          "bicycles"
+        ],
+        "relations": [
+          "five white sheep to the left of two rabbits",
+          "two rabbits in front of seven striped bicycles"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_prompt": "A clear wide scene showing exactly five white sheep grouped on the left side of the image, all five fully visible and separate enough to count. To the right of the sheep are exactly two rabbits, fully visible and separate enough to count. Behind the two rabbits are exactly seven striped bicycles, with the rabbits positioned in front of the bicycles; all seven bicycles should remain visible and countable despite being behind the rabbits. The five white sheep are to the left of the two rabbits. The two rabbits are in front of the seven striped bicycles. Avoid extra sheep, extra rabbits, extra bicycles, hidden objects, merged objects, or confusing overlap.",
+    "previous_selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ],
+    "prompt_id": "geneval2_00746_6eaa040c",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "color_mismatch",
+          "count_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the sheeps white?",
+              "score": 0.004745402908156393,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.0047454",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the sheeps white?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many bicycles are in the image?",
+              "score": 0.5001377600981024,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.500138",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many bicycles are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many sheeps are in the image?",
+              "score": 0.9998251466192329,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.999825",
+            "expected": "five",
+            "status": "passed",
+            "target": "How many sheeps are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any sheeps in the image?",
+              "score": 0.9999997064733179,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any sheeps in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the sheeps to the left of the rabbits?",
+              "score": 0.9999999471823457,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the sheeps to the left of the rabbits?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many rabbits are in the image?",
+              "score": 1.0,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "two",
+            "status": "passed",
+            "target": "How many rabbits are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any rabbits in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any rabbits in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the rabbits in front of the bicycles?",
+              "score": 0.9983985608560033,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.998399",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the rabbits in front of the bicycles?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the bicycles striped?",
+              "score": 1.0,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the bicycles striped?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any bicycles in the image?",
+              "score": 0.999999969793862,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any bicycles in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly five sheep, exactly two rabbits, and exactly seven bicycles.",
+            "Bind the color white only to the five sheep.",
+            "Bind the striped pattern only to the seven bicycles.",
+            "Place all five sheep as a separate group to the left of the two rabbits.",
+            "Place the two rabbits in front of the seven bicycles, with the bicycles behind them but still clearly visible.",
+            "Keep all objects separated enough to count; avoid heavy overlap or occlusion."
+          ],
+          "generation_strategy": "Use a clear wide composition with three countable groups: five white sheep on the left, two rabbits to their right in the foreground, and seven striped bicycles arranged behind the rabbits. Maintain object separation, attribute binding, and visibility for accurate counting and spatial relation evaluation.",
+          "initial_prompt": "A clear wide scene showing exactly five white sheep grouped on the left side of the image, all five fully visible and separate enough to count. To the right of the sheep are exactly two rabbits, fully visible and separate enough to count. Behind the two rabbits are exactly seven striped bicycles, with the rabbits positioned in front of the bicycles; all seven bicycles should remain visible and countable despite being behind the rabbits. The five white sheep are to the left of the two rabbits. The two rabbits are in front of the seven striped bicycles. Avoid extra sheep, extra rabbits, extra bicycles, hidden objects, merged objects, or confusing overlap.",
+          "parsed_constraints": {
+            "attributes": {
+              "bicycles": [
+                "striped"
+              ],
+              "sheep": [
+                "white"
+              ]
+            },
+            "counts": {
+              "bicycles": 7,
+              "rabbits": 2,
+              "sheep": 5
+            },
+            "objects": [
+              "sheep",
+              "rabbits",
+              "bicycles"
+            ],
+            "relations": [
+              "five white sheep to the left of two rabbits",
+              "two rabbits in front of seven striped bicycles"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly five sheep, exactly two rabbits, and exactly seven bicycles.",
+            "Bind the color white only to the five sheep.",
+            "Bind the striped pattern only to the seven bicycles.",
+            "Place all five sheep as a separate group to the left of the two rabbits.",
+            "Place the two rabbits in front of the seven bicycles, with the bicycles behind them but still clearly visible.",
+            "Keep all objects separated enough to count; avoid heavy overlap or occlusion."
+          ],
+          "generation_strategy": "Use a clear wide composition with three countable groups: five white sheep on the left, two rabbits to their right in the foreground, and seven striped bicycles arranged behind the rabbits. Maintain object separation, attribute binding, and visibility for accurate counting and spatial relation evaluation.",
+          "initial_prompt": "A clear wide scene showing exactly five white sheep grouped on the left side of the image, all five fully visible and separate enough to count. To the right of the sheep are exactly two rabbits, fully visible and separate enough to count. Behind the two rabbits are exactly seven striped bicycles, with the rabbits positioned in front of the bicycles; all seven bicycles should remain visible and countable despite being behind the rabbits. The five white sheep are to the left of the two rabbits. The two rabbits are in front of the seven striped bicycles. Avoid extra sheep, extra rabbits, extra bicycles, hidden objects, merged objects, or confusing overlap.",
+          "parsed_constraints": {
+            "attributes": {
+              "bicycles": [
+                "striped"
+              ],
+              "sheep": [
+                "white"
+              ]
+            },
+            "counts": {
+              "bicycles": 7,
+              "rabbits": 2,
+              "sheep": 5
+            },
+            "objects": [
+              "sheep",
+              "rabbits",
+              "bicycles"
+            ],
+            "relations": [
+              "five white sheep to the left of two rabbits",
+              "two rabbits in front of seven striped bicycles"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "prompt_used": "A clear wide scene showing exactly five white sheep grouped on the left side of the image, all five fully visible and separate enough to count. To the right of the sheep are exactly two rabbits, fully visible and separate enough to count. Behind the two rabbits are exactly seven striped bicycles, with the rabbits positioned in front of the bicycles; all seven bicycles should remain visible and countable despite being behind the rabbits. The five white sheep are to the left of the two rabbits. The two rabbits are in front of the seven striped bicycles. Avoid extra sheep, extra rabbits, extra bicycles, hidden objects, merged objects, or confusing overlap.",
+        "round": 0,
+        "score": 0.8503106493931021,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the sheeps white?",
+                "score": 0.004745402908156393,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.0047454",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the sheeps white?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many bicycles are in the image?",
+                "score": 0.5001377600981024,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.500138",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many bicycles are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00746_6eaa040c"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the sheeps white?",
+          "score": 0.004745402908156393,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.0047454",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the sheeps white?",
+        "type": "color_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many bicycles are in the image?",
+          "score": 0.5001377600981024,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.500138",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many bicycles are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00058/samples/00000.png",
+    "best_so_far_prompt": "A clear wide scene showing exactly five white sheep grouped on the left side of the image, all five fully visible and separate enough to count. To the right of the sheep are exactly two rabbits, fully visible and separate enough to count. Behind the two rabbits are exactly seven striped bicycles, with the rabbits positioned in front of the bicycles; all seven bicycles should remain visible and countable despite being behind the rabbits. The five white sheep are to the left of the two rabbits. The two rabbits are in front of the seven striped bicycles. Avoid extra sheep, extra rabbits, extra bicycles, hidden objects, merged objects, or confusing overlap.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.8503106493931021,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the sheeps white?",
+          "score": 0.004745402908156393,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.0047454",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the sheeps white?",
+        "type": "color_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many bicycles are in the image?",
+          "score": 0.5001377600981024,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.500138",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many bicycles are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Depict exactly five sheep, exactly two rabbits, and exactly seven bicycles.",
+        "Bind the color white only to the five sheep.",
+        "Bind the striped pattern only to the seven bicycles.",
+        "Place all five sheep as a separate group to the left of the two rabbits.",
+        "Place the two rabbits in front of the seven bicycles, with the bicycles behind them but still clearly visible.",
+        "Keep all objects separated enough to count; avoid heavy overlap or occlusion."
+      ],
+      "generation_strategy": "Use a clear wide composition with three countable groups: five white sheep on the left, two rabbits to their right in the foreground, and seven striped bicycles arranged behind the rabbits. Maintain object separation, attribute binding, and visibility for accurate counting and spatial relation evaluation.",
+      "initial_prompt": "A clear wide scene showing exactly five white sheep grouped on the left side of the image, all five fully visible and separate enough to count. To the right of the sheep are exactly two rabbits, fully visible and separate enough to count. Behind the two rabbits are exactly seven striped bicycles, with the rabbits positioned in front of the bicycles; all seven bicycles should remain visible and countable despite being behind the rabbits. The five white sheep are to the left of the two rabbits. The two rabbits are in front of the seven striped bicycles. Avoid extra sheep, extra rabbits, extra bicycles, hidden objects, merged objects, or confusing overlap.",
+      "parsed_constraints": {
+        "attributes": {
+          "bicycles": [
+            "striped"
+          ],
+          "sheep": [
+            "white"
+          ]
+        },
+        "counts": {
+          "bicycles": 7,
+          "rabbits": 2,
+          "sheep": 5
+        },
+        "objects": [
+          "sheep",
+          "rabbits",
+          "bicycles"
+        ],
+        "relations": [
+          "five white sheep to the left of two rabbits",
+          "two rabbits in front of seven striped bicycles"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.850 failed=['Are the sheeps white?', 'How many bicycles are in the image?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_incremental/snapshot_003_worker_03/geneval2_00746_6eaa040c__geneval2_00746_6eaa040c_cand_00__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00746_6eaa040c__geneval2_00746_6eaa040c_cand_00__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00746_6eaa040c",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image failed the required white color attribute for the five sheep and failed the exact count of seven bicycles. The sheep count, sheep presence, sheep-left-of-rabbits relation, rabbit count and presence, rabbits-in-front-of-bicycles relation, striped bicycle attribute, and bicycle presence all passed and should be explicitly preserved. The bicycle count likely failed because the bicycles behind the rabbits were not separated or visible enough to count as seven distinct bicycles, and the sheep color was not visually emphasized strongly enough.",
+    "expected_improvement": [
+      "All five sheep should be clearly recognized as white by making each sheep bright white with visible white wool and no non-white sheep.",
+      "The bicycle count should improve by arranging exactly seven striped bicycles as seven separate, fully visible, countable instances behind the rabbits with minimal overlap.",
+      "Previously passed counts and spatial relations should remain stable by keeping five sheep on the left, two rabbits to their right, and the rabbits in front of the bicycles."
+    ],
+    "failure_types": [
+      "color_mismatch",
+      "count_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly five sheep visible and countable.",
+      "Keep all sheep to the left of the rabbits.",
+      "Keep exactly two rabbits visible and countable.",
+      "Keep the two rabbits in front of the bicycles.",
+      "Keep the bicycles striped.",
+      "Keep bicycles present and clearly identifiable."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt stated white sheep and seven striped bicycles, but it did not make the sheep whiteness visually dominant enough, and it placed seven bicycles behind rabbits without a strong layout that makes all seven separate bicycle frames and wheels countable. The rabbits may have occluded or visually merged some bicycles, reducing the detected count.",
+      "error_source": "Insufficient attribute emphasis for sheep color and insufficient count-focused separation/visibility for seven bicycles behind foreground rabbits."
+    },
+    "regeneration_strategy": "Use a more structured wide layout: five bright white sheep as a left-side group, two rabbits in the middle foreground, and exactly seven striped bicycles in a single separated row behind the rabbits. Make the rabbits small enough and positioned low enough that all seven bicycles remain visible and countable. Bind white only to the sheep and striped only to the bicycles, with negative constraints against extra or merged objects.",
+    "regression_risks": [
+      "The model may add extra sheep, rabbits, or bicycles when emphasizing countable groups.",
+      "The rabbits could occlude bicycles and cause the bicycle count to fail again.",
+      "The striped attribute could distract from bicycle separability if patterns merge adjacent bicycles.",
+      "The sheep could lose the white attribute if the scene lighting or shading makes them appear gray or brown."
+    ],
+    "repair_constraints": [
+      "Make every one of the exactly five sheep bright white, with clearly white wool; no dark, brown, gray, or colored sheep.",
+      "Show exactly seven bicycles, not fewer and not more.",
+      "Arrange the seven striped bicycles as seven separate, non-overlapping, fully visible bicycles behind the two rabbits, preferably in one horizontal row with visible gaps between bicycles.",
+      "Keep the rabbits in front of the bicycles while ensuring the rabbits do not hide any bicycle so much that it cannot be counted.",
+      "Avoid extra bicycles, partial duplicate bicycles, merged bicycle frames, or confusing wheel fragments."
+    ],
+    "retry_prompt": "A clear wide scene with exactly five bright white woolly sheep on the left side of the image; every sheep is white, fully visible, separate, and easy to count, with no non-white sheep. To the right of the sheep are exactly two rabbits, fully visible and separate. Behind the two rabbits is a single row of exactly seven striped bicycles, each bicycle separate from the others, fully visible, with clear gaps between all seven bicycles and no merged frames or duplicate partial bicycles. The two rabbits are in front of the seven bicycles, but the rabbits are small and low enough that all seven bicycles remain visible and countable behind them. The five white sheep are to the left of the two rabbits. The bicycles are striped. Avoid extra sheep, extra rabbits, extra bicycles, hidden objects, cropped objects, heavy overlap, or confusing merged objects.",
+    "skill_revision": {
+      "new_skills": [
+        "attribute_binding",
+        "quantity_counting",
+        "spatial_layout",
+        "anti_occlusion",
+        "negative_constraints",
+        "clarity_visibility",
+        "multi_object_composition",
+        "object_presence"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same skill set but apply quantity_counting and anti_occlusion more aggressively for the seven bicycles, and apply attribute_binding more explicitly so the white color is bound to each sheep."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "five white sheeps to the left of two rabbits in front of seven striped bicycles",
+    "prompt": "five white sheeps to the left of two rabbits in front of seven striped bicycles",
+    "prompt_id": "geneval2_00746_6eaa040c",
+    "sampling_bucket": "position_spatial",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 2,
+      "count": 3,
+      "object": 3,
+      "position": 2
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 746,
+    "vqa_list": [
+      [
+        "How many sheeps are in the image?",
+        "five"
+      ],
+      [
+        "Are the sheeps white?",
+        "Yes"
+      ],
+      [
+        "Are there any sheeps in the image?",
+        "Yes"
+      ],
+      [
+        "Are the sheeps to the left of the rabbits?",
+        "Yes"
+      ],
+      [
+        "How many rabbits are in the image?",
+        "two"
+      ],
+      [
+        "Are there any rabbits in the image?",
+        "Yes"
+      ],
+      [
+        "Are the rabbits in front of the bicycles?",
+        "Yes"
+      ],
+      [
+        "How many bicycles are in the image?",
+        "seven"
+      ],
+      [
+        "Are the bicycles striped?",
+        "Yes"
+      ],
+      [
+        "Are there any bicycles in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00746_6eaa040c"
+}

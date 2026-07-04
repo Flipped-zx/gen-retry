@@ -30,6 +30,21 @@ diff fields to distinguish fixed constraints, persistent failures, new failures,
 and regressed constraints. Set branch_source to "latest" if the next retry
 should build from the latest attempt, or "best_so_far" if a regression means the
 next retry should branch from the strongest earlier attempt.
+Quality bar:
+- Translate every failed constraint into a concrete repair clause.
+- Translate passed constraints into explicit preservation clauses when they
+  could regress during regeneration.
+- For count failures, state the exact count, make instances visually separable,
+  and add negative clauses against extras or duplicates.
+- For attribute or color failures, bind the attribute to the specific target
+  object; do not apply the attribute globally.
+- For spatial or relation failures, write the subject, relation, and object in
+  an unambiguous layout clause.
+- For persistent failures, change strategy instead of repeating the previous
+  prompt with minor wording changes.
+The teacher does not need raw image bytes. Image paths in history are artifact
+references only; reason from the normalized evaluator report and trajectory
+memory.
 The retry_prompt must be directly usable by a text-to-image generator.
 """
 
@@ -50,8 +65,8 @@ def build_retry_replan_messages(
     persistent_failures: list[Any] | None = None,
     new_failures: list[Any] | None = None,
     regressed_constraints: list[Any] | None = None,
-    score_delta_from_previous: float = 0.0,
-    score_delta_from_best: float = 0.0,
+    score_delta_from_previous: Any = 0.0,
+    score_delta_from_best: Any = 0.0,
     branch_source: str = "latest",
     branch_source_round: int = 0,
     available_skills: Any = None,
@@ -63,8 +78,8 @@ def build_retry_replan_messages(
         "persistent_failures": list(persistent_failures or []),
         "new_failures": list(new_failures or []),
         "regressed_constraints": list(regressed_constraints or []),
-        "score_delta_from_previous": float(score_delta_from_previous),
-        "score_delta_from_best": float(score_delta_from_best),
+        "score_delta_from_previous": _nullable_float(score_delta_from_previous),
+        "score_delta_from_best": _nullable_float(score_delta_from_best),
     }
     state = {
         "original_prompt": original_prompt,
@@ -82,8 +97,8 @@ def build_retry_replan_messages(
         "persistent_failures": list(persistent_failures or []),
         "new_failures": list(new_failures or []),
         "regressed_constraints": list(regressed_constraints or []),
-        "score_delta_from_previous": float(score_delta_from_previous),
-        "score_delta_from_best": float(score_delta_from_best),
+        "score_delta_from_previous": _nullable_float(score_delta_from_previous),
+        "score_delta_from_best": _nullable_float(score_delta_from_best),
         "branch_source": branch_source,
         "branch_source_round": int(branch_source_round),
         "retry_budget_left": retry_budget_left,
@@ -110,3 +125,9 @@ def build_retry_replan_messages(
         {"role": "system", "content": RETRY_REPLAN_SYSTEM_PROMPT},
         {"role": "user", "content": json.dumps(state, ensure_ascii=False, indent=2, sort_keys=True)},
     ]
+
+
+def _nullable_float(value: Any) -> float | None:
+    if value is None:
+        return None
+    return float(value)

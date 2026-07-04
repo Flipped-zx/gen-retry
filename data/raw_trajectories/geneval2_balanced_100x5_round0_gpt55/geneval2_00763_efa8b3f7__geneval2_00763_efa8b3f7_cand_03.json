@@ -1,0 +1,2963 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "color_mismatch",
+          "count_mismatch",
+          "relation_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many flamingos are in the image?",
+              "score": 0.006683474730646144,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.00668347",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many flamingos are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the flamingos chasing the zebras?",
+              "score": 9.956622663954452e-06,
+              "skill": "verb"
+            },
+            "detected": "soft_score=9.95662e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the flamingos chasing the zebras?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the zebras green?",
+              "score": 0.014282855316196219,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.0142829",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the zebras green?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many donuts are in the image?",
+              "score": 1.002189513079377e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.00219e-09",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many donuts are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the flamingos green?",
+              "score": 0.9999863221310079,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.999986",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the flamingos green?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any flamingos in the image?",
+              "score": 0.9999999885330908,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any flamingos in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many zebras are in the image?",
+              "score": 0.9999999987614911,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "three",
+            "status": "passed",
+            "target": "How many zebras are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any zebras in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any zebras in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the zebras in front of the donuts?",
+              "score": 0.9967948895700829,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.996795",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the zebras in front of the donuts?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any donuts in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any donuts in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00763_efa8b3f7_cand_03",
+          "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+          "rows": [
+            {
+              "answer": "six",
+              "atom_count": 10,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00763_efa8b3f7_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00009/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00009/samples/00003.png",
+              "prompt": "six green flamingos chasing three green zebras in front of seven donuts",
+              "prompt_id": "geneval2_00763_efa8b3f7",
+              "question": "How many flamingos are in the image?",
+              "score": 0.006683474730646144,
+              "skill": "count",
+              "source_index": 763
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00763_efa8b3f7_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00009/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00009/samples/00003.png",
+              "prompt": "six green flamingos chasing three green zebras in front of seven donuts",
+              "prompt_id": "geneval2_00763_efa8b3f7",
+              "question": "Are the flamingos green?",
+              "score": 0.9999863221310079,
+              "skill": "attribute",
+              "source_index": 763
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00763_efa8b3f7_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00009/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00009/samples/00003.png",
+              "prompt": "six green flamingos chasing three green zebras in front of seven donuts",
+              "prompt_id": "geneval2_00763_efa8b3f7",
+              "question": "Are there any flamingos in the image?",
+              "score": 0.9999999885330908,
+              "skill": "object",
+              "source_index": 763
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00763_efa8b3f7_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00009/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00009/samples/00003.png",
+              "prompt": "six green flamingos chasing three green zebras in front of seven donuts",
+              "prompt_id": "geneval2_00763_efa8b3f7",
+              "question": "Are the flamingos chasing the zebras?",
+              "score": 9.956622663954452e-06,
+              "skill": "verb",
+              "source_index": 763
+            },
+            {
+              "answer": "three",
+              "atom_count": 10,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00763_efa8b3f7_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00009/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00009/samples/00003.png",
+              "prompt": "six green flamingos chasing three green zebras in front of seven donuts",
+              "prompt_id": "geneval2_00763_efa8b3f7",
+              "question": "How many zebras are in the image?",
+              "score": 0.9999999987614911,
+              "skill": "count",
+              "source_index": 763
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00763_efa8b3f7_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00009/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00009/samples/00003.png",
+              "prompt": "six green flamingos chasing three green zebras in front of seven donuts",
+              "prompt_id": "geneval2_00763_efa8b3f7",
+              "question": "Are the zebras green?",
+              "score": 0.014282855316196219,
+              "skill": "attribute",
+              "source_index": 763
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00763_efa8b3f7_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00009/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00009/samples/00003.png",
+              "prompt": "six green flamingos chasing three green zebras in front of seven donuts",
+              "prompt_id": "geneval2_00763_efa8b3f7",
+              "question": "Are there any zebras in the image?",
+              "score": 1.0000000151521817,
+              "skill": "object",
+              "source_index": 763
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00763_efa8b3f7_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00009/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00009/samples/00003.png",
+              "prompt": "six green flamingos chasing three green zebras in front of seven donuts",
+              "prompt_id": "geneval2_00763_efa8b3f7",
+              "question": "Are the zebras in front of the donuts?",
+              "score": 0.9967948895700829,
+              "skill": "position",
+              "source_index": 763
+            },
+            {
+              "answer": "seven",
+              "atom_count": 10,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00763_efa8b3f7_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00009/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00009/samples/00003.png",
+              "prompt": "six green flamingos chasing three green zebras in front of seven donuts",
+              "prompt_id": "geneval2_00763_efa8b3f7",
+              "question": "How many donuts are in the image?",
+              "score": 1.002189513079377e-09,
+              "skill": "count",
+              "source_index": 763
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00763_efa8b3f7_cand_03",
+              "candidate_index": 3,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00009/samples/00003.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00009/samples/00003.png",
+              "prompt": "six green flamingos chasing three green zebras in front of seven donuts",
+              "prompt_id": "geneval2_00763_efa8b3f7",
+              "question": "Are there any donuts in the image?",
+              "score": 1.0000000115542207,
+              "skill": "object",
+              "source_index": 763
+            }
+          ],
+          "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_001/raw_score_lists.by_candidate.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.6017757486667369,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 3,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00763_efa8b3f7.json",
+          "manifest_prompt_index": 9,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00763_efa8b3f7"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00763_efa8b3f7_cand_03",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00009/samples/00003.png",
+        "prompt_used": "A clear scene with exactly six green flamingos chasing exactly three green zebras in front of exactly seven donuts. The seven donuts are arranged in the background and remain fully visible. The three green zebras are in front of the donuts, clearly separated and fully visible. The six green flamingos are behind or alongside the zebras, all green, moving toward the zebras to show they are chasing them. Keep every flamingo, zebra, and donut distinct, unobstructed, and easy to count. No extra flamingos, zebras, or donuts.",
+        "seed": 1048
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Depict exactly six flamingos, exactly three zebras, and exactly seven donuts.",
+          "Bind green color to all six flamingos and all three zebras.",
+          "Make the six green flamingos visibly chasing the three green zebras.",
+          "Place the three green zebras in front of the seven donuts.",
+          "Keep all objects fully visible and separated enough to count; avoid occlusion between flamingos, zebras, and donuts.",
+          "Do not add extra flamingos, zebras, or donuts."
+        ],
+        "generation_strategy": "Use a clear multi-object composition with three distinct depth layers: seven donuts in the back, three green zebras in front of the donuts, and six green flamingos positioned behind or to the side of the zebras moving toward them to show chasing. Arrange each object with enough spacing for reliable counting and attribute recognition.",
+        "initial_prompt": "A clear scene with exactly six green flamingos chasing exactly three green zebras in front of exactly seven donuts. The seven donuts are arranged in the background and remain fully visible. The three green zebras are in front of the donuts, clearly separated and fully visible. The six green flamingos are behind or alongside the zebras, all green, moving toward the zebras to show they are chasing them. Keep every flamingo, zebra, and donut distinct, unobstructed, and easy to count. No extra flamingos, zebras, or donuts.",
+        "parsed_constraints": {
+          "attributes": {
+            "flamingos": [
+              "green"
+            ],
+            "zebras": [
+              "green"
+            ]
+          },
+          "counts": {
+            "donuts": 7,
+            "flamingos": 6,
+            "zebras": 3
+          },
+          "objects": [
+            "flamingos",
+            "zebras",
+            "donuts"
+          ],
+          "relations": [
+            "six green flamingos chasing three green zebras",
+            "three green zebras in front of seven donuts"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Depict exactly six flamingos, exactly three zebras, and exactly seven donuts.",
+          "Bind green color to all six flamingos and all three zebras.",
+          "Make the six green flamingos visibly chasing the three green zebras.",
+          "Place the three green zebras in front of the seven donuts.",
+          "Keep all objects fully visible and separated enough to count; avoid occlusion between flamingos, zebras, and donuts.",
+          "Do not add extra flamingos, zebras, or donuts."
+        ],
+        "generation_strategy": "Use a clear multi-object composition with three distinct depth layers: seven donuts in the back, three green zebras in front of the donuts, and six green flamingos positioned behind or to the side of the zebras moving toward them to show chasing. Arrange each object with enough spacing for reliable counting and attribute recognition.",
+        "initial_prompt": "A clear scene with exactly six green flamingos chasing exactly three green zebras in front of exactly seven donuts. The seven donuts are arranged in the background and remain fully visible. The three green zebras are in front of the donuts, clearly separated and fully visible. The six green flamingos are behind or alongside the zebras, all green, moving toward the zebras to show they are chasing them. Keep every flamingo, zebra, and donut distinct, unobstructed, and easy to count. No extra flamingos, zebras, or donuts.",
+        "parsed_constraints": {
+          "attributes": {
+            "flamingos": [
+              "green"
+            ],
+            "zebras": [
+              "green"
+            ]
+          },
+          "counts": {
+            "donuts": 7,
+            "flamingos": 6,
+            "zebras": 3
+          },
+          "objects": [
+            "flamingos",
+            "zebras",
+            "donuts"
+          ],
+          "relations": [
+            "six green flamingos chasing three green zebras",
+            "three green zebras in front of seven donuts"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many flamingos are in the image?",
+                "score": 0.006683474730646144,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.00668347",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many flamingos are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the flamingos chasing the zebras?",
+                "score": 9.956622663954452e-06,
+                "skill": "verb"
+              },
+              "detected": "soft_score=9.95662e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the flamingos chasing the zebras?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the zebras green?",
+                "score": 0.014282855316196219,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.0142829",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the zebras green?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many donuts are in the image?",
+                "score": 1.002189513079377e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.00219e-09",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many donuts are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00009/samples/00003.png",
+          "prompt": "A clear scene with exactly six green flamingos chasing exactly three green zebras in front of exactly seven donuts. The seven donuts are arranged in the background and remain fully visible. The three green zebras are in front of the donuts, clearly separated and fully visible. The six green flamingos are behind or alongside the zebras, all green, moving toward the zebras to show they are chasing them. Keep every flamingo, zebra, and donut distinct, unobstructed, and easy to count. No extra flamingos, zebras, or donuts.",
+          "round": 0,
+          "score": 0.6017757486667369
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00763_efa8b3f7_cand_03",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "color_mismatch",
+            "count_mismatch",
+            "relation_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many flamingos are in the image?",
+                "score": 0.006683474730646144,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.00668347",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many flamingos are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the flamingos chasing the zebras?",
+                "score": 9.956622663954452e-06,
+                "skill": "verb"
+              },
+              "detected": "soft_score=9.95662e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the flamingos chasing the zebras?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the zebras green?",
+                "score": 0.014282855316196219,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.0142829",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the zebras green?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many donuts are in the image?",
+                "score": 1.002189513079377e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.00219e-09",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many donuts are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the flamingos green?",
+                "score": 0.9999863221310079,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.999986",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the flamingos green?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any flamingos in the image?",
+                "score": 0.9999999885330908,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any flamingos in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many zebras are in the image?",
+                "score": 0.9999999987614911,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "three",
+              "status": "passed",
+              "target": "How many zebras are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any zebras in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any zebras in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the zebras in front of the donuts?",
+                "score": 0.9967948895700829,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.996795",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the zebras in front of the donuts?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any donuts in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any donuts in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.6017757486667369,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many flamingos are in the image?",
+                  "score": 0.006683474730646144,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.00668347",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many flamingos are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the flamingos chasing the zebras?",
+                  "score": 9.956622663954452e-06,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=9.95662e-06",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the flamingos chasing the zebras?",
+                "type": "relation_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the zebras green?",
+                  "score": 0.014282855316196219,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.0142829",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the zebras green?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many donuts are in the image?",
+                  "score": 1.002189513079377e-09,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1.00219e-09",
+                "expected": "seven",
+                "status": "failed",
+                "target": "How many donuts are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00009/samples/00003.png",
+            "prompt": "A clear scene with exactly six green flamingos chasing exactly three green zebras in front of exactly seven donuts. The seven donuts are arranged in the background and remain fully visible. The three green zebras are in front of the donuts, clearly separated and fully visible. The six green flamingos are behind or alongside the zebras, all green, moving toward the zebras to show they are chasing them. Keep every flamingo, zebra, and donut distinct, unobstructed, and easy to count. No extra flamingos, zebras, or donuts.",
+            "round": 0,
+            "score": 0.6017757486667369
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many flamingos are in the image?",
+                "score": 0.006683474730646144,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.00668347",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many flamingos are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the flamingos chasing the zebras?",
+                "score": 9.956622663954452e-06,
+                "skill": "verb"
+              },
+              "detected": "soft_score=9.95662e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the flamingos chasing the zebras?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the zebras green?",
+                "score": 0.014282855316196219,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.0142829",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the zebras green?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many donuts are in the image?",
+                "score": 1.002189513079377e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.00219e-09",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many donuts are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "color_mismatch",
+            "count_mismatch",
+            "relation_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many flamingos are in the image?",
+                "score": 0.006683474730646144,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.00668347",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many flamingos are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the flamingos chasing the zebras?",
+                "score": 9.956622663954452e-06,
+                "skill": "verb"
+              },
+              "detected": "soft_score=9.95662e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the flamingos chasing the zebras?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the zebras green?",
+                "score": 0.014282855316196219,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.0142829",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the zebras green?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many donuts are in the image?",
+                "score": 1.002189513079377e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.00219e-09",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many donuts are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the flamingos green?",
+                "score": 0.9999863221310079,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.999986",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the flamingos green?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any flamingos in the image?",
+                "score": 0.9999999885330908,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any flamingos in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many zebras are in the image?",
+                "score": 0.9999999987614911,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "three",
+              "status": "passed",
+              "target": "How many zebras are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any zebras in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any zebras in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the zebras in front of the donuts?",
+                "score": 0.9967948895700829,
+                "skill": "position"
+              },
+              "detected": "soft_score=0.996795",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the zebras in front of the donuts?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any donuts in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any donuts in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.6017757486667369,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "six green flamingos chasing three green zebras in front of seven donuts",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many flamingos are in the image?",
+              "score": 0.006683474730646144,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.00668347",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many flamingos are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the flamingos chasing the zebras?",
+              "score": 9.956622663954452e-06,
+              "skill": "verb"
+            },
+            "detected": "soft_score=9.95662e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the flamingos chasing the zebras?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the zebras green?",
+              "score": 0.014282855316196219,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.0142829",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the zebras green?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many donuts are in the image?",
+              "score": 1.002189513079377e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.00219e-09",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many donuts are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly six flamingos, exactly three zebras, and exactly seven donuts.",
+            "Bind green color to all six flamingos and all three zebras.",
+            "Make the six green flamingos visibly chasing the three green zebras.",
+            "Place the three green zebras in front of the seven donuts.",
+            "Keep all objects fully visible and separated enough to count; avoid occlusion between flamingos, zebras, and donuts.",
+            "Do not add extra flamingos, zebras, or donuts."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with three distinct depth layers: seven donuts in the back, three green zebras in front of the donuts, and six green flamingos positioned behind or to the side of the zebras moving toward them to show chasing. Arrange each object with enough spacing for reliable counting and attribute recognition.",
+          "initial_prompt": "A clear scene with exactly six green flamingos chasing exactly three green zebras in front of exactly seven donuts. The seven donuts are arranged in the background and remain fully visible. The three green zebras are in front of the donuts, clearly separated and fully visible. The six green flamingos are behind or alongside the zebras, all green, moving toward the zebras to show they are chasing them. Keep every flamingo, zebra, and donut distinct, unobstructed, and easy to count. No extra flamingos, zebras, or donuts.",
+          "parsed_constraints": {
+            "attributes": {
+              "flamingos": [
+                "green"
+              ],
+              "zebras": [
+                "green"
+              ]
+            },
+            "counts": {
+              "donuts": 7,
+              "flamingos": 6,
+              "zebras": 3
+            },
+            "objects": [
+              "flamingos",
+              "zebras",
+              "donuts"
+            ],
+            "relations": [
+              "six green flamingos chasing three green zebras",
+              "three green zebras in front of seven donuts"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly six flamingos, exactly three zebras, and exactly seven donuts.",
+            "Bind green color to all six flamingos and all three zebras.",
+            "Make the six green flamingos visibly chasing the three green zebras.",
+            "Place the three green zebras in front of the seven donuts.",
+            "Keep all objects fully visible and separated enough to count; avoid occlusion between flamingos, zebras, and donuts.",
+            "Do not add extra flamingos, zebras, or donuts."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with three distinct depth layers: seven donuts in the back, three green zebras in front of the donuts, and six green flamingos positioned behind or to the side of the zebras moving toward them to show chasing. Arrange each object with enough spacing for reliable counting and attribute recognition.",
+          "initial_prompt": "A clear scene with exactly six green flamingos chasing exactly three green zebras in front of exactly seven donuts. The seven donuts are arranged in the background and remain fully visible. The three green zebras are in front of the donuts, clearly separated and fully visible. The six green flamingos are behind or alongside the zebras, all green, moving toward the zebras to show they are chasing them. Keep every flamingo, zebra, and donut distinct, unobstructed, and easy to count. No extra flamingos, zebras, or donuts.",
+          "parsed_constraints": {
+            "attributes": {
+              "flamingos": [
+                "green"
+              ],
+              "zebras": [
+                "green"
+              ]
+            },
+            "counts": {
+              "donuts": 7,
+              "flamingos": 6,
+              "zebras": 3
+            },
+            "objects": [
+              "flamingos",
+              "zebras",
+              "donuts"
+            ],
+            "relations": [
+              "six green flamingos chasing three green zebras",
+              "three green zebras in front of seven donuts"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_prompt": "A clear scene with exactly six green flamingos chasing exactly three green zebras in front of exactly seven donuts. The seven donuts are arranged in the background and remain fully visible. The three green zebras are in front of the donuts, clearly separated and fully visible. The six green flamingos are behind or alongside the zebras, all green, moving toward the zebras to show they are chasing them. Keep every flamingo, zebra, and donut distinct, unobstructed, and easy to count. No extra flamingos, zebras, or donuts.",
+        "previous_selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ],
+        "prompt_id": "geneval2_00763_efa8b3f7",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "color_mismatch",
+              "count_mismatch",
+              "relation_mismatch"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many flamingos are in the image?",
+                  "score": 0.006683474730646144,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.00668347",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many flamingos are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the flamingos chasing the zebras?",
+                  "score": 9.956622663954452e-06,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=9.95662e-06",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the flamingos chasing the zebras?",
+                "type": "relation_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the zebras green?",
+                  "score": 0.014282855316196219,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.0142829",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the zebras green?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many donuts are in the image?",
+                  "score": 1.002189513079377e-09,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1.00219e-09",
+                "expected": "seven",
+                "status": "failed",
+                "target": "How many donuts are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the flamingos green?",
+                  "score": 0.9999863221310079,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.999986",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the flamingos green?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any flamingos in the image?",
+                  "score": 0.9999999885330908,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any flamingos in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many zebras are in the image?",
+                  "score": 0.9999999987614911,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1",
+                "expected": "three",
+                "status": "passed",
+                "target": "How many zebras are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any zebras in the image?",
+                  "score": 1.0,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any zebras in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the zebras in front of the donuts?",
+                  "score": 0.9967948895700829,
+                  "skill": "position"
+                },
+                "detected": "soft_score=0.996795",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the zebras in front of the donuts?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any donuts in the image?",
+                  "score": 1.0,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any donuts in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Depict exactly six flamingos, exactly three zebras, and exactly seven donuts.",
+                "Bind green color to all six flamingos and all three zebras.",
+                "Make the six green flamingos visibly chasing the three green zebras.",
+                "Place the three green zebras in front of the seven donuts.",
+                "Keep all objects fully visible and separated enough to count; avoid occlusion between flamingos, zebras, and donuts.",
+                "Do not add extra flamingos, zebras, or donuts."
+              ],
+              "generation_strategy": "Use a clear multi-object composition with three distinct depth layers: seven donuts in the back, three green zebras in front of the donuts, and six green flamingos positioned behind or to the side of the zebras moving toward them to show chasing. Arrange each object with enough spacing for reliable counting and attribute recognition.",
+              "initial_prompt": "A clear scene with exactly six green flamingos chasing exactly three green zebras in front of exactly seven donuts. The seven donuts are arranged in the background and remain fully visible. The three green zebras are in front of the donuts, clearly separated and fully visible. The six green flamingos are behind or alongside the zebras, all green, moving toward the zebras to show they are chasing them. Keep every flamingo, zebra, and donut distinct, unobstructed, and easy to count. No extra flamingos, zebras, or donuts.",
+              "parsed_constraints": {
+                "attributes": {
+                  "flamingos": [
+                    "green"
+                  ],
+                  "zebras": [
+                    "green"
+                  ]
+                },
+                "counts": {
+                  "donuts": 7,
+                  "flamingos": 6,
+                  "zebras": 3
+                },
+                "objects": [
+                  "flamingos",
+                  "zebras",
+                  "donuts"
+                ],
+                "relations": [
+                  "six green flamingos chasing three green zebras",
+                  "three green zebras in front of seven donuts"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Depict exactly six flamingos, exactly three zebras, and exactly seven donuts.",
+                "Bind green color to all six flamingos and all three zebras.",
+                "Make the six green flamingos visibly chasing the three green zebras.",
+                "Place the three green zebras in front of the seven donuts.",
+                "Keep all objects fully visible and separated enough to count; avoid occlusion between flamingos, zebras, and donuts.",
+                "Do not add extra flamingos, zebras, or donuts."
+              ],
+              "generation_strategy": "Use a clear multi-object composition with three distinct depth layers: seven donuts in the back, three green zebras in front of the donuts, and six green flamingos positioned behind or to the side of the zebras moving toward them to show chasing. Arrange each object with enough spacing for reliable counting and attribute recognition.",
+              "initial_prompt": "A clear scene with exactly six green flamingos chasing exactly three green zebras in front of exactly seven donuts. The seven donuts are arranged in the background and remain fully visible. The three green zebras are in front of the donuts, clearly separated and fully visible. The six green flamingos are behind or alongside the zebras, all green, moving toward the zebras to show they are chasing them. Keep every flamingo, zebra, and donut distinct, unobstructed, and easy to count. No extra flamingos, zebras, or donuts.",
+              "parsed_constraints": {
+                "attributes": {
+                  "flamingos": [
+                    "green"
+                  ],
+                  "zebras": [
+                    "green"
+                  ]
+                },
+                "counts": {
+                  "donuts": 7,
+                  "flamingos": 6,
+                  "zebras": 3
+                },
+                "objects": [
+                  "flamingos",
+                  "zebras",
+                  "donuts"
+                ],
+                "relations": [
+                  "six green flamingos chasing three green zebras",
+                  "three green zebras in front of seven donuts"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "prompt_used": "A clear scene with exactly six green flamingos chasing exactly three green zebras in front of exactly seven donuts. The seven donuts are arranged in the background and remain fully visible. The three green zebras are in front of the donuts, clearly separated and fully visible. The six green flamingos are behind or alongside the zebras, all green, moving toward the zebras to show they are chasing them. Keep every flamingo, zebra, and donut distinct, unobstructed, and easy to count. No extra flamingos, zebras, or donuts.",
+            "round": 0,
+            "score": 0.6017757486667369,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 0,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many flamingos are in the image?",
+                    "score": 0.006683474730646144,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=0.00668347",
+                  "expected": "six",
+                  "status": "failed",
+                  "target": "How many flamingos are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 3,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the flamingos chasing the zebras?",
+                    "score": 9.956622663954452e-06,
+                    "skill": "verb"
+                  },
+                  "detected": "soft_score=9.95662e-06",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the flamingos chasing the zebras?",
+                  "type": "relation_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 5,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the zebras green?",
+                    "score": 0.014282855316196219,
+                    "skill": "attribute"
+                  },
+                  "detected": "soft_score=0.0142829",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the zebras green?",
+                  "type": "color_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 8,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many donuts are in the image?",
+                    "score": 1.002189513079377e-09,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=1.00219e-09",
+                  "expected": "seven",
+                  "status": "failed",
+                  "target": "How many donuts are in the image?",
+                  "type": "count_mismatch"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00763_efa8b3f7"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many flamingos are in the image?",
+              "score": 0.006683474730646144,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.00668347",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many flamingos are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the flamingos chasing the zebras?",
+              "score": 9.956622663954452e-06,
+              "skill": "verb"
+            },
+            "detected": "soft_score=9.95662e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the flamingos chasing the zebras?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the zebras green?",
+              "score": 0.014282855316196219,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.0142829",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the zebras green?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many donuts are in the image?",
+              "score": 1.002189513079377e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.00219e-09",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many donuts are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00763_efa8b3f7_cand_03",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Depict exactly six flamingos, exactly three zebras, and exactly seven donuts.",
+      "Bind green color to all six flamingos and all three zebras.",
+      "Make the six green flamingos visibly chasing the three green zebras.",
+      "Place the three green zebras in front of the seven donuts.",
+      "Keep all objects fully visible and separated enough to count; avoid occlusion between flamingos, zebras, and donuts.",
+      "Do not add extra flamingos, zebras, or donuts."
+    ],
+    "generation_strategy": "Use a clear multi-object composition with three distinct depth layers: seven donuts in the back, three green zebras in front of the donuts, and six green flamingos positioned behind or to the side of the zebras moving toward them to show chasing. Arrange each object with enough spacing for reliable counting and attribute recognition.",
+    "initial_prompt": "A clear scene with exactly six green flamingos chasing exactly three green zebras in front of exactly seven donuts. The seven donuts are arranged in the background and remain fully visible. The three green zebras are in front of the donuts, clearly separated and fully visible. The six green flamingos are behind or alongside the zebras, all green, moving toward the zebras to show they are chasing them. Keep every flamingo, zebra, and donut distinct, unobstructed, and easy to count. No extra flamingos, zebras, or donuts.",
+    "parsed_constraints": {
+      "attributes": {
+        "flamingos": [
+          "green"
+        ],
+        "zebras": [
+          "green"
+        ]
+      },
+      "counts": {
+        "donuts": 7,
+        "flamingos": 6,
+        "zebras": 3
+      },
+      "objects": [
+        "flamingos",
+        "zebras",
+        "donuts"
+      ],
+      "relations": [
+        "six green flamingos chasing three green zebras",
+        "three green zebras in front of seven donuts"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image passed object presence for flamingos, zebras, and donuts, passed green flamingos, passed exactly three zebras, and passed zebras in front of donuts. It failed the exact counts for six flamingos and seven donuts, failed to show the flamingos chasing the zebras, and failed to bind green color to the zebras. The next prompt should use a simpler staged layout with explicit countable groups, stronger green attribute binding on the zebras, and clearer chase direction.",
+    "expected_improvement": [
+      "Six flamingos should become countable as six separate green birds.",
+      "Seven donuts should become countable as seven separate background donuts.",
+      "All three zebras should be visibly green rather than natural zebra coloring.",
+      "The flamingos should read as chasing the zebras by being placed behind them and directed toward them."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "relation_mismatch",
+      "color_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep flamingos present and visibly green.",
+      "Keep exactly three zebras present and visually separable.",
+      "Keep donuts present.",
+      "Keep the three zebras in front of the donuts.",
+      "Keep all required objects unobstructed and easy to verify."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt stated the correct counts and relations, but the composition was too complex for reliable counting and did not force a simple countable arrangement. It also did not bind the green color strongly enough to the zebras, and the chase relation was described generally rather than with an unambiguous subject-relation-object layout.",
+      "error_source": "prompt_underconstrained_for_counting_attribute_binding_and_action_relation"
+    },
+    "regeneration_strategy": "Use a clean, poster-like composition with three readable depth layers: seven donuts in a separated back row, three bright green zebras in the middle foreground directly in front of the donuts, and six bright green flamingos behind the zebras, all oriented toward the zebras to make the chase relation explicit. Use exact counts, separable instances, and negative constraints against extras.",
+    "regression_risks": [
+      "The generator may add extra flamingos or merge flamingos together because six is a high count.",
+      "The generator may render zebras with normal black-and-white stripes instead of green bodies.",
+      "The generator may hide or merge donuts behind the zebras, reducing the donut count.",
+      "The chase relation may become ambiguous if flamingos face away from the zebras or are placed beside them without direction."
+    ],
+    "repair_constraints": [
+      "Show exactly six flamingos, each a separate fully visible green flamingo; no fewer, no more, no merged flamingos.",
+      "Show exactly seven donuts, each a separate fully visible donut in the background; no fewer, no more, no duplicate partial donuts.",
+      "Make all three zebras green, binding the green color to the zebra bodies specifically.",
+      "Show the six green flamingos chasing the three green zebras: flamingos positioned behind the zebras and facing/moving toward the zebras.",
+      "Maintain exactly three zebras in front of the seven donuts."
+    ],
+    "retry_prompt": "A clean, simple scene with exactly seven donuts in the background, arranged as seven separate fully visible donuts in one clear row. In front of the donuts are exactly three zebras, each zebra fully visible, separated from the others, and colored bright green on its body. Behind the three green zebras are exactly six green flamingos, arranged as six separate fully visible flamingos in two clear rows of three, all facing toward the zebras and moving toward them so the flamingos are clearly chasing the zebras. The three green zebras must remain in front of the seven donuts. Keep every flamingo, zebra, and donut distinct, unobstructed, and easy to count. No extra flamingos, no extra zebras, no extra donuts.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints",
+        "object_presence"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "Use the same skill set but apply it more rigidly: exact countable rows for flamingos and donuts, explicit green binding to zebra bodies, and an unambiguous behind-and-facing-toward layout for the chase relation."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many flamingos are in the image?",
+            "score": 0.006683474730646144,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.00668347",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many flamingos are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the flamingos chasing the zebras?",
+            "score": 9.956622663954452e-06,
+            "skill": "verb"
+          },
+          "detected": "soft_score=9.95662e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the flamingos chasing the zebras?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the zebras green?",
+            "score": 0.014282855316196219,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.0142829",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the zebras green?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many donuts are in the image?",
+            "score": 1.002189513079377e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.00219e-09",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many donuts are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00009/samples/00003.png",
+      "prompt": "A clear scene with exactly six green flamingos chasing exactly three green zebras in front of exactly seven donuts. The seven donuts are arranged in the background and remain fully visible. The three green zebras are in front of the donuts, clearly separated and fully visible. The six green flamingos are behind or alongside the zebras, all green, moving toward the zebras to show they are chasing them. Keep every flamingo, zebra, and donut distinct, unobstructed, and easy to count. No extra flamingos, zebras, or donuts.",
+      "round": 0,
+      "score": 0.6017757486667369
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00763_efa8b3f7_cand_03",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "color_mismatch",
+        "count_mismatch",
+        "relation_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many flamingos are in the image?",
+            "score": 0.006683474730646144,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.00668347",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many flamingos are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the flamingos chasing the zebras?",
+            "score": 9.956622663954452e-06,
+            "skill": "verb"
+          },
+          "detected": "soft_score=9.95662e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the flamingos chasing the zebras?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the zebras green?",
+            "score": 0.014282855316196219,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.0142829",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the zebras green?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many donuts are in the image?",
+            "score": 1.002189513079377e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.00219e-09",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many donuts are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the flamingos green?",
+            "score": 0.9999863221310079,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.999986",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the flamingos green?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any flamingos in the image?",
+            "score": 0.9999999885330908,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any flamingos in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many zebras are in the image?",
+            "score": 0.9999999987614911,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "three",
+          "status": "passed",
+          "target": "How many zebras are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any zebras in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any zebras in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the zebras in front of the donuts?",
+            "score": 0.9967948895700829,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.996795",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the zebras in front of the donuts?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any donuts in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any donuts in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.6017757486667369,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many flamingos are in the image?",
+              "score": 0.006683474730646144,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.00668347",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many flamingos are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the flamingos chasing the zebras?",
+              "score": 9.956622663954452e-06,
+              "skill": "verb"
+            },
+            "detected": "soft_score=9.95662e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the flamingos chasing the zebras?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the zebras green?",
+              "score": 0.014282855316196219,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.0142829",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the zebras green?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many donuts are in the image?",
+              "score": 1.002189513079377e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.00219e-09",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many donuts are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00009/samples/00003.png",
+        "prompt": "A clear scene with exactly six green flamingos chasing exactly three green zebras in front of exactly seven donuts. The seven donuts are arranged in the background and remain fully visible. The three green zebras are in front of the donuts, clearly separated and fully visible. The six green flamingos are behind or alongside the zebras, all green, moving toward the zebras to show they are chasing them. Keep every flamingo, zebra, and donut distinct, unobstructed, and easy to count. No extra flamingos, zebras, or donuts.",
+        "round": 0,
+        "score": 0.6017757486667369
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many flamingos are in the image?",
+            "score": 0.006683474730646144,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.00668347",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many flamingos are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the flamingos chasing the zebras?",
+            "score": 9.956622663954452e-06,
+            "skill": "verb"
+          },
+          "detected": "soft_score=9.95662e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the flamingos chasing the zebras?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the zebras green?",
+            "score": 0.014282855316196219,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.0142829",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the zebras green?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many donuts are in the image?",
+            "score": 1.002189513079377e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.00219e-09",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many donuts are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "color_mismatch",
+        "count_mismatch",
+        "relation_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many flamingos are in the image?",
+            "score": 0.006683474730646144,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.00668347",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many flamingos are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the flamingos chasing the zebras?",
+            "score": 9.956622663954452e-06,
+            "skill": "verb"
+          },
+          "detected": "soft_score=9.95662e-06",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the flamingos chasing the zebras?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the zebras green?",
+            "score": 0.014282855316196219,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.0142829",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the zebras green?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many donuts are in the image?",
+            "score": 1.002189513079377e-09,
+            "skill": "count"
+          },
+          "detected": "soft_score=1.00219e-09",
+          "expected": "seven",
+          "status": "failed",
+          "target": "How many donuts are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the flamingos green?",
+            "score": 0.9999863221310079,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.999986",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the flamingos green?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any flamingos in the image?",
+            "score": 0.9999999885330908,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any flamingos in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many zebras are in the image?",
+            "score": 0.9999999987614911,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "three",
+          "status": "passed",
+          "target": "How many zebras are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any zebras in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any zebras in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the zebras in front of the donuts?",
+            "score": 0.9967948895700829,
+            "skill": "position"
+          },
+          "detected": "soft_score=0.996795",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the zebras in front of the donuts?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any donuts in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any donuts in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.6017757486667369,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "six green flamingos chasing three green zebras in front of seven donuts",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many flamingos are in the image?",
+          "score": 0.006683474730646144,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.00668347",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many flamingos are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the flamingos chasing the zebras?",
+          "score": 9.956622663954452e-06,
+          "skill": "verb"
+        },
+        "detected": "soft_score=9.95662e-06",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the flamingos chasing the zebras?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the zebras green?",
+          "score": 0.014282855316196219,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.0142829",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the zebras green?",
+        "type": "color_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many donuts are in the image?",
+          "score": 1.002189513079377e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.00219e-09",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many donuts are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Depict exactly six flamingos, exactly three zebras, and exactly seven donuts.",
+        "Bind green color to all six flamingos and all three zebras.",
+        "Make the six green flamingos visibly chasing the three green zebras.",
+        "Place the three green zebras in front of the seven donuts.",
+        "Keep all objects fully visible and separated enough to count; avoid occlusion between flamingos, zebras, and donuts.",
+        "Do not add extra flamingos, zebras, or donuts."
+      ],
+      "generation_strategy": "Use a clear multi-object composition with three distinct depth layers: seven donuts in the back, three green zebras in front of the donuts, and six green flamingos positioned behind or to the side of the zebras moving toward them to show chasing. Arrange each object with enough spacing for reliable counting and attribute recognition.",
+      "initial_prompt": "A clear scene with exactly six green flamingos chasing exactly three green zebras in front of exactly seven donuts. The seven donuts are arranged in the background and remain fully visible. The three green zebras are in front of the donuts, clearly separated and fully visible. The six green flamingos are behind or alongside the zebras, all green, moving toward the zebras to show they are chasing them. Keep every flamingo, zebra, and donut distinct, unobstructed, and easy to count. No extra flamingos, zebras, or donuts.",
+      "parsed_constraints": {
+        "attributes": {
+          "flamingos": [
+            "green"
+          ],
+          "zebras": [
+            "green"
+          ]
+        },
+        "counts": {
+          "donuts": 7,
+          "flamingos": 6,
+          "zebras": 3
+        },
+        "objects": [
+          "flamingos",
+          "zebras",
+          "donuts"
+        ],
+        "relations": [
+          "six green flamingos chasing three green zebras",
+          "three green zebras in front of seven donuts"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Depict exactly six flamingos, exactly three zebras, and exactly seven donuts.",
+        "Bind green color to all six flamingos and all three zebras.",
+        "Make the six green flamingos visibly chasing the three green zebras.",
+        "Place the three green zebras in front of the seven donuts.",
+        "Keep all objects fully visible and separated enough to count; avoid occlusion between flamingos, zebras, and donuts.",
+        "Do not add extra flamingos, zebras, or donuts."
+      ],
+      "generation_strategy": "Use a clear multi-object composition with three distinct depth layers: seven donuts in the back, three green zebras in front of the donuts, and six green flamingos positioned behind or to the side of the zebras moving toward them to show chasing. Arrange each object with enough spacing for reliable counting and attribute recognition.",
+      "initial_prompt": "A clear scene with exactly six green flamingos chasing exactly three green zebras in front of exactly seven donuts. The seven donuts are arranged in the background and remain fully visible. The three green zebras are in front of the donuts, clearly separated and fully visible. The six green flamingos are behind or alongside the zebras, all green, moving toward the zebras to show they are chasing them. Keep every flamingo, zebra, and donut distinct, unobstructed, and easy to count. No extra flamingos, zebras, or donuts.",
+      "parsed_constraints": {
+        "attributes": {
+          "flamingos": [
+            "green"
+          ],
+          "zebras": [
+            "green"
+          ]
+        },
+        "counts": {
+          "donuts": 7,
+          "flamingos": 6,
+          "zebras": 3
+        },
+        "objects": [
+          "flamingos",
+          "zebras",
+          "donuts"
+        ],
+        "relations": [
+          "six green flamingos chasing three green zebras",
+          "three green zebras in front of seven donuts"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_prompt": "A clear scene with exactly six green flamingos chasing exactly three green zebras in front of exactly seven donuts. The seven donuts are arranged in the background and remain fully visible. The three green zebras are in front of the donuts, clearly separated and fully visible. The six green flamingos are behind or alongside the zebras, all green, moving toward the zebras to show they are chasing them. Keep every flamingo, zebra, and donut distinct, unobstructed, and easy to count. No extra flamingos, zebras, or donuts.",
+    "previous_selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ],
+    "prompt_id": "geneval2_00763_efa8b3f7",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "color_mismatch",
+          "count_mismatch",
+          "relation_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many flamingos are in the image?",
+              "score": 0.006683474730646144,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.00668347",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many flamingos are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the flamingos chasing the zebras?",
+              "score": 9.956622663954452e-06,
+              "skill": "verb"
+            },
+            "detected": "soft_score=9.95662e-06",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the flamingos chasing the zebras?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the zebras green?",
+              "score": 0.014282855316196219,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.0142829",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the zebras green?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many donuts are in the image?",
+              "score": 1.002189513079377e-09,
+              "skill": "count"
+            },
+            "detected": "soft_score=1.00219e-09",
+            "expected": "seven",
+            "status": "failed",
+            "target": "How many donuts are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the flamingos green?",
+              "score": 0.9999863221310079,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.999986",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the flamingos green?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any flamingos in the image?",
+              "score": 0.9999999885330908,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any flamingos in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many zebras are in the image?",
+              "score": 0.9999999987614911,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "three",
+            "status": "passed",
+            "target": "How many zebras are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any zebras in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any zebras in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the zebras in front of the donuts?",
+              "score": 0.9967948895700829,
+              "skill": "position"
+            },
+            "detected": "soft_score=0.996795",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the zebras in front of the donuts?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any donuts in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any donuts in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly six flamingos, exactly three zebras, and exactly seven donuts.",
+            "Bind green color to all six flamingos and all three zebras.",
+            "Make the six green flamingos visibly chasing the three green zebras.",
+            "Place the three green zebras in front of the seven donuts.",
+            "Keep all objects fully visible and separated enough to count; avoid occlusion between flamingos, zebras, and donuts.",
+            "Do not add extra flamingos, zebras, or donuts."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with three distinct depth layers: seven donuts in the back, three green zebras in front of the donuts, and six green flamingos positioned behind or to the side of the zebras moving toward them to show chasing. Arrange each object with enough spacing for reliable counting and attribute recognition.",
+          "initial_prompt": "A clear scene with exactly six green flamingos chasing exactly three green zebras in front of exactly seven donuts. The seven donuts are arranged in the background and remain fully visible. The three green zebras are in front of the donuts, clearly separated and fully visible. The six green flamingos are behind or alongside the zebras, all green, moving toward the zebras to show they are chasing them. Keep every flamingo, zebra, and donut distinct, unobstructed, and easy to count. No extra flamingos, zebras, or donuts.",
+          "parsed_constraints": {
+            "attributes": {
+              "flamingos": [
+                "green"
+              ],
+              "zebras": [
+                "green"
+              ]
+            },
+            "counts": {
+              "donuts": 7,
+              "flamingos": 6,
+              "zebras": 3
+            },
+            "objects": [
+              "flamingos",
+              "zebras",
+              "donuts"
+            ],
+            "relations": [
+              "six green flamingos chasing three green zebras",
+              "three green zebras in front of seven donuts"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly six flamingos, exactly three zebras, and exactly seven donuts.",
+            "Bind green color to all six flamingos and all three zebras.",
+            "Make the six green flamingos visibly chasing the three green zebras.",
+            "Place the three green zebras in front of the seven donuts.",
+            "Keep all objects fully visible and separated enough to count; avoid occlusion between flamingos, zebras, and donuts.",
+            "Do not add extra flamingos, zebras, or donuts."
+          ],
+          "generation_strategy": "Use a clear multi-object composition with three distinct depth layers: seven donuts in the back, three green zebras in front of the donuts, and six green flamingos positioned behind or to the side of the zebras moving toward them to show chasing. Arrange each object with enough spacing for reliable counting and attribute recognition.",
+          "initial_prompt": "A clear scene with exactly six green flamingos chasing exactly three green zebras in front of exactly seven donuts. The seven donuts are arranged in the background and remain fully visible. The three green zebras are in front of the donuts, clearly separated and fully visible. The six green flamingos are behind or alongside the zebras, all green, moving toward the zebras to show they are chasing them. Keep every flamingo, zebra, and donut distinct, unobstructed, and easy to count. No extra flamingos, zebras, or donuts.",
+          "parsed_constraints": {
+            "attributes": {
+              "flamingos": [
+                "green"
+              ],
+              "zebras": [
+                "green"
+              ]
+            },
+            "counts": {
+              "donuts": 7,
+              "flamingos": 6,
+              "zebras": 3
+            },
+            "objects": [
+              "flamingos",
+              "zebras",
+              "donuts"
+            ],
+            "relations": [
+              "six green flamingos chasing three green zebras",
+              "three green zebras in front of seven donuts"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "prompt_used": "A clear scene with exactly six green flamingos chasing exactly three green zebras in front of exactly seven donuts. The seven donuts are arranged in the background and remain fully visible. The three green zebras are in front of the donuts, clearly separated and fully visible. The six green flamingos are behind or alongside the zebras, all green, moving toward the zebras to show they are chasing them. Keep every flamingo, zebra, and donut distinct, unobstructed, and easy to count. No extra flamingos, zebras, or donuts.",
+        "round": 0,
+        "score": 0.6017757486667369,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many flamingos are in the image?",
+                "score": 0.006683474730646144,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.00668347",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many flamingos are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the flamingos chasing the zebras?",
+                "score": 9.956622663954452e-06,
+                "skill": "verb"
+              },
+              "detected": "soft_score=9.95662e-06",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the flamingos chasing the zebras?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the zebras green?",
+                "score": 0.014282855316196219,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.0142829",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the zebras green?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many donuts are in the image?",
+                "score": 1.002189513079377e-09,
+                "skill": "count"
+              },
+              "detected": "soft_score=1.00219e-09",
+              "expected": "seven",
+              "status": "failed",
+              "target": "How many donuts are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00763_efa8b3f7"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many flamingos are in the image?",
+          "score": 0.006683474730646144,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.00668347",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many flamingos are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the flamingos chasing the zebras?",
+          "score": 9.956622663954452e-06,
+          "skill": "verb"
+        },
+        "detected": "soft_score=9.95662e-06",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the flamingos chasing the zebras?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the zebras green?",
+          "score": 0.014282855316196219,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.0142829",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the zebras green?",
+        "type": "color_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many donuts are in the image?",
+          "score": 1.002189513079377e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.00219e-09",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many donuts are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00009/samples/00003.png",
+    "best_so_far_prompt": "A clear scene with exactly six green flamingos chasing exactly three green zebras in front of exactly seven donuts. The seven donuts are arranged in the background and remain fully visible. The three green zebras are in front of the donuts, clearly separated and fully visible. The six green flamingos are behind or alongside the zebras, all green, moving toward the zebras to show they are chasing them. Keep every flamingo, zebra, and donut distinct, unobstructed, and easy to count. No extra flamingos, zebras, or donuts.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.6017757486667369,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many flamingos are in the image?",
+          "score": 0.006683474730646144,
+          "skill": "count"
+        },
+        "detected": "soft_score=0.00668347",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many flamingos are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 3,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the flamingos chasing the zebras?",
+          "score": 9.956622663954452e-06,
+          "skill": "verb"
+        },
+        "detected": "soft_score=9.95662e-06",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the flamingos chasing the zebras?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the zebras green?",
+          "score": 0.014282855316196219,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.0142829",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the zebras green?",
+        "type": "color_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many donuts are in the image?",
+          "score": 1.002189513079377e-09,
+          "skill": "count"
+        },
+        "detected": "soft_score=1.00219e-09",
+        "expected": "seven",
+        "status": "failed",
+        "target": "How many donuts are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Depict exactly six flamingos, exactly three zebras, and exactly seven donuts.",
+        "Bind green color to all six flamingos and all three zebras.",
+        "Make the six green flamingos visibly chasing the three green zebras.",
+        "Place the three green zebras in front of the seven donuts.",
+        "Keep all objects fully visible and separated enough to count; avoid occlusion between flamingos, zebras, and donuts.",
+        "Do not add extra flamingos, zebras, or donuts."
+      ],
+      "generation_strategy": "Use a clear multi-object composition with three distinct depth layers: seven donuts in the back, three green zebras in front of the donuts, and six green flamingos positioned behind or to the side of the zebras moving toward them to show chasing. Arrange each object with enough spacing for reliable counting and attribute recognition.",
+      "initial_prompt": "A clear scene with exactly six green flamingos chasing exactly three green zebras in front of exactly seven donuts. The seven donuts are arranged in the background and remain fully visible. The three green zebras are in front of the donuts, clearly separated and fully visible. The six green flamingos are behind or alongside the zebras, all green, moving toward the zebras to show they are chasing them. Keep every flamingo, zebra, and donut distinct, unobstructed, and easy to count. No extra flamingos, zebras, or donuts.",
+      "parsed_constraints": {
+        "attributes": {
+          "flamingos": [
+            "green"
+          ],
+          "zebras": [
+            "green"
+          ]
+        },
+        "counts": {
+          "donuts": 7,
+          "flamingos": 6,
+          "zebras": 3
+        },
+        "objects": [
+          "flamingos",
+          "zebras",
+          "donuts"
+        ],
+        "relations": [
+          "six green flamingos chasing three green zebras",
+          "three green zebras in front of seven donuts"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.602 failed=['How many flamingos are in the image?', 'Are the flamingos chasing the zebras?', 'Are the zebras green?', 'How many donuts are in the image?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_incremental/snapshot_001_worker_03/geneval2_00763_efa8b3f7__geneval2_00763_efa8b3f7_cand_03__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00763_efa8b3f7__geneval2_00763_efa8b3f7_cand_03__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00763_efa8b3f7",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image passed object presence for flamingos, zebras, and donuts, passed green flamingos, passed exactly three zebras, and passed zebras in front of donuts. It failed the exact counts for six flamingos and seven donuts, failed to show the flamingos chasing the zebras, and failed to bind green color to the zebras. The next prompt should use a simpler staged layout with explicit countable groups, stronger green attribute binding on the zebras, and clearer chase direction.",
+    "expected_improvement": [
+      "Six flamingos should become countable as six separate green birds.",
+      "Seven donuts should become countable as seven separate background donuts.",
+      "All three zebras should be visibly green rather than natural zebra coloring.",
+      "The flamingos should read as chasing the zebras by being placed behind them and directed toward them."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "relation_mismatch",
+      "color_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep flamingos present and visibly green.",
+      "Keep exactly three zebras present and visually separable.",
+      "Keep donuts present.",
+      "Keep the three zebras in front of the donuts.",
+      "Keep all required objects unobstructed and easy to verify."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt stated the correct counts and relations, but the composition was too complex for reliable counting and did not force a simple countable arrangement. It also did not bind the green color strongly enough to the zebras, and the chase relation was described generally rather than with an unambiguous subject-relation-object layout.",
+      "error_source": "prompt_underconstrained_for_counting_attribute_binding_and_action_relation"
+    },
+    "regeneration_strategy": "Use a clean, poster-like composition with three readable depth layers: seven donuts in a separated back row, three bright green zebras in the middle foreground directly in front of the donuts, and six bright green flamingos behind the zebras, all oriented toward the zebras to make the chase relation explicit. Use exact counts, separable instances, and negative constraints against extras.",
+    "regression_risks": [
+      "The generator may add extra flamingos or merge flamingos together because six is a high count.",
+      "The generator may render zebras with normal black-and-white stripes instead of green bodies.",
+      "The generator may hide or merge donuts behind the zebras, reducing the donut count.",
+      "The chase relation may become ambiguous if flamingos face away from the zebras or are placed beside them without direction."
+    ],
+    "repair_constraints": [
+      "Show exactly six flamingos, each a separate fully visible green flamingo; no fewer, no more, no merged flamingos.",
+      "Show exactly seven donuts, each a separate fully visible donut in the background; no fewer, no more, no duplicate partial donuts.",
+      "Make all three zebras green, binding the green color to the zebra bodies specifically.",
+      "Show the six green flamingos chasing the three green zebras: flamingos positioned behind the zebras and facing/moving toward the zebras.",
+      "Maintain exactly three zebras in front of the seven donuts."
+    ],
+    "retry_prompt": "A clean, simple scene with exactly seven donuts in the background, arranged as seven separate fully visible donuts in one clear row. In front of the donuts are exactly three zebras, each zebra fully visible, separated from the others, and colored bright green on its body. Behind the three green zebras are exactly six green flamingos, arranged as six separate fully visible flamingos in two clear rows of three, all facing toward the zebras and moving toward them so the flamingos are clearly chasing the zebras. The three green zebras must remain in front of the seven donuts. Keep every flamingo, zebra, and donut distinct, unobstructed, and easy to count. No extra flamingos, no extra zebras, no extra donuts.",
+    "skill_revision": {
+      "new_skills": [
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints",
+        "object_presence"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "Use the same skill set but apply it more rigidly: exact countable rows for flamingos and donuts, explicit green binding to zebra bodies, and an unambiguous behind-and-facing-toward layout for the chase relation."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "six green flamingos chasing three green zebras in front of seven donuts",
+    "prompt": "six green flamingos chasing three green zebras in front of seven donuts",
+    "prompt_id": "geneval2_00763_efa8b3f7",
+    "sampling_bucket": "count",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "relation_action",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 2,
+      "count": 3,
+      "object": 3,
+      "position": 1,
+      "verb": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "verb",
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 763,
+    "vqa_list": [
+      [
+        "How many flamingos are in the image?",
+        "six"
+      ],
+      [
+        "Are the flamingos green?",
+        "Yes"
+      ],
+      [
+        "Are there any flamingos in the image?",
+        "Yes"
+      ],
+      [
+        "Are the flamingos chasing the zebras?",
+        "Yes"
+      ],
+      [
+        "How many zebras are in the image?",
+        "three"
+      ],
+      [
+        "Are the zebras green?",
+        "Yes"
+      ],
+      [
+        "Are there any zebras in the image?",
+        "Yes"
+      ],
+      [
+        "Are the zebras in front of the donuts?",
+        "Yes"
+      ],
+      [
+        "How many donuts are in the image?",
+        "seven"
+      ],
+      [
+        "Are there any donuts in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00763_efa8b3f7"
+}

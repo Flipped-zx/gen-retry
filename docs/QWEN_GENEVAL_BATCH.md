@@ -125,6 +125,82 @@ CUDA_VISIBLE_DEVICES=0,1,2,3,4,5 python3 scripts/generate_qwen_geneval_images.py
   --progress-interval 60
 ```
 
+## GenEval2 Candidate-0 Diagnostic Plan
+
+For retry trajectory construction, the current first-pass checkpoint uses one image per prompt from the 100 x 5 manifest: `candidate_index=0`. Generate the diagnostic job files without starting GenEval2:
+
+```bash
+python3 scripts/run_geneval2_batch.py \
+  --manifest data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/generation_manifest.jsonl \
+  --output-dir data/geneval2_jobs/balanced100_candidate0 \
+  --candidate-index 0 \
+  --limit 100 \
+  --n-samples 5 \
+  --plan-only \
+  --keep-eval-inputs
+```
+
+Expected outputs:
+
+```text
+data/geneval2_jobs/balanced100_candidate0/
+  diagnostic_jobs.jsonl       # 100 candidate-0 image jobs
+  eval_benchmark.jsonl        # GenEval2 benchmark rows keyed by candidate_id
+  eval_image_paths.json       # candidate_id -> image path
+  geneval2_batch_plan.json    # plan summary
+```
+
+To run real GenEval2 later in a prepared verifier environment, remove `--plan-only`. The normalized result file expected by the retry package builder is:
+
+```text
+data/geneval2_jobs/balanced100_candidate0/normalized_reports.jsonl
+```
+
+If the verifier machine returns official `raw_score_lists.json` instead of normalized JSONL, normalize it on this machine with the preserved benchmark rows:
+
+```bash
+python3 scripts/normalize_geneval2_results.py \
+  --input data/geneval2_jobs/balanced100_candidate0/raw_score_lists.json \
+  --benchmark-data data/geneval2_jobs/balanced100_candidate0/eval_benchmark.jsonl \
+  --aggregate-by candidate_id \
+  --atom-threshold 0.9 \
+  --output data/geneval2_jobs/balanced100_candidate0/normalized_reports.jsonl
+```
+
+Preferred no-API checkpoint after diagnostics return:
+
+```bash
+python3 scripts/prepare_geneval2_retry_inputs.py \
+  --manifest data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/generation_manifest.jsonl \
+  --package-dir data/incoming_generation_results/geneval2_balanced_100_round0_with_eval \
+  --initial-plan-dir data/plans/initial/geneval2_balanced_100_gpt55 \
+  --diagnostic-jobs data/geneval2_jobs/balanced100_candidate0/diagnostic_jobs.jsonl \
+  --raw-score-lists data/geneval2_jobs/balanced100_candidate0/raw_score_lists.json \
+  --benchmark-data data/geneval2_jobs/balanced100_candidate0/eval_benchmark.jsonl \
+  --candidate-index 0 \
+  --limit 100
+```
+
+Then preview the exact JSON context that will be sent to the retry teacher:
+
+```bash
+python3 scripts/preview_geneval2_teacher_requests.py \
+  --package-dir data/incoming_generation_results/geneval2_balanced_100_round0_with_eval \
+  --output data/geneval2_jobs/balanced100_candidate0/teacher_requests_preview.jsonl \
+  --summary-output data/geneval2_jobs/balanced100_candidate0/teacher_requests_preview_summary.json
+```
+
+After copying that normalized result file back to this machine, run the retry-input preflight before any teacher API calls:
+
+```bash
+python3 scripts/check_geneval2_retry_inputs.py \
+  --package-manifest data/incoming_generation_results/geneval2_balanced_100_round0_initial_gpt55/package_manifest.jsonl \
+  --diagnostic-jobs data/geneval2_jobs/balanced100_candidate0/diagnostic_jobs.jsonl \
+  --eval-results data/geneval2_jobs/balanced100_candidate0/normalized_reports.jsonl \
+  --expected-count 100 \
+  --output data/geneval2_jobs/balanced100_candidate0/retry_input_preflight.json
+```
+
 Run official GenEval and select prompt groups:
 
 ```bash

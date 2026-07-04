@@ -1,0 +1,2976 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "count_mismatch",
+          "relation_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many violins are in the image?",
+              "score": 2.7494995373839645e-05,
+              "skill": "count"
+            },
+            "detected": "soft_score=2.7495e-05",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many violins are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the violins metal?",
+              "score": 1.4413737176033337e-08,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1.44137e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the violins metal?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the flamingo chasing the cats?",
+              "score": 0.013983936274517106,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.0139839",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the flamingo chasing the cats?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cats are in the image?",
+              "score": 5.6481030323238e-07,
+              "skill": "count"
+            },
+            "detected": "soft_score=5.6481e-07",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many cats are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any violins in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any violins in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the violins to the left of the flamingo?",
+              "score": 1.0,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the violins to the left of the flamingo?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many flamingos are in the image?",
+              "score": 0.999999951985929,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "one",
+            "status": "passed",
+            "target": "How many flamingos are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the flamingo sparkling?",
+              "score": 0.9999998330786184,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Is the flamingo sparkling?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any flamingos in the image?",
+              "score": 0.999999957595719,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any flamingos in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any cats in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any cats in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00608_3630bc48_cand_04",
+          "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+          "rows": [
+            {
+              "answer": "six",
+              "atom_count": 9,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00608_3630bc48_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00069/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00069/samples/00004.png",
+              "prompt": "six metal violins to the left of a sparkling flamingo chasing six cats",
+              "prompt_id": "geneval2_00608_3630bc48",
+              "question": "How many violins are in the image?",
+              "score": 2.7494995373839645e-05,
+              "skill": "count",
+              "source_index": 608
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00608_3630bc48_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00069/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00069/samples/00004.png",
+              "prompt": "six metal violins to the left of a sparkling flamingo chasing six cats",
+              "prompt_id": "geneval2_00608_3630bc48",
+              "question": "Are the violins metal?",
+              "score": 1.4413737176033337e-08,
+              "skill": "attribute",
+              "source_index": 608
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00608_3630bc48_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00069/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00069/samples/00004.png",
+              "prompt": "six metal violins to the left of a sparkling flamingo chasing six cats",
+              "prompt_id": "geneval2_00608_3630bc48",
+              "question": "Are there any violins in the image?",
+              "score": 1.000000052019459,
+              "skill": "object",
+              "source_index": 608
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00608_3630bc48_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00069/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00069/samples/00004.png",
+              "prompt": "six metal violins to the left of a sparkling flamingo chasing six cats",
+              "prompt_id": "geneval2_00608_3630bc48",
+              "question": "Are the violins to the left of the flamingo?",
+              "score": 1.0000000467207428,
+              "skill": "position",
+              "source_index": 608
+            },
+            {
+              "answer": "one",
+              "atom_count": 9,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00608_3630bc48_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00069/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00069/samples/00004.png",
+              "prompt": "six metal violins to the left of a sparkling flamingo chasing six cats",
+              "prompt_id": "geneval2_00608_3630bc48",
+              "question": "How many flamingos are in the image?",
+              "score": 0.999999951985929,
+              "skill": "count",
+              "source_index": 608
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00608_3630bc48_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00069/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00069/samples/00004.png",
+              "prompt": "six metal violins to the left of a sparkling flamingo chasing six cats",
+              "prompt_id": "geneval2_00608_3630bc48",
+              "question": "Is the flamingo sparkling?",
+              "score": 0.9999998330786184,
+              "skill": "attribute",
+              "source_index": 608
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00608_3630bc48_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00069/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00069/samples/00004.png",
+              "prompt": "six metal violins to the left of a sparkling flamingo chasing six cats",
+              "prompt_id": "geneval2_00608_3630bc48",
+              "question": "Are there any flamingos in the image?",
+              "score": 0.999999957595719,
+              "skill": "object",
+              "source_index": 608
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00608_3630bc48_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00069/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00069/samples/00004.png",
+              "prompt": "six metal violins to the left of a sparkling flamingo chasing six cats",
+              "prompt_id": "geneval2_00608_3630bc48",
+              "question": "Is the flamingo chasing the cats?",
+              "score": 0.013983936274517106,
+              "skill": "verb",
+              "source_index": 608
+            },
+            {
+              "answer": "six",
+              "atom_count": 9,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00608_3630bc48_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00069/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00069/samples/00004.png",
+              "prompt": "six metal violins to the left of a sparkling flamingo chasing six cats",
+              "prompt_id": "geneval2_00608_3630bc48",
+              "question": "How many cats are in the image?",
+              "score": 5.6481030323238e-07,
+              "skill": "count",
+              "source_index": 608
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 9,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00608_3630bc48_cand_04",
+              "candidate_index": 4,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00069/samples/00004.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00069/samples/00004.png",
+              "prompt": "six metal violins to the left of a sparkling flamingo chasing six cats",
+              "prompt_id": "geneval2_00608_3630bc48",
+              "question": "Are there any cats in the image?",
+              "score": 1.000000036041456,
+              "skill": "object",
+              "source_index": 608
+            }
+          ],
+          "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.6014011753154198,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 4,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00608_3630bc48.json",
+          "manifest_prompt_index": 69,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00608_3630bc48"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00608_3630bc48_cand_04",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00069/samples/00004.png",
+        "prompt_used": "A clear wide scene with exactly six metal violins on the left side of the image, all fully visible and separated for counting. To the right of the violins is exactly one sparkling flamingo, fully visible, facing and running toward exactly six cats. The six cats are ahead of the flamingo, clearly being chased by it, all fully visible and separated for counting. The violins are all to the left of the flamingo. No extra violins, no extra flamingos, no extra cats, no occlusion.",
+        "seed": 1349
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Depict exactly six violins, exactly one flamingo, and exactly six cats.",
+          "Bind the metal attribute only to the six violins.",
+          "Bind the sparkling attribute only to the single flamingo.",
+          "Place all six metal violins clearly to the left of the flamingo.",
+          "Show the flamingo chasing the six cats, with the cats clearly ahead of the flamingo and the flamingo oriented toward them.",
+          "Keep all objects visible and separated enough to count; avoid overlapping or occluding the violins, flamingo, or cats.",
+          "Do not add extra violins, flamingos, cats, or other prominent animals."
+        ],
+        "generation_strategy": "Use a wide composition with three clear groups: six metal violins arranged on the left, one sparkling flamingo in the middle/right, and six cats ahead of the flamingo to show the chasing action. Maintain clear spacing and full visibility so counts and relations are unambiguous.",
+        "initial_prompt": "A clear wide scene with exactly six metal violins on the left side of the image, all fully visible and separated for counting. To the right of the violins is exactly one sparkling flamingo, fully visible, facing and running toward exactly six cats. The six cats are ahead of the flamingo, clearly being chased by it, all fully visible and separated for counting. The violins are all to the left of the flamingo. No extra violins, no extra flamingos, no extra cats, no occlusion.",
+        "parsed_constraints": {
+          "attributes": {
+            "flamingo": [
+              "sparkling"
+            ],
+            "violins": [
+              "metal"
+            ]
+          },
+          "counts": {
+            "cats": 6,
+            "flamingos": 1,
+            "violins": 6
+          },
+          "objects": [
+            "violins",
+            "flamingo",
+            "cats"
+          ],
+          "relations": [
+            "six metal violins are to the left of the flamingo",
+            "the sparkling flamingo is chasing six cats"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Depict exactly six violins, exactly one flamingo, and exactly six cats.",
+          "Bind the metal attribute only to the six violins.",
+          "Bind the sparkling attribute only to the single flamingo.",
+          "Place all six metal violins clearly to the left of the flamingo.",
+          "Show the flamingo chasing the six cats, with the cats clearly ahead of the flamingo and the flamingo oriented toward them.",
+          "Keep all objects visible and separated enough to count; avoid overlapping or occluding the violins, flamingo, or cats.",
+          "Do not add extra violins, flamingos, cats, or other prominent animals."
+        ],
+        "generation_strategy": "Use a wide composition with three clear groups: six metal violins arranged on the left, one sparkling flamingo in the middle/right, and six cats ahead of the flamingo to show the chasing action. Maintain clear spacing and full visibility so counts and relations are unambiguous.",
+        "initial_prompt": "A clear wide scene with exactly six metal violins on the left side of the image, all fully visible and separated for counting. To the right of the violins is exactly one sparkling flamingo, fully visible, facing and running toward exactly six cats. The six cats are ahead of the flamingo, clearly being chased by it, all fully visible and separated for counting. The violins are all to the left of the flamingo. No extra violins, no extra flamingos, no extra cats, no occlusion.",
+        "parsed_constraints": {
+          "attributes": {
+            "flamingo": [
+              "sparkling"
+            ],
+            "violins": [
+              "metal"
+            ]
+          },
+          "counts": {
+            "cats": 6,
+            "flamingos": 1,
+            "violins": 6
+          },
+          "objects": [
+            "violins",
+            "flamingo",
+            "cats"
+          ],
+          "relations": [
+            "six metal violins are to the left of the flamingo",
+            "the sparkling flamingo is chasing six cats"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many violins are in the image?",
+                "score": 2.7494995373839645e-05,
+                "skill": "count"
+              },
+              "detected": "soft_score=2.7495e-05",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many violins are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the violins metal?",
+                "score": 1.4413737176033337e-08,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1.44137e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the violins metal?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the flamingo chasing the cats?",
+                "score": 0.013983936274517106,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.0139839",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the flamingo chasing the cats?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cats are in the image?",
+                "score": 5.6481030323238e-07,
+                "skill": "count"
+              },
+              "detected": "soft_score=5.6481e-07",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many cats are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00069/samples/00004.png",
+          "prompt": "A clear wide scene with exactly six metal violins on the left side of the image, all fully visible and separated for counting. To the right of the violins is exactly one sparkling flamingo, fully visible, facing and running toward exactly six cats. The six cats are ahead of the flamingo, clearly being chased by it, all fully visible and separated for counting. The violins are all to the left of the flamingo. No extra violins, no extra flamingos, no extra cats, no occlusion.",
+          "round": 0,
+          "score": 0.6014011753154198
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00608_3630bc48_cand_04",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "attribute_mismatch",
+            "count_mismatch",
+            "relation_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many violins are in the image?",
+                "score": 2.7494995373839645e-05,
+                "skill": "count"
+              },
+              "detected": "soft_score=2.7495e-05",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many violins are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the violins metal?",
+                "score": 1.4413737176033337e-08,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1.44137e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the violins metal?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the flamingo chasing the cats?",
+                "score": 0.013983936274517106,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.0139839",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the flamingo chasing the cats?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cats are in the image?",
+                "score": 5.6481030323238e-07,
+                "skill": "count"
+              },
+              "detected": "soft_score=5.6481e-07",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many cats are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any violins in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any violins in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the violins to the left of the flamingo?",
+                "score": 1.0,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the violins to the left of the flamingo?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many flamingos are in the image?",
+                "score": 0.999999951985929,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "one",
+              "status": "passed",
+              "target": "How many flamingos are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the flamingo sparkling?",
+                "score": 0.9999998330786184,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Is the flamingo sparkling?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any flamingos in the image?",
+                "score": 0.999999957595719,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any flamingos in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any cats in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any cats in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.6014011753154198,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many violins are in the image?",
+                  "score": 2.7494995373839645e-05,
+                  "skill": "count"
+                },
+                "detected": "soft_score=2.7495e-05",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many violins are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the violins metal?",
+                  "score": 1.4413737176033337e-08,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1.44137e-08",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the violins metal?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Is the flamingo chasing the cats?",
+                  "score": 0.013983936274517106,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=0.0139839",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Is the flamingo chasing the cats?",
+                "type": "relation_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many cats are in the image?",
+                  "score": 5.6481030323238e-07,
+                  "skill": "count"
+                },
+                "detected": "soft_score=5.6481e-07",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many cats are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00069/samples/00004.png",
+            "prompt": "A clear wide scene with exactly six metal violins on the left side of the image, all fully visible and separated for counting. To the right of the violins is exactly one sparkling flamingo, fully visible, facing and running toward exactly six cats. The six cats are ahead of the flamingo, clearly being chased by it, all fully visible and separated for counting. The violins are all to the left of the flamingo. No extra violins, no extra flamingos, no extra cats, no occlusion.",
+            "round": 0,
+            "score": 0.6014011753154198
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many violins are in the image?",
+                "score": 2.7494995373839645e-05,
+                "skill": "count"
+              },
+              "detected": "soft_score=2.7495e-05",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many violins are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the violins metal?",
+                "score": 1.4413737176033337e-08,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1.44137e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the violins metal?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the flamingo chasing the cats?",
+                "score": 0.013983936274517106,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.0139839",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the flamingo chasing the cats?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cats are in the image?",
+                "score": 5.6481030323238e-07,
+                "skill": "count"
+              },
+              "detected": "soft_score=5.6481e-07",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many cats are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "attribute_mismatch",
+            "count_mismatch",
+            "relation_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many violins are in the image?",
+                "score": 2.7494995373839645e-05,
+                "skill": "count"
+              },
+              "detected": "soft_score=2.7495e-05",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many violins are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the violins metal?",
+                "score": 1.4413737176033337e-08,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1.44137e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the violins metal?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the flamingo chasing the cats?",
+                "score": 0.013983936274517106,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.0139839",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the flamingo chasing the cats?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cats are in the image?",
+                "score": 5.6481030323238e-07,
+                "skill": "count"
+              },
+              "detected": "soft_score=5.6481e-07",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many cats are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any violins in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any violins in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the violins to the left of the flamingo?",
+                "score": 1.0,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the violins to the left of the flamingo?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many flamingos are in the image?",
+                "score": 0.999999951985929,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "one",
+              "status": "passed",
+              "target": "How many flamingos are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the flamingo sparkling?",
+                "score": 0.9999998330786184,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Is the flamingo sparkling?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any flamingos in the image?",
+                "score": 0.999999957595719,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any flamingos in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any cats in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any cats in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.6014011753154198,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "six metal violins to the left of a sparkling flamingo chasing six cats",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many violins are in the image?",
+              "score": 2.7494995373839645e-05,
+              "skill": "count"
+            },
+            "detected": "soft_score=2.7495e-05",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many violins are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the violins metal?",
+              "score": 1.4413737176033337e-08,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1.44137e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the violins metal?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the flamingo chasing the cats?",
+              "score": 0.013983936274517106,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.0139839",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the flamingo chasing the cats?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cats are in the image?",
+              "score": 5.6481030323238e-07,
+              "skill": "count"
+            },
+            "detected": "soft_score=5.6481e-07",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many cats are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly six violins, exactly one flamingo, and exactly six cats.",
+            "Bind the metal attribute only to the six violins.",
+            "Bind the sparkling attribute only to the single flamingo.",
+            "Place all six metal violins clearly to the left of the flamingo.",
+            "Show the flamingo chasing the six cats, with the cats clearly ahead of the flamingo and the flamingo oriented toward them.",
+            "Keep all objects visible and separated enough to count; avoid overlapping or occluding the violins, flamingo, or cats.",
+            "Do not add extra violins, flamingos, cats, or other prominent animals."
+          ],
+          "generation_strategy": "Use a wide composition with three clear groups: six metal violins arranged on the left, one sparkling flamingo in the middle/right, and six cats ahead of the flamingo to show the chasing action. Maintain clear spacing and full visibility so counts and relations are unambiguous.",
+          "initial_prompt": "A clear wide scene with exactly six metal violins on the left side of the image, all fully visible and separated for counting. To the right of the violins is exactly one sparkling flamingo, fully visible, facing and running toward exactly six cats. The six cats are ahead of the flamingo, clearly being chased by it, all fully visible and separated for counting. The violins are all to the left of the flamingo. No extra violins, no extra flamingos, no extra cats, no occlusion.",
+          "parsed_constraints": {
+            "attributes": {
+              "flamingo": [
+                "sparkling"
+              ],
+              "violins": [
+                "metal"
+              ]
+            },
+            "counts": {
+              "cats": 6,
+              "flamingos": 1,
+              "violins": 6
+            },
+            "objects": [
+              "violins",
+              "flamingo",
+              "cats"
+            ],
+            "relations": [
+              "six metal violins are to the left of the flamingo",
+              "the sparkling flamingo is chasing six cats"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly six violins, exactly one flamingo, and exactly six cats.",
+            "Bind the metal attribute only to the six violins.",
+            "Bind the sparkling attribute only to the single flamingo.",
+            "Place all six metal violins clearly to the left of the flamingo.",
+            "Show the flamingo chasing the six cats, with the cats clearly ahead of the flamingo and the flamingo oriented toward them.",
+            "Keep all objects visible and separated enough to count; avoid overlapping or occluding the violins, flamingo, or cats.",
+            "Do not add extra violins, flamingos, cats, or other prominent animals."
+          ],
+          "generation_strategy": "Use a wide composition with three clear groups: six metal violins arranged on the left, one sparkling flamingo in the middle/right, and six cats ahead of the flamingo to show the chasing action. Maintain clear spacing and full visibility so counts and relations are unambiguous.",
+          "initial_prompt": "A clear wide scene with exactly six metal violins on the left side of the image, all fully visible and separated for counting. To the right of the violins is exactly one sparkling flamingo, fully visible, facing and running toward exactly six cats. The six cats are ahead of the flamingo, clearly being chased by it, all fully visible and separated for counting. The violins are all to the left of the flamingo. No extra violins, no extra flamingos, no extra cats, no occlusion.",
+          "parsed_constraints": {
+            "attributes": {
+              "flamingo": [
+                "sparkling"
+              ],
+              "violins": [
+                "metal"
+              ]
+            },
+            "counts": {
+              "cats": 6,
+              "flamingos": 1,
+              "violins": 6
+            },
+            "objects": [
+              "violins",
+              "flamingo",
+              "cats"
+            ],
+            "relations": [
+              "six metal violins are to the left of the flamingo",
+              "the sparkling flamingo is chasing six cats"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_prompt": "A clear wide scene with exactly six metal violins on the left side of the image, all fully visible and separated for counting. To the right of the violins is exactly one sparkling flamingo, fully visible, facing and running toward exactly six cats. The six cats are ahead of the flamingo, clearly being chased by it, all fully visible and separated for counting. The violins are all to the left of the flamingo. No extra violins, no extra flamingos, no extra cats, no occlusion.",
+        "previous_selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ],
+        "prompt_id": "geneval2_00608_3630bc48",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "attribute_mismatch",
+              "count_mismatch",
+              "relation_mismatch"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many violins are in the image?",
+                  "score": 2.7494995373839645e-05,
+                  "skill": "count"
+                },
+                "detected": "soft_score=2.7495e-05",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many violins are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the violins metal?",
+                  "score": 1.4413737176033337e-08,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1.44137e-08",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the violins metal?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Is the flamingo chasing the cats?",
+                  "score": 0.013983936274517106,
+                  "skill": "verb"
+                },
+                "detected": "soft_score=0.0139839",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Is the flamingo chasing the cats?",
+                "type": "relation_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many cats are in the image?",
+                  "score": 5.6481030323238e-07,
+                  "skill": "count"
+                },
+                "detected": "soft_score=5.6481e-07",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many cats are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any violins in the image?",
+                  "score": 1.0,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any violins in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the violins to the left of the flamingo?",
+                  "score": 1.0,
+                  "skill": "position"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the violins to the left of the flamingo?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many flamingos are in the image?",
+                  "score": 0.999999951985929,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1",
+                "expected": "one",
+                "status": "passed",
+                "target": "How many flamingos are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Is the flamingo sparkling?",
+                  "score": 0.9999998330786184,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Is the flamingo sparkling?",
+                "type": "attribute_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any flamingos in the image?",
+                  "score": 0.999999957595719,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any flamingos in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any cats in the image?",
+                  "score": 1.0,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any cats in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Depict exactly six violins, exactly one flamingo, and exactly six cats.",
+                "Bind the metal attribute only to the six violins.",
+                "Bind the sparkling attribute only to the single flamingo.",
+                "Place all six metal violins clearly to the left of the flamingo.",
+                "Show the flamingo chasing the six cats, with the cats clearly ahead of the flamingo and the flamingo oriented toward them.",
+                "Keep all objects visible and separated enough to count; avoid overlapping or occluding the violins, flamingo, or cats.",
+                "Do not add extra violins, flamingos, cats, or other prominent animals."
+              ],
+              "generation_strategy": "Use a wide composition with three clear groups: six metal violins arranged on the left, one sparkling flamingo in the middle/right, and six cats ahead of the flamingo to show the chasing action. Maintain clear spacing and full visibility so counts and relations are unambiguous.",
+              "initial_prompt": "A clear wide scene with exactly six metal violins on the left side of the image, all fully visible and separated for counting. To the right of the violins is exactly one sparkling flamingo, fully visible, facing and running toward exactly six cats. The six cats are ahead of the flamingo, clearly being chased by it, all fully visible and separated for counting. The violins are all to the left of the flamingo. No extra violins, no extra flamingos, no extra cats, no occlusion.",
+              "parsed_constraints": {
+                "attributes": {
+                  "flamingo": [
+                    "sparkling"
+                  ],
+                  "violins": [
+                    "metal"
+                  ]
+                },
+                "counts": {
+                  "cats": 6,
+                  "flamingos": 1,
+                  "violins": 6
+                },
+                "objects": [
+                  "violins",
+                  "flamingo",
+                  "cats"
+                ],
+                "relations": [
+                  "six metal violins are to the left of the flamingo",
+                  "the sparkling flamingo is chasing six cats"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Depict exactly six violins, exactly one flamingo, and exactly six cats.",
+                "Bind the metal attribute only to the six violins.",
+                "Bind the sparkling attribute only to the single flamingo.",
+                "Place all six metal violins clearly to the left of the flamingo.",
+                "Show the flamingo chasing the six cats, with the cats clearly ahead of the flamingo and the flamingo oriented toward them.",
+                "Keep all objects visible and separated enough to count; avoid overlapping or occluding the violins, flamingo, or cats.",
+                "Do not add extra violins, flamingos, cats, or other prominent animals."
+              ],
+              "generation_strategy": "Use a wide composition with three clear groups: six metal violins arranged on the left, one sparkling flamingo in the middle/right, and six cats ahead of the flamingo to show the chasing action. Maintain clear spacing and full visibility so counts and relations are unambiguous.",
+              "initial_prompt": "A clear wide scene with exactly six metal violins on the left side of the image, all fully visible and separated for counting. To the right of the violins is exactly one sparkling flamingo, fully visible, facing and running toward exactly six cats. The six cats are ahead of the flamingo, clearly being chased by it, all fully visible and separated for counting. The violins are all to the left of the flamingo. No extra violins, no extra flamingos, no extra cats, no occlusion.",
+              "parsed_constraints": {
+                "attributes": {
+                  "flamingo": [
+                    "sparkling"
+                  ],
+                  "violins": [
+                    "metal"
+                  ]
+                },
+                "counts": {
+                  "cats": 6,
+                  "flamingos": 1,
+                  "violins": 6
+                },
+                "objects": [
+                  "violins",
+                  "flamingo",
+                  "cats"
+                ],
+                "relations": [
+                  "six metal violins are to the left of the flamingo",
+                  "the sparkling flamingo is chasing six cats"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "prompt_used": "A clear wide scene with exactly six metal violins on the left side of the image, all fully visible and separated for counting. To the right of the violins is exactly one sparkling flamingo, fully visible, facing and running toward exactly six cats. The six cats are ahead of the flamingo, clearly being chased by it, all fully visible and separated for counting. The violins are all to the left of the flamingo. No extra violins, no extra flamingos, no extra cats, no occlusion.",
+            "round": 0,
+            "score": 0.6014011753154198,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 0,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many violins are in the image?",
+                    "score": 2.7494995373839645e-05,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=2.7495e-05",
+                  "expected": "six",
+                  "status": "failed",
+                  "target": "How many violins are in the image?",
+                  "type": "count_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 1,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the violins metal?",
+                    "score": 1.4413737176033337e-08,
+                    "skill": "attribute"
+                  },
+                  "detected": "soft_score=1.44137e-08",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the violins metal?",
+                  "type": "attribute_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 7,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Is the flamingo chasing the cats?",
+                    "score": 0.013983936274517106,
+                    "skill": "verb"
+                  },
+                  "detected": "soft_score=0.0139839",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Is the flamingo chasing the cats?",
+                  "type": "relation_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 8,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many cats are in the image?",
+                    "score": 5.6481030323238e-07,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=5.6481e-07",
+                  "expected": "six",
+                  "status": "failed",
+                  "target": "How many cats are in the image?",
+                  "type": "count_mismatch"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00608_3630bc48"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many violins are in the image?",
+              "score": 2.7494995373839645e-05,
+              "skill": "count"
+            },
+            "detected": "soft_score=2.7495e-05",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many violins are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the violins metal?",
+              "score": 1.4413737176033337e-08,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1.44137e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the violins metal?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the flamingo chasing the cats?",
+              "score": 0.013983936274517106,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.0139839",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the flamingo chasing the cats?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cats are in the image?",
+              "score": 5.6481030323238e-07,
+              "skill": "count"
+            },
+            "detected": "soft_score=5.6481e-07",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many cats are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00608_3630bc48_cand_04",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Depict exactly six violins, exactly one flamingo, and exactly six cats.",
+      "Bind the metal attribute only to the six violins.",
+      "Bind the sparkling attribute only to the single flamingo.",
+      "Place all six metal violins clearly to the left of the flamingo.",
+      "Show the flamingo chasing the six cats, with the cats clearly ahead of the flamingo and the flamingo oriented toward them.",
+      "Keep all objects visible and separated enough to count; avoid overlapping or occluding the violins, flamingo, or cats.",
+      "Do not add extra violins, flamingos, cats, or other prominent animals."
+    ],
+    "generation_strategy": "Use a wide composition with three clear groups: six metal violins arranged on the left, one sparkling flamingo in the middle/right, and six cats ahead of the flamingo to show the chasing action. Maintain clear spacing and full visibility so counts and relations are unambiguous.",
+    "initial_prompt": "A clear wide scene with exactly six metal violins on the left side of the image, all fully visible and separated for counting. To the right of the violins is exactly one sparkling flamingo, fully visible, facing and running toward exactly six cats. The six cats are ahead of the flamingo, clearly being chased by it, all fully visible and separated for counting. The violins are all to the left of the flamingo. No extra violins, no extra flamingos, no extra cats, no occlusion.",
+    "parsed_constraints": {
+      "attributes": {
+        "flamingo": [
+          "sparkling"
+        ],
+        "violins": [
+          "metal"
+        ]
+      },
+      "counts": {
+        "cats": 6,
+        "flamingos": 1,
+        "violins": 6
+      },
+      "objects": [
+        "violins",
+        "flamingo",
+        "cats"
+      ],
+      "relations": [
+        "six metal violins are to the left of the flamingo",
+        "the sparkling flamingo is chasing six cats"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image preserved object presence, one sparkling flamingo, cats present, violins present, and the violins being to the left of the flamingo, but failed exact counts for violins and cats, failed binding the metal material to the violins, and failed the flamingo-chasing-cats action. The next prompt must make the six violins and six cats individually countable, explicitly metallic, and use a clearer left-to-right chase layout with the flamingo behind the cats and facing/running toward them.",
+    "expected_improvement": [
+      "Exactly six separate violins should be visible and countable.",
+      "Each violin should read as metal through shiny reflective metallic surfaces.",
+      "Exactly six separate cats should be visible and countable, with no extras.",
+      "The single sparkling flamingo should clearly be chasing the cats by being behind them, facing them, and running toward them."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "attribute_mismatch",
+      "relation_mismatch"
+    ],
+    "preserve_constraints": [
+      "Include visible violins.",
+      "Keep all violins to the left of the flamingo.",
+      "Include exactly one flamingo.",
+      "Keep the flamingo sparkling.",
+      "Include visible cats."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt asked for the correct objects and layout but used a crowded wide scene with two different groups requiring exact counts. It did not enforce a simple countable arrangement for six violins and six cats, and the chase action may have been too implicit. The metal attribute was stated but not visually reinforced as reflective metallic material on every violin.",
+      "error_source": "Prompt under-specified visual count structure, material cues, and action staging."
+    },
+    "regeneration_strategy": "Use a simple horizontal composition with three separated zones: a left 2-by-3 display of six metallic violins, one sparkling flamingo in the middle facing right, and a right 2-by-3 group of six cats running away from the flamingo. Emphasize separable instances, reflective metal on the violins, and no extra duplicated objects.",
+    "regression_risks": [
+      "The generator may add extra cats or violins when showing groups.",
+      "The metallic attribute may be lost if the violins look wooden.",
+      "The chase relation may become ambiguous if the flamingo is not behind the cats or not facing them.",
+      "The passed constraint that the violins are left of the flamingo could regress if the composition becomes cluttered."
+    ],
+    "repair_constraints": [
+      "Show exactly six violins, arranged as six separate complete instruments, preferably in two rows of three, with no extra violins.",
+      "Bind metal only to the violins: every violin must have shiny reflective metallic material, not wooden surfaces.",
+      "Show exactly six cats, arranged as six separate complete cats, preferably in two rows of three, with no extra cats.",
+      "Show the sparkling flamingo chasing the cats: the flamingo is behind the cats, facing toward them, running toward them, while the cats are ahead of it moving away.",
+      "Keep the violins clearly to the left of the flamingo.",
+      "Keep exactly one sparkling flamingo visible and unobstructed."
+    ],
+    "retry_prompt": "A clear simple left-to-right scene. On the far left, exactly six metal violins are displayed as six separate complete instruments in a neat two-by-three arrangement; every violin is shiny reflective metallic, and none are wooden. In the center, exactly one sparkling flamingo is fully visible, facing right and running. On the right, exactly six cats are fully visible as six separate complete cats in a loose two-by-three group, ahead of the flamingo and running away from it. The sparkling flamingo is clearly chasing the six cats: it is behind them, oriented toward them, and moving toward them. All six metal violins are to the left of the flamingo. Keep every required object unobstructed and countable. No extra violins, no extra flamingos, no extra cats, no duplicate or merged animals or instruments.",
+    "skill_revision": {
+      "new_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same skill set but apply quantity_counting more strongly with two-by-three separable arrangements, attribute_binding with explicit shiny reflective metal on every violin, and spatial_layout with an unambiguous behind/ahead chase structure."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many violins are in the image?",
+            "score": 2.7494995373839645e-05,
+            "skill": "count"
+          },
+          "detected": "soft_score=2.7495e-05",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many violins are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the violins metal?",
+            "score": 1.4413737176033337e-08,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1.44137e-08",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the violins metal?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the flamingo chasing the cats?",
+            "score": 0.013983936274517106,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.0139839",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the flamingo chasing the cats?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cats are in the image?",
+            "score": 5.6481030323238e-07,
+            "skill": "count"
+          },
+          "detected": "soft_score=5.6481e-07",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many cats are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00069/samples/00004.png",
+      "prompt": "A clear wide scene with exactly six metal violins on the left side of the image, all fully visible and separated for counting. To the right of the violins is exactly one sparkling flamingo, fully visible, facing and running toward exactly six cats. The six cats are ahead of the flamingo, clearly being chased by it, all fully visible and separated for counting. The violins are all to the left of the flamingo. No extra violins, no extra flamingos, no extra cats, no occlusion.",
+      "round": 0,
+      "score": 0.6014011753154198
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00608_3630bc48_cand_04",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "count_mismatch",
+        "relation_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many violins are in the image?",
+            "score": 2.7494995373839645e-05,
+            "skill": "count"
+          },
+          "detected": "soft_score=2.7495e-05",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many violins are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the violins metal?",
+            "score": 1.4413737176033337e-08,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1.44137e-08",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the violins metal?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the flamingo chasing the cats?",
+            "score": 0.013983936274517106,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.0139839",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the flamingo chasing the cats?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cats are in the image?",
+            "score": 5.6481030323238e-07,
+            "skill": "count"
+          },
+          "detected": "soft_score=5.6481e-07",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many cats are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any violins in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any violins in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the violins to the left of the flamingo?",
+            "score": 1.0,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the violins to the left of the flamingo?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many flamingos are in the image?",
+            "score": 0.999999951985929,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "one",
+          "status": "passed",
+          "target": "How many flamingos are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the flamingo sparkling?",
+            "score": 0.9999998330786184,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the flamingo sparkling?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any flamingos in the image?",
+            "score": 0.999999957595719,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any flamingos in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any cats in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any cats in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.6014011753154198,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many violins are in the image?",
+              "score": 2.7494995373839645e-05,
+              "skill": "count"
+            },
+            "detected": "soft_score=2.7495e-05",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many violins are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the violins metal?",
+              "score": 1.4413737176033337e-08,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1.44137e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the violins metal?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the flamingo chasing the cats?",
+              "score": 0.013983936274517106,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.0139839",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the flamingo chasing the cats?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cats are in the image?",
+              "score": 5.6481030323238e-07,
+              "skill": "count"
+            },
+            "detected": "soft_score=5.6481e-07",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many cats are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00069/samples/00004.png",
+        "prompt": "A clear wide scene with exactly six metal violins on the left side of the image, all fully visible and separated for counting. To the right of the violins is exactly one sparkling flamingo, fully visible, facing and running toward exactly six cats. The six cats are ahead of the flamingo, clearly being chased by it, all fully visible and separated for counting. The violins are all to the left of the flamingo. No extra violins, no extra flamingos, no extra cats, no occlusion.",
+        "round": 0,
+        "score": 0.6014011753154198
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many violins are in the image?",
+            "score": 2.7494995373839645e-05,
+            "skill": "count"
+          },
+          "detected": "soft_score=2.7495e-05",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many violins are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the violins metal?",
+            "score": 1.4413737176033337e-08,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1.44137e-08",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the violins metal?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the flamingo chasing the cats?",
+            "score": 0.013983936274517106,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.0139839",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the flamingo chasing the cats?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cats are in the image?",
+            "score": 5.6481030323238e-07,
+            "skill": "count"
+          },
+          "detected": "soft_score=5.6481e-07",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many cats are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "attribute_mismatch",
+        "count_mismatch",
+        "relation_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many violins are in the image?",
+            "score": 2.7494995373839645e-05,
+            "skill": "count"
+          },
+          "detected": "soft_score=2.7495e-05",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many violins are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the violins metal?",
+            "score": 1.4413737176033337e-08,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1.44137e-08",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the violins metal?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the flamingo chasing the cats?",
+            "score": 0.013983936274517106,
+            "skill": "verb"
+          },
+          "detected": "soft_score=0.0139839",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Is the flamingo chasing the cats?",
+          "type": "relation_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cats are in the image?",
+            "score": 5.6481030323238e-07,
+            "skill": "count"
+          },
+          "detected": "soft_score=5.6481e-07",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many cats are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any violins in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any violins in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the violins to the left of the flamingo?",
+            "score": 1.0,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the violins to the left of the flamingo?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many flamingos are in the image?",
+            "score": 0.999999951985929,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "one",
+          "status": "passed",
+          "target": "How many flamingos are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Is the flamingo sparkling?",
+            "score": 0.9999998330786184,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Is the flamingo sparkling?",
+          "type": "attribute_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any flamingos in the image?",
+            "score": 0.999999957595719,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any flamingos in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any cats in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any cats in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.6014011753154198,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "six metal violins to the left of a sparkling flamingo chasing six cats",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many violins are in the image?",
+          "score": 2.7494995373839645e-05,
+          "skill": "count"
+        },
+        "detected": "soft_score=2.7495e-05",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many violins are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the violins metal?",
+          "score": 1.4413737176033337e-08,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=1.44137e-08",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the violins metal?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the flamingo chasing the cats?",
+          "score": 0.013983936274517106,
+          "skill": "verb"
+        },
+        "detected": "soft_score=0.0139839",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Is the flamingo chasing the cats?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cats are in the image?",
+          "score": 5.6481030323238e-07,
+          "skill": "count"
+        },
+        "detected": "soft_score=5.6481e-07",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many cats are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Depict exactly six violins, exactly one flamingo, and exactly six cats.",
+        "Bind the metal attribute only to the six violins.",
+        "Bind the sparkling attribute only to the single flamingo.",
+        "Place all six metal violins clearly to the left of the flamingo.",
+        "Show the flamingo chasing the six cats, with the cats clearly ahead of the flamingo and the flamingo oriented toward them.",
+        "Keep all objects visible and separated enough to count; avoid overlapping or occluding the violins, flamingo, or cats.",
+        "Do not add extra violins, flamingos, cats, or other prominent animals."
+      ],
+      "generation_strategy": "Use a wide composition with three clear groups: six metal violins arranged on the left, one sparkling flamingo in the middle/right, and six cats ahead of the flamingo to show the chasing action. Maintain clear spacing and full visibility so counts and relations are unambiguous.",
+      "initial_prompt": "A clear wide scene with exactly six metal violins on the left side of the image, all fully visible and separated for counting. To the right of the violins is exactly one sparkling flamingo, fully visible, facing and running toward exactly six cats. The six cats are ahead of the flamingo, clearly being chased by it, all fully visible and separated for counting. The violins are all to the left of the flamingo. No extra violins, no extra flamingos, no extra cats, no occlusion.",
+      "parsed_constraints": {
+        "attributes": {
+          "flamingo": [
+            "sparkling"
+          ],
+          "violins": [
+            "metal"
+          ]
+        },
+        "counts": {
+          "cats": 6,
+          "flamingos": 1,
+          "violins": 6
+        },
+        "objects": [
+          "violins",
+          "flamingo",
+          "cats"
+        ],
+        "relations": [
+          "six metal violins are to the left of the flamingo",
+          "the sparkling flamingo is chasing six cats"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Depict exactly six violins, exactly one flamingo, and exactly six cats.",
+        "Bind the metal attribute only to the six violins.",
+        "Bind the sparkling attribute only to the single flamingo.",
+        "Place all six metal violins clearly to the left of the flamingo.",
+        "Show the flamingo chasing the six cats, with the cats clearly ahead of the flamingo and the flamingo oriented toward them.",
+        "Keep all objects visible and separated enough to count; avoid overlapping or occluding the violins, flamingo, or cats.",
+        "Do not add extra violins, flamingos, cats, or other prominent animals."
+      ],
+      "generation_strategy": "Use a wide composition with three clear groups: six metal violins arranged on the left, one sparkling flamingo in the middle/right, and six cats ahead of the flamingo to show the chasing action. Maintain clear spacing and full visibility so counts and relations are unambiguous.",
+      "initial_prompt": "A clear wide scene with exactly six metal violins on the left side of the image, all fully visible and separated for counting. To the right of the violins is exactly one sparkling flamingo, fully visible, facing and running toward exactly six cats. The six cats are ahead of the flamingo, clearly being chased by it, all fully visible and separated for counting. The violins are all to the left of the flamingo. No extra violins, no extra flamingos, no extra cats, no occlusion.",
+      "parsed_constraints": {
+        "attributes": {
+          "flamingo": [
+            "sparkling"
+          ],
+          "violins": [
+            "metal"
+          ]
+        },
+        "counts": {
+          "cats": 6,
+          "flamingos": 1,
+          "violins": 6
+        },
+        "objects": [
+          "violins",
+          "flamingo",
+          "cats"
+        ],
+        "relations": [
+          "six metal violins are to the left of the flamingo",
+          "the sparkling flamingo is chasing six cats"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_prompt": "A clear wide scene with exactly six metal violins on the left side of the image, all fully visible and separated for counting. To the right of the violins is exactly one sparkling flamingo, fully visible, facing and running toward exactly six cats. The six cats are ahead of the flamingo, clearly being chased by it, all fully visible and separated for counting. The violins are all to the left of the flamingo. No extra violins, no extra flamingos, no extra cats, no occlusion.",
+    "previous_selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ],
+    "prompt_id": "geneval2_00608_3630bc48",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "attribute_mismatch",
+          "count_mismatch",
+          "relation_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many violins are in the image?",
+              "score": 2.7494995373839645e-05,
+              "skill": "count"
+            },
+            "detected": "soft_score=2.7495e-05",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many violins are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the violins metal?",
+              "score": 1.4413737176033337e-08,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1.44137e-08",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the violins metal?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the flamingo chasing the cats?",
+              "score": 0.013983936274517106,
+              "skill": "verb"
+            },
+            "detected": "soft_score=0.0139839",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Is the flamingo chasing the cats?",
+            "type": "relation_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cats are in the image?",
+              "score": 5.6481030323238e-07,
+              "skill": "count"
+            },
+            "detected": "soft_score=5.6481e-07",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many cats are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any violins in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any violins in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the violins to the left of the flamingo?",
+              "score": 1.0,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the violins to the left of the flamingo?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many flamingos are in the image?",
+              "score": 0.999999951985929,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "one",
+            "status": "passed",
+            "target": "How many flamingos are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Is the flamingo sparkling?",
+              "score": 0.9999998330786184,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Is the flamingo sparkling?",
+            "type": "attribute_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any flamingos in the image?",
+              "score": 0.999999957595719,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any flamingos in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any cats in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any cats in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly six violins, exactly one flamingo, and exactly six cats.",
+            "Bind the metal attribute only to the six violins.",
+            "Bind the sparkling attribute only to the single flamingo.",
+            "Place all six metal violins clearly to the left of the flamingo.",
+            "Show the flamingo chasing the six cats, with the cats clearly ahead of the flamingo and the flamingo oriented toward them.",
+            "Keep all objects visible and separated enough to count; avoid overlapping or occluding the violins, flamingo, or cats.",
+            "Do not add extra violins, flamingos, cats, or other prominent animals."
+          ],
+          "generation_strategy": "Use a wide composition with three clear groups: six metal violins arranged on the left, one sparkling flamingo in the middle/right, and six cats ahead of the flamingo to show the chasing action. Maintain clear spacing and full visibility so counts and relations are unambiguous.",
+          "initial_prompt": "A clear wide scene with exactly six metal violins on the left side of the image, all fully visible and separated for counting. To the right of the violins is exactly one sparkling flamingo, fully visible, facing and running toward exactly six cats. The six cats are ahead of the flamingo, clearly being chased by it, all fully visible and separated for counting. The violins are all to the left of the flamingo. No extra violins, no extra flamingos, no extra cats, no occlusion.",
+          "parsed_constraints": {
+            "attributes": {
+              "flamingo": [
+                "sparkling"
+              ],
+              "violins": [
+                "metal"
+              ]
+            },
+            "counts": {
+              "cats": 6,
+              "flamingos": 1,
+              "violins": 6
+            },
+            "objects": [
+              "violins",
+              "flamingo",
+              "cats"
+            ],
+            "relations": [
+              "six metal violins are to the left of the flamingo",
+              "the sparkling flamingo is chasing six cats"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Depict exactly six violins, exactly one flamingo, and exactly six cats.",
+            "Bind the metal attribute only to the six violins.",
+            "Bind the sparkling attribute only to the single flamingo.",
+            "Place all six metal violins clearly to the left of the flamingo.",
+            "Show the flamingo chasing the six cats, with the cats clearly ahead of the flamingo and the flamingo oriented toward them.",
+            "Keep all objects visible and separated enough to count; avoid overlapping or occluding the violins, flamingo, or cats.",
+            "Do not add extra violins, flamingos, cats, or other prominent animals."
+          ],
+          "generation_strategy": "Use a wide composition with three clear groups: six metal violins arranged on the left, one sparkling flamingo in the middle/right, and six cats ahead of the flamingo to show the chasing action. Maintain clear spacing and full visibility so counts and relations are unambiguous.",
+          "initial_prompt": "A clear wide scene with exactly six metal violins on the left side of the image, all fully visible and separated for counting. To the right of the violins is exactly one sparkling flamingo, fully visible, facing and running toward exactly six cats. The six cats are ahead of the flamingo, clearly being chased by it, all fully visible and separated for counting. The violins are all to the left of the flamingo. No extra violins, no extra flamingos, no extra cats, no occlusion.",
+          "parsed_constraints": {
+            "attributes": {
+              "flamingo": [
+                "sparkling"
+              ],
+              "violins": [
+                "metal"
+              ]
+            },
+            "counts": {
+              "cats": 6,
+              "flamingos": 1,
+              "violins": 6
+            },
+            "objects": [
+              "violins",
+              "flamingo",
+              "cats"
+            ],
+            "relations": [
+              "six metal violins are to the left of the flamingo",
+              "the sparkling flamingo is chasing six cats"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "prompt_used": "A clear wide scene with exactly six metal violins on the left side of the image, all fully visible and separated for counting. To the right of the violins is exactly one sparkling flamingo, fully visible, facing and running toward exactly six cats. The six cats are ahead of the flamingo, clearly being chased by it, all fully visible and separated for counting. The violins are all to the left of the flamingo. No extra violins, no extra flamingos, no extra cats, no occlusion.",
+        "round": 0,
+        "score": 0.6014011753154198,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many violins are in the image?",
+                "score": 2.7494995373839645e-05,
+                "skill": "count"
+              },
+              "detected": "soft_score=2.7495e-05",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many violins are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the violins metal?",
+                "score": 1.4413737176033337e-08,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1.44137e-08",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the violins metal?",
+              "type": "attribute_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Is the flamingo chasing the cats?",
+                "score": 0.013983936274517106,
+                "skill": "verb"
+              },
+              "detected": "soft_score=0.0139839",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Is the flamingo chasing the cats?",
+              "type": "relation_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cats are in the image?",
+                "score": 5.6481030323238e-07,
+                "skill": "count"
+              },
+              "detected": "soft_score=5.6481e-07",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many cats are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00608_3630bc48"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many violins are in the image?",
+          "score": 2.7494995373839645e-05,
+          "skill": "count"
+        },
+        "detected": "soft_score=2.7495e-05",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many violins are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the violins metal?",
+          "score": 1.4413737176033337e-08,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=1.44137e-08",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the violins metal?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the flamingo chasing the cats?",
+          "score": 0.013983936274517106,
+          "skill": "verb"
+        },
+        "detected": "soft_score=0.0139839",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Is the flamingo chasing the cats?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cats are in the image?",
+          "score": 5.6481030323238e-07,
+          "skill": "count"
+        },
+        "detected": "soft_score=5.6481e-07",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many cats are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00069/samples/00004.png",
+    "best_so_far_prompt": "A clear wide scene with exactly six metal violins on the left side of the image, all fully visible and separated for counting. To the right of the violins is exactly one sparkling flamingo, fully visible, facing and running toward exactly six cats. The six cats are ahead of the flamingo, clearly being chased by it, all fully visible and separated for counting. The violins are all to the left of the flamingo. No extra violins, no extra flamingos, no extra cats, no occlusion.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.6014011753154198,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 0,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many violins are in the image?",
+          "score": 2.7494995373839645e-05,
+          "skill": "count"
+        },
+        "detected": "soft_score=2.7495e-05",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many violins are in the image?",
+        "type": "count_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 1,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the violins metal?",
+          "score": 1.4413737176033337e-08,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=1.44137e-08",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the violins metal?",
+        "type": "attribute_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Is the flamingo chasing the cats?",
+          "score": 0.013983936274517106,
+          "skill": "verb"
+        },
+        "detected": "soft_score=0.0139839",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Is the flamingo chasing the cats?",
+        "type": "relation_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 8,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many cats are in the image?",
+          "score": 5.6481030323238e-07,
+          "skill": "count"
+        },
+        "detected": "soft_score=5.6481e-07",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many cats are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Depict exactly six violins, exactly one flamingo, and exactly six cats.",
+        "Bind the metal attribute only to the six violins.",
+        "Bind the sparkling attribute only to the single flamingo.",
+        "Place all six metal violins clearly to the left of the flamingo.",
+        "Show the flamingo chasing the six cats, with the cats clearly ahead of the flamingo and the flamingo oriented toward them.",
+        "Keep all objects visible and separated enough to count; avoid overlapping or occluding the violins, flamingo, or cats.",
+        "Do not add extra violins, flamingos, cats, or other prominent animals."
+      ],
+      "generation_strategy": "Use a wide composition with three clear groups: six metal violins arranged on the left, one sparkling flamingo in the middle/right, and six cats ahead of the flamingo to show the chasing action. Maintain clear spacing and full visibility so counts and relations are unambiguous.",
+      "initial_prompt": "A clear wide scene with exactly six metal violins on the left side of the image, all fully visible and separated for counting. To the right of the violins is exactly one sparkling flamingo, fully visible, facing and running toward exactly six cats. The six cats are ahead of the flamingo, clearly being chased by it, all fully visible and separated for counting. The violins are all to the left of the flamingo. No extra violins, no extra flamingos, no extra cats, no occlusion.",
+      "parsed_constraints": {
+        "attributes": {
+          "flamingo": [
+            "sparkling"
+          ],
+          "violins": [
+            "metal"
+          ]
+        },
+        "counts": {
+          "cats": 6,
+          "flamingos": 1,
+          "violins": 6
+        },
+        "objects": [
+          "violins",
+          "flamingo",
+          "cats"
+        ],
+        "relations": [
+          "six metal violins are to the left of the flamingo",
+          "the sparkling flamingo is chasing six cats"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.601 failed=['How many violins are in the image?', 'Are the violins metal?', 'Is the flamingo chasing the cats?', 'How many cats are in the image?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_incremental/snapshot_003_worker_01/geneval2_00608_3630bc48__geneval2_00608_3630bc48_cand_04__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00608_3630bc48__geneval2_00608_3630bc48_cand_04__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00608_3630bc48",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image preserved object presence, one sparkling flamingo, cats present, violins present, and the violins being to the left of the flamingo, but failed exact counts for violins and cats, failed binding the metal material to the violins, and failed the flamingo-chasing-cats action. The next prompt must make the six violins and six cats individually countable, explicitly metallic, and use a clearer left-to-right chase layout with the flamingo behind the cats and facing/running toward them.",
+    "expected_improvement": [
+      "Exactly six separate violins should be visible and countable.",
+      "Each violin should read as metal through shiny reflective metallic surfaces.",
+      "Exactly six separate cats should be visible and countable, with no extras.",
+      "The single sparkling flamingo should clearly be chasing the cats by being behind them, facing them, and running toward them."
+    ],
+    "failure_types": [
+      "count_mismatch",
+      "attribute_mismatch",
+      "relation_mismatch"
+    ],
+    "preserve_constraints": [
+      "Include visible violins.",
+      "Keep all violins to the left of the flamingo.",
+      "Include exactly one flamingo.",
+      "Keep the flamingo sparkling.",
+      "Include visible cats."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt asked for the correct objects and layout but used a crowded wide scene with two different groups requiring exact counts. It did not enforce a simple countable arrangement for six violins and six cats, and the chase action may have been too implicit. The metal attribute was stated but not visually reinforced as reflective metallic material on every violin.",
+      "error_source": "Prompt under-specified visual count structure, material cues, and action staging."
+    },
+    "regeneration_strategy": "Use a simple horizontal composition with three separated zones: a left 2-by-3 display of six metallic violins, one sparkling flamingo in the middle facing right, and a right 2-by-3 group of six cats running away from the flamingo. Emphasize separable instances, reflective metal on the violins, and no extra duplicated objects.",
+    "regression_risks": [
+      "The generator may add extra cats or violins when showing groups.",
+      "The metallic attribute may be lost if the violins look wooden.",
+      "The chase relation may become ambiguous if the flamingo is not behind the cats or not facing them.",
+      "The passed constraint that the violins are left of the flamingo could regress if the composition becomes cluttered."
+    ],
+    "repair_constraints": [
+      "Show exactly six violins, arranged as six separate complete instruments, preferably in two rows of three, with no extra violins.",
+      "Bind metal only to the violins: every violin must have shiny reflective metallic material, not wooden surfaces.",
+      "Show exactly six cats, arranged as six separate complete cats, preferably in two rows of three, with no extra cats.",
+      "Show the sparkling flamingo chasing the cats: the flamingo is behind the cats, facing toward them, running toward them, while the cats are ahead of it moving away.",
+      "Keep the violins clearly to the left of the flamingo.",
+      "Keep exactly one sparkling flamingo visible and unobstructed."
+    ],
+    "retry_prompt": "A clear simple left-to-right scene. On the far left, exactly six metal violins are displayed as six separate complete instruments in a neat two-by-three arrangement; every violin is shiny reflective metallic, and none are wooden. In the center, exactly one sparkling flamingo is fully visible, facing right and running. On the right, exactly six cats are fully visible as six separate complete cats in a loose two-by-three group, ahead of the flamingo and running away from it. The sparkling flamingo is clearly chasing the six cats: it is behind them, oriented toward them, and moving toward them. All six metal violins are to the left of the flamingo. Keep every required object unobstructed and countable. No extra violins, no extra flamingos, no extra cats, no duplicate or merged animals or instruments.",
+    "skill_revision": {
+      "new_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same skill set but apply quantity_counting more strongly with two-by-three separable arrangements, attribute_binding with explicit shiny reflective metal on every violin, and spatial_layout with an unambiguous behind/ahead chase structure."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 9,
+    "dataset": "geneval2",
+    "original_prompt": "six metal violins to the left of a sparkling flamingo chasing six cats",
+    "prompt": "six metal violins to the left of a sparkling flamingo chasing six cats",
+    "prompt_id": "geneval2_00608_3630bc48",
+    "sampling_bucket": "relation_action",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "position_spatial",
+      "relation_action",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 2,
+      "count": 3,
+      "object": 3,
+      "position": 1,
+      "verb": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object",
+      "verb",
+      "count",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 608,
+    "vqa_list": [
+      [
+        "How many violins are in the image?",
+        "six"
+      ],
+      [
+        "Are the violins metal?",
+        "Yes"
+      ],
+      [
+        "Are there any violins in the image?",
+        "Yes"
+      ],
+      [
+        "Are the violins to the left of the flamingo?",
+        "Yes"
+      ],
+      [
+        "How many flamingos are in the image?",
+        "one"
+      ],
+      [
+        "Is the flamingo sparkling?",
+        "Yes"
+      ],
+      [
+        "Are there any flamingos in the image?",
+        "Yes"
+      ],
+      [
+        "Is the flamingo chasing the cats?",
+        "Yes"
+      ],
+      [
+        "How many cats are in the image?",
+        "six"
+      ],
+      [
+        "Are there any cats in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00608_3630bc48"
+}

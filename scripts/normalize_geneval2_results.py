@@ -45,12 +45,17 @@ def main() -> int:
     for group_id, report in sorted(reports.items()):
         raw_rows = report.raw_report.get("rows", []) if isinstance(report.raw_report, dict) else []
         first = raw_rows[0] if raw_rows and isinstance(raw_rows[0], dict) else {}
+        candidate_id = first.get("candidate_id") or (group_id if args.aggregate_by == "candidate_id" else "")
         output_rows.append(
             {
                 "group_id": group_id,
+                "candidate_id": candidate_id,
+                "prompt_id": first.get("prompt_id", ""),
                 "prompt": first.get("prompt", ""),
                 "image_id": first.get("image_id", first.get("image_path", "")),
                 "image_path": first.get("image_path", ""),
+                "source_index": first.get("source_index"),
+                "candidate_index": first.get("candidate_index"),
                 "raw_rows_count": len(raw_rows),
                 "normalized_report": report.to_dict(),
             }

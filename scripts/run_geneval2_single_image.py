@@ -25,6 +25,13 @@ def main() -> int:
     parser.add_argument("--method", default="soft_tifa_gm", choices=["vqascore", "tifa", "soft_tifa_am", "soft_tifa_gm"])
     parser.add_argument("--python", default=sys.executable)
     parser.add_argument(
+        "--work-dir",
+        help=(
+            "Directory for temporary patched GenEval2 scripts and inputs. "
+            "Defaults to <output-path parent>/.tmp."
+        ),
+    )
+    parser.add_argument(
         "--qwen3vl-model-path",
         default=DEFAULT_QWEN3VL_MODEL_PATH,
         help=(
@@ -38,7 +45,10 @@ def main() -> int:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     image_path = str(Path(args.image_path).resolve())
 
-    with TemporaryDirectory(prefix="geneval2_single_") as tmp:
+    work_root = Path(args.work_dir) if args.work_dir else output_path.parent / ".tmp"
+    work_root.mkdir(parents=True, exist_ok=True)
+    work_root = work_root.resolve()
+    with TemporaryDirectory(prefix="geneval2_single_", dir=work_root) as tmp:
         tmpdir = Path(tmp)
         single_benchmark = tmpdir / "benchmark.jsonl"
         image_map = tmpdir / "image_paths.json"
@@ -63,15 +73,15 @@ def main() -> int:
                 args.python,
                 str(evaluation_script),
                 "--benchmark_data",
-                str(single_benchmark),
+                str(single_benchmark.resolve()),
                 "--image_filepath_data",
-                str(image_map),
+                str(image_map.resolve()),
                 "--method",
                 args.method,
                 "--output_file",
-                str(score_lists_path),
+                str(score_lists_path.resolve()),
             ],
-            cwd=str(Path(args.geneval2_root)),
+            cwd=str(Path(args.geneval2_root).resolve()),
             check=True,
         )
         score_lists = json.loads(score_lists_path.read_text(encoding="utf-8"))
@@ -102,6 +112,14 @@ def _prepare_evaluation_script(
     if "Qwen/Qwen3-VL-8B-Instruct" not in text:
         raise ValueError(f"could not find Qwen3-VL model id in {source}")
     patched = text.replace("Qwen/Qwen3-VL-8B-Instruct", qwen3vl_model_path)
+    patched = patched.replace(
+        "torch_dtype='auto',\n                device_map='auto'",
+        "torch_dtype='auto',\n                device_map='auto',\n                local_files_only=True",
+    )
+    patched = patched.replace(
+        'dtype="auto", \n            device_map="auto"',
+        'dtype="auto", \n            device_map="auto",\n            local_files_only=True',
+    )
     target = tmpdir / "evaluation_local_qwen3vl.py"
     target.write_text(patched, encoding="utf-8")
     return target

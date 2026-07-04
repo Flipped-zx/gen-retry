@@ -1,0 +1,2600 @@
+{
+  "attempts": [
+    {
+      "attempt_type": "initial_generation",
+      "evaluation": {
+        "critical_failure_types": [
+          "color_mismatch",
+          "count_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cats purple?",
+              "score": 0.5949430358596146,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.594943",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cats purple?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many flowers are in the image?",
+              "score": 5.4443392782322726e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=5.44434e-08",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many flowers are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed": false,
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many candles are in the image?",
+              "score": 0.999736153476147,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.999736",
+            "expected": "three",
+            "status": "passed",
+            "target": "How many candles are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the candles green?",
+              "score": 0.9999999557621777,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the candles green?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any candles in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any candles in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the candles to the right of the cats?",
+              "score": 0.999999958022272,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the candles to the right of the cats?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cats are in the image?",
+              "score": 0.9999999892689152,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "three",
+            "status": "passed",
+            "target": "How many cats are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any cats in the image?",
+              "score": 0.999999985921022,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any cats in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the flowers green?",
+              "score": 0.9999999451101758,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the flowers green?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any flowers in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any flowers in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+        "raw_report": {
+          "diagnostic_atom_threshold": 0.9,
+          "group_id": "geneval2_00751_5eb2b495_cand_01",
+          "raw_eval_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+          "rows": [
+            {
+              "answer": "three",
+              "atom_count": 10,
+              "atom_index": 0,
+              "candidate_id": "geneval2_00751_5eb2b495_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00083/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00083/samples/00001.png",
+              "prompt": "three green candles to the right of three purple cats, and six green flowers",
+              "prompt_id": "geneval2_00751_5eb2b495",
+              "question": "How many candles are in the image?",
+              "score": 0.999736153476147,
+              "skill": "count",
+              "source_index": 751
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 1,
+              "candidate_id": "geneval2_00751_5eb2b495_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00083/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00083/samples/00001.png",
+              "prompt": "three green candles to the right of three purple cats, and six green flowers",
+              "prompt_id": "geneval2_00751_5eb2b495",
+              "question": "Are the candles green?",
+              "score": 0.9999999557621777,
+              "skill": "attribute",
+              "source_index": 751
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 2,
+              "candidate_id": "geneval2_00751_5eb2b495_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00083/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00083/samples/00001.png",
+              "prompt": "three green candles to the right of three purple cats, and six green flowers",
+              "prompt_id": "geneval2_00751_5eb2b495",
+              "question": "Are there any candles in the image?",
+              "score": 1.0000000772970452,
+              "skill": "object",
+              "source_index": 751
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 3,
+              "candidate_id": "geneval2_00751_5eb2b495_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00083/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00083/samples/00001.png",
+              "prompt": "three green candles to the right of three purple cats, and six green flowers",
+              "prompt_id": "geneval2_00751_5eb2b495",
+              "question": "Are the candles to the right of the cats?",
+              "score": 0.999999958022272,
+              "skill": "position",
+              "source_index": 751
+            },
+            {
+              "answer": "three",
+              "atom_count": 10,
+              "atom_index": 4,
+              "candidate_id": "geneval2_00751_5eb2b495_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00083/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00083/samples/00001.png",
+              "prompt": "three green candles to the right of three purple cats, and six green flowers",
+              "prompt_id": "geneval2_00751_5eb2b495",
+              "question": "How many cats are in the image?",
+              "score": 0.9999999892689152,
+              "skill": "count",
+              "source_index": 751
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 5,
+              "candidate_id": "geneval2_00751_5eb2b495_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00083/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00083/samples/00001.png",
+              "prompt": "three green candles to the right of three purple cats, and six green flowers",
+              "prompt_id": "geneval2_00751_5eb2b495",
+              "question": "Are the cats purple?",
+              "score": 0.5949430358596146,
+              "skill": "attribute",
+              "source_index": 751
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 6,
+              "candidate_id": "geneval2_00751_5eb2b495_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00083/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00083/samples/00001.png",
+              "prompt": "three green candles to the right of three purple cats, and six green flowers",
+              "prompt_id": "geneval2_00751_5eb2b495",
+              "question": "Are there any cats in the image?",
+              "score": 0.999999985921022,
+              "skill": "object",
+              "source_index": 751
+            },
+            {
+              "answer": "six",
+              "atom_count": 10,
+              "atom_index": 7,
+              "candidate_id": "geneval2_00751_5eb2b495_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00083/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00083/samples/00001.png",
+              "prompt": "three green candles to the right of three purple cats, and six green flowers",
+              "prompt_id": "geneval2_00751_5eb2b495",
+              "question": "How many flowers are in the image?",
+              "score": 5.4443392782322726e-08,
+              "skill": "count",
+              "source_index": 751
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 8,
+              "candidate_id": "geneval2_00751_5eb2b495_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00083/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00083/samples/00001.png",
+              "prompt": "three green candles to the right of three purple cats, and six green flowers",
+              "prompt_id": "geneval2_00751_5eb2b495",
+              "question": "Are the flowers green?",
+              "score": 0.9999999451101758,
+              "skill": "attribute",
+              "source_index": 751
+            },
+            {
+              "answer": "Yes",
+              "atom_count": 10,
+              "atom_index": 9,
+              "candidate_id": "geneval2_00751_5eb2b495_cand_01",
+              "candidate_index": 1,
+              "image_id": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00083/samples/00001.png",
+              "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00083/samples/00001.png",
+              "prompt": "three green candles to the right of three purple cats, and six green flowers",
+              "prompt_id": "geneval2_00751_5eb2b495",
+              "question": "Are there any flowers in the image?",
+              "score": 1.0000000143354555,
+              "skill": "object",
+              "source_index": 751
+            }
+          ],
+          "source_path": "data/geneval2_jobs/incremental_teacher_snapshots/snapshot_003/raw_score_lists.by_candidate.json",
+          "threshold_note": "This atom threshold is for training-time diagnostic normalization only. It is not a replacement for official GenEval2 benchmark scoring."
+        },
+        "score": 0.8594679077863717,
+        "uncertain_constraints": []
+      },
+      "generation": {
+        "generation_metadata": {
+          "candidate_index": 1,
+          "generation_prompt_source": "initial_plan",
+          "initial_plan_path": "data/plans/initial/geneval2_balanced_100_gpt55/geneval2_00751_5eb2b495.json",
+          "manifest_prompt_index": 83,
+          "model_path": "/home/develop/biocloudplantform/xxr/models/Qwen-Image-2512",
+          "sample_id": "geneval2_00751_5eb2b495"
+        },
+        "generator_name": "qwen-image-2512",
+        "image_id": "geneval2_00751_5eb2b495_cand_01",
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00083/samples/00001.png",
+        "prompt_used": "A clear scene with exactly three purple cats grouped on the left, and exactly three green candles grouped to the right of the cats. Include exactly six green flowers, all clearly visible and separated from each other. Make sure every candle is green, every cat is purple, and every flower is green. The three candles must be to the right of the three cats. Keep all objects unobstructed, distinct, and easy to count, with no extra cats, candles, or flowers.",
+        "seed": 1416
+      },
+      "planner_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly three candles, exactly three cats, and exactly six flowers.",
+          "Bind colors correctly: all candles green, all cats purple, all flowers green.",
+          "Place the three green candles to the right of the three purple cats.",
+          "Keep all objects clearly visible and separated so counts are unambiguous.",
+          "Avoid extra candles, cats, or flowers."
+        ],
+        "generation_strategy": "Use a simple, clear composition with three purple cats grouped on the left and three green candles grouped on the right, ensuring the candles are spatially to the right of the cats. Place six green flowers separately and visibly in the scene, arranged so none are hidden or confused with the candles or cats. Maintain clear separation between individual objects for accurate counting and color recognition.",
+        "initial_prompt": "A clear scene with exactly three purple cats grouped on the left, and exactly three green candles grouped to the right of the cats. Include exactly six green flowers, all clearly visible and separated from each other. Make sure every candle is green, every cat is purple, and every flower is green. The three candles must be to the right of the three cats. Keep all objects unobstructed, distinct, and easy to count, with no extra cats, candles, or flowers.",
+        "parsed_constraints": {
+          "attributes": {
+            "candles": {
+              "color": "green"
+            },
+            "cats": {
+              "color": "purple"
+            },
+            "flowers": {
+              "color": "green"
+            }
+          },
+          "counts": {
+            "candles": 3,
+            "cats": 3,
+            "flowers": 6
+          },
+          "objects": [
+            "candles",
+            "cats",
+            "flowers"
+          ],
+          "relations": [
+            "three green candles to the right of three purple cats"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "previous_action": {
+        "action_type": "initial_plan",
+        "generation_guards": [
+          "Show exactly three candles, exactly three cats, and exactly six flowers.",
+          "Bind colors correctly: all candles green, all cats purple, all flowers green.",
+          "Place the three green candles to the right of the three purple cats.",
+          "Keep all objects clearly visible and separated so counts are unambiguous.",
+          "Avoid extra candles, cats, or flowers."
+        ],
+        "generation_strategy": "Use a simple, clear composition with three purple cats grouped on the left and three green candles grouped on the right, ensuring the candles are spatially to the right of the cats. Place six green flowers separately and visibly in the scene, arranged so none are hidden or confused with the candles or cats. Maintain clear separation between individual objects for accurate counting and color recognition.",
+        "initial_prompt": "A clear scene with exactly three purple cats grouped on the left, and exactly three green candles grouped to the right of the cats. Include exactly six green flowers, all clearly visible and separated from each other. Make sure every candle is green, every cat is purple, and every flower is green. The three candles must be to the right of the three cats. Keep all objects unobstructed, distinct, and easy to count, with no extra cats, candles, or flowers.",
+        "parsed_constraints": {
+          "attributes": {
+            "candles": {
+              "color": "green"
+            },
+            "cats": {
+              "color": "purple"
+            },
+            "flowers": {
+              "color": "green"
+            }
+          },
+          "counts": {
+            "candles": 3,
+            "cats": 3,
+            "flowers": 6
+          },
+          "objects": [
+            "candles",
+            "cats",
+            "flowers"
+          ],
+          "relations": [
+            "three green candles to the right of three purple cats"
+          ]
+        },
+        "selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ]
+      },
+      "round": 0,
+      "teacher_request": {
+        "available_skills": {
+          "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+          "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+          "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+          "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+          "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+          "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+          "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+          "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+        },
+        "best_so_far": {
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cats purple?",
+                "score": 0.5949430358596146,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.594943",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cats purple?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many flowers are in the image?",
+                "score": 5.4443392782322726e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=5.44434e-08",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many flowers are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00083/samples/00001.png",
+          "prompt": "A clear scene with exactly three purple cats grouped on the left, and exactly three green candles grouped to the right of the cats. Include exactly six green flowers, all clearly visible and separated from each other. Make sure every candle is green, every cat is purple, and every flower is green. The three candles must be to the right of the three cats. Keep all objects unobstructed, distinct, and easy to count, with no extra cats, candles, or flowers.",
+          "round": 0,
+          "score": 0.8594679077863717
+        },
+        "branch_source": "latest",
+        "branch_source_round": 0,
+        "candidate_id": "geneval2_00751_5eb2b495_cand_01",
+        "current_eval_report": {
+          "critical_failure_types": [
+            "color_mismatch",
+            "count_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cats purple?",
+                "score": 0.5949430358596146,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.594943",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cats purple?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many flowers are in the image?",
+                "score": 5.4443392782322726e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=5.44434e-08",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many flowers are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many candles are in the image?",
+                "score": 0.999736153476147,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.999736",
+              "expected": "three",
+              "status": "passed",
+              "target": "How many candles are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the candles green?",
+                "score": 0.9999999557621777,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the candles green?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any candles in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any candles in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the candles to the right of the cats?",
+                "score": 0.999999958022272,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the candles to the right of the cats?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cats are in the image?",
+                "score": 0.9999999892689152,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "three",
+              "status": "passed",
+              "target": "How many cats are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any cats in the image?",
+                "score": 0.999999985921022,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any cats in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the flowers green?",
+                "score": 0.9999999451101758,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the flowers green?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any flowers in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any flowers in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.8594679077863717,
+          "uncertain_constraints": []
+        },
+        "current_round": 0,
+        "fixed_constraints": [],
+        "memory": {
+          "best_so_far": {
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the cats purple?",
+                  "score": 0.5949430358596146,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.594943",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the cats purple?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many flowers are in the image?",
+                  "score": 5.4443392782322726e-08,
+                  "skill": "count"
+                },
+                "detected": "soft_score=5.44434e-08",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many flowers are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00083/samples/00001.png",
+            "prompt": "A clear scene with exactly three purple cats grouped on the left, and exactly three green candles grouped to the right of the cats. Include exactly six green flowers, all clearly visible and separated from each other. Make sure every candle is green, every cat is purple, and every flower is green. The three candles must be to the right of the three cats. Keep all objects unobstructed, distinct, and easy to count, with no extra cats, candles, or flowers.",
+            "round": 0,
+            "score": 0.8594679077863717
+          },
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cats purple?",
+                "score": 0.5949430358596146,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.594943",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cats purple?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many flowers are in the image?",
+                "score": 5.4443392782322726e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=5.44434e-08",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many flowers are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null
+        },
+        "new_failures": [],
+        "normalized_eval_report": {
+          "critical_failure_types": [
+            "color_mismatch",
+            "count_mismatch"
+          ],
+          "failed_constraints": [
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cats purple?",
+                "score": 0.5949430358596146,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.594943",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cats purple?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many flowers are in the image?",
+                "score": 5.4443392782322726e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=5.44434e-08",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many flowers are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "passed_constraints": [
+            {
+              "details": {
+                "atom_index": 0,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many candles are in the image?",
+                "score": 0.999736153476147,
+                "skill": "count"
+              },
+              "detected": "soft_score=0.999736",
+              "expected": "three",
+              "status": "passed",
+              "target": "How many candles are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 1,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the candles green?",
+                "score": 0.9999999557621777,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the candles green?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 2,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any candles in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any candles in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 3,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the candles to the right of the cats?",
+                "score": 0.999999958022272,
+                "skill": "position"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the candles to the right of the cats?",
+              "type": "spatial_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 4,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many cats are in the image?",
+                "score": 0.9999999892689152,
+                "skill": "count"
+              },
+              "detected": "soft_score=1",
+              "expected": "three",
+              "status": "passed",
+              "target": "How many cats are in the image?",
+              "type": "count_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 6,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any cats in the image?",
+                "score": 0.999999985921022,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any cats in the image?",
+              "type": "missing_object"
+            },
+            {
+              "details": {
+                "atom_index": 8,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the flowers green?",
+                "score": 0.9999999451101758,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are the flowers green?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 9,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are there any flowers in the image?",
+                "score": 1.0,
+                "skill": "object"
+              },
+              "detected": "soft_score=1",
+              "expected": "Yes",
+              "status": "passed",
+              "target": "Are there any flowers in the image?",
+              "type": "missing_object"
+            }
+          ],
+          "score": 0.8594679077863717,
+          "uncertain_constraints": []
+        },
+        "original_prompt": "three green candles to the right of three purple cats, and six green flowers",
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cats purple?",
+              "score": 0.5949430358596146,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.594943",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cats purple?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many flowers are in the image?",
+              "score": 5.4443392782322726e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=5.44434e-08",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many flowers are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly three candles, exactly three cats, and exactly six flowers.",
+            "Bind colors correctly: all candles green, all cats purple, all flowers green.",
+            "Place the three green candles to the right of the three purple cats.",
+            "Keep all objects clearly visible and separated so counts are unambiguous.",
+            "Avoid extra candles, cats, or flowers."
+          ],
+          "generation_strategy": "Use a simple, clear composition with three purple cats grouped on the left and three green candles grouped on the right, ensuring the candles are spatially to the right of the cats. Place six green flowers separately and visibly in the scene, arranged so none are hidden or confused with the candles or cats. Maintain clear separation between individual objects for accurate counting and color recognition.",
+          "initial_prompt": "A clear scene with exactly three purple cats grouped on the left, and exactly three green candles grouped to the right of the cats. Include exactly six green flowers, all clearly visible and separated from each other. Make sure every candle is green, every cat is purple, and every flower is green. The three candles must be to the right of the three cats. Keep all objects unobstructed, distinct, and easy to count, with no extra cats, candles, or flowers.",
+          "parsed_constraints": {
+            "attributes": {
+              "candles": {
+                "color": "green"
+              },
+              "cats": {
+                "color": "purple"
+              },
+              "flowers": {
+                "color": "green"
+              }
+            },
+            "counts": {
+              "candles": 3,
+              "cats": 3,
+              "flowers": 6
+            },
+            "objects": [
+              "candles",
+              "cats",
+              "flowers"
+            ],
+            "relations": [
+              "three green candles to the right of three purple cats"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_initial_plan": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly three candles, exactly three cats, and exactly six flowers.",
+            "Bind colors correctly: all candles green, all cats purple, all flowers green.",
+            "Place the three green candles to the right of the three purple cats.",
+            "Keep all objects clearly visible and separated so counts are unambiguous.",
+            "Avoid extra candles, cats, or flowers."
+          ],
+          "generation_strategy": "Use a simple, clear composition with three purple cats grouped on the left and three green candles grouped on the right, ensuring the candles are spatially to the right of the cats. Place six green flowers separately and visibly in the scene, arranged so none are hidden or confused with the candles or cats. Maintain clear separation between individual objects for accurate counting and color recognition.",
+          "initial_prompt": "A clear scene with exactly three purple cats grouped on the left, and exactly three green candles grouped to the right of the cats. Include exactly six green flowers, all clearly visible and separated from each other. Make sure every candle is green, every cat is purple, and every flower is green. The three candles must be to the right of the three cats. Keep all objects unobstructed, distinct, and easy to count, with no extra cats, candles, or flowers.",
+          "parsed_constraints": {
+            "attributes": {
+              "candles": {
+                "color": "green"
+              },
+              "cats": {
+                "color": "purple"
+              },
+              "flowers": {
+                "color": "green"
+              }
+            },
+            "counts": {
+              "candles": 3,
+              "cats": 3,
+              "flowers": 6
+            },
+            "objects": [
+              "candles",
+              "cats",
+              "flowers"
+            ],
+            "relations": [
+              "three green candles to the right of three purple cats"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_prompt": "A clear scene with exactly three purple cats grouped on the left, and exactly three green candles grouped to the right of the cats. Include exactly six green flowers, all clearly visible and separated from each other. Make sure every candle is green, every cat is purple, and every flower is green. The three candles must be to the right of the three cats. Keep all objects unobstructed, distinct, and easy to count, with no extra cats, candles, or flowers.",
+        "previous_selected_skills": [
+          "object_presence",
+          "quantity_counting",
+          "attribute_binding",
+          "spatial_layout",
+          "multi_object_composition",
+          "clarity_visibility",
+          "anti_occlusion",
+          "negative_constraints"
+        ],
+        "prompt_id": "geneval2_00751_5eb2b495",
+        "regressed_constraints": [],
+        "retry_budget_left": 3,
+        "retry_history": [
+          {
+            "attempt_type": "initial_generation",
+            "critical_failure_types": [
+              "color_mismatch",
+              "count_mismatch"
+            ],
+            "failed_constraints": [
+              {
+                "details": {
+                  "atom_index": 5,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the cats purple?",
+                  "score": 0.5949430358596146,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=0.594943",
+                "expected": "Yes",
+                "status": "failed",
+                "target": "Are the cats purple?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 7,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many flowers are in the image?",
+                  "score": 5.4443392782322726e-08,
+                  "skill": "count"
+                },
+                "detected": "soft_score=5.44434e-08",
+                "expected": "six",
+                "status": "failed",
+                "target": "How many flowers are in the image?",
+                "type": "count_mismatch"
+              }
+            ],
+            "passed_constraints": [
+              {
+                "details": {
+                  "atom_index": 0,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many candles are in the image?",
+                  "score": 0.999736153476147,
+                  "skill": "count"
+                },
+                "detected": "soft_score=0.999736",
+                "expected": "three",
+                "status": "passed",
+                "target": "How many candles are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 1,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the candles green?",
+                  "score": 0.9999999557621777,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the candles green?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 2,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any candles in the image?",
+                  "score": 1.0,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any candles in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 3,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the candles to the right of the cats?",
+                  "score": 0.999999958022272,
+                  "skill": "position"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the candles to the right of the cats?",
+                "type": "spatial_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 4,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "How many cats are in the image?",
+                  "score": 0.9999999892689152,
+                  "skill": "count"
+                },
+                "detected": "soft_score=1",
+                "expected": "three",
+                "status": "passed",
+                "target": "How many cats are in the image?",
+                "type": "count_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 6,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any cats in the image?",
+                  "score": 0.999999985921022,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any cats in the image?",
+                "type": "missing_object"
+              },
+              {
+                "details": {
+                  "atom_index": 8,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are the flowers green?",
+                  "score": 0.9999999451101758,
+                  "skill": "attribute"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are the flowers green?",
+                "type": "color_mismatch"
+              },
+              {
+                "details": {
+                  "atom_index": 9,
+                  "diagnostic_atom_threshold": 0.9,
+                  "question": "Are there any flowers in the image?",
+                  "score": 1.0,
+                  "skill": "object"
+                },
+                "detected": "soft_score=1",
+                "expected": "Yes",
+                "status": "passed",
+                "target": "Are there any flowers in the image?",
+                "type": "missing_object"
+              }
+            ],
+            "planner_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly three candles, exactly three cats, and exactly six flowers.",
+                "Bind colors correctly: all candles green, all cats purple, all flowers green.",
+                "Place the three green candles to the right of the three purple cats.",
+                "Keep all objects clearly visible and separated so counts are unambiguous.",
+                "Avoid extra candles, cats, or flowers."
+              ],
+              "generation_strategy": "Use a simple, clear composition with three purple cats grouped on the left and three green candles grouped on the right, ensuring the candles are spatially to the right of the cats. Place six green flowers separately and visibly in the scene, arranged so none are hidden or confused with the candles or cats. Maintain clear separation between individual objects for accurate counting and color recognition.",
+              "initial_prompt": "A clear scene with exactly three purple cats grouped on the left, and exactly three green candles grouped to the right of the cats. Include exactly six green flowers, all clearly visible and separated from each other. Make sure every candle is green, every cat is purple, and every flower is green. The three candles must be to the right of the three cats. Keep all objects unobstructed, distinct, and easy to count, with no extra cats, candles, or flowers.",
+              "parsed_constraints": {
+                "attributes": {
+                  "candles": {
+                    "color": "green"
+                  },
+                  "cats": {
+                    "color": "purple"
+                  },
+                  "flowers": {
+                    "color": "green"
+                  }
+                },
+                "counts": {
+                  "candles": 3,
+                  "cats": 3,
+                  "flowers": 6
+                },
+                "objects": [
+                  "candles",
+                  "cats",
+                  "flowers"
+                ],
+                "relations": [
+                  "three green candles to the right of three purple cats"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "previous_action": {
+              "action_type": "initial_plan",
+              "generation_guards": [
+                "Show exactly three candles, exactly three cats, and exactly six flowers.",
+                "Bind colors correctly: all candles green, all cats purple, all flowers green.",
+                "Place the three green candles to the right of the three purple cats.",
+                "Keep all objects clearly visible and separated so counts are unambiguous.",
+                "Avoid extra candles, cats, or flowers."
+              ],
+              "generation_strategy": "Use a simple, clear composition with three purple cats grouped on the left and three green candles grouped on the right, ensuring the candles are spatially to the right of the cats. Place six green flowers separately and visibly in the scene, arranged so none are hidden or confused with the candles or cats. Maintain clear separation between individual objects for accurate counting and color recognition.",
+              "initial_prompt": "A clear scene with exactly three purple cats grouped on the left, and exactly three green candles grouped to the right of the cats. Include exactly six green flowers, all clearly visible and separated from each other. Make sure every candle is green, every cat is purple, and every flower is green. The three candles must be to the right of the three cats. Keep all objects unobstructed, distinct, and easy to count, with no extra cats, candles, or flowers.",
+              "parsed_constraints": {
+                "attributes": {
+                  "candles": {
+                    "color": "green"
+                  },
+                  "cats": {
+                    "color": "purple"
+                  },
+                  "flowers": {
+                    "color": "green"
+                  }
+                },
+                "counts": {
+                  "candles": 3,
+                  "cats": 3,
+                  "flowers": 6
+                },
+                "objects": [
+                  "candles",
+                  "cats",
+                  "flowers"
+                ],
+                "relations": [
+                  "three green candles to the right of three purple cats"
+                ]
+              },
+              "selected_skills": [
+                "object_presence",
+                "quantity_counting",
+                "attribute_binding",
+                "spatial_layout",
+                "multi_object_composition",
+                "clarity_visibility",
+                "anti_occlusion",
+                "negative_constraints"
+              ]
+            },
+            "prompt_used": "A clear scene with exactly three purple cats grouped on the left, and exactly three green candles grouped to the right of the cats. Include exactly six green flowers, all clearly visible and separated from each other. Make sure every candle is green, every cat is purple, and every flower is green. The three candles must be to the right of the three cats. Keep all objects unobstructed, distinct, and easy to count, with no extra cats, candles, or flowers.",
+            "round": 0,
+            "score": 0.8594679077863717,
+            "transition": {
+              "fixed_constraints": [],
+              "new_failures": [],
+              "persistent_failures": [
+                {
+                  "details": {
+                    "atom_index": 5,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "Are the cats purple?",
+                    "score": 0.5949430358596146,
+                    "skill": "attribute"
+                  },
+                  "detected": "soft_score=0.594943",
+                  "expected": "Yes",
+                  "status": "failed",
+                  "target": "Are the cats purple?",
+                  "type": "color_mismatch"
+                },
+                {
+                  "details": {
+                    "atom_index": 7,
+                    "diagnostic_atom_threshold": 0.9,
+                    "question": "How many flowers are in the image?",
+                    "score": 5.4443392782322726e-08,
+                    "skill": "count"
+                  },
+                  "detected": "soft_score=5.44434e-08",
+                  "expected": "six",
+                  "status": "failed",
+                  "target": "How many flowers are in the image?",
+                  "type": "count_mismatch"
+                }
+              ],
+              "regressed_constraints": [],
+              "score_delta_from_best": 0.0,
+              "score_delta_from_previous": null,
+              "transition_type": "initial"
+            },
+            "uncertain_constraints": []
+          }
+        ],
+        "retry_round": 1,
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "trajectory_id": "geneval2_00751_5eb2b495"
+      },
+      "transition": {
+        "fixed_constraints": [],
+        "new_failures": [],
+        "persistent_failures": [
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cats purple?",
+              "score": 0.5949430358596146,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.594943",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cats purple?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many flowers are in the image?",
+              "score": 5.4443392782322726e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=5.44434e-08",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many flowers are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "regressed_constraints": [],
+        "score_delta_from_best": 0.0,
+        "score_delta_from_previous": null,
+        "transition_type": "initial"
+      }
+    }
+  ],
+  "candidate_id": "geneval2_00751_5eb2b495_cand_01",
+  "generator_name": "qwen-image-2512",
+  "initial_plan": {
+    "action_type": "initial_plan",
+    "generation_guards": [
+      "Show exactly three candles, exactly three cats, and exactly six flowers.",
+      "Bind colors correctly: all candles green, all cats purple, all flowers green.",
+      "Place the three green candles to the right of the three purple cats.",
+      "Keep all objects clearly visible and separated so counts are unambiguous.",
+      "Avoid extra candles, cats, or flowers."
+    ],
+    "generation_strategy": "Use a simple, clear composition with three purple cats grouped on the left and three green candles grouped on the right, ensuring the candles are spatially to the right of the cats. Place six green flowers separately and visibly in the scene, arranged so none are hidden or confused with the candles or cats. Maintain clear separation between individual objects for accurate counting and color recognition.",
+    "initial_prompt": "A clear scene with exactly three purple cats grouped on the left, and exactly three green candles grouped to the right of the cats. Include exactly six green flowers, all clearly visible and separated from each other. Make sure every candle is green, every cat is purple, and every flower is green. The three candles must be to the right of the three cats. Keep all objects unobstructed, distinct, and easy to count, with no extra cats, candles, or flowers.",
+    "parsed_constraints": {
+      "attributes": {
+        "candles": {
+          "color": "green"
+        },
+        "cats": {
+          "color": "purple"
+        },
+        "flowers": {
+          "color": "green"
+        }
+      },
+      "counts": {
+        "candles": 3,
+        "cats": 3,
+        "flowers": 6
+      },
+      "objects": [
+        "candles",
+        "cats",
+        "flowers"
+      ],
+      "relations": [
+        "three green candles to the right of three purple cats"
+      ]
+    },
+    "selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ]
+  },
+  "latest_round": 0,
+  "latest_teacher_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image passed the presence, count, color, and spatial checks for three green candles, three cats, green flowers, and candles to the right of cats. It failed because the cats were not recognized as purple enough, and the flower count was not recognized as exactly six. The next regeneration should strengthen the purple color binding on the cats and make the six green flowers individually countable and separated.",
+    "expected_improvement": [
+      "Cats should be detected as purple by using vivid, uniform purple fur on each of the exactly three cats.",
+      "Flower count should be detected as six by arranging six separate green flowers as clearly separated individual blossoms with no extras.",
+      "Previously passed constraints should remain stable: exactly three green candles, exactly three cats, candles to the right of cats, flowers green, and all required objects visible."
+    ],
+    "failure_types": [
+      "color_mismatch",
+      "count_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly three cats visible.",
+      "Keep exactly three candles visible.",
+      "Keep every candle green.",
+      "Keep the three green candles to the right of the three cats.",
+      "Keep flowers green.",
+      "Keep cats, candles, and flowers present, fully visible, separated, and unobstructed.",
+      "Do not include extra cats, candles, or flowers."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt mentioned purple cats and six green flowers, but it did not emphasize a strong, unmistakable purple fill on every cat, and the flowers may have been clustered, merged, hidden, or otherwise not countable as six separate instances.",
+      "error_source": "Insufficient attribute binding emphasis for cat color and insufficient explicit count layout for six separate flowers."
+    },
+    "regeneration_strategy": "Use a simple organized composition: place the three cats on the left with solid vivid purple fur, place the three green candles on the right of the cats, and place exactly six green flowers in a clearly separated countable row or grid away from the cats and candles. Add negative constraints against extra flowers or merged flower clusters while preserving the passed candle and spatial constraints.",
+    "regression_risks": [
+      "The generator may reduce the number of cats or candles while focusing on the flowers.",
+      "The green flowers could merge into a cluster and be counted as fewer than six.",
+      "The cats could appear gray, blue, pink, or only partly purple instead of clearly purple.",
+      "Candles could drift away from the right side of the cats if the layout is not restated."
+    ],
+    "repair_constraints": [
+      "Make all three cats unmistakably purple: each cat must have solid, vivid purple fur over its body.",
+      "Show exactly six green flowers, not fewer and not more.",
+      "Make the six green flowers visually separable: six distinct individual flowers with gaps between them, not a bouquet or merged cluster.",
+      "Avoid extra flower buds, duplicate blossoms, partial flowers, or background floral patterns that could change the count."
+    ],
+    "retry_prompt": "A clear, simple scene with exactly three cats on the left, and every one of the three cats has solid vivid purple fur over its whole body. To the right of the cats, show exactly three green candles, all clearly green, with the candles positioned to the right of the cats. Also show exactly six green flowers: six separate individual green flowers arranged with visible gaps between them so they are easy to count, not a bouquet and not merged together. Keep all cats, candles, and flowers fully visible, unobstructed, distinct, and separated. No extra cats, no extra candles, no extra flowers, no partial flowers, and no background floral patterns.",
+    "skill_revision": {
+      "new_skills": [
+        "attribute_binding",
+        "quantity_counting",
+        "spatial_layout",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints",
+        "object_presence",
+        "multi_object_composition"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same skill set but apply it more strongly: emphasize attribute_binding for vivid purple cats and quantity_counting with negative_constraints for exactly six separated green flowers."
+    }
+  },
+  "latest_teacher_request": {
+    "available_skills": {
+      "anti_occlusion": "Arrange objects so required entities are not hidden, merged, or blocked.",
+      "attribute_binding": "Bind each attribute to the target object explicitly. Avoid leaking the attribute to other objects.",
+      "clarity_visibility": "Make required objects clear, centered enough, unobstructed, and easy to verify.",
+      "multi_object_composition": "Keep several objects distinct, complete, and jointly visible in one coherent scene.",
+      "negative_constraints": "Avoid forbidden or extra objects while preserving required content.",
+      "object_presence": "Ensure every required object is explicitly named, visible, and not cropped out.",
+      "quantity_counting": "State the exact number, require separate visible instances, avoid overlap, avoid merging, and make each instance countable.",
+      "spatial_layout": "State the relative positions clearly. Use unambiguous left/right/above/below/in-front/behind relations and a simple composition."
+    },
+    "best_so_far": {
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cats purple?",
+            "score": 0.5949430358596146,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.594943",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the cats purple?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many flowers are in the image?",
+            "score": 5.4443392782322726e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=5.44434e-08",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many flowers are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00083/samples/00001.png",
+      "prompt": "A clear scene with exactly three purple cats grouped on the left, and exactly three green candles grouped to the right of the cats. Include exactly six green flowers, all clearly visible and separated from each other. Make sure every candle is green, every cat is purple, and every flower is green. The three candles must be to the right of the three cats. Keep all objects unobstructed, distinct, and easy to count, with no extra cats, candles, or flowers.",
+      "round": 0,
+      "score": 0.8594679077863717
+    },
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "candidate_id": "geneval2_00751_5eb2b495_cand_01",
+    "current_eval_report": {
+      "critical_failure_types": [
+        "color_mismatch",
+        "count_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cats purple?",
+            "score": 0.5949430358596146,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.594943",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the cats purple?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many flowers are in the image?",
+            "score": 5.4443392782322726e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=5.44434e-08",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many flowers are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many candles are in the image?",
+            "score": 0.999736153476147,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.999736",
+          "expected": "three",
+          "status": "passed",
+          "target": "How many candles are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the candles green?",
+            "score": 0.9999999557621777,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the candles green?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any candles in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any candles in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the candles to the right of the cats?",
+            "score": 0.999999958022272,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the candles to the right of the cats?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cats are in the image?",
+            "score": 0.9999999892689152,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "three",
+          "status": "passed",
+          "target": "How many cats are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any cats in the image?",
+            "score": 0.999999985921022,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any cats in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the flowers green?",
+            "score": 0.9999999451101758,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the flowers green?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any flowers in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any flowers in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.8594679077863717,
+      "uncertain_constraints": []
+    },
+    "current_round": 0,
+    "fixed_constraints": [],
+    "memory": {
+      "best_so_far": {
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cats purple?",
+              "score": 0.5949430358596146,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.594943",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cats purple?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many flowers are in the image?",
+              "score": 5.4443392782322726e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=5.44434e-08",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many flowers are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00083/samples/00001.png",
+        "prompt": "A clear scene with exactly three purple cats grouped on the left, and exactly three green candles grouped to the right of the cats. Include exactly six green flowers, all clearly visible and separated from each other. Make sure every candle is green, every cat is purple, and every flower is green. The three candles must be to the right of the three cats. Keep all objects unobstructed, distinct, and easy to count, with no extra cats, candles, or flowers.",
+        "round": 0,
+        "score": 0.8594679077863717
+      },
+      "fixed_constraints": [],
+      "new_failures": [],
+      "persistent_failures": [
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cats purple?",
+            "score": 0.5949430358596146,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.594943",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the cats purple?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many flowers are in the image?",
+            "score": 5.4443392782322726e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=5.44434e-08",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many flowers are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "regressed_constraints": [],
+      "score_delta_from_best": 0.0,
+      "score_delta_from_previous": null
+    },
+    "new_failures": [],
+    "normalized_eval_report": {
+      "critical_failure_types": [
+        "color_mismatch",
+        "count_mismatch"
+      ],
+      "failed_constraints": [
+        {
+          "details": {
+            "atom_index": 5,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the cats purple?",
+            "score": 0.5949430358596146,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=0.594943",
+          "expected": "Yes",
+          "status": "failed",
+          "target": "Are the cats purple?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 7,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many flowers are in the image?",
+            "score": 5.4443392782322726e-08,
+            "skill": "count"
+          },
+          "detected": "soft_score=5.44434e-08",
+          "expected": "six",
+          "status": "failed",
+          "target": "How many flowers are in the image?",
+          "type": "count_mismatch"
+        }
+      ],
+      "passed_constraints": [
+        {
+          "details": {
+            "atom_index": 0,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many candles are in the image?",
+            "score": 0.999736153476147,
+            "skill": "count"
+          },
+          "detected": "soft_score=0.999736",
+          "expected": "three",
+          "status": "passed",
+          "target": "How many candles are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 1,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the candles green?",
+            "score": 0.9999999557621777,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the candles green?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 2,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any candles in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any candles in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 3,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the candles to the right of the cats?",
+            "score": 0.999999958022272,
+            "skill": "position"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the candles to the right of the cats?",
+          "type": "spatial_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 4,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "How many cats are in the image?",
+            "score": 0.9999999892689152,
+            "skill": "count"
+          },
+          "detected": "soft_score=1",
+          "expected": "three",
+          "status": "passed",
+          "target": "How many cats are in the image?",
+          "type": "count_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 6,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any cats in the image?",
+            "score": 0.999999985921022,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any cats in the image?",
+          "type": "missing_object"
+        },
+        {
+          "details": {
+            "atom_index": 8,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are the flowers green?",
+            "score": 0.9999999451101758,
+            "skill": "attribute"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are the flowers green?",
+          "type": "color_mismatch"
+        },
+        {
+          "details": {
+            "atom_index": 9,
+            "diagnostic_atom_threshold": 0.9,
+            "question": "Are there any flowers in the image?",
+            "score": 1.0,
+            "skill": "object"
+          },
+          "detected": "soft_score=1",
+          "expected": "Yes",
+          "status": "passed",
+          "target": "Are there any flowers in the image?",
+          "type": "missing_object"
+        }
+      ],
+      "score": 0.8594679077863717,
+      "uncertain_constraints": []
+    },
+    "original_prompt": "three green candles to the right of three purple cats, and six green flowers",
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the cats purple?",
+          "score": 0.5949430358596146,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.594943",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the cats purple?",
+        "type": "color_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many flowers are in the image?",
+          "score": 5.4443392782322726e-08,
+          "skill": "count"
+        },
+        "detected": "soft_score=5.44434e-08",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many flowers are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly three candles, exactly three cats, and exactly six flowers.",
+        "Bind colors correctly: all candles green, all cats purple, all flowers green.",
+        "Place the three green candles to the right of the three purple cats.",
+        "Keep all objects clearly visible and separated so counts are unambiguous.",
+        "Avoid extra candles, cats, or flowers."
+      ],
+      "generation_strategy": "Use a simple, clear composition with three purple cats grouped on the left and three green candles grouped on the right, ensuring the candles are spatially to the right of the cats. Place six green flowers separately and visibly in the scene, arranged so none are hidden or confused with the candles or cats. Maintain clear separation between individual objects for accurate counting and color recognition.",
+      "initial_prompt": "A clear scene with exactly three purple cats grouped on the left, and exactly three green candles grouped to the right of the cats. Include exactly six green flowers, all clearly visible and separated from each other. Make sure every candle is green, every cat is purple, and every flower is green. The three candles must be to the right of the three cats. Keep all objects unobstructed, distinct, and easy to count, with no extra cats, candles, or flowers.",
+      "parsed_constraints": {
+        "attributes": {
+          "candles": {
+            "color": "green"
+          },
+          "cats": {
+            "color": "purple"
+          },
+          "flowers": {
+            "color": "green"
+          }
+        },
+        "counts": {
+          "candles": 3,
+          "cats": 3,
+          "flowers": 6
+        },
+        "objects": [
+          "candles",
+          "cats",
+          "flowers"
+        ],
+        "relations": [
+          "three green candles to the right of three purple cats"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_initial_plan": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly three candles, exactly three cats, and exactly six flowers.",
+        "Bind colors correctly: all candles green, all cats purple, all flowers green.",
+        "Place the three green candles to the right of the three purple cats.",
+        "Keep all objects clearly visible and separated so counts are unambiguous.",
+        "Avoid extra candles, cats, or flowers."
+      ],
+      "generation_strategy": "Use a simple, clear composition with three purple cats grouped on the left and three green candles grouped on the right, ensuring the candles are spatially to the right of the cats. Place six green flowers separately and visibly in the scene, arranged so none are hidden or confused with the candles or cats. Maintain clear separation between individual objects for accurate counting and color recognition.",
+      "initial_prompt": "A clear scene with exactly three purple cats grouped on the left, and exactly three green candles grouped to the right of the cats. Include exactly six green flowers, all clearly visible and separated from each other. Make sure every candle is green, every cat is purple, and every flower is green. The three candles must be to the right of the three cats. Keep all objects unobstructed, distinct, and easy to count, with no extra cats, candles, or flowers.",
+      "parsed_constraints": {
+        "attributes": {
+          "candles": {
+            "color": "green"
+          },
+          "cats": {
+            "color": "purple"
+          },
+          "flowers": {
+            "color": "green"
+          }
+        },
+        "counts": {
+          "candles": 3,
+          "cats": 3,
+          "flowers": 6
+        },
+        "objects": [
+          "candles",
+          "cats",
+          "flowers"
+        ],
+        "relations": [
+          "three green candles to the right of three purple cats"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "previous_prompt": "A clear scene with exactly three purple cats grouped on the left, and exactly three green candles grouped to the right of the cats. Include exactly six green flowers, all clearly visible and separated from each other. Make sure every candle is green, every cat is purple, and every flower is green. The three candles must be to the right of the three cats. Keep all objects unobstructed, distinct, and easy to count, with no extra cats, candles, or flowers.",
+    "previous_selected_skills": [
+      "object_presence",
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "multi_object_composition",
+      "clarity_visibility",
+      "anti_occlusion",
+      "negative_constraints"
+    ],
+    "prompt_id": "geneval2_00751_5eb2b495",
+    "regressed_constraints": [],
+    "retry_budget_left": 3,
+    "retry_history": [
+      {
+        "attempt_type": "initial_generation",
+        "critical_failure_types": [
+          "color_mismatch",
+          "count_mismatch"
+        ],
+        "failed_constraints": [
+          {
+            "details": {
+              "atom_index": 5,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the cats purple?",
+              "score": 0.5949430358596146,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=0.594943",
+            "expected": "Yes",
+            "status": "failed",
+            "target": "Are the cats purple?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 7,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many flowers are in the image?",
+              "score": 5.4443392782322726e-08,
+              "skill": "count"
+            },
+            "detected": "soft_score=5.44434e-08",
+            "expected": "six",
+            "status": "failed",
+            "target": "How many flowers are in the image?",
+            "type": "count_mismatch"
+          }
+        ],
+        "passed_constraints": [
+          {
+            "details": {
+              "atom_index": 0,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many candles are in the image?",
+              "score": 0.999736153476147,
+              "skill": "count"
+            },
+            "detected": "soft_score=0.999736",
+            "expected": "three",
+            "status": "passed",
+            "target": "How many candles are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 1,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the candles green?",
+              "score": 0.9999999557621777,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the candles green?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 2,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any candles in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any candles in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 3,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the candles to the right of the cats?",
+              "score": 0.999999958022272,
+              "skill": "position"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the candles to the right of the cats?",
+            "type": "spatial_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 4,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "How many cats are in the image?",
+              "score": 0.9999999892689152,
+              "skill": "count"
+            },
+            "detected": "soft_score=1",
+            "expected": "three",
+            "status": "passed",
+            "target": "How many cats are in the image?",
+            "type": "count_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 6,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any cats in the image?",
+              "score": 0.999999985921022,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any cats in the image?",
+            "type": "missing_object"
+          },
+          {
+            "details": {
+              "atom_index": 8,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are the flowers green?",
+              "score": 0.9999999451101758,
+              "skill": "attribute"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are the flowers green?",
+            "type": "color_mismatch"
+          },
+          {
+            "details": {
+              "atom_index": 9,
+              "diagnostic_atom_threshold": 0.9,
+              "question": "Are there any flowers in the image?",
+              "score": 1.0,
+              "skill": "object"
+            },
+            "detected": "soft_score=1",
+            "expected": "Yes",
+            "status": "passed",
+            "target": "Are there any flowers in the image?",
+            "type": "missing_object"
+          }
+        ],
+        "planner_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly three candles, exactly three cats, and exactly six flowers.",
+            "Bind colors correctly: all candles green, all cats purple, all flowers green.",
+            "Place the three green candles to the right of the three purple cats.",
+            "Keep all objects clearly visible and separated so counts are unambiguous.",
+            "Avoid extra candles, cats, or flowers."
+          ],
+          "generation_strategy": "Use a simple, clear composition with three purple cats grouped on the left and three green candles grouped on the right, ensuring the candles are spatially to the right of the cats. Place six green flowers separately and visibly in the scene, arranged so none are hidden or confused with the candles or cats. Maintain clear separation between individual objects for accurate counting and color recognition.",
+          "initial_prompt": "A clear scene with exactly three purple cats grouped on the left, and exactly three green candles grouped to the right of the cats. Include exactly six green flowers, all clearly visible and separated from each other. Make sure every candle is green, every cat is purple, and every flower is green. The three candles must be to the right of the three cats. Keep all objects unobstructed, distinct, and easy to count, with no extra cats, candles, or flowers.",
+          "parsed_constraints": {
+            "attributes": {
+              "candles": {
+                "color": "green"
+              },
+              "cats": {
+                "color": "purple"
+              },
+              "flowers": {
+                "color": "green"
+              }
+            },
+            "counts": {
+              "candles": 3,
+              "cats": 3,
+              "flowers": 6
+            },
+            "objects": [
+              "candles",
+              "cats",
+              "flowers"
+            ],
+            "relations": [
+              "three green candles to the right of three purple cats"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "previous_action": {
+          "action_type": "initial_plan",
+          "generation_guards": [
+            "Show exactly three candles, exactly three cats, and exactly six flowers.",
+            "Bind colors correctly: all candles green, all cats purple, all flowers green.",
+            "Place the three green candles to the right of the three purple cats.",
+            "Keep all objects clearly visible and separated so counts are unambiguous.",
+            "Avoid extra candles, cats, or flowers."
+          ],
+          "generation_strategy": "Use a simple, clear composition with three purple cats grouped on the left and three green candles grouped on the right, ensuring the candles are spatially to the right of the cats. Place six green flowers separately and visibly in the scene, arranged so none are hidden or confused with the candles or cats. Maintain clear separation between individual objects for accurate counting and color recognition.",
+          "initial_prompt": "A clear scene with exactly three purple cats grouped on the left, and exactly three green candles grouped to the right of the cats. Include exactly six green flowers, all clearly visible and separated from each other. Make sure every candle is green, every cat is purple, and every flower is green. The three candles must be to the right of the three cats. Keep all objects unobstructed, distinct, and easy to count, with no extra cats, candles, or flowers.",
+          "parsed_constraints": {
+            "attributes": {
+              "candles": {
+                "color": "green"
+              },
+              "cats": {
+                "color": "purple"
+              },
+              "flowers": {
+                "color": "green"
+              }
+            },
+            "counts": {
+              "candles": 3,
+              "cats": 3,
+              "flowers": 6
+            },
+            "objects": [
+              "candles",
+              "cats",
+              "flowers"
+            ],
+            "relations": [
+              "three green candles to the right of three purple cats"
+            ]
+          },
+          "selected_skills": [
+            "object_presence",
+            "quantity_counting",
+            "attribute_binding",
+            "spatial_layout",
+            "multi_object_composition",
+            "clarity_visibility",
+            "anti_occlusion",
+            "negative_constraints"
+          ]
+        },
+        "prompt_used": "A clear scene with exactly three purple cats grouped on the left, and exactly three green candles grouped to the right of the cats. Include exactly six green flowers, all clearly visible and separated from each other. Make sure every candle is green, every cat is purple, and every flower is green. The three candles must be to the right of the three cats. Keep all objects unobstructed, distinct, and easy to count, with no extra cats, candles, or flowers.",
+        "round": 0,
+        "score": 0.8594679077863717,
+        "transition": {
+          "fixed_constraints": [],
+          "new_failures": [],
+          "persistent_failures": [
+            {
+              "details": {
+                "atom_index": 5,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "Are the cats purple?",
+                "score": 0.5949430358596146,
+                "skill": "attribute"
+              },
+              "detected": "soft_score=0.594943",
+              "expected": "Yes",
+              "status": "failed",
+              "target": "Are the cats purple?",
+              "type": "color_mismatch"
+            },
+            {
+              "details": {
+                "atom_index": 7,
+                "diagnostic_atom_threshold": 0.9,
+                "question": "How many flowers are in the image?",
+                "score": 5.4443392782322726e-08,
+                "skill": "count"
+              },
+              "detected": "soft_score=5.44434e-08",
+              "expected": "six",
+              "status": "failed",
+              "target": "How many flowers are in the image?",
+              "type": "count_mismatch"
+            }
+          ],
+          "regressed_constraints": [],
+          "score_delta_from_best": 0.0,
+          "score_delta_from_previous": null,
+          "transition_type": "initial"
+        },
+        "uncertain_constraints": []
+      }
+    ],
+    "retry_round": 1,
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null,
+    "trajectory_id": "geneval2_00751_5eb2b495"
+  },
+  "memory": {
+    "best_so_far_failed_constraints": [
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the cats purple?",
+          "score": 0.5949430358596146,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.594943",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the cats purple?",
+        "type": "color_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many flowers are in the image?",
+          "score": 5.4443392782322726e-08,
+          "skill": "count"
+        },
+        "detected": "soft_score=5.44434e-08",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many flowers are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "best_so_far_image_path": "data/qwen_geneval2_balanced_100_x5_initial_gpt55_a100/00083/samples/00001.png",
+    "best_so_far_prompt": "A clear scene with exactly three purple cats grouped on the left, and exactly three green candles grouped to the right of the cats. Include exactly six green flowers, all clearly visible and separated from each other. Make sure every candle is green, every cat is purple, and every flower is green. The three candles must be to the right of the three cats. Keep all objects unobstructed, distinct, and easy to count, with no extra cats, candles, or flowers.",
+    "best_so_far_round": 0,
+    "best_so_far_score": 0.8594679077863717,
+    "current_round": 0,
+    "fixed_constraints": [],
+    "new_failures": [],
+    "persistent_failures": [
+      {
+        "details": {
+          "atom_index": 5,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "Are the cats purple?",
+          "score": 0.5949430358596146,
+          "skill": "attribute"
+        },
+        "detected": "soft_score=0.594943",
+        "expected": "Yes",
+        "status": "failed",
+        "target": "Are the cats purple?",
+        "type": "color_mismatch"
+      },
+      {
+        "details": {
+          "atom_index": 7,
+          "diagnostic_atom_threshold": 0.9,
+          "question": "How many flowers are in the image?",
+          "score": 5.4443392782322726e-08,
+          "skill": "count"
+        },
+        "detected": "soft_score=5.44434e-08",
+        "expected": "six",
+        "status": "failed",
+        "target": "How many flowers are in the image?",
+        "type": "count_mismatch"
+      }
+    ],
+    "previous_action": {
+      "action_type": "initial_plan",
+      "generation_guards": [
+        "Show exactly three candles, exactly three cats, and exactly six flowers.",
+        "Bind colors correctly: all candles green, all cats purple, all flowers green.",
+        "Place the three green candles to the right of the three purple cats.",
+        "Keep all objects clearly visible and separated so counts are unambiguous.",
+        "Avoid extra candles, cats, or flowers."
+      ],
+      "generation_strategy": "Use a simple, clear composition with three purple cats grouped on the left and three green candles grouped on the right, ensuring the candles are spatially to the right of the cats. Place six green flowers separately and visibly in the scene, arranged so none are hidden or confused with the candles or cats. Maintain clear separation between individual objects for accurate counting and color recognition.",
+      "initial_prompt": "A clear scene with exactly three purple cats grouped on the left, and exactly three green candles grouped to the right of the cats. Include exactly six green flowers, all clearly visible and separated from each other. Make sure every candle is green, every cat is purple, and every flower is green. The three candles must be to the right of the three cats. Keep all objects unobstructed, distinct, and easy to count, with no extra cats, candles, or flowers.",
+      "parsed_constraints": {
+        "attributes": {
+          "candles": {
+            "color": "green"
+          },
+          "cats": {
+            "color": "purple"
+          },
+          "flowers": {
+            "color": "green"
+          }
+        },
+        "counts": {
+          "candles": 3,
+          "cats": 3,
+          "flowers": 6
+        },
+        "objects": [
+          "candles",
+          "cats",
+          "flowers"
+        ],
+        "relations": [
+          "three green candles to the right of three purple cats"
+        ]
+      },
+      "selected_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ]
+    },
+    "regressed_constraints": [],
+    "retry_history_summary": "round=0 score=0.859 failed=['Are the cats purple?', 'How many flowers are in the image?'] transition=initial",
+    "score_delta_from_best": 0.0,
+    "score_delta_from_previous": null
+  },
+  "metadata": {
+    "contract": "offline_manual_transfer_v1",
+    "last_input_package_path": "data/incoming_generation_results/geneval2_balanced_100x5_round0_with_eval_incremental/snapshot_003_worker_03/geneval2_00751_5eb2b495__geneval2_00751_5eb2b495_cand_01__round_0_generation_package.json",
+    "last_output_package_path": "data/outgoing_retry_actions/geneval2_balanced_100x5_round0_gpt55/geneval2_00751_5eb2b495__geneval2_00751_5eb2b495_cand_01__round_0_retry_action_package.json"
+  },
+  "prompt_id": "geneval2_00751_5eb2b495",
+  "retry_ready_action": {
+    "action_type": "retry_replan",
+    "branch_source": "latest",
+    "branch_source_round": 0,
+    "decision": "regenerate",
+    "diagnosis": "The image passed the presence, count, color, and spatial checks for three green candles, three cats, green flowers, and candles to the right of cats. It failed because the cats were not recognized as purple enough, and the flower count was not recognized as exactly six. The next regeneration should strengthen the purple color binding on the cats and make the six green flowers individually countable and separated.",
+    "expected_improvement": [
+      "Cats should be detected as purple by using vivid, uniform purple fur on each of the exactly three cats.",
+      "Flower count should be detected as six by arranging six separate green flowers as clearly separated individual blossoms with no extras.",
+      "Previously passed constraints should remain stable: exactly three green candles, exactly three cats, candles to the right of cats, flowers green, and all required objects visible."
+    ],
+    "failure_types": [
+      "color_mismatch",
+      "count_mismatch"
+    ],
+    "preserve_constraints": [
+      "Keep exactly three cats visible.",
+      "Keep exactly three candles visible.",
+      "Keep every candle green.",
+      "Keep the three green candles to the right of the three cats.",
+      "Keep flowers green.",
+      "Keep cats, candles, and flowers present, fully visible, separated, and unobstructed.",
+      "Do not include extra cats, candles, or flowers."
+    ],
+    "previous_plan_error": {
+      "details": "The previous prompt mentioned purple cats and six green flowers, but it did not emphasize a strong, unmistakable purple fill on every cat, and the flowers may have been clustered, merged, hidden, or otherwise not countable as six separate instances.",
+      "error_source": "Insufficient attribute binding emphasis for cat color and insufficient explicit count layout for six separate flowers."
+    },
+    "regeneration_strategy": "Use a simple organized composition: place the three cats on the left with solid vivid purple fur, place the three green candles on the right of the cats, and place exactly six green flowers in a clearly separated countable row or grid away from the cats and candles. Add negative constraints against extra flowers or merged flower clusters while preserving the passed candle and spatial constraints.",
+    "regression_risks": [
+      "The generator may reduce the number of cats or candles while focusing on the flowers.",
+      "The green flowers could merge into a cluster and be counted as fewer than six.",
+      "The cats could appear gray, blue, pink, or only partly purple instead of clearly purple.",
+      "Candles could drift away from the right side of the cats if the layout is not restated."
+    ],
+    "repair_constraints": [
+      "Make all three cats unmistakably purple: each cat must have solid, vivid purple fur over its body.",
+      "Show exactly six green flowers, not fewer and not more.",
+      "Make the six green flowers visually separable: six distinct individual flowers with gaps between them, not a bouquet or merged cluster.",
+      "Avoid extra flower buds, duplicate blossoms, partial flowers, or background floral patterns that could change the count."
+    ],
+    "retry_prompt": "A clear, simple scene with exactly three cats on the left, and every one of the three cats has solid vivid purple fur over its whole body. To the right of the cats, show exactly three green candles, all clearly green, with the candles positioned to the right of the cats. Also show exactly six green flowers: six separate individual green flowers arranged with visible gaps between them so they are easy to count, not a bouquet and not merged together. Keep all cats, candles, and flowers fully visible, unobstructed, distinct, and separated. No extra cats, no extra candles, no extra flowers, no partial flowers, and no background floral patterns.",
+    "skill_revision": {
+      "new_skills": [
+        "attribute_binding",
+        "quantity_counting",
+        "spatial_layout",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints",
+        "object_presence",
+        "multi_object_composition"
+      ],
+      "previous_skills": [
+        "object_presence",
+        "quantity_counting",
+        "attribute_binding",
+        "spatial_layout",
+        "multi_object_composition",
+        "clarity_visibility",
+        "anti_occlusion",
+        "negative_constraints"
+      ],
+      "reason": "Keep the same skill set but apply it more strongly: emphasize attribute_binding for vivid purple cats and quantity_counting with negative_constraints for exactly six separated green flowers."
+    }
+  },
+  "schema_version": "v1",
+  "source": {
+    "atom_count": 10,
+    "dataset": "geneval2",
+    "original_prompt": "three green candles to the right of three purple cats, and six green flowers",
+    "prompt": "three green candles to the right of three purple cats, and six green flowers",
+    "prompt_id": "geneval2_00751_5eb2b495",
+    "sampling_bucket": "multi_constraint",
+    "sampling_tags": [
+      "count",
+      "object",
+      "attribute",
+      "color_binding",
+      "position_spatial",
+      "multi_constraint",
+      "high_atom_count"
+    ],
+    "skill_counts": {
+      "attribute": 3,
+      "count": 3,
+      "object": 3,
+      "position": 1
+    },
+    "skills": [
+      "count",
+      "attribute",
+      "object",
+      "position",
+      "count",
+      "attribute",
+      "object",
+      "count",
+      "attribute",
+      "object"
+    ],
+    "source": "geneval2",
+    "source_index": 751,
+    "vqa_list": [
+      [
+        "How many candles are in the image?",
+        "three"
+      ],
+      [
+        "Are the candles green?",
+        "Yes"
+      ],
+      [
+        "Are there any candles in the image?",
+        "Yes"
+      ],
+      [
+        "Are the candles to the right of the cats?",
+        "Yes"
+      ],
+      [
+        "How many cats are in the image?",
+        "three"
+      ],
+      [
+        "Are the cats purple?",
+        "Yes"
+      ],
+      [
+        "Are there any cats in the image?",
+        "Yes"
+      ],
+      [
+        "How many flowers are in the image?",
+        "six"
+      ],
+      [
+        "Are the flowers green?",
+        "Yes"
+      ],
+      [
+        "Are there any flowers in the image?",
+        "Yes"
+      ]
+    ]
+  },
+  "status": "retry_ready",
+  "stop": {
+    "reason": "null",
+    "should_stop": false
+  },
+  "trajectory_id": "geneval2_00751_5eb2b495"
+}
