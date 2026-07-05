@@ -81,6 +81,9 @@ def export_retry_generation_metadata(
         ).strip()
         if not original_prompt:
             raise ValueError(f"{path} missing original prompt")
+        vqa_list = source.get("vqa_list")
+        if not isinstance(vqa_list, list) or not vqa_list:
+            raise ValueError(f"{path} missing source.vqa_list required for GenEval2")
 
         latest_attempt = _latest_attempt(trajectory)
         seed = _attempt_seed(latest_attempt)
@@ -91,7 +94,16 @@ def export_retry_generation_metadata(
         rows.append(
             {
                 "prompt_id": f"{candidate_id}_retry{retry_round:02d}",
+                "source": source.get("source", "geneval2"),
+                "dataset": source.get("dataset", "geneval2"),
+                "source_index": source.get("source_index"),
                 "prompt": original_prompt,
+                "skills": list(source.get("skills") or []),
+                "skill_counts": dict(source.get("skill_counts") or {}),
+                "atom_count": source.get("atom_count"),
+                "vqa_list": vqa_list,
+                "sampling_bucket": source.get("sampling_bucket"),
+                "sampling_tags": list(source.get("sampling_tags") or []),
                 "generation_prompt": retry_prompt,
                 "generation_prompt_source": "teacher_retry_replan",
                 "seed": seed,
