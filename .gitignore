@@ -6,6 +6,26 @@ __pycache__/
 dist/
 build/
 *.egg-info/
+
+# Generated experiment artifacts are large and machine-specific.
+# Keep source prompt/handoff metadata in data/prompts, but keep images,
+# eval outputs, raw trajectories, SFT exports, logs, and API traces out of Git.
+data/**
+!data/
+!data/.gitkeep
+!data/prompts/
+!data/prompts/**
+!data/failed/
+!data/failed/.gitkeep
+!data/images/
+!data/images/.gitkeep
+!data/processed/
+!data/processed/.gitkeep
+!data/raw/
+!data/raw/.gitkeep
+!data/sft/
+!data/sft/.gitkeep
+
 data/api_logs/
 data/failed/collector_errors.jsonl
 data/**/*.bmp

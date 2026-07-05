@@ -1524,3 +1524,44 @@ Blockers:
 Next recommended step:
 
 - Use the 471 retry-ready trajectories for SFT filtering/training review, or start the next stage that actually generates retry images from `retry_ready_action.retry_prompt`.
+
+## Retry Generation Git/Handoff Prep
+
+Status: completed.
+
+Completed work:
+
+- Added a code-only/data-light Git ignore policy:
+  - `data/**` is ignored by default.
+  - `data/prompts/**` remains trackable for small prompt and handoff metadata files.
+  - selected `.gitkeep` placeholders remain trackable.
+- Added `scripts/export_retry_generation_metadata.py`.
+- Exported the 471 retry-ready teacher plans into:
+  - `data/prompts/geneval2_balanced_100x5_round1_retry_generation.jsonl`
+- This metadata keeps the original GenEval2 prompt in `prompt` and stores the teacher retry plan in `generation_prompt`, so Qwen generation uses the retry plan while later GenEval2 evaluation still uses the original task prompt.
+
+Changed files:
+
+- `.gitignore`
+- `scripts/export_retry_generation_metadata.py`
+- `data/prompts/geneval2_balanced_100x5_round1_retry_generation.jsonl`
+- `docs/PROGRESS.md`
+- `docs/CODEX_HANDOFF.md`
+
+Validation commands run:
+
+- `python3 -m compileall scripts/export_retry_generation_metadata.py` - passed.
+- `python3 scripts/export_retry_generation_metadata.py --help` - passed.
+- `python3 scripts/export_retry_generation_metadata.py --trajectories-dir data/raw_trajectories/geneval2_balanced_100x5_round0_gpt55 --output data/prompts/geneval2_balanced_100x5_round1_retry_generation.jsonl --retry-round 1` - wrote 471 rows.
+- `wc -l data/prompts/geneval2_balanced_100x5_round1_retry_generation.jsonl` - returned 471.
+- `git check-ignore -v --no-index data/prompts/geneval2_balanced_100x5_round1_retry_generation.jsonl data/geneval2_jobs/balanced100_all_candidates/normalized_reports.jsonl data/sft/geneval2_balanced_100x5_round0_retry_replan_sft.jsonl` - confirmed prompts are unignored and generated eval/SFT artifacts are ignored.
+- `git diff --check -- .gitignore scripts/export_retry_generation_metadata.py docs/PROGRESS.md docs/CODEX_HANDOFF.md` - passed.
+
+Blockers:
+
+- Existing tracked `data/` artifacts are still in the Git index until a separate `git rm --cached` cleanup is run. `.gitignore` prevents new artifact additions, but it does not untrack files already committed.
+
+Next recommended step:
+
+- For the remote generation machine, commit/push code plus `data/prompts/geneval2_balanced_100x5_round1_retry_generation.jsonl`, then run Qwen generation with `--metadata` pointing to that file and without `--initial-plan-dir`.
+- For a clean long-term repo, run an intentional cached-index cleanup for generated `data/` artifacts before committing the Git hygiene change.

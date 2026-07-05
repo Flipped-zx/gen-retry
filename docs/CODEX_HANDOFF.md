@@ -1080,3 +1080,60 @@ python3 scripts/report_geneval2_retry_stage.py \
 Next practical step:
 
 - Review/filter the 471 retry SFT rows, or proceed to next-stage retry image generation using the saved `retry_ready_action.retry_prompt` values. Do not regenerate retry images as part of this completed stage unless explicitly requested.
+
+## Latest Retry Generation Git/Handoff Prep
+
+Remote generation only needs the code, normal configs, and this small handoff metadata file:
+
+- `data/prompts/geneval2_balanced_100x5_round1_retry_generation.jsonl`
+
+It does not need the local raw trajectories, initial images, GenEval2 job outputs, outgoing retry action packages, SFT exports, or API logs for image generation.
+
+The metadata was exported with:
+
+```bash
+python3 scripts/export_retry_generation_metadata.py \
+  --trajectories-dir data/raw_trajectories/geneval2_balanced_100x5_round0_gpt55 \
+  --output data/prompts/geneval2_balanced_100x5_round1_retry_generation.jsonl \
+  --retry-round 1
+```
+
+Output count:
+
+- 471 rows.
+
+Schema convention:
+
+- `prompt`: original GenEval2 prompt for later evaluation.
+- `generation_prompt`: teacher `retry_ready_action.retry_prompt` for Qwen generation.
+- `generation_prompt_source`: `teacher_retry_replan`.
+- `original_prompt_id` / `original_candidate_id`: mapping back to the failed initial candidate.
+
+Git hygiene update:
+
+- `.gitignore` now ignores `data/**` by default.
+- `data/prompts/**` remains trackable for small prompt and handoff metadata files.
+- Generated eval/SFT/log/image artifacts under `data/` should stay out of Git.
+
+Important caveat:
+
+- `.gitignore` does not remove files already tracked by Git. Before committing this hygiene change, do a deliberate cached-index cleanup for generated `data/` artifacts, then add back only the prompt/handoff metadata that should be versioned.
+
+Suggested remote generation command after Git sync:
+
+```bash
+cd /home/develop/biocloudplantform/xxr/gen-retry
+mkdir -p data/run_logs
+
+nohup python3 scripts/generate_qwen_geneval_images.py \
+  --metadata data/prompts/geneval2_balanced_100x5_round1_retry_generation.jsonl \
+  --output-dir data/qwen_geneval2_balanced_100x5_round1_retry_gpt55 \
+  --model-path /home/develop/biocloudplantform/xxr/models/Qwen-Image-2512 \
+  --n-samples 1 \
+  --seed 3000 \
+  --gpus 0,1,2,3,4,5 \
+  --workers-per-gpu 1 \
+  --resume \
+  --skip-grid \
+  > data/run_logs/qwen_geneval2_balanced_100x5_round1_retry_gpt55_6gpu.log 2>&1 &
+```
