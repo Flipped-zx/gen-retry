@@ -1539,12 +1539,16 @@ Completed work:
 - Exported the 471 retry-ready teacher plans into:
   - `data/prompts/geneval2_balanced_100x5_round1_retry_generation.jsonl`
 - This metadata keeps the original GenEval2 prompt in `prompt` and stores the teacher retry plan in `generation_prompt`, so Qwen generation uses the retry plan while later GenEval2 evaluation still uses the original task prompt.
+- The metadata now carries the original failed candidate seed in `seed` with `seed_source=initial_generation`.
+- `scripts/generate_qwen_geneval_images.py` now prioritizes `metadata.seed`; if absent, it falls back to the previous `--seed + prompt_index * n_samples + candidate_index` formula.
 
 Changed files:
 
 - `.gitignore`
 - `scripts/export_retry_generation_metadata.py`
+- `scripts/generate_qwen_geneval_images.py`
 - `data/prompts/geneval2_balanced_100x5_round1_retry_generation.jsonl`
+- `tests/test_generate_qwen_geneval_images.py`
 - `docs/PROGRESS.md`
 - `docs/CODEX_HANDOFF.md`
 
@@ -1554,8 +1558,10 @@ Validation commands run:
 - `python3 scripts/export_retry_generation_metadata.py --help` - passed.
 - `python3 scripts/export_retry_generation_metadata.py --trajectories-dir data/raw_trajectories/geneval2_balanced_100x5_round0_gpt55 --output data/prompts/geneval2_balanced_100x5_round1_retry_generation.jsonl --retry-round 1` - wrote 471 rows.
 - `wc -l data/prompts/geneval2_balanced_100x5_round1_retry_generation.jsonl` - returned 471.
+- Metadata audit returned 471 rows, 0 missing seeds, and 471 unique paired seeds.
+- `python3 -m unittest tests.test_generate_qwen_geneval_images` - passed.
 - `git check-ignore -v --no-index data/prompts/geneval2_balanced_100x5_round1_retry_generation.jsonl data/geneval2_jobs/balanced100_all_candidates/normalized_reports.jsonl data/sft/geneval2_balanced_100x5_round0_retry_replan_sft.jsonl` - confirmed prompts are unignored and generated eval/SFT artifacts are ignored.
-- `git diff --check -- .gitignore scripts/export_retry_generation_metadata.py docs/PROGRESS.md docs/CODEX_HANDOFF.md` - passed.
+- `git diff --check -- .gitignore scripts/export_retry_generation_metadata.py scripts/generate_qwen_geneval_images.py tests/test_generate_qwen_geneval_images.py docs/PROGRESS.md docs/CODEX_HANDOFF.md` - passed.
 
 Blockers:
 

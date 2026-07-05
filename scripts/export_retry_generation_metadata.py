@@ -83,6 +83,7 @@ def export_retry_generation_metadata(
             raise ValueError(f"{path} missing original prompt")
 
         latest_attempt = _latest_attempt(trajectory)
+        seed = _attempt_seed(latest_attempt)
         evaluation = latest_attempt.get("evaluation") if isinstance(latest_attempt, dict) else {}
         if not isinstance(evaluation, dict):
             evaluation = {}
@@ -93,6 +94,8 @@ def export_retry_generation_metadata(
                 "prompt": original_prompt,
                 "generation_prompt": retry_prompt,
                 "generation_prompt_source": "teacher_retry_replan",
+                "seed": seed,
+                "seed_source": "initial_generation",
                 "retry_round": retry_round,
                 "original_prompt_id": prompt_id,
                 "original_candidate_id": candidate_id,
@@ -127,6 +130,19 @@ def _latest_attempt(trajectory: dict[str, Any]) -> dict[str, Any]:
     if isinstance(attempts, list) and attempts and isinstance(attempts[-1], dict):
         return attempts[-1]
     return {}
+
+
+def _attempt_seed(attempt: dict[str, Any]) -> int | None:
+    generation = attempt.get("generation")
+    if not isinstance(generation, dict):
+        return None
+    seed = generation.get("seed")
+    if seed is None:
+        return None
+    try:
+        return int(seed)
+    except (TypeError, ValueError) as exc:
+        raise ValueError(f"invalid generation seed: {seed!r}") from exc
 
 
 if __name__ == "__main__":

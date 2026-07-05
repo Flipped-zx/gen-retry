@@ -157,7 +157,13 @@ def main() -> int:
         generated_paths: list[Path] = []
         for candidate_index in range(args.n_samples):
             image_path = images_dir / f"{candidate_index:05d}.png"
-            candidate_seed = args.seed + prompt_index * args.n_samples + candidate_index
+            candidate_seed = candidate_seed_from_metadata(
+                metadata,
+                base_seed=args.seed,
+                prompt_index=prompt_index,
+                n_samples=args.n_samples,
+                candidate_index=candidate_index,
+            )
             if args.resume and image_path.exists():
                 generated_paths.append(image_path)
             else:
@@ -423,6 +429,24 @@ def attach_initial_plans(metadatas: list[dict[str, Any]], plan_dir: Path) -> lis
 
 def generation_prompt_from_metadata(metadata: dict[str, Any]) -> str:
     return str(metadata.get("generation_prompt") or metadata.get("prompt", "")).strip()
+
+
+def candidate_seed_from_metadata(
+    metadata: dict[str, Any],
+    *,
+    base_seed: int,
+    prompt_index: int,
+    n_samples: int,
+    candidate_index: int,
+) -> int:
+    metadata_seed = metadata.get("seed")
+    if metadata_seed is not None:
+        try:
+            seed = int(metadata_seed)
+        except (TypeError, ValueError) as exc:
+            raise ValueError(f"metadata seed must be an integer: {metadata_seed!r}") from exc
+        return seed + candidate_index
+    return base_seed + prompt_index * n_samples + candidate_index
 
 
 def validate_indexed_metadatas(

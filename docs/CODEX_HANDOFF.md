@@ -1107,6 +1107,8 @@ Schema convention:
 - `prompt`: original GenEval2 prompt for later evaluation.
 - `generation_prompt`: teacher `retry_ready_action.retry_prompt` for Qwen generation.
 - `generation_prompt_source`: `teacher_retry_replan`.
+- `seed`: the original failed candidate's initial-generation seed, so retry generation is paired with the initial image.
+- `seed_source`: `initial_generation`.
 - `original_prompt_id` / `original_candidate_id`: mapping back to the failed initial candidate.
 
 Git hygiene update:
@@ -1137,3 +1139,5 @@ nohup python3 scripts/generate_qwen_geneval_images.py \
   --skip-grid \
   > data/run_logs/qwen_geneval2_balanced_100x5_round1_retry_gpt55_6gpu.log 2>&1 &
 ```
+
+The `--seed 3000` value is only a fallback for rows without metadata seeds. The retry metadata currently has paired seeds for all 471 rows, and `scripts/generate_qwen_geneval_images.py` prioritizes `metadata.seed`.
