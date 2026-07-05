@@ -1571,3 +1571,54 @@ Next recommended step:
 
 - For the remote generation machine, commit/push code plus `data/prompts/geneval2_balanced_100x5_round1_retry_generation.jsonl`, then run Qwen generation with `--metadata` pointing to that file and without `--initial-plan-dir`.
 - For a clean long-term repo, run an intentional cached-index cleanup for generated `data/` artifacts before committing the Git hygiene change.
+
+## Two-Machine Git Exchange Loop
+
+Status: completed.
+
+Completed work:
+
+- Added `data/exchange/` as the tracked lightweight handoff area:
+  - `data/exchange/api_to_gpu/` for API-machine generation metadata.
+  - `data/exchange/gpu_to_api/` for GPU-machine GenEval2 handoff packages.
+- Kept normal generated artifacts ignored under `data/**`; only `data/prompts/**` and `data/exchange/**` are trackable.
+- Added `src/gen_retry/exchange.py` with two loop helpers:
+  - GPU -> API: package `generation_manifest.jsonl`, `normalized_reports.jsonl`, optional `diagnostic_jobs.jsonl`, and summary files without images.
+  - API continuation: turn a GPU handoff back into generation packages that preserve the original trajectory/candidate identity.
+- Added `scripts/package_geneval2_handoff.py` for the GPU machine after GenEval2 merge.
+- Added `scripts/build_retry_continuation_packages.py` for the API machine before calling teacher retry again.
+- Updated retry generation metadata export to include the exact `previous_action` used for that retry prompt.
+- Added `tests/test_exchange.py` covering candidate coverage and trajectory identity preservation.
+
+Changed files:
+
+- `.gitignore`
+- `data/exchange/README.md`
+- `data/exchange/api_to_gpu/.gitkeep`
+- `data/exchange/gpu_to_api/.gitkeep`
+- `scripts/export_retry_generation_metadata.py`
+- `scripts/package_geneval2_handoff.py`
+- `scripts/build_retry_continuation_packages.py`
+- `src/gen_retry/exchange.py`
+- `tests/test_exchange.py`
+- `docs/PROGRESS.md`
+- `docs/CODEX_HANDOFF.md`
+
+Validation commands run:
+
+- `python3 -m compileall src/gen_retry/exchange.py scripts/package_geneval2_handoff.py scripts/build_retry_continuation_packages.py scripts/export_retry_generation_metadata.py tests/test_exchange.py` - passed.
+- `python3 -m unittest tests.test_exchange` - passed.
+- `python3 -m unittest tests.test_generate_qwen_geneval_images` - passed.
+- `git diff --check` - passed.
+- `python3 -m compileall src scripts tests` - passed.
+- `python3 scripts/package_geneval2_handoff.py --help` - passed.
+- `python3 scripts/build_retry_continuation_packages.py --help` - passed.
+- `git add -n data/exchange/README.md data/exchange/api_to_gpu/.gitkeep data/exchange/gpu_to_api/.gitkeep src/gen_retry/exchange.py scripts/package_geneval2_handoff.py scripts/build_retry_continuation_packages.py tests/test_exchange.py` - confirmed new exchange files are addable.
+
+Blockers:
+
+- None.
+
+Next recommended step:
+
+- On the GPU machine, after the current round1 GenEval2 merge finishes, run `scripts/package_geneval2_handoff.py` into `data/exchange/gpu_to_api/<run>/`, commit that directory, then pull it on the API machine and run `scripts/build_retry_continuation_packages.py` followed by `scripts/build_geneval2_retry_plans.py`.

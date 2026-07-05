@@ -112,6 +112,7 @@ def export_retry_generation_metadata(
                 "original_prompt_id": prompt_id,
                 "original_candidate_id": candidate_id,
                 "source_trajectory_path": str(path),
+                "previous_action": action,
                 "previous_score": evaluation.get("score"),
                 "previous_failure_types": list(evaluation.get("critical_failure_types") or []),
             }

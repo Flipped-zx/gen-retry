@@ -1141,3 +1141,51 @@ nohup python3 scripts/generate_qwen_geneval_images.py \
 ```
 
 The `--seed 3000` value is only a fallback for rows without metadata seeds. The retry metadata currently has paired seeds for all 471 rows, and `scripts/generate_qwen_geneval_images.py` prioritizes `metadata.seed`.
+
+## Latest Two-Machine Exchange Refactor
+
+The intended loop is now:
+
+1. API machine writes retry generation metadata to `data/exchange/api_to_gpu/<run>/generation_metadata.jsonl`.
+2. GPU machine pulls, generates images, runs GenEval2 locally, and packages only lightweight JSON into `data/exchange/gpu_to_api/<run>/`.
+3. API machine pulls that handoff, rebuilds continuation packages, calls teacher retry again, and updates the same local raw trajectories.
+
+Images are never part of the Git loop. Remote image paths are kept as artifact references only.
+
+GPU-side packaging after GenEval2 merge:
+
+```bash
+python3 scripts/package_geneval2_handoff.py \
+  --generation-manifest data/qwen_geneval2_balanced_100x5_round1_retry_gpt55/generation_manifest.jsonl \
+  --geneval2-dir data/geneval2_jobs/balanced100x5_round1_retry_gpt55_merged \
+  --output-dir data/exchange/gpu_to_api/balanced100x5_round1_retry_gpt55 \
+  --expected-count 471
+```
+
+API-side continuation after pulling the handoff:
+
+```bash
+python3 scripts/build_retry_continuation_packages.py \
+  --gpu-handoff-dir data/exchange/gpu_to_api/balanced100x5_round1_retry_gpt55 \
+  --output-dir data/incoming_generation_results/balanced100x5_round1_retry_gpt55_with_eval \
+  --round 1 \
+  --trajectory-dir data/raw_trajectories/geneval2_balanced_100x5_round0_gpt55
+
+python3 scripts/build_geneval2_retry_plans.py \
+  --package-dir data/incoming_generation_results/balanced100x5_round1_retry_gpt55_with_eval \
+  --output-dir data/outgoing_retry_actions/balanced100x5_round1_retry_gpt55 \
+  --trajectory-dir data/raw_trajectories/geneval2_balanced_100x5_round0_gpt55 \
+  --teacher gpt55 \
+  --max-retry 3
+```
+
+Important implementation detail:
+
+- `build_retry_continuation_packages.py` keeps `trajectory_id`, `prompt_id`, and `candidate_id` equal to the original failed candidate, while storing the GPU retry image id in `generation.image_id` and `metadata.generated_candidate_id`. This is what lets `build_geneval2_retry_plans.py` update the same raw trajectory instead of starting a disconnected new one.
+
+Validation run for this refactor:
+
+- `python3 -m compileall src scripts tests`
+- `python3 -m unittest tests.test_exchange`
+- `python3 -m unittest tests.test_generate_qwen_geneval_images`
+- `git diff --check`
