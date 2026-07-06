@@ -1513,7 +1513,7 @@ Validation commands run:
 - `python3 -m unittest discover tests` - passed, 70 tests.
 - `python3 scripts/safe_check.py` - passed.
 - `python3 -m json.tool` on the final summary, manifest rebuild summary, and merge summary - passed.
-- `rg -n 'sk-fa1a5' .` - returned no matches; the API key was not written into repo files.
+- `rg -n '<api-key-prefix>' .` - returned no matches; the API key was not written into repo files.
 - Final count audit returned 500 reports, 500 package rows, 500 retry action manifest rows, 500 raw trajectories, 471 SFT rows, and 29 rejected initial-success rows.
 - `git diff --check` - passed.
 
@@ -1622,3 +1622,62 @@ Blockers:
 Next recommended step:
 
 - On the GPU machine, after the current round1 GenEval2 merge finishes, run `scripts/package_geneval2_handoff.py` into `data/exchange/gpu_to_api/<run>/`, commit that directory, then pull it on the API machine and run `scripts/build_retry_continuation_packages.py` followed by `scripts/build_geneval2_retry_plans.py`.
+
+## Round1 Retry Eval To Round2 Teacher Plans
+
+Status: completed.
+
+Completed work:
+
+- Pulled GPU-machine handoff `data/exchange/gpu_to_api/balanced100x5_round1_retry_gpt55_v2/`.
+- Verified handoff completeness:
+  - `generation_manifest.jsonl`: 471 rows.
+  - `normalized_reports.jsonl`: 471 rows.
+  - `diagnostic_jobs.jsonl`: 471 rows.
+  - `handoff_manifest.json`: status `ok`.
+- Built API-side continuation packages:
+  - `data/incoming_generation_results/balanced100x5_round1_retry_gpt55_v2_with_eval/`
+  - 471 packages, 0 failures.
+- Called `gpt-5.5` teacher retry API for all non-stopped round1 samples using 8 package shards.
+- Rebuilt final retry action manifest:
+  - `data/outgoing_retry_actions/balanced100x5_round1_retry_gpt55_v2/retry_action_manifest.jsonl`
+  - 471 rows, 0 quality critical issues.
+- Exported next GPU generation metadata:
+  - `data/exchange/api_to_gpu/balanced100x5_round2_retry_gpt55_v2/generation_metadata.jsonl`
+  - 396 rows for round2 retry generation.
+
+Round1 outcome relative to round0:
+
+- Total retry images evaluated: 471.
+- Round0 average score: 0.7522.
+- Round1 average score: 0.7715.
+- Average delta: +0.0193.
+- Improved: 279.
+- Worse: 192.
+- Same: 0.
+- Passed after round1: 37.
+
+Round1 teacher/stop outcome:
+
+- `passed`: 37.
+- `large_regression`: 38.
+- continuing `retry_ready`: 396.
+- `gpt-5.5` retry API calls: 396.
+- API failures: 0.
+
+Validation commands run:
+
+- `python3 scripts/build_retry_continuation_packages.py ... --round 1 ...` - wrote 471 packages, 0 failures.
+- `python3 scripts/test.py --contains gpt-5.5` - relay listed `gpt-5.5`.
+- `python3 scripts/build_geneval2_retry_plans.py ... --teacher gpt55 --max-retry 3 --resume` over 8 package shards - all shards status `ok`.
+- `python3 scripts/rebuild_retry_action_manifest.py --output-dir data/outgoing_retry_actions/balanced100x5_round1_retry_gpt55_v2 --expected-count 471` - status `ok`, 471 packages, 0 critical quality issues.
+- `python3 scripts/export_retry_generation_metadata.py --trajectories-dir data/raw_trajectories/geneval2_balanced_100x5_round0_gpt55 --output data/exchange/api_to_gpu/balanced100x5_round2_retry_gpt55_v2/generation_metadata.jsonl --retry-round 2` - wrote 396 rows.
+- Round2 metadata audit returned 396 rows, 0 missing `vqa_list`, 0 missing seed, 0 missing `previous_action`.
+
+Blockers:
+
+- None.
+
+Next recommended step:
+
+- Commit/push `data/exchange/api_to_gpu/balanced100x5_round2_retry_gpt55_v2/generation_metadata.jsonl` plus any desired code/doc updates, then GPU machine can generate round2 images from that metadata.

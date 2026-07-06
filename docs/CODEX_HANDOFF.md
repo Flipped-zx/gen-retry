@@ -1189,3 +1189,60 @@ Validation run for this refactor:
 - `python3 -m unittest tests.test_exchange`
 - `python3 -m unittest tests.test_generate_qwen_geneval_images`
 - `git diff --check`
+
+## Latest Round1 Retry Teacher Completion
+
+The API machine consumed:
+
+- `data/exchange/gpu_to_api/balanced100x5_round1_retry_gpt55_v2/`
+
+Handoff counts:
+
+- generation manifest: 471
+- normalized reports: 471
+- diagnostic jobs: 471
+
+Continuation package build:
+
+```bash
+python3 scripts/build_retry_continuation_packages.py \
+  --gpu-handoff-dir data/exchange/gpu_to_api/balanced100x5_round1_retry_gpt55_v2 \
+  --output-dir data/incoming_generation_results/balanced100x5_round1_retry_gpt55_v2_with_eval \
+  --round 1 \
+  --trajectory-dir data/raw_trajectories/geneval2_balanced_100x5_round0_gpt55
+```
+
+Teacher retry used `gpt-5.5` through `.env` relay settings. The batch was run as 8 package shards against the same trajectory dir and same final output dir, then the final manifest was rebuilt from package files:
+
+```bash
+python3 scripts/rebuild_retry_action_manifest.py \
+  --output-dir data/outgoing_retry_actions/balanced100x5_round1_retry_gpt55_v2 \
+  --expected-count 471
+```
+
+Final retry action output:
+
+- `data/outgoing_retry_actions/balanced100x5_round1_retry_gpt55_v2/retry_action_manifest.jsonl`
+- 471 package files
+- quality critical count: 0
+
+Round1 result summary:
+
+- round0 avg score: 0.7522
+- round1 avg score: 0.7715
+- avg delta: +0.0193
+- improved: 279
+- worse: 192
+- passed after round1: 37
+- stopped due large regression: 38
+- continuing to round2: 396
+- `gpt-5.5` retry API calls: 396
+- API failures: 0
+
+Next GPU input:
+
+- `data/exchange/api_to_gpu/balanced100x5_round2_retry_gpt55_v2/generation_metadata.jsonl`
+- 396 rows
+- 0 missing `vqa_list`
+- 0 missing seed
+- 0 missing `previous_action`
