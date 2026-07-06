@@ -1246,3 +1246,44 @@ Next GPU input:
 - 0 missing `vqa_list`
 - 0 missing seed
 - 0 missing `previous_action`
+
+## Latest Round2 Retry Teacher Completion
+
+The API machine consumed:
+
+- `data/exchange/gpu_to_api/balanced100x5_round2_retry_gpt55_v2/`
+
+Teacher retry used `gpt-5.5` through `.env` relay settings. The first 8-shard run completed locally but saw transient upstream HTTP 502 responses for 73 teacher calls. A 4-shard targeted rerun plus a final sequential rerun completed all remaining calls.
+
+Final retry action output:
+
+- `data/outgoing_retry_actions/balanced100x5_round2_retry_gpt55_v2/retry_action_manifest.jsonl`
+- 396 package files
+- teacher actions: 345
+- stopped as passed: 23
+- stopped as large regression: 28
+- invalid teacher actions: 0
+- quality critical count: 0
+
+Round2 result summary:
+
+- paired round1/round2 samples: 396
+- avg delta: +0.007744
+- median delta: +0.005039
+- improved: 220
+- worse: 176
+- passed after round2: 23
+- continuing to round3: 345
+
+Next GPU input:
+
+- `data/exchange/api_to_gpu/balanced100x5_round3_retry_gpt55_v2/generation_metadata.jsonl`
+- 345 rows
+- 0 missing `vqa_list`
+- 0 missing seed
+- 0 missing `previous_action`
+
+100x5 sampling note:
+
+- The current 500 trajectories cover 100 prompts with 5 candidates each.
+- 92/100 prompts show multiple failed-constraint signatures across the 5 candidates, so the repeated sampling is producing useful diagnostic diversity rather than only duplicate failures.

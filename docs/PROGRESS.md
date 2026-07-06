@@ -1681,3 +1681,54 @@ Blockers:
 Next recommended step:
 
 - Commit/push `data/exchange/api_to_gpu/balanced100x5_round2_retry_gpt55_v2/generation_metadata.jsonl` plus any desired code/doc updates, then GPU machine can generate round2 images from that metadata.
+
+## Round2 Retry Eval To Round3 Teacher Plans
+
+Status: completed.
+
+Completed work:
+
+- Consumed GPU-machine handoff `data/exchange/gpu_to_api/balanced100x5_round2_retry_gpt55_v2/` with 396 generation/eval rows.
+- Built 396 round2 continuation packages with 0 package build failures.
+- Called `gpt-5.5` teacher retry API for round2 samples. Initial parallel run hit 73 transient upstream HTTP 502 failures; targeted reruns reduced invalid teacher actions to 0.
+- Rebuilt final manifest:
+  - `data/outgoing_retry_actions/balanced100x5_round2_retry_gpt55_v2/retry_action_manifest.jsonl`
+  - 396 rows, 0 quality critical issues.
+- Exported round3 GPU metadata:
+  - `data/exchange/api_to_gpu/balanced100x5_round3_retry_gpt55_v2/generation_metadata.jsonl`
+  - 345 rows, 0 missing `vqa_list`, seed, or `previous_action`.
+
+Round2 outcome relative to round1:
+
+- Paired samples: 396.
+- Average delta: +0.007744.
+- Median delta: +0.005039.
+- Improved: 220.
+- Worse: 176.
+- Passed after round2: 23.
+- Stopped due large regression: 28.
+- Continuing to round3: 345.
+
+100x5 sampling audit:
+
+- 100 prompts, exactly 5 candidates each.
+- Round0 initial generation: 29 passed, 471 failed.
+- 92/100 prompts had multiple failed-constraint signatures across the 5 candidates.
+- 71/100 prompts had multiple failure-type signatures; 68/100 had multiple skill signatures.
+- Average unique failed-constraint signatures per prompt: 3.01.
+
+Validation commands run:
+
+- `python3 scripts/build_retry_continuation_packages.py ... --round 2 ...` - wrote 396 packages, 0 failures.
+- `python3 scripts/build_geneval2_retry_plans.py ... --teacher gpt55 --max-retry 3` over 8 shards plus targeted 502 reruns - final invalid teacher actions: 0.
+- `python3 scripts/rebuild_retry_action_manifest.py --output-dir data/outgoing_retry_actions/balanced100x5_round2_retry_gpt55_v2 --expected-count 396` - status `ok`.
+- `python3 scripts/export_retry_generation_metadata.py --trajectories-dir data/raw_trajectories/geneval2_balanced_100x5_round0_gpt55 --output data/exchange/api_to_gpu/balanced100x5_round3_retry_gpt55_v2/generation_metadata.jsonl --retry-round 3` - wrote 345 rows.
+- Secret scan for the provided API key outside `.env` and `data/api_logs/**` returned no matches.
+
+Blockers:
+
+- None. The relay had transient HTTP 502s, but targeted reruns completed all teacher actions.
+
+Next recommended step:
+
+- Commit/push `data/exchange/api_to_gpu/balanced100x5_round3_retry_gpt55_v2/generation_metadata.jsonl` and pull on the GPU machine for round3 image generation.
