@@ -1287,3 +1287,74 @@ Next GPU input:
 
 - The current 500 trajectories cover 100 prompts with 5 candidates each.
 - 92/100 prompts show multiple failed-constraint signatures across the 5 candidates, so the repeated sampling is producing useful diagnostic diversity rather than only duplicate failures.
+
+## Latest Round3 Review And Selective Round4 Teacher Completion
+
+The API machine consumed:
+
+- `data/exchange/gpu_to_api/balanced100x5_round3_retry_gpt55_v2/`
+
+Round3 result summary:
+
+- paired round2/round3 samples: 345
+- avg delta: -0.005068
+- median delta: +0.000014
+- improved: 176
+- worse: 169
+- passed after round3: 15
+- stopped due large regression: 29
+- eligible for another retry: 301
+
+Branch outcome:
+
+- `best_so_far`: 192 samples, avg delta +0.024438, improved 121, worse 71, passed 10, large regression 13.
+- `latest`: 153 samples, avg delta -0.042096, improved 55, worse 98, passed 5, large regression 16.
+
+Because full round3 was flat to slightly negative, the next API step was a selective round4 experiment instead of another full 301-sample teacher call.
+
+Implementation update:
+
+- Added optional retry prompt style switch `GEN_RETRY_REPLAN_STYLE=canonical_display`.
+- Default retry prompt behavior is unchanged.
+- When enabled, the teacher is asked to use canonical GenEval-friendly scene planning: plain backgrounds, rows/columns/bands/zones, visible non-overlapping countable objects, simple grids for high counts, and explicit spatial layout.
+
+Selective round4 teacher call:
+
+- selected samples: 64
+- selection groups:
+  - 40 `best_so_far_promising`
+  - 12 `latest_control`
+  - 12 `count_hard_control`
+- teacher model: `gpt-5.5` through `.env` relay settings
+- API/package failures: 0
+- quality critical issues: 0
+- teacher actions: 64/64
+
+Canonical style audit:
+
+- average retry prompt length: 142.3 words
+- `plain`: 64/64
+- `row`: 54/64
+- `background`: 42/64
+- `band`: 27/64
+- `visible`: 63/64
+- `countable`: 45/64
+
+Next GPU input:
+
+- `data/exchange/api_to_gpu/balanced100x5_round4_retry_gpt55_v2_selective_canonical/generation_metadata.jsonl`
+- 64 rows
+- 0 missing `vqa_list`
+- 0 missing seed
+- 0 missing `generation_prompt`
+- 0 missing `previous_action`
+
+Validation run:
+
+- `python3 -m compileall src/gen_retry/prompts/retry_replan_prompt.py`
+- `python3 scripts/build_retry_continuation_packages.py ... --round 3 ...`
+- `python3 scripts/build_geneval2_retry_plans.py ... --teacher gpt55 --max-retry 4` over 4 selective shards with `GEN_RETRY_REPLAN_STYLE=canonical_display`
+- `python3 scripts/rebuild_retry_action_manifest.py --output-dir data/outgoing_retry_actions/balanced100x5_round3_retry_gpt55_v2_selective_round4_canonical --expected-count 64`
+- selective round4 metadata export
+- `git diff --check`
+- secret scan for the provided API key outside `.env` and `data/api_logs/**`

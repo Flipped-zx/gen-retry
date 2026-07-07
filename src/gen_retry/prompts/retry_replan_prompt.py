@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 from typing import Any
 
 from gen_retry.schemas.actions import ALLOWED_SKILLS
@@ -46,6 +47,18 @@ The teacher does not need raw image bytes. Image paths in history are artifact
 references only; reason from the normalized evaluator report and trajectory
 memory.
 The retry_prompt must be directly usable by a text-to-image generator.
+"""
+
+
+CANONICAL_DISPLAY_ADDENDUM = """Additional planning preference for this run:
+Prefer a canonical GenEval2-friendly display plan over naturalistic scene prose.
+Use plain backgrounds, clear studio/catalog/poster layouts, and explicit rows,
+columns, bands, or separated left/right/foreground/background zones. Make every
+object instance fully visible, non-overlapping, separated by blank space, and
+countable. For high counts, use simple grids or rows with exact counts. For
+spatial relations, choose the simplest layout that makes the relation verifiable.
+Keep the retry_prompt concise and avoid adding decorative details that are not
+needed for the evaluator checks.
 """
 
 
@@ -121,8 +134,11 @@ def build_retry_replan_messages(
             "branch_source": "latest|best_so_far",
         },
     }
+    system_prompt = RETRY_REPLAN_SYSTEM_PROMPT
+    if os.environ.get("GEN_RETRY_REPLAN_STYLE") == "canonical_display":
+        system_prompt = system_prompt + "\n" + CANONICAL_DISPLAY_ADDENDUM
     return [
-        {"role": "system", "content": RETRY_REPLAN_SYSTEM_PROMPT},
+        {"role": "system", "content": system_prompt},
         {"role": "user", "content": json.dumps(state, ensure_ascii=False, indent=2, sort_keys=True)},
     ]
 

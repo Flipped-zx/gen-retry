@@ -1732,3 +1732,49 @@ Blockers:
 Next recommended step:
 
 - Commit/push `data/exchange/api_to_gpu/balanced100x5_round3_retry_gpt55_v2/generation_metadata.jsonl` and pull on the GPU machine for round3 image generation.
+
+## Round3 Review And Selective Canonical Round4 Plans
+
+Status: completed.
+
+Completed work:
+
+- Consumed GPU-machine handoff `data/exchange/gpu_to_api/balanced100x5_round3_retry_gpt55_v2/` with 345 generation/eval rows.
+- Reviewed round3 against round2: 345 paired samples, average delta -0.005068, median delta +0.000014, 176 improved, 169 worse, 15 passed by zero failed constraints, 29 large regressions.
+- Added optional retry prompt style switch `GEN_RETRY_REPLAN_STYLE=canonical_display`; default behavior is unchanged.
+- Built 345 round3 continuation packages with 0 failures.
+- Selected 64 high-potential/control samples for a selective round4 teacher test:
+  - 40 `best_so_far_promising`
+  - 12 `latest_control`
+  - 12 `count_hard_control`
+- Ran `gpt-5.5` teacher retry with canonical display planning enabled over 4 shards:
+  - 64/64 teacher actions
+  - 0 API/package failures
+  - 0 quality critical issues
+- Exported selective round4 GPU metadata:
+  - `data/exchange/api_to_gpu/balanced100x5_round4_retry_gpt55_v2_selective_canonical/generation_metadata.jsonl`
+  - 64 rows, 0 missing `vqa_list`, seed, generation prompt, or previous action.
+
+Canonical style check:
+
+- Average retry prompt length: 142.3 words, shorter than the previous full round3 average.
+- Prompt terms show intended planning style: `plain` 64/64, `row` 54/64, `background` 42/64, `band` 27/64, `visible` 63/64, `countable` 45/64.
+
+Validation commands run:
+
+- `python3 -m compileall src/gen_retry/prompts/retry_replan_prompt.py` - passed.
+- `python3 scripts/build_retry_continuation_packages.py ... --round 3 ...` - wrote 345 packages, 0 failures.
+- Selective package manifest build - wrote 64 selected rows.
+- `python3 scripts/build_geneval2_retry_plans.py ... --teacher gpt55 --max-retry 4` over 4 selective shards with `GEN_RETRY_REPLAN_STYLE=canonical_display` - all shards status `ok`.
+- `python3 scripts/rebuild_retry_action_manifest.py --output-dir data/outgoing_retry_actions/balanced100x5_round3_retry_gpt55_v2_selective_round4_canonical --expected-count 64` - status `ok`.
+- Selective round4 metadata export - wrote 64 rows.
+- `git diff --check` - passed.
+- Secret scan for the provided API key outside `.env` and `data/api_logs/**` returned no matches.
+
+Blockers:
+
+- None.
+
+Next recommended step:
+
+- Commit/push `src/gen_retry/prompts/retry_replan_prompt.py` and `data/exchange/api_to_gpu/balanced100x5_round4_retry_gpt55_v2_selective_canonical/generation_metadata.jsonl`, then generate/evaluate this 64-sample selective round4 batch on the GPU machine.
