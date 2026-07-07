@@ -1778,3 +1778,45 @@ Blockers:
 Next recommended step:
 
 - Commit/push `src/gen_retry/prompts/retry_replan_prompt.py` and `data/exchange/api_to_gpu/balanced100x5_round4_retry_gpt55_v2_selective_canonical/generation_metadata.jsonl`, then generate/evaluate this 64-sample selective round4 batch on the GPU machine.
+
+## Round4 Selective Normal Teacher Plans
+
+Status: completed.
+
+Completed work:
+
+- Reused the same 64 selected round3 packages as the canonical-display ablation.
+- Copied the 64 source trajectories into an isolated ablation trajectory directory so the normal round4 teacher run would not overwrite canonical-display trajectory state.
+- Ran normal `gpt-5.5` teacher retry with `GEN_RETRY_REPLAN_STYLE` unset over 4 shards:
+  - 64/64 teacher actions
+  - 0 API/package failures
+  - 0 quality critical issues
+- Rebuilt the normal round4 retry action manifest:
+  - `data/outgoing_retry_actions/balanced100x5_round3_retry_gpt55_v2_selective_round4_normal/retry_action_manifest.jsonl`
+  - 64 packages, status `ok`, 0 critical quality issues.
+- Exported normal round4 GPU metadata:
+  - `data/exchange/api_to_gpu/balanced100x5_round4_retry_gpt55_v2_selective_normal/generation_metadata.jsonl`
+  - 64 rows, 0 missing `vqa_list`, seed, generation prompt, or previous action.
+
+Normal style check:
+
+- `generation_prompt_source`: `teacher_retry_replan`.
+- Average retry prompt length: 196.4 words.
+- Teacher action branch sources: 22 `best_so_far`, 42 `latest`.
+
+Validation commands run:
+
+- `python3 scripts/test.py --contains gpt-5.5` with `.env` loaded - passed.
+- Isolated trajectory copy for the 64 selected packages - copied 64, missing 0.
+- `python3 scripts/build_geneval2_retry_plans.py ... --teacher gpt55 --max-retry 4` over 4 selective shards with `GEN_RETRY_REPLAN_STYLE` unset - all shards status `ok`.
+- `python3 scripts/rebuild_retry_action_manifest.py --output-dir data/outgoing_retry_actions/balanced100x5_round3_retry_gpt55_v2_selective_round4_normal --expected-count 64` - status `ok`.
+- `python3 scripts/export_retry_generation_metadata.py --trajectories-dir data/raw_trajectories_ablation/geneval2_balanced_100x5_round0_gpt55_round4_normal64 --output data/exchange/api_to_gpu/balanced100x5_round4_retry_gpt55_v2_selective_normal/generation_metadata.jsonl --retry-round 4` - wrote 64 rows.
+- Secret scan for API-key-like strings outside `.env` and `data/api_logs/**` returned no matches.
+
+Blockers:
+
+- None.
+
+Next recommended step:
+
+- Commit/push `data/exchange/api_to_gpu/balanced100x5_round4_retry_gpt55_v2_selective_normal/generation_metadata.jsonl` and `docs/RUN_COMMANDS.md`, then generate/evaluate this 64-sample normal round4 comparison batch on the GPU machine.

@@ -1358,3 +1358,53 @@ Validation run:
 - selective round4 metadata export
 - `git diff --check`
 - secret scan for the provided API key outside `.env` and `data/api_logs/**`
+
+## Latest Round4 Selective Normal Teacher Completion
+
+The API machine also ran a non-canonical round4 comparison over the same 64 selected round3 packages.
+
+Important isolation detail:
+
+- The normal round4 comparison used an isolated trajectory directory:
+  - `data/raw_trajectories_ablation/geneval2_balanced_100x5_round0_gpt55_round4_normal64/`
+- This avoids overwriting the canonical-display round4 trajectory state while keeping the same round3 source packages.
+
+Teacher retry setup:
+
+- `GEN_RETRY_REPLAN_STYLE` was unset.
+- Teacher model: `gpt-5.5` through `.env` relay settings.
+- Shards: 4 shards, 16 packages each.
+- API/package failures: 0.
+- Quality critical issues: 0.
+- Teacher actions: 64/64.
+
+Final normal retry action output:
+
+- `data/outgoing_retry_actions/balanced100x5_round3_retry_gpt55_v2_selective_round4_normal/retry_action_manifest.jsonl`
+- 64 packages
+- status `ok`
+- quality critical count: 0
+- quality warning count: 717
+
+Normal round4 metadata for GPU:
+
+- `data/exchange/api_to_gpu/balanced100x5_round4_retry_gpt55_v2_selective_normal/generation_metadata.jsonl`
+- 64 rows
+- 0 missing `vqa_list`
+- 0 missing seed
+- 0 missing `generation_prompt`
+- 0 missing `previous_action`
+- `generation_prompt_source`: `teacher_retry_replan`
+
+Normal style audit:
+
+- average retry prompt length: 196.4 words
+- teacher action branch sources:
+  - 22 `best_so_far`
+  - 42 `latest`
+
+Next GPU step:
+
+- Pull the normal metadata on the GPU machine and run the commands in `docs/RUN_COMMANDS.md` under:
+  - `GPU Machine: Round4 Selective Normal Qwen Generation`
+  - `GPU Machine: Round4 Selective Normal GenEval2 Diagnosis`
